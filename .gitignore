@@ -41,3 +41,29 @@ logs/
 # Generated experiment artifacts
 artifacts/*
 !artifacts/.gitkeep
+
+
+# Colab / Python cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.cache/
+.config/
+
+# Secrets — NEVER COMMIT
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+token.json
+
+# Large model/runtime artifacts
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# Local backups
+cognitive_self_model_backups/
