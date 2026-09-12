@@ -1,0 +1,129 @@
+{
+  "experiment_name": "M21.2.4.3.3",
+  "audit_version": "M21.2.4.3.3-final-step-pava-support-audit",
+  "seed": 20260912,
+  "input_npz": "/content/artifacts/M21.2.4.3.1/M21_2_4_3_3_input.npz",
+  "input_npz_exact_key_contract": {
+    "expected": [
+      "episode_id_calibration",
+      "episode_id_test",
+      "raw_probability_calibration",
+      "raw_probability_test",
+      "track_calibration",
+      "track_test",
+      "y_calibration",
+      "y_test"
+    ],
+    "found": [
+      "episode_id_calibration",
+      "episode_id_test",
+      "raw_probability_calibration",
+      "raw_probability_test",
+      "track_calibration",
+      "track_test",
+      "y_calibration",
+      "y_test"
+    ],
+    "pass": true
+  },
+  "calibration_n_samples": 960,
+  "calibration_n_episodes": 3,
+  "calibration_tracks": [
+    "C",
+    "F",
+    "K"
+  ],
+  "final_test_n_samples": 2400,
+  "final_test_n_episodes": 4,
+  "final_test_tracks": [
+    "F",
+    "K",
+    "N",
+    "R"
+  ],
+  "episode_overlap_count": 0,
+  "support_summary": {
+    "n_calibration_samples": 960,
+    "n_unique_calibration_scores": 960,
+    "n_pava_blocks": 960,
+    "n_singleton_blocks": 960,
+    "singleton_block_fraction": 1.0,
+    "singleton_mass_fraction": 1.0,
+    "minimum_block_observations": 1,
+    "median_block_observations": 1.0,
+    "maximum_block_observations": 1,
+    "n_exact_zero_blocks": 800,
+    "n_exact_one_blocks": 160,
+    "exact_zero_mass_fraction": 0.8333333333333334,
+    "exact_one_mass_fraction": 0.16666666666666666,
+    "semantic_note": "Exact 0/1 are empirical PAVA block values. They are not epistemic certainty."
+  },
+  "exact_output_summary": {
+    "n_samples": 2400,
+    "n_exact_zero_predictions": 1999,
+    "n_exact_one_predictions": 401,
+    "valid_samples_mapped_to_exact_one": 1,
+    "invalid_samples_mapped_to_exact_zero": 0,
+    "low_support_extreme_count": 2400,
+    "false_extreme_counterexample_exists": true,
+    "semantic_conclusion": "Exact 0/1 output is not authorized as epistemic certainty, even when the corresponding empirical PAVA block has high observed support."
+  },
+  "scientific_verdict": {
+    "engineering_pipeline_status": "PASS",
+    "pava_implementation_status": "PASS",
+    "episode_disjoint_split_status": "PASS",
+    "scientific_scope": {
+      "authorized_claim": "q_invalid is a support-aware, benchmark-conditionally calibrated invalidity evidence score within the observed benchmark domain.",
+      "not_authorized_claims": [
+        "q_invalid is a universal probability of invalidity.",
+        "Calibration generalizes to all unseen track families.",
+        "Exact q_invalid=0 or q_invalid=1 proves certainty.",
+        "Episode bootstrap proves calibration generalization."
+      ]
+    },
+    "support_warning_heuristic": {
+      "singleton_mass_fraction": 1.0,
+      "warning_threshold": 0.5,
+      "triggered": true,
+      "note": "This is a descriptive warning heuristic only. It is not a scientific theorem or a universal gate."
+    },
+    "exact_zero_one_semantics": "NOT AUTHORIZED AS EPISTEMIC CERTAINTY",
+    "false_exact_extreme_counterexample_observed": true,
+    "test_score_extrapolation_fraction": 0.0,
+    "cross_track_transfer_status": "OUT-OF-TRACK-FAMILY RESULTS ARE DESCRIPTIVE PERFORMANCE AUDITS ONLY; UNIVERSAL CALIBRATION TRANSFER IS NOT ESTABLISHED.",
+    "mandatory_downstream_policy": "Consume q_invalid jointly with local_support, local_n_observations, exact_output_status, calibration_domain, and extrapolation_status. Never treat exact 0/1 as epistemic certainty."
+  },
+  "artifact_files": [
+    "block_boundary_sensitivity.png",
+    "block_boundary_sensitivity_detailed.csv",
+    "block_boundary_sensitivity_summary.csv",
+    "calibration_predictions_with_metadata.csv",
+    "calibration_support_coverage.csv",
+    "calibration_support_summary.json",
+    "certainty_status.png",
+    "config.json",
+    "cross_track_transfer_audit.csv",
+    "exact_output_audit.json",
+    "exact_output_forensic_records.csv",
+    "final_audit_report.json",
+    "final_test_predictions_with_metadata.csv",
+    "isotonic_block_support.csv",
+    "local_support_distribution.png",
+    "overall_final_test_metrics.csv",
+    "pava_blocks.csv",
+    "pava_unit_tests.json",
+    "reliability_diagram_final_test.png",
+    "reliability_final_test.csv",
+    "reliability_fixed.png",
+    "reliability_quantile.png",
+    "reliability_tables.csv",
+    "scientific_verdict.json",
+    "score_perturbation_audit.csv",
+    "score_perturbation_stability.png",
+    "score_perturbation_stability_detailed.csv",
+    "score_perturbation_stability_summary.csv",
+    "support_distribution.png",
+    "trackwise_audit.csv",
+    "trackwise_episode_bootstrap_metrics.csv"
+  ]
+}

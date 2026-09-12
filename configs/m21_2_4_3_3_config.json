@@ -1,0 +1,44 @@
+{
+  "experiment_name": "M21.2.4.3.3",
+  "experiment_title": "Calibration Stress, Support, Exact-Output, and Transfer Audit",
+  "seed": 20260912,
+  "n_episode_bootstrap": 1000,
+  "bootstrap_ci_alpha": 0.05,
+  "metric_clip_eps": 1e-12,
+  "operational_clip_eps": 0.0001,
+  "min_certainty_block_support": 20,
+  "singleton_mass_warning_threshold": 0.5,
+  "fixed_reliability_bins": 10,
+  "quantile_reliability_bins": 10,
+  "perturbation_deltas": [
+    1e-12,
+    1e-09,
+    1e-06,
+    0.0001
+  ],
+  "max_boundary_stress_points": 500,
+  "support_coverage_thresholds": [
+    1,
+    5,
+    20,
+    50,
+    100
+  ],
+  "npz_required_keys": [
+    "text",
+    "raw_probability_calibration",
+    "y_calibration",
+    "track_calibration",
+    "episode_id_calibration",
+    "raw_probability_test",
+    "y_test",
+    "track_test",
+    "episode_id_test"
+  ],
+  "probability_semantics": "support-aware benchmark-conditional invalidity evidence score",
+  "forbidden_semantics": [
+    "universal probability of invalidity",
+    "epistemic certainty from exact 0 or 1",
+    "proven cross-family calibration transfer"
+  ]
+}

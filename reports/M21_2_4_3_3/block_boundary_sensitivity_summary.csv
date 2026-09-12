@@ -1,0 +1,5 @@
+delta,n_boundaries,mean_boundary_span,median_boundary_span,p95_boundary_span,p99_boundary_span,max_boundary_span,fraction_span_gt_1e_4,fraction_span_gt_1e_2
+1e-12,500,0.002,0.0,0.0,0.0,1.0,0.002,0.002
+1e-09,500,0.002,0.0,0.0,0.0,1.0,0.002,0.002
+1e-06,500,0.002,0.0,0.0,0.0,1.0,0.002,0.002
+0.0001,500,0.002,0.0,0.0,0.0,1.0,0.002,0.002

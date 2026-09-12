@@ -1,69 +1,101 @@
-# Python cache
+# ============================================================
+# Python
+# ============================================================
 __pycache__/
 *.py[cod]
-*.pyo
+*$py.class
+*.so
 
 # Virtual environments
 .venv/
 venv/
 env/
+ENV/
 
-# Jupyter temporary files
+# Python package build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter / Colab
 .ipynb_checkpoints/
+*.nbconvert.ipynb
 
-# IDE and operating-system files
+# ============================================================
+# OS and editors
+# ============================================================
+.DS_Store
+Thumbs.db
 .vscode/
 .idea/
-.DS_Store
 
-# Secrets and credentials
+# ============================================================
+# Secrets: never commit
+# ============================================================
 .env
 .env.*
 *.pem
 *.key
-credentials.json
-secrets.json
-
-# Model checkpoints and large binary files
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.bin
-
-# Generated data and outputs
-data/
-outputs/
-results/
-checkpoints/
-logs/
-
-# Generated experiment artifacts
-artifacts/*
-!artifacts/.gitkeep
-
-
-# Colab / Python cache
-__pycache__/
-*.py[cod]
-.ipynb_checkpoints/
-.cache/
-.config/
-
-# Secrets — NEVER COMMIT
-.env
-.env.*
-*.key
-*.pem
 credentials.json
 token.json
+secrets.json
 
-# Large model/runtime artifacts
+# ============================================================
+# Local raw and processed data
+# ============================================================
+data/input/*
+data/processed/*
+!data/input/.gitkeep
+!data/processed/.gitkeep
+
+# Large / private data artifacts
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.joblib
+*.parquet
+*.h5
+*.hdf5
 *.pt
 *.pth
 *.ckpt
-*.bin
-*.safetensors
 
-# Local backups
-cognitive_self_model_backups/
+# ============================================================
+# Generated artifacts
+# ============================================================
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/README.md
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# Generated figures: keep curated figures only if explicitly added
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Raw generated report folders
+reports/**/raw/
+reports/**/figures/

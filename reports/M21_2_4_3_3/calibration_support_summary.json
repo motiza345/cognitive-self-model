@@ -1,0 +1,16 @@
+{
+  "n_calibration_samples": 960,
+  "n_unique_calibration_scores": 960,
+  "n_pava_blocks": 960,
+  "n_singleton_blocks": 960,
+  "singleton_block_fraction": 1.0,
+  "singleton_mass_fraction": 1.0,
+  "minimum_block_observations": 1,
+  "median_block_observations": 1.0,
+  "maximum_block_observations": 1,
+  "n_exact_zero_blocks": 800,
+  "n_exact_one_blocks": 160,
+  "exact_zero_mass_fraction": 0.8333333333333334,
+  "exact_one_mass_fraction": 0.16666666666666666,
+  "semantic_note": "Exact 0/1 are empirical PAVA block values. They are not epistemic certainty."
+}

@@ -1,0 +1,8 @@
+{
+  "monotonicity": "PASS",
+  "tied_score_grouping": "PASS",
+  "weighted_pooling": "PASS",
+  "step_mapping_not_interpolation": "PASS",
+  "nonfinite_rejection": "PASS",
+  "nonbinary_label_rejection": "PASS"
+}

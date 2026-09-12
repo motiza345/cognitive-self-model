@@ -1,0 +1,25 @@
+{
+  "engineering_pipeline_status": "PASS",
+  "pava_implementation_status": "PASS",
+  "episode_disjoint_split_status": "PASS",
+  "scientific_scope": {
+    "authorized_claim": "q_invalid is a support-aware, benchmark-conditionally calibrated invalidity evidence score within the observed benchmark domain.",
+    "not_authorized_claims": [
+      "q_invalid is a universal probability of invalidity.",
+      "Calibration generalizes to all unseen track families.",
+      "Exact q_invalid=0 or q_invalid=1 proves certainty.",
+      "Episode bootstrap proves calibration generalization."
+    ]
+  },
+  "support_warning_heuristic": {
+    "singleton_mass_fraction": 1.0,
+    "warning_threshold": 0.5,
+    "triggered": true,
+    "note": "This is a descriptive warning heuristic only. It is not a scientific theorem or a universal gate."
+  },
+  "exact_zero_one_semantics": "NOT AUTHORIZED AS EPISTEMIC CERTAINTY",
+  "false_exact_extreme_counterexample_observed": true,
+  "test_score_extrapolation_fraction": 0.0,
+  "cross_track_transfer_status": "OUT-OF-TRACK-FAMILY RESULTS ARE DESCRIPTIVE PERFORMANCE AUDITS ONLY; UNIVERSAL CALIBRATION TRANSFER IS NOT ESTABLISHED.",
+  "mandatory_downstream_policy": "Consume q_invalid jointly with local_support, local_n_observations, exact_output_status, calibration_domain, and extrapolation_status. Never treat exact 0/1 as epistemic certainty."
+}

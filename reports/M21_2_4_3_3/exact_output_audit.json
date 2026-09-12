@@ -1,0 +1,10 @@
+{
+  "n_samples": 2400,
+  "n_exact_zero_predictions": 1999,
+  "n_exact_one_predictions": 401,
+  "valid_samples_mapped_to_exact_one": 1,
+  "invalid_samples_mapped_to_exact_zero": 0,
+  "low_support_extreme_count": 2400,
+  "false_extreme_counterexample_exists": true,
+  "semantic_conclusion": "Exact 0/1 output is not authorized as epistemic certainty, even when the corresponding empirical PAVA block has high observed support."
+}

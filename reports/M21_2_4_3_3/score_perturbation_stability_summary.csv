@@ -1,0 +1,5 @@
+delta,n_scores,mean_span_change,median_span_change,p95_span_change,p99_span_change,max_span_change,fraction_span_gt_1e_4,fraction_span_gt_1e_2
+1e-12,2400,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1e-09,2400,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1e-06,2400,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.0001,2400,0.0,0.0,0.0,0.0,0.0,0.0,0.0
