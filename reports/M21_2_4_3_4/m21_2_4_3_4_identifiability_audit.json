@@ -1,0 +1,6 @@
+{
+  "milestone": "M21.2.4.3.4",
+  "input_csv": "/content/cognitive-self-model/reports/M21_2_4_3_4/input_dataset.csv",
+  "config_json": "/content/cognitive-self-model/configs/m21_2_4_3_4_config.json",
+  "note": "Bootstrap minimal runner created in Colab (phase-1)."
+}

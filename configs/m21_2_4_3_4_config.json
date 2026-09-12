@@ -1,0 +1,72 @@
+{
+  "milestone": "M21.2.4.3.4",
+  "description": "Calibration Identifiability & Support Stress Test",
+  "random_seed_namespace": "M21.2.4.3.4",
+  "n_seeds": 10,
+  "seed_values": [
+    11,
+    23,
+    37,
+    41,
+    53,
+    67,
+    79,
+    83,
+    97,
+    101
+  ],
+  "episode_protocol": {
+    "train_min_episodes": 20,
+    "calibration_min_episodes": 10,
+    "calibration_preferred_episodes": 20,
+    "eval_min_episodes": 20,
+    "episode_disjoint_required": true
+  },
+  "calibration_methods": {
+    "isotonic": true,
+    "platt": true,
+    "fixed_bins": [
+      5,
+      10,
+      20
+    ]
+  },
+  "support_thresholds": [
+    1,
+    5,
+    20,
+    50,
+    100
+  ],
+  "perturbation_deltas": [
+    1e-12,
+    1e-09,
+    1e-06,
+    0.0001
+  ],
+  "mapping_grid": {
+    "q_min": 0.0,
+    "q_max": 1.0,
+    "n_points": 101
+  },
+  "identity_ablation_fractions": [
+    1.0,
+    0.5,
+    0.25,
+    0.1
+  ],
+  "forbidden_inputs": [
+    "GroundTruth",
+    "Track",
+    "true_mechanism",
+    "future_observation",
+    "governance_state",
+    "decision_state"
+  ],
+  "verdict_labels": [
+    "SUPPORTED_CALIBRATION",
+    "CONDITIONAL_SUPPORT_LIMITED",
+    "CALIBRATION_NOT_STABLE_OR_NOT_IDENTIFIABLE"
+  ],
+  "report_dir": "reports/M21_2_4_3_4"
+}
