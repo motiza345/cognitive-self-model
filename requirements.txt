@@ -23,3 +23,9 @@ nbconvert==7.17.1
 ipykernel==7.3.0
 jupyter-client==8.10.0
 nbformat==5.11.1
+
+# Plotting and testing — required by the src/ modules and pytest suite on the
+# repository-scientific-structure line of work.
+matplotlib>=3.8,<4.0
+seaborn>=0.13,<1.0
+pytest>=8.0,<9.0
