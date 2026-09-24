@@ -64,17 +64,18 @@ def _build_split(spec: Dict[str, Any], env_cfg: Dict[str, Any], split_name: str)
     return flatten_split(episodes, split_name=split_name)
 
 
-def run_pipeline(
-    config: Optional[Dict[str, Any]] = None,
-    output_dir: Optional[str | Path] = None,
-) -> Dict[str, Any]:
-    """Run the full M21.2.4.3.1 pipeline and return a summary dict."""
+def build_scored_dataset(config: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """Build episode-disjoint splits, train the estimator, and score every split.
+
+    Returns the train/calibration/test splits (each augmented with a
+    ``raw_probability`` array = raw ``q_invalid``), the fitted estimator, and the
+    per-split episode-id sets. Shared by :func:`run_pipeline` and the
+    M21.2.4.3.4 identifiability dataset generator so the raw scores and labels
+    always come from the same real benchmark oracle.
+    """
     cfg = config if config is not None else load_config()
     env_cfg = cfg["environment"]
     splits_cfg = cfg["splits"]
-
-    out_dir = Path(output_dir) if output_dir is not None else Path(cfg["output_dir"])
-    out_dir.mkdir(parents=True, exist_ok=True)
 
     train = _build_split(splits_cfg["train"], env_cfg, "train")
     calibration = _build_split(splits_cfg["calibration"], env_cfg, "calibration")
@@ -94,8 +95,45 @@ def run_pipeline(
         train["X"], train["y"], epochs=int(est_cfg["epochs"]), lr=float(est_cfg["lr"])
     )
 
-    raw_probability_calibration = estimator.predict_raw_probability(calibration["X"])
-    raw_probability_test = estimator.predict_raw_probability(test["X"])
+    for split in (train, calibration, test):
+        split["raw_probability"] = estimator.predict_raw_probability(split["X"])
+
+    return {
+        "config": cfg,
+        "estimator": estimator,
+        "train": train,
+        "calibration": calibration,
+        "test": test,
+        "episode_ids": {
+            "train": train_ids,
+            "calibration": calib_ids,
+            "test": test_ids,
+        },
+    }
+
+
+def run_pipeline(
+    config: Optional[Dict[str, Any]] = None,
+    output_dir: Optional[str | Path] = None,
+) -> Dict[str, Any]:
+    """Run the full M21.2.4.3.1 pipeline and return a summary dict."""
+    cfg = config if config is not None else load_config()
+    splits_cfg = cfg["splits"]
+
+    out_dir = Path(output_dir) if output_dir is not None else Path(cfg["output_dir"])
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    scored = build_scored_dataset(cfg)
+    train = scored["train"]
+    calibration = scored["calibration"]
+    test = scored["test"]
+    estimator = scored["estimator"]
+    train_ids = scored["episode_ids"]["train"]
+    calib_ids = scored["episode_ids"]["calibration"]
+    test_ids = scored["episode_ids"]["test"]
+
+    raw_probability_calibration = calibration["raw_probability"]
+    raw_probability_test = test["raw_probability"]
 
     bundle_path = out_dir / "M21_2_4_3_3_input.npz"
     write_bundle(
