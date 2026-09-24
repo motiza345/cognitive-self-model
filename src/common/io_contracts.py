@@ -8,7 +8,6 @@ import numpy as np
 
 
 REQUIRED_M21_2_4_3_NPZ_KEYS = (
-    "text",
     "raw_probability_calibration",
     "y_calibration",
     "track_calibration",

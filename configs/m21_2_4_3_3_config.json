@@ -25,7 +25,6 @@
     100
   ],
   "npz_required_keys": [
-    "text",
     "raw_probability_calibration",
     "y_calibration",
     "track_calibration",
