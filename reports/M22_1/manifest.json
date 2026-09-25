@@ -1,0 +1,221 @@
+{
+  "candidate_layers": [
+    0,
+    8,
+    15,
+    23
+  ],
+  "config_sha256": "aaa32a2e148e543170719fab898232bd6d2103ef55464026851c85dc3cfeabed",
+  "control_direction_seed": 22103,
+  "control_direction_sha256": "8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e",
+  "d_model": 896,
+  "device": "cpu",
+  "direction_rule": "primary: isotropic Gaussian unit vector from direction_seed. control: Gaussian from control_direction_seed, projected orthogonal to primary, then renormed. Neither vector is fit to logits or deltas.",
+  "direction_seed": 22101,
+  "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+  "dtype": "float32",
+  "git_branch": "cursor/m21-2-4-3-1-integration-c559",
+  "git_commit": "e4713f0afb99b2a0cc1bacb35fce366a9b2ac47b",
+  "git_dirty": true,
+  "gpu_required": false,
+  "hook_template": "blocks.{layer}.hook_resid_post",
+  "library_versions": {
+    "numpy": "2.4.4",
+    "torch": "2.14.0+cpu",
+    "transformer_lens": "3.9.0",
+    "transformers": "5.17.0"
+  },
+  "load_used_revision": true,
+  "magnitude_grid": [
+    -2.0,
+    -1.0,
+    0.0,
+    1.0,
+    2.0
+  ],
+  "milestone": "M22.1",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "n_layers": 24,
+  "origin": "https://github.com/motiza345/cognitive-self-model",
+  "outcome": {
+    "negative_text": " no",
+    "negative_token_id": 902,
+    "negative_token_ids": [
+      902
+    ],
+    "positive_text": " yes",
+    "positive_token_id": 9834,
+    "positive_token_ids": [
+      9834
+    ],
+    "single_piece": true,
+    "token_ids": [
+      9834,
+      902
+    ],
+    "token_position": "last",
+    "type": "logit_margin"
+  },
+  "primary_alpha": 1.0,
+  "prompt_count": 18,
+  "prompt_manifest_sha256": "fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db",
+  "prompts": [
+    {
+      "prompt_id": "completion-01",
+      "prompt_sha256": "bbaff4d2ecd5892d4a442b0f53131641bf6e6f284761dd20fc0664bc97145762",
+      "regime_id": "completion",
+      "role": "discovery",
+      "text": "The capital of France is"
+    },
+    {
+      "prompt_id": "completion-02",
+      "prompt_sha256": "aef6de28a57709350606506379f9fd1999f9a98327bf747e3d5eab2a866d5154",
+      "regime_id": "completion",
+      "role": "validation",
+      "text": "Water freezes at a temperature of"
+    },
+    {
+      "prompt_id": "completion-03",
+      "prompt_sha256": "499d3b29e245003b63f6e79d2fa436b28583acfd82237825c9b856d21ff85143",
+      "regime_id": "completion",
+      "role": "replication",
+      "text": "The opposite of hot is"
+    },
+    {
+      "prompt_id": "completion-04",
+      "prompt_sha256": "cdf1347c153639e3f67e4cdabf1c6e1acf41f33bb067ed6f4e82b4d518a91a65",
+      "regime_id": "completion",
+      "role": "discovery",
+      "text": "Two plus two equals"
+    },
+    {
+      "prompt_id": "completion-05",
+      "prompt_sha256": "4b45bb49bfde43a84b7bc641d136ac56f8f99092929a17b1b619d2a250f6c123",
+      "regime_id": "completion",
+      "role": "validation",
+      "text": "The sun rises in the"
+    },
+    {
+      "prompt_id": "completion-06",
+      "prompt_sha256": "0b71f343252ecd291ca9ad583554eb59e72a632e0fba78d1c38f2676ab9c1b24",
+      "regime_id": "completion",
+      "role": "replication",
+      "text": "A cat is a type of"
+    },
+    {
+      "prompt_id": "instruction-01",
+      "prompt_sha256": "185d6bdce10958ddcabd0b3e28cbe5e3a2cb7cc4992b913aadde12d5e6642e23",
+      "regime_id": "instruction",
+      "role": "discovery",
+      "text": "Reply with one word. Color of the sky:"
+    },
+    {
+      "prompt_id": "instruction-02",
+      "prompt_sha256": "a13bf2aa4333d6ce93850a78270d5fec1217594abbc52e7bc7b099e3f9827a1a",
+      "regime_id": "instruction",
+      "role": "validation",
+      "text": "Reply with one word. A common pet:"
+    },
+    {
+      "prompt_id": "instruction-03",
+      "prompt_sha256": "5f6e72c95efd63f2e270c7829bb4524b790272cd74d277f6584ba4fb17a5c4f9",
+      "regime_id": "instruction",
+      "role": "replication",
+      "text": "Reply with one word. Result of 1+1:"
+    },
+    {
+      "prompt_id": "instruction-04",
+      "prompt_sha256": "eea76aad868c2ac80750127e99404df4ae6e5fababccecb575b00d479771aad9",
+      "regime_id": "instruction",
+      "role": "discovery",
+      "text": "Name a day of the week:"
+    },
+    {
+      "prompt_id": "instruction-05",
+      "prompt_sha256": "06c223aa9351246ebfb72f745fd21a209dae6c08a7927d1a01e0ce7129e9973a",
+      "regime_id": "instruction",
+      "role": "validation",
+      "text": "Name a primary color:"
+    },
+    {
+      "prompt_id": "instruction-06",
+      "prompt_sha256": "8245794922c2cdf1b0e22a1cd2d85c5c7bab5dd80482a1eff4ba8b5518d96744",
+      "regime_id": "instruction",
+      "role": "replication",
+      "text": "Name a season of the year:"
+    },
+    {
+      "prompt_id": "syntax-01",
+      "prompt_sha256": "cbb79258d2f7af7f499c4f9e18694603978529f2372c99db4d1938e9bf45e7b5",
+      "regime_id": "syntax",
+      "role": "discovery",
+      "text": "If it rains, then the ground is"
+    },
+    {
+      "prompt_id": "syntax-02",
+      "prompt_sha256": "83e94f39a6e858d005a2d2683719242def971a7305f4fc92ecfa2c08a57ef0c6",
+      "regime_id": "syntax",
+      "role": "validation",
+      "text": "She opened the door and"
+    },
+    {
+      "prompt_id": "syntax-03",
+      "prompt_sha256": "1b47a8a0e18174408b51ba07249b7147c38718f9e05e4e90d96e28f0bb82f531",
+      "regime_id": "syntax",
+      "role": "replication",
+      "text": "Because the road was closed,"
+    },
+    {
+      "prompt_id": "syntax-04",
+      "prompt_sha256": "05794db73e29416234180c91643eb3fa0bb924c95bb01f19579851c783acb2f7",
+      "regime_id": "syntax",
+      "role": "discovery",
+      "text": "After the meeting ended,"
+    },
+    {
+      "prompt_id": "syntax-05",
+      "prompt_sha256": "59a87552a54c7fe0d0ecfb37090ff2e66c24e7239f15143612738dc40572f396",
+      "regime_id": "syntax",
+      "role": "validation",
+      "text": "Although the box was empty,"
+    },
+    {
+      "prompt_id": "syntax-06",
+      "prompt_sha256": "88e0b1b519a35cded39039fac9ec03253e005459cc4a50da60935b9326b9f2c1",
+      "regime_id": "syntax",
+      "role": "replication",
+      "text": "Before sunrise, the sky was"
+    }
+  ],
+  "revision_error": null,
+  "revision_pinned": true,
+  "revision_source": "huggingface_hub.model_info",
+  "splits": {
+    "discovery": [
+      "completion-01",
+      "completion-04",
+      "instruction-01",
+      "instruction-04",
+      "syntax-01",
+      "syntax-04"
+    ],
+    "replication": [
+      "completion-03",
+      "completion-06",
+      "instruction-03",
+      "instruction-06",
+      "syntax-03",
+      "syntax-06"
+    ],
+    "validation": [
+      "completion-02",
+      "completion-05",
+      "instruction-02",
+      "instruction-05",
+      "syntax-02",
+      "syntax-05"
+    ]
+  },
+  "token_position": "last"
+}

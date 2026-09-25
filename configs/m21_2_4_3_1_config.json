@@ -1,0 +1,72 @@
+{
+  "milestone": "M21.2.4.3.1",
+  "experiment_title": "Frozen-Reference Self-Model Invalidity Benchmark and Raw q_invalid Generator",
+  "pipeline_version": "M21.2.4.3.1-clean-port",
+  "feature_dim": 16,
+  "reference_model": {
+    "h1": 0.6,
+    "h4": 0.5,
+    "formula": "y_pred = 0.6*x + 0.5*u"
+  },
+  "environment": {
+    "noise_std": 0.05,
+    "probe_measurement_std": 0.01,
+    "onset_step": 20,
+    "steps_per_episode": 40,
+    "probe_offset": 0.2,
+    "window_size": 15
+  },
+  "splits": {
+    "train": {
+      "tracks": ["KNOWN_VALID", "CAUSAL_BREAK", "FALSE_ALARM"],
+      "num_episodes": 12,
+      "seed_start": 100
+    },
+    "calibration": {
+      "tracks": ["KNOWN_VALID", "CAUSAL_BREAK", "FALSE_ALARM"],
+      "num_episodes": 8,
+      "seed_start": 400
+    },
+    "final_test": {
+      "tracks": [
+        "KNOWN_VALID",
+        "FALSE_ALARM",
+        "REGIME_CHANGE_IN_SCOPE",
+        "REGIME_CHANGE_OUT_OF_SCOPE",
+        "NOVEL_BUT_VALID",
+        "NOVEL_AND_INVALID"
+      ],
+      "num_episodes": 10,
+      "seed_start": 800
+    }
+  },
+  "estimator": {
+    "l2_reg": 0.01,
+    "epochs": 800,
+    "lr": 0.1
+  },
+  "operational_eps": 0.0001,
+  "output_dir": "reports/M21_2_4_3_1",
+  "label_semantics": "y == self_model_invalid == is_contextually_invalid",
+  "npz_bundle_keys": [
+    "raw_probability_calibration",
+    "y_calibration",
+    "track_calibration",
+    "episode_id_calibration",
+    "raw_probability_test",
+    "y_test",
+    "track_test",
+    "episode_id_test"
+  ],
+  "npz_bundle_key_count": 8,
+  "forbidden_estimator_inputs": [
+    "true_mechanism",
+    "hidden_causal_state",
+    "ground_truth_label",
+    "future_observations",
+    "track_identity",
+    "governance_state",
+    "decision_state",
+    "calibration_output"
+  ]
+}

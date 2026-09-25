@@ -1,0 +1,38 @@
+{
+  "milestone": "M22.1",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "dtype": "float32",
+  "token_position": "last",
+  "hook_template": "blocks.{layer}.hook_resid_post",
+  "prepend_bos": true,
+  "batch_size": 1,
+  "do_sample": false,
+  "outcome": {
+    "type": "logit_margin",
+    "positive_text": " yes",
+    "negative_text": " no",
+    "selection_rule": "Before any intervention forward, freeze s = logit_last(first_id(positive_text)) - logit_last(first_id(negative_text)). Do not search token pairs. Do not switch texts if the effect is small. If a text is more than one piece, use its first id anyway and record the full tokenization."
+  },
+  "n_candidate_layers": 4,
+  "candidate_layer_rule": "sorted unique rint(linspace(0, n_layers-1, n_candidate_layers)). Declared from architecture only. The M20.6.3.2 observability pick, including layer 13, is not an input.",
+  "direction_seed": 22101,
+  "control_direction_seed": 22103,
+  "direction_rule": "primary: isotropic Gaussian unit vector from direction_seed. control: Gaussian from control_direction_seed, projected orthogonal to primary, then renormed. Neither vector is fit to logits or deltas.",
+  "magnitude_grid": [-2.0, -1.0, 0.0, 1.0, 2.0],
+  "primary_alpha": 1.0,
+  "selection_rule": "On discovery prompts only, at primary_alpha and the primary direction, choose the candidate layer with the largest mean paired delta. Tie-break: smallest layer index. Validation and replication deltas are not inputs. The full magnitude grid is not used for selection.",
+  "null_bug_threshold": 0.0001,
+  "effect_floor_abs": 0.0001,
+  "effect_floor_mult": 10,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 22102,
+  "directionality": {
+    "clear_min_opposite_fraction": 0.75,
+    "partial_min_opposite_fraction": 0.5,
+    "compared_alpha": 1.0
+  },
+  "split_rule": "Within each regime, prompts sorted by prompt_id. Zero-based index modulo 3 maps 0 to discovery, 1 to validation, 2 to replication.",
+  "control_rule": "One control only: the orthogonal direction at the same frozen layer and primary_alpha. It is not chosen by comparing control effects.",
+  "status_rule": "REJECTED if null equivalence, hook integrity, split integrity, package leakage audit, finite scores, or definition regeneration fails, or if the discovery mean at primary_alpha is not identifiable, or if the validation mean is not identifiable with the same sign as discovery. CANDIDATE if those hold but the model revision is not pinned, or validation/replication control separation fails, or replication is not identifiable with the same sign as validation. VALIDATED_FOR_M22 only if all of those hold. Dose-response shape and directionality class are reported and are not gates.",
+  "gpu_required": false
+}

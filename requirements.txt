@@ -1,6 +1,34 @@
+# Cognitive Self-Model — consolidated Python dependencies
+#
+# Covers both lines of work from a single environment:
+#   1. The M21.2.4.x scientific chain (.3.1 -> .3.3 -> .3.4): numpy/pandas/
+#      scipy/scikit-learn (+ matplotlib/seaborn for the calibration audit),
+#      exercised by the pytest suite.
+#   2. The M20.6.3.2 real-substrate benchmark (Phase B): transformer_lens +
+#      transformers over a Qwen model, run from notebooks.
+#
+# NOTE: PyTorch (CPU build) is installed separately in scripts/install.sh from
+# the official CPU wheel index, so it is intentionally omitted here.
+
+# Core scientific stack
 numpy>=1.26,<3.0
 pandas>=2.1,<3.0
+scipy>=1.11,<2.0
+scikit-learn>=1.4,<2.0
 matplotlib>=3.8,<4.0
 seaborn>=0.13,<1.0
-scikit-learn>=1.4,<2.0
+
+# Mechanistic-interpretability / model stack (M20.6.3.2, Phase B)
+# transformer_lens < 4 is required: 4.0 removed the HookedTransformer API the
+# notebooks rely on.
+transformer_lens>=3.0,<4.0
+transformers>=5.0,<6.0
+
+# Notebook execution
+nbconvert>=7.0,<8.0
+ipykernel>=6.0,<8.0
+jupyter-client>=8.0,<9.0
+nbformat>=5.0,<6.0
+
+# Testing
 pytest>=8.0,<9.0

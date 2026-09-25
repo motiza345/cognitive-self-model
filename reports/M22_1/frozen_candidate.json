@@ -1,0 +1,22 @@
+{
+  "candidate_layers": [
+    0,
+    8,
+    15,
+    23
+  ],
+  "config_sha256": "aaa32a2e148e543170719fab898232bd6d2103ef55464026851c85dc3cfeabed",
+  "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+  "discovery_means": {
+    "0": 0.00730593999226888,
+    "15": -0.010039170583089193,
+    "23": 0.029387950897216797,
+    "8": 0.004291057586669922
+  },
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "prompt_manifest_sha256": "fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db",
+  "selected_layer": 23,
+  "selected_on": "discovery",
+  "selection_alpha": 1.0,
+  "selection_direction": "primary"
+}

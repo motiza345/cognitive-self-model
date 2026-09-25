@@ -11,7 +11,6 @@ from src.common.io_contracts import (
 
 def make_valid_npz_payload():
     return {
-        "text": np.array(["a", "b"]),
         "raw_probability_calibration": np.array([0.1, 0.2]),
         "y_calibration": np.array([0, 1]),
         "track_calibration": np.array(["KNOWN_VALID", "CAUSAL_BREAK"]),
@@ -35,7 +34,7 @@ def test_missing_key_raises_error(tmp_path: Path):
     npz_path = tmp_path / "invalid_input.npz"
 
     payload = make_valid_npz_payload()
-    del payload["text"]
+    del payload["y_test"]
 
     np.savez(npz_path, **payload)
 
@@ -55,5 +54,6 @@ def test_unexpected_key_raises_error(tmp_path: Path):
         validate_npz_required_keys(npz_path)
 
 
-def test_required_contract_has_nine_keys():
-    assert len(REQUIRED_M21_2_4_3_NPZ_KEYS) == 9
+def test_required_contract_has_eight_keys():
+    assert len(REQUIRED_M21_2_4_3_NPZ_KEYS) == 8
+    assert "text" not in REQUIRED_M21_2_4_3_NPZ_KEYS

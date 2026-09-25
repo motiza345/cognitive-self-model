@@ -7,7 +7,9 @@ def run_benchmark(input_csv: str, config_json: str):
     with open(config_json, "r", encoding="utf-8") as f:
         cfg = json.load(f)
 
-    out_dir = os.path.join("/content/cognitive-self-model", cfg.get("report_dir", "reports/M21_2_4_3_4"))
+    # Repository-relative output directory (previously hardcoded to a Colab
+    # /content path, which broke reproducibility outside Colab).
+    out_dir = cfg.get("report_dir", "reports/M21_2_4_3_4")
     os.makedirs(out_dir, exist_ok=True)
 
     df = pd.read_csv(input_csv)
@@ -49,3 +51,16 @@ def run_benchmark(input_csv: str, config_json: str):
         }, f, indent=2, ensure_ascii=False)
 
     print("[DONE] minimal benchmark outputs written to:", out_dir)
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Run the M21.2.4.3.4 identifiability benchmark."
+    )
+    parser.add_argument("--input_csv", required=True, help="Path to input_dataset.csv.")
+    parser.add_argument("--config", required=True, help="Path to the M21.2.4.3.4 config JSON.")
+    args = parser.parse_args()
+
+    run_benchmark(args.input_csv, args.config)
