@@ -1,0 +1,866 @@
+{
+  "base_mask_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "calibration_prompt_id": {
+    "discovery": "completion-01",
+    "replication": "completion-03",
+    "validation": "completion-02"
+  },
+  "calibration_prompt_rule": "lexicographically_first_prompt_id_within_split",
+  "decision_model": "B4_rank1",
+  "decision_rank": 1,
+  "decision_rule": "PREDICTIVE if on both validation and replication the primary ridge ALS rank-1 model reduces MAE by at least the frozen fraction versus both global-mean and direction-mean, on at least the frozen number of mask seeds, and both pairing permutations leave at most the frozen fraction of that advantage. CONTEXT_DEPENDENT if that holds and leave-one-regime-out MAE exceeds the frozen multiple of blocked rank-1 MAE on both splits. CALIBRATED if predictive fails and few-shot rank-1 reduces MAE by the frozen fraction versus both the one-shot constant and the global mean on both splits, at least the frozen number of directions are not worse than the constant, and the calibration pairing permutation leaves at most the frozen fraction of the advantage. Otherwise INSUFFICIENT_EVIDENCE. Leakage failure forces INSUFFICIENT_EVIDENCE.",
+  "direction_ids": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8"
+  ],
+  "frozen_before_benchmark": true,
+  "manifest_sha256": "978e715812bc8291077e8e32447f1d20db3da78f675d3b0501c38af49b98ebaa",
+  "mask_schedule": {
+    "discovery": [
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-04"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "seed": 221201
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-04"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "seed": 221202
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-04"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "seed": 221203
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "syntax-04"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "seed": 221204
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D5",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-01"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-04"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-01"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "instruction-04"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-01"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-04"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "seed": 221205
+      }
+    ],
+    "replication": [
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-06"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-06"
+          }
+        ],
+        "seed": 221201
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-06"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-06"
+          }
+        ],
+        "seed": 221202
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-06"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-06"
+          }
+        ],
+        "seed": 221203
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "syntax-06"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-06"
+          }
+        ],
+        "seed": 221204
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D5",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-03"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-06"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-03"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "instruction-06"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-03"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-06"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "syntax-06"
+          }
+        ],
+        "seed": 221205
+      }
+    ],
+    "validation": [
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-05"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-05"
+          }
+        ],
+        "seed": 221201
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-05"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-05"
+          }
+        ],
+        "seed": 221202
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-05"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-05"
+          }
+        ],
+        "seed": 221203
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D2",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D5",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "syntax-05"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "syntax-05"
+          }
+        ],
+        "seed": 221204
+      },
+      {
+        "held_out_cells": [
+          {
+            "direction_id": "D5",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D6",
+            "prompt_id": "completion-02"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "completion-05"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "instruction-02"
+          },
+          {
+            "direction_id": "D3",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D7",
+            "prompt_id": "instruction-05"
+          },
+          {
+            "direction_id": "D4",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D8",
+            "prompt_id": "syntax-02"
+          },
+          {
+            "direction_id": "D1",
+            "prompt_id": "syntax-05"
+          },
+          {
+            "direction_id": "D2",
+            "prompt_id": "syntax-05"
+          }
+        ],
+        "seed": 221205
+      }
+    ]
+  },
+  "mask_seeds": [
+    221201,
+    221202,
+    221203,
+    221204,
+    221205
+  ],
+  "milestone": "M22.1.2",
+  "model_forward_passes": 0,
+  "primary_estimator": "ridge_als",
+  "prompt_manifest_sha256": "fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db",
+  "ridge_lambda": 0.01,
+  "secondary_closed_form_estimator": "mean_imputed_uncentered_svd",
+  "secondary_estimator_is_not_used_for_the_label": true
+}
