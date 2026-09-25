@@ -1,0 +1,195 @@
+{
+  "dimension": 896,
+  "direction_ids": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8"
+  ],
+  "directions": [
+    {
+      "direction_id": "D1",
+      "fallback_attempt": 0,
+      "final_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+      "generation_method": "unit_gaussian",
+      "norm": 1.0,
+      "raw_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+      "residual_norm_before_normalization": null,
+      "role": "m22_1_primary",
+      "seed": 22101,
+      "seed_used": 22101
+    },
+    {
+      "direction_id": "D2",
+      "fallback_attempt": 0,
+      "final_sha256": "8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e",
+      "generation_method": "gram_schmidt_against_d1",
+      "norm": 0.9999999999999999,
+      "raw_sha256": "f1435250aee1e37824300bc309c0e729ac9b7bb534c471a1eaa2a9c8174611ec",
+      "residual_norm_before_normalization": 0.9999622609631791,
+      "role": "m22_1_control",
+      "seed": 22103,
+      "seed_used": 22103
+    },
+    {
+      "direction_id": "D3",
+      "fallback_attempt": 0,
+      "final_sha256": "546083c4b5c7779725a9544d7fdf4da8d4770b50826d2274b9c566219d4d309d",
+      "generation_method": "gram_schmidt_against_all_previous",
+      "norm": 1.0,
+      "raw_sha256": "d47283a955fcf0a3949079d3730db3ff7e587adeab08db6f2b5f2a1dc3fd1b7c",
+      "residual_norm_before_normalization": 0.9979995280080248,
+      "role": "pre_registered_new",
+      "seed": 22111,
+      "seed_used": 22111
+    },
+    {
+      "direction_id": "D4",
+      "fallback_attempt": 0,
+      "final_sha256": "9b2f1b8831336b2b871b7d9d4587adbc427eb4a66434b77073d8c1e2764bd911",
+      "generation_method": "gram_schmidt_against_all_previous",
+      "norm": 0.9999999999999999,
+      "raw_sha256": "56e0cc9dd64a65fcf890dd12cdb22914223718313ead78c7c550664bfa307957",
+      "residual_norm_before_normalization": 0.9998930233937872,
+      "role": "pre_registered_new",
+      "seed": 22112,
+      "seed_used": 22112
+    },
+    {
+      "direction_id": "D5",
+      "fallback_attempt": 0,
+      "final_sha256": "10579f559390a7ebf5b25965b8c3487c3dedd4cb8295d020fc74f5beec736f43",
+      "generation_method": "gram_schmidt_against_all_previous",
+      "norm": 1.0,
+      "raw_sha256": "4868d603116d4bb00c689a947ba861fd6dfbfe79c79a6292d2f993ade367a848",
+      "residual_norm_before_normalization": 0.9971459282986971,
+      "role": "pre_registered_new",
+      "seed": 22113,
+      "seed_used": 22113
+    },
+    {
+      "direction_id": "D6",
+      "fallback_attempt": 0,
+      "final_sha256": "9aa41426dd3eca94f25ca54e67e6e23555bf1afbcf81240736c0ae411d376ee3",
+      "generation_method": "gram_schmidt_against_all_previous",
+      "norm": 0.9999999999999999,
+      "raw_sha256": "ebb529e514cfa6a28b14f925ff140574f1c99dd262e231a48aaa83427fe1113a",
+      "residual_norm_before_normalization": 0.9985607037870539,
+      "role": "pre_registered_new",
+      "seed": 22114,
+      "seed_used": 22114
+    },
+    {
+      "direction_id": "D7",
+      "fallback_attempt": 0,
+      "final_sha256": "142c1f5f44d36430d89371a231aabe825a116affd847a7fafad80ced72b26c45",
+      "generation_method": "gram_schmidt_against_all_previous",
+      "norm": 1.0,
+      "raw_sha256": "dcd64bfc7e05e505cd7ea6ae418b40a2a8ff7efcc8413689373e76f36b81b0a2",
+      "residual_norm_before_normalization": 0.9989242360123568,
+      "role": "pre_registered_new",
+      "seed": 22115,
+      "seed_used": 22115
+    },
+    {
+      "direction_id": "D8",
+      "fallback_attempt": 0,
+      "final_sha256": "6752b59f8f74c2bacb818deac69840ad744144f6dca41b3a4b58a0f59ccc7d60",
+      "generation_method": "gram_schmidt_against_all_previous",
+      "norm": 1.0,
+      "raw_sha256": "b120c305ddd79f78ea1472bc1ff70da1d48e6a730b2997401f6c3c01452333a0",
+      "residual_norm_before_normalization": 0.9978875777948171,
+      "role": "pre_registered_new",
+      "seed": 22116,
+      "seed_used": 22116
+    }
+  ],
+  "frozen_before_measurement": true,
+  "geometric_note": "Geometric orthogonality does not imply causal or functional independence.",
+  "pairwise_dot": {
+    "D1": {
+      "D1": 1.0,
+      "D2": -5.204170427930421e-18,
+      "D3": 3.469446951953614e-18,
+      "D4": -1.3010426069826053e-17,
+      "D5": -5.204170427930421e-18,
+      "D6": 9.540979117872439e-18,
+      "D7": 6.071532165918825e-18,
+      "D8": 1.0408340855860843e-17
+    },
+    "D2": {
+      "D1": -5.204170427930421e-18,
+      "D2": 0.9999999999999999,
+      "D3": 1.214306433183765e-17,
+      "D4": 6.938893903907228e-18,
+      "D5": -3.469446951953614e-18,
+      "D6": -6.938893903907228e-18,
+      "D7": -2.42861286636753e-17,
+      "D8": 8.673617379884035e-18
+    },
+    "D3": {
+      "D1": 3.469446951953614e-18,
+      "D2": 1.214306433183765e-17,
+      "D3": 1.0,
+      "D4": -3.469446951953614e-18,
+      "D5": -6.938893903907228e-18,
+      "D6": -1.2576745200831851e-17,
+      "D7": -6.938893903907228e-18,
+      "D8": 1.3877787807814457e-17
+    },
+    "D4": {
+      "D1": -1.3010426069826053e-17,
+      "D2": 6.938893903907228e-18,
+      "D3": -3.469446951953614e-18,
+      "D4": 0.9999999999999998,
+      "D5": 6.938893903907228e-18,
+      "D6": 3.469446951953614e-18,
+      "D7": 3.469446951953614e-18,
+      "D8": 1.734723475976807e-18
+    },
+    "D5": {
+      "D1": -5.204170427930421e-18,
+      "D2": -3.469446951953614e-18,
+      "D3": -6.938893903907228e-18,
+      "D4": 6.938893903907228e-18,
+      "D5": 1.0,
+      "D6": 2.0816681711721685e-17,
+      "D7": -6.938893903907228e-18,
+      "D8": 3.469446951953614e-18
+    },
+    "D6": {
+      "D1": 9.540979117872439e-18,
+      "D2": -6.938893903907228e-18,
+      "D3": -1.2576745200831851e-17,
+      "D4": 3.469446951953614e-18,
+      "D5": 2.0816681711721685e-17,
+      "D6": 0.9999999999999999,
+      "D7": 6.071532165918825e-18,
+      "D8": -1.0408340855860843e-17
+    },
+    "D7": {
+      "D1": 6.071532165918825e-18,
+      "D2": -2.42861286636753e-17,
+      "D3": -6.938893903907228e-18,
+      "D4": 3.469446951953614e-18,
+      "D5": -6.938893903907228e-18,
+      "D6": 6.071532165918825e-18,
+      "D7": 1.0,
+      "D8": -1.734723475976807e-17
+    },
+    "D8": {
+      "D1": 1.0408340855860843e-17,
+      "D2": 8.673617379884035e-18,
+      "D3": 1.3877787807814457e-17,
+      "D4": 1.734723475976807e-18,
+      "D5": 3.469446951953614e-18,
+      "D6": -1.0408340855860843e-17,
+      "D7": -1.734723475976807e-17,
+      "D8": 1.0
+    }
+  }
+}
