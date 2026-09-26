@@ -310,3 +310,93 @@ def test_replay_config_rejects_behavioral_equivalent_for_dec007(tmp_path: Path):
         "dec007_success_tiers.tiers must not contain REPLAY_BEHAVIORAL_EQUIVALENT" in item
         for item in errors
     )
+
+
+def _clean_execution_record() -> dict:
+    return {
+        "entrypoint": "python3 -m cognitive_self_model.m22_1.preflight",
+        "invocation": "PYTHONPATH=src python3 -m cognitive_self_model.m22_1.preflight",
+        "git_dirty": False,
+    }
+
+
+def test_execution_records_must_be_top_level_list(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def remove_list(payload):
+        del payload["execution_records"]
+
+    _rewrite(dest / "RECOVERY.yaml", remove_list)
+    errors = validate(dest, ROOT)
+    assert any("execution_records must be a top-level list" in item for item in errors)
+
+    def nest(payload):
+        payload["execution_records"] = []
+        payload["milestones"]["M22.1"]["execution_records"] = [_clean_execution_record()]
+
+    _rewrite(dest / "RECOVERY.yaml", nest)
+    errors = validate(dest, ROOT)
+    assert any("must not nest execution_records" in item for item in errors)
+
+
+def test_execution_record_rejects_sentinels_and_requires_dirty_reason(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def unknown_invocation(payload):
+        record = _clean_execution_record()
+        record["invocation"] = "UNKNOWN"
+        payload["execution_records"] = [record]
+
+    _rewrite(dest / "RECOVERY.yaml", unknown_invocation)
+    errors = validate(dest, ROOT)
+    assert any("execution_records[0] invocation is required and must not be a sentinel" in item for item in errors)
+
+    def dirty_without_reason(payload):
+        record = _clean_execution_record()
+        record["git_dirty"] = True
+        payload["execution_records"] = [record]
+
+    _rewrite(dest / "RECOVERY.yaml", dirty_without_reason)
+    errors = validate(dest, ROOT)
+    assert any("dirty_reason is required when git_dirty is true" in item for item in errors)
+
+    def dirty_sentinel_reason(payload):
+        record = _clean_execution_record()
+        record["git_dirty"] = True
+        record["dirty_reason"] = "NOT_RECORDED"
+        payload["execution_records"] = [record]
+
+    _rewrite(dest / "RECOVERY.yaml", dirty_sentinel_reason)
+    errors = validate(dest, ROOT)
+    assert any("dirty_reason is required when git_dirty is true" in item for item in errors)
+
+
+def test_execution_record_accepts_clean_and_explained_dirty(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def clean(payload):
+        payload["execution_records"] = [_clean_execution_record()]
+
+    _rewrite(dest / "RECOVERY.yaml", clean)
+    assert validate(dest, ROOT) == []
+
+    def dirty(payload):
+        record = _clean_execution_record()
+        record["git_dirty"] = True
+        record["dirty_reason"] = "uncommitted local edits in src/cognitive_self_model/m22_1"
+        payload["execution_records"] = [record]
+
+    _rewrite(dest / "RECOVERY.yaml", dirty)
+    assert validate(dest, ROOT) == []
+
+
+def test_replay_config_rejects_renamed_tolerance_keys(tmp_path: Path):
+    target = _replay_copy(tmp_path)
+
+    def mutate(payload):
+        payload["tolerances"]["s_abs"] = payload["tolerances"]["score_atol"]
+
+    _rewrite(target, mutate)
+    errors: list[str] = []
+    _check_m22_1_r_replay_config(tmp_path, errors)
+    assert any("tolerances.s_abs is not a frozen tolerance key" in item for item in errors)

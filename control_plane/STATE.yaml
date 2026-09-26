@@ -338,6 +338,31 @@ decisions:
     affects:
       - F-M22.1.2-REINTERPRETATION
       - F-M22.1.2-READOUT-STRUCTURE
+  - id: DEC-009
+    date: "2026-09-26"
+    status: ACCEPTED
+    statement: >
+      Execution record contract. execution_records is a top-level flat list
+      in control_plane/RECOVERY.yaml, not nested under milestones. Each
+      record is independently auditable. Sentinel values UNKNOWN,
+      NOT_APPLICABLE, NOT_RECORDED, empty string, and null are forbidden in
+      required fields of an execution record. Those sentinels remain allowed
+      in milestone preregistration entries. Tolerance key names in
+      configs/m22_1_r_replay.yaml are frozen: score_atol, score_rtol,
+      delta_atol, mean_atol, null_atol. The comparator consumes them
+      verbatim. Any rename is a separate change. invocation is a required
+      field, distinct from entrypoint. entrypoint records what was run;
+      invocation records the exact command, including environment variables
+      that materially affect resolution. Convention: runnable from the repo
+      root. git_dirty is a required boolean. If true, dirty_reason is
+      required and must be a non-empty, non-sentinel string. A dirty run
+      remains recordable, but never silently. This decision is contract
+      only. It does not change M22.1 (remains CANDIDATE). The M22.2 gate
+      stays closed. It does not constitute or schedule a run.
+    approved_by: user
+    affects:
+      - control_plane/RECOVERY.yaml
+      - configs/m22_1_r_replay.yaml
 
 contract_rules:
   NO_SELF_HASH_EMBEDDING:

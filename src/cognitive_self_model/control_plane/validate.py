@@ -30,6 +30,9 @@ REPLAY_TIER_NAMES = (
 )
 REPLAY_TOLERANCE_KEYS = ("score_atol", "score_rtol", "delta_atol", "mean_atol", "null_atol")
 REPLAY_RESOLUTION_KEYS = ("mechanism", "drift_risk", "mitigation_required", "precondition_recheck")
+EXECUTION_SENTINELS = {"UNKNOWN", "NOT_APPLICABLE", "NOT_RECORDED", ""}
+EXECUTION_REQUIRED_STRINGS = ("entrypoint", "invocation")
+FROZEN_TOLERANCE_ALIASES = ("s_abs", "s_rel", "delta_abs", "mean_abs", "null_delta_abs")
 
 STATUS_ENUM = {
     "CANDIDATE",
@@ -312,6 +315,12 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
         if not isinstance(rec.get("depends_on_provenance"), list):
             errors.append(f"RECOVERY {mid} depends_on_provenance must be a list")
         _check_environment(str(mid), rec.get("environment"), errors)
+        if "execution_records" in rec:
+            errors.append(
+                f"{RECOVERY_FILE}: RECOVERY {mid} must not nest execution_records; "
+                "use the top-level list"
+            )
+    _check_execution_records(recovery, errors)
 
     # 2. Every path in FILE_MAP/CLAIMS/RECOVERY exists in the working tree.
     for label, doc in (("FILE_MAP", file_map), ("CLAIMS", claims_doc), ("RECOVERY", recovery)):
@@ -565,6 +574,44 @@ def _open_integrity_issues(state: dict) -> list[dict]:
     return []
 
 
+def _is_execution_sentinel(value: Any) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, str):
+        return value.strip() in EXECUTION_SENTINELS or value.strip() == ""
+    return False
+
+
+def _check_execution_records(recovery: dict, errors: list[str]) -> None:
+    """DEC-009. Milestone entries may still use UNKNOWN. Execution records may not."""
+    records = recovery.get("execution_records")
+    if not isinstance(records, list):
+        errors.append(f"{RECOVERY_FILE}: execution_records must be a top-level list")
+        return
+    for index, record in enumerate(records):
+        label = f"execution_records[{index}]"
+        if not isinstance(record, dict):
+            errors.append(f"{RECOVERY_FILE}: {label} must be a mapping")
+            continue
+        for field in EXECUTION_REQUIRED_STRINGS:
+            value = record.get(field)
+            if field not in record or not isinstance(value, str) or _is_execution_sentinel(value):
+                errors.append(
+                    f"{RECOVERY_FILE}: {label} {field} is required and must not be a sentinel"
+                )
+        git_dirty = record.get("git_dirty")
+        if "git_dirty" not in record or not isinstance(git_dirty, bool):
+            errors.append(f"{RECOVERY_FILE}: {label} git_dirty is required and must be a boolean")
+            continue
+        if git_dirty:
+            reason = record.get("dirty_reason")
+            if "dirty_reason" not in record or not isinstance(reason, str) or _is_execution_sentinel(reason):
+                errors.append(
+                    f"{RECOVERY_FILE}: {label} dirty_reason is required when git_dirty is true "
+                    "and must be a non-empty non-sentinel string"
+                )
+
+
 def _check_environment(mid: str, environment: Any, errors: list[str]) -> None:
     """Require the five recorded environment keys. Optional keys are checked only when present.
 
@@ -634,6 +681,12 @@ def _check_m22_1_r_replay_config(repo_root: Path, errors: list[str]) -> None:
             value = tolerances.get(key)
             if isinstance(value, bool) or not isinstance(value, float) or value <= 0:
                 errors.append(f"{REPLAY_CONFIG}: tolerances.{key} invalid: {value}")
+        for alias in FROZEN_TOLERANCE_ALIASES:
+            if alias in tolerances:
+                errors.append(
+                    f"{REPLAY_CONFIG}: tolerances.{alias} is not a frozen tolerance key; "
+                    "use score_atol, score_rtol, delta_atol, mean_atol, null_atol"
+                )
 
     tiers = document.get("tiers")
     if not isinstance(tiers, dict):

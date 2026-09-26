@@ -6,6 +6,7 @@ recovery_grade_criteria:
   ABSENT: no files, report, or reconstructable pointer
   chain_rule: recovery_grade_chain is the worst grade over self and all upstream depends_on (ABSENT < POINTER_ONLY < PARTIAL
     < EXACT)
+execution_records: []
 milestones:
   M18:
     branch: UNKNOWN
