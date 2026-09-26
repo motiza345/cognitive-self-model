@@ -1,0 +1,89 @@
+milestone: M22.1.3
+phase: readout_geometry_null_audit
+analysis_only: true
+m22_1_status_preserved: CANDIDATE
+m22_2_authorized: false
+proposed_finding_id: F-M22.1.3-READOUT
+
+model_id: Qwen/Qwen2.5-0.5B
+model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+expected_n_layers: 24
+expected_d_model: 896
+hook_name: blocks.23.hook_resid_post
+token_position: last
+positive_id: 9834
+negative_id: 902
+positive_text: " yes"
+negative_text: " no"
+prepend_bos: true
+batch_size: 1
+dtype: float32
+alphas: [-2.0, -1.0, 0.0, 1.0, 2.0]
+direction_ids: [D1, D2, D3, D4, D5, D6, D7, D8]
+evaluation_splits: [validation, replication]
+descriptive_split: discovery
+
+paths:
+  m22_1_config: configs/m22_1_preflight.json
+  m22_1_1_config: configs/m22_1_1_specificity_audit.json
+  prompt_artifact: reports/M22_1/manifest.json
+  direction_manifest: reports/M22_1_1/direction_panel_manifest.json
+  # compare.py is the only module allowed to read this file
+  delta_table: reports/M22_1_1/direction_panel_results.json
+  predictions: artifacts/m22_1_3/predictions.json
+  results: artifacts/m22_1_3/results.json
+  directions_npy: artifacts/m22_1_3/directions_float64.npy
+  clean_resid_npy: artifacts/m22_1_3/clean_resid_l23_last.npy
+  report: reports/m22_1_3_readout_null_report.md
+  hash_manifest: artifacts/m22_1_3/manifest.sha256
+
+prompt_manifest_sha256: fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db
+direction_hashes:
+  D1: 5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411
+  D2: 8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e
+  D3: 546083c4b5c7779725a9544d7fdf4da8d4770b50826d2274b9c566219d4d309d
+  D4: 9b2f1b8831336b2b871b7d9d4587adbc427eb4a66434b77073d8c1e2764bd911
+  D5: 10579f559390a7ebf5b25965b8c3487c3dedd4cb8295d020fc74f5beec736f43
+  D6: 9aa41426dd3eca94f25ca54e67e6e23555bf1afbcf81240736c0ae411d376ee3
+  D7: 142c1f5f44d36430d89371a231aabe825a116affd847a7fafad80ced72b26c45
+  D8: 6752b59f8f74c2bacb818deac69840ad744144f6dca41b3a4b58a0f59ccc7d60
+
+closed_form_rel_tol: 1.0e-5
+jacobian_rel_tol: 1.0e-6
+n_closed_form_checks: 5
+n_jacobian_checks: 5
+check_seed: 221301
+
+gates:
+  alpha0_exact: 0.0
+  recorded_alpha0_abs_max: 1.0e-6
+  clean_margin_abs_tol: 1.0e-3
+
+level_b:
+  abs_floor: 1.0e-3
+  rel_coef: 1.0e-2
+  small_abs_cutoff: 1.0e-2
+
+level_a2:
+  min_abs_exact: 1.0e-2
+  r2_supported: 0.95
+  sign_supported: 0.95
+  r2_nonlinear: 0.80
+  abs_floor: 1.0e-3
+  rel_coef: 5.0e-2
+
+labels:
+  prompt_missing: PROMPT_PROVENANCE_MISSING
+  directions_fail: DIRECTIONS_NOT_REPRODUCIBLE
+  sanity_fail: SANITY_FAILED
+  prompt_set_mismatch: PROMPT_SET_MISMATCH
+  reproduction_fail: REPRODUCTION_FAILED
+  exact: READOUT_RECONSTRUCTION_EXACT
+  mismatch: RECONSTRUCTION_MISMATCH
+  first_order: FIRST_ORDER_SUPPORTED
+  nonlinear: NONLINEAR_READOUT_MATERIAL
+  inconclusive: LINEARITY_INCONCLUSIVE
+
+exact_wording: >-
+  The recorded M22.1/M22.1.1 effects are exactly reconstructible from the
+  final-residual perturbation through the model's final RMSNorm and unembedding.
