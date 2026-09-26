@@ -17,11 +17,10 @@ If prose and YAML disagree, the YAML is authoritative. Do not duplicate claim te
 
 ## Validator
 
-From the repository root (either form):
+From the repository root:
 
 ```
 PYTHONPATH=src python -m cognitive_self_model.control_plane.validate
-python -m src.cognitive_self_model.control_plane.validate
 ```
 
 Exit `0` if all checks pass; exit `1` and print errors otherwise.

@@ -95,9 +95,57 @@ def test_m22_2_authorized_without_decision_fails(tmp_path: Path):
 def test_open_integrity_flag_missing_from_state_fails(tmp_path: Path):
     dest = _copy_control(tmp_path)
 
-    def mutate(payload):
-        payload["known_integrity_issues"] = []
+    def mutate_claims(payload):
+        for entry in payload["entries"]:
+            if entry["id"] == "F-M22.1.3-READOUT":
+                entry["integrity_flags"] = [
+                    {
+                        "id": "INT-OPEN-TEST",
+                        "description": "synthetic open flag",
+                        "source": "test",
+                        "resolution_status": "open",
+                        "path": "artifacts/m22_1_3/predictions.json",
+                    }
+                ]
+                break
 
-    _rewrite(dest / "STATE.yaml", mutate)
+    def mutate_state(payload):
+        payload["known_integrity_issues"] = {"open": [], "resolved": []}
+
+    _rewrite(dest / "CLAIMS.yaml", mutate_claims)
+    _rewrite(dest / "STATE.yaml", mutate_state)
     errors = validate(dest, ROOT)
     assert any("integrity flag" in item for item in errors)
+
+
+def test_exact_with_missing_items_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["milestones"]["M22.1.1"]["missing"] = ["synthetic missing item"]
+
+    _rewrite(dest / "RECOVERY.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("EXACT must have no missing" in item for item in errors)
+
+
+def test_partial_with_empty_missing_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["milestones"]["M22.1"]["missing"] = []
+
+    _rewrite(dest / "RECOVERY.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("PARTIAL must have a non-empty missing list" in item for item in errors)
+
+
+def test_chain_grade_inconsistent_with_depends_on_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["milestones"]["M22.1.1"]["recovery_grade_chain"] = "EXACT"
+
+    _rewrite(dest / "RECOVERY.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("recovery_grade_chain" in item and "computed" in item for item in errors)

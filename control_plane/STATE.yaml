@@ -272,6 +272,13 @@ decisions:
     approved_by: user
     affects:
       - M22.1.4
+  - id: DEC-003
+    date: "2026-09-26"
+    statement: "Push m22-1-3-readout-null and control-plane-bootstrap to origin; no PR, no merge."
+    approved_by: user
+    affects:
+      - m22-1-3-readout-null
+      - control-plane-bootstrap
   - id: DEC-004
     date: "2026-09-26"
     statement: "Evidence-backed claim ledger scope starts at M21.2.4.3.3"
@@ -285,14 +292,29 @@ decisions:
     affects:
       - F-M22.1.3-READOUT
       - artifacts/m22_1_3/predictions.json
+  - id: DEC-006
+    date: "2026-09-26"
+    statement: "Adopt NO_SELF_HASH_EMBEDDING from M22.1.4 onward."
+    approved_by: user
+    affects:
+      - M22.1.4
+      - contract_rules.NO_SELF_HASH_EMBEDDING
+
+contract_rules:
+  NO_SELF_HASH_EMBEDDING:
+    rule: "Artifacts must not embed their own hash; hashes live only in manifest files."
+    applies_from: M22.1.4
+    source: DEC-006
 
 known_integrity_issues:
-  - id: INT-M22.1.3-PREDICTIONS-HASH
-    path: artifacts/m22_1_3/predictions.json
-    class: REPORT_STALE_HASH
-    description: "Report and results.json record predictions_sha256 7391dd85d4bf6ccb16b3304795e9ede6c2edc349908ec335f735ef55b45cdf30, which is the first-write hash of predictions.json before predict.py inserted run_log.predictions_sha256. On-disk bytes and artifacts/m22_1_3/manifest.sha256 record 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53. Numeric cell content is identical. Step 0.1 class REPORT_STALE_HASH."
-    source: "reports/m22_1_3_readout_null_report.md line 17; artifacts/m22_1_3/results.json predictions_sha256; artifacts/m22_1_3/manifest.sha256; src/cognitive_self_model/m22_1_3/predict.py lines 453-456"
-    resolution_status: open
+  open: []
+  resolved:
+    - id: INT-M22.1.3-PREDICTIONS-HASH
+      path: artifacts/m22_1_3/predictions.json
+      class: REPORT_STALE_HASH
+      description: "Self-referential hash: predictions.json stored its own first-write sha256 in run_log.predictions_sha256; writing that field changed the file bytes. Versions differ only in that metadata string; numeric content identical. Cited hash = manifest.sha256 (2b9c508e…)."
+      source: "reports/m22_1_3_readout_null_report.md line 17; artifacts/m22_1_3/manifest.sha256; src/cognitive_self_model/m22_1_3/predict.py lines 453-456"
+      resolution_status: RESOLVED_BENIGN
 
 next_milestone:
   id: M22.1.4

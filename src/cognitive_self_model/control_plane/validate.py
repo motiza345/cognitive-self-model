@@ -42,7 +42,9 @@ FILE_CATEGORY = {
     "OBSOLETE",
 }
 RECOVERY_GRADE = {"EXACT", "PARTIAL", "POINTER_ONLY", "ABSENT"}
+GRADE_RANK = {"ABSENT": 0, "POINTER_ONLY": 1, "PARTIAL": 2, "EXACT": 3}
 GATE_REASON_IDS = re.compile(r"\b(?:F|OBS)-[A-Z0-9][A-Z0-9._-]*\b")
+OPEN_FLAG_STATUSES = {"open", "OPEN"}
 
 
 def repo_root_from(start: Path) -> Path:
@@ -252,7 +254,9 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
             errors.append(f"RECOVERY {mid} must be a mapping")
             continue
         for field in (
-            "recovery_grade",
+            "recovery_grade_local",
+            "recovery_grade_chain",
+            "depends_on",
             "branch",
             "commit",
             "entrypoint",
@@ -265,9 +269,14 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
         ):
             if field not in rec:
                 errors.append(f"RECOVERY {mid} missing {field}")
-        grade = rec.get("recovery_grade")
-        if grade not in RECOVERY_GRADE:
-            errors.append(f"RECOVERY {mid} recovery_grade invalid: {grade}")
+        local = rec.get("recovery_grade_local")
+        chain = rec.get("recovery_grade_chain")
+        if local not in RECOVERY_GRADE:
+            errors.append(f"RECOVERY {mid} recovery_grade_local invalid: {local}")
+        if chain not in RECOVERY_GRADE:
+            errors.append(f"RECOVERY {mid} recovery_grade_chain invalid: {chain}")
+        if not isinstance(rec.get("depends_on"), list):
+            errors.append(f"RECOVERY {mid} depends_on must be a list")
 
     # 2. Every path in FILE_MAP/CLAIMS/RECOVERY exists in the working tree.
     for label, doc in (("FILE_MAP", file_map), ("CLAIMS", claims_doc), ("RECOVERY", recovery)):
@@ -399,14 +408,14 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
         errors.append("STATE.gates.M22.2.authorized must be false unless a user-approved decision authorizes otherwise")
 
     # 9. Open integrity flags on claim evidence must be listed in STATE.known_integrity_issues.
-    issues = state.get("known_integrity_issues") or []
-    issue_ids = {item.get("id") for item in issues if isinstance(item, dict)}
-    issue_paths = {item.get("path") for item in issues if isinstance(item, dict)}
+    open_issues = _open_integrity_issues(state)
+    issue_ids = {item.get("id") for item in open_issues}
+    issue_paths = {item.get("path") for item in open_issues}
     for entry in entries:
         for flag in entry.get("integrity_flags") or []:
             if not isinstance(flag, dict):
                 continue
-            if flag.get("resolution_status") != "open":
+            if str(flag.get("resolution_status")) not in OPEN_FLAG_STATUSES:
                 continue
             fid = flag.get("id")
             fpath = flag.get("path")
@@ -414,6 +423,32 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
                 errors.append(f"open integrity flag {fid} missing from STATE.known_integrity_issues")
             if fpath and fpath not in issue_paths:
                 errors.append(f"open integrity flag path {fpath} missing from STATE.known_integrity_issues")
+
+    # 10. Recovery grade criteria consistency.
+    rec_ms = recovery.get("milestones") or {}
+    if "recovery_grade_criteria" not in recovery:
+        errors.append("RECOVERY missing recovery_grade_criteria")
+    for mid, rec in rec_ms.items():
+        if not isinstance(rec, dict):
+            continue
+        local = rec.get("recovery_grade_local")
+        missing = rec.get("missing") or []
+        if not isinstance(missing, list):
+            errors.append(f"RECOVERY {mid} missing must be a list")
+            continue
+        if local == "EXACT" and missing:
+            errors.append(f"RECOVERY {mid} EXACT must have no missing items")
+        if local == "PARTIAL" and len(missing) < 1:
+            errors.append(f"RECOVERY {mid} PARTIAL must have a non-empty missing list")
+        for dep in rec.get("depends_on") or []:
+            if dep not in rec_ms:
+                errors.append(f"RECOVERY {mid} depends_on unknown milestone {dep}")
+        expected_chain = _computed_chain_grade(mid, rec_ms)
+        if expected_chain is not None and rec.get("recovery_grade_chain") != expected_chain:
+            errors.append(
+                f"RECOVERY {mid} recovery_grade_chain {rec.get('recovery_grade_chain')} "
+                f"!= computed {expected_chain}"
+            )
 
     return errors
 
@@ -437,6 +472,41 @@ def _recovery_hashes(recovery: dict) -> list[tuple[str, str]]:
 def _is_m22_path(rel: str) -> bool:
     name = rel.lower()
     return "m22" in name or "/M22" in rel or rel.startswith("reports/M22")
+
+
+def _open_integrity_issues(state: dict) -> list[dict]:
+    issues = state.get("known_integrity_issues")
+    if isinstance(issues, dict):
+        return [item for item in (issues.get("open") or []) if isinstance(item, dict)]
+    if isinstance(issues, list):
+        return [
+            item
+            for item in issues
+            if isinstance(item, dict) and str(item.get("resolution_status", "open")) in OPEN_FLAG_STATUSES
+        ]
+    return []
+
+
+def _computed_chain_grade(mid: str, milestones: dict, seen: set[str] | None = None) -> str | None:
+    rec = milestones.get(mid)
+    if not isinstance(rec, dict):
+        return None
+    local = rec.get("recovery_grade_local")
+    if local not in GRADE_RANK:
+        return None
+    seen = set() if seen is None else set(seen)
+    if mid in seen:
+        return local
+    seen.add(mid)
+    rank = GRADE_RANK[local]
+    for dep in rec.get("depends_on") or []:
+        dep_grade = _computed_chain_grade(str(dep), milestones, seen)
+        if dep_grade in GRADE_RANK:
+            rank = min(rank, GRADE_RANK[dep_grade])
+    for grade, value in GRADE_RANK.items():
+        if value == rank:
+            return grade
+    return local
 
 
 def _decision_overrides_guard(item: dict) -> bool:
