@@ -723,6 +723,22 @@ milestones:
       hash).
     gaps:
     - fold_ln / center_writing_weights / center_unembed realized as not_on_cfg (artifacts/m22_1_3/results.json realized).
+    load_processing:
+      constructor: transformer_lens.HookedTransformer.from_pretrained
+      citation: src/cognitive_self_model/m22_1/loader.py:75-93
+      explicit_kwargs: [device, dtype]
+      optional_kwarg: revision
+      not_passed: [fold_ln, center_writing_weights, center_unembed, fold_value_biases, refactor_factored_attn_matrices]
+      constructor_defaults:
+        transformer_lens_version: "3.9.0"
+        citation: transformer_lens/HookedTransformer.py:1158-1174
+        fold_ln: true
+        center_writing_weights: true
+        center_unembed: true
+        fold_value_biases: true
+        refactor_factored_attn_matrices: false
+      cfg_after_load: not_on_cfg
+      note: M22.1.3 predict.py:21,348 calls load_qwen; no separate constructor.
     recovery_grade_local: PARTIAL
     recovery_grade_chain: PARTIAL
     depends_on:
@@ -746,7 +762,8 @@ milestones:
     commit: UNKNOWN
     entrypoint: UNKNOWN
     config_path: configs/m22_1_3b_first_order_structure.yaml
-    config_sha256: ba80e3d4bfb1b234d0fa82d6b215195141f008936451aa200f35e721e2038598
+    config_sha256: e2b7b4e7d44447882d6b6635a0853a5e8e1a404cbd69cba05b00e43c362a593f
+    config_sha256_superseded: ba80e3d4bfb1b234d0fa82d6b215195141f008936451aa200f35e721e2038598
     environment:
       python: UNKNOWN
       torch: UNKNOWN
@@ -771,16 +788,17 @@ milestones:
       sha256: 6429c4b1d5151d7b01eb13d5622b2e55d9fb0b3a78bf46993b871c213aac8bd3
     output_artifacts:
     - path: artifacts/m22_1_3b/manifest.sha256
-      sha256: 4e7243cf2b75a0e8b95160f49f18715d50d2d9379be640267d0135ac665872d6
+      sha256: 671198572adcb3855a711d2dc8d46d9757f927f13d625aeea9cdf5a3d478bfa8
     expected_labels:
     - REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
     - PROJECTION_TERM_NON_NEGLIGIBLE
     - INSUFFICIENT_EVIDENCE
     source: configs/m22_1_3b_first_order_structure.yaml
+    integrity_notes:
+    - INT-M22.1.2-ENERGY-UNSOURCED is OPEN (no M22.1.2 leading-energy source; G1 records a baseline).
     gaps:
     - Preregistration only; no results; metrics not computed.
-    - r vector / W_U columns / ln_final gain tensor not stored.
-    - M22.1.2 results (b110683f) have no leading_energy field (G1 target UNKNOWN).
+    - M22.1.2 results (b110683f) have no leading_energy field (G1 UNSOURCED).
     recovery_grade_local: PARTIAL
     recovery_grade_chain: PARTIAL
     depends_on:
@@ -790,8 +808,7 @@ milestones:
     - no results artifact (preregistration only; metrics not computed)
     - no documented results entrypoint executed
     - python/torch/transformer_lens environment not recorded for this milestone
-    - r vector / W_U columns / ln_final gain tensor not stored
-    - G1 stored leading_energy field UNKNOWN in b110683f results
+    - G1 M22.1.2 leading-energy source UNSOURCED; INT-M22.1.2-ENERGY-UNSOURCED OPEN
     depends_on_verified: true
     depends_on_provenance:
     - milestone: M22.1.2

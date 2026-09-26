@@ -1,7 +1,7 @@
 # M22.1.3b first-order structure check — preregistration (frozen).
 # No results. No metrics computed. NO_SELF_HASH_EMBEDDING: this file
 # does not embed its own hash; hashes of this file live only in
-# FILE_MAP / a later manifest.sha256.
+# FILE_MAP / manifest.sha256.
 
 milestone: M22.1.3b
 phase: first_order_structure_preregistration
@@ -14,6 +14,18 @@ finding_status_rule: >
   Any label assigned by this milestone does not change the status of
   F-M22.1.2-REINTERPRETATION. That finding status changes only via a
   separate DECISION. M22.1 stays CANDIDATE. M22.2 stays NOT AUTHORIZED.
+
+amendments:
+  - id: A1
+    previous_sha256: ba80e3d4bfb1b234d0fa82d6b215195141f008936451aa200f35e721e2038598
+    reason: >
+      G1 M22.1.2 leading-energy source is UNSOURCED; remove weight-load
+      dependency; decompose T1/T2 from stored fields; replace reconstructive
+      G3 with structural least-squares G3; fix compute dtype, tolerances,
+      energy/|cos| definitions, and split rule.
+    statement: >
+      Step A inspected field existence, dtype and shape only; no metric or
+      numeric cell value was computed or inspected before this amendment.
 
 oq003_resolution:
   question: OQ-003
@@ -32,38 +44,50 @@ oq003_resolution:
     readout_construction: unembed_difference_gain_folded_or_absent
   do_not_infer_fold_from_class: true
 
+loader_processing:
+  # Amendment A1 §1.2 — constructor kwargs actually passed.
+  m22_1_loader:
+    constructor: transformer_lens.HookedTransformer.from_pretrained
+    citation: src/cognitive_self_model/m22_1/loader.py:75-93
+    explicit_kwargs: [device, dtype]
+    optional_kwarg: revision
+    not_passed:
+      - fold_ln
+      - center_writing_weights
+      - center_unembed
+      - fold_value_biases
+      - refactor_factored_attn_matrices
+  m22_1_3_loader: "M22.1.3 predict.py:21,348 calls load_qwen; no separate constructor."
+  constructor_defaults:
+    transformer_lens_version: "3.9.0"
+    version_source: artifacts/m22_1_3/results.json environment.transformer_lens
+    citation: transformer_lens/HookedTransformer.py:1158-1174
+    fold_ln: true
+    center_writing_weights: true
+    center_unembed: true
+    fold_value_biases: true
+    refactor_factored_attn_matrices: false
+  cfg_recorded_after_load: not_on_cfg
+  cfg_recorded_note: "inspect_loaded_model returns not_on_cfg when the flag is absent from model.cfg (predict.py:149-155,177-179)."
+
 normalization:
   # A.1 — code path used by M22.1.3 Level B replay.
-  # Level B label field is delta_exact_f32 from module_margin(ln_final, unembed)
-  # (src/cognitive_self_model/m22_1_3/compare.py:420; predict.py:411-414).
   level_b_path:
     module_margin: src/cognitive_self_model/m22_1_3/predict.py:67-74
     cell_write: src/cognitive_self_model/m22_1_3/predict.py:411-414
     compare_field: src/cognitive_self_model/m22_1_3/compare.py:420
   centering: no
-  centering_citation: "transformer_lens RMSNormPre.forward (no mean subtraction); class docstring 'without the centering and bias'; recorded ln_final_class RMSNormPre"
   gain_form: none
-  gain_citation: "RMSNormPre has no w; recorded realized.ln_final_has_weight false (results.json realized). extract_readout else-branch predict.py:208-210"
   eps_value: 1.0e-6
   eps_placement: "inside sqrt after mean of squares: (x.pow(2).mean(-1, keepdim=True) + eps).sqrt()"
-  eps_citations:
-    - "predict.py:44-45 rms_scale"
-    - "artifacts/m22_1_3/results.json realized.eps"
-    - "inspect_loaded_model predict.py:166-176 (ln_final.eps then cfg.eps)"
   ln_gain_folded_into_W_U: UNKNOWN
-  ln_gain_note: >
-    Recorded readout_construction is unembed_difference_gain_folded_or_absent
-    (predict.py:208-210; results.json readout_construction). fold_ln is
-    not_on_cfg. Do not infer fold from RMSNormPre. extract_readout did not
-    multiply by ln_final.w (has_weight false).
   first_order_helper:
     citation: src/cognitive_self_model/m22_1_3/predict.py:53-59
-    R_definition: "R(x) = sqrt(mean(x^2) + eps)  # rms_scale; not Euclidean ||x||_2"
+    R_definition: "R(x) = sqrt(mean(x^2) + eps)"
     jacobian: "j = (r·d)/R - (r·x)(x·d)/(n R^3)"
     delta1: "Δ₁ = α * j   # predict.py:418"
 
 outcome:
-  # A.2
   definition: >
     s = last-position logit of the first id of the positive text
     minus the last-position logit of the first id of the negative text.
@@ -74,56 +98,94 @@ outcome:
   softmax_jacobian: not_applicable
 
 matrix_construction:
-  # A.3 — identical to M22.1.2 prompt × direction matrix.
   source: src/cognitive_self_model/m22_1_2/protocol.py:552-558
   builder: src/cognitive_self_model/m22_1_2/data.py:43-68
   cell_value: actual_delta
   alpha: 1.0
   alpha_key: primary_alpha
-  alpha_config: configs/m22_1_2_response_space_audit.json
-  symmetry_alpha_stored_but_not_the_primary_matrix: -1.0
   splits: [discovery, validation, replication]
   evaluation_splits: [validation, replication]
+  discovery_role: descriptive_only
   shape: "6 prompts × 8 directions per split"
   prompt_order: "lexicographic prompt_id within split (data.py:36)"
   direction_ids: [D1, D2, D3, D4, D5, D6, D7, D8]
-  direction_normalization: "unit-length; unit-Gaussian then Gram-Schmidt (m22_1/direction.py:10-17,29-41; m22_1_1/panel.py:26-44,60-108)"
+  direction_normalization: "unit-length; unit-Gaussian then Gram-Schmidt"
   centering_of_delta_matrix: no
   centering_before_svd: no
+
+compute_dtype:
+  # Amendment A1 §1.3
+  delta_jacobian: float64
+  r_dot_d: float64
+  inv_rms: float64
+  citation: src/cognitive_self_model/m22_1_3/predict.py:418-430
   note: >
-    data.response_matrix writes actual_delta with no centering.
-    protocol.py:577 stores matrices[split].alpha_plus1 = that matrix.
-    Secondary estimator mean_imputed_uncentered_svd (config) is not used
-    for the M22.1.2 label and is not this matrix construction.
+    jacobian_first_order / rms_scale / torch.dot run on torch.float64 tensors;
+    values are stored as Python float (IEEE-754 binary64). JSON numbers.
+
+shapes:
+  # Amendment A1 §1.4 — npy header only; no payload values read.
+  clean_resid_l23_last:
+    path: artifacts/m22_1_3/clean_resid_l23_last.npy
+    shape: [18, 896]
+    dtype: float32
+    header: "{'descr': '<f4', 'fortran_order': False, 'shape': (18, 896)}"
+  directions_float64:
+    path: artifacts/m22_1_3/directions_float64.npy
+    shape: [8, 896]
+    dtype: float64
+    header: "{'descr': '<f8', 'fortran_order': False, 'shape': (8, 896)}"
+  n: 896
+  n_equals_d_model: true
+  d_model_source: artifacts/m22_1_3/results.json realized.d_model
+
+cell_ordering:
+  # Amendment A1 §1.5
+  cell_keys: [prompt_id, split, regime, direction_id, alpha]
+  cell_key_builder: src/cognitive_self_model/m22_1_3/predict.py:132-146
+  nest_order: prompt then direction_id then alpha
+  residual_row:
+    citation: src/cognitive_self_model/m22_1_3/predict.py:356-378,397,407
+    index: "residual_matrix[prompt_index[cell['prompt_id']]]"
+    prompt_order: "frozen_prompts() sorted by prompt_id (m22_1/prompts.py:65-80)"
+  direction_row:
+    citation: src/cognitive_self_model/m22_1_3/predict.py:340,398,408
+    index: "vectors[direction_index[cell['direction_id']]]"
+    direction_order: "config direction_ids [D1..D8]"
+  split_key: "cell['split'] == prompt.role (load_prompt_records predict.py:120-128)"
+  link_to_m22_1_2_matrix: "(split, prompt_id, direction_id) at alpha == 1.0 → matrices[split].alpha_plus1"
 
 formula:
   outcome_class: LINEAR_IN_LOGITS
   n: 896
-  n_source: artifacts/m22_1_3/results.json realized.d_model
   eps: 1.0e-6
-  R_p: "sqrt(mean_i x_{p,i}^2 + eps)"
-  x_hat_p: "x_p / R_p   # RMS-normalized; not x/||x||_2"
-  Delta1: "Δ₁_{p,d} = (α / R_p) * [(r·d) - (r·x̂_p)(x̂_p·d)/n]"
-  equivalent: "Δ₁_{p,d} = α * ((r·d)/R_p - (r·x_p)(x_p·d)/(n R_p^3))"
-  decomposition:
-    T1: "T1_{p,d} = α (r·d) / R_p     # rank-1: a_p b_d with a_p=α/R_p, b_d=r·d"
-    T2: "T2_{p,d} = α (r·x_p)(x_p·d) / (n R_p^3)"
-    identity: "Δ₁ = T1 - T2"
+  stored_field_decomposition:
+    T1: "T1(p,d) = alpha * inv_rms_p * r_dot_d(p,d)"
+    T2: "T2(p,d) = T1(p,d) - delta_jacobian(p,d)"
+    weight_load: not_required
+  analytic_identity:
+    Delta1: "Δ₁_{p,d} = α * ((r·d)/R_p - (r·x_p)(x_p·d)/(n R_p^3))"
+    T1_analytic: "α (r·d) / R_p"
+    T2_analytic: "α (r·x_p)(x_p·d) / (n R_p^3)"
+    note: "Stored-field T1/T2 implement the analytic split without r or W_U."
   nonlinear_softmax_term: not_applicable
-  citation: src/cognitive_self_model/m22_1_3/predict.py:53-59,418
+  citation: src/cognitive_self_model/m22_1_3/predict.py:53-59,418-430
+
+energy_definition:
+  leading_energy: "sigma_1^2 / sum_i sigma_i^2"
+  singular_vector_similarity: "|cos|"
+  citation_of_same_definition_elsewhere: src/cognitive_self_model/m22_1_1/analyze.py:104-114
 
 inputs:
-  # A.4 — pinned stored quantities. Missing items listed under missing.
   recorded_delta:
     path: reports/m22_1_2_response_space_results.json
     sha256: b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4
     field: matrices.{split}.alpha_plus1
-    note: "M22.1.2 stored prompt×direction actual_delta at α=+1. No leading_energy field in this file."
+    leading_energy_field: UNSOURCED
   stored_delta1:
     path: artifacts/m22_1_3/predictions.json
     sha256: 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53
     field: cells[].delta_jacobian
-    note: "Level A2 Δ₁ values; compare.py:422 uses this field."
   clean_l23_residuals:
     path: artifacts/m22_1_3/clean_resid_l23_last.npy
     sha256: 41f50fc748e4a06a3635dcf71148b41cb25b72e0031b63a279d301e96217b102
@@ -146,63 +208,64 @@ inputs:
     path: artifacts/m22_1_3/predictions.json
     sha256: 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53
     fields: [alpha, inv_rms, r_dot_d, delta_jacobian]
-  ln_final_gain_tensor:
-    stored: false
-    recorded_flags:
-      path: artifacts/m22_1_3/results.json
-      sha256: 3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d
-      ln_final_has_weight: false
-      fold_ln: not_on_cfg
-  W_U_columns_outcome_tokens:
-    stored: false
-    tokens: [9834, 902]
   r_vector:
     stored: false
-    scalar_only:
-      path: artifacts/m22_1_3/predictions.json
-      field: run_log.readout_norm
-      value: 3.761472001317605
-      construction: unembed_difference_gain_folded_or_absent
-  r_dot_x_per_cell:
+    required_for_decomposition: false
+  W_U_columns_outcome_tokens:
     stored: false
+    required_for_decomposition: false
+  ln_final_gain_tensor:
+    stored: false
+    required_for_decomposition: false
 
 missing:
-  - "r vector (W_U[:,9834] - W_U[:,902], or gain-folded equivalent) is not on disk"
-  - "W_U columns for outcome tokens 9834 and 902 are not on disk"
-  - "ln_final gain tensor is not on disk (recorded has_weight false; fold_ln not_on_cfg)"
-  - "per-cell (r·x) is not on disk"
-  - "reports/m22_1_2_response_space_results.json (b110683f…) has no leading_energy / svd field"
-  - "Loading weight tensors requires a separate explicit user approval; not done in Step A"
+  - "reports/m22_1_2_response_space_results.json (b110683f…) has no leading_energy / svd field (G1 UNSOURCED)"
+  - "r vector / W_U columns / ln_final gain tensor are not on disk (not required after A1 stored-field decomposition)"
 
 related_not_g1_target:
-  # Informational only. G1 target is the M22.1.2 results field, which is UNKNOWN.
   m22_1_1_svd_uncentered_leading_energy:
     path: reports/M22_1_1/intervention_space_report.json
     sha256: dac0b39fe4727d37a5c6dc9d03c51c7b7c00d45d985ff6a73e8346d232c73789
-    values:
-      discovery: 0.9992944227900636
-      replication: 0.999234298094233
-      validation: 0.9993817977404617
-    note: "Not the G1 stored M22.1.2 value."
+    definition: "sigma_1^2 / sum_i sigma_i^2 (analyze.py:104-114); uncentered SVD"
+    report: reports/M22_1_1/README.md:42-44
+    note: "M22.1.1, not M22.1.2. Not the G1 source."
 
 sanity_gates:
   fail_action: "STOP, no label"
+  compute_dtype: float64
+  G0:
+    statement: >
+      inv_rms recomputed from clean_resid_l23_last.npy with eps=1e-6
+      (R = sqrt(mean(x^2)+eps)) matches stored inv_rms.
+    rel_tol: 1.0e-6
+    rel_tol_rule: "1e-6 if compute dtype float64; 1e-4 if float32"
+    fixed_from: "predict.py:418-430 float64"
   G1:
-    statement: "Recomputed SVD leading energy of the RECORDED Δ matrix equals the stored M22.1.2 value (b110683f… results) within 1e-9 absolute."
+    source_status: UNSOURCED
+    statement: >
+      Recompute leading energy of recorded Δ (matrices.{split}.alpha_plus1)
+      and record it as the baseline. No sourced M22.1.2 energy exists to
+      match. Integrity flag INT-M22.1.2-ENERGY-UNSOURCED is OPEN.
     recorded_delta_path: reports/m22_1_2_response_space_results.json
     recorded_delta_sha256: b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4
-    stored_leading_energy_field: UNKNOWN
-    abs_tol: 1.0e-9
-    blocked_reason: "b110683f results store matrices.{split}.alpha_plus1 but no leading_energy."
+    energy_definition: "sigma_1^2 / sum_i sigma_i^2"
+    action_if_unsourced: "recompute and record as baseline; do not compare to M22.1.1"
   G2:
-    statement: "Rank-1 term T1 has leading energy 1 within 1e-9 (by construction)."
+    statement: "T1 leading energy == 1 within 1e-9 per split."
     abs_tol: 1.0e-9
   G3:
-    statement: "Δ₁ = T1 − T2 reconstructs the stored Level A2 Δ₁ values within 1e-6 relative."
-    stored_delta1_path: artifacts/m22_1_3/predictions.json
-    stored_delta1_field: cells[].delta_jacobian
+    statement: >
+      Structural: for each prompt p, least-squares c_p fitting
+      T2(p,·) ≈ c_p * (x_p · d) over the 8 directions, x_p from residual
+      file, d from directions file. Pass if
+      ||T2(p,·) − c_p (x_p·d)|| / ||T2(p,·)|| ≤ 1e-6 for all prompts in
+      validation and replication. Also report implied
+      (r·x_p) = c_p * n / (alpha * inv_rms_p^3).
     rel_tol: 1.0e-6
-    blocked_reason: "Independent T2 needs r or (r·x), neither stored. Weight-tensor load not approved."
+    rel_tol_rule: "1e-6 if compute dtype float64; 1e-3 if float32"
+    fixed_from: "predict.py:418-430 float64"
+    required_splits: [validation, replication]
+    replaces: "old reconstructive G3 (Δ₁ = T1 − T2 vs stored Δ₁)"
 
 metrics:
   # Names only. Not computed in this step.
@@ -212,15 +275,22 @@ metrics:
   - projection_share  # ||T2||_F^2 / ||Δ₁||_F^2
   - cosine_leading_left_recorded_Delta_vs_T1
   - cosine_leading_right_recorded_Delta_vs_T1
+  energy_definition: "sigma_1^2 / sum_i sigma_i^2"
+  singular_vector_similarity: "|cos|"
 
 decision_rule:
   preregistered: true
+  splits: "labels require validation AND replication to satisfy the rule; discovery is descriptive only"
+  energy_definition: "sigma_1^2 / sum_i sigma_i^2"
+  singular_vector_similarity: "|cos|"
   REINTERPRETATION_DESCRIPTIVELY_SUPPORTED: >
     |energy(Δ₁) − energy(recorded Δ)| ≤ 0.002
-    AND both singular-vector cosines ≥ 0.99
+    AND both singular-vector |cos| ≥ 0.99
     AND projection share ≤ 0.01
+    on both validation and replication
   PROJECTION_TERM_NON_NEGLIGIBLE: >
     the first two hold but projection share > 0.01
+    on both validation and replication
   INSUFFICIENT_EVIDENCE: otherwise
   no_label_if_gate_fails: true
 

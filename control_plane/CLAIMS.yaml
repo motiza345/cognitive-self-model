@@ -209,6 +209,12 @@ entries:
       - "The quantitative SVD-vs-leading-energy link is pending (OQ-001)."
     recorded_on: "2026-09-26"
     source: "Phase 2 TEXT B (verbatim)"
+    integrity_flags:
+      - id: INT-M22.1.2-ENERGY-UNSOURCED
+        description: "No tracked M22.1.2 report, notebook, md, json, or py records a leading-energy value or definition for the M22.1.2 Δ matrix. reports/m22_1_2_response_space_results.json (b110683f) has matrices.{split}.alpha_plus1 but no leading_energy / svd field. Nearby ~0.999 values are M22.1.1 svd_uncentered (analyze.py:104-114; README.md:42-44), a different artifact."
+        source: "Amendment A1 §1.1; configs/m22_1_3b_first_order_structure.yaml sanity_gates.G1"
+        resolution_status: open
+        path: reports/m22_1_2_response_space_results.json
 
   - id: F-M22.1.3-READOUT
     kind: finding

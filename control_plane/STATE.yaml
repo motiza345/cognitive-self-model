@@ -323,7 +323,13 @@ contract_rules:
     source: DEC-006; configs/m22_1_3b_first_order_structure.yaml output_rule
 
 known_integrity_issues:
-  open: []
+  open:
+    - id: INT-M22.1.2-ENERGY-UNSOURCED
+      path: reports/m22_1_2_response_space_results.json
+      class: UNSOURCED
+      description: "No tracked M22.1.2 source records a leading-energy value for the recorded Δ matrix. G1 of M22.1.3b is to recompute and record a baseline."
+      source: "Amendment A1 §1.1; configs/m22_1_3b_first_order_structure.yaml sanity_gates.G1"
+      resolution_status: open
   resolved:
     - id: INT-M22.1.3-PREDICTIONS-HASH
       path: artifacts/m22_1_3/predictions.json
