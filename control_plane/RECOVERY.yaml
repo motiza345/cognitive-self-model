@@ -599,6 +599,58 @@ milestones:
       source_line_or_key: candidate_layer_rule
       note: The M20.6.3.2 observability pick, including layer 13, is not an input.
     chain_status: COMPLETE
+  M22.1-R:
+    branch: cursor/m22-1-r-behavioral-replay-265a
+    commit: UNKNOWN
+    entrypoint: UNKNOWN
+    config_path: configs/m22_1_r_replay.yaml
+    config_sha256: 3f9d2067149bf50ae99c5dfde1f11ffce9a232d8a7f1aac3f6ee82316deb07bb
+    environment:
+      python: UNKNOWN
+      torch: UNKNOWN
+      transformers: UNKNOWN
+      transformer_lens: UNKNOWN
+    model_id: Qwen/Qwen2.5-0.5B
+    model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+    replay_of: M22.1
+    input_artifacts:
+    - path: reports/M22_1/certificate.json
+      sha256: 39a83b308aa819c07e65e07e1c5c41e780255d42df1a40669fc34b75a26dfddc
+    - path: reports/M22_1/frozen_candidate.json
+      sha256: 198318848e61d46e127740b255ab19ef7696b5a2b89521f216727e35f2a860d0
+    - path: reports/M22_1/intervention_not_validated.json
+      sha256: 078acdc6bd086d22a2e394b7ed5d022bdf00898744fb6054b406ee84df0ff845
+    - path: reports/M22_1/intervention_preflight_results.json
+      sha256: 90fd22defdfff28f5dccd2d8e79a93d61ea3a5c2391e94e1a963fba964ed5303
+    - path: reports/M22_1/manifest.json
+      sha256: 9f190b9c752dac7952461cf4d266335a75e6a92da5782e4da40466f92c623ffd
+    output_artifacts:
+    - path: artifacts/m22_1_r/manifest.sha256
+      sha256: 89d07e833ebf0f3822146f7b2b787280604053bbb2c66d1d4c6fea34af0b8ec4
+    expected_labels:
+    - REPLAY_EXACT
+    - REPLAY_NUMERIC_EQUIVALENT
+    - REPLAY_BEHAVIORAL_EQUIVALENT
+    - REPLAY_DIVERGENT
+    - REPLAY_BLOCKED
+    - REPLAY_INVALID
+    source: configs/m22_1_r_replay.yaml
+    gaps:
+    - Preregistration only; no replay run; harness not written.
+    recovery_grade_local: PARTIAL
+    recovery_grade_chain: PARTIAL
+    depends_on:
+    - M22.1
+    missing:
+    - no replay run (preregistration only)
+    - harness not written (revision-pin path changes from_pretrained revision string)
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: M22.1
+      source_path: configs/m22_1_r_replay.yaml
+      source_line_or_key: replay_of / reference_artifacts
+      note: Compares a future replay to recorded reports/M22_1 JSON. Does not alter M22.1 recovery grade.
+    chain_status: COMPLETE
   M22.1.1:
     branch: cursor/m22-1-1-intervention-space-audit-c559
     commit: 72c6875f4bb180fbdcbe5504cb2b274ab5a78e07

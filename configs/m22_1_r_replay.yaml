@@ -1,0 +1,246 @@
+# M22.1-R behavioral replay — preregistration (frozen).
+# No run. NO_SELF_HASH_EMBEDDING: this file does not embed its own hash.
+
+milestone: M22.1-R
+phase: behavioral_replay_preregistration
+frozen: true
+status: PREREGISTERED
+replay_of: M22.1
+m22_1_status_preserved: CANDIDATE
+m22_2_authorized: false
+finding_status_rule: >
+  M22.1-R assigns a replay tier only. It does not change M22.1 status.
+  It does not set M22.1 recovery_grade_chain to EXACT and does not erase
+  git_dirty, ADDITIONS_ONLY_UNVERIFIED, or environment.python UNKNOWN.
+  Any later M22.1 status change requires its own DEC. DEC-007 success
+  tiers below are the accepted definition for this replay.
+
+code_under_test:
+  description: >
+    db8d03f is a clean reconstruction snapshot (additions-only versus
+    e4713f0 on src/, configs/, and scripts/run_m22_1_preflight.py). It is
+    not byte-identical to the unrecorded dirty historical source tree.
+  branch: cursor/m21-2-4-3-1-integration-c559
+  commit: db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
+  tree: 2227f3cb7bf99299ac506dd56338ed3cd658ab47
+  run_recorded_commit: e4713f0afb99b2a0cc1bacb35fce366a9b2ac47b
+  entrypoint_call: >
+    run_preflight(absolute output_dir outside the worktree). Do not call
+    scripts/run_m22_1_preflight.py or run.main() (those write under a
+    relative reports/ path and then run pytest).
+  config_path: configs/m22_1_preflight.json
+  config_sha256_file_bytes: 4c52fe878cd3582a3df873b43eab00b545623f98b25053a9c1c00801333716ca
+  config_sha256_canonical: aaa32a2e148e543170719fab898232bd6d2103ef55464026851c85dc3cfeabed
+
+hash_method_difference_resolution:
+  source: control_plane/RECOVERY.yaml:584-586
+  verbatim: >
+    gap9_status: resolved. gap9_resolution: HASH_METHOD_DIFFERENCE; config
+    content unchanged. File-bytes sha256 4c52fe87… vs documented
+    config_sha256() aaa32a2e… on the same payload.
+  identity_uses: >
+    manifest.json config_sha256 as stored (canonical aaa32a2e…), not the
+    file-bytes hash.
+
+reference_artifacts:
+  - path: reports/M22_1/certificate.json
+    sha256: 39a83b308aa819c07e65e07e1c5c41e780255d42df1a40669fc34b75a26dfddc
+  - path: reports/M22_1/frozen_candidate.json
+    sha256: 198318848e61d46e127740b255ab19ef7696b5a2b89521f216727e35f2a860d0
+  - path: reports/M22_1/intervention_not_validated.json
+    sha256: 078acdc6bd086d22a2e394b7ed5d022bdf00898744fb6054b406ee84df0ff845
+  - path: reports/M22_1/intervention_preflight_results.json
+    sha256: 90fd22defdfff28f5dccd2d8e79a93d61ea3a5c2391e94e1a963fba964ed5303
+  - path: reports/M22_1/manifest.json
+    sha256: 9f190b9c752dac7952461cf4d266335a75e6a92da5782e4da40466f92c623ffd
+
+cell_key: [block, prompt_id, direction_id, alpha, layer]
+blocks:
+  - intervention_preflight_results.json:discovery_rows
+  - intervention_preflight_results.json:null.rows
+  - intervention_preflight_results.json:validation_rows
+  - intervention_preflight_results.json:validation_control_rows
+  - intervention_preflight_results.json:replication_rows
+  - intervention_preflight_results.json:replication_control_rows
+
+comparison_contract:
+  identity:
+    - path: intervention_preflight_results.json
+      key: status
+    - path: intervention_preflight_results.json
+      key: selected_layer
+    - path: intervention_preflight_results.json
+      key: evidence.null_pass
+    - path: intervention_preflight_results.json
+      key: evidence.hook_integrity_pass
+    - path: intervention_preflight_results.json
+      key: evidence.split_integrity_pass
+    - path: intervention_preflight_results.json
+      key: evidence.leakage_pass
+    - path: intervention_preflight_results.json
+      key: evidence.definition_reproducible
+    - path: intervention_preflight_results.json
+      key: evidence.scores_finite
+    - path: intervention_preflight_results.json
+      key: evidence.revision_pinned
+    - path: intervention_preflight_results.json
+      key: directionality.validation.label
+    - path: intervention_preflight_results.json
+      key: directionality.validation.gate
+    - path: intervention_preflight_results.json
+      key: directionality.replication.label
+    - path: intervention_preflight_results.json
+      key: directionality.replication.gate
+    - path: intervention_preflight_results.json
+      key: null.pass
+    - path: frozen_candidate.json
+      key: selected_layer
+    - path: frozen_candidate.json
+      key: selected_on
+    - path: frozen_candidate.json
+      key: selection_direction
+    - path: frozen_candidate.json
+      key: selection_alpha
+    - path: frozen_candidate.json
+      key: direction_sha256
+    - path: frozen_candidate.json
+      key: model_revision
+    - path: frozen_candidate.json
+      key: prompt_manifest_sha256
+    - path: manifest.json
+      key: config_sha256
+    - path: manifest.json
+      key: prompt_manifest_sha256
+    - path: manifest.json
+      key: direction_sha256
+    - path: manifest.json
+      key: control_direction_sha256
+    - path: manifest.json
+      key: model_revision
+    - path: cell
+      key: prompt_id
+    - path: cell
+      key: direction_id
+    - path: cell
+      key: alpha
+    - path: cell
+      key: layer
+    - path: cell
+      key: role
+    - path: cell
+      key: regime_id
+    - path: cell
+      key: prompt_sha256
+    - path: cell
+      key: hook_fired
+    - path: cell
+      key: last_modified
+    - path: cell
+      key: other_unchanged
+    - path: cell
+      key: hook_name
+  scores:
+    formula: "|new - ref| <= score_atol + score_rtol * abs(ref)"
+    fields: [s_null, s_intervened]
+  deltas:
+    formula: "|new - ref| <= delta_atol"
+    fields: [actual_delta]
+  means:
+    formula: "|new - ref| <= mean_atol"
+    fields:
+      - evidence.discovery_mean
+      - evidence.validation_mean
+      - evidence.replication_mean
+      - evidence.validation_control_mean
+      - evidence.replication_control_mean
+      - evidence.validation_paired_difference_mean
+      - evidence.replication_paired_difference_mean
+      - certificate.specificity.validation_target_mean
+      - certificate.specificity.validation_control_mean
+      - certificate.specificity.validation_paired_difference_mean
+      - certificate.specificity.replication_target_mean
+      - certificate.specificity.replication_control_mean
+      - certificate.specificity.replication_paired_difference_mean
+      - discovery_means
+      - frozen_candidate.discovery_means
+  null_near_zero:
+    formula: "|new| <= null_atol AND |new - ref| <= delta_atol"
+    fields:
+      - null.max_abs
+      - actual_delta where alpha == 0
+  excluded_from_identity:
+    - manifest.git_commit
+    - manifest.git_branch
+    - manifest.git_dirty
+    - manifest.origin
+    - certificate.git_commit
+    - revision_source
+
+tolerances:
+  label: PROPOSED
+  note: >
+    Engineering acceptance thresholds, not proven numerical error bounds.
+    Replay outputs must not be used to tune these values.
+  score_atol: 1.0e-5
+  score_rtol: 1.0e-5
+  delta_atol: 1.0e-5
+  mean_atol: 1.0e-6
+  null_atol: 1.0e-6
+
+tier_precedence:
+  - REPLAY_INVALID
+  - REPLAY_BLOCKED
+  - REPLAY_DIVERGENT
+  - REPLAY_EXACT
+  - REPLAY_NUMERIC_EQUIVALENT
+  - REPLAY_BEHAVIORAL_EQUIVALENT
+  - REPLAY_DIVERGENT
+tiers:
+  REPLAY_INVALID: >
+    Incomplete run, non-finite value, or missing or duplicate composite
+    cell key. No success tier. Record the exact reason.
+  REPLAY_BLOCKED: >
+    Hub resolves to a different revision than recorded
+    060db6499f32faf8b98477b0a26969ef7d8b9987, or the local cache lacks that
+    revision; or a reference reports/M22_1/*.json sha256 changed; or the
+    replay output path is not distinct from the reference path; or the
+    worktree is dirty. Not a weight-hash mismatch (no reference weight hash
+    exists).
+  REPLAY_DIVERGENT: >
+    Identity or structural mismatch, regardless of numeric closeness.
+    Also the residual case after the success tiers fail.
+  REPLAY_EXACT: >
+    Identity fixed and every numeric comparison field equal (field equality,
+    not whole-artifact bytes).
+  REPLAY_NUMERIC_EQUIVALENT: >
+    Identity fixed, every numeric field within its family tolerance, and
+    behavioral decisions unchanged.
+  REPLAY_BEHAVIORAL_EQUIVALENT: >
+    Identity fixed, at least one numeric field outside tolerance, and
+    behavioral decisions unchanged.
+dec007_success_tiers:
+  accepted: true
+  tiers: [REPLAY_EXACT, REPLAY_NUMERIC_EQUIVALENT]
+  note: >
+    Accepted definition for M22.1-R. This replay still does not change
+    M22.1 status by itself.
+
+revision_pin:
+  status: NOT_IMPLEMENTED
+  recorded_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+  quote_loader_py_50: "info = model_info(model_id)"
+  quote_loader_py_90: 'load_kwargs["revision"] = revision_info["model_revision"]'
+  finding: >
+    resolve_hf_revision calls model_info with the model id only. The sha
+    from that call is the revision string passed to from_pretrained.
+    Stubbing model_info changes which revision string reaches
+    from_pretrained. It does not skip a network round-trip on an
+    already-fully-qualified sha. Harness not written pending confirmation.
+
+no_retry: true
+blind:
+  comparator_reads_replay_outputs_only_after_run_exits: true
+  reference_hashes_rechecked_before_compare: true
+output_rule:
+  NO_SELF_HASH_EMBEDDING: true
+  reference_hashes_in: artifacts/m22_1_r/manifest.sha256

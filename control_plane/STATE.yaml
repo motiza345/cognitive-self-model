@@ -250,6 +250,14 @@ milestones:
       - F-M22.1.2-READOUT-STRUCTURE
     aliases: []
     source: "reports/M22_1_3b/README.md; artifacts/m22_1_3b/results.json"
+  M22.1-R:
+    status: PREREGISTERED
+    report_extracted_label: PREREGISTERED
+    labels: []
+    report: configs/m22_1_r_replay.yaml
+    claim_ids: []
+    aliases: []
+    source: "DEC-007; configs/m22_1_r_replay.yaml (preregistration; no run)"
   M22.2:
     status: NOT_AUTHORIZED
     report_extracted_label: NOT_AUTHORIZED
