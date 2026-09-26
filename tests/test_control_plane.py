@@ -1,0 +1,103 @@
+"""Control-plane validator: real ledger plus negative copies."""
+
+from __future__ import annotations
+
+import shutil
+from pathlib import Path
+
+import pytest
+import yaml
+
+from src.cognitive_self_model.control_plane.validate import validate
+
+ROOT = Path(__file__).resolve().parents[1]
+CONTROL = ROOT / "control_plane"
+
+
+def _copy_control(tmp_path: Path) -> Path:
+    dest = tmp_path / "control_plane"
+    shutil.copytree(CONTROL, dest)
+    return dest
+
+
+def _rewrite(path: Path, mutator):
+    payload = yaml.safe_load(path.read_text(encoding="utf-8"))
+    mutator(payload)
+    path.write_text(yaml.safe_dump(payload, sort_keys=False, allow_unicode=True), encoding="utf-8")
+
+
+def test_real_control_plane_passes():
+    errors = validate(CONTROL, ROOT)
+    assert errors == []
+
+
+def test_tampered_hash_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        for entry in payload["files"]:
+            if entry.get("immutable") and entry.get("sha256"):
+                entry["sha256"] = "0" * 64
+                break
+
+    _rewrite(dest / "FILE_MAP.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("sha256 mismatch" in item for item in errors)
+
+
+def test_missing_path_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["files"][0]["path"] = "does/not/exist.txt"
+
+    _rewrite(dest / "FILE_MAP.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("does not exist" in item for item in errors)
+
+
+def test_dangling_reinterpretation_link_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        for entry in payload["entries"]:
+            if entry["id"] == "F-M22.1.2-RESPONSE":
+                entry["reinterpreted_by"] = "F-DOES-NOT-EXIST"
+                break
+
+    _rewrite(dest / "CLAIMS.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("reinterpreted_by missing" in item for item in errors)
+
+
+def test_observation_cited_by_gate_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["gates"]["M22.2"]["unblock_requires"].append("OBS-M22.1.3-CURVATURE")
+
+    _rewrite(dest / "STATE.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("observation" in item for item in errors)
+
+
+def test_m22_2_authorized_without_decision_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["gates"]["M22.2"]["authorized"] = True
+
+    _rewrite(dest / "STATE.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("M22.2.authorized" in item for item in errors)
+
+
+def test_open_integrity_flag_missing_from_state_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["known_integrity_issues"] = []
+
+    _rewrite(dest / "STATE.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("integrity flag" in item for item in errors)

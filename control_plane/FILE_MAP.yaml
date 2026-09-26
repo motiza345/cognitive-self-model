@@ -1,0 +1,1260 @@
+as_of_commit: 0e6805e5153b162d4cabf7bae429455a7921e0a9
+inventory_source: control_plane_inventory_DRAFT.md (Phase 1) plus approved corrections
+files:
+- path: .cursor/environment.json
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: 'Cloud-agent install pointer (install: bash scripts/install.sh).'
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: .gitignore
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Ignore rules; not scientific evidence.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: README.md
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Root project blurb; no frozen result.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: artifacts/.gitkeep
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Placeholder so the empty directory exists.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: artifacts/m22_1_3/clean_resid_l23_last.npy
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3
+  role: Cached L23 last-token residuals from M22.1.3.
+  produced_by: src/cognitive_self_model/m22_1_3/predict.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
+  consumed_by: UNKNOWN
+  sha256: 41f50fc748e4a06a3635dcf71148b41cb25b72e0031b63a279d301e96217b102
+- path: artifacts/m22_1_3/directions_float64.npy
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3
+  role: Regenerated D1–D8 panel from M22.1.3.
+  produced_by: src/cognitive_self_model/m22_1_3/predict.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
+  consumed_by: UNKNOWN
+  sha256: 00da5c845ac59a779aaf44b8c531df697b7301e7d3d5e6812f0af1976a99da1e
+- path: artifacts/m22_1_3/manifest.sha256
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3
+  role: Hash list written by M22.1.3 compare.
+  produced_by: src/cognitive_self_model/m22_1_3/compare.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
+  consumed_by: UNKNOWN
+  sha256: 667934cc2abbd8339cca81f0f15b07208ab462a92c0c947b02aebb76727aa4e0
+- path: artifacts/m22_1_3/predictions.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3
+  role: Predict-side cells; written before compare.
+  produced_by: scripts/run_m22_1_3_audit.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
+  consumed_by: src/cognitive_self_model/m22_1_3/compare.py
+  sha256: 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53
+- path: artifacts/m22_1_3/preflight.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3
+  role: Phase-1 fact sheet for M22.1.3.
+  produced_by: 46a971d5b725f48caeecd1ab8f7f769084d07395
+  consumed_by: UNKNOWN
+  sha256: 3be99a80175eeadb4baa627a2291fbb0df0b8baf7d6550f4d5c863ec3962ca36
+- path: artifacts/m22_1_3/results.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3
+  role: Compare-side labels and metrics for M22.1.3.
+  produced_by: src/cognitive_self_model/m22_1_3/compare.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
+  consumed_by: UNKNOWN
+  sha256: 3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d
+- path: configs/.gitkeep
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Placeholder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: configs/m21_2_4_3_1_config.json
+  category: CONTRACT
+  immutable: true
+  milestone: M21.2.4.3.1
+  role: Frozen M21.2.4.3.1 benchmark config.
+  produced_by: UNKNOWN
+  consumed_by: scripts/run_m21_2_4_3_1_pipeline.py
+  sha256: 44df9bb5f78dbb875ae69ba7f1ffaa5549bffad648a2493dc6fec9118750804c
+- path: configs/m21_2_4_3_3_config.json
+  category: CONTRACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: Frozen M21.2.4.3.3 audit config.
+  produced_by: UNKNOWN
+  consumed_by: src/legacy_import/m21_2_4_3_3_audit.py
+  sha256: 388260befa671c4fe360b5acbe43edba0dcad65c0716eb917208f5be4b6cece3
+- path: configs/m21_2_4_3_4_config.json
+  category: CONTRACT
+  immutable: true
+  milestone: M21.2.4.3.4
+  role: Frozen M21.2.4.3.4 config.
+  produced_by: UNKNOWN
+  consumed_by: src/legacy_import/m21_2_4_3_4_identifiability_benchmark.py
+  sha256: 5b2c0f0cf966dec36b505fa31cc9c95907b6c8288e23234cbc892dd339ef47b0
+- path: configs/m22_1_1_specificity_audit.json
+  category: CONTRACT
+  immutable: true
+  milestone: M22.1.1
+  role: Frozen M22.1.1 panel/classification rules.
+  produced_by: UNKNOWN
+  consumed_by: src/cognitive_self_model/m22_1_1; M22.1.3
+  sha256: 84b6f45e614aac7fb26dddc590b4a7d7fd0194b6b9dcf81a709737c5a9a6f786
+- path: configs/m22_1_2_response_space_audit.json
+  category: CONTRACT
+  immutable: true
+  milestone: M22.1.2
+  role: Frozen M22.1.2 estimator/mask/decision rules.
+  produced_by: UNKNOWN
+  consumed_by: src/cognitive_self_model/m22_1_2
+  sha256: 8cdcc3328d7cc5fb2487acbf850da3b73288d002c77a88aae9661ffde29c7c4b
+- path: configs/m22_1_3_readout_null.yaml
+  category: CONTRACT
+  immutable: true
+  milestone: M22.1.3
+  role: Frozen M22.1.3 thresholds and label rules.
+  produced_by: UNKNOWN
+  consumed_by: src/cognitive_self_model/m22_1_3
+  sha256: 6429c4b1d5151d7b01eb13d5622b2e55d9fb0b3a78bf46993b871c213aac8bd3
+- path: configs/m22_1_preflight.json
+  category: CONTRACT
+  immutable: true
+  milestone: M22.1
+  role: Frozen M22.1 preflight contract.
+  produced_by: UNKNOWN
+  consumed_by: src/cognitive_self_model/m22_1; M22.1.1; M22.1.3
+  sha256: 4c52fe878cd3582a3df873b43eab00b545623f98b25053a9c1c00801333716ca
+- path: docs/.gitkeep
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Empty docs dir placeholder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: legacy/.gitkeep
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Empty legacy dir placeholder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: notebooks/.gitkeep
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Placeholder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: notebooks/cognitive_self_model_latest.ipynb
+  category: LEGACY
+  immutable: false
+  milestone: M20.6.3.2
+  role: Vendored latest notebook; README places the M20.6.3.2 Qwen benchmark here.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  aliases:
+  - M20.6.3.2
+- path: notebooks/source/M19_governance_and_genesis.ipynb
+  category: LEGACY
+  immutable: false
+  milestone: M21.2.3.1
+  role: Provenance Colab; outputs stripped. README maps to M21.2.3.1–M21.2.4.2.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  name_milestone_mismatch: true
+  aliases:
+  - M19
+  - M21.2.3.1-M21.2.3.6
+  - M21.2.4.0-M21.2.4.2
+- path: notebooks/source/M21_2_4_3_4_identifiability_working.ipynb
+  category: LEGACY
+  immutable: false
+  milestone: M21.2.4.3.4
+  role: Working Colab; README maps to M21.2.4.3.3 / .3.4.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  name_milestone_mismatch: true
+  aliases:
+  - M21.2.4.3.3
+  - M21.2.4.3.4
+- path: notebooks/source/M21_frozen_benchmark_and_calibration.ipynb
+  category: LEGACY
+  immutable: false
+  milestone: M21.2.4.1
+  role: Provenance Colab for M21.2.4.1–M21.2.4.3.2.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  aliases:
+  - M21.2.4.1-M21.2.4.3.2
+- path: notebooks/source/M22_integration_and_bundle_export.ipynb
+  category: LEGACY
+  immutable: false
+  milestone: M21.2.4.3
+  role: Filename says M22; README maps contents to M21.2.4.3 / .3.1 / .3.3.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  name_milestone_mismatch: true
+  aliases:
+  - M22
+  - M21.2.4.3.1
+  - M21.2.4.3.3
+- path: notebooks/source/README.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Notebook lineage note; not a milestone certificate.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: reports/M21_2_4_3_3/artifact_manifest.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 artifact list and verdict copy.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 3d9b79921e855632a8c44a0219a13b19876525bfad7d245471f1bc7b781784ec
+- path: reports/M21_2_4_3_3/block_boundary_sensitivity_summary.csv
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 numeric audit table.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 917c70aff413930f72be4ffff18b107fdd13d714d4c6108b8399096b01cbdfa5
+- path: reports/M21_2_4_3_3/calibration_support_coverage.csv
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 support coverage table.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: b6473694063e54c879a0b81e3f67089c4f1568ff0e1f34466dd9dd25763e40d6
+- path: reports/M21_2_4_3_3/calibration_support_summary.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 support summary.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: b21a75fdfcd1b0b5ecaabf30f384431b6052ae33eaccd6f7158d8a8a51221839
+- path: reports/M21_2_4_3_3/cross_track_transfer_audit.csv
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 transfer table.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 722c6a413d3f5de47aabf402fda2a3a0fc0be438322283c323bb6cd0f8edd269
+- path: reports/M21_2_4_3_3/exact_output_audit.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 exact 0/1 audit.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 96c337e26076faeb2c7a553a971b2a80db8034d71b23820ae97be5b4ded3206d
+- path: reports/M21_2_4_3_3/overall_final_test_metrics.csv
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 test metrics.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 3ced22ad3b4e2c0908da8927cb8ef447ac7ef52811c0c0c27d3ba95cc906f5f3
+- path: reports/M21_2_4_3_3/pava_unit_tests.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 PAVA unit-test record.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 2ceae0546de2bbc9393289f0355d01c38111a0e6044eb715dfb9203d7f343eba
+- path: reports/M21_2_4_3_3/scientific_verdict.json
+  category: AUTHORITATIVE
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 authorized/not-authorized claims.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 70957c4ca12a3e775ac0090c147fee6747364585263f118b462cc4c1f8db79df
+- path: reports/M21_2_4_3_3/score_perturbation_stability_summary.csv
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: M21.2.4.3.3 perturbation summary.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 48305448f5aaa121eaa089d190f66a2a3084397a7ae12723ba25008f15592497
+- path: reports/M21_2_4_3_4/fold_metrics.csv
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.4
+  role: M21.2.4.3.4 fold metrics.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: e72f631b609b81128ceb719efa09266cd7dc1822e1d8ae8e2115b454766c1934
+- path: reports/M21_2_4_3_4/m21_2_4_3_4_identifiability_audit.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M21.2.4.3.4
+  role: M21.2.4.3.4 audit note (bootstrap).
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: b99e61f9da5addac640ada8d85e1a1a34f6e4e824f8b9fa81cde2bb6c03f0f1d
+- path: reports/M21_2_4_3_4/scientific_verdict.json
+  category: AUTHORITATIVE
+  immutable: true
+  milestone: M21.2.4.3.4
+  role: Recorded M21.2.4.3.4 verdict string.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 981e7e3f032082f00be6f916118a499747b3c6a7af5aff9d522ae6683bcee723
+- path: reports/M22_1/README.md
+  category: REPORT
+  immutable: true
+  milestone: M22.1
+  role: Human M22.1 status write-up.
+  produced_by: scripts/run_m22_1_preflight.py / db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
+  consumed_by: UNKNOWN
+  sha256: 2e37dfbb557309a0a5df9be3549285ac53ac71c8db5369eef3f76ff4c608a4cc
+- path: reports/M22_1/certificate.json
+  category: AUTHORITATIVE
+  immutable: true
+  milestone: M22.1
+  role: M22.1 certificate with status CANDIDATE.
+  produced_by: scripts/run_m22_1_preflight.py / db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
+  consumed_by: UNKNOWN
+  sha256: 39a83b308aa819c07e65e07e1c5c41e780255d42df1a40669fc34b75a26dfddc
+- path: reports/M22_1/frozen_candidate.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1
+  role: M22.1 frozen-candidate record.
+  produced_by: scripts/run_m22_1_preflight.py / db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
+  consumed_by: UNKNOWN
+  sha256: 198318848e61d46e127740b255ab19ef7696b5a2b89521f216727e35f2a860d0
+- path: reports/M22_1/intervention_not_validated.json
+  category: AUTHORITATIVE
+  immutable: true
+  milestone: M22.1
+  role: Explicit non-validation pointer; status CANDIDATE.
+  produced_by: scripts/run_m22_1_preflight.py / db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
+  consumed_by: UNKNOWN
+  sha256: 078acdc6bd086d22a2e394b7ed5d022bdf00898744fb6054b406ee84df0ff845
+- path: reports/M22_1/intervention_preflight_results.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1
+  role: Full M22.1 measurement table.
+  produced_by: scripts/run_m22_1_preflight.py / db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
+  consumed_by: UNKNOWN
+  sha256: 90fd22defdfff28f5dccd2d8e79a93d61ea3a5c2391e94e1a963fba964ed5303
+- path: reports/M22_1/manifest.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1
+  role: M22.1 run manifest (prompts, hashes, env).
+  produced_by: scripts/run_m22_1_preflight.py / db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
+  consumed_by: configs/m22_1_3_readout_null.yaml paths.prompt_artifact
+  sha256: 9f190b9c752dac7952461cf4d266335a75e6a92da5782e4da40466f92c623ffd
+- path: reports/M22_1_1/README.md
+  category: REPORT
+  immutable: true
+  milestone: M22.1.1
+  role: Human M22.1.1 write-up.
+  produced_by: scripts/run_m22_1_1_audit.py / 72c6875f4bb180fbdcbe5504cb2b274ab5a78e07
+  consumed_by: UNKNOWN
+  sha256: 52930b1452d086d621be1f798cd561b4b73e011fa6e57da3a804ec59e60175e1
+- path: reports/M22_1_1/direction_panel_manifest.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.1
+  role: Frozen D1–D8 hashes.
+  produced_by: scripts/run_m22_1_1_audit.py / 72c6875f4bb180fbdcbe5504cb2b274ab5a78e07
+  consumed_by: src/cognitive_self_model/m22_1_2; src/cognitive_self_model/m22_1_3/predict.py
+  sha256: c8b85bffa1ffeec2a86a7911c79c548bf1816623bc9c4b3bd11b0609325753bf
+- path: reports/M22_1_1/direction_panel_results.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.1
+  role: 720-cell M22.1.1 delta table.
+  produced_by: scripts/run_m22_1_1_audit.py / 72c6875f4bb180fbdcbe5504cb2b274ab5a78e07
+  consumed_by: src/cognitive_self_model/m22_1_2/data.py; src/cognitive_self_model/m22_1_3/compare.py
+  sha256: fe167fc92546c5949c5a298065c59d1488371129f977ad14e6750049648a26a1
+- path: reports/M22_1_1/intervention_space_report.json
+  category: AUTHORITATIVE
+  immutable: true
+  milestone: M22.1.1
+  role: M22.1.1 classification JSON.
+  produced_by: scripts/run_m22_1_1_audit.py / 72c6875f4bb180fbdcbe5504cb2b274ab5a78e07
+  consumed_by: UNKNOWN
+  sha256: dac0b39fe4727d37a5c6dc9d03c51c7b7c00d45d985ff6a73e8346d232c73789
+- path: reports/m22_1_2_response_space_README.md
+  category: REPORT
+  immutable: true
+  milestone: M22.1.2
+  role: Short M22.1.2 note.
+  produced_by: scripts/run_m22_1_2_audit.py / 63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b
+  consumed_by: UNKNOWN
+  sha256: 5b6aee99889718285e398215f624134dbcac33d14a15692f12b4e2c12c4b46e0
+- path: reports/m22_1_2_response_space_manifest.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.2
+  role: Frozen masks and estimator.
+  produced_by: scripts/run_m22_1_2_audit.py / 63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b
+  consumed_by: UNKNOWN
+  sha256: f0854033b18c66b9dd1bdb2d379cac4ba3a27f6ec0662679fc1c463b6175b22f
+- path: reports/m22_1_2_response_space_report.md
+  category: REPORT
+  immutable: true
+  milestone: M22.1.2
+  role: Human M22.1.2 metrics.
+  produced_by: scripts/run_m22_1_2_audit.py / 63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b
+  consumed_by: UNKNOWN
+  sha256: 815e982eaa6005ba04be8be15adcbc2c779015fa2501559780f852ba52337db0
+- path: reports/m22_1_2_response_space_results.json
+  category: AUTHORITATIVE
+  immutable: true
+  milestone: M22.1.2
+  role: M22.1.2 label JSON.
+  produced_by: scripts/run_m22_1_2_audit.py / 63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b
+  consumed_by: UNKNOWN
+  sha256: b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4
+- path: reports/m22_1_3_preflight.md
+  category: REPORT
+  immutable: true
+  milestone: M22.1.3
+  role: M22.1.3 Phase-1 facts.
+  produced_by: 46a971d5b725f48caeecd1ab8f7f769084d07395
+  consumed_by: UNKNOWN
+  sha256: dae9aa9f3f3b9ac387d78d406db7060398cc9f1b544a2ac16496b72281ba665f
+- path: reports/m22_1_3_readout_null_report.md
+  category: REPORT
+  immutable: true
+  milestone: M22.1.3
+  role: M22.1.3 Phase-2 labels.
+  produced_by: src/cognitive_self_model/m22_1_3/compare.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
+  consumed_by: UNKNOWN
+  sha256: af4cc681cd85e8dc69701b4369cfb49bb84400bf3eab77be4603e0965ec1f916
+- path: requirements.txt
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Python dependency list.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/.gitkeep
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Placeholder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/generate_m21_2_4_3_4_dataset.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.4
+  role: Dataset generator for M21.2.4.3.4.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/install.sh
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Environment install.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/run_m21_2_4_3_1_pipeline.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Documented M21.2.4.3.1 entrypoint.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/run_m22_1_1_audit.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.1
+  role: Documented M22.1.1 entrypoint.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/run_m22_1_2_audit.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: Documented M22.1.2 entrypoint.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/run_m22_1_3_audit.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3
+  role: Documented M22.1.3 entrypoint.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/run_m22_1_preflight.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Documented M22.1 entrypoint.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/__init__.py
+  category: REUSABLE
+  immutable: false
+  milestone: null
+  role: Top-level package marker.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/audits/__init__.py
+  category: LEGACY
+  immutable: false
+  milestone: null
+  role: Empty package stub.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  empty_stub: true
+- path: src/calibration/__init__.py
+  category: LEGACY
+  immutable: false
+  milestone: null
+  role: Empty package stub.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  empty_stub: true
+- path: src/cognitive_self_model/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Package version 0.1.0.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/__init__.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: M21 benchmark package.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/bundle.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: 8-key NPZ bundle generator.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/calibration.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Isotonic/PAVA calibration.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/data.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Benchmark episode data.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/environment.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Synthetic environment.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/estimator.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Invalidity estimator.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/evidence.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: 16-D evidence encoder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/identifiability_dataset.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.4
+  role: M21.2.4.3.4 oracle dataset.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/pipeline.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: M21.2.4.3.1 orchestrator.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/reference_model.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Frozen 0.6x+0.5u reference.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/benchmark/tracks.py
+  category: BENCHMARK
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Track definitions and AgentObservation.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: M22.1 package.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/artifacts.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: M22.1 writers.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/config.py
+  category: CONTRACT
+  immutable: true
+  milestone: M22.1
+  role: Loader for the frozen M22.1 config.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 921f78dc41055896a19623284f8b0d9cb79e3be0debfe64cec8ea0805ba24a21
+  notes: 'Gap #9: run-recorded config_sha256 uses this module''s canonical-JSON procedure (aaa32a2e…), not file-bytes (4c52fe87…).'
+- path: src/cognitive_self_model/m22_1/direction.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Unit-Gaussian / Gram-Schmidt.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/intervention.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Last-token additive hook.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/leakage.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Import audit.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/loader.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Qwen load + forward_record.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/metrics.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: M22.1 metrics.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/outcome.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Frozen logit-margin.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/preflight.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: M22.1 run.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/prompts.py
+  category: CONTRACT
+  immutable: true
+  milestone: M22.1
+  role: Frozen 18-prompt catalog.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 370400d5598aa5620ca05611a0b99d3c837e12cc9eec0525f6b3c5c32242c7c3
+  notes: 'Gap #9 related: prompt_manifest_sha256 uses the same canonical-JSON hash style as config_sha256.'
+- path: src/cognitive_self_model/m22_1/protocol.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Layer selection + splits.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/run.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: CLI wrapper.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/runtime_info.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Git identity helper.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1/status.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: M22.1 status gate.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_1/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.1
+  role: M22.1.1 package.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_1/analyze.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.1
+  role: Panel classification.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_1/panel.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.1
+  role: Direction panel builder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_1/run_audit.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.1
+  role: M22.1.1 runner.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_2/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: M22.1.2 package.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_2/data.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: Measurement matrix loader.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_2/decision.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: Frozen label rule.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_2/masking.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: Outcome-free masks.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_2/metrics.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: Held-out scores.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_2/models.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: Rank-k predictors.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_2/protocol.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: M22.1.2 orchestrator.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_3/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3
+  role: M22.1.3 package.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_3/compare.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3
+  role: Only delta-table reader.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_3/predict.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3
+  role: Predict-then-compare front half.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/common/__init__.py
+  category: REUSABLE
+  immutable: false
+  milestone: null
+  role: Shared package marker.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/common/io_contracts.py
+  category: CONTRACT
+  immutable: false
+  milestone: null
+  role: 8-key NPZ contract (shared; not a completed-run artifact).
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/common/reproducibility.py
+  category: REUSABLE
+  immutable: false
+  milestone: null
+  role: Seed/repro helpers.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/estimator/__init__.py
+  category: LEGACY
+  immutable: false
+  milestone: null
+  role: Empty package stub.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  empty_stub: true
+- path: src/legacy_import/__init__.py
+  category: LEGACY
+  immutable: false
+  milestone: null
+  role: Legacy import package marker.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/legacy_import/m212433_calibration_audit.py
+  category: LEGACY
+  immutable: false
+  milestone: M21.2.4.3.3
+  role: Colab-port of M21.2.4.3.3 audit.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/legacy_import/m21_2_4_3_1_pipeline.py
+  category: LEGACY
+  immutable: true
+  milestone: M21.2.4.3.1
+  role: Thin wrapper around the clean benchmark pipeline.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 5c0e4df7e4ba891bf0c364d73be4e1c25f1c966ae94fc4fac1a315a5914aef47
+  recovery_entrypoint_for:
+  - M21.2.4.3.3
+  - M21.2.4.3.4
+- path: src/legacy_import/m21_2_4_3_3_audit.py
+  category: LEGACY
+  immutable: true
+  milestone: M21.2.4.3.3
+  role: Documented CLI wrapper for the M21.2.4.3.3 audit.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: ade7c61e2a76ab66823c5e9eda74a208cadbb3f82e29fad89b029f4cdebe5557
+  recovery_entrypoint_for:
+  - M21.2.4.3.3
+  - M21.2.4.3.4
+- path: src/legacy_import/m21_2_4_3_4_identifiability_benchmark.py
+  category: LEGACY
+  immutable: true
+  milestone: M21.2.4.3.4
+  role: Colab-port runner for M21.2.4.3.4.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 6a477a34f0e4f2ddf355a3190577deb2d8b96d9857b8ea61ee0b4de910a4b834
+  recovery_entrypoint_for:
+  - M21.2.4.3.3
+  - M21.2.4.3.4
+- path: tests/.gitkeep
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Placeholder.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Test package marker.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_bundle_contract.py
+  category: CONTRACT
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Locks 8-key bundle schema.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_evidence_schema.py
+  category: CONTRACT
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Locks evidence schema.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_identifiability.py
+  category: ACTIVE
+  immutable: false
+  milestone: M21.2.4.3.4
+  role: M21.2.4.3.4 identifiability tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_identifiability_dataset.py
+  category: ACTIVE
+  immutable: false
+  milestone: M21.2.4.3.4
+  role: Oracle-dataset tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_label_agnostic.py
+  category: ACTIVE
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Leakage/label-agnostic tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_leakage_controls.py
+  category: ACTIVE
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: L1–L9 leakage tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_pipeline_reproducibility.py
+  category: ACTIVE
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Pipeline determinism.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_benchmark_split_disjoint.py
+  category: ACTIVE
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Split disjointness.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_episode_id_contract.py
+  category: CONTRACT
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: Episode-id contract.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_m22_1_1_artifacts.py
+  category: CONTRACT
+  immutable: false
+  milestone: M22.1.1
+  role: M22.1.1 artifact schema.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_m22_1_1_panel.py
+  category: CONTRACT
+  immutable: false
+  milestone: M22.1.1
+  role: M22.1.1 panel/hash tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_m22_1_2_response_space_audit.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.2
+  role: M22.1.2 isolation/decision tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_m22_1_3_readout_null.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3
+  role: M22.1.3 predict-isolation tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_m22_1_contract.py
+  category: CONTRACT
+  immutable: false
+  milestone: M22.1
+  role: M22.1 frozen-contract tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_m22_1_intervention.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: Hook/site tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_m22_1_protocol.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1
+  role: M22.1 protocol tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_npz_contract.py
+  category: CONTRACT
+  immutable: false
+  milestone: M21.2.4.3.1
+  role: NPZ key contract.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+milestone_index:
+  M22.1.3:
+    config:
+    - configs/m22_1_3_readout_null.yaml
+    code:
+    - scripts/run_m22_1_3_audit.py
+    - src/cognitive_self_model/m22_1_3/__init__.py
+    - src/cognitive_self_model/m22_1_3/compare.py
+    - src/cognitive_self_model/m22_1_3/predict.py
+    tests:
+    - tests/test_m22_1_3_readout_null.py
+    report:
+    - reports/m22_1_3_preflight.md
+    - reports/m22_1_3_readout_null_report.md
+    artifacts:
+    - artifacts/m22_1_3/clean_resid_l23_last.npy
+    - artifacts/m22_1_3/directions_float64.npy
+    - artifacts/m22_1_3/manifest.sha256
+    - artifacts/m22_1_3/predictions.json
+    - artifacts/m22_1_3/preflight.json
+    - artifacts/m22_1_3/results.json
+  M21.2.4.3.1:
+    config:
+    - configs/m21_2_4_3_1_config.json
+    code:
+    - scripts/run_m21_2_4_3_1_pipeline.py
+    - src/cognitive_self_model/benchmark/__init__.py
+    - src/cognitive_self_model/benchmark/bundle.py
+    - src/cognitive_self_model/benchmark/calibration.py
+    - src/cognitive_self_model/benchmark/data.py
+    - src/cognitive_self_model/benchmark/environment.py
+    - src/cognitive_self_model/benchmark/estimator.py
+    - src/cognitive_self_model/benchmark/evidence.py
+    - src/cognitive_self_model/benchmark/pipeline.py
+    - src/cognitive_self_model/benchmark/reference_model.py
+    - src/cognitive_self_model/benchmark/tracks.py
+    - src/legacy_import/m21_2_4_3_1_pipeline.py
+    tests:
+    - tests/test_benchmark_bundle_contract.py
+    - tests/test_benchmark_evidence_schema.py
+    - tests/test_benchmark_label_agnostic.py
+    - tests/test_benchmark_leakage_controls.py
+    - tests/test_benchmark_pipeline_reproducibility.py
+    - tests/test_benchmark_split_disjoint.py
+    - tests/test_episode_id_contract.py
+    - tests/test_npz_contract.py
+    report: []
+    artifacts: []
+  M21.2.4.3.3:
+    config:
+    - configs/m21_2_4_3_3_config.json
+    code:
+    - src/legacy_import/m212433_calibration_audit.py
+    - src/legacy_import/m21_2_4_3_3_audit.py
+    tests: []
+    report:
+    - reports/M21_2_4_3_3/scientific_verdict.json
+    artifacts:
+    - reports/M21_2_4_3_3/artifact_manifest.json
+    - reports/M21_2_4_3_3/block_boundary_sensitivity_summary.csv
+    - reports/M21_2_4_3_3/calibration_support_coverage.csv
+    - reports/M21_2_4_3_3/calibration_support_summary.json
+    - reports/M21_2_4_3_3/cross_track_transfer_audit.csv
+    - reports/M21_2_4_3_3/exact_output_audit.json
+    - reports/M21_2_4_3_3/overall_final_test_metrics.csv
+    - reports/M21_2_4_3_3/pava_unit_tests.json
+    - reports/M21_2_4_3_3/score_perturbation_stability_summary.csv
+  M21.2.4.3.4:
+    config:
+    - configs/m21_2_4_3_4_config.json
+    code:
+    - scripts/generate_m21_2_4_3_4_dataset.py
+    - src/cognitive_self_model/benchmark/identifiability_dataset.py
+    - src/legacy_import/m21_2_4_3_4_identifiability_benchmark.py
+    tests:
+    - tests/test_benchmark_identifiability.py
+    - tests/test_benchmark_identifiability_dataset.py
+    report:
+    - reports/M21_2_4_3_4/scientific_verdict.json
+    artifacts:
+    - reports/M21_2_4_3_4/fold_metrics.csv
+    - reports/M21_2_4_3_4/m21_2_4_3_4_identifiability_audit.json
+  M22.1.1:
+    config:
+    - configs/m22_1_1_specificity_audit.json
+    code:
+    - scripts/run_m22_1_1_audit.py
+    - src/cognitive_self_model/m22_1_1/__init__.py
+    - src/cognitive_self_model/m22_1_1/analyze.py
+    - src/cognitive_self_model/m22_1_1/panel.py
+    - src/cognitive_self_model/m22_1_1/run_audit.py
+    tests:
+    - tests/test_m22_1_1_artifacts.py
+    - tests/test_m22_1_1_panel.py
+    report:
+    - reports/M22_1_1/README.md
+    - reports/M22_1_1/intervention_space_report.json
+    artifacts:
+    - reports/M22_1_1/direction_panel_manifest.json
+    - reports/M22_1_1/direction_panel_results.json
+  M22.1.2:
+    config:
+    - configs/m22_1_2_response_space_audit.json
+    code:
+    - scripts/run_m22_1_2_audit.py
+    - src/cognitive_self_model/m22_1_2/__init__.py
+    - src/cognitive_self_model/m22_1_2/data.py
+    - src/cognitive_self_model/m22_1_2/decision.py
+    - src/cognitive_self_model/m22_1_2/masking.py
+    - src/cognitive_self_model/m22_1_2/metrics.py
+    - src/cognitive_self_model/m22_1_2/models.py
+    - src/cognitive_self_model/m22_1_2/protocol.py
+    tests:
+    - tests/test_m22_1_2_response_space_audit.py
+    report:
+    - reports/m22_1_2_response_space_README.md
+    - reports/m22_1_2_response_space_report.md
+    - reports/m22_1_2_response_space_results.json
+    artifacts:
+    - reports/m22_1_2_response_space_manifest.json
+  M22.1:
+    config:
+    - configs/m22_1_preflight.json
+    code:
+    - scripts/run_m22_1_preflight.py
+    - src/cognitive_self_model/m22_1/__init__.py
+    - src/cognitive_self_model/m22_1/artifacts.py
+    - src/cognitive_self_model/m22_1/config.py
+    - src/cognitive_self_model/m22_1/direction.py
+    - src/cognitive_self_model/m22_1/intervention.py
+    - src/cognitive_self_model/m22_1/leakage.py
+    - src/cognitive_self_model/m22_1/loader.py
+    - src/cognitive_self_model/m22_1/metrics.py
+    - src/cognitive_self_model/m22_1/outcome.py
+    - src/cognitive_self_model/m22_1/preflight.py
+    - src/cognitive_self_model/m22_1/prompts.py
+    - src/cognitive_self_model/m22_1/protocol.py
+    - src/cognitive_self_model/m22_1/run.py
+    - src/cognitive_self_model/m22_1/runtime_info.py
+    - src/cognitive_self_model/m22_1/status.py
+    tests:
+    - tests/test_m22_1_contract.py
+    - tests/test_m22_1_intervention.py
+    - tests/test_m22_1_protocol.py
+    report:
+    - reports/M22_1/README.md
+    - reports/M22_1/certificate.json
+    - reports/M22_1/intervention_not_validated.json
+    artifacts:
+    - reports/M22_1/frozen_candidate.json
+    - reports/M22_1/intervention_preflight_results.json
+    - reports/M22_1/manifest.json
+  M20.6.3.2:
+    config: []
+    code: []
+    tests: []
+    report: []
+    artifacts: []
+  M21.2.3.1:
+    config: []
+    code: []
+    tests: []
+    report: []
+    artifacts: []
+  M21.2.4.1:
+    config: []
+    code: []
+    tests: []
+    report: []
+    artifacts: []
+  M21.2.4.3:
+    config: []
+    code: []
+    tests: []
+    report: []
+    artifacts: []
+provenance_chain:
+- stage: Raw Episode
+  files:
+  - src/cognitive_self_model/benchmark/data.py
+  - src/cognitive_self_model/benchmark/environment.py
+- stage: Observation
+  files:
+  - src/cognitive_self_model/benchmark/tracks.py
+- stage: 16D Encoder
+  files:
+  - src/cognitive_self_model/benchmark/evidence.py
+- stage: Invalidity Estimator
+  files:
+  - src/cognitive_self_model/benchmark/estimator.py
+- stage: q_invalid
+  files:
+  - src/cognitive_self_model/benchmark/estimator.py
+  - src/cognitive_self_model/benchmark/pipeline.py
+  - src/cognitive_self_model/benchmark/bundle.py
+- stage: Calibration
+  files:
+  - src/cognitive_self_model/benchmark/calibration.py
+- stage: Scientific Audit
+  files:
+  - src/legacy_import/m212433_calibration_audit.py
+  - src/legacy_import/m21_2_4_3_3_audit.py
+  - reports/M21_2_4_3_3/scientific_verdict.json
+  - reports/M21_2_4_3_4/scientific_verdict.json
+  - reports/M22_1/certificate.json
+  - reports/M22_1_1/intervention_space_report.json
+  - reports/m22_1_2_response_space_results.json
+  - reports/m22_1_3_readout_null_report.md
+- stage: Claim
+  files:
+  - reports/M21_2_4_3_3/scientific_verdict.json
+  - reports/M21_2_4_3_4/scientific_verdict.json
+  - reports/M22_1/certificate.json
+  - reports/M22_1_1/intervention_space_report.json
+  - reports/m22_1_2_response_space_results.json
+  - reports/m22_1_3_readout_null_report.md
+notes:
+- 'Step 0.3: the only identical-sha256 group is empty files (e3b0c442…). Categories kept; DUPLICATE not applied.'
+- Empty stubs are not mapped to any provenance_chain stage.

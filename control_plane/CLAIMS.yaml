@@ -1,0 +1,337 @@
+# Evidence-backed ledger. Scope starts at M21.2.4.3.3 (DEC-004).
+# Original statements are never edited. Reinterpretation is a new entry plus a status pointer.
+
+entries:
+  - id: F-M21.2.4.3.3-QINVALID
+    kind: finding
+    milestone: M21.2.4.3.3
+    statement: "q_invalid is a support-aware, benchmark-conditionally calibrated invalidity evidence score within the observed benchmark domain."
+    scope:
+      model: UNKNOWN
+      revision: UNKNOWN
+      site: UNKNOWN
+      outcome: q_invalid
+      intervention_family: UNKNOWN
+      observation_contract: "8-key NPZ contract recorded in reports/M21_2_4_3_3/artifact_manifest.json input_npz_exact_key_contract"
+    evidence:
+      - path: reports/M21_2_4_3_3/scientific_verdict.json
+        sha256: "70957c4ca12a3e775ac0090c147fee6747364585263f118b462cc4c1f8db79df"
+        commit: "602d0e21525dc24918559e7f87f18812a33260b8"
+      - path: reports/M21_2_4_3_3/artifact_manifest.json
+        sha256: "3d9b79921e855632a8c44a0219a13b19876525bfad7d245471f1bc7b781784ec"
+        commit: "602d0e21525dc24918559e7f87f18812a33260b8"
+    preregistration:
+      config_path: configs/m21_2_4_3_3_config.json
+      config_sha256: "388260befa671c4fe360b5acbe43edba0dcad65c0716eb917208f5be4b6cece3"
+    labels:
+      - authorized_claim
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes: []
+    non_claims:
+      - "q_invalid is a universal probability of invalidity."
+      - "Calibration generalizes to all unseen track families."
+      - "Exact q_invalid=0 or q_invalid=1 proves certainty."
+      - "Episode bootstrap proves calibration generalization."
+    recorded_on: "2026-09-26"
+    source: "reports/M21_2_4_3_3/scientific_verdict.json scientific_scope.authorized_claim and not_authorized_claims"
+
+  - id: F-M21.2.4.3.4-IDENT
+    kind: finding
+    milestone: M21.2.4.3.4
+    statement: "Pipeline bootstrapped successfully; full benchmark code pending."
+    scope:
+      model: UNKNOWN
+      revision: UNKNOWN
+      site: UNKNOWN
+      outcome: UNKNOWN
+      intervention_family: UNKNOWN
+      observation_contract: UNKNOWN
+    evidence:
+      - path: reports/M21_2_4_3_4/scientific_verdict.json
+        sha256: "981e7e3f032082f00be6f916118a499747b3c6a7af5aff9d522ae6683bcee723"
+        commit: "d39379f99861fd840a8c76ceeb8b4c004ee27aea"
+    preregistration:
+      config_path: configs/m21_2_4_3_4_config.json
+      config_sha256: "5b2c0f0cf966dec36b505fa31cc9c95907b6c8288e23234cbc892dd339ef47b0"
+    labels:
+      - CONDITIONAL_SUPPORT_LIMITED
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes: []
+    non_claims: []
+    recorded_on: "2026-09-26"
+    source: "reports/M21_2_4_3_4/scientific_verdict.json rationale[0]; scientific_verdict CONDITIONAL_SUPPORT_LIMITED"
+
+  - id: F-M22.1-PREFLIGHT
+    kind: finding
+    milestone: M22.1
+    statement: "The frozen status rule requires the primary absolute mean to exceed the control absolute mean on both confirmatory splits. This run's status is `CANDIDATE`."
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit_margin token ids [9834, 902] for \" yes\"/\" no\""
+      intervention_family: "additive last-token residual intervention; primary seed 22101 and orthogonal control seed 22103"
+      observation_contract: "frozen 18-prompt 3-regime 3-split catalog; prompt_manifest_sha256 fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db"
+    evidence:
+      - path: reports/M22_1/README.md
+        sha256: "2e37dfbb557309a0a5df9be3549285ac53ac71c8db5369eef3f76ff4c608a4cc"
+        commit: "db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47"
+      - path: reports/M22_1/certificate.json
+        sha256: "39a83b308aa819c07e65e07e1c5c41e780255d42df1a40669fc34b75a26dfddc"
+        commit: "db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47"
+      - path: reports/M22_1/intervention_not_validated.json
+        sha256: "078acdc6bd086d22a2e394b7ed5d022bdf00898744fb6054b406ee84df0ff845"
+        commit: "db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47"
+    preregistration:
+      config_path: configs/m22_1_preflight.json
+      config_sha256: "4c52fe878cd3582a3df873b43eab00b545623f98b25053a9c1c00801333716ca"
+    labels:
+      - CANDIDATE
+      - CLEAR_DIRECTIONAL
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes: []
+    non_claims:
+      - "No self-model was trained or shown to predict the outcome."
+      - "The checkpoint was not shown to understand itself, to be self-aware, or to self-improve."
+      - "The intervention is not a universal causal mechanism and is not a discovered circuit."
+      - "Earlier synthetic temporal forecasts and the epistemic benchmark's invalidity score are not evidence for this result."
+      - "This artifact does not authorize an M22.2 dataset."
+    recorded_on: "2026-09-26"
+    source: "reports/M22_1/README.md lines 23 and 30–36 and 48"
+
+  - id: F-M22.1.1-PANEL
+    kind: finding
+    milestone: M22.1.1
+    statement: "Validation and replication both match none of the four patterns, so the panel label is `INSUFFICIENT_EVIDENCE`."
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit(9834) - logit(902) for \" yes\" and \" no\""
+      intervention_family: "D1–D8 Gram-Schmidt unit-Gaussian panel; D1 seed 22101; D2 seed 22103"
+      observation_contract: "M22.1 frozen prompt set; prompt_manifest_sha256 fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db"
+    evidence:
+      - path: reports/M22_1_1/README.md
+        sha256: "52930b1452d086d621be1f798cd561b4b73e011fa6e57da3a804ec59e60175e1"
+        commit: "72c6875f4bb180fbdcbe5504cb2b274ab5a78e07"
+      - path: reports/M22_1_1/intervention_space_report.json
+        sha256: "dac0b39fe4727d37a5c6dc9d03c51c7b7c00d45d985ff6a73e8346d232c73789"
+        commit: "72c6875f4bb180fbdcbe5504cb2b274ab5a78e07"
+    preregistration:
+      config_path: configs/m22_1_1_specificity_audit.json
+      config_sha256: "84b6f45e614aac7fb26dddc590b4a7d7fd0194b6b9dcf81a709737c5a9a6f786"
+    labels:
+      - INSUFFICIENT_EVIDENCE
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes: []
+    non_claims:
+      - "This does not establish a mechanism identity, a causal circuit, a SelfModel, self-awareness, or general behavioral control."
+      - "M22.2 is not authorized."
+      - "Geometric orthogonality does not imply causal or functional independence."
+    recorded_on: "2026-09-26"
+    source: "reports/M22_1_1/README.md lines 21, 46, 140–141"
+
+  - id: F-M22.1.2-RESPONSE
+    kind: finding
+    milestone: M22.1.2
+    statement: "Descriptive label: `INSUFFICIENT_EVIDENCE`."
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit_margin token ids 9834 and 902"
+      intervention_family: "frozen M22.1.1 D1–D8 panel; no new model forward"
+      observation_contract: "reuses reports/M22_1_1/direction_panel_results.json; prompt_manifest_sha256 fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db"
+    evidence:
+      - path: reports/m22_1_2_response_space_report.md
+        sha256: "815e982eaa6005ba04be8be15adcbc2c779015fa2501559780f852ba52337db0"
+        commit: "63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b"
+      - path: reports/m22_1_2_response_space_results.json
+        sha256: "b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4"
+        commit: "63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b"
+    preregistration:
+      config_path: configs/m22_1_2_response_space_audit.json
+      config_sha256: "8cdcc3328d7cc5fb2487acbf850da3b73288d002c77a88aae9661ffde29c7c4b"
+    labels:
+      - INSUFFICIENT_EVIDENCE
+    status: REINTERPRETED
+    reinterpreted_by: F-M22.1.2-REINTERPRETATION
+    supersedes: []
+    non_claims:
+      - "It does not identify a causal circuit, a direction's semantic meaning, or a SelfModel."
+      - "An unseen direction without a calibration cell is outside the claim."
+    recorded_on: "2026-09-26"
+    source: "reports/m22_1_2_response_space_report.md lines 3, 74–76"
+
+  - id: F-M22.1.2-REINTERPRETATION
+    kind: finding
+    milestone: M22.1.2
+    statement: |
+      The near rank-1 prompt × direction structure reported in M22.1.2 is analytically
+      accounted for by the first-order readout form Δ ≈ α·(r·d)/R(x_p), an outer product of a
+      prompt factor and a direction factor. Under the tested protocol (L23 site), that
+      structure therefore provides no evidence for response structure beyond final-readout
+      geometry. Status of the quantitative link: analytical and post hoc. A descriptive check
+      (SVD of the Δ₁ matrix vs the M22.1.2 leading energy) is pending (OQ-001).
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit_margin token ids 9834 and 902"
+      intervention_family: "frozen M22.1.1 D1–D8 panel at L23"
+      observation_contract: "M22.1.3 readout-null protocol; prompt_manifest_sha256 fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db"
+    evidence:
+      - path: reports/m22_1_3_readout_null_report.md
+        sha256: "af4cc681cd85e8dc69701b4369cfb49bb84400bf3eab77be4603e0965ec1f916"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+      - path: artifacts/m22_1_3/results.json
+        sha256: "3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+      - path: reports/m22_1_2_response_space_results.json
+        sha256: "b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4"
+        commit: "63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b"
+    preregistration:
+      config_path: configs/m22_1_3_readout_null.yaml
+      config_sha256: "6429c4b1d5151d7b01eb13d5622b2e55d9fb0b3a78bf46993b871c213aac8bd3"
+    labels:
+      - analytical
+      - post_hoc
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes:
+      - F-M22.1.2-RESPONSE
+    non_claims:
+      - "The quantitative SVD-vs-leading-energy link is pending (OQ-001)."
+    recorded_on: "2026-09-26"
+    source: "Phase 2 TEXT B (verbatim)"
+
+  - id: F-M22.1.3-READOUT
+    kind: finding
+    milestone: M22.1.3
+    statement: |
+      At L23 (blocks.23.hook_resid_post), the recorded M22.1/M22.1.1 intervention effects are
+      exactly reconstructible, within the preregistered tolerance, by applying the realized
+      final RMS normalization and unembedding to the clean final residual plus the
+      intervention vector (Level B pass 192/192 on validation and replication). The local
+      readout Jacobian agrees with the exact reconstruction (R² ≥ 0.9998, sign agreement 1.0
+      on both label splits). Scope: this site, frozen outcome, intervention family, model
+      revision and observation contract. No evidence for semantic identity,
+      self-representation, or any mechanism beyond the final readout computation.
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit_margin token ids 9834 and 902"
+      intervention_family: "last-token additive residual; D1–D8 frozen panel"
+      observation_contract: "prompt_manifest_sha256 fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db; evaluation_splits validation and replication"
+    evidence:
+      - path: artifacts/m22_1_3/predictions.json
+        sha256: "2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+      - path: artifacts/m22_1_3/results.json
+        sha256: "3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+      - path: reports/m22_1_3_readout_null_report.md
+        sha256: "af4cc681cd85e8dc69701b4369cfb49bb84400bf3eab77be4603e0965ec1f916"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+      - path: artifacts/m22_1_3/manifest.sha256
+        sha256: "667934cc2abbd8339cca81f0f15b07208ab462a92c0c947b02aebb76727aa4e0"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+    preregistration:
+      config_path: configs/m22_1_3_readout_null.yaml
+      config_sha256: "6429c4b1d5151d7b01eb13d5622b2e55d9fb0b3a78bf46993b871c213aac8bd3"
+    labels:
+      - READOUT_RECONSTRUCTION_EXACT
+      - FIRST_ORDER_SUPPORTED
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes: []
+    non_claims:
+      - "No mechanism is explained."
+      - "No claim is made about self-representation."
+      - "D1–D8 have no assigned semantic meaning."
+      - "Nothing is claimed about sites other than L23."
+      - "The D2>D1 ordering is reported only as readout alignment."
+    recorded_on: "2026-09-26"
+    source: "Phase 2 TEXT A (verbatim); non_claims from reports/m22_1_3_readout_null_report.md Non-claims"
+    integrity_flags:
+      - id: INT-M22.1.3-PREDICTIONS-HASH
+        description: "Report-cited predictions sha256 is the first-write hash (7391dd85…); CLAIMS evidence cites the manifest/on-disk hash (2b9c508e…). Step 0.1 class REPORT_STALE_HASH."
+        source: "reports/m22_1_3_readout_null_report.md line 17; artifacts/m22_1_3/manifest.sha256"
+        resolution_status: open
+        path: artifacts/m22_1_3/predictions.json
+
+  - id: OBS-M22.1.3-CURVATURE
+    kind: observation
+    milestone: M22.1.3
+    statement: "(Δ(+α)+Δ(−α))/2 is approximately direction-independent (~2.2e-4 validation, ~2.6e-4 replication at |α|=1), consistent with the isotropic second-order RMSNorm term. Not preregistered, not tested."
+    evidentiary_weight: "not a claim; not usable for status decisions"
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit_margin token ids 9834 and 902"
+      intervention_family: "D1–D8 frozen panel"
+      observation_contract: "not preregistered"
+    evidence:
+      - path: artifacts/m22_1_3/results.json
+        sha256: "3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+      - path: reports/m22_1_3_readout_null_report.md
+        sha256: "af4cc681cd85e8dc69701b4369cfb49bb84400bf3eab77be4603e0965ec1f916"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+    preregistration:
+      config_path: null
+      config_sha256: null
+    labels: []
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes: []
+    non_claims:
+      - "Not preregistered, not tested."
+    recorded_on: "2026-09-26"
+    source: "Phase 2 seed observation text (verbatim)"
+
+  - id: OBS-M22.1.3-DOSE-SCALE
+    kind: observation
+    milestone: M22.1.3
+    statement: "At L23, α=1 corresponds to ~1.2% of the residual norm (‖x‖ = R·√n ≈ 81). Absolute α is not comparable across layers."
+    evidentiary_weight: "not a claim; not usable for status decisions"
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit_margin token ids 9834 and 902"
+      intervention_family: "last-token additive residual"
+      observation_contract: "not preregistered"
+    evidence:
+      - path: artifacts/m22_1_3/results.json
+        sha256: "3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d"
+        commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+    preregistration:
+      config_path: null
+      config_sha256: null
+    labels: []
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes: []
+    non_claims:
+      - "Absolute α is not comparable across layers."
+    recorded_on: "2026-09-26"
+    source: "Phase 2 seed observation text (verbatim)"
+
+open_questions:
+  - id: OQ-001
+    statement: "SVD of Δ₁ matrix vs M22.1.2 leading energy (descriptive, no forwards)"
+  - id: OQ-002
+    statement: "Implied clean margin s ≈ −3 logits vs stored s_null (descriptive)"
+  - id: OQ-003
+    statement: "Load flags (fold_ln, centering) must be recorded explicitly, not inferred from the RMSNormPre class"
+  - id: OQ-004
+    statement: "M22.1.4: direct path must be defined on x_final (not x_L); mediated = total − direct is a counterfactual contrast, not additive"
+  - id: OQ-005
+    statement: "M22.1.4: preregister dose rule (α_p = ρ·‖x_{L,p}‖ vs fixed α with recorded ρ)"

@@ -1,0 +1,301 @@
+# Source: git rev-parse / git merge-base / milestone reports listed on each entry.
+# as_of_commit is the M22.1.3 analysis evidence head (0e6805e). as_of_date from that commit.
+
+as_of_commit: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+as_of_date: "2026-09-26"
+
+branch_topology:
+  main:
+    ref: main
+    tip: "c08f0e64a5dd543002b30dfabfa5183d1b4e39d0"
+    merge_base_with_main: "c08f0e64a5dd543002b30dfabfa5183d1b4e39d0"
+    merged_into_main: true
+    source: "git rev-parse main; git merge-base main main"
+  M22.1:
+    ref: cursor/m21-2-4-3-1-integration-c559
+    tip: "db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47"
+    merge_base_with_main: "c08f0e64a5dd543002b30dfabfa5183d1b4e39d0"
+    merged_into_main: false
+    source: "git rev-parse cursor/m21-2-4-3-1-integration-c559; git merge-base main cursor/m21-2-4-3-1-integration-c559"
+  M22.1.1:
+    ref: cursor/m22-1-1-intervention-space-audit-c559
+    tip: "72c6875f4bb180fbdcbe5504cb2b274ab5a78e07"
+    merge_base_with_main: "c08f0e64a5dd543002b30dfabfa5183d1b4e39d0"
+    merged_into_main: false
+    source: "git rev-parse cursor/m22-1-1-intervention-space-audit-c559; git merge-base main <ref>"
+  M22.1.2:
+    ref: cursor/m22-1-2-response-space-audit-c559
+    tip: "63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b"
+    merge_base_with_main: "c08f0e64a5dd543002b30dfabfa5183d1b4e39d0"
+    merged_into_main: false
+    source: "git rev-parse cursor/m22-1-2-response-space-audit-c559; git merge-base main <ref>"
+    note: "Not merged into main."
+  M22.1.3:
+    ref: m22-1-3-readout-null
+    tip: "0e6805e5153b162d4cabf7bae429455a7921e0a9"
+    merge_base_with_main: "c08f0e64a5dd543002b30dfabfa5183d1b4e39d0"
+    merged_into_main: false
+    on_origin: false
+    source: "git rev-parse m22-1-3-readout-null; git branch -a"
+    note: "Not merged into main. Local branch only."
+
+milestones:
+  M18:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: null
+    claim_ids: []
+    aliases: []
+    source: "rg M18 over *.{md,json,py,ipynb} returned no matches"
+  M19:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md maps that notebook to M21.2.3.1–M21.2.4.2"
+  M20.6.3.2:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/cognitive_self_model_latest.ipynb
+    source: "notebooks/source/README.md lines 25–27"
+  M21.2.3.1:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.3.2:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.3.3:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.3.4:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.3.5:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.3.6:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.4.0:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.4.1:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M21_frozen_benchmark_and_calibration.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.4.2:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M19_governance_and_genesis.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.4.3.1:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: null
+    claim_ids: []
+    aliases:
+      - cursor/m21-2-4-3-1-integration-c559
+      - notebooks/source/M21_frozen_benchmark_and_calibration.ipynb
+      - notebooks/source/M22_integration_and_bundle_export.ipynb
+    source: "configs/m21_2_4_3_1_config.json milestone field; no reports/M21_2_4_3_1 tracked"
+  M21.2.4.3.2:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels: []
+    report: notebooks/source/README.md
+    claim_ids: []
+    aliases:
+      - notebooks/source/M21_frozen_benchmark_and_calibration.ipynb
+    source: "notebooks/source/README.md Contents and lineage table"
+  M21.2.4.3.3:
+    status: UNSPECIFIED_IN_REPORT
+    report_extracted_label: UNSPECIFIED_IN_REPORT
+    labels:
+      - engineering_pipeline_status=PASS
+      - pava_implementation_status=PASS
+      - episode_disjoint_split_status=PASS
+    report: reports/M21_2_4_3_3/scientific_verdict.json
+    claim_ids:
+      - F-M21.2.4.3.3-QINVALID
+    aliases:
+      - notebooks/source/M22_integration_and_bundle_export.ipynb
+      - notebooks/source/M21_2_4_3_4_identifiability_working.ipynb
+    source: "reports/M21_2_4_3_3/scientific_verdict.json (no field named status)"
+  M21.2.4.3.4:
+    status: CONDITIONAL_SUPPORT_LIMITED
+    report_extracted_label: CONDITIONAL_SUPPORT_LIMITED
+    labels:
+      - CONDITIONAL_SUPPORT_LIMITED
+    report: reports/M21_2_4_3_4/scientific_verdict.json
+    claim_ids:
+      - F-M21.2.4.3.4-IDENT
+    aliases:
+      - notebooks/source/M21_2_4_3_4_identifiability_working.ipynb
+    source: "reports/M21_2_4_3_4/scientific_verdict.json scientific_verdict"
+  M22.1:
+    status: CANDIDATE
+    report_extracted_label: CANDIDATE
+    labels:
+      - CANDIDATE
+      - CLEAR_DIRECTIONAL
+    report: reports/M22_1/README.md
+    claim_ids:
+      - F-M22.1-PREFLIGHT
+    aliases:
+      - cursor/m21-2-4-3-1-integration-c559
+    source: "reports/M22_1/README.md line 3; reports/M22_1/certificate.json status"
+  M22.1.1:
+    status: INSUFFICIENT_EVIDENCE
+    report_extracted_label: INSUFFICIENT_EVIDENCE
+    labels:
+      - INSUFFICIENT_EVIDENCE
+    report: reports/M22_1_1/README.md
+    claim_ids:
+      - F-M22.1.1-PANEL
+    aliases:
+      - cursor/m22-1-1-intervention-space-audit-c559
+    source: "reports/M22_1_1/README.md line 25; reports/M22_1_1/intervention_space_report.json classification"
+  M22.1.2:
+    status: INSUFFICIENT_EVIDENCE
+    report_extracted_label: INSUFFICIENT_EVIDENCE
+    labels:
+      - INSUFFICIENT_EVIDENCE
+    report: reports/m22_1_2_response_space_report.md
+    claim_ids:
+      - F-M22.1.2-RESPONSE
+      - F-M22.1.2-REINTERPRETATION
+    aliases:
+      - cursor/m22-1-2-response-space-audit-c559
+    source: "reports/m22_1_2_response_space_report.md line 3; reports/m22_1_2_response_space_results.json label.label"
+  M22.1.3:
+    status: READOUT_RECONSTRUCTION_EXACT
+    report_extracted_label: READOUT_RECONSTRUCTION_EXACT
+    labels:
+      - READOUT_RECONSTRUCTION_EXACT
+      - FIRST_ORDER_SUPPORTED
+    report: reports/m22_1_3_readout_null_report.md
+    claim_ids:
+      - F-M22.1.3-READOUT
+    aliases:
+      - m22-1-3-readout-null
+    source: "reports/m22_1_3_readout_null_report.md lines 4–5; artifacts/m22_1_3/results.json decision"
+  M22.2:
+    status: NOT_AUTHORIZED
+    report_extracted_label: NOT_AUTHORIZED
+    labels:
+      - NOT_AUTHORIZED
+    report: reports/m22_1_3_readout_null_report.md
+    claim_ids: []
+    aliases: []
+    source: "reports/M22_1/README.md line 48; reports/M22_1_1/README.md line 27; reports/m22_1_2_response_space_results.json m22_2_authorized; reports/m22_1_3_readout_null_report.md line 7"
+
+gates:
+  M22.2:
+    authorized: false
+    reason: "L23 effects fully accounted for by final-readout geometry (F-M22.1.3-READOUT); no evidence of mediated mechanism yet"
+    unblock_requires:
+      - "M22.1.4 mediated-effect audit with preregistered positive label"
+      - "decision audit"
+      - "explicit user approval"
+    source: "Phase 2 seed; finding id F-M22.1.3-READOUT from reports/m22_1_3_readout_null_report.md line 3"
+
+decisions:
+  - id: DEC-001
+    date: "2026-09-26"
+    statement: "M22.1 remains CANDIDATE after M22.1.3; any status change requires a separate decision audit"
+    approved_by: user
+    affects:
+      - M22.1
+  - id: DEC-002
+    date: "2026-09-26"
+    statement: "Control plane bootstrap precedes M22.1.4"
+    approved_by: user
+    affects:
+      - M22.1.4
+  - id: DEC-004
+    date: "2026-09-26"
+    statement: "Evidence-backed claim ledger scope starts at M21.2.4.3.3"
+    approved_by: user
+    affects:
+      - CLAIMS
+  - id: DEC-005
+    date: "2026-09-26"
+    statement: "M22.1.3 evidence cites the manifest.sha256 hash of predictions.json; the report hash discrepancy is recorded as an integrity flag with the Step 0.1 class"
+    approved_by: user
+    affects:
+      - F-M22.1.3-READOUT
+      - artifacts/m22_1_3/predictions.json
+
+known_integrity_issues:
+  - id: INT-M22.1.3-PREDICTIONS-HASH
+    path: artifacts/m22_1_3/predictions.json
+    class: REPORT_STALE_HASH
+    description: "Report and results.json record predictions_sha256 7391dd85d4bf6ccb16b3304795e9ede6c2edc349908ec335f735ef55b45cdf30, which is the first-write hash of predictions.json before predict.py inserted run_log.predictions_sha256. On-disk bytes and artifacts/m22_1_3/manifest.sha256 record 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53. Numeric cell content is identical. Step 0.1 class REPORT_STALE_HASH."
+    source: "reports/m22_1_3_readout_null_report.md line 17; artifacts/m22_1_3/results.json predictions_sha256; artifacts/m22_1_3/manifest.sha256; src/cognitive_self_model/m22_1_3/predict.py lines 453-456"
+    resolution_status: open
+
+next_milestone:
+  id: M22.1.4
+  name: "Intermediate-Site Mediated-Effect Audit"
+  status: NOT_STARTED
+  spec: null
