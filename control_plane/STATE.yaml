@@ -224,6 +224,7 @@ milestones:
     claim_ids:
       - F-M22.1.2-RESPONSE
       - F-M22.1.2-REINTERPRETATION
+      - F-M22.1.2-READOUT-STRUCTURE
     aliases:
       - cursor/m22-1-2-response-space-audit-c559
     source: "reports/m22_1_2_response_space_report.md line 3; reports/m22_1_2_response_space_results.json label.label"
@@ -245,7 +246,8 @@ milestones:
     labels:
       - REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
     report: reports/M22_1_3b/README.md
-    claim_ids: []
+    claim_ids:
+      - F-M22.1.2-READOUT-STRUCTURE
     aliases: []
     source: "reports/M22_1_3b/README.md; artifacts/m22_1_3b/results.json"
   M22.2:
@@ -314,6 +316,20 @@ decisions:
     approved_by: user
     affects:
       - M22.1
+  - id: DEC-008
+    date: "2026-09-26"
+    statement: >
+      F-M22.1.2-REINTERPRETATION is reinterpreted by
+      F-M22.1.2-READOUT-STRUCTURE. The M22.1.3b preregistered descriptive
+      check supports the quantitative readout-geometry account of the
+      recorded Δ near-rank-1 structure at L23 only. This decision does not
+      change M22.1 status (remains CANDIDATE). The M22.2 gate stays closed.
+      The near-rank-1 response structure must not be cited as evidence of
+      internal mechanism or self-model structure at this site.
+    approved_by: user
+    affects:
+      - F-M22.1.2-REINTERPRETATION
+      - F-M22.1.2-READOUT-STRUCTURE
 
 contract_rules:
   NO_SELF_HASH_EMBEDDING:

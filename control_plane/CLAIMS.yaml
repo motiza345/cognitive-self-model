@@ -201,8 +201,8 @@ entries:
     labels:
       - analytical
       - post_hoc
-    status: ACTIVE
-    reinterpreted_by: null
+    status: REINTERPRETED
+    reinterpreted_by: F-M22.1.2-READOUT-STRUCTURE
     supersedes:
       - F-M22.1.2-RESPONSE
     non_claims:
@@ -215,6 +215,62 @@ entries:
         source: "Amendment A1 §1.1; configs/m22_1_3b_first_order_structure.yaml sanity_gates.G1; A2 G1 pass → RESOLVED_MISATTRIBUTION by IDENTICAL matrix identity"
         resolution_status: RESOLVED_MISATTRIBUTION
         path: reports/m22_1_2_response_space_results.json
+
+  - id: F-M22.1.2-READOUT-STRUCTURE
+    kind: finding
+    milestone: M22.1.2
+    statement: >
+      At Qwen2.5-0.5B layer 23 hook_resid_post, alpha=+1, on the 18 frozen
+      M22.1.1 prompts and 8 directions D1–D8, the near-rank-1 structure of the
+      recorded Δ matrix is quantitatively accounted for by first-order readout
+      geometry (frozen-denominator linearization of ln_final + unembed):
+      validation/replication |energy(Δ1) − energy(Δ)| ≤ 0.002, |cos| ≥ 0.99,
+      normalization projection share ≤ 0.0015.
+    scope:
+      model: Qwen/Qwen2.5-0.5B
+      revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      site: blocks.23.hook_resid_post
+      outcome: "logit_margin token ids 9834 and 902"
+      intervention_family: "frozen M22.1.1 D1–D8 panel at L23; alpha=+1"
+      observation_contract: "M22.1.3b first-order structure protocol; prompt_manifest_sha256 fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db; label splits validation and replication"
+    evidence:
+      - path: artifacts/m22_1_3b/results.json
+        sha256: "31181466521ce9d1200f9f6f99e265bf6041cdc1b3ee8ca4f726abccca93128e"
+        commit: "99b83031b99731aa3dc202a7b4965515db91d237"
+      - path: reports/M22_1_3b/README.md
+        sha256: "43c8638abb78b6c0373cbb97c35eb6c5f0861d0f77bf4c1ff074b690f2537f8d"
+        commit: "99b83031b99731aa3dc202a7b4965515db91d237"
+      - path: artifacts/m22_1_3b/manifest.sha256
+        sha256: "47bdb51cbde5b83ccf3e39eb0c751974b53b38dd024746c9fb8928fd0f7538ea"
+        commit: "99b83031b99731aa3dc202a7b4965515db91d237"
+      - path: configs/m22_1_3b_first_order_structure.yaml
+        sha256: "b84475a198243e1470cfb9a8d87a0ed0029ff5dc0fb59096390129a8c0b66979"
+        commit: "a944256c10f3f924ca2c783f58e5d7dd5996d71b"
+    preregistration:
+      config_path: configs/m22_1_3b_first_order_structure.yaml
+      config_sha256: "b84475a198243e1470cfb9a8d87a0ed0029ff5dc0fb59096390129a8c0b66979"
+    labels:
+      - REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
+      - descriptive
+      - scoped
+    status: ACTIVE
+    reinterpreted_by: null
+    supersedes:
+      - F-M22.1.2-REINTERPRETATION
+    scope_limitation: >
+      Reanalysis of existing stored fields only (no new forwards). Discovery
+      split is descriptive only. Final-layer site (L23) where a readout
+      explanation is structurally expected. Single model
+      (Qwen/Qwen2.5-0.5B rev 060db649…). Single alpha (+1). Computational
+      readout reconstruction, not a mechanism claim. G4 is a consistency
+      cross-check, not independent causal evidence. DEC-008.
+    non_claims:
+      - "Not a mechanism identity, causal circuit, or SelfModel."
+      - "The near-rank-1 response structure must not be cited as evidence of internal mechanism or self-model structure at this site."
+      - "G4 clean-outcome linkage is a consistency cross-check, not independent causal evidence."
+      - "Does not change M22.1 status and does not authorize M22.2."
+    recorded_on: "2026-09-26"
+    source: "DEC-008; artifacts/m22_1_3b/results.json; reports/M22_1_3b/README.md"
 
   - id: F-M22.1.3-READOUT
     kind: finding
