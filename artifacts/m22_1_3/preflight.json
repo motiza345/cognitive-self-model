@@ -1,0 +1,182 @@
+{
+  "milestone": "M22.1.3",
+  "phase": "preflight_only",
+  "analysis_performed": false,
+  "intervention_forwards_performed": false,
+  "delta_predictions_computed": false,
+  "git": {
+    "base_branch": "cursor/m22-1-2-response-space-audit-c559",
+    "base_commit": "63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b",
+    "base_reason": "Current branch was the M22.1.2 branch. main is c08f0e6 and does not contain that commit, so the M22.1.2 branch is not merged to main.",
+    "work_branch": "m22-1-3-readout-null",
+    "status_before_preflight": "clean working tree on cursor/m22-1-2-response-space-audit-c559"
+  },
+  "control_plane": {
+    "STATE": "UNKNOWN",
+    "MAP_or_FILE_MAP": "UNKNOWN",
+    "CLAIMS": "UNKNOWN",
+    "source": "Repository search for STATE, MAP, FILE_MAP, and CLAIMS returned no files. README.md lines 19-28 name docs/ and artifacts/ as directories; docs/ contains no files. No control-plane document was found."
+  },
+  "model": {
+    "name": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "architecture_recorded": "Qwen2.5-0.5B",
+    "n_layers": 24,
+    "d_model": 896,
+    "layer_23_is_final_block": true,
+    "reason": "n_layers - 1 = 23",
+    "sources": [
+      "reports/M22_1/manifest.json lines 11, 31-39",
+      "reports/M22_1_1/direction_panel_results.json lines 3-10",
+      "configs/m22_1_preflight.json line 3",
+      "configs/m22_1_1_specificity_audit.json model_id, model_revision, expected_d_model, layer",
+      "Hugging Face snapshot config.json num_hidden_layers 24 and hidden_size 896 at /home/ubuntu/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B/snapshots/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json lines 9 and 16. This cache file is not part of the git tree."
+    ]
+  },
+  "final_norm": {
+    "in_git_repository": false,
+    "huggingface_class": "Qwen2RMSNorm",
+    "huggingface_module": "model.norm",
+    "transformer_lens_parameter": "ln_final.w",
+    "transformer_lens_bias_parameter": "not assigned by the Qwen2 converter",
+    "type": "RMSNorm",
+    "epsilon": 1e-06,
+    "learnable_gain": true,
+    "learnable_bias": false,
+    "sources": [
+      "Hugging Face snapshot config.json line 18: rms_norm_eps = 1e-06",
+      "/home/ubuntu/.local/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py lines 237-252 and 331: Qwen2RMSNorm has nn.Parameter weight, variance_epsilon, and no bias; Qwen2Model assigns self.norm",
+      "/home/ubuntu/.local/lib/python3.12/site-packages/transformer_lens/pretrained/weight_conversions/qwen2.py line 71: state_dict['ln_final.w'] = qwen.model.norm.weight. Lines 71-76 do not set ln_final.b."
+    ]
+  },
+  "loading_flags": {
+    "m22_1_call": "HookedTransformer.from_pretrained(model_id, **load_kwargs) where load_kwargs starts as {device, dtype} and may add revision. src/cognitive_self_model/m22_1/loader.py lines 78-93.",
+    "m22_1_1_call": "HookedTransformer.from_pretrained(model_id, device='cpu', dtype=torch.float32, revision=revision). src/cognitive_self_model/m22_1_1/run_audit.py lines 43-48.",
+    "flags_passed_by_repository": {
+      "fold_ln": "not passed",
+      "center_writing_weights": "not passed",
+      "center_unembed": "not passed",
+      "fold_value_biases": "not passed",
+      "dtype": "float32",
+      "device_m22_1": "cuda if torch.cuda.is_available() else cpu; recorded artifact device is cpu",
+      "device_m22_1_1": "cpu"
+    },
+    "library_defaults_when_omitted": {
+      "fold_ln": true,
+      "center_writing_weights": true,
+      "center_unembed": true,
+      "fold_value_biases": true,
+      "dtype": "float32",
+      "source": "/home/ubuntu/.local/lib/python3.12/site-packages/transformer_lens/HookedTransformer.py lines 1162-1174"
+    },
+    "realized_flags_saved_in_m22_artifacts": false,
+    "tied_embeddings_in_checkpoint_config": true,
+    "tied_embeddings_source": "Hugging Face snapshot config.json line 21: tie_word_embeddings true. The repository artifacts do not record whether the loaded HookedTransformer kept the tie.",
+    "checkpoint_torch_dtype": "bfloat16",
+    "checkpoint_torch_dtype_source": "Hugging Face snapshot config.json line 22",
+    "runtime_dtype": "float32",
+    "fold_behavior_if_default_remains_true": "ProcessWeights multiplies the unembedding by ln_final.w and then replaces ln_final.w with ones, unless rmsnorm_uses_offset is set. weight_processing.py lines 1008-1034. The Qwen2 converter does not set rmsnorm_uses_offset. This behavior was not re-executed in this preflight."
+  },
+  "tokens": {
+    "positive_id": 9834,
+    "negative_id": 902,
+    "decoded_9834": " yes",
+    "decoded_902": " no",
+    "tokenizer_pieces": {"9834": "Ġyes", "902": "Ġno"},
+    "encode_without_special_tokens": {" yes": [9834], " no": [902]},
+    "decode_source": "AutoTokenizer.from_pretrained on the local snapshot 060db6499f32faf8b98477b0a26969ef7d8b9987, local_files_only, no model forward.",
+    "repository_texts": {
+      "positive_text": " yes",
+      "negative_text": " no",
+      "source": "reports/M22_1/manifest.json lines 41-58 and configs/m22_1_preflight.json lines 10-14"
+    },
+    "margin_code": "value = last[int(positive_id)] - last[int(negative_id)] where last = logits[0, -1]. src/cognitive_self_model/m22_1/outcome.py lines 37-48."
+  },
+  "hook": {
+    "name": "blocks.23.hook_resid_post",
+    "template": "blocks.{layer}.hook_resid_post",
+    "selected_layer_recorded": 23,
+    "position": "last token only",
+    "alpha_zero_behavior": "returns the residual unchanged",
+    "quote": "updated[:, -1, :] = updated[:, -1, :] + step, where step = float(alpha) * direction. src/cognitive_self_model/m22_1/intervention.py lines 26-31.",
+    "sources": [
+      "configs/m22_1_preflight.json lines 5-6",
+      "reports/M22_1/intervention_preflight_results.json line 1858 selected_layer 23",
+      "configs/m22_1_1_specificity_audit.json hook_name and token_position",
+      "reports/M22_1_1/direction_panel_results.json hook_name_seen is blocks.23.hook_resid_post on the recorded rows"
+    ]
+  },
+  "directions": {
+    "vector_files_present": false,
+    "storage": "No .npy, .npz, .pt, or .safetensors direction files exist in the repository. Identity is the sha256 of the contiguous float64 vector bytes, defined by vector_sha256 in src/cognitive_self_model/m22_1/direction.py lines 20-22.",
+    "container_file": "reports/M22_1_1/direction_panel_manifest.json",
+    "container_file_sha256": "c8b85bffa1ffeec2a86a7911c79c548bf1816623bc9c4b3bd11b0609325753bf",
+    "dimension_recorded": 896,
+    "unit_normalized": true,
+    "alpha_scaling": "The stored vector is multiplied by alpha after a cast to float32. direction_tensor in src/cognitive_self_model/m22_1/loader.py lines 187-189, then step = float(alpha) * direction in intervention.py line 29.",
+    "m22_1_primary_equals_d1": true,
+    "m22_1_control_equals_d2": true,
+    "vectors": [
+      {"id": "D1", "role": "m22_1_primary", "seed": 22101, "shape_recorded": [896], "norm_recorded": 1.0, "content_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 14-24; same hash in reports/M22_1/manifest.json line 15"},
+      {"id": "D2", "role": "m22_1_control", "seed": 22103, "shape_recorded": [896], "norm_recorded": 0.9999999999999999, "content_sha256": "8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 26-36; same hash in reports/M22_1/manifest.json line 10"},
+      {"id": "D3", "role": "pre_registered_new", "seed": 22111, "shape_recorded": [896], "norm_recorded": 1.0, "content_sha256": "546083c4b5c7779725a9544d7fdf4da8d4770b50826d2274b9c566219d4d309d", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 38-48"},
+      {"id": "D4", "role": "pre_registered_new", "seed": 22112, "shape_recorded": [896], "norm_recorded": 0.9999999999999999, "content_sha256": "9b2f1b8831336b2b871b7d9d4587adbc427eb4a66434b77073d8c1e2764bd911", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 50-60"},
+      {"id": "D5", "role": "pre_registered_new", "seed": 22113, "shape_recorded": [896], "norm_recorded": 1.0, "content_sha256": "10579f559390a7ebf5b25965b8c3487c3dedd4cb8295d020fc74f5beec736f43", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 62-72"},
+      {"id": "D6", "role": "pre_registered_new", "seed": 22114, "shape_recorded": [896], "norm_recorded": 0.9999999999999999, "content_sha256": "9aa41426dd3eca94f25ca54e67e6e23555bf1afbcf81240736c0ae411d376ee3", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 74-84"},
+      {"id": "D7", "role": "pre_registered_new", "seed": 22115, "shape_recorded": [896], "norm_recorded": 1.0, "content_sha256": "142c1f5f44d36430d89371a231aabe825a116affd847a7fafad80ced72b26c45", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 86-96"},
+      {"id": "D8", "role": "pre_registered_new", "seed": 22116, "shape_recorded": [896], "norm_recorded": 1.0, "content_sha256": "6752b59f8f74c2bacb818deac69840ad744144f6dca41b3a4b58a0f59ccc7d60", "file_sha256": "UNKNOWN", "source": "reports/M22_1_1/direction_panel_manifest.json lines 98-108"}
+    ]
+  },
+  "clean_activations": {
+    "present": false,
+    "path": "UNKNOWN",
+    "shape": "UNKNOWN",
+    "dtype": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "source": "No activation, resid_post, .npy, .npz, or .pt artifact exists in the repository. M22.1.1 records store margins and deltas, not residual vectors."
+  },
+  "recorded_delta": {
+    "full_table_path": "reports/M22_1_1/direction_panel_results.json",
+    "full_table_key": "records",
+    "full_table_file_sha256": "fe167fc92546c5949c5a298065c59d1488371129f977ad14e6750049648a26a1",
+    "n_records": 720,
+    "shape": "720 records = 18 prompts x 8 directions x 5 alphas. Not a saved numeric ndarray.",
+    "splits": {"discovery": 240, "validation": 240, "replication": 240},
+    "alphas": [-2.0, -1.0, 0.0, 1.0, 2.0],
+    "counts_per_alpha": 144,
+    "counts_per_direction": 90,
+    "fields": ["actual_delta", "alpha", "direction_id", "direction_norm", "direction_sha256", "hook_fired", "hook_name_seen", "prompt_id", "regime", "role", "role_split", "s_intervened", "s_null"],
+    "used_by_m22_1_2": "src/cognitive_self_model/m22_1_2/data.py response_matrix filters records by role_split and alpha. The primary target is alpha +1. Alpha -1 is stored only for the symmetry audit.",
+    "derived_matrices_path": "reports/m22_1_2_response_space_results.json key matrices",
+    "derived_matrices_file_sha256": "b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4",
+    "derived_shape": "For each of discovery, validation, and replication: alpha_plus1 is 6 x 8 and alpha_minus1 is 6 x 8.",
+    "derived_splits_present": ["discovery", "validation", "replication"]
+  },
+  "anomaly_0_003849": {
+    "printed_occurrences": [
+      "reports/m22_1_2_response_space_report.md line 26: B5_rank2 validation 0.003629, replication 0.003849",
+      "reports/m22_1_2_response_space_report.md line 27: B6_rank3 validation 0.003629, replication 0.003849"
+    ],
+    "raw_blocked_mae_mean": {
+      "replication_B5_rank2": 0.003848899355113099,
+      "replication_B6_rank3": 0.0038488960769474468,
+      "validation_B5_rank2": 0.0036288875425197807,
+      "validation_B6_rank3": 0.0036288875956987285,
+      "discovery_B5_rank2": 0.003996524282686246,
+      "discovery_B6_rank3": 0.0039965244797318025
+    },
+    "bitwise_equal": false,
+    "per_seed_bitwise_equal": false,
+    "formatter": "src/cognitive_self_model/m22_1_2/protocol.py line 435 formats blocked_mae_mean with six decimal places.",
+    "call_path": "B5_rank2 and B6_rank3 both call predict_ridge_als, with rank 2 and rank 3 respectively. src/cognitive_self_model/m22_1_2/protocol.py lines 42-48 and models.py PREDICTORS.",
+    "diagnosis": "The shared printed value 0.003849 is six-decimal rounding of two unequal means. Rank-2 and rank-3 were not the same cached array. Their stored means differ by about 3.3e-9 on replication. The same rounding collision produces 0.003629 for both validation means. No code change was made."
+  },
+  "blockers": [
+    "STATE, MAP/FILE_MAP, and CLAIMS are not in the repository.",
+    "D1-D8 are not stored as vector files. Only content hashes and the generator seeds are stored.",
+    "Clean layer-23 resid_post activations are not stored.",
+    "M22 artifacts do not record the realized fold_ln, center_writing_weights, or center_unembed values. The repository calls omit them, and the installed TransformerLens defaults are True.",
+    "The checkpoint config declares bfloat16. The intervention runtime recorded float32.",
+    "The final-norm definition is not in the git tree. It was read from the local Hugging Face snapshot and the installed transformers/transformer_lens packages."
+  ]
+}
