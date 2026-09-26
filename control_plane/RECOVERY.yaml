@@ -604,7 +604,7 @@ milestones:
     commit: UNKNOWN
     entrypoint: UNKNOWN
     config_path: configs/m22_1_r_replay.yaml
-    config_sha256: 3f9d2067149bf50ae99c5dfde1f11ffce9a232d8a7f1aac3f6ee82316deb07bb
+    config_sha256: d9e1cf5dc3b88535cda0516b9b24ae3510082b7fed452f2e8adb86c574e8039a
     environment:
       python: UNKNOWN
       torch: UNKNOWN

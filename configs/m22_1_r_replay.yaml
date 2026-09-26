@@ -194,7 +194,6 @@ tier_precedence:
   - REPLAY_EXACT
   - REPLAY_NUMERIC_EQUIVALENT
   - REPLAY_BEHAVIORAL_EQUIVALENT
-  - REPLAY_DIVERGENT
 tiers:
   REPLAY_INVALID: >
     Incomplete run, non-finite value, or missing or duplicate composite
@@ -225,8 +224,33 @@ dec007_success_tiers:
     Accepted definition for M22.1-R. This replay still does not change
     M22.1 status by itself.
 
+revision_resolution:
+  mechanism: >
+    resolve_hf_revision calls huggingface_hub.model_info(model_id) live at
+    call time. loader.py line 50 is: info = model_info(model_id).
+    loader.py line 90 is: load_kwargs["revision"] = revision_info["model_revision"].
+    There is no static revision pin present in commit
+    db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47.
+  drift_risk: >
+    The hub's default ref for Qwen/Qwen2.5-0.5B may move between
+    preregistration time (2026-09-26) and Phase 3 harness execution time,
+    and that would silently change model_revision without any code change.
+  mitigation_required: >
+    The Phase 3 harness MUST monkeypatch/stub huggingface_hub.model_info
+    (or the resolve_hf_revision call site) to force resolution to the
+    RECORDED_REVISION value 060db6499f32faf8b98477b0a26969ef7d8b9987.
+    This stub is an intentional, documented deviation from code-under-test
+    behavior, not a no-op and not equivalent to running unmodified code.
+  precondition_recheck: >
+    Immediately before invoking the harness subprocess in Phase 3, re-fetch
+    the live hub revision via model_info(model_id) (unstubbed) and compare
+    it to RECORDED_REVISION. If they differ, halt before the run and record
+    REPLAY_BLOCKED with the observed live sha. This recheck must occur at
+    Phase 3 run time, not only once during Phase 2 preregistration.
+
 revision_pin:
-  status: NOT_IMPLEMENTED
+  status: PENDING_HARNESS_ENFORCEMENT
+  see: revision_resolution
   recorded_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
   quote_loader_py_50: "info = model_info(model_id)"
   quote_loader_py_90: 'load_kwargs["revision"] = revision_info["model_revision"]'
