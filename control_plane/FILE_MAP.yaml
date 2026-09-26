@@ -35,7 +35,7 @@ files:
   milestone: M22.1.3
   role: Cached L23 last-token residuals from M22.1.3.
   produced_by: src/cognitive_self_model/m22_1_3/predict.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
-  consumed_by: UNKNOWN
+  consumed_by: src/cognitive_self_model/m22_1_3b/compute.py
   sha256: 41f50fc748e4a06a3635dcf71148b41cb25b72e0031b63a279d301e96217b102
 - path: artifacts/m22_1_3/directions_float64.npy
   category: ARTIFACT
@@ -43,7 +43,7 @@ files:
   milestone: M22.1.3
   role: Regenerated D1–D8 panel from M22.1.3.
   produced_by: src/cognitive_self_model/m22_1_3/predict.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
-  consumed_by: UNKNOWN
+  consumed_by: src/cognitive_self_model/m22_1_3b/compute.py
   sha256: 00da5c845ac59a779aaf44b8c531df697b7301e7d3d5e6812f0af1976a99da1e
 - path: artifacts/m22_1_3/manifest.sha256
   category: ARTIFACT
@@ -59,7 +59,7 @@ files:
   milestone: M22.1.3
   role: Predict-side cells; written before compare.
   produced_by: scripts/run_m22_1_3_audit.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
-  consumed_by: src/cognitive_self_model/m22_1_3/compare.py
+  consumed_by: src/cognitive_self_model/m22_1_3/compare.py; src/cognitive_self_model/m22_1_3b/compute.py
   sha256: 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53
 - path: artifacts/m22_1_3/preflight.json
   category: ARTIFACT
@@ -81,10 +81,18 @@ files:
   category: ARTIFACT
   immutable: true
   milestone: M22.1.3b
-  role: Hash list for the M22.1.3b preregistration file (NO_SELF_HASH_EMBEDDING).
-  produced_by: UNKNOWN
+  role: Hash list for M22.1.3b config, results, and report (NO_SELF_HASH_EMBEDDING).
+  produced_by: src/cognitive_self_model/m22_1_3b/compute.py
   consumed_by: UNKNOWN
-  sha256: 4ed7a90d09ce062be2f0fc869279dc0160036d4734e4182361d23c8c93e5a7b0
+  sha256: 47bdb51cbde5b83ccf3e39eb0c751974b53b38dd024746c9fb8928fd0f7538ea
+- path: artifacts/m22_1_3b/results.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3b
+  role: Step B gate outcomes, per-split metrics, and label (no self-hash).
+  produced_by: src/cognitive_self_model/m22_1_3b/compute.py
+  consumed_by: UNKNOWN
+  sha256: 31181466521ce9d1200f9f6f99e265bf6041cdc1b3ee8ca4f726abccca93128e
 - path: configs/.gitkeep
   category: ACTIVE
   immutable: false
@@ -144,9 +152,9 @@ files:
   category: CONTRACT
   immutable: true
   milestone: M22.1.3b
-  role: Frozen M22.1.3b first-order structure preregistration (no results).
+  role: Frozen M22.1.3b first-order structure preregistration (amendment A2).
   produced_by: UNKNOWN
-  consumed_by: M22.1.3b
+  consumed_by: src/cognitive_self_model/m22_1_3b/compute.py
   sha256: b84475a198243e1470cfb9a8d87a0ed0029ff5dc0fb59096390129a8c0b66979
   superseded_sha256: e2b7b4e7d44447882d6b6635a0853a5e8e1a404cbd69cba05b00e43c362a593f
   superseded_note: Amendment A1 preregistration before amendment A2
@@ -455,8 +463,16 @@ files:
   milestone: M22.1.2
   role: M22.1.2 label JSON.
   produced_by: scripts/run_m22_1_2_audit.py / 63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b
-  consumed_by: UNKNOWN
+  consumed_by: src/cognitive_self_model/m22_1_3b/compute.py
   sha256: b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4
+- path: reports/M22_1_3b/README.md
+  category: REPORT
+  immutable: true
+  milestone: M22.1.3b
+  role: Human M22.1.3b Step B write-up (gates, metrics, label).
+  produced_by: src/cognitive_self_model/m22_1_3b/compute.py
+  consumed_by: UNKNOWN
+  sha256: 43c8638abb78b6c0373cbb97c35eb6c5f0861d0f77bf4c1ff074b690f2537f8d
 - path: reports/m22_1_3_preflight.md
   category: REPORT
   immutable: true
@@ -527,6 +543,13 @@ files:
   immutable: false
   milestone: M22.1.3
   role: Documented M22.1.3 entrypoint.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/run_m22_1_3b_audit.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3b
+  role: Documented M22.1.3b entrypoint (no model forward).
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
 - path: scripts/run_m22_1_preflight.py
@@ -850,6 +873,20 @@ files:
   role: Predict-then-compare front half.
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_3b/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3b
+  role: M22.1.3b package.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_3b/compute.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3b
+  role: Stored-field first-order structure compute (float64, no forward).
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
 - path: src/common/__init__.py
   category: REUSABLE
   immutable: false
@@ -1031,6 +1068,13 @@ files:
   role: M22.1.3 predict-isolation tests.
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
+- path: tests/test_m22_1_3b_first_order_structure.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1.3b
+  role: Synthetic G2/G3/DEGENERATE unit tests.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
 - path: tests/test_m22_1_contract.py
   category: CONTRACT
   immutable: false
@@ -1063,11 +1107,17 @@ milestone_index:
   M22.1.3b:
     config:
     - configs/m22_1_3b_first_order_structure.yaml
-    code: []
-    tests: []
-    report: []
+    code:
+    - scripts/run_m22_1_3b_audit.py
+    - src/cognitive_self_model/m22_1_3b/__init__.py
+    - src/cognitive_self_model/m22_1_3b/compute.py
+    tests:
+    - tests/test_m22_1_3b_first_order_structure.py
+    report:
+    - reports/M22_1_3b/README.md
     artifacts:
     - artifacts/m22_1_3b/manifest.sha256
+    - artifacts/m22_1_3b/results.json
   M22.1.3:
     config:
     - configs/m22_1_3_readout_null.yaml
@@ -1275,6 +1325,8 @@ provenance_chain:
   - reports/M22_1_1/intervention_space_report.json
   - reports/m22_1_2_response_space_results.json
   - reports/m22_1_3_readout_null_report.md
+  - reports/M22_1_3b/README.md
+  - artifacts/m22_1_3b/results.json
 - stage: Claim
   files:
   - reports/M21_2_4_3_3/scientific_verdict.json

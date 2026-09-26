@@ -760,15 +760,16 @@ milestones:
   M22.1.3b:
     branch: control-plane-bootstrap
     commit: UNKNOWN
-    entrypoint: UNKNOWN
+    entrypoint: python scripts/run_m22_1_3b_audit.py
     config_path: configs/m22_1_3b_first_order_structure.yaml
     config_sha256: b84475a198243e1470cfb9a8d87a0ed0029ff5dc0fb59096390129a8c0b66979
     config_sha256_superseded: e2b7b4e7d44447882d6b6635a0853a5e8e1a404cbd69cba05b00e43c362a593f
     environment:
-      python: UNKNOWN
-      torch: UNKNOWN
-      transformers: UNKNOWN
-      transformer_lens: UNKNOWN
+      python: 3.12.3
+      torch: 2.14.0+cpu
+      transformers: 5.17.0
+      transformer_lens: 3.9.0
+      numpy: 2.4.4
     model_id: Qwen/Qwen2.5-0.5B
     model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
     input_artifacts:
@@ -787,28 +788,31 @@ milestones:
     - path: configs/m22_1_3_readout_null.yaml
       sha256: 6429c4b1d5151d7b01eb13d5622b2e55d9fb0b3a78bf46993b871c213aac8bd3
     output_artifacts:
+    - path: artifacts/m22_1_3b/results.json
+      sha256: 31181466521ce9d1200f9f6f99e265bf6041cdc1b3ee8ca4f726abccca93128e
+    - path: reports/M22_1_3b/README.md
+      sha256: 43c8638abb78b6c0373cbb97c35eb6c5f0861d0f77bf4c1ff074b690f2537f8d
     - path: artifacts/m22_1_3b/manifest.sha256
-      sha256: 4ed7a90d09ce062be2f0fc869279dc0160036d4734e4182361d23c8c93e5a7b0
+      sha256: 47bdb51cbde5b83ccf3e39eb0c751974b53b38dd024746c9fb8928fd0f7538ea
     expected_labels:
     - REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
     - PROJECTION_TERM_NON_NEGLIGIBLE
     - INSUFFICIENT_EVIDENCE
-    source: configs/m22_1_3b_first_order_structure.yaml
+    realized_label: REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
+    realized_status: COMPLETED_REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
+    source: configs/m22_1_3b_first_order_structure.yaml; scripts/run_m22_1_3b_audit.py; artifacts/m22_1_3b/results.json
     integrity_notes:
-    - INT-M22.1.2-ENERGY-UNSOURCED remains OPEN until Step B G1 pass (then RESOLVED_MISATTRIBUTION).
+    - INT-M22.1.2-ENERGY-UNSOURCED is RESOLVED_MISATTRIBUTION after G1 pass (M22.1.1 README.md:42-44 applies by IDENTICAL matrix identity).
+    - F-M22.1.2-REINTERPRETATION status is unchanged (separate DECISION required).
     gaps:
-    - Preregistration only; no results; metrics not computed.
-    - M22.1.2 results have no leading_energy field; A2 G1 sources M22.1.1 README.md:42-44 by IDENTICAL matrix identity.
+    - Results commit hash cannot be embedded in this ledger without circularity (recorded UNKNOWN).
     recovery_grade_local: PARTIAL
     recovery_grade_chain: PARTIAL
     depends_on:
     - M22.1.2
     - M22.1.3
     missing:
-    - no results artifact (preregistration only; metrics not computed)
-    - no documented results entrypoint executed
-    - python/torch/transformer_lens environment not recorded for this milestone
-    - G1 pending Step B compare to M22.1.1 README.md:42-44; INT-M22.1.2-ENERGY-UNSOURCED still OPEN
+    - results commit hash recorded as UNKNOWN (circular with this commit)
     depends_on_verified: true
     depends_on_provenance:
     - milestone: M22.1.2

@@ -240,13 +240,14 @@ milestones:
       - m22-1-3-readout-null
     source: "reports/m22_1_3_readout_null_report.md lines 4–5; artifacts/m22_1_3/results.json decision"
   M22.1.3b:
-    status: PREREGISTERED
-    report_extracted_label: PREREGISTERED
-    labels: []
-    report: configs/m22_1_3b_first_order_structure.yaml
+    status: COMPLETED_REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
+    report_extracted_label: COMPLETED_REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
+    labels:
+      - REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
+    report: reports/M22_1_3b/README.md
     claim_ids: []
     aliases: []
-    source: "configs/m22_1_3b_first_order_structure.yaml (preregistration; no results)"
+    source: "reports/M22_1_3b/README.md; artifacts/m22_1_3b/results.json"
   M22.2:
     status: NOT_AUTHORIZED
     report_extracted_label: NOT_AUTHORIZED
@@ -323,14 +324,14 @@ contract_rules:
     source: DEC-006; configs/m22_1_3b_first_order_structure.yaml output_rule
 
 known_integrity_issues:
-  open:
+  open: []
+  resolved:
     - id: INT-M22.1.2-ENERGY-UNSOURCED
       path: reports/m22_1_2_response_space_results.json
       class: UNSOURCED
-      description: "No tracked M22.1.2 source records a leading-energy value for the recorded Δ matrix. G1 of M22.1.3b is to recompute and record a baseline."
-      source: "Amendment A1 §1.1; configs/m22_1_3b_first_order_structure.yaml sanity_gates.G1"
-      resolution_status: open
-  resolved:
+      description: "G1 passed: recomputed uncentered leading energy of matrices.{split}.alpha_plus1 matches reports/M22_1_1/README.md:42-44 within abs 1e-6. Value originates in M22.1.1 and applies to M22.1.2 by IDENTICAL matrix identity."
+      source: "Amendment A2 G1; artifacts/m22_1_3b/results.json gates.G1; reports/M22_1_3b/README.md"
+      resolution_status: RESOLVED_MISATTRIBUTION
     - id: INT-M22.1.3-PREDICTIONS-HASH
       path: artifacts/m22_1_3/predictions.json
       class: REPORT_STALE_HASH

@@ -1,0 +1,314 @@
+{
+  "amendment": "A2",
+  "b_U": "ABSENT_OR_ZERO",
+  "center_writing_weights": "DISABLED",
+  "compute_dtype": "float64",
+  "config_path": "configs/m22_1_3b_first_order_structure.yaml",
+  "config_sha256": "b84475a198243e1470cfb9a8d87a0ed0029ff5dc0fb59096390129a8c0b66979",
+  "finding_status_rule": "F-M22.1.2-REINTERPRETATION changes only via a separate DECISION",
+  "first_failure": null,
+  "gates": {
+    "G0": {
+      "max_rel": 2.7687865638982177e-16,
+      "n": 18,
+      "pass": true
+    },
+    "G1": {
+      "abs_tol": 1e-06,
+      "pass": true,
+      "sourced": {
+        "discovery": 0.999294,
+        "replication": 0.999234,
+        "validation": 0.999382
+      }
+    },
+    "G2": {
+      "abs_tol": 1e-09,
+      "pass": true
+    },
+    "G3": {
+      "pass": true,
+      "rel_tol": 1e-06,
+      "required_splits": [
+        "validation",
+        "replication"
+      ]
+    },
+    "G4": {
+      "b_U": "ABSENT_OR_ZERO",
+      "pass": true,
+      "required_splits": [
+        "validation",
+        "replication"
+      ]
+    }
+  },
+  "label": "REINTERPRETATION_DESCRIPTIVELY_SUPPORTED",
+  "m22_1_status_preserved": "CANDIDATE",
+  "m22_2_authorized": false,
+  "milestone": "M22.1.3b",
+  "splits": {
+    "discovery": {
+      "abs_cos_left": 0.9998413802553919,
+      "abs_cos_right": 0.9998773883850375,
+      "energy_Delta1": 0.9991549027734644,
+      "energy_T1": 1.0,
+      "energy_abs_diff_Delta1_vs_Delta": 0.00013952001659922608,
+      "energy_abs_diff_vs_sourced": 4.227900636255555e-07,
+      "energy_recorded_Delta": 0.9992944227900636,
+      "n_degenerate": 0,
+      "projection_share": 0.001438331057021565,
+      "prompt_ids": [
+        "completion-01",
+        "completion-04",
+        "instruction-01",
+        "instruction-04",
+        "syntax-01",
+        "syntax-04"
+      ],
+      "prompts": [
+        {
+          "c_p": -0.0008371420152470222,
+          "degenerate": false,
+          "g3_rel": 3.6340460626715066e-08,
+          "g4_abs_diff": 2.482348212318186e-06,
+          "g4_tol": 0.0042663726806640625,
+          "prompt_id": "completion-01",
+          "r_dot_x_implied": -10.174995623301449,
+          "s_implied": -4.26637019831585,
+          "s_stored": -4.2663726806640625
+        },
+        {
+          "c_p": -0.00020100585311096623,
+          "degenerate": false,
+          "g3_rel": 3.558651359659401e-08,
+          "g4_abs_diff": 1.2674770439868865e-06,
+          "g4_tol": 0.0014623718261718751,
+          "prompt_id": "completion-04",
+          "r_dot_x_implied": -4.167052047977865,
+          "s_implied": -1.462373093648919,
+          "s_stored": -1.462371826171875
+        },
+        {
+          "c_p": -0.0002707500904218247,
+          "degenerate": false,
+          "g3_rel": 3.096250555900683e-08,
+          "g4_abs_diff": 3.2413059649627485e-06,
+          "g4_tol": 0.0022305479049682616,
+          "prompt_id": "instruction-01",
+          "r_dot_x_implied": -6.763631981652774,
+          "s_implied": -2.2305511462742267,
+          "s_stored": -2.2305479049682617
+        },
+        {
+          "c_p": 0.0003947291020691383,
+          "degenerate": false,
+          "g3_rel": 2.7806517066953713e-08,
+          "g4_abs_diff": 2.9184813921112607e-06,
+          "g4_tol": 0.0021011285781860354,
+          "prompt_id": "instruction-04",
+          "r_dot_x_implied": 5.121253471802473,
+          "s_implied": 2.1011314966674273,
+          "s_stored": 2.101128578186035
+        },
+        {
+          "c_p": -0.0015613416691585525,
+          "degenerate": false,
+          "g3_rel": 4.1309374893657085e-08,
+          "g4_abs_diff": 4.788815768819177e-06,
+          "g4_tol": 0.009370420455932617,
+          "prompt_id": "syntax-01",
+          "r_dot_x_implied": -24.25135284662764,
+          "s_implied": -9.370425244748386,
+          "s_stored": -9.370420455932617
+        },
+        {
+          "c_p": -0.0007415968452685359,
+          "degenerate": false,
+          "g3_rel": 1.2603864626620407e-08,
+          "g4_abs_diff": 7.442879823571502e-07,
+          "g4_tol": 0.004731749534606934,
+          "prompt_id": "syntax-04",
+          "r_dot_x_implied": -12.626843068962113,
+          "s_implied": -4.731750278894916,
+          "s_stored": -4.731749534606934
+        }
+      ]
+    },
+    "replication": {
+      "abs_cos_left": 0.9999689587082754,
+      "abs_cos_right": 0.9998885676892132,
+      "energy_Delta1": 0.9991318732643427,
+      "energy_T1": 1.0,
+      "energy_abs_diff_Delta1_vs_Delta": 0.00010242482989031299,
+      "energy_abs_diff_vs_sourced": 2.9809423307547434e-07,
+      "energy_recorded_Delta": 0.999234298094233,
+      "n_degenerate": 0,
+      "projection_share": 0.001267255201868259,
+      "prompt_ids": [
+        "completion-03",
+        "completion-06",
+        "instruction-03",
+        "instruction-06",
+        "syntax-03",
+        "syntax-06"
+      ],
+      "prompts": [
+        {
+          "c_p": -0.0006781132957437168,
+          "degenerate": false,
+          "g3_rel": 1.762625747556054e-08,
+          "g4_abs_diff": 1.7832713394838606e-07,
+          "g4_tol": 0.003808108329772949,
+          "prompt_id": "completion-03",
+          "r_dot_x_implied": -9.533641950055024,
+          "s_implied": -3.808108508100083,
+          "s_stored": -3.808108329772949
+        },
+        {
+          "c_p": -0.0005144087011746391,
+          "degenerate": false,
+          "g3_rel": 2.4040512254910165e-08,
+          "g4_abs_diff": 1.4092910500806966e-06,
+          "g4_tol": 0.0033668804168701175,
+          "prompt_id": "completion-06",
+          "r_dot_x_implied": -9.09982639284146,
+          "s_implied": -3.366879007579067,
+          "s_stored": -3.366880416870117
+        },
+        {
+          "c_p": 1.8378550958930357e-05,
+          "degenerate": false,
+          "g3_rel": 3.012481007257538e-08,
+          "g4_abs_diff": 2.2738039572450797e-06,
+          "g4_tol": 0.001,
+          "prompt_id": "instruction-03",
+          "r_dot_x_implied": 0.2721411591011637,
+          "s_implied": 0.10684050012231662,
+          "s_stored": 0.10683822631835938
+        },
+        {
+          "c_p": 0.00010737148348015226,
+          "degenerate": false,
+          "g3_rel": 2.0358432541792258e-08,
+          "g4_abs_diff": 4.378356572964925e-06,
+          "g4_tol": 0.001,
+          "prompt_id": "instruction-06",
+          "r_dot_x_implied": 1.4361967861423182,
+          "s_implied": 0.5832771386722356,
+          "s_stored": 0.5832815170288086
+        },
+        {
+          "c_p": -0.0011644180706521102,
+          "degenerate": false,
+          "g3_rel": 1.846406586630164e-08,
+          "g4_abs_diff": 6.199979008414402e-06,
+          "g4_tol": 0.007379307746887207,
+          "prompt_id": "syntax-03",
+          "r_dot_x_implied": -19.625214551475366,
+          "s_implied": -7.379301546908199,
+          "s_stored": -7.379307746887207
+        },
+        {
+          "c_p": -0.0008252489199394904,
+          "degenerate": false,
+          "g3_rel": 5.427146929356917e-08,
+          "g4_abs_diff": 8.480477291961108e-06,
+          "g4_tol": 0.007036026477813721,
+          "prompt_id": "syntax-06",
+          "r_dot_x_implied": -21.704207128847088,
+          "s_implied": -7.036017997336429,
+          "s_stored": -7.036026477813721
+        }
+      ]
+    },
+    "validation": {
+      "abs_cos_left": 0.9999303649020868,
+      "abs_cos_right": 0.9998722920865937,
+      "energy_Delta1": 0.9993221850588935,
+      "energy_T1": 1.0,
+      "energy_abs_diff_Delta1_vs_Delta": 5.961268156817745e-05,
+      "energy_abs_diff_vs_sourced": 2.0225953833996613e-07,
+      "energy_recorded_Delta": 0.9993817977404617,
+      "n_degenerate": 0,
+      "projection_share": 0.0011342748224643228,
+      "prompt_ids": [
+        "completion-02",
+        "completion-05",
+        "instruction-02",
+        "instruction-05",
+        "syntax-02",
+        "syntax-05"
+      ],
+      "prompts": [
+        {
+          "c_p": -0.000581938882630655,
+          "degenerate": false,
+          "g3_rel": 3.3547707606336465e-08,
+          "g4_abs_diff": 1.9331405254341405e-06,
+          "g4_tol": 0.0032785625457763673,
+          "prompt_id": "completion-02",
+          "r_dot_x_implied": -8.221156226299165,
+          "s_implied": -3.2785644789168926,
+          "s_stored": -3.278562545776367
+        },
+        {
+          "c_p": -0.00046447164964968126,
+          "degenerate": false,
+          "g3_rel": 2.597853278508787e-08,
+          "g4_abs_diff": 3.832701835015939e-06,
+          "g4_tol": 0.0031400175094604492,
+          "prompt_id": "completion-05",
+          "r_dot_x_implied": -8.625122851833321,
+          "s_implied": -3.1400213421622842,
+          "s_stored": -3.140017509460449
+        },
+        {
+          "c_p": 2.050785210867428e-05,
+          "degenerate": false,
+          "g3_rel": 1.3892519703138669e-08,
+          "g4_abs_diff": 1.6083850837012026e-06,
+          "g4_tol": 0.001,
+          "prompt_id": "instruction-02",
+          "r_dot_x_implied": 0.6216320096672177,
+          "s_implied": 0.19220513011359933,
+          "s_stored": 0.19220352172851562
+        },
+        {
+          "c_p": 5.672848403507556e-06,
+          "degenerate": false,
+          "g3_rel": 2.632194647514852e-08,
+          "g4_abs_diff": 1.1598770074117137e-06,
+          "g4_tol": 0.001,
+          "prompt_id": "instruction-05",
+          "r_dot_x_implied": 0.07884005790776448,
+          "s_implied": 0.031613143711859776,
+          "s_stored": 0.03161430358886719
+        },
+        {
+          "c_p": -0.0007121767967194936,
+          "degenerate": false,
+          "g3_rel": 1.8394063342259554e-08,
+          "g4_abs_diff": 3.7982992484586475e-06,
+          "g4_tol": 0.004684122085571289,
+          "prompt_id": "syntax-02",
+          "r_dot_x_implied": -12.690942188930796,
+          "s_implied": -4.684118287272041,
+          "s_stored": -4.684122085571289
+        },
+        {
+          "c_p": -0.0008924997488591083,
+          "degenerate": false,
+          "g3_rel": 1.1068331357007511e-08,
+          "g4_abs_diff": 2.144800495429422e-06,
+          "g4_tol": 0.00563662052154541,
+          "prompt_id": "syntax-05",
+          "r_dot_x_implied": -14.964764687814055,
+          "s_implied": -5.636618376744915,
+          "s_stored": -5.63662052154541
+        }
+      ]
+    }
+  },
+  "status": "COMPLETED_REINTERPRETATION_DESCRIPTIVELY_SUPPORTED"
+}
