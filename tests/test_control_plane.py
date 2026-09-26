@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from src.cognitive_self_model.control_plane.validate import validate
+from src.cognitive_self_model.control_plane.validate import _check_m22_1_r_replay_config, validate
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTROL = ROOT / "control_plane"
@@ -229,3 +229,84 @@ def test_claim_worse_than_partial_chain_without_scope_limitation_fails(tmp_path:
     _rewrite(dest / "CLAIMS.yaml", mutate)
     errors = validate(dest, ROOT)
     assert any("scope_limitation referring to the upstream gap" in item for item in errors)
+
+
+@pytest.mark.parametrize("key", ["torch", "transformers", "transformer_lens", "numpy"])
+def test_environment_version_keys_are_required_and_typed(tmp_path: Path, key: str):
+    dest = _copy_control(tmp_path)
+
+    def missing(payload):
+        del payload["milestones"]["M22.1"]["environment"][key]
+
+    _rewrite(dest / "RECOVERY.yaml", missing)
+    errors = validate(dest, ROOT)
+    assert any(
+        f"control_plane/RECOVERY.yaml: RECOVERY M22.1 environment missing required key: {key}" in item
+        for item in errors
+    )
+
+    def unknown(payload):
+        payload["milestones"]["M22.1"]["environment"][key] = "UNKNOWN"
+
+    _rewrite(dest / "RECOVERY.yaml", unknown)
+    assert validate(dest, ROOT) == []
+
+    def plus_local(payload):
+        payload["milestones"]["M22.1"]["environment"][key] = "2.14.0+cpu"
+
+    _rewrite(dest / "RECOVERY.yaml", plus_local)
+    assert validate(dest, ROOT) == []
+
+    def malformed(payload):
+        payload["milestones"]["M22.1"]["environment"][key] = "cpu-2.14"
+
+    _rewrite(dest / "RECOVERY.yaml", malformed)
+    errors = validate(dest, ROOT)
+    assert any(
+        f"control_plane/RECOVERY.yaml: RECOVERY M22.1 environment.{key} invalid: cpu-2.14" in item
+        for item in errors
+    )
+
+
+def test_real_m22_1_r_replay_config_passes():
+    errors: list[str] = []
+    _check_m22_1_r_replay_config(ROOT, errors)
+    assert errors == []
+
+
+def _replay_copy(tmp_path: Path) -> Path:
+    dest_dir = tmp_path / "configs"
+    dest_dir.mkdir()
+    target = dest_dir / "m22_1_r_replay.yaml"
+    shutil.copy(ROOT / "configs" / "m22_1_r_replay.yaml", target)
+    return target
+
+
+def test_replay_config_missing_mitigation_required(tmp_path: Path):
+    target = _replay_copy(tmp_path)
+
+    def mutate(payload):
+        del payload["revision_resolution"]["mitigation_required"]
+
+    _rewrite(target, mutate)
+    errors: list[str] = []
+    _check_m22_1_r_replay_config(tmp_path, errors)
+    assert any(
+        "configs/m22_1_r_replay.yaml: revision_resolution missing required key: mitigation_required" in item
+        for item in errors
+    )
+
+
+def test_replay_config_rejects_behavioral_equivalent_for_dec007(tmp_path: Path):
+    target = _replay_copy(tmp_path)
+
+    def mutate(payload):
+        payload["dec007_success_tiers"]["tiers"].append("REPLAY_BEHAVIORAL_EQUIVALENT")
+
+    _rewrite(target, mutate)
+    errors: list[str] = []
+    _check_m22_1_r_replay_config(tmp_path, errors)
+    assert any(
+        "dec007_success_tiers.tiers must not contain REPLAY_BEHAVIORAL_EQUIVALENT" in item
+        for item in errors
+    )

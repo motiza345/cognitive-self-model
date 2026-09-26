@@ -15,6 +15,21 @@ import yaml
 HEX64 = re.compile(r"^[0-9a-f]{40,64}$")
 COMMIT40 = re.compile(r"^[0-9a-f]{40}$")
 PYTHON_VERSION = re.compile(r"^(?:UNKNOWN|\d+\.\d+(?:\.\d+)?(?:(?:a|b|rc)\d+)?)$")
+ENV_VERSION = re.compile(r"^(?:UNKNOWN|\d+\.\d+(?:\.\d+)?(?:\+\w+)?)$")
+RECOVERY_FILE = "control_plane/RECOVERY.yaml"
+REPLAY_CONFIG = "configs/m22_1_r_replay.yaml"
+REQUIRED_ENV_KEYS = ("python", "torch", "transformers", "transformer_lens", "numpy")
+ENV_VERSION_KEYS = ("torch", "transformers", "transformer_lens", "numpy")
+REPLAY_TIER_NAMES = (
+    "REPLAY_INVALID",
+    "REPLAY_BLOCKED",
+    "REPLAY_DIVERGENT",
+    "REPLAY_EXACT",
+    "REPLAY_NUMERIC_EQUIVALENT",
+    "REPLAY_BEHAVIORAL_EQUIVALENT",
+)
+REPLAY_TOLERANCE_KEYS = ("score_atol", "score_rtol", "delta_atol", "mean_atol", "null_atol")
+REPLAY_RESOLUTION_KEYS = ("mechanism", "drift_risk", "mitigation_required", "precondition_recheck")
 
 STATUS_ENUM = {
     "CANDIDATE",
@@ -144,7 +159,7 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
         except yaml.YAMLError as exc:
             errors.append(f"{name} failed to parse: {exc}")
     if len(docs) != len(required):
-        return errors
+        return _with_replay_config(repo, errors)
 
     state = docs["STATE.yaml"]
     claims_doc = docs["CLAIMS.yaml"]
@@ -160,7 +175,7 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
     if not isinstance(recovery, dict) or not isinstance(recovery.get("milestones"), dict):
         errors.append("RECOVERY.yaml must contain a milestones mapping")
     if errors:
-        return errors
+        return _with_replay_config(repo, errors)
 
     for field in ("as_of_commit", "as_of_date", "branch_topology", "milestones", "gates", "decisions", "next_milestone"):
         if field not in state:
@@ -169,7 +184,7 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
     milestones = state.get("milestones") or {}
     if not isinstance(milestones, dict):
         errors.append("STATE.milestones must be a mapping")
-        return errors
+        return _with_replay_config(repo, errors)
 
     for mid, rec in milestones.items():
         if not isinstance(rec, dict):
@@ -513,7 +528,7 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
                 f"scope_limitation referring to the upstream gap"
             )
 
-    return errors
+    return _with_replay_config(repo, errors)
 
 
 def _recovery_hashes(recovery: dict) -> list[tuple[str, str]]:
@@ -551,18 +566,121 @@ def _open_integrity_issues(state: dict) -> list[dict]:
 
 
 def _check_environment(mid: str, environment: Any, errors: list[str]) -> None:
-    """Key-specific checks for the existing environment mapping. Absent keys are allowed."""
+    """Require the five recorded environment keys. Optional keys are checked only when present.
+
+    A present key whose value is UNKNOWN means the value was checked and is not known.
+    A missing key is a separate error. Historical milestones keep UNKNOWN rather than
+    dropping the key.
+    """
     if not isinstance(environment, dict):
-        errors.append(f"RECOVERY {mid} environment must be a mapping")
+        errors.append(f"{RECOVERY_FILE}: RECOVERY {mid} environment must be a mapping")
         return
+    for key in REQUIRED_ENV_KEYS:
+        if key not in environment:
+            errors.append(f"{RECOVERY_FILE}: RECOVERY {mid} environment missing required key: {key}")
     if "python" in environment:
         value = environment["python"]
         if not isinstance(value, str) or PYTHON_VERSION.match(value) is None:
-            errors.append(f"RECOVERY {mid} environment.python invalid: {value}")
+            errors.append(f"{RECOVERY_FILE}: RECOVERY {mid} environment.python invalid: {value}")
+    for key in ENV_VERSION_KEYS:
+        if key not in environment:
+            continue
+        value = environment[key]
+        if not isinstance(value, str) or ENV_VERSION.match(value) is None:
+            errors.append(f"{RECOVERY_FILE}: RECOVERY {mid} environment.{key} invalid: {value}")
     if "threads" in environment:
         value = environment["threads"]
         if value != "UNKNOWN" and not (isinstance(value, int) and not isinstance(value, bool) and value > 0):
-            errors.append(f"RECOVERY {mid} environment.threads invalid: {value}")
+            errors.append(f"{RECOVERY_FILE}: RECOVERY {mid} environment.threads invalid: {value}")
+    if "os" in environment:
+        value = environment["os"]
+        if not isinstance(value, str) or value == "":
+            errors.append(f"{RECOVERY_FILE}: RECOVERY {mid} environment.os invalid: {value}")
+
+
+def _with_replay_config(repo: Path, errors: list[str]) -> list[str]:
+    _check_m22_1_r_replay_config(repo, errors)
+    return errors
+
+
+def _check_m22_1_r_replay_config(repo_root: Path, errors: list[str]) -> None:
+    """Schema-check configs/m22_1_r_replay.yaml. Skip when that file is absent."""
+    path = repo_root / REPLAY_CONFIG
+    if not path.exists():
+        return
+    try:
+        document = load_yaml(path)
+    except yaml.YAMLError as exc:
+        errors.append(f"{REPLAY_CONFIG}: failed to parse: {exc}")
+        return
+    if not isinstance(document, dict):
+        errors.append(f"{REPLAY_CONFIG}: document must be a mapping")
+        return
+
+    resolution = document.get("revision_resolution")
+    if not isinstance(resolution, dict):
+        errors.append(f"{REPLAY_CONFIG}: revision_resolution must be a mapping")
+    else:
+        for field in REPLAY_RESOLUTION_KEYS:
+            value = resolution.get(field)
+            if not isinstance(value, str) or not value.strip():
+                errors.append(f"{REPLAY_CONFIG}: revision_resolution missing required key: {field}")
+
+    tolerances = document.get("tolerances")
+    if not isinstance(tolerances, dict):
+        errors.append(f"{REPLAY_CONFIG}: tolerances must be a mapping")
+    else:
+        for key in REPLAY_TOLERANCE_KEYS:
+            value = tolerances.get(key)
+            if isinstance(value, bool) or not isinstance(value, float) or value <= 0:
+                errors.append(f"{REPLAY_CONFIG}: tolerances.{key} invalid: {value}")
+
+    tiers = document.get("tiers")
+    if not isinstance(tiers, dict):
+        errors.append(f"{REPLAY_CONFIG}: tiers must be a mapping")
+        tier_names: set[str] = set()
+    else:
+        tier_names = {str(name) for name in tiers}
+        if tier_names != set(REPLAY_TIER_NAMES):
+            errors.append(f"{REPLAY_CONFIG}: tiers must define exactly {list(REPLAY_TIER_NAMES)}")
+
+    precedence = document.get("tier_precedence")
+    if not isinstance(precedence, list):
+        errors.append(f"{REPLAY_CONFIG}: tier_precedence must be a list")
+    elif len(precedence) != len(set(precedence)) or set(precedence) != tier_names or set(precedence) != set(REPLAY_TIER_NAMES):
+        errors.append(
+            f"{REPLAY_CONFIG}: tier_precedence must list each tier name once and match tiers"
+        )
+
+    success_block = document.get("dec007_success_tiers")
+    if not isinstance(success_block, dict):
+        errors.append(f"{REPLAY_CONFIG}: dec007_success_tiers must be a mapping")
+    else:
+        success = success_block.get("tiers")
+        if not isinstance(success, list) or len(success) == 0:
+            errors.append(f"{REPLAY_CONFIG}: dec007_success_tiers.tiers must be a non-empty list")
+        else:
+            if "REPLAY_BEHAVIORAL_EQUIVALENT" in success:
+                errors.append(
+                    f"{REPLAY_CONFIG}: dec007_success_tiers.tiers must not contain "
+                    "REPLAY_BEHAVIORAL_EQUIVALENT"
+                )
+            for name in success:
+                if name not in tier_names:
+                    errors.append(
+                        f"{REPLAY_CONFIG}: dec007_success_tiers.tiers contains unknown tier: {name}"
+                    )
+
+    code = document.get("code_under_test")
+    if not isinstance(code, dict):
+        errors.append(f"{REPLAY_CONFIG}: code_under_test must be a mapping")
+        return
+    commit = code.get("commit")
+    if not isinstance(commit, str) or COMMIT40.match(commit) is None:
+        errors.append(f"{REPLAY_CONFIG}: code_under_test.commit invalid: {commit}")
+    branch = code.get("branch")
+    if not isinstance(branch, str) or not branch.strip():
+        errors.append(f"{REPLAY_CONFIG}: code_under_test.branch invalid: {branch}")
 
 
 def _depends_on_is_valid(value: Any) -> bool:

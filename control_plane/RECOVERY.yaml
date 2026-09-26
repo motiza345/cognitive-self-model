@@ -18,6 +18,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -46,6 +47,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -79,6 +81,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -112,6 +115,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -143,6 +147,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -173,6 +178,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -203,6 +209,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -233,6 +240,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -263,6 +271,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -293,6 +302,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -323,6 +333,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -354,6 +365,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -384,6 +396,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -414,6 +427,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -445,6 +459,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -496,6 +511,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
@@ -610,6 +626,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: Qwen/Qwen2.5-0.5B
     model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
     replay_of: M22.1
@@ -662,6 +679,7 @@ milestones:
       torch: 2.14.0+cpu
       transformers: 5.17.0
       transformer_lens: 3.9.0
+      numpy: UNKNOWN
     model_id: Qwen/Qwen2.5-0.5B
     model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
     input_artifacts:
@@ -700,6 +718,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: Qwen/Qwen2.5-0.5B
     model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
     input_artifacts:
@@ -742,6 +761,7 @@ milestones:
       torch: 2.14.0+cpu
       transformers: 5.17.0
       transformer_lens: 3.9.0
+      numpy: UNKNOWN
     model_id: Qwen/Qwen2.5-0.5B
     model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
     input_artifacts:
@@ -887,6 +907,7 @@ milestones:
       torch: UNKNOWN
       transformers: UNKNOWN
       transformer_lens: UNKNOWN
+      numpy: UNKNOWN
     model_id: UNKNOWN
     model_revision: UNKNOWN
     input_artifacts: []
