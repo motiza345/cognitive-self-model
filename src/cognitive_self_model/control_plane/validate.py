@@ -14,6 +14,7 @@ import yaml
 
 HEX64 = re.compile(r"^[0-9a-f]{40,64}$")
 COMMIT40 = re.compile(r"^[0-9a-f]{40}$")
+PYTHON_VERSION = re.compile(r"^(?:UNKNOWN|\d+\.\d+(?:\.\d+)?(?:(?:a|b|rc)\d+)?)$")
 
 STATUS_ENUM = {
     "CANDIDATE",
@@ -295,6 +296,7 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
             errors.append(f"RECOVERY {mid} depends_on must be a list or UNKNOWN")
         if not isinstance(rec.get("depends_on_provenance"), list):
             errors.append(f"RECOVERY {mid} depends_on_provenance must be a list")
+        _check_environment(str(mid), rec.get("environment"), errors)
 
     # 2. Every path in FILE_MAP/CLAIMS/RECOVERY exists in the working tree.
     for label, doc in (("FILE_MAP", file_map), ("CLAIMS", claims_doc), ("RECOVERY", recovery)):
@@ -546,6 +548,21 @@ def _open_integrity_issues(state: dict) -> list[dict]:
             if isinstance(item, dict) and str(item.get("resolution_status", "open")) in OPEN_FLAG_STATUSES
         ]
     return []
+
+
+def _check_environment(mid: str, environment: Any, errors: list[str]) -> None:
+    """Key-specific checks for the existing environment mapping. Absent keys are allowed."""
+    if not isinstance(environment, dict):
+        errors.append(f"RECOVERY {mid} environment must be a mapping")
+        return
+    if "python" in environment:
+        value = environment["python"]
+        if not isinstance(value, str) or PYTHON_VERSION.match(value) is None:
+            errors.append(f"RECOVERY {mid} environment.python invalid: {value}")
+    if "threads" in environment:
+        value = environment["threads"]
+        if value != "UNKNOWN" and not (isinstance(value, int) and not isinstance(value, bool) and value > 0):
+            errors.append(f"RECOVERY {mid} environment.threads invalid: {value}")
 
 
 def _depends_on_is_valid(value: Any) -> bool:

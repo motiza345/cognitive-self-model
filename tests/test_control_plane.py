@@ -184,6 +184,39 @@ def test_empty_depends_on_without_verified_fails(tmp_path: Path):
     assert any("empty depends_on requires depends_on_verified true" in item for item in errors)
 
 
+def test_environment_python_and_threads_types(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def accept(payload):
+        payload["milestones"]["M22.1"]["environment"]["python"] = "3.12.3"
+        payload["milestones"]["M22.1"]["environment"]["threads"] = 4
+
+    _rewrite(dest / "RECOVERY.yaml", accept)
+    assert validate(dest, ROOT) == []
+
+    def unknown(payload):
+        payload["milestones"]["M22.1"]["environment"]["python"] = "UNKNOWN"
+        payload["milestones"]["M22.1"]["environment"]["threads"] = "UNKNOWN"
+
+    _rewrite(dest / "RECOVERY.yaml", unknown)
+    assert validate(dest, ROOT) == []
+
+    def bad_python(payload):
+        payload["milestones"]["M22.1"]["environment"]["python"] = "cpython"
+
+    _rewrite(dest / "RECOVERY.yaml", bad_python)
+    errors = validate(dest, ROOT)
+    assert any("environment.python invalid" in item for item in errors)
+
+    def bad_threads(payload):
+        payload["milestones"]["M22.1"]["environment"]["python"] = "UNKNOWN"
+        payload["milestones"]["M22.1"]["environment"]["threads"] = 0
+
+    _rewrite(dest / "RECOVERY.yaml", bad_threads)
+    errors = validate(dest, ROOT)
+    assert any("environment.threads invalid" in item for item in errors)
+
+
 def test_claim_worse_than_partial_chain_without_scope_limitation_fails(tmp_path: Path):
     dest = _copy_control(tmp_path)
 
