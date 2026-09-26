@@ -26,6 +26,88 @@ amendments:
     statement: >
       Step A inspected field existence, dtype and shape only; no metric or
       numeric cell value was computed or inspected before this amendment.
+  - id: A2
+    previous_sha256: e2b7b4e7d44447882d6b6635a0853a5e8e1a404cbd69cba05b00e43c362a593f
+    reason: >
+      Part 1 boolean identity: M22.1.1 analyzed Δ equals M22.1.2
+      matrices.{split}.alpha_plus1 on all splits. G1 therefore compares
+      recomputed energy to M22.1.1 README.md:42-44. Add G3 degeneracy
+      guard and G4 clean-outcome linkage. center_writing_weights is
+      DISABLED for RMS (no residual-basis scope_limitation).
+    statement: >
+      No metric or numeric cell value computed or inspected before A2;
+      Part 1 used code reading and a boolean array-equality provenance
+      check only.
+
+matrix_identity_m22_1_1_vs_m22_1_2:
+  # Amendment A2 §1.1
+  result: IDENTICAL
+  per_split:
+    discovery: IDENTICAL
+    validation: IDENTICAL
+    replication: IDENTICAL
+  m22_1_1:
+    value_field: actual_delta
+    alpha: 1.0
+    prompt_order: "sorted({prompt_id}) within split records with alpha==1.0"
+    direction_order: "sorted({direction_id}) from effect_profile / classify_split"
+    splits: [discovery, validation, replication]
+    citations:
+      - src/cognitive_self_model/m22_1_1/analyze.py:47,159-166
+      - src/cognitive_self_model/m22_1_1/run_audit.py:147-150
+  m22_1_2:
+    value_field: actual_delta
+    alpha: 1.0
+    alpha_key: primary_alpha
+    prompt_order: "frozen_prompts grouped by role, sorted by prompt_id"
+    direction_order: "config direction_ids [D1..D8]"
+    splits: [discovery, validation, replication]
+    citations:
+      - src/cognitive_self_model/m22_1_2/data.py:31-68
+      - src/cognitive_self_model/m22_1_2/protocol.py:552-577
+  check: "np.array_equal and max|diff|==0 on reconstructed M22.1.1 matrix vs matrices.{split}.alpha_plus1; no SVD"
+
+rms_processing_a2:
+  # Amendment A2 §1.2 — TransformerLens 3.9.0
+  fold_ln_for_RMS:
+    behavior: APPLIED
+    condition: "normalization_type in {RMS, RMSPre} and ln *.w keys present"
+    citations:
+      - transformer_lens/loading_from_pretrained.py:837-852  # Qwen2ForCausalLM → RMS
+      - transformer_lens/pretrained/weight_conversions/qwen2.py:18,62,71  # ln1.w, ln2.w, ln_final.w
+      - transformer_lens/HookedTransformer.py:1691-1724  # RMS → RMSPre when folding
+      - transformer_lens/weight_processing.py:1681-1684  # fold_biases=False, center_weights=False
+  center_writing_weights_for_RMS:
+    behavior: DISABLED
+    citation: transformer_lens/weight_processing.py:1705-1709
+    note: "Applied only if normalization_type in {LN, LNPre} and not final_rms. No RMS-specific warning."
+  residual_basis_scope_limitation: not_applicable
+  b_U: ABSENT_OR_ZERO
+  b_U_citations:
+    - "HF config.json (Qwen/Qwen2.5-0.5B rev 060db649…): no lm_head.bias field; tie_word_embeddings true"
+    - transformer_lens/pretrained/weight_conversions/qwen2.py:73-74  # unembed.b_U = zeros(d_vocab)
+
+clean_outcome:
+  # Amendment A2 §1.3 — field existence only; values not read for this amendment.
+  found: true
+  primary:
+    path: artifacts/m22_1_3/predictions.json
+    sha256: 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53
+    key: clean_margins[prompt_id].from_clean_logits
+    stored_dtype: json_number_python_float
+    runtime_dtype: float32
+    runtime_citation: "predict.py:251 logit_margin on model logits; loader dtype float32 (loader.py:79-81)"
+    linkage: prompt_id
+  also_present:
+    - path: reports/M22_1_1/direction_panel_results.json
+      sha256: fe167fc92546c5949c5a298065c59d1488371129f977ad14e6750049648a26a1
+      key: records[].s_null
+      linkage: prompt_id
+    - path: reports/M22_1/intervention_preflight_results.json
+      sha256: 90fd22defdfff28f5dccd2d8e79a93d61ea3a5c2391e94e1a963fba964ed5303
+      key: s_null
+      linkage: prompt_id
+  g4_uses: artifacts/m22_1_3/predictions.json clean_margins[prompt_id].from_clean_logits
 
 oq003_resolution:
   question: OQ-003
@@ -181,7 +263,8 @@ inputs:
     path: reports/m22_1_2_response_space_results.json
     sha256: b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4
     field: matrices.{split}.alpha_plus1
-    leading_energy_field: UNSOURCED
+    leading_energy_field: UNSOURCED_IN_FILE
+    identity_with_m22_1_1: IDENTICAL
   stored_delta1:
     path: artifacts/m22_1_3/predictions.json
     sha256: 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53
@@ -219,16 +302,18 @@ inputs:
     required_for_decomposition: false
 
 missing:
-  - "reports/m22_1_2_response_space_results.json (b110683f…) has no leading_energy / svd field (G1 UNSOURCED)"
+  - "reports/m22_1_2_response_space_results.json (b110683f…) has no leading_energy field; A2 G1 uses M22.1.1 README.md:42-44 by IDENTICAL matrix identity"
   - "r vector / W_U columns / ln_final gain tensor are not on disk (not required after A1 stored-field decomposition)"
 
-related_not_g1_target:
-  m22_1_1_svd_uncentered_leading_energy:
-    path: reports/M22_1_1/intervention_space_report.json
-    sha256: dac0b39fe4727d37a5c6dc9d03c51c7b7c00d45d985ff6a73e8346d232c73789
-    definition: "sigma_1^2 / sum_i sigma_i^2 (analyze.py:104-114); uncentered SVD"
-    report: reports/M22_1_1/README.md:42-44
-    note: "M22.1.1, not M22.1.2. Not the G1 source."
+g1_sourced_energies:
+  source: reports/M22_1_1/README.md
+  lines: "42-44"
+  definition: "sigma_1^2 / sum_i sigma_i^2, uncentered (analyze.py:104-114)"
+  values:
+    validation: 0.999382
+    replication: 0.999234
+    discovery: 0.999294
+  abs_tol: 1.0e-6
 
 sanity_gates:
   fail_action: "STOP, no label"
@@ -241,15 +326,23 @@ sanity_gates:
     rel_tol_rule: "1e-6 if compute dtype float64; 1e-4 if float32"
     fixed_from: "predict.py:418-430 float64"
   G1:
-    source_status: UNSOURCED
+    source_status: IDENTICAL
     statement: >
-      Recompute leading energy of recorded Δ (matrices.{split}.alpha_plus1)
-      and record it as the baseline. No sourced M22.1.2 energy exists to
-      match. Integrity flag INT-M22.1.2-ENERGY-UNSOURCED is OPEN.
+      Recomputed uncentered leading energy (sigma_1^2 / sum_i sigma_i^2)
+      of recorded Δ (matrices.{split}.alpha_plus1) must match
+      reports/M22_1_1/README.md:42-44 within abs 1e-6 per split.
+      Pass → INT-M22.1.2-ENERGY-UNSOURCED becomes RESOLVED_MISATTRIBUTION
+      (value originates in M22.1.1, applies by identity).
     recorded_delta_path: reports/m22_1_2_response_space_results.json
     recorded_delta_sha256: b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4
+    sourced_path: reports/M22_1_1/README.md
+    sourced_lines: "42-44"
+    sourced_values:
+      validation: 0.999382
+      replication: 0.999234
+      discovery: 0.999294
+    abs_tol: 1.0e-6
     energy_definition: "sigma_1^2 / sum_i sigma_i^2"
-    action_if_unsourced: "recompute and record as baseline; do not compare to M22.1.1"
   G2:
     statement: "T1 leading energy == 1 within 1e-9 per split."
     abs_tol: 1.0e-9
@@ -258,14 +351,27 @@ sanity_gates:
       Structural: for each prompt p, least-squares c_p fitting
       T2(p,·) ≈ c_p * (x_p · d) over the 8 directions, x_p from residual
       file, d from directions file. Pass if
-      ||T2(p,·) − c_p (x_p·d)|| / ||T2(p,·)|| ≤ 1e-6 for all prompts in
-      validation and replication. Also report implied
-      (r·x_p) = c_p * n / (alpha * inv_rms_p^3).
+      ||T2(p,·) − c_p (x_p·d)|| / ||T2(p,·)|| ≤ 1e-6 for all
+      non-degenerate prompts in validation and replication. Also report
+      implied (r·x_p) = c_p * n / (alpha * inv_rms_p^3).
     rel_tol: 1.0e-6
-    rel_tol_rule: "1e-6 if compute dtype float64; 1e-3 if float32"
-    fixed_from: "predict.py:418-430 float64"
     required_splits: [validation, replication]
-    replaces: "old reconstructive G3 (Δ₁ = T1 − T2 vs stored Δ₁)"
+    degeneracy_guard:
+      rule: "if ||T2(p,·)|| ≤ 1e-12 · ||T1(p,·)||, prompt p = DEGENERATE (reported, excluded from pass criterion)"
+      ratio: 1.0e-12
+      more_than_one_degenerate_in_split: "that split cannot support a label (INSUFFICIENT_EVIDENCE)"
+  G4:
+    available: true
+    statement: >
+      s_implied(p) = inv_rms_p · (r·x_p)_implied from G3.
+      b_U is ABSENT_OR_ZERO: pass if |s_stored − s_implied| ≤ 1e-3 · max(1, |s_stored|)
+      for all non-degenerate prompts in validation and replication.
+    stored_s:
+      path: artifacts/m22_1_3/predictions.json
+      key: clean_margins[prompt_id].from_clean_logits
+    b_U: ABSENT_OR_ZERO
+    abs_coef: 1.0e-3
+    required_splits: [validation, replication]
 
 metrics:
   # Names only. Not computed in this step.
@@ -292,6 +398,7 @@ decision_rule:
     the first two hold but projection share > 0.01
     on both validation and replication
   INSUFFICIENT_EVIDENCE: otherwise
+  more_than_one_degenerate_in_an_evaluation_split: INSUFFICIENT_EVIDENCE
   no_label_if_gate_fails: true
 
 output_rule:
