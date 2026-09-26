@@ -299,6 +299,12 @@ decisions:
     affects:
       - M22.1.4
       - contract_rules.NO_SELF_HASH_EMBEDDING
+  - id: DEC-007
+    date: "2026-09-26"
+    statement: "Any status change of M22.1 requires recovery_grade_chain == EXACT or a successful behavioral replay milestone (M22.1-R) from a clean commit."
+    approved_by: user
+    affects:
+      - M22.1
 
 contract_rules:
   NO_SELF_HASH_EMBEDDING:

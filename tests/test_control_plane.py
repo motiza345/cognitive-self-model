@@ -149,3 +149,50 @@ def test_chain_grade_inconsistent_with_depends_on_fails(tmp_path: Path):
     _rewrite(dest / "RECOVERY.yaml", mutate)
     errors = validate(dest, ROOT)
     assert any("recovery_grade_chain" in item and "computed" in item for item in errors)
+
+
+def test_unknown_depends_on_complete_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["milestones"]["M18"]["chain_status"] = "COMPLETE"
+
+    _rewrite(dest / "RECOVERY.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("UNKNOWN requires chain_status INCOMPLETE" in item for item in errors)
+
+
+def test_unknown_depends_on_chain_better_than_local_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["milestones"]["M18"]["recovery_grade_chain"] = "PARTIAL"
+
+    _rewrite(dest / "RECOVERY.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("must not be better than recovery_grade_local" in item for item in errors)
+
+
+def test_empty_depends_on_without_verified_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        payload["milestones"]["M22.1"]["depends_on_verified"] = False
+
+    _rewrite(dest / "RECOVERY.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("empty depends_on requires depends_on_verified true" in item for item in errors)
+
+
+def test_claim_worse_than_partial_chain_without_scope_limitation_fails(tmp_path: Path):
+    dest = _copy_control(tmp_path)
+
+    def mutate(payload):
+        for entry in payload["entries"]:
+            if entry["id"] == "F-M21.2.4.3.3-QINVALID":
+                entry["scope_limitation"] = ""
+                break
+
+    _rewrite(dest / "CLAIMS.yaml", mutate)
+    errors = validate(dest, ROOT)
+    assert any("scope_limitation referring to the upstream gap" in item for item in errors)

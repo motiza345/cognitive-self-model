@@ -27,7 +27,14 @@ milestones:
     - No string M18 in tracked md/json/py/ipynb.
     recovery_grade_local: ABSENT
     recovery_grade_chain: ABSENT
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: rg M18 over tracked md/json/py/ipynb returned no matches
+    chain_status: INCOMPLETE
   M19:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -53,7 +60,14 @@ milestones:
     - No M19 report, status, config, or label.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: notebooks/source/README.md remaps the M19 filename to M21.2.3.x; no M19 artifact-consumption path
+    chain_status: INCOMPLETE
   M20.6.3.2:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -79,7 +93,14 @@ milestones:
     - No reports/M20* tracked; no frozen config hash; no environment record.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: pointer only in notebooks/source/README.md lines 25-27; no reconstructable input edge
+    chain_status: INCOMPLETE
   M21.2.3.1:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -103,7 +124,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.3.2:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -126,7 +154,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.3.3:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -149,7 +184,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.3.4:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -172,7 +214,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.3.5:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -195,7 +244,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.3.6:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -218,7 +274,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.4.0:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -241,7 +304,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.4.1:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -265,7 +335,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.4.2:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -288,7 +365,14 @@ milestones:
     - No reports/ or configs/ for this id.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.4.3.1:
     branch: UNKNOWN
     commit: c894266d409c21d5bc93979beeda6ce0d9cbcc60
@@ -312,6 +396,13 @@ milestones:
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
     depends_on: []
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: null
+      source_path: src/cognitive_self_model/benchmark/pipeline.py
+      source_line_or_key: lines 3-8
+      note: Pipeline builds episode-disjoint splits and writes the eight-key NPZ; it does not load an upstream milestone artifact.
+    chain_status: COMPLETE
   M21.2.4.3.2:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -335,7 +426,14 @@ milestones:
     - Named only in notebooks/source/README.md.
     recovery_grade_local: POINTER_ONLY
     recovery_grade_chain: POINTER_ONLY
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: named only in notebooks/source/README.md
+    chain_status: INCOMPLETE
   M21.2.4.3.3:
     branch: UNKNOWN
     commit: 602d0e21525dc24918559e7f87f18812a33260b8
@@ -373,6 +471,17 @@ milestones:
     - input NPZ not tracked (Colab path in artifact_manifest.json; documented CLI path reports/M21_2_4_3_1/M21_2_4_3_3_input.npz
       not tracked)
     - no single status enum in the report
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: M21.2.4.3.1
+      source_path: src/legacy_import/m21_2_4_3_3_audit.py
+      source_line_or_key: line 10
+      note: Documented CLI consumes reports/M21_2_4_3_1/M21_2_4_3_3_input.npz
+    - milestone: M21.2.4.3.1
+      source_path: reports/M21_2_4_3_3/artifact_manifest.json
+      source_line_or_key: input_npz
+      note: Recorded input path /content/artifacts/M21.2.4.3.1/M21_2_4_3_3_input.npz (not tracked)
+    chain_status: COMPLETE
   M21.2.4.3.4:
     branch: UNKNOWN
     commit: d39379f99861fd840a8c76ceeb8b4c004ee27aea
@@ -405,12 +514,20 @@ milestones:
       code pending.
     recovery_grade_local: PARTIAL
     recovery_grade_chain: PARTIAL
-    depends_on: []
+    depends_on: UNKNOWN
     missing:
     - python/torch/transformer_lens environment not recorded
     - dedicated branch UNKNOWN
     - entrypoint UNKNOWN as a single documented report CLI
     - verdict rationale still says full benchmark code pending
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: configs/m21_2_4_3_4_config.json and src/legacy_import/m21_2_4_3_4_identifiability_benchmark.py name no upstream
+        milestone path; no explicit non-dependence statement
+    chain_status: INCOMPLETE
   M22.1:
     branch: cursor/m21-2-4-3-1-integration-c559
     commit: db8d03fad94e2f20f1a9f593a7f6b9eaa5f81d47
@@ -470,6 +587,18 @@ milestones:
     gap8_status: ADDITIONS_ONLY_UNVERIFIED
     gap8_resolution: git diff --name-status e4713f0 db8d03f is 26 Added files only (M22.1 config, m22_1/*, tests, reports,
       entrypoint). No pre-existing file modified. Run record does not store per-file code hashes.
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: null
+      source_path: reports/M22_1/README.md
+      source_line_or_key: line 35
+      note: Earlier synthetic temporal forecasts and the epistemic benchmark's invalidity score are not evidence for this
+        result.
+    - milestone: null
+      source_path: configs/m22_1_preflight.json
+      source_line_or_key: candidate_layer_rule
+      note: The M20.6.3.2 observability pick, including layer 13, is not an input.
+    chain_status: COMPLETE
   M22.1.1:
     branch: cursor/m22-1-1-intervention-space-audit-c559
     commit: 72c6875f4bb180fbdcbe5504cb2b274ab5a78e07
@@ -501,6 +630,13 @@ milestones:
     depends_on:
     - M22.1
     missing: []
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: M22.1
+      source_path: reports/M22_1_1/README.md
+      source_line_or_key: line 14
+      note: Prompts and discovery/validation/replication roles are the M22.1 frozen set.
+    chain_status: COMPLETE
   M22.1.2:
     branch: cursor/m22-1-2-response-space-audit-c559
     commit: 63699b7ec91f4912f6c2b464dcd33ae4a91a1e1b
@@ -535,6 +671,13 @@ milestones:
     - M22.1.1
     missing:
     - python/torch/transformer_lens versions not stored in reports/m22_1_2_response_space_results.json
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: M22.1.1
+      source_path: configs/m22_1_2_response_space_audit.json
+      source_line_or_key: measurement_results
+      note: reports/M22_1_1/direction_panel_results.json
+    chain_status: COMPLETE
   M22.1.3:
     branch: m22-1-3-readout-null
     commit: 0e6805e5153b162d4cabf7bae429455a7921e0a9
@@ -587,6 +730,17 @@ milestones:
     - M22.1.1
     missing:
     - fold_ln / center_writing_weights / center_unembed realized as not_on_cfg (artifacts/m22_1_3/results.json realized)
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: M22.1
+      source_path: configs/m22_1_3_readout_null.yaml
+      source_line_or_key: paths.m22_1_config / paths.prompt_artifact
+      note: configs/m22_1_preflight.json and reports/M22_1/manifest.json
+    - milestone: M22.1.1
+      source_path: configs/m22_1_3_readout_null.yaml
+      source_line_or_key: paths.delta_table
+      note: reports/M22_1_1/direction_panel_results.json
+    chain_status: COMPLETE
   M22.2:
     branch: UNKNOWN
     commit: UNKNOWN
@@ -608,4 +762,11 @@ milestones:
     - No src/cognitive_self_model/m22_2/; no config; no report. Authorized false in M22.1–M22.1.3 reports.
     recovery_grade_local: ABSENT
     recovery_grade_chain: ABSENT
-    depends_on: []
+    depends_on: UNKNOWN
+    depends_on_verified: false
+    depends_on_provenance:
+    - milestone: null
+      source_path: null
+      source_line_or_key: null
+      note: no m22_2 package/config/report; no recorded input edge
+    chain_status: INCOMPLETE

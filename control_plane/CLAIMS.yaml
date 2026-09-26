@@ -28,6 +28,7 @@ entries:
     status: ACTIVE
     reinterpreted_by: null
     supersedes: []
+    scope_limitation: "recovery_grade_chain is POINTER_ONLY because upstream M21.2.4.3.1 input NPZ is not tracked (Colab path in artifact_manifest.json; documented CLI path reports/M21_2_4_3_1/M21_2_4_3_3_input.npz not tracked)."
     non_claims:
       - "q_invalid is a universal probability of invalidity."
       - "Calibration generalizes to all unseen track families."

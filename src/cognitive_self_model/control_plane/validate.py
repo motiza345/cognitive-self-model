@@ -43,8 +43,10 @@ FILE_CATEGORY = {
 }
 RECOVERY_GRADE = {"EXACT", "PARTIAL", "POINTER_ONLY", "ABSENT"}
 GRADE_RANK = {"ABSENT": 0, "POINTER_ONLY": 1, "PARTIAL": 2, "EXACT": 3}
+CHAIN_STATUS = {"COMPLETE", "INCOMPLETE"}
 GATE_REASON_IDS = re.compile(r"\b(?:F|OBS)-[A-Z0-9][A-Z0-9._-]*\b")
 OPEN_FLAG_STATUSES = {"open", "OPEN"}
+WORSE_THAN_PARTIAL = {"POINTER_ONLY", "ABSENT"}
 
 
 def repo_root_from(start: Path) -> Path:
@@ -257,6 +259,9 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
             "recovery_grade_local",
             "recovery_grade_chain",
             "depends_on",
+            "depends_on_verified",
+            "depends_on_provenance",
+            "chain_status",
             "branch",
             "commit",
             "entrypoint",
@@ -275,8 +280,12 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
             errors.append(f"RECOVERY {mid} recovery_grade_local invalid: {local}")
         if chain not in RECOVERY_GRADE:
             errors.append(f"RECOVERY {mid} recovery_grade_chain invalid: {chain}")
-        if not isinstance(rec.get("depends_on"), list):
-            errors.append(f"RECOVERY {mid} depends_on must be a list")
+        if rec.get("chain_status") not in CHAIN_STATUS:
+            errors.append(f"RECOVERY {mid} chain_status invalid: {rec.get('chain_status')}")
+        if not _depends_on_is_valid(rec.get("depends_on")):
+            errors.append(f"RECOVERY {mid} depends_on must be a list or UNKNOWN")
+        if not isinstance(rec.get("depends_on_provenance"), list):
+            errors.append(f"RECOVERY {mid} depends_on_provenance must be a list")
 
     # 2. Every path in FILE_MAP/CLAIMS/RECOVERY exists in the working tree.
     for label, doc in (("FILE_MAP", file_map), ("CLAIMS", claims_doc), ("RECOVERY", recovery)):
@@ -440,14 +449,57 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
             errors.append(f"RECOVERY {mid} EXACT must have no missing items")
         if local == "PARTIAL" and len(missing) < 1:
             errors.append(f"RECOVERY {mid} PARTIAL must have a non-empty missing list")
-        for dep in rec.get("depends_on") or []:
-            if dep not in rec_ms:
-                errors.append(f"RECOVERY {mid} depends_on unknown milestone {dep}")
-        expected_chain = _computed_chain_grade(mid, rec_ms)
-        if expected_chain is not None and rec.get("recovery_grade_chain") != expected_chain:
+        deps = rec.get("depends_on")
+        if isinstance(deps, list):
+            for dep in deps:
+                if dep not in rec_ms:
+                    errors.append(f"RECOVERY {mid} depends_on unknown milestone {dep}")
+            expected_chain = _computed_chain_grade(mid, rec_ms)
+            if expected_chain is not None and rec.get("recovery_grade_chain") != expected_chain:
+                errors.append(
+                    f"RECOVERY {mid} recovery_grade_chain {rec.get('recovery_grade_chain')} "
+                    f"!= computed {expected_chain}"
+                )
+
+    # 11. depends_on UNKNOWN → chain_status INCOMPLETE; chain not better than local.
+    #     Empty depends_on [] allowed only with depends_on_verified true and a cited source.
+    for mid, rec in rec_ms.items():
+        if not isinstance(rec, dict):
+            continue
+        deps = rec.get("depends_on")
+        local = rec.get("recovery_grade_local")
+        chain = rec.get("recovery_grade_chain")
+        if deps == "UNKNOWN":
+            if rec.get("chain_status") != "INCOMPLETE":
+                errors.append(f"RECOVERY {mid} depends_on UNKNOWN requires chain_status INCOMPLETE")
+            if local in GRADE_RANK and chain in GRADE_RANK and GRADE_RANK[chain] > GRADE_RANK[local]:
+                errors.append(
+                    f"RECOVERY {mid} depends_on UNKNOWN: recovery_grade_chain {chain} "
+                    f"must not be better than recovery_grade_local {local}"
+                )
+        elif isinstance(deps, list) and deps == []:
+            if rec.get("depends_on_verified") is not True:
+                errors.append(f"RECOVERY {mid} empty depends_on requires depends_on_verified true")
+            if not _has_cited_provenance(rec.get("depends_on_provenance")):
+                errors.append(f"RECOVERY {mid} empty depends_on requires a cited source in depends_on_provenance")
+
+    # 12. Claims whose milestone chain is worse than PARTIAL need scope_limitation.
+    for entry in entries:
+        if entry.get("kind") != "finding":
+            continue
+        cid = entry.get("id")
+        mid = entry.get("milestone")
+        rec = rec_ms.get(mid) if isinstance(mid, str) else None
+        if not isinstance(rec, dict):
+            continue
+        chain = rec.get("recovery_grade_chain")
+        if chain not in WORSE_THAN_PARTIAL:
+            continue
+        limitation = entry.get("scope_limitation")
+        if not (isinstance(limitation, str) and limitation.strip()):
             errors.append(
-                f"RECOVERY {mid} recovery_grade_chain {rec.get('recovery_grade_chain')} "
-                f"!= computed {expected_chain}"
+                f"CLAIMS {cid} milestone chain {chain} requires non-empty "
+                f"scope_limitation referring to the upstream gap"
             )
 
     return errors
@@ -487,6 +539,19 @@ def _open_integrity_issues(state: dict) -> list[dict]:
     return []
 
 
+def _depends_on_is_valid(value: Any) -> bool:
+    return value == "UNKNOWN" or isinstance(value, list)
+
+
+def _has_cited_provenance(provenance: Any) -> bool:
+    if not isinstance(provenance, list):
+        return False
+    for item in provenance:
+        if isinstance(item, dict) and item.get("source_path"):
+            return True
+    return False
+
+
 def _computed_chain_grade(mid: str, milestones: dict, seen: set[str] | None = None) -> str | None:
     rec = milestones.get(mid)
     if not isinstance(rec, dict):
@@ -499,7 +564,10 @@ def _computed_chain_grade(mid: str, milestones: dict, seen: set[str] | None = No
         return local
     seen.add(mid)
     rank = GRADE_RANK[local]
-    for dep in rec.get("depends_on") or []:
+    deps = rec.get("depends_on")
+    if not isinstance(deps, list):
+        return local
+    for dep in deps:
         dep_grade = _computed_chain_grade(str(dep), milestones, seen)
         if dep_grade in GRADE_RANK:
             rank = min(rank, GRADE_RANK[dep_grade])
