@@ -641,9 +641,13 @@ milestones:
       sha256: 90fd22defdfff28f5dccd2d8e79a93d61ea3a5c2391e94e1a963fba964ed5303
     - path: reports/M22_1/manifest.json
       sha256: 9f190b9c752dac7952461cf4d266335a75e6a92da5782e4da40466f92c623ffd
-    output_artifacts:
-    - path: artifacts/m22_1_r/manifest.sha256
+    output_artifacts: []
+    reference_input_manifest:
+      path: artifacts/m22_1_r/manifest.sha256
       sha256: 89d07e833ebf0f3822146f7b2b787280604053bbb2c66d1d4c6fea34af0b8ec4
+      note: >
+        Frozen digest of the five reports/M22_1 reference inputs. Written at
+        preregistration (b436833). Not produced by a run.
     expected_labels:
     - REPLAY_EXACT
     - REPLAY_NUMERIC_EQUIVALENT
