@@ -239,6 +239,14 @@ milestones:
     aliases:
       - m22-1-3-readout-null
     source: "reports/m22_1_3_readout_null_report.md lines 4–5; artifacts/m22_1_3/results.json decision"
+  M22.1.3b:
+    status: PREREGISTERED
+    report_extracted_label: PREREGISTERED
+    labels: []
+    report: configs/m22_1_3b_first_order_structure.yaml
+    claim_ids: []
+    aliases: []
+    source: "configs/m22_1_3b_first_order_structure.yaml (preregistration; no results)"
   M22.2:
     status: NOT_AUTHORIZED
     report_extracted_label: NOT_AUTHORIZED
@@ -310,7 +318,9 @@ contract_rules:
   NO_SELF_HASH_EMBEDDING:
     rule: "Artifacts must not embed their own hash; hashes live only in manifest files."
     applies_from: M22.1.4
-    source: DEC-006
+    also_applies:
+      - M22.1.3b
+    source: DEC-006; configs/m22_1_3b_first_order_structure.yaml output_rule
 
 known_integrity_issues:
   open: []

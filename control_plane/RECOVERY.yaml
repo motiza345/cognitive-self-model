@@ -741,6 +741,68 @@ milestones:
       source_line_or_key: paths.delta_table
       note: reports/M22_1_1/direction_panel_results.json
     chain_status: COMPLETE
+  M22.1.3b:
+    branch: control-plane-bootstrap
+    commit: UNKNOWN
+    entrypoint: UNKNOWN
+    config_path: configs/m22_1_3b_first_order_structure.yaml
+    config_sha256: ba80e3d4bfb1b234d0fa82d6b215195141f008936451aa200f35e721e2038598
+    environment:
+      python: UNKNOWN
+      torch: UNKNOWN
+      transformers: UNKNOWN
+      transformer_lens: UNKNOWN
+    model_id: Qwen/Qwen2.5-0.5B
+    model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+    input_artifacts:
+    - path: reports/m22_1_2_response_space_results.json
+      sha256: b110683f4005b21230565628c28a949e24dcf6c109cecf7cf137f9a986be1cb4
+    - path: artifacts/m22_1_3/predictions.json
+      sha256: 2b9c508e564c111c7a95cbd7568efeaf26bc5cb490f7e39da0ff490d9d912d53
+    - path: artifacts/m22_1_3/clean_resid_l23_last.npy
+      sha256: 41f50fc748e4a06a3635dcf71148b41cb25b72e0031b63a279d301e96217b102
+    - path: artifacts/m22_1_3/directions_float64.npy
+      sha256: 00da5c845ac59a779aaf44b8c531df697b7301e7d3d5e6812f0af1976a99da1e
+    - path: artifacts/m22_1_3/results.json
+      sha256: 3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d
+    - path: configs/m22_1_2_response_space_audit.json
+      sha256: 8cdcc3328d7cc5fb2487acbf850da3b73288d002c77a88aae9661ffde29c7c4b
+    - path: configs/m22_1_3_readout_null.yaml
+      sha256: 6429c4b1d5151d7b01eb13d5622b2e55d9fb0b3a78bf46993b871c213aac8bd3
+    output_artifacts:
+    - path: artifacts/m22_1_3b/manifest.sha256
+      sha256: 4e7243cf2b75a0e8b95160f49f18715d50d2d9379be640267d0135ac665872d6
+    expected_labels:
+    - REINTERPRETATION_DESCRIPTIVELY_SUPPORTED
+    - PROJECTION_TERM_NON_NEGLIGIBLE
+    - INSUFFICIENT_EVIDENCE
+    source: configs/m22_1_3b_first_order_structure.yaml
+    gaps:
+    - Preregistration only; no results; metrics not computed.
+    - r vector / W_U columns / ln_final gain tensor not stored.
+    - M22.1.2 results (b110683f) have no leading_energy field (G1 target UNKNOWN).
+    recovery_grade_local: PARTIAL
+    recovery_grade_chain: PARTIAL
+    depends_on:
+    - M22.1.2
+    - M22.1.3
+    missing:
+    - no results artifact (preregistration only; metrics not computed)
+    - no documented results entrypoint executed
+    - python/torch/transformer_lens environment not recorded for this milestone
+    - r vector / W_U columns / ln_final gain tensor not stored
+    - G1 stored leading_energy field UNKNOWN in b110683f results
+    depends_on_verified: true
+    depends_on_provenance:
+    - milestone: M22.1.2
+      source_path: configs/m22_1_3b_first_order_structure.yaml
+      source_line_or_key: inputs.recorded_delta / matrix_construction
+      note: reports/m22_1_2_response_space_results.json matrices.{split}.alpha_plus1
+    - milestone: M22.1.3
+      source_path: configs/m22_1_3b_first_order_structure.yaml
+      source_line_or_key: inputs.clean_l23_residuals / inputs.directions / inputs.stored_delta1
+      note: artifacts/m22_1_3 clean residuals, directions, predictions.json delta_jacobian
+    chain_status: COMPLETE
   M22.2:
     branch: UNKNOWN
     commit: UNKNOWN

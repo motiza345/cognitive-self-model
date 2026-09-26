@@ -332,6 +332,8 @@ open_questions:
     statement: "Implied clean margin s ≈ −3 logits vs stored s_null (descriptive)"
   - id: OQ-003
     statement: "Load flags (fold_ln, centering) must be recorded explicitly, not inferred from the RMSNormPre class"
+    status: RESOLVED
+    resolution: "Recorded in artifacts/m22_1_3/results.json realized and configs/m22_1_3b_first_order_structure.yaml normalization: fold_ln/center_* = not_on_cfg; ln_final_has_weight false; centering no; gain none; construction unembed_difference_gain_folded_or_absent. Do not infer fold from RMSNormPre."
   - id: OQ-004
     statement: "M22.1.4: direct path must be defined on x_final (not x_L); mediated = total − direct is a counterfactual contrast, not additive"
   - id: OQ-005

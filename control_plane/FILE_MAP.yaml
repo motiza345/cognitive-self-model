@@ -77,6 +77,14 @@ files:
   produced_by: src/cognitive_self_model/m22_1_3/compare.py / 0e6805e5153b162d4cabf7bae429455a7921e0a9
   consumed_by: UNKNOWN
   sha256: 3e6d0cd4b0e8a3528c4dff8d8deeee184946d3ff8a2dead6b3871d9802f54f3d
+- path: artifacts/m22_1_3b/manifest.sha256
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1.3b
+  role: Hash list for the M22.1.3b preregistration file (NO_SELF_HASH_EMBEDDING).
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+  sha256: 4e7243cf2b75a0e8b95160f49f18715d50d2d9379be640267d0135ac665872d6
 - path: configs/.gitkeep
   category: ACTIVE
   immutable: false
@@ -132,6 +140,14 @@ files:
   produced_by: UNKNOWN
   consumed_by: src/cognitive_self_model/m22_1_3
   sha256: 6429c4b1d5151d7b01eb13d5622b2e55d9fb0b3a78bf46993b871c213aac8bd3
+- path: configs/m22_1_3b_first_order_structure.yaml
+  category: CONTRACT
+  immutable: true
+  milestone: M22.1.3b
+  role: Frozen M22.1.3b first-order structure preregistration (no results).
+  produced_by: UNKNOWN
+  consumed_by: M22.1.3b
+  sha256: ba80e3d4bfb1b234d0fa82d6b215195141f008936451aa200f35e721e2038598
 - path: configs/m22_1_preflight.json
   category: CONTRACT
   immutable: true
@@ -1040,6 +1056,14 @@ files:
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
 milestone_index:
+  M22.1.3b:
+    config:
+    - configs/m22_1_3b_first_order_structure.yaml
+    code: []
+    tests: []
+    report: []
+    artifacts:
+    - artifacts/m22_1_3b/manifest.sha256
   M22.1.3:
     config:
     - configs/m22_1_3_readout_null.yaml
