@@ -400,3 +400,80 @@ def test_replay_config_rejects_renamed_tolerance_keys(tmp_path: Path):
     errors: list[str] = []
     _check_m22_1_r_replay_config(tmp_path, errors)
     assert any("tolerances.s_abs is not a frozen tolerance key" in item for item in errors)
+
+
+# --- Commit 4: independent gate overrides -----------------------------------
+
+import copy as _copy_mod
+import shutil as _shutil
+
+import yaml as _yaml
+
+from cognitive_self_model.control_plane.validate import _decision_grants
+from cognitive_self_model.control_plane.validate import validate as _validate_cp
+
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+_M22_2_ERR = "STATE.gates.M22.2.authorized must be false"
+
+
+def _gate_variant(tmp_path: Path, extra_decision: dict | None, m22_2_authorized) -> list[str]:
+    cp = tmp_path / "control_plane"
+    _shutil.copytree(_REPO_ROOT / "control_plane", cp)
+    state_path = cp / "STATE.yaml"
+    state = _yaml.safe_load(state_path.read_text())
+    if extra_decision is not None:
+        template = _copy_mod.deepcopy(next(d for d in state["decisions"] if d.get("id") == "DEC-009"))
+        template.update(extra_decision)
+        state["decisions"].append(template)
+    state["gates"]["M22.2"]["authorized"] = m22_2_authorized
+    state_path.write_text(_yaml.safe_dump(state, sort_keys=False, allow_unicode=True))
+    return _validate_cp(cp, _REPO_ROOT)
+
+
+def _has_m22_2_error(errors: list[str]) -> bool:
+    return any(_M22_2_ERR in e for e in errors)
+
+
+def test_m22_1_override_does_not_disarm_m22_2(tmp_path: Path):
+    decision = {
+        "id": "DEC-TEST-M22-1",
+        "status": "ACCEPTED",
+        "approved_by": "user",
+        "decision": "M22.1 validated for test purposes",
+    }
+    assert _decision_grants(decision, "M22.1") is True
+    assert _decision_grants(decision, "M22.2") is False
+    errors = _gate_variant(tmp_path, decision, True)
+    assert _has_m22_2_error(errors), errors
+
+
+def test_gate_override_requires_accepted_status():
+    for status in ("PROPOSED", "REJECTED", "SUPERSEDED", None):
+        decision = {"approved_by": "user", "decision": "M22.2 authorized"}
+        if status is not None:
+            decision["status"] = status
+        assert _decision_grants(decision, "M22.2") is False, status
+
+
+def test_gate_override_requires_user_approval():
+    decision = {"approved_by": "assistant", "status": "ACCEPTED", "decision": "M22.2 authorized"}
+    assert _decision_grants(decision, "M22.2") is False
+
+
+def test_m22_2_override_true_path_is_reachable(tmp_path: Path):
+    decision = {
+        "id": "DEC-TEST-M22-2",
+        "status": "ACCEPTED",
+        "approved_by": "user",
+        "decision": "M22.2 authorized for test purposes",
+    }
+    assert _decision_grants(decision, "M22.2") is True
+    assert not _has_m22_2_error(_gate_variant(tmp_path, decision, True))
+
+
+def test_real_state_has_no_active_gate_override():
+    state = _yaml.safe_load((_REPO_ROOT / "control_plane" / "STATE.yaml").read_text())
+    decisions = state.get("decisions", [])
+    assert not any(_decision_grants(d, "M22.1") for d in decisions)
+    assert not any(_decision_grants(d, "M22.2") for d in decisions)
+    assert state["gates"]["M22.2"]["authorized"] is False

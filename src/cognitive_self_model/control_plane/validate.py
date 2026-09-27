@@ -440,15 +440,12 @@ def validate(control_plane_dir: Path, repo_root: Path | None = None) -> list[str
     # 8. Guard M22.1 CANDIDATE and M22.2 unauthorized unless user decision.
     m22_1_status = (milestones.get("M22.1") or {}).get("status")
     m22_2_auth = ((state.get("gates") or {}).get("M22.2") or {}).get("authorized")
-    user_override = any(
-        isinstance(item, dict)
-        and item.get("approved_by") == "user"
-        and _decision_overrides_guard(item)
-        for item in decisions
-    )
-    if m22_1_status != "CANDIDATE" and not user_override:
+    # The two gates are independent: an override for one must not disarm the other.
+    override_m22_1 = any(_decision_grants(item, "M22.1") for item in decisions)
+    override_m22_2 = any(_decision_grants(item, "M22.2") for item in decisions)
+    if m22_1_status != "CANDIDATE" and not override_m22_1:
         errors.append("STATE.milestones.M22.1.status must be CANDIDATE unless a user-approved decision authorizes otherwise")
-    if m22_2_auth is not False and not user_override:
+    if m22_2_auth is not False and not override_m22_2:
         errors.append("STATE.gates.M22.2.authorized must be false unless a user-approved decision authorizes otherwise")
 
     # 9. Open integrity flags on claim evidence must be listed in STATE.known_integrity_issues.
@@ -774,9 +771,30 @@ def _computed_chain_grade(mid: str, milestones: dict, seen: set[str] | None = No
     return local
 
 
-def _decision_overrides_guard(item: dict) -> bool:
+_GATE_MARKERS = {
+    "M22.1": ("m22.1", "validated"),
+    "M22.2": ("m22.2", "authoriz"),
+}
+
+
+def _decision_grants(item: Any, gate: str) -> bool:
+    """True only if `item` is an in-force, user-approved override for `gate`.
+
+    Each gate is evaluated separately; granting one never grants the other.
+    Prose matching is a heuristic and is negation-blind; it is scheduled to be
+    superseded by an explicit structured field (DEC-009 follow-up, Commit 5).
+    """
+    if gate not in _GATE_MARKERS:
+        raise ValueError(f"unknown gate: {gate!r}")
+    if not isinstance(item, dict):
+        return False
+    if item.get("approved_by") != "user":
+        return False
+    if item.get("status") != "ACCEPTED":
+        return False
+    subject, verb = _GATE_MARKERS[gate]
     text = " ".join(flatten_strings(item)).lower()
-    return "m22.1" in text and "validated" in text or "m22.2" in text and "authoriz" in text
+    return subject in text and verb in text
 
 
 def validate_or_raise(control_plane_dir: Path, repo_root: Path | None = None) -> None:
