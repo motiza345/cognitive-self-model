@@ -373,7 +373,16 @@ contract_rules:
     source: DEC-006; configs/m22_1_3b_first_order_structure.yaml output_rule
 
 known_integrity_issues:
-  open: []
+  open:
+    - id: INT-DEC009-GUARD-WORDING
+      status: OPEN
+      note: >
+        DEC-009 scope wording was altered from "does not authorize M22.2" to
+        "The M22.2 gate stays closed" solely to avoid _decision_overrides_guard,
+        which matches "M22.2" + "authoriz" without parsing negation. The guard
+        is negation-blind: it rejects the explicit safe phrasing and admits
+        paraphrased unsafe phrasings. Ledger text is therefore shaped by
+        validator mechanics, not by the decision itself.
   resolved:
     - id: INT-M22.1.2-ENERGY-UNSOURCED
       path: reports/m22_1_2_response_space_results.json
