@@ -370,6 +370,25 @@ def test_execution_record_rejects_sentinels_and_requires_dirty_reason(tmp_path: 
     errors = validate(dest, ROOT)
     assert any("dirty_reason is required when git_dirty is true" in item for item in errors)
 
+    def dirty_empty_reason(payload):
+        record = _clean_execution_record()
+        record["git_dirty"] = True
+        record["dirty_reason"] = ""
+        payload["execution_records"] = [record]
+
+    _rewrite(dest / "RECOVERY.yaml", dirty_empty_reason)
+    errors = validate(dest, ROOT)
+    assert any("dirty_reason is required when git_dirty is true" in item for item in errors)
+
+    def dirty_not_boolean(payload):
+        record = _clean_execution_record()
+        record["git_dirty"] = "true"
+        payload["execution_records"] = [record]
+
+    _rewrite(dest / "RECOVERY.yaml", dirty_not_boolean)
+    errors = validate(dest, ROOT)
+    assert any("git_dirty is required and must be a boolean" in item for item in errors)
+
 
 def test_execution_record_accepts_clean_and_explained_dirty(tmp_path: Path):
     dest = _copy_control(tmp_path)
