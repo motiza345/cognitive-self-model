@@ -1,4 +1,6 @@
-status: DRAFT
+status: FROZEN
+decision_version: 1
+accepted_on: 2026-09-28
 decision_id: DEC-011
 title: MRSM scope, arms, P construction, budget semantics
 depends_on:
