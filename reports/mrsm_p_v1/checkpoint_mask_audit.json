@@ -1,0 +1,35 @@
+{
+  "accuracies": {
+    "masked_ablate_A": 0.2265625,
+    "masked_ablate_B": 0.4765625,
+    "masked_ablate_both": 0.23046875,
+    "masked_intact": 0.513671875,
+    "unmasked_ablate_A": 0.24609375,
+    "unmasked_ablate_B": 0.30859375,
+    "unmasked_ablate_both": 0.23046875,
+    "unmasked_intact": 0.318359375
+  },
+  "benchmark": "MRSM_P_v1",
+  "checkpoint": "reports/mrsm_p_v1/p_model_state.pt",
+  "checkpoint_sha256": "ea40cda33a054c1c7fd9b169686c2eff6a9ada1aab9f0d75324fbdd74a8986e6",
+  "dev_examples": 512,
+  "dev_seed": 1929,
+  "discovery_run": false,
+  "holdout": {
+    "accessed": false,
+    "generated": false
+  },
+  "matches_recorded_unmasked_smoke": true,
+  "mode": "checkpoint-audit",
+  "next_bounded_action": "Do not retrain this checkpoint, do not run discovery, and do not open holdout. Unmasked and masked intact accuracies are 0.318 and 0.514, both below the frozen 0.95 predicate, and ablating planted_B under the mask does not meet the frozen drop. Changing the substrate or mechanism requires a new DEC. Leave p_construction.outcome null until the deadline 2026-10-03T14:17:59+00:00. MRSM does not start.",
+  "p_construction_clock_start_commit": "ad3cbc0f185a397d34eddabb8032fd3dd2144b1c",
+  "p_construction_deadline": "2026-10-03T14:17:59+00:00",
+  "planted_A": [
+    0,
+    0
+  ],
+  "planted_B": [
+    1,
+    1
+  ]
+}

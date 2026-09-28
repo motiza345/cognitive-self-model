@@ -1,8 +1,8 @@
 status: NOT_STARTED
 governed_by: DEC-011
 p_construction:
-  clock_start_commit: null
-  deadline: null
+  clock_start_commit: ad3cbc0f185a397d34eddabb8032fd3dd2144b1c   # commit that set P_SPEC.md status FROZEN; not backdated
+  deadline: 2026-10-03T14:17:59+00:00   # committer date 2026-09-28T14:17:59+00:00 + 5 x 24h
   outcome: null   # DONE | P_CONSTRUCTION_INCOMPLETE (DEC-011 p_construction.outcomes)
   done_evidence: null
 mrsm:
