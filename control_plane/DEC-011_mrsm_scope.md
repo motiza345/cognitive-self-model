@@ -91,3 +91,8 @@ provenance:
 deferred_to_mrsm_preregistration:
   - metrics, units, splits, nulls, baselines, thresholds for P.H1-H4 and Q.H1-H4
   - H3 components (context transfer, identity invariance) and their PASS combination
+
+decisions_recorded_2026_09_28:
+  mrsm_clock_start: p_freeze
+  on_p_construction_incomplete: accepted
+  p_spec_separate_document: accepted
