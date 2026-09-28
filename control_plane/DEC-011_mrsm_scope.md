@@ -91,5 +91,3 @@ provenance:
 deferred_to_mrsm_preregistration:
   - metrics, units, splits, nulls, baselines, thresholds for P.H1-H4 and Q.H1-H4
   - H3 components (context transfer, identity invariance) and their PASS combination
-  - H4 audit path: Self-Model output -> decision -> intervention -> outcome, against same-pipeline ablated and marginal-preserving shuffled controls
-  non_binding_candidates: {h1: 0.8, h2_rho: 0.7, h2_null: P95, h3_ratio: 0.8}
