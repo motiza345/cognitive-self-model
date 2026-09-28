@@ -72,10 +72,12 @@ p_construction:
   post_freeze_changes: "Changes to substrate or mechanism are not engineering fixes and require a new DEC."
 
 mrsm_budget:
-  clock_start: P freeze (DoD met)   # preregistration drafting counts inside this window
+  clock_start: p_freeze commit   # preregistration drafting and Q pin enforcement count inside this window
+  deadline_rule: "clock_start committer date (UTC) + 28 x 24h"
   calendar_days: 28
   full_runs_limit: 8
   q_gpu_full_runs_limit: 2
+  counter_rule: "Every Full Run increments full_runs.used. A Q Full Run on GPU also increments q_gpu_full_runs.used. q_gpu_full_runs is a sub-limit of full_runs, not an additional allowance."
   full_run_definition: "any execution that reads a locked holdout"
   m22_1_r_counted: false
   p_construction_counted: false
