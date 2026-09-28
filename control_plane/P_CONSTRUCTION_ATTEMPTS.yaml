@@ -1,0 +1,94 @@
+document: control_plane/P_CONSTRUCTION_ATTEMPTS.yaml
+governed_by: DEC-011
+recorded_because: pre-freeze construction runs existed before control_plane/P_SPEC.md
+prior_P_SPEC_freeze: ABSENT
+clock_at_time_of_attempts:
+  clock_start_commit: null
+  deadline: null
+  backdated: false
+  restarted: false
+
+budget_classification:
+  source: DEC-011 lock record and control_plane/MRSM_BUDGET.yaml as they stood before this record
+  clauses:
+    p_construction.counted_in_mrsm_full_runs: false
+    mrsm_budget.p_construction_counted: false
+    mrsm_budget.full_run_definition: any execution that reads a locked holdout
+    mrsm_budget.clock_start: p_freeze commit
+    p_construction.holdout_access: FORBIDDEN
+  mrsm_window: NOT_STARTED
+  p_freeze: ABSENT
+  full_runs_used_after_resolution: 0
+  q_gpu_full_runs_used_after_resolution: 0
+  class: UNCOUNTED_P_CONSTRUCTION
+  resolution: >
+    Both runs are P construction attempts. DEC-011 excludes P construction from
+    the MRSM full-run counters, and the MRSM window had not started because
+    p_freeze did not exist. Neither counter is incremented. Each run did
+    generate a holdout dataset and hash its tokens and targets. That is
+    holdout generation and content access, which p_construction.holdout_access
+    forbids. Neither run applied the model to holdout: accuracy and margin
+    stayed null. The v1 manifest label LOCKED_NOT_TOUCHED_IN_SMOKE does not
+    match that generation and hash. The holdout was not a split locked before
+    the run; the same process created it. These attempts are therefore not
+    recorded as MRSM Full Runs.
+
+attempts:
+  - id: MRSM_P_v0_smoke
+    script: scripts/mrsm_p_v0.py
+    script_commit: 5985418f6e58736ed121be0a175ff1abd9c7c7e7
+    mode: smoke
+    retrained_by_this_record: false
+    status_written: SMOKE_ONLY
+    model_sha256: e13cc72d30d046f3adf63c41b4a0e4ae572215c710611aadc6c04ddd2a1234fa
+    dev_accuracy: 1.0
+    dev_margin: 8.18589973449707
+    planted_head_ablation_accuracy: {L0H0: 1.0, L1H1: 1.0}
+    holdout:
+      generated: true
+      content_hashed: true
+      model_evaluated: false
+      seed: 311
+      n: 512
+      tokens_sha256: 17172921d3806e9d3f305e1da61b7b8a1b4fc5a15eba5572b624fa5d3a71993f
+      targets_sha256: dc411a2a5cfe6645122c695cfa5e9a722271a21811a3eaa291098200d71c9feb
+      accuracy: null
+      margin: null
+      artifact: reports/mrsm_p_v0/holdout_manifest.json
+    budget_class: UNCOUNTED_P_CONSTRUCTION
+    holdout_access_class: GENERATED_AND_HASHED_DURING_CONSTRUCTION
+  - id: MRSM_P_v1_smoke
+    script: mrsm_p_v1.py
+    script_commit: 17457f1128052a0c374a172049efa2cb505ddc40
+    mode: smoke
+    retrained_by_this_record: false
+    status_written: SMOKE_ONLY
+    sequential_signature: false
+    model_sha256: ea40cda33a054c1c7fd9b169686c2eff6a9ada1aab9f0d75324fbdd74a8986e6
+    checkpoint: reports/mrsm_p_v1/p_model_state.pt
+    mechanism_audit_dev:
+      intact_accuracy: 0.318359375
+      hop1_only_accuracy: 0.30859375
+      hop2_only_accuracy: 0.24609375
+      both_planted_ablated_accuracy: 0.23046875
+      controls_mean_accuracy: 0.3177083333333333
+      planted_specificity_gap: 0.07161458333333331
+    train:
+      steps: 1600
+      final_loss: 0.9802930355072021
+      mean_last_100_loss: 0.7971341669559479
+    holdout:
+      generated: true
+      content_hashed: true
+      model_evaluated: false
+      seed: 2029
+      n: 512
+      tokens_sha256: 9b375ab59fc26557bffd454e4d62ef28b0d53ad02ecf2edcaa0f6dd163a2e271
+      targets_sha256: fc229a752b50c05cc1ba30acadd8d3681c11a6dfea265763a318ddf1a2428847
+      accuracy: null
+      margin: null
+      label_written: LOCKED_NOT_TOUCHED_IN_SMOKE
+      label_matches_generation: false
+      artifact: reports/mrsm_p_v1/holdout_manifest.json
+    budget_class: UNCOUNTED_P_CONSTRUCTION
+    holdout_access_class: GENERATED_AND_HASHED_DURING_CONSTRUCTION

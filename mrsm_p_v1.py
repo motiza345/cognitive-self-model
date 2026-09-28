@@ -12,13 +12,13 @@ head identities or training masks.
 
 Scientific status
 -----------------
-This file is an engineering candidate, not a preregistered MRSM run.  It has
-three explicit phases:
-  1. construct/train P and independently validate the intended mechanism;
-  2. freeze the model and run blind discovery on DEV only;
-  3. after discovery is frozen, evaluate the discovered mechanism on HOLDOUT.
+This file is an engineering candidate, not a preregistered MRSM run.
+Smoke trains and validates the mechanism on development data only.
+Full mode is disabled until MRSM preregistration and budget enforcement.
+Discovery is not run. Construction and smoke do not generate or read holdout.
 
-The evaluator may use ground truth after discovery. Discovery itself does not.
+The evaluator may use planted identity for the construction audit.
+Discovery itself, when later authorized, must not.
 """
 from __future__ import annotations
 
@@ -28,6 +28,7 @@ import json
 import math
 import os
 import random
+import sys
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -365,32 +366,26 @@ def write_json(path: Path, obj):
 
 
 def run(cfg: Config, mode: str):
+    if mode != "smoke":
+        raise RuntimeError("only smoke mode may construct; full mode is disabled")
+
     seed_all(cfg.seed)
     out = Path(cfg.output_dir)
     out.mkdir(parents=True, exist_ok=True)
 
     train = make_dataset(cfg, cfg.train_examples, cfg.seed + 100)
     dev = make_dataset(cfg, cfg.dev_examples, cfg.seed + 200)
-    holdout = make_dataset(cfg, cfg.holdout_examples, cfg.seed + 300)
-
-    holdout_manifest = {
-        "seed": cfg.seed + 300,
-        "n": cfg.holdout_examples,
-        "tokens_sha256": sha256_bytes(holdout.tokens.numpy().tobytes()),
-        "targets_sha256": sha256_bytes(holdout.targets.numpy().tobytes()),
-        "status": "LOCKED_NOT_TOUCHED_IN_SMOKE",
-    }
-    write_json(out / "holdout_manifest.json", holdout_manifest)
 
     model = build_model(cfg)
     train_stats = train_planted(model, cfg, train)
 
-    # Construction audit happens on DEV. Holdout remains untouched in smoke.
+    # Construction audit is on DEV. Smoke does not generate or read holdout.
     audit = run_mechanism_audit(model, dev, cfg)
+    status = "SMOKE_ONLY" if audit.sequential_signature else "BLOCKED_CONSTRUCTION_AUDIT"
     result = {
         "benchmark": "MRSM_P_v1",
         "mode": mode,
-        "status": "SMOKE_ONLY" if mode == "smoke" else "FULL_CANDIDATE",
+        "status": status,
         "config": asdict(cfg),
         "construction": {
             "task": "episodic two-hop key/value retrieval",
@@ -402,24 +397,9 @@ def run(cfg: Config, mode: str):
         },
         "train": train_stats,
         "mechanism_audit_dev": asdict(audit),
-        "holdout": {"locked": True, "manifest": holdout_manifest, "accuracy": None, "margin": None},
+        "discovery": None,
+        "holdout": {"generated": False, "accessed": False, "accuracy": None, "margin": None},
     }
-
-    # Do not permit scientific discovery if the construction audit fails.
-    if mode == "full" and audit.sequential_signature:
-        discovery = discover(model, dev, cfg)
-        result["discovery"] = asdict(discovery)
-        result["discovery_stage"] = "FROZEN_AFTER_DEV"
-        result["holdout"] = {
-            "locked": False,
-            "manifest": holdout_manifest,
-            "accuracy": accuracy(model, holdout),
-            "margin": margin(model, holdout),
-        }
-        result["status"] = "FULL_CANDIDATE"
-    elif mode == "full":
-        result["status"] = "BLOCKED_CONSTRUCTION_AUDIT"
-        result["discovery"] = None
 
     model_path = out / "p_model_state.pt"
     torch.save(model.state_dict(), model_path)
@@ -428,12 +408,64 @@ def run(cfg: Config, mode: str):
     return result
 
 
+def evaluate_saved_checkpoint(cfg: Config, checkpoint: Path) -> Dict[str, object]:
+    """Dev-only masked/unmasked ablation of a saved checkpoint. No discovery, no holdout."""
+    if not checkpoint.is_file():
+        raise FileNotFoundError(checkpoint)
+    checkpoint_sha256 = sha256_file(checkpoint)
+    seed_all(cfg.seed)
+    dev = make_dataset(cfg, cfg.dev_examples, cfg.seed + 200)
+    model = build_model(cfg)
+    state = torch.load(checkpoint, map_location="cpu", weights_only=True)
+    model.load_state_dict(state)
+    model.eval()
+
+    masks = make_training_mask(model, cfg, dev.query_pos)
+    mask_hooks = [(name, masked_pattern_hook(mask)) for name, mask in masks.items()]
+    planted_a, planted_b = cfg.planted_a, cfg.planted_b
+    ablations = {
+        "intact": [],
+        "ablate_A": multi_zero_hooks([planted_a]),
+        "ablate_B": multi_zero_hooks([planted_b]),
+        "ablate_both": multi_zero_hooks([planted_a, planted_b]),
+    }
+    accuracies: Dict[str, float] = {}
+    for name, ablation_hooks in ablations.items():
+        accuracies[f"unmasked_{name}"] = accuracy(model, dev, ablation_hooks or None)
+        accuracies[f"masked_{name}"] = accuracy(model, dev, [*mask_hooks, *ablation_hooks])
+
+    result: Dict[str, object] = {
+        "benchmark": "MRSM_P_v1",
+        "mode": "checkpoint-audit",
+        "checkpoint": str(checkpoint),
+        "checkpoint_sha256": checkpoint_sha256,
+        "dev_seed": cfg.seed + 200,
+        "dev_examples": cfg.dev_examples,
+        "planted_A": list(planted_a),
+        "planted_B": list(planted_b),
+        "discovery_run": False,
+        "holdout": {"generated": False, "accessed": False},
+        "accuracies": accuracies,
+    }
+    out = Path(cfg.output_dir)
+    write_json(out / "checkpoint_mask_audit.json", result)
+    return result
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--mode", choices=["smoke", "full"], default="smoke")
+    ap.add_argument("--mode", choices=["smoke", "full", "checkpoint-audit"], default="smoke")
     ap.add_argument("--steps", type=int, default=None)
     ap.add_argument("--output-dir", default=None)
+    ap.add_argument("--checkpoint", default="reports/mrsm_p_v1/p_model_state.pt")
     args = ap.parse_args()
+
+    if args.mode == "full":
+        print(
+            "full mode disabled: pending MRSM preregistration and budget enforcement",
+            file=sys.stderr,
+        )
+        raise SystemExit(2)
 
     cfg = Config()
     if args.steps is not None:
@@ -442,15 +474,31 @@ def main():
         cfg.output_dir = args.output_dir
 
     t0 = time.time()
+    if args.mode == "checkpoint-audit":
+        result = evaluate_saved_checkpoint(cfg, Path(args.checkpoint))
+        print(json.dumps({
+            "benchmark": "MRSM_P_v1",
+            "status": "CHECKPOINT_AUDIT",
+            "checkpoint_sha256": result["checkpoint_sha256"],
+            "accuracies": result["accuracies"],
+            "holdout_generated": False,
+            "discovery_run": False,
+            "seconds_total": round(time.time() - t0, 2),
+            "result": str(Path(cfg.output_dir) / "checkpoint_mask_audit.json"),
+        }, indent=2))
+        return
+
     result = run(cfg, args.mode)
     print(json.dumps({
         "benchmark": "MRSM_P_v1",
         "status": result["status"],
         "dev": result["mechanism_audit_dev"],
-        "holdout_locked": result["holdout"]["locked"],
+        "holdout_generated": result["holdout"]["generated"],
         "seconds_total": round(time.time() - t0, 2),
         "result": str(Path(cfg.output_dir) / "mrsm_p_v1_result.json"),
     }, indent=2))
+    if result["status"] == "BLOCKED_CONSTRUCTION_AUDIT":
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

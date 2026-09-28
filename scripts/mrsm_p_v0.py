@@ -4,8 +4,8 @@ This is a standalone first implementation intended to be copied into the project
 and adapted only where the existing discovery adapter has a different API.
 
 Modes:
-  --mode smoke   : build/train/validate P on development data; never evaluates MRSM holdout
-  --mode full    : additionally runs the blind head/synergy discovery and holdout counterfactuals
+  --mode smoke   : build/train/validate P on development data; does not generate or read holdout
+  --mode full    : disabled pending MRSM preregistration and budget enforcement
 
 Design:
   * small HookedTransformer, CPU
@@ -27,6 +27,7 @@ import json
 import math
 import os
 import random
+import sys
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -361,27 +362,17 @@ def run(cfg: Config, mode: str) -> Dict[str, object]:
     out = Path(cfg.output_dir)
     out.mkdir(parents=True, exist_ok=True)
 
+    if mode != "smoke":
+        raise RuntimeError("only smoke mode may construct; full mode is disabled")
+
     train = make_dataset(cfg, cfg.train_examples, cfg.seed + 100)
     dev = make_dataset(cfg, cfg.dev_examples, cfg.seed + 200)
-    holdout = make_dataset(cfg, cfg.holdout_examples, cfg.seed + 300)
-
-    # Discovery is allowed to probe development data only. The holdout is
-    # prediction/evaluation-only and is never used to select discovered heads.
-    holdout_manifest = {
-        "seed": cfg.seed + 300,
-        "n": cfg.holdout_examples,
-        "tokens_sha256": sha256_bytes(holdout.tokens.numpy().tobytes()),
-        "targets_sha256": sha256_bytes(holdout.targets.numpy().tobytes()),
-    }
-    write_json(out / "holdout_manifest.json", holdout_manifest)
 
     model = build_model(cfg)
     train_stats = train_planted(model, cfg, train)
 
     dev_acc = accuracy(model, dev)
-    hold_acc = accuracy(model, holdout) if mode == "full" else None
     dev_margin = target_margin(model, dev)
-    hold_margin = target_margin(model, holdout) if mode == "full" else None
 
     ablations = {}
     for head in [(l, h) for l in range(cfg.n_layers) for h in range(cfg.n_heads)]:
@@ -402,19 +393,12 @@ def run(cfg: Config, mode: str) -> Dict[str, object]:
         "dev": {"accuracy": dev_acc, "margin": dev_margin},
         "dev_single_head_ablation_accuracy": ablations,
         "holdout": {
-            "locked": mode == "full",
-            "manifest": holdout_manifest,
-            "accuracy": hold_acc,
-            "margin": hold_margin,
+            "generated": False,
+            "accessed": False,
+            "accuracy": None,
+            "margin": None,
         },
     }
-
-    if mode == "full":
-        discovery = discover(model, dev, cfg)
-        result["discovery"] = asdict(discovery)
-        result["discovery_vs_ground_truth"] = evaluate_discovery(discovery, cfg)
-        # Holdout is now touched only after discovery is frozen.
-        result["holdout_prediction_stage"] = "discovered mechanism frozen before holdout intervention"
 
     model_path = out / "p_model_state.pt"
     torch.save(model.state_dict(), model_path)
@@ -431,6 +415,13 @@ def main() -> None:
     ap.add_argument("--output-dir", default=None)
     args = ap.parse_args()
 
+    if args.mode == "full":
+        print(
+            "full mode disabled: pending MRSM preregistration and budget enforcement",
+            file=sys.stderr,
+        )
+        raise SystemExit(2)
+
     cfg = Config()
     if args.steps is not None:
         cfg.n_steps = args.steps
@@ -444,7 +435,7 @@ def main() -> None:
     print(json.dumps({
         "status": result["status"],
         "dev_accuracy": result["dev"]["accuracy"],
-        "holdout_locked": result["holdout"]["locked"],
+        "holdout_generated": result["holdout"]["generated"],
         "seconds_total": round(time.time() - t0, 2),
         "result": str(Path(cfg.output_dir) / "mrsm_p_v0_result.json"),
     }, indent=2))
