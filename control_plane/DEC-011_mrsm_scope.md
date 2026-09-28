@@ -86,7 +86,7 @@ mrsm_budget:
 provenance:
   M18.7:
     status: PROVENANCE_UNRESOLVED
-    use: "Not an evidentiary basis for any gate. H3 is defined independently. May be added to provenance only if a recoverable source is found."
+    use: "Not an evidentiary basis for any gate. The H3 definition in MRSM preregistration must not depend on M18.7. May be added to provenance only if a recoverable source is found."
 
 deferred_to_mrsm_preregistration:
   - metrics, units, splits, nulls, baselines, thresholds for P.H1-H4 and Q.H1-H4
