@@ -48,7 +48,8 @@ shared_pipeline_rule: >
 
 p_construction:
   spec_document: control_plane/P_SPEC.md   # task, architecture, mechanism, DoD criteria, holdout seed range
-  clock_start: commit that freezes P_SPEC.md
+  clock_start: commit that sets P_SPEC.md status FROZEN
+  deadline_rule: "clock_start committer date (UTC) + 5 x 24h"
   timebox_calendar_days: 5
   clock_restart: FORBIDDEN
   counted_in_mrsm_full_runs: false
@@ -63,6 +64,9 @@ p_construction:
     - independent causal validation passes P_SPEC criteria
     - trivial static-weight detector fails to identify the planted mechanism per P_SPEC criteria
     - train/dev/holdout protocol recorded
+  outcomes: [DONE, P_CONSTRUCTION_INCOMPLETE]
+  done_evidence: "P validation report listing each definition_of_done item with artifact path or sha256, committed before deadline"
+  p_freeze: "commit that records p_construction.outcome: DONE in MRSM_BUDGET.yaml together with done_evidence"
   outcome_if_dod_not_met_at_timebox: P_CONSTRUCTION_INCOMPLETE
   on_p_construction_incomplete: "MRSM does not start. Any continuation requires a new bounded DEC. No clock reset."
   post_freeze_changes: "Changes to substrate or mechanism are not engineering fixes and require a new DEC."
