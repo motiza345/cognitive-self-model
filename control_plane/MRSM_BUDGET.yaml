@@ -3,11 +3,12 @@ governed_by: DEC-011
 p_construction:
   clock_start_commit: null
   deadline: null
-  outcome: null   # DONE | P_CONSTRUCTION_INCOMPLETE
+  outcome: null   # DONE | P_CONSTRUCTION_INCOMPLETE (DEC-011 p_construction.outcomes)
+  done_evidence: null
 mrsm:
   clock_start_commit: null
   deadline: null
   full_runs: {limit: 8, used: 0}
-  q_gpu_full_runs: {limit: 2, used: 0}
+  q_gpu_full_runs: {limit: 2, used: 0}   # sub-limit; a Q GPU Full Run increments both counters
 m22_1_r_counted: false
 p_construction_counted: false
