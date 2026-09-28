@@ -31,8 +31,13 @@ arms:
       - M21 benchmark environment used as P   # linear DGP, not a network
   Q:
     id: Qwen/Qwen2.5-0.5B
-    revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+    recorded_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
     revision_source: configs/m22_1_r_replay.yaml
+    revision_pin_status: PENDING_HARNESS_ENFORCEMENT   # resolve_hf_revision calls model_info at load time
+    precondition_for_any_q_full_run:
+      - loader uses static recorded_revision; hub re-resolve (model_info) forbidden
+      - sha256 of loaded weight files recorded in the execution record
+    precondition_work_counted_as_full_run: false   # engineering work inside the MRSM window
     ground_truth: UNKNOWN
     device: CPU default; GPU only with an independent environment record and within q_gpu_full_runs limit
 
