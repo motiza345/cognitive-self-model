@@ -122,6 +122,20 @@ files:
   role: Train loss and development audit from the frozen 1600-step run. Holdout not read.
   produced_by: P construction training
   consumed_by: scripts/run_mrsm_p_construction.py
+- path: artifacts/mrsm/holdout_manifest.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Locked holdout membership. Generated before scoring. Hash covers tokens and targets; outcomes are not stored.
+  produced_by: scripts/lock_mrsm_holdout.py
+  consumed_by: src/mrsm/run_p.py
+- path: artifacts/mrsm/p_freeze.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Formal p_freeze record. No holdout metric is included.
+  produced_by: P construction freeze
+  consumed_by: UNKNOWN
 - path: artifacts/mrsm/planted_ground_truth.json
   category: ARTIFACT
   immutable: false

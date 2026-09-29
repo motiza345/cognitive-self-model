@@ -21,7 +21,7 @@ model:
   arm_p_substrate: transformer_lens.HookedTransformer
   arm_p_hyperparameters: control_plane/P_SPEC.md architecture block
   arm_p_checkpoint: artifacts/mrsm/construction/p_model_state.pt
-  arm_p_checkpoint_sha256: null
+  arm_p_checkpoint_sha256: 6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9
   arm_p_checkpoint_binding: artifacts/mrsm/construction/checkpoint_manifest.json
   arm_q_model_id: Qwen/Qwen2.5-0.5B
   arm_q_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987

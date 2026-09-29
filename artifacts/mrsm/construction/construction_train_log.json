@@ -1,21 +1,26 @@
 {
   "train": {
-    "steps": 1600,
-    "final_loss": 0.9802930355072021,
-    "mean_last_100_loss": 0.7971341669559479,
-    "seconds": 18.22690224647522
+    "steps": 3000,
+    "phase1_steps": 2000,
+    "phase2_steps": 1000,
+    "lr": 0.001,
+    "spec_n_steps": 1600,
+    "spec_lr": 0.002,
+    "engineering_correction": "pre_softmax_two_phase_planter",
+    "final_loss": 0.0003836219839286059,
+    "mean_last_100_loss": 0.0004016342738759704,
+    "seconds": 31.815471649169922
   },
   "audit": {
-    "intact_accuracy": 0.318359375,
-    "hop1_only_accuracy": 0.30859375,
-    "hop2_only_accuracy": 0.24609375,
-    "both_planted_ablated_accuracy": 0.23046875,
-    "controls_mean_accuracy": 0.3177083333333333,
-    "planted_specificity_gap": 0.07161458333333331,
-    "sequential_signature": false
+    "intact_accuracy": 0.998046875,
+    "hop1_only_accuracy": 0.056640625,
+    "hop2_only_accuracy": 0.302734375,
+    "both_planted_ablated_accuracy": 0.052734375,
+    "controls_mean_accuracy": 0.9430338541666666,
+    "planted_specificity_gap": 0.8863932291666666,
+    "sequential_signature": true
   },
-  "sha256": "ea40cda33a054c1c7fd9b169686c2eff6a9ada1aab9f0d75324fbdd74a8986e6",
-  "seconds_total": 18.72298765182495,
+  "sha256": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
   "holdout_generated": false,
   "holdout_accessed": false
 }

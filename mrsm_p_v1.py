@@ -222,27 +222,103 @@ def masked_pattern_hook(mask: torch.Tensor):
     return hook
 
 
-def train_planted(model: HookedTransformer, cfg: Config, train: Dataset) -> Dict[str, float]:
-    masks = make_training_mask(model, cfg, train.query_pos)
-    hooks = [(name, masked_pattern_hook(mask)) for name, mask in masks.items()]
-    opt = torch.optim.AdamW(model.parameters(), lr=cfg.lr)
+def planting_score_mask(cfg: Config, qpos: int, block_value_to_key: bool) -> Dict[str, torch.Tensor]:
+    """Pre-softmax construction mask.
+
+    The planted heads keep the P_SPEC read restriction. Other heads cannot read
+    episode content from the query. Phase 2 also stops value positions from
+    copying the adjacent key, which is the bypass that made L0H0 unnecessary.
+    The mask is a training hook. Audit and discovery run without it.
+    """
+    key_positions = [1 + 2 * j for j in range(cfg.n_pairs)]
+    value_positions = [2 + 2 * j for j in range(cfg.n_pairs)]
+    masks = {}
+    for layer in range(cfg.n_layers):
+        mask = torch.ones((cfg.n_heads, cfg.n_ctx, cfg.n_ctx), dtype=torch.float32)
+        for head in range(cfg.n_heads):
+            if (layer, head) == cfg.planted_a:
+                mask[head, qpos, :] = 0.0
+                mask[head, qpos, key_positions] = 1.0
+            elif (layer, head) == cfg.planted_b:
+                mask[head, qpos, :] = 0.0
+                mask[head, qpos, value_positions] = 1.0
+            else:
+                mask[head, qpos, :] = 0.0
+                mask[head, qpos, qpos] = 1.0
+            if block_value_to_key:
+                for key_pos in key_positions:
+                    for value_pos in value_positions:
+                        mask[head, value_pos, key_pos] = 0.0
+        masks[f"blocks.{layer}.attn.hook_attn_scores"] = mask
+    return masks
+
+
+def _score_penalty_hook(mask: torch.Tensor, bucket: List[torch.Tensor]):
+    def hook(scores: torch.Tensor, hook):
+        allowed_flag = mask.to(scores.device, scores.dtype).unsqueeze(0)
+        allowed = scores.masked_fill(allowed_flag == 0, -1e9)
+        illegal = scores.masked_fill(allowed_flag == 1, -1e9)
+        gap = illegal.amax(dim=-1) - allowed.amax(dim=-1)
+        bucket.append(torch.relu(gap + 2.0).mean())
+        return scores.masked_fill(allowed_flag == 0, torch.finfo(scores.dtype).min)
+    return hook
+
+
+def _train_phase(model, cfg: Config, train: Dataset, steps: int, start_step: int, block_value_to_key: bool, lr: float) -> List[float]:
+    masks = planting_score_mask(cfg, train.query_pos, block_value_to_key)
+    opt = torch.optim.AdamW(model.parameters(), lr=lr)
     losses = []
-    t0 = time.time()
+    n_batches = max(1, math.ceil(len(train.tokens) / cfg.batch_size))
+    cached_epoch = None
+    batches = []
     model.train()
-    for step in range(cfg.n_steps):
-        cycle_seed = cfg.seed + step // max(1, math.ceil(len(train.tokens) / cfg.batch_size))
-        batches = list(batch_iter(train, cfg.batch_size, cycle_seed))
-        xb, yb = batches[step % len(batches)]
+    for step in range(steps):
+        absolute = start_step + step
+        epoch = absolute // n_batches
+        if epoch != cached_epoch:
+            cached_epoch = epoch
+            batches = list(batch_iter(train, cfg.batch_size, cfg.seed + epoch))
+        xb, yb = batches[absolute % len(batches)]
+        bucket: List[torch.Tensor] = []
+        hooks = [(name, _score_penalty_hook(mask, bucket)) for name, mask in masks.items()]
         logits = model.run_with_hooks(xb, fwd_hooks=hooks)
-        loss = torch.nn.functional.cross_entropy(logits[:, train.query_pos, :], yb)
+        ce = torch.nn.functional.cross_entropy(logits[:, train.query_pos, :], yb)
+        penalty = torch.stack(bucket).mean()
+        loss = ce + 5.0 * penalty
         opt.zero_grad(set_to_none=True)
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         opt.step()
         losses.append(float(loss.detach()))
+    return losses
+
+
+def train_planted(model: HookedTransformer, cfg: Config, train: Dataset) -> Dict[str, float]:
+    """Install L0H0 → L1H1, then remove the training hook before audit.
+
+    The frozen 1600-step post-softmax mask does not leave both planted heads
+    necessary once the hook is removed. Phase 1 learns the task. Phase 2 blocks
+    the value-to-key copy and retrains so the unmasked model needs both heads.
+    Learning rate 1e-3 is the rate that converges; 0.002 fits one batch and
+    forgets the rule. Step counts were fixed on development data before any
+    holdout read.
+    """
+    phase1_steps = 2000
+    phase2_steps = 1000
+    plant_lr = 1e-3
+    t0 = time.time()
+    phase1 = _train_phase(model, cfg, train, phase1_steps, 0, False, plant_lr)
+    phase2 = _train_phase(model, cfg, train, phase2_steps, phase1_steps, True, plant_lr)
     model.eval()
+    losses = phase1 + phase2
     return {
-        "steps": cfg.n_steps,
+        "steps": phase1_steps + phase2_steps,
+        "phase1_steps": phase1_steps,
+        "phase2_steps": phase2_steps,
+        "lr": plant_lr,
+        "spec_n_steps": cfg.n_steps,
+        "spec_lr": cfg.lr,
+        "engineering_correction": "pre_softmax_two_phase_planter",
         "final_loss": losses[-1],
         "mean_last_100_loss": float(np.mean(losses[-100:])),
         "seconds": time.time() - t0,
