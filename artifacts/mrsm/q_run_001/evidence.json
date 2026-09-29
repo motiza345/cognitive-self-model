@@ -1,0 +1,508 @@
+{
+  "records": [
+    {
+      "actual_outcome": -0.041617234547932945,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H0",
+      "observation_id": "q-holdout-single:L0H0",
+      "prediction": -0.007303078969319661,
+      "residual": -0.03431415557861328,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": 0.0023963451385498047,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H1",
+      "observation_id": "q-holdout-single:L0H1",
+      "prediction": -0.04977258046468099,
+      "residual": 0.0521689256032308,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": 0.018488645553588867,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H2",
+      "observation_id": "q-holdout-single:L0H2",
+      "prediction": -0.004289468129475911,
+      "residual": 0.022778113683064777,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.02001802126566569,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H3",
+      "observation_id": "q-holdout-single:L0H3",
+      "prediction": 0.016298532485961914,
+      "residual": -0.03631655375162761,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.0009363492329915365,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H0",
+      "observation_id": "q-holdout-single:L1H0",
+      "prediction": 0.010043064753214518,
+      "residual": -0.010979413986206055,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.04833626747131348,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H1",
+      "observation_id": "q-holdout-single:L1H1",
+      "prediction": -0.05359109242757162,
+      "residual": 0.00525482495625814,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.028637409210205078,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H2",
+      "observation_id": "q-holdout-single:L1H2",
+      "prediction": -0.029385884602864582,
+      "residual": 0.000748475392659504,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.10541510581970215,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H3",
+      "observation_id": "q-holdout-single:L1H3",
+      "prediction": -0.1087189515431722,
+      "residual": 0.0033038457234700475,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.0364689032236735,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L0H1",
+      "observation_id": "q-holdout-pair:L0H0+L0H1",
+      "prediction": -0.03990936279296875,
+      "residual": 0.0034404595692952497,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.026314496994018555,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L0H2",
+      "observation_id": "q-holdout-pair:L0H0+L0H2",
+      "prediction": -0.01837754249572754,
+      "residual": -0.007936954498291016,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.06579653422037761,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L0H3",
+      "observation_id": "q-holdout-pair:L0H0+L0H3",
+      "prediction": 0.0012824535369873047,
+      "residual": -0.06707898775736491,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.0436400572458903,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H0",
+      "observation_id": "q-holdout-pair:L0H0+L1H0",
+      "prediction": 0.0021034876505533853,
+      "residual": -0.04574354489644368,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.08863917986551921,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H1",
+      "observation_id": "q-holdout-pair:L0H0+L1H1",
+      "prediction": -0.06091761589050293,
+      "residual": -0.02772156397501628,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.07042328516642253,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H2",
+      "observation_id": "q-holdout-pair:L0H0+L1H2",
+      "prediction": -0.03661282857259115,
+      "residual": -0.03381045659383138,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.1475083827972412,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H3",
+      "observation_id": "q-holdout-pair:L0H0+L1H3",
+      "prediction": -0.11545594533284505,
+      "residual": -0.032052437464396163,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": 0.026880184809366863,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L0H2",
+      "observation_id": "q-holdout-pair:L0H1+L0H2",
+      "prediction": -0.05823294321695963,
+      "residual": 0.08511312802632649,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.02349233627319336,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L0H3",
+      "observation_id": "q-holdout-pair:L0H1+L0H3",
+      "prediction": -0.028670549392700195,
+      "residual": 0.005178213119506836,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": 0.005843957265218099,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H0",
+      "observation_id": "q-holdout-pair:L0H1+L1H0",
+      "prediction": -0.041490395863850914,
+      "residual": 0.047334353129069015,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.04499697685241699,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H1",
+      "observation_id": "q-holdout-pair:L0H1+L1H1",
+      "prediction": -0.10076785087585449,
+      "residual": 0.0557708740234375,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.02620553970336914,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H2",
+      "observation_id": "q-holdout-pair:L0H1+L1H2",
+      "prediction": -0.07926877339680989,
+      "residual": 0.05306323369344075,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.10282142957051595,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H3",
+      "observation_id": "q-holdout-pair:L0H1+L1H3",
+      "prediction": -0.15879901250203451,
+      "residual": 0.05597758293151857,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.007091363271077474,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L0H3",
+      "observation_id": "q-holdout-pair:L0H2+L0H3",
+      "prediction": 0.017688910166422527,
+      "residual": -0.0247802734375,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": 0.01883101463317871,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H0",
+      "observation_id": "q-holdout-pair:L0H2+L1H0",
+      "prediction": 0.005027612050374349,
+      "residual": 0.013803402582804363,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.02904653549194336,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H1",
+      "observation_id": "q-holdout-pair:L0H2+L1H1",
+      "prediction": -0.05743980407714844,
+      "residual": 0.028393268585205078,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.010239362716674805,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H2",
+      "observation_id": "q-holdout-pair:L0H2+L1H2",
+      "prediction": -0.03389724095662435,
+      "residual": 0.023657878239949547,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.08700974782307942,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H3",
+      "observation_id": "q-holdout-pair:L0H2+L1H3",
+      "prediction": -0.11357315381368001,
+      "residual": 0.026563405990600586,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.021751562754313152,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H0",
+      "observation_id": "q-holdout-pair:L0H3+L1H0",
+      "prediction": 0.025353749593098957,
+      "residual": -0.04710531234741211,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.06717252731323242,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H1",
+      "observation_id": "q-holdout-pair:L0H3+L1H1",
+      "prediction": -0.0384517510732015,
+      "residual": -0.028720776240030922,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.04859598477681478,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H2",
+      "observation_id": "q-holdout-pair:L0H3+L1H2",
+      "prediction": -0.013077020645141602,
+      "residual": -0.03551896413167318,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.12515687942504883,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H3",
+      "observation_id": "q-holdout-pair:L0H3+L1H3",
+      "prediction": -0.092316468556722,
+      "residual": -0.03284041086832683,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.04987621307373047,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H0+L1H1",
+      "observation_id": "q-holdout-pair:L1H0+L1H1",
+      "prediction": -0.04497178395589193,
+      "residual": -0.004904429117838539,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.029804150263468426,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H0+L1H2",
+      "observation_id": "q-holdout-pair:L1H0+L1H2",
+      "prediction": -0.01960579554239909,
+      "residual": -0.010198354721069336,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.10619084040323894,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H0+L1H3",
+      "observation_id": "q-holdout-pair:L1H0+L1H3",
+      "prediction": -0.0987238883972168,
+      "residual": -0.00746695200602214,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.07702239354451497,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H1+L1H2",
+      "observation_id": "q-holdout-pair:L1H1+L1H2",
+      "prediction": -0.08296616872151692,
+      "residual": 0.005943775177001953,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.15395450592041016,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H1+L1H3",
+      "observation_id": "q-holdout-pair:L1H1+L1H3",
+      "prediction": -0.16239047050476074,
+      "residual": 0.008435964584350586,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    },
+    {
+      "actual_outcome": -0.13408136367797852,
+      "context": {
+        "split": "validation"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H2+L1H3",
+      "observation_id": "q-holdout-pair:L1H2+L1H3",
+      "prediction": -0.13814179102579752,
+      "residual": 0.004060427347819001,
+      "run_id": "q_run_001",
+      "scope": "Q:m22_1_residual:diagnostic",
+      "timestamp": "2026-09-29T18:06:30Z"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "ground_truth_loaded_at_scoring": true,
+  "ground_truth_loaded_before_prediction": false,
+  "h3_parameters_match_prereg": true,
+  "holdout_outcomes_loaded_before_prediction": false,
+  "predictions": {
+    "failures": [],
+    "pass": true
+  },
+  "source": {
+    "offenders": [],
+    "pass": true
+  },
+  "state": {
+    "failures": [],
+    "pass": true
+  },
+  "status": "PASS"
+}

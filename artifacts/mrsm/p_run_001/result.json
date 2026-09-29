@@ -1,0 +1,88 @@
+{
+  "artifact_hashes": {
+    "evidence.json": "3f24ddf276c98c0760718bbe1800d5c5a5438222cbcd73e4f78eba648085c3f2",
+    "leakage_audit.json": "9b1c2afa4a2f9dcd6b2d2e1d1343b4b23c7596ed5a0c68d64a36c0dafae7f46d",
+    "metrics.json": "cb2326a907d2dd3be51bc9ab603d274f61c558e8a5f193605c757ecfa72e9fc6",
+    "outcomes.json": "819e861fe889cf7fe905f13ce2d99870ed0bd773b4fd368b486b43c9a292e584",
+    "predictions.json": "7fbf7e4834710988e7e69513e43f56acbfb6d35e035b223e7438e2350f99a3d4",
+    "self_model_state.json": "45b946a8db75a2ab38c85065887f7d8b51745045585a288a8814fcface44abb4"
+  },
+  "checkpoint_sha256": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+  "falsification_changed_mechanism": false,
+  "gates": {
+    "H1": "PASS",
+    "H2": "PASS",
+    "H3": "PASS",
+    "H4": "PASS"
+  },
+  "git_commit": "e5963b21d7f0eb20c951282e299b9bb00368f24f",
+  "holdout_hash": "c6b3f1b4b144a63d0f9665a6d9a06e6e0e27423b1a29533b8faab36da43fd8de",
+  "leakage": "PASS",
+  "metrics": {
+    "H1": {
+      "causal_edge_precision": 1.0,
+      "false_discovery_rate": 0.0,
+      "identity_match": true,
+      "mechanism_f1": 1.0,
+      "predicted": [
+        "L0H0",
+        "L1H1"
+      ],
+      "sign_match": true,
+      "status": "PASS",
+      "verifies_ground_truth": true
+    },
+    "H2": {
+      "baseline_mae": {
+        "B0": 7.863636495286806,
+        "B1": 4.7821147997035744,
+        "B2": 1.450227096832047,
+        "B3": 7.863636495286806
+      },
+      "bootstrap": {
+        "high": 1.244936469692685,
+        "low": 1.0216825655765003,
+        "mean": 1.1380083498528433
+      },
+      "gates": {
+        "bootstrap": true,
+        "mae_reduction": true,
+        "sign_accuracy": true
+      },
+      "mae_reduction": 0.797045738001288,
+      "mae_self": 0.2943297701680826,
+      "sign_accuracy": 1.0,
+      "status": "PASS",
+      "strongest_baseline": "B2"
+    },
+    "H3": {
+      "mechanism_abstraction_consistency": true,
+      "normalized_prediction_difference": 1.1181675733888438e-16,
+      "scope_consistency": true,
+      "sign_agreement": 1.0,
+      "status": "PASS"
+    },
+    "H4": {
+      "bootstrap": {
+        "high": 0.1640625,
+        "low": 0.1015625,
+        "mean": 0.1328125
+      },
+      "consumption_ablation_action": "L0H3",
+      "full_action": "L1H2",
+      "relative_utility_improvement": 0.15315315315315314,
+      "status": "PASS",
+      "utility_consumption_ablation": 0.8671875,
+      "utility_full": 1.0
+    },
+    "baselines": {
+      "B0": 7.863636495286806,
+      "B1": 4.7821147997035744,
+      "B2": 1.450227096832047,
+      "B3": 7.863636495286806
+    }
+  },
+  "run_id": "p_run_001",
+  "seed": 424242,
+  "status": "SCORED"
+}

@@ -1,0 +1,40 @@
+{
+  "effects": {
+    "L0H0": -0.007303078969319661,
+    "L0H1": -0.04977258046468099,
+    "L0H2": -0.004289468129475911,
+    "L0H3": 0.016298532485961914,
+    "L1H0": 0.010043064753214518,
+    "L1H1": -0.05359109242757162,
+    "L1H2": -0.029385884602864582,
+    "L1H3": -0.1087189515431722
+  },
+  "evidence_ids": [
+    "discovery-L0H0",
+    "discovery-L0H1",
+    "discovery-L0H2",
+    "discovery-L0H3",
+    "discovery-L1H0",
+    "discovery-L1H1",
+    "discovery-L1H2",
+    "discovery-L1H3"
+  ],
+  "frozen": true,
+  "identifiable": true,
+  "mechanism": {
+    "abstraction": "L0H0->L0H1",
+    "gap": 0.5506893454690235,
+    "interaction": 0.017166296641031906,
+    "ordered": [
+      "L0H0",
+      "L0H1"
+    ],
+    "pair": [
+      "L0H0",
+      "L0H1"
+    ],
+    "status": "IDENTIFIED"
+  },
+  "scope": "Q:m22_1_residual:diagnostic",
+  "uncertainty": 0.03880348127417538
+}

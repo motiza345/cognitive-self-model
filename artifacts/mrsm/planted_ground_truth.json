@@ -1,0 +1,18 @@
+{
+  "derived_from_discovery": false,
+  "ordered_edge": [
+    "L0H0",
+    "L1H1"
+  ],
+  "planted_A": [
+    0,
+    0
+  ],
+  "planted_B": [
+    1,
+    1
+  ],
+  "self_model_may_read": false,
+  "source": "control_plane/P_SPEC.md mechanism block",
+  "visibility": "evaluator_only"
+}

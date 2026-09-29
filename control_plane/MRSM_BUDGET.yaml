@@ -1,14 +1,17 @@
-status: NOT_STARTED
+status: P_FREEZE
 governed_by: DEC-011
 p_construction:
   clock_start_commit: ad3cbc0f185a397d34eddabb8032fd3dd2144b1c   # commit that set P_SPEC.md status FROZEN; not backdated
   deadline: 2026-10-03T14:17:59+00:00   # committer date 2026-09-28T14:17:59+00:00 + 5 x 24h
-  outcome: null   # DONE | P_CONSTRUCTION_INCOMPLETE (DEC-011 p_construction.outcomes)
-  done_evidence: null
+  outcome: DONE   # DONE | P_CONSTRUCTION_INCOMPLETE (DEC-011 p_construction.outcomes)
+  done_evidence: artifacts/mrsm/construction/construction_record.json
+  engineering_outcome: PASS
+  engineering_correction: pre_softmax_two_phase_planter
+  p_freeze: 2cccafd047044332828eaf602b69f4267852cba2   # commit that set this outcome to DONE
 mrsm:
-  clock_start_commit: null
-  deadline: null
-  full_runs: {limit: 8, used: 0}
+  clock_start_commit: 2cccafd047044332828eaf602b69f4267852cba2
+  deadline: 2026-10-27T17:58:18+00:00   # p_freeze committer time + 28 x 24h
+  full_runs: {limit: 8, used: 2}   # p_run_001 holdout read; q_run_001 validation read; CPU
   q_gpu_full_runs: {limit: 2, used: 0}   # sub-limit; a Q GPU Full Run increments both counters
 m22_1_r_counted: false
 p_construction_counted: false

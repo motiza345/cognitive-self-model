@@ -1,0 +1,59 @@
+{
+  "budget_outcome": "DONE",
+  "checkpoint": "artifacts/mrsm/construction/p_model_state.pt",
+  "created_at": "2026-09-29T17:57:33Z",
+  "definition_of_done": {
+    "causal_validation_passes": true,
+    "deterministic_seeds_recorded": true,
+    "discovery_run": false,
+    "ground_truth_derived_without_discovery": true,
+    "holdout_generated": false,
+    "holdout_scored": false,
+    "intervention_interface_callable": true,
+    "mechanism_definition_recorded": true,
+    "model_artifact_sha256": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+    "observation_interface_callable": true,
+    "static_weight_detector": "NOT_SEPARATELY_SPECIFIED",
+    "train_dev_holdout_protocol_recorded": true
+  },
+  "discovery_run": false,
+  "engineering_outcome": "PASS",
+  "holdout_generated": false,
+  "holdout_scored": false,
+  "mechanism_audit_dev": {
+    "both_planted_ablated_accuracy": 0.052734375,
+    "controls_mean_accuracy": 0.9430338541666666,
+    "hop1_only_accuracy": 0.056640625,
+    "hop2_only_accuracy": 0.302734375,
+    "intact_accuracy": 0.998046875,
+    "planted_specificity_gap": 0.8863932291666666,
+    "sequential_signature": true
+  },
+  "sha256": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+  "train_log": {
+    "audit": {
+      "both_planted_ablated_accuracy": 0.052734375,
+      "controls_mean_accuracy": 0.9430338541666666,
+      "hop1_only_accuracy": 0.056640625,
+      "hop2_only_accuracy": 0.302734375,
+      "intact_accuracy": 0.998046875,
+      "planted_specificity_gap": 0.8863932291666666,
+      "sequential_signature": true
+    },
+    "holdout_accessed": false,
+    "holdout_generated": false,
+    "sha256": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+    "train": {
+      "engineering_correction": "pre_softmax_two_phase_planter",
+      "final_loss": 0.0003836219839286059,
+      "lr": 0.001,
+      "mean_last_100_loss": 0.0004016342738759704,
+      "phase1_steps": 2000,
+      "phase2_steps": 1000,
+      "seconds": 31.815471649169922,
+      "spec_lr": 0.002,
+      "spec_n_steps": 1600,
+      "steps": 3000
+    }
+  }
+}

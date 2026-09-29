@@ -1,0 +1,294 @@
+{
+  "mechanism_changed": false,
+  "records": [
+    {
+      "falsified": false,
+      "intervention_id": "single:L0H0",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L0H0",
+      "residual": 0.964463708922267,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "single:L0H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L0H1",
+      "residual": 0.481190693564713,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "single:L0H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L0H2",
+      "residual": -0.018564965575933456,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "single:L0H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L0H3",
+      "residual": -0.1382386963814497,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "single:L1H0",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L1H0",
+      "residual": -0.005113257095217705,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "single:L1H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L1H1",
+      "residual": -0.010811123996973038,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "single:L1H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L1H2",
+      "residual": 0.002749544568359852,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "single:L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-single:L1H3",
+      "residual": -0.004953811876475811,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H0+L0H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H0+L0H1",
+      "residual": 0.683614787645638,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H0+L0H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H0+L0H2",
+      "residual": 0.873281316831708,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H0+L0H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H0+L0H3",
+      "residual": 1.0678780218586326,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H0+L1H0",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H0+L1H0",
+      "residual": 0.9806848047301173,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H0+L1H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H0+L1H1",
+      "residual": -0.01731251645833254,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H0+L1H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H0+L1H2",
+      "residual": 0.941564342007041,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H0+L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H0+L1H3",
+      "residual": 0.9340787082910538,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H1+L0H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H1+L0H2",
+      "residual": 0.3812182517722249,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H1+L0H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H1+L0H3",
+      "residual": 0.22467535082250834,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H1+L1H0",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H1+L1H0",
+      "residual": 0.4762788228690624,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H1+L1H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H1+L1H1",
+      "residual": 0.020133371464908123,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H1+L1H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H1+L1H2",
+      "residual": 0.433977659791708,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H1+L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H1+L1H3",
+      "residual": 0.4645698620006442,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H2+L0H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H2+L0H3",
+      "residual": 0.5589192174375057,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H2+L1H0",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H2+L1H0",
+      "residual": -0.03426151070743799,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H2+L1H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H2+L1H1",
+      "residual": -0.08579534385353327,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H2+L1H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H2+L1H2",
+      "residual": -0.039104641415178776,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H2+L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H2+L1H3",
+      "residual": -0.05435444042086601,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H3+L1H0",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H3+L1H0",
+      "residual": -0.15088498126715422,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H3+L1H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H3+L1H1",
+      "residual": -0.03096905257552862,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H3+L1H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H3+L1H2",
+      "residual": -0.15264975186437368,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L0H3+L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L0H3+L1H3",
+      "residual": -0.15414776653051376,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L1H0+L1H1",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L1H0+L1H1",
+      "residual": -0.05108744651079178,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L1H0+L1H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L1H0+L1H2",
+      "residual": -0.017243515700101852,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L1H0+L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L1H0+L1H3",
+      "residual": -0.01430796179920435,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L1H1+L1H2",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L1H1+L1H2",
+      "residual": -0.09635484591126442,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L1H1+L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L1H1+L1H3",
+      "residual": -0.026802257634699345,
+      "tolerance": 10.476338585083338
+    },
+    {
+      "falsified": false,
+      "intervention_id": "pair:L1H2+L1H3",
+      "mechanism_changed": false,
+      "observation_id": "holdout-pair:L1H2+L1H3",
+      "residual": 0.0036353738978505135,
+      "tolerance": 10.476338585083338
+    }
+  ],
+  "tolerance": 10.476338585083338
+}

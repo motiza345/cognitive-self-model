@@ -1,0 +1,13 @@
+{
+  "config_sha256": "479dcf0c5286339e41ad3992cd08ae88a467c4187587936248e2b7c96283484b",
+  "hidden_size": 896,
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "model_type": "qwen2",
+  "num_hidden_layers": 24,
+  "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "snapshot": "/home/ubuntu/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B/snapshots/060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "status": "AVAILABLE",
+  "substitution": false,
+  "tokenizer_config_sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+  "weight_sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342"
+}

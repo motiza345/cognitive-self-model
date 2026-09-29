@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN",
+  "created_at": "2026-09-29T17:57:37Z",
+  "preregistration_id": "mrsm-prereg-2026-09-29",
+  "checkpoint_sha256": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+  "holdout_hash": "c6b3f1b4b144a63d0f9665a6d9a06e6e0e27423b1a29533b8faab36da43fd8de",
+  "holdout_seed": 424242,
+  "holdout_n": 512,
+  "holdout_scored": false,
+  "engineering_correction": "pre_softmax_two_phase_planter",
+  "thresholds_changed_after_holdout": false,
+  "p_freeze_commit": "2cccafd047044332828eaf602b69f4267852cba2",
+  "p_freeze_committer_time": "2026-09-29T17:58:18+00:00",
+  "note": "Commit that records p_construction.outcome DONE is p_freeze. Holdout metrics are not part of this record."
+}
