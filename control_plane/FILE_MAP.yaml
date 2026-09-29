@@ -101,6 +101,34 @@ files:
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
   sha256: 89d07e833ebf0f3822146f7b2b787280604053bbb2c66d1d4c6fea34af0b8ec4
+- path: artifacts/mrsm/construction/checkpoint_manifest.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 of the P construction checkpoint. Construction outcome is incomplete. Weight file is not committed.
+  produced_by: scripts/run_mrsm_p_construction.py
+  consumed_by: src/mrsm/run_p.py
+- path: artifacts/mrsm/construction/construction_record.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P construction definition-of-done record. Engineering outcome FAIL.
+  produced_by: scripts/run_mrsm_p_construction.py
+  consumed_by: control_plane/MRSM_BUDGET.yaml
+- path: artifacts/mrsm/construction/construction_train_log.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Train loss and development audit from the frozen 1600-step run. Holdout not read.
+  produced_by: P construction training
+  consumed_by: scripts/run_mrsm_p_construction.py
+- path: artifacts/mrsm/planted_ground_truth.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Evaluator-only copy of the P_SPEC mechanism. Not a discovery output. Not passed to SelfModelCore.
+  produced_by: scripts/run_mrsm_p_construction.py
+  consumed_by: src/mrsm/run_p.py
 - path: artifacts/m22_1_r/execution_record.json
   category: ARTIFACT
   immutable: true
@@ -186,6 +214,13 @@ files:
   sha256: d9e1cf5dc3b88535cda0516b9b24ae3510082b7fed452f2e8adb86c574e8039a
   superseded_sha256: 3f9d2067149bf50ae99c5dfde1f11ffce9a232d8a7f1aac3f6ee82316deb07bb
   superseded_note: Preregistration before the revision_resolution fix
+- path: configs/mrsm_prereg.yaml
+  category: CONTRACT
+  immutable: false
+  milestone: null
+  role: Preregistered MRSM thresholds, H3 parameters, splits, and baselines.
+  produced_by: P2.3 numerical freeze
+  consumed_by: src/mrsm/run_p.py
 - path: configs/mrsm_operational_contract_v0.1.yaml
   category: CONTRACT
   immutable: false
@@ -442,6 +477,20 @@ files:
   role: Final DEC-010-A1 text. Not applied.
   produced_by: P2.2 operational definition resolution
   consumed_by: UNKNOWN
+- path: reports/MRSM_FINAL_RESULT.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Terminal record. Scientific gates were not run because P construction failed.
+  produced_by: P construction failure stop
+  consumed_by: UNKNOWN
+- path: reports/DEC-010-A1_application.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Record that DEC-010-A1 was applied without changing the terminal table.
+  produced_by: P2.3 numerical freeze
+  consumed_by: UNKNOWN
 - path: reports/P2_2_operational_definition_resolution.md
   category: REPORT
   immutable: false
@@ -633,6 +682,27 @@ files:
   milestone: M22.1-R
   role: M22.1-R harness entrypoint. Default invocation does not load Qwen.
   produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/lock_mrsm_holdout.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Lock holdout membership without scoring it.
+  produced_by: MRSM minimal benchmark
+  consumed_by: src/mrsm/run_p.py
+- path: scripts/run_mrsm_p_construction.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Package the planted checkpoint and the dev causal audit. No holdout scoring.
+  produced_by: MRSM minimal benchmark
+  consumed_by: UNKNOWN
+- path: scripts/run_mrsm_p_scientific.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: One preregistered P scientific run.
+  produced_by: MRSM minimal benchmark
   consumed_by: UNKNOWN
 - path: scripts/validate_mrsm_operational_contract.py
   category: ACTIVE
@@ -1282,6 +1352,13 @@ files:
   milestone: M22.1-R
   role: Engineering tests for revision pin, fallback, weights, comparator, and the execution record.
   produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_mrsm_core.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Unit tests for self-model boundaries, H3 inverses, and gate scoring.
+  produced_by: MRSM minimal benchmark
   consumed_by: UNKNOWN
 - path: tests/test_mrsm_operational_contract.py
   category: ACTIVE

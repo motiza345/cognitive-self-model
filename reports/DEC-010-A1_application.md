@@ -4,7 +4,9 @@ Status: APPLIED
 
 Timestamp: 2026-09-29T16:55:00Z
 
-Commit: recorded by the commit that adds this file. The hash is written into `control_plane/MRSM_BUDGET.yaml` `mrsm.clock_start` only at `p_freeze`, which is a later commit. This amendment commit is not `p_freeze`.
+Commit: `ff022eba5e5e67b80471b6c1f0f54f6f0bb382d0`
+
+That commit applies the amendment. It is not `p_freeze`. `mrsm.clock_start_commit` stays null because construction did not reach `DONE`.
 
 Reason: Q.H1 cannot be read as verified mechanism discovery. P2.1 proposed the clause and P2.2 restated it without applying it. P2.3 applies that interpretation only.
 

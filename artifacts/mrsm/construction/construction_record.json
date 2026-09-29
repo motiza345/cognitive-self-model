@@ -1,0 +1,54 @@
+{
+  "budget_outcome": "P_CONSTRUCTION_INCOMPLETE",
+  "checkpoint": "artifacts/mrsm/construction/p_model_state.pt",
+  "created_at": "2026-09-29T17:02:06Z",
+  "definition_of_done": {
+    "causal_validation_passes": false,
+    "deterministic_seeds_recorded": true,
+    "discovery_run": false,
+    "ground_truth_derived_without_discovery": true,
+    "holdout_generated": false,
+    "holdout_scored": false,
+    "intervention_interface_callable": true,
+    "mechanism_definition_recorded": true,
+    "model_artifact_sha256": "ea40cda33a054c1c7fd9b169686c2eff6a9ada1aab9f0d75324fbdd74a8986e6",
+    "observation_interface_callable": true,
+    "static_weight_detector": "NOT_SEPARATELY_SPECIFIED",
+    "train_dev_holdout_protocol_recorded": true
+  },
+  "discovery_run": false,
+  "engineering_outcome": "FAIL",
+  "holdout_generated": false,
+  "holdout_scored": false,
+  "mechanism_audit_dev": {
+    "both_planted_ablated_accuracy": 0.23046875,
+    "controls_mean_accuracy": 0.3177083333333333,
+    "hop1_only_accuracy": 0.30859375,
+    "hop2_only_accuracy": 0.24609375,
+    "intact_accuracy": 0.318359375,
+    "planted_specificity_gap": 0.07161458333333331,
+    "sequential_signature": false
+  },
+  "sha256": "ea40cda33a054c1c7fd9b169686c2eff6a9ada1aab9f0d75324fbdd74a8986e6",
+  "train_log": {
+    "audit": {
+      "both_planted_ablated_accuracy": 0.23046875,
+      "controls_mean_accuracy": 0.3177083333333333,
+      "hop1_only_accuracy": 0.30859375,
+      "hop2_only_accuracy": 0.24609375,
+      "intact_accuracy": 0.318359375,
+      "planted_specificity_gap": 0.07161458333333331,
+      "sequential_signature": false
+    },
+    "holdout_accessed": false,
+    "holdout_generated": false,
+    "seconds_total": 18.72298765182495,
+    "sha256": "ea40cda33a054c1c7fd9b169686c2eff6a9ada1aab9f0d75324fbdd74a8986e6",
+    "train": {
+      "final_loss": 0.9802930355072021,
+      "mean_last_100_loss": 0.7971341669559479,
+      "seconds": 18.22690224647522,
+      "steps": 1600
+    }
+  }
+}

@@ -80,6 +80,10 @@ artifacts/*
 # M22.1-R execution record is a small JSON ledger, not a model weight.
 !artifacts/m22_1_r/
 !artifacts/m22_1_r/execution_record.json
+# MRSM records are small JSON. Weight checkpoints stay ignored.
+!artifacts/mrsm/
+!artifacts/mrsm/**
+artifacts/mrsm/**/*.pt
 
 # Archives
 *.zip
