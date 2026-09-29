@@ -101,6 +101,14 @@ files:
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
   sha256: 89d07e833ebf0f3822146f7b2b787280604053bbb2c66d1d4c6fea34af0b8ec4
+- path: artifacts/m22_1_r/execution_record.json
+  category: ARTIFACT
+  immutable: true
+  milestone: M22.1-R
+  role: M22.1-R harness attempt. REPLAY_BLOCKED because the pinned local snapshot is absent.
+  produced_by: scripts/run_m22_1_r_harness.py
+  consumed_by: control_plane/RECOVERY.yaml execution_records
+  sha256: d8c8e4cef3c1381a8a7b8e83d575b30f9b8be513ec0284e43edcc8a7cc5e2344
 - path: configs/.gitkeep
   category: ACTIVE
   immutable: false
@@ -371,6 +379,13 @@ files:
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
   sha256: 981e7e3f032082f00be6f916118a499747b3c6a7af5aff9d522ae6683bcee723
+- path: reports/M22_1_R_harness_completion.md
+  category: REPORT
+  immutable: false
+  milestone: M22.1-R
+  role: Engineering record of the M22.1-R harness attempt. No scientific claim.
+  produced_by: M22.1-R harness completion
+  consumed_by: UNKNOWN
 - path: reports/M22_1/README.md
   category: REPORT
   immutable: true
@@ -540,6 +555,13 @@ files:
   immutable: false
   milestone: M21.2.4.3.1
   role: Documented M21.2.4.3.1 entrypoint.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/run_m22_1_r_harness.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: M22.1-R harness entrypoint. Default invocation does not load Qwen.
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
 - path: scripts/run_m22_1_1_audit.py
@@ -791,6 +813,69 @@ files:
   immutable: false
   milestone: M22.1
   role: M22.1 status gate.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/__init__.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: M22.1-R package.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/comparator.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: Replay comparator. Tolerance numbers are read from the frozen yaml.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/config.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: Reader for configs/m22_1_r_replay.yaml.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/harness.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: Fail-closed replay harness and execution-record writer.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/hashing.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: SHA256 wrapper around the existing file hasher.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/record.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: DEC-009 execution-record checks.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/references.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: Reference manifest verification.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/strict_loader.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: Pinned offline loader used only by the replay path.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: src/cognitive_self_model/m22_1_r/weights.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: Local snapshot discovery and weight SHA256.
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
 - path: src/cognitive_self_model/m22_1_1/__init__.py
@@ -1114,6 +1199,13 @@ files:
   role: M22.1 protocol tests.
   produced_by: UNKNOWN
   consumed_by: UNKNOWN
+- path: tests/test_m22_1_r_harness.py
+  category: ACTIVE
+  immutable: false
+  milestone: M22.1-R
+  role: Engineering tests for revision pin, fallback, weights, comparator, and the execution record.
+  produced_by: UNKNOWN
+  consumed_by: UNKNOWN
 - path: tests/test_npz_contract.py
   category: CONTRACT
   immutable: false
@@ -1125,10 +1217,23 @@ milestone_index:
   M22.1-R:
     config:
     - configs/m22_1_r_replay.yaml
-    code: []
-    tests: []
-    report: []
+    code:
+    - scripts/run_m22_1_r_harness.py
+    - src/cognitive_self_model/m22_1_r/__init__.py
+    - src/cognitive_self_model/m22_1_r/comparator.py
+    - src/cognitive_self_model/m22_1_r/config.py
+    - src/cognitive_self_model/m22_1_r/harness.py
+    - src/cognitive_self_model/m22_1_r/hashing.py
+    - src/cognitive_self_model/m22_1_r/record.py
+    - src/cognitive_self_model/m22_1_r/references.py
+    - src/cognitive_self_model/m22_1_r/strict_loader.py
+    - src/cognitive_self_model/m22_1_r/weights.py
+    tests:
+    - tests/test_m22_1_r_harness.py
+    report:
+    - reports/M22_1_R_harness_completion.md
     artifacts:
+    - artifacts/m22_1_r/execution_record.json
     - artifacts/m22_1_r/manifest.sha256
   M22.1.3b:
     config:
