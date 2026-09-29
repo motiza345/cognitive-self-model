@@ -160,10 +160,11 @@ identifiability:
   label_if_failed: NOT_IDENTIFIABLE
 
 baselines:
-  - {id: B0, name: null, prediction: zero_for_every_intervention}
-  - {id: B1, name: readout_only, prediction: grand_mean_single_head_discovery_effect_and_twice_that_for_pairs}
-  - {id: B2, name: linear_probe, prediction: discovery_single_head_effect_and_additive_sum_for_pairs}
-  - {id: B3, name: cold_start, prediction: zero_for_every_intervention}
+  items:
+    - {id: B0, name: "null", prediction: zero_for_every_intervention}
+    - {id: B1, name: readout_only, prediction: grand_mean_single_head_discovery_effect_and_twice_that_for_pairs}
+    - {id: B2, name: linear_probe, prediction: discovery_single_head_effect_and_additive_sum_for_pairs}
+    - {id: B3, name: cold_start, prediction: zero_for_every_intervention}
   primary_comparator: lowest_mae_among_B0_B1_B2_B3
   excluded: [B4, B5]
 
