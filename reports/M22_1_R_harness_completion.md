@@ -27,11 +27,7 @@ Git-status fix, which is the commit named by the execution record: `74efd6bbe960
 
 At that commit the worktree was clean. The execution record stores `git_commit` `74efd6bbe960834f4936878c03ecf821c6e69c4b` and `git_dirty` false.
 
-The commit that adds the execution record, the `RECOVERY.yaml` splice, the `FILE_MAP.yaml` entries, and this report is:
-
-`COMPLETION_COMMIT`
-
-Its parent is `74efd6bbe960834f4936878c03ecf821c6e69c4b`. A later commit writes that hash into this sentence and does not change the harness or the execution record.
+The commit that adds the execution record, the `RECOVERY.yaml` splice, the `FILE_MAP.yaml` entries, and the first version of this report is `7d0775fe0c0822aba8a91c8a44c9df8c3bda8b66`. Its parent is `74efd6bbe960834f4936878c03ecf821c6e69c4b`. The tip commit on `cursor/m22-1-r-harness-4e19` only writes that hash into this paragraph. It does not change the harness or the execution record.
 
 ## 3. Files changed
 
