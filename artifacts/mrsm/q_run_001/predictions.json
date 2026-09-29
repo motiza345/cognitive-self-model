@@ -1,0 +1,534 @@
+{
+  "baselines": {
+    "B0": {
+      "pair:L0H0+L0H1": 0.0,
+      "pair:L0H0+L0H2": 0.0,
+      "pair:L0H0+L0H3": 0.0,
+      "pair:L0H0+L1H0": 0.0,
+      "pair:L0H0+L1H1": 0.0,
+      "pair:L0H0+L1H2": 0.0,
+      "pair:L0H0+L1H3": 0.0,
+      "pair:L0H1+L0H2": 0.0,
+      "pair:L0H1+L0H3": 0.0,
+      "pair:L0H1+L1H0": 0.0,
+      "pair:L0H1+L1H1": 0.0,
+      "pair:L0H1+L1H2": 0.0,
+      "pair:L0H1+L1H3": 0.0,
+      "pair:L0H2+L0H3": 0.0,
+      "pair:L0H2+L1H0": 0.0,
+      "pair:L0H2+L1H1": 0.0,
+      "pair:L0H2+L1H2": 0.0,
+      "pair:L0H2+L1H3": 0.0,
+      "pair:L0H3+L1H0": 0.0,
+      "pair:L0H3+L1H1": 0.0,
+      "pair:L0H3+L1H2": 0.0,
+      "pair:L0H3+L1H3": 0.0,
+      "pair:L1H0+L1H1": 0.0,
+      "pair:L1H0+L1H2": 0.0,
+      "pair:L1H0+L1H3": 0.0,
+      "pair:L1H1+L1H2": 0.0,
+      "pair:L1H1+L1H3": 0.0,
+      "pair:L1H2+L1H3": 0.0,
+      "single:L0H0": 0.0,
+      "single:L0H1": 0.0,
+      "single:L0H2": 0.0,
+      "single:L0H3": 0.0,
+      "single:L1H0": 0.0,
+      "single:L1H1": 0.0,
+      "single:L1H2": 0.0,
+      "single:L1H3": 0.0
+    },
+    "B1": {
+      "pair:L0H0+L0H1": -0.056679864724477134,
+      "pair:L0H0+L0H2": -0.056679864724477134,
+      "pair:L0H0+L0H3": -0.056679864724477134,
+      "pair:L0H0+L1H0": -0.056679864724477134,
+      "pair:L0H0+L1H1": -0.056679864724477134,
+      "pair:L0H0+L1H2": -0.056679864724477134,
+      "pair:L0H0+L1H3": -0.056679864724477134,
+      "pair:L0H1+L0H2": -0.056679864724477134,
+      "pair:L0H1+L0H3": -0.056679864724477134,
+      "pair:L0H1+L1H0": -0.056679864724477134,
+      "pair:L0H1+L1H1": -0.056679864724477134,
+      "pair:L0H1+L1H2": -0.056679864724477134,
+      "pair:L0H1+L1H3": -0.056679864724477134,
+      "pair:L0H2+L0H3": -0.056679864724477134,
+      "pair:L0H2+L1H0": -0.056679864724477134,
+      "pair:L0H2+L1H1": -0.056679864724477134,
+      "pair:L0H2+L1H2": -0.056679864724477134,
+      "pair:L0H2+L1H3": -0.056679864724477134,
+      "pair:L0H3+L1H0": -0.056679864724477134,
+      "pair:L0H3+L1H1": -0.056679864724477134,
+      "pair:L0H3+L1H2": -0.056679864724477134,
+      "pair:L0H3+L1H3": -0.056679864724477134,
+      "pair:L1H0+L1H1": -0.056679864724477134,
+      "pair:L1H0+L1H2": -0.056679864724477134,
+      "pair:L1H0+L1H3": -0.056679864724477134,
+      "pair:L1H1+L1H2": -0.056679864724477134,
+      "pair:L1H1+L1H3": -0.056679864724477134,
+      "pair:L1H2+L1H3": -0.056679864724477134,
+      "single:L0H0": -0.028339932362238567,
+      "single:L0H1": -0.028339932362238567,
+      "single:L0H2": -0.028339932362238567,
+      "single:L0H3": -0.028339932362238567,
+      "single:L1H0": -0.028339932362238567,
+      "single:L1H1": -0.028339932362238567,
+      "single:L1H2": -0.028339932362238567,
+      "single:L1H3": -0.028339932362238567
+    },
+    "B2": {
+      "pair:L0H0+L0H1": -0.057075659434000656,
+      "pair:L0H0+L0H2": -0.011592547098795572,
+      "pair:L0H0+L0H3": 0.008995453516642254,
+      "pair:L0H0+L1H0": 0.0027399857838948565,
+      "pair:L0H0+L1H1": -0.06089417139689128,
+      "pair:L0H0+L1H2": -0.03668896357218424,
+      "pair:L0H0+L1H3": -0.11602203051249185,
+      "pair:L0H1+L0H2": -0.054062048594156906,
+      "pair:L0H1+L0H3": -0.03347404797871908,
+      "pair:L0H1+L1H0": -0.039729515711466476,
+      "pair:L0H1+L1H1": -0.10336367289225261,
+      "pair:L0H1+L1H2": -0.07915846506754558,
+      "pair:L0H1+L1H3": -0.15849153200785318,
+      "pair:L0H2+L0H3": 0.012009064356486004,
+      "pair:L0H2+L1H0": 0.0057535966237386065,
+      "pair:L0H2+L1H1": -0.05788056055704753,
+      "pair:L0H2+L1H2": -0.03367535273234049,
+      "pair:L0H2+L1H3": -0.1130084196726481,
+      "pair:L0H3+L1H0": 0.02634159723917643,
+      "pair:L0H3+L1H1": -0.0372925599416097,
+      "pair:L0H3+L1H2": -0.013087352116902668,
+      "pair:L0H3+L1H3": -0.09242041905721028,
+      "pair:L1H0+L1H1": -0.0435480276743571,
+      "pair:L1H0+L1H2": -0.019342819849650063,
+      "pair:L1H0+L1H3": -0.09867588678995767,
+      "pair:L1H1+L1H2": -0.0829769770304362,
+      "pair:L1H1+L1H3": -0.1623100439707438,
+      "pair:L1H2+L1H3": -0.13810483614603677,
+      "single:L0H0": -0.007303078969319661,
+      "single:L0H1": -0.04977258046468099,
+      "single:L0H2": -0.004289468129475911,
+      "single:L0H3": 0.016298532485961914,
+      "single:L1H0": 0.010043064753214518,
+      "single:L1H1": -0.05359109242757162,
+      "single:L1H2": -0.029385884602864582,
+      "single:L1H3": -0.1087189515431722
+    },
+    "B3": {
+      "pair:L0H0+L0H1": 0.0,
+      "pair:L0H0+L0H2": 0.0,
+      "pair:L0H0+L0H3": 0.0,
+      "pair:L0H0+L1H0": 0.0,
+      "pair:L0H0+L1H1": 0.0,
+      "pair:L0H0+L1H2": 0.0,
+      "pair:L0H0+L1H3": 0.0,
+      "pair:L0H1+L0H2": 0.0,
+      "pair:L0H1+L0H3": 0.0,
+      "pair:L0H1+L1H0": 0.0,
+      "pair:L0H1+L1H1": 0.0,
+      "pair:L0H1+L1H2": 0.0,
+      "pair:L0H1+L1H3": 0.0,
+      "pair:L0H2+L0H3": 0.0,
+      "pair:L0H2+L1H0": 0.0,
+      "pair:L0H2+L1H1": 0.0,
+      "pair:L0H2+L1H2": 0.0,
+      "pair:L0H2+L1H3": 0.0,
+      "pair:L0H3+L1H0": 0.0,
+      "pair:L0H3+L1H1": 0.0,
+      "pair:L0H3+L1H2": 0.0,
+      "pair:L0H3+L1H3": 0.0,
+      "pair:L1H0+L1H1": 0.0,
+      "pair:L1H0+L1H2": 0.0,
+      "pair:L1H0+L1H3": 0.0,
+      "pair:L1H1+L1H2": 0.0,
+      "pair:L1H1+L1H3": 0.0,
+      "pair:L1H2+L1H3": 0.0,
+      "single:L0H0": 0.0,
+      "single:L0H1": 0.0,
+      "single:L0H2": 0.0,
+      "single:L0H3": 0.0,
+      "single:L1H0": 0.0,
+      "single:L1H1": 0.0,
+      "single:L1H2": 0.0,
+      "single:L1H3": 0.0
+    }
+  },
+  "h3_parameters": {
+    "T1": {
+      "A_diagonal": [
+        1.5,
+        0.5,
+        2.0,
+        0.25,
+        1.25,
+        0.75,
+        1.1,
+        0.9
+      ],
+      "b": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ]
+    },
+    "T2": {
+      "perm": [
+        2,
+        0,
+        3,
+        1,
+        6,
+        4,
+        7,
+        5
+      ]
+    },
+    "T3": {
+      "matrix": [
+        [
+          -0.20514150876843806,
+          0.22015137026423087,
+          0.24244118556270752,
+          -0.30487028853538006,
+          0.6829827776175201,
+          0.11609221239164781,
+          -0.5257922758937451,
+          0.03641868438918093
+        ],
+        [
+          -0.2130744659610055,
+          -0.46211695939801944,
+          -0.6762849914006377,
+          0.11460232530044928,
+          0.3817339252291453,
+          0.14382279515012364,
+          0.01664854767140608,
+          -0.32228736403855246
+        ],
+        [
+          -0.6440354836704802,
+          0.23705301828269204,
+          -0.2935952067493258,
+          -0.058006550940172714,
+          -0.3281684159669392,
+          -0.49821549108237423,
+          -0.28363763656073665,
+          0.05565755341173413
+        ],
+        [
+          0.5146544231673054,
+          0.2631396917398142,
+          -0.5926899614614218,
+          -0.43973371915761345,
+          -0.03232384426427856,
+          -0.008168411301686117,
+          -0.13048522217459413,
+          0.3210969419145983
+        ],
+        [
+          -0.23055519184730766,
+          -0.280696351382793,
+          -0.018527866091543416,
+          0.17618902733087805,
+          0.16380362495002568,
+          0.060914490274697225,
+          0.1492682155122199,
+          0.8853501024027358
+        ],
+        [
+          -0.3119180323594566,
+          0.18204832316455152,
+          0.01909374075970984,
+          -0.557035658092953,
+          0.1530728185754767,
+          0.02056827416237353,
+          0.7285976855843389,
+          -0.06483305230526484
+        ],
+        [
+          0.2336408417556755,
+          -0.5260897080991525,
+          0.18086310622402565,
+          -0.29460043430214733,
+          0.15804526988639556,
+          -0.7235731778593,
+          -0.013125256057492216,
+          -0.020783974941922904
+        ],
+        [
+          0.16681952969678185,
+          0.4731196936792665,
+          -0.11385091196278724,
+          0.518718803262479,
+          0.4514788732530706,
+          -0.4357297678317636,
+          0.2692224850259772,
+          -0.011109587733922973
+        ]
+      ],
+      "matrix_sha256": "0194bd288a3c6fd1ac054158cf958d507d141a83c973ef50c565a040648bac9a",
+      "seed": 17291
+    }
+  },
+  "phase": "before_outcome",
+  "rows": [
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L0H0",
+      "order": "before_outcome",
+      "prediction": -0.007303078969319661,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L0H1",
+      "order": "before_outcome",
+      "prediction": -0.04977258046468099,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L0H2",
+      "order": "before_outcome",
+      "prediction": -0.004289468129475911,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L0H3",
+      "order": "before_outcome",
+      "prediction": 0.016298532485961914,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L1H0",
+      "order": "before_outcome",
+      "prediction": 0.010043064753214518,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L1H1",
+      "order": "before_outcome",
+      "prediction": -0.05359109242757162,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L1H2",
+      "order": "before_outcome",
+      "prediction": -0.029385884602864582,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "single:L1H3",
+      "order": "before_outcome",
+      "prediction": -0.1087189515431722,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H0+L0H1",
+      "order": "before_outcome",
+      "prediction": -0.03990936279296875,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H0+L0H2",
+      "order": "before_outcome",
+      "prediction": -0.01837754249572754,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H0+L0H3",
+      "order": "before_outcome",
+      "prediction": 0.0012824535369873047,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H0+L1H0",
+      "order": "before_outcome",
+      "prediction": 0.0021034876505533853,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H0+L1H1",
+      "order": "before_outcome",
+      "prediction": -0.06091761589050293,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H0+L1H2",
+      "order": "before_outcome",
+      "prediction": -0.03661282857259115,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H0+L1H3",
+      "order": "before_outcome",
+      "prediction": -0.11545594533284505,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H1+L0H2",
+      "order": "before_outcome",
+      "prediction": -0.05823294321695963,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H1+L0H3",
+      "order": "before_outcome",
+      "prediction": -0.028670549392700195,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H1+L1H0",
+      "order": "before_outcome",
+      "prediction": -0.041490395863850914,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H1+L1H1",
+      "order": "before_outcome",
+      "prediction": -0.10076785087585449,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H1+L1H2",
+      "order": "before_outcome",
+      "prediction": -0.07926877339680989,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H1+L1H3",
+      "order": "before_outcome",
+      "prediction": -0.15879901250203451,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H2+L0H3",
+      "order": "before_outcome",
+      "prediction": 0.017688910166422527,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H2+L1H0",
+      "order": "before_outcome",
+      "prediction": 0.005027612050374349,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H2+L1H1",
+      "order": "before_outcome",
+      "prediction": -0.05743980407714844,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H2+L1H2",
+      "order": "before_outcome",
+      "prediction": -0.03389724095662435,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H2+L1H3",
+      "order": "before_outcome",
+      "prediction": -0.11357315381368001,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H3+L1H0",
+      "order": "before_outcome",
+      "prediction": 0.025353749593098957,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H3+L1H1",
+      "order": "before_outcome",
+      "prediction": -0.0384517510732015,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H3+L1H2",
+      "order": "before_outcome",
+      "prediction": -0.013077020645141602,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L0H3+L1H3",
+      "order": "before_outcome",
+      "prediction": -0.092316468556722,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L1H0+L1H1",
+      "order": "before_outcome",
+      "prediction": -0.04497178395589193,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L1H0+L1H2",
+      "order": "before_outcome",
+      "prediction": -0.01960579554239909,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L1H0+L1H3",
+      "order": "before_outcome",
+      "prediction": -0.0987238883972168,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L1H1+L1H2",
+      "order": "before_outcome",
+      "prediction": -0.08296616872151692,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L1H1+L1H3",
+      "order": "before_outcome",
+      "prediction": -0.16239047050476074,
+      "timestamp": "2026-09-29T18:05:56Z"
+    },
+    {
+      "actual_outcome": null,
+      "intervention_id": "pair:L1H2+L1H3",
+      "order": "before_outcome",
+      "prediction": -0.13814179102579752,
+      "timestamp": "2026-09-29T18:05:56Z"
+    }
+  ],
+  "verifies_mechanism_identity": false
+}

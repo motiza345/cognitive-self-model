@@ -105,21 +105,21 @@ files:
   category: ARTIFACT
   immutable: false
   milestone: null
-  role: SHA256 of the P construction checkpoint. Construction outcome is incomplete. Weight file is not committed.
+  role: SHA256 of the passing P construction checkpoint. Weight file is not committed.
   produced_by: scripts/run_mrsm_p_construction.py
   consumed_by: src/mrsm/run_p.py
 - path: artifacts/mrsm/construction/construction_record.json
   category: ARTIFACT
   immutable: false
   milestone: null
-  role: P construction definition-of-done record. Engineering outcome FAIL.
+  role: P construction definition-of-done record. Engineering outcome PASS. budget_outcome DONE.
   produced_by: scripts/run_mrsm_p_construction.py
   consumed_by: control_plane/MRSM_BUDGET.yaml
 - path: artifacts/mrsm/construction/construction_train_log.json
   category: ARTIFACT
   immutable: false
   milestone: null
-  role: Train loss and development audit from the frozen 1600-step run. Holdout not read.
+  role: Two-phase planter train log and development audit. Holdout not read.
   produced_by: P construction training
   consumed_by: scripts/run_mrsm_p_construction.py
 - path: artifacts/mrsm/holdout_manifest.json
@@ -143,6 +143,146 @@ files:
   role: Evaluator-only copy of the P_SPEC mechanism. Not a discovery output. Not passed to SelfModelCore.
   produced_by: scripts/run_mrsm_p_construction.py
   consumed_by: src/mrsm/run_p.py
+- path: artifacts/mrsm/p_run_001/predictions.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P holdout predictions written before outcomes. actual_outcome null at write time.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/outcomes.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P holdout intervention outcomes. Read only after predictions were written.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/self_model_state.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Frozen P self-model after the discovery split. Identified L0H0 to L1H1.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/fit_inputs.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Discovery-split effects used to fit the P self-model.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/evidence.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P evidence records for the scored run.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/falsification.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P falsification check. Mechanism identity did not change.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/h3_cases.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P H3 inverse-readout cases for frozen T1, T2, and T3.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/metrics.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P H1-H4 metrics. All four gates PASS.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/leakage_audit.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P leakage audit. Status PASS.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/environment.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P run environment. CPU. Git commit e5963b2.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/p_run_001/result.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: P scientific run p_run_001. Status SCORED. Gates H1-H4 PASS. Leakage PASS.
+  produced_by: src/mrsm/run_p.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/artifact_manifest.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Qwen snapshot availability at the pinned revision. Substitution false. Weights are not committed.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/intervention_catalog.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Eight Q residual slots mapped onto the frozen head-order labels.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/predictions.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Q validation predictions written before outcomes.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/self_model_state.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Frozen Q diagnostic self-model. Candidate L0H0 to L0H1. Not a ground-truth identity.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/evidence.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Q evidence records for the scored diagnostic run.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/h3_cases.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Q H3 inverse-readout cases on the eight intervention slots.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/metrics.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Q H1-H4 metrics. H1 FAIL, H2 FAIL, H3 PASS, H4 FAIL.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/leakage_audit.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Q leakage audit. Planted ground truth was not loaded. Status PASS.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/mrsm/q_run_001/result.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Q scientific run q_run_001. Status SCORED. Diagnostic only. Not mechanism verification.
+  produced_by: src/mrsm/run_q.py
+  consumed_by: reports/MRSM_FINAL_RESULT.md
 - path: artifacts/m22_1_r/execution_record.json
   category: ARTIFACT
   immutable: true
@@ -495,7 +635,7 @@ files:
   category: REPORT
   immutable: false
   milestone: null
-  role: Terminal record. Scientific gates were not run because P construction failed.
+  role: Terminal record of p_run_001 and q_run_001. DEC-010 outcome REDEFINE_SCALE.
   produced_by: P construction failure stop
   consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md

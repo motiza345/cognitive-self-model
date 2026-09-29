@@ -1,0 +1,55 @@
+{
+  "H1": {
+    "candidate": "L0H0->L0H1",
+    "half_a": "L0H2->L0H3",
+    "half_b": "L0H0->L0H1",
+    "member_effects_positive": false,
+    "note": "diagnostic/transfer evidence only",
+    "status": "FAIL",
+    "verifies_mechanism_identity": false
+  },
+  "H2": {
+    "baseline_mae": {
+      "B0": 0.053908363536552144,
+      "B1": 0.036957356664869524,
+      "B2": 0.02828113017258821,
+      "B3": 0.053908363536552144
+    },
+    "bootstrap": {
+      "high": 0.0008926259146796352,
+      "low": -0.0008684485046951754,
+      "mean": 0.0002076361179351811
+    },
+    "gates": {
+      "bootstrap": false,
+      "mae_reduction": false,
+      "sign_accuracy": false
+    },
+    "mae_reduction": 0.02911343702557576,
+    "mae_self": 0.027457769270296452,
+    "sign_accuracy": 0.7222222222222222,
+    "status": "FAIL",
+    "strongest_baseline": "B2"
+  },
+  "H3": {
+    "mechanism_abstraction_consistency": true,
+    "normalized_prediction_difference": 1.7325896106872708e-16,
+    "scope_consistency": true,
+    "sign_agreement": 1.0,
+    "status": "PASS"
+  },
+  "H4": {
+    "bootstrap": {
+      "high": 0.11595376332600911,
+      "low": 0.0459902286529541,
+      "mean": 0.08539708455403645
+    },
+    "consumption_ablation_action": "L0H3",
+    "full_action": "L1H3",
+    "relative_utility_improvement": 0.03125158778176652,
+    "status": "FAIL",
+    "utility_consumption_ablation": -2.73256786664327,
+    "utility_definition": "mean_holdout_logit_margin",
+    "utility_full": -2.6471707820892334
+  }
+}

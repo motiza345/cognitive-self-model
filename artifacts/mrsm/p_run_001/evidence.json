@@ -1,0 +1,1012 @@
+{
+  "records": [
+    {
+      "actual_outcome": 13.614801406860352,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L0H0",
+      "observation_id": "discovery-single:L0H0",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 4.185512065887451,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L0H1",
+      "observation_id": "discovery-single:L0H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 2.859039068222046,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L0H2",
+      "observation_id": "discovery-single:L0H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 3.3297173976898193,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L0H3",
+      "observation_id": "discovery-single:L0H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 0.21188370883464813,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L1H0",
+      "observation_id": "discovery-single:L1H0",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.34614086151123,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L1H1",
+      "observation_id": "discovery-single:L1H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 0.19066157937049866,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L1H2",
+      "observation_id": "discovery-single:L1H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 0.3075225353240967,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "single:L1H3",
+      "observation_id": "discovery-single:L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.573871612548828,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H0+L0H1",
+      "observation_id": "discovery-pair:L0H0+L0H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.337858200073242,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H0+L0H2",
+      "observation_id": "discovery-pair:L0H0+L0H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.591423034667969,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H0+L0H3",
+      "observation_id": "discovery-pair:L0H0+L0H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.582252502441406,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H0+L1H0",
+      "observation_id": "discovery-pair:L0H0+L1H0",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 12.607575416564941,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H0+L1H1",
+      "observation_id": "discovery-pair:L0H0+L1H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.607447624206543,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H0+L1H2",
+      "observation_id": "discovery-pair:L0H0+L1H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.561407089233398,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H0+L1H3",
+      "observation_id": "discovery-pair:L0H0+L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 10.69583511352539,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H1+L0H2",
+      "observation_id": "discovery-pair:L0H1+L0H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 10.839244842529297,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H1+L0H3",
+      "observation_id": "discovery-pair:L0H1+L0H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 4.251046180725098,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H1+L1H0",
+      "observation_id": "discovery-pair:L0H1+L1H0",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 12.992413520812988,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H1+L1H1",
+      "observation_id": "discovery-pair:L0H1+L1H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 4.388574600219727,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H1+L1H2",
+      "observation_id": "discovery-pair:L0H1+L1H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 4.393320083618164,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H1+L1H3",
+      "observation_id": "discovery-pair:L0H1+L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 8.7642822265625,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H2+L0H3",
+      "observation_id": "discovery-pair:L0H2+L0H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 3.021836280822754,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H2+L1H0",
+      "observation_id": "discovery-pair:L0H2+L1H0",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.207834243774414,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H2+L1H1",
+      "observation_id": "discovery-pair:L0H2+L1H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 2.8794703483581543,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H2+L1H2",
+      "observation_id": "discovery-pair:L0H2+L1H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 3.0853612422943115,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H2+L1H3",
+      "observation_id": "discovery-pair:L0H2+L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 3.453259229660034,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H3+L1H0",
+      "observation_id": "discovery-pair:L0H3+L1H0",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.030545234680176,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H3+L1H1",
+      "observation_id": "discovery-pair:L0H3+L1H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 3.408074140548706,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H3+L1H2",
+      "observation_id": "discovery-pair:L0H3+L1H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 3.5516669750213623,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L0H3+L1H3",
+      "observation_id": "discovery-pair:L0H3+L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 13.444669723510742,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L1H0+L1H1",
+      "observation_id": "discovery-pair:L1H0+L1H1",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 0.4101419746875763,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L1H0+L1H2",
+      "observation_id": "discovery-pair:L1H0+L1H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 0.5530242919921875,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L1H0+L1H3",
+      "observation_id": "discovery-pair:L1H0+L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 12.994253158569336,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L1H1+L1H2",
+      "observation_id": "discovery-pair:L1H1+L1H2",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 12.843489646911621,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L1H1+L1H3",
+      "observation_id": "discovery-pair:L1H1+L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 0.5855007171630859,
+      "context": {
+        "split": "discovery"
+      },
+      "evidence_type": "discovery_observation",
+      "intervention_id": "pair:L1H2+L1H3",
+      "observation_id": "discovery-pair:L1H2+L1H3",
+      "prediction": null,
+      "residual": null,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:28Z"
+    },
+    {
+      "actual_outcome": 14.579265115782619,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H0",
+      "observation_id": "holdout-single:L0H0",
+      "prediction": 13.614801406860352,
+      "residual": 0.964463708922267,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 4.666702759452164,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H1",
+      "observation_id": "holdout-single:L0H1",
+      "prediction": 4.185512065887451,
+      "residual": 0.481190693564713,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 2.8404741026461124,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H2",
+      "observation_id": "holdout-single:L0H2",
+      "prediction": 2.859039068222046,
+      "residual": -0.018564965575933456,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 3.1914787013083696,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L0H3",
+      "observation_id": "holdout-single:L0H3",
+      "prediction": 3.3297173976898193,
+      "residual": -0.1382386963814497,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 0.20677045173943043,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H0",
+      "observation_id": "holdout-single:L1H0",
+      "prediction": 0.21188370883464813,
+      "residual": -0.005113257095217705,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 13.335329737514257,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H1",
+      "observation_id": "holdout-single:L1H1",
+      "prediction": 13.34614086151123,
+      "residual": -0.010811123996973038,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 0.1934111239388585,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H2",
+      "observation_id": "holdout-single:L1H2",
+      "prediction": 0.19066157937049866,
+      "residual": 0.002749544568359852,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 0.30256872344762087,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "single:L1H3",
+      "observation_id": "holdout-single:L1H3",
+      "prediction": 0.3075225353240967,
+      "residual": -0.004953811876475811,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 14.257486400194466,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L0H1",
+      "observation_id": "holdout-pair:L0H0+L0H1",
+      "prediction": 13.573871612548828,
+      "residual": 0.683614787645638,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 14.21113951690495,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L0H2",
+      "observation_id": "holdout-pair:L0H0+L0H2",
+      "prediction": 13.337858200073242,
+      "residual": 0.873281316831708,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 14.659301056526601,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L0H3",
+      "observation_id": "holdout-pair:L0H0+L0H3",
+      "prediction": 13.591423034667969,
+      "residual": 1.0678780218586326,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 14.562937307171524,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H0",
+      "observation_id": "holdout-pair:L0H0+L1H0",
+      "prediction": 13.582252502441406,
+      "residual": 0.9806848047301173,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 12.590262900106609,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H1",
+      "observation_id": "holdout-pair:L0H0+L1H1",
+      "prediction": 12.607575416564941,
+      "residual": -0.01731251645833254,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 14.549011966213584,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H2",
+      "observation_id": "holdout-pair:L0H0+L1H2",
+      "prediction": 13.607447624206543,
+      "residual": 0.941564342007041,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 14.495485797524452,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H0+L1H3",
+      "observation_id": "holdout-pair:L0H0+L1H3",
+      "prediction": 13.561407089233398,
+      "residual": 0.9340787082910538,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 11.077053365297616,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L0H2",
+      "observation_id": "holdout-pair:L0H1+L0H2",
+      "prediction": 10.69583511352539,
+      "residual": 0.3812182517722249,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 11.063920193351805,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L0H3",
+      "observation_id": "holdout-pair:L0H1+L0H3",
+      "prediction": 10.839244842529297,
+      "residual": 0.22467535082250834,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 4.72732500359416,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H0",
+      "observation_id": "holdout-pair:L0H1+L1H0",
+      "prediction": 4.251046180725098,
+      "residual": 0.4762788228690624,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 13.012546892277896,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H1",
+      "observation_id": "holdout-pair:L0H1+L1H1",
+      "prediction": 12.992413520812988,
+      "residual": 0.020133371464908123,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 4.8225522600114346,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H2",
+      "observation_id": "holdout-pair:L0H1+L1H2",
+      "prediction": 4.388574600219727,
+      "residual": 0.433977659791708,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 4.857889945618808,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H1+L1H3",
+      "observation_id": "holdout-pair:L0H1+L1H3",
+      "prediction": 4.393320083618164,
+      "residual": 0.4645698620006442,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 9.323201444000006,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L0H3",
+      "observation_id": "holdout-pair:L0H2+L0H3",
+      "prediction": 8.7642822265625,
+      "residual": 0.5589192174375057,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 2.987574770115316,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H0",
+      "observation_id": "holdout-pair:L0H2+L1H0",
+      "prediction": 3.021836280822754,
+      "residual": -0.03426151070743799,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 13.12203889992088,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H1",
+      "observation_id": "holdout-pair:L0H2+L1H1",
+      "prediction": 13.207834243774414,
+      "residual": -0.08579534385353327,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 2.8403657069429755,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H2",
+      "observation_id": "holdout-pair:L0H2+L1H2",
+      "prediction": 2.8794703483581543,
+      "residual": -0.039104641415178776,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 3.0310068018734455,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H2+L1H3",
+      "observation_id": "holdout-pair:L0H2+L1H3",
+      "prediction": 3.0853612422943115,
+      "residual": -0.05435444042086601,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 3.30237424839288,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H0",
+      "observation_id": "holdout-pair:L0H3+L1H0",
+      "prediction": 3.453259229660034,
+      "residual": -0.15088498126715422,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 12.999576182104647,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H1",
+      "observation_id": "holdout-pair:L0H3+L1H1",
+      "prediction": 13.030545234680176,
+      "residual": -0.03096905257552862,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 3.2554243886843324,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H2",
+      "observation_id": "holdout-pair:L0H3+L1H2",
+      "prediction": 3.408074140548706,
+      "residual": -0.15264975186437368,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 3.3975192084908485,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L0H3+L1H3",
+      "observation_id": "holdout-pair:L0H3+L1H3",
+      "prediction": 3.5516669750213623,
+      "residual": -0.15414776653051376,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 13.39358227699995,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H0+L1H1",
+      "observation_id": "holdout-pair:L1H0+L1H1",
+      "prediction": 13.444669723510742,
+      "residual": -0.05108744651079178,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 0.39289845898747444,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H0+L1H2",
+      "observation_id": "holdout-pair:L1H0+L1H2",
+      "prediction": 0.4101419746875763,
+      "residual": -0.017243515700101852,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 0.5387163301929832,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H0+L1H3",
+      "observation_id": "holdout-pair:L1H0+L1H3",
+      "prediction": 0.5530242919921875,
+      "residual": -0.01430796179920435,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 12.897898312658072,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H1+L1H2",
+      "observation_id": "holdout-pair:L1H1+L1H2",
+      "prediction": 12.994253158569336,
+      "residual": -0.09635484591126442,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 12.816687389276922,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H1+L1H3",
+      "observation_id": "holdout-pair:L1H1+L1H3",
+      "prediction": 12.843489646911621,
+      "residual": -0.026802257634699345,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    },
+    {
+      "actual_outcome": 0.5891360910609365,
+      "context": {
+        "split": "holdout"
+      },
+      "evidence_type": "holdout_scored",
+      "intervention_id": "pair:L1H2+L1H3",
+      "observation_id": "holdout-pair:L1H2+L1H3",
+      "prediction": 0.5855007171630859,
+      "residual": 0.0036353738978505135,
+      "run_id": "p_run_001",
+      "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+      "timestamp": "2026-09-29T17:59:29Z"
+    }
+  ]
+}

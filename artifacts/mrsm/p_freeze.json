@@ -9,5 +9,7 @@
   "holdout_scored": false,
   "engineering_correction": "pre_softmax_two_phase_planter",
   "thresholds_changed_after_holdout": false,
+  "p_freeze_commit": "2cccafd047044332828eaf602b69f4267852cba2",
+  "p_freeze_committer_time": "2026-09-29T17:58:18+00:00",
   "note": "Commit that records p_construction.outcome DONE is p_freeze. Holdout metrics are not part of this record."
 }

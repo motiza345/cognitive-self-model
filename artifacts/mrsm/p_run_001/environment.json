@@ -1,0 +1,14 @@
+{
+  "checkpoint_sha256": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+  "cuda": false,
+  "git_branch": "cursor/mrsm-first-scientific-run-4e19",
+  "git_commit": "e5963b21d7f0eb20c951282e299b9bb00368f24f",
+  "holdout_hash": "c6b3f1b4b144a63d0f9665a6d9a06e6e0e27423b1a29533b8faab36da43fd8de",
+  "numpy": "2.4.4",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+  "preregistration_id": "mrsm-prereg-2026-09-29",
+  "python": "3.12.3",
+  "torch": "2.14.0+cpu",
+  "transformer_lens": "3.9.0",
+  "transformers": "5.17.0"
+}

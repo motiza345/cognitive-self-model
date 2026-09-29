@@ -7,11 +7,11 @@ p_construction:
   done_evidence: artifacts/mrsm/construction/construction_record.json
   engineering_outcome: PASS
   engineering_correction: pre_softmax_two_phase_planter
-  p_freeze: commit that sets this outcome to DONE
+  p_freeze: 2cccafd047044332828eaf602b69f4267852cba2   # commit that set this outcome to DONE
 mrsm:
-  clock_start_commit: null   # set to the p_freeze commit after that commit exists
-  deadline: null
-  full_runs: {limit: 8, used: 0}
+  clock_start_commit: 2cccafd047044332828eaf602b69f4267852cba2
+  deadline: 2026-10-27T17:58:18+00:00   # p_freeze committer time + 28 x 24h
+  full_runs: {limit: 8, used: 2}   # p_run_001 holdout read; q_run_001 validation read; CPU
   q_gpu_full_runs: {limit: 2, used: 0}   # sub-limit; a Q GPU Full Run increments both counters
 m22_1_r_counted: false
 p_construction_counted: false

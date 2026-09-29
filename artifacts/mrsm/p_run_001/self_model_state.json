@@ -1,0 +1,68 @@
+{
+  "effects": {
+    "L0H0": 13.614801406860352,
+    "L0H1": 4.185512065887451,
+    "L0H2": 2.859039068222046,
+    "L0H3": 3.3297173976898193,
+    "L1H0": 0.21188370883464813,
+    "L1H1": 13.34614086151123,
+    "L1H2": 0.19066157937049866,
+    "L1H3": 0.3075225353240967
+  },
+  "evidence_ids": [
+    "discovery-single:L0H0",
+    "discovery-single:L0H1",
+    "discovery-single:L0H2",
+    "discovery-single:L0H3",
+    "discovery-single:L1H0",
+    "discovery-single:L1H1",
+    "discovery-single:L1H2",
+    "discovery-single:L1H3",
+    "discovery-pair:L0H0+L0H1",
+    "discovery-pair:L0H0+L0H2",
+    "discovery-pair:L0H0+L0H3",
+    "discovery-pair:L0H0+L1H0",
+    "discovery-pair:L0H0+L1H1",
+    "discovery-pair:L0H0+L1H2",
+    "discovery-pair:L0H0+L1H3",
+    "discovery-pair:L0H1+L0H2",
+    "discovery-pair:L0H1+L0H3",
+    "discovery-pair:L0H1+L1H0",
+    "discovery-pair:L0H1+L1H1",
+    "discovery-pair:L0H1+L1H2",
+    "discovery-pair:L0H1+L1H3",
+    "discovery-pair:L0H2+L0H3",
+    "discovery-pair:L0H2+L1H0",
+    "discovery-pair:L0H2+L1H1",
+    "discovery-pair:L0H2+L1H2",
+    "discovery-pair:L0H2+L1H3",
+    "discovery-pair:L0H3+L1H0",
+    "discovery-pair:L0H3+L1H1",
+    "discovery-pair:L0H3+L1H2",
+    "discovery-pair:L0H3+L1H3",
+    "discovery-pair:L1H0+L1H1",
+    "discovery-pair:L1H0+L1H2",
+    "discovery-pair:L1H0+L1H3",
+    "discovery-pair:L1H1+L1H2",
+    "discovery-pair:L1H1+L1H3",
+    "discovery-pair:L1H2+L1H3"
+  ],
+  "frozen": true,
+  "identifiable": true,
+  "mechanism": {
+    "abstraction": "L0H0->L1H1",
+    "gap": 0.6837508959778071,
+    "interaction": -14.35336685180664,
+    "ordered": [
+      "L0H0",
+      "L1H1"
+    ],
+    "pair": [
+      "L0H0",
+      "L1H1"
+    ],
+    "status": "IDENTIFIED"
+  },
+  "scope": "P:episodic-two-hop:query-position:n_layers=2:n_heads=4",
+  "uncertainty": 5.238169292541669
+}
