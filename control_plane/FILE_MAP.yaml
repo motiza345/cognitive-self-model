@@ -386,6 +386,27 @@ files:
   role: Engineering record of the M22.1-R harness attempt. No scientific claim.
   produced_by: M22.1-R harness completion
   consumed_by: UNKNOWN
+- path: reports/MRSM_Scientific_Contract_v0.1.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Draft MRSM scientific contract v0.1. Not frozen and not a preregistration.
+  produced_by: P2.0 contract reconciliation
+  consumed_by: UNKNOWN
+- path: reports/P2_0_contract_conflicts.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Conflict matrix for the MRSM scientific contract. Does not choose a winner.
+  produced_by: P2.0 contract reconciliation
+  consumed_by: UNKNOWN
+- path: reports/P2_0_source_inventory.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Source inventory for P2.0. Status labels only.
+  produced_by: P2.0 contract reconciliation
+  consumed_by: UNKNOWN
 - path: reports/M22_1/README.md
   category: REPORT
   immutable: true
