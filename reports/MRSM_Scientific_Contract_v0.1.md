@@ -2,9 +2,11 @@
 
 Version: 0.1
 
-Status: draft. Not frozen. Not a preregistration.
+Status: `DRAFT — NOT FROZEN`
 
-This document assembles one contract from the sources inventoried in `reports/P2_0_source_inventory.md`. Where those sources disagree, the disagreement stays visible and is marked `DECISION_REQUIRED`. Numerical H1–H4 bars copied from the implementation specification are `PROPOSED — NOT FROZEN`.
+Not a preregistration.
+
+P2.1 (`reports/P2_1_decision_resolution.md`) names the governing frozen rule for the terminal tree, the planted mechanism, and the run counters. `DEC-010-A1` is proposed and not applied. The H3 family is still `DECISION_REQUIRED`. Numerical H1–H4 bars copied from the implementation specification remain `PROPOSED — NOT FROZEN`.
 
 No MRSM code, planted execution, Qwen evaluation, or threshold edit was done to produce this draft.
 
@@ -30,7 +32,7 @@ Definitions below are implementable only where a source already fixes the object
 
 **Mechanism.** On arm P, the mechanism is the frozen planted read restriction in `P_SPEC.md`: during training, head L0H0 (`planted_A`) at the query position may read only key positions, and head L1H1 (`planted_B`) may read only value positions. The training mask is removed before audit. Weights are frozen before audit. The identity is hidden from discovery. Ground truth is this definition, not a discovery output.
 
-The names `M_COPY`, `M_INHIBIT`, and `M_BIND` are examples in specification section 6.2. They are not this definition. See section 18.
+The names `M_COPY`, `M_INHIBIT`, and `M_BIND` are provisional examples in specification section 6.2. P2.1 does not authorize replacing the frozen two-hop construction with those names. A different planted mechanism requires a new DEC.
 
 **Mechanism identity.** On P, identity is the pair of planted head coordinates together with the key-read and value-read restrictions, as written in `P_SPEC.md`. A discovered object matches that identity only if it names those roles, not merely a layer, a head index, or an accuracy number. The specification also asks for causal direction and effect sign. Those checks are proposed in section 9 and are not frozen bars.
 
@@ -158,7 +160,7 @@ The specification says to report, descriptively:
 
 Those reports are not verified mechanism identity.
 
-DEC-010 still requires a `Q.H1` key with status `PASS`, `FAIL`, or `NOT_EVALUATED`, and its GO rule requires `PASS`. This contract does not delete that key and does not define `PASS`. The criterion is `DECISION_REQUIRED`. Until it exists, a Q.H1 narrative must not be entered as `PASS`.
+DEC-010 still requires a `Q.H1` key with status `PASS`, `FAIL`, or `NOT_EVALUATED`, and its GO rule requires `PASS`. P2.1 keeps that key. `DEC-010-A1` would state that `Q.H1` PASS is diagnostic or transfer evidence and is not verified mechanism identity. That amendment is `PROPOSED / NOT APPLIED`. The numeric diagnostic bar remains deferred by DEC-011. Until the amendment is applied, a Q.H1 narrative must not be entered as `PASS`.
 
 ## 7. H2 — Counterfactual Prediction
 
@@ -204,7 +206,7 @@ H3 tests whether the learned mechanism object is tied to one coordinate system. 
 
 This is an invertible linear map. Applying it twice sends `[X, Y]` to `[-X, -Y]`. Applying it four times returns `[X, Y]`. It changes the coordinates of a two-dimensional feature and does not, by itself, edit the planted edges. H3 then asks whether the mechanism id (P) or the predictions (Q) agree across the two coordinate systems. Agreement is a statement about the self-model's representation, not a replay of an old A4 outcome. The A4 outcome is not the target and is not a pass label.
 
-That formula is `PROPOSED — NOT FROZEN`. The specification's reason for requiring it is the M18.7/A4 failure. DEC-011 says that reason cannot be the basis of H3. This draft therefore does not make the formula mandatory. Making it mandatory without that reason is `DECISION_REQUIRED`.
+That formula is `PROPOSED — NOT FROZEN`. The specification's reason for requiring it is the M18.7/A4 failure. DEC-011 says that reason cannot be the basis of H3. P2.1 marks the phase-rotation justification ineligible and does not freeze any replacement family. The family remains `DECISION_REQUIRED`. See `reports/P2_1_decision_resolution.md` section 6.
 
 Proposed P pass conjuncts, `PROPOSED — NOT FROZEN`: identity agreement >= 90%, causal-effect sign agreement >= 90%, counterfactual MAE degradation <= 10%. The Q phrase "no material performance collapse" has no frozen number.
 
@@ -295,7 +297,7 @@ Primary endpoints, as named by the specification and not adopted as numeric gate
 | Gate | Primary endpoint | Status |
 | --- | --- | --- |
 | P.H1 | Mechanism recovery against P ground truth, summarized in the specification as mechanism F1 | Metric name proposed. Threshold `PROPOSED — NOT FROZEN` |
-| Q.H1 | No discovery F1. Diagnostic report only | PASS rule `DECISION_REQUIRED` |
+| Q.H1 | Diagnostic or transfer report. Not an F1 against a Q mechanism label | Epistemic role set in P2.1. `DEC-010-A1` not applied. Numeric bar deferred |
 | H2 | Paired intervention-level MAE | Threshold `PROPOSED — NOT FROZEN` |
 | H3-P | Mechanism identity agreement across a representation change | Threshold and transform `PROPOSED — NOT FROZEN` |
 | H3-Q | Functional agreement across a representation change | Not mechanism identity. "Material collapse" unresolved |
@@ -322,7 +324,7 @@ The specification's H1 question is recovery on held-out data rather than memoriz
 | Same outcome, different mechanism | Outcome prediction from mechanism knowledge |
 | Novel representation transformation | A coordinate-specific encoding from a representation-invariant mechanism object |
 
-On the frozen P construction there is one two-hop mechanism and two planted heads. The "new mechanism" and "mechanism family absent from training" cells are not populated by `P_SPEC.md`. Filling them by renaming L0H0 and L1H1 is not allowed. Populating them by adding mechanisms is `DECISION_REQUIRED` (section 18).
+On the frozen P construction there is one two-hop mechanism and two planted heads. The "new mechanism" and "mechanism family absent from training" cells are not populated by `P_SPEC.md`. Filling them by renaming L0H0 and L1H1 is not allowed. Populating them by adding mechanisms is not authorized. P2.1 kept the frozen construction. A new mechanism still requires a new DEC.
 
 Q has no mechanism ground truth, so Q cannot score these cells as discovery. Q can still report whether predictions or decisions change across components, outcomes, and transformations. That report is transfer evidence, not a mechanism-identity result.
 
@@ -357,7 +359,7 @@ Nothing in this version is the MRSM preregistration. A scientific MRSM run is no
 
 | Object | State on this date |
 | --- | --- |
-| Mechanism construction | Frozen as `P_SPEC.md`. Conflicts with the specification's three example mechanisms. `DECISION_REQUIRED` before any replacement |
+| Mechanism construction | Frozen as `P_SPEC.md` L0H0/L1H1. P2.1: `RESOLVED`. No replacement authorized. Specification examples are non-authoritative |
 | Dataset | P train and dev generators are in `P_SPEC.md`. Q data is not frozen. MRSM use of the P generator is not a preregistration |
 | Holdout | Reserved and unfrozen as an MRSM split. Five specification kinds have no membership |
 | Intervention set | Types named in specification section 8. The concrete set is not frozen |
@@ -368,31 +370,22 @@ Nothing in this version is the MRSM preregistration. A scientific MRSM run is no
 | Statistical protocol | Paired bootstrap 95% CI is proposed. Resample count, multiple-comparison rule, and MRSM seed list are not frozen |
 | Thresholds | Specification numbers are `PROPOSED — NOT FROZEN`. DEC-011 defers them. P_SPEC numbers are not gates |
 | Seed policy | Construction seeds are frozen. MRSM run seeds are not |
-| Budget | DEC-011 and `MRSM_BUDGET.yaml` are the live counters. Specification wording conflicts. `DECISION_REQUIRED` before treating the specification sentences as the counter. MRSM clock not started. Construction outcome null |
+| Budget | DEC-011 and `MRSM_BUDGET.yaml` govern. P2.1: `RESOLVED`. Specification budget sentences are non-authoritative. MRSM clock not started. Construction outcome null |
 | Artifact schemas | Specification section 5 and the planted ground-truth file are proposals. No `artifacts/planted_ground_truth.json` is frozen |
-| Terminal rule | `DECISION_REQUIRED`. Section 18 |
+| Terminal rule | DEC-010 governs. P2.1: `RESOLVED`. Specification sections 1.2 and 24 are non-authoritative. `DEC-010-A1` (Q.H1 epistemic clause) is `PROPOSED / NOT APPLIED` |
 | Q revision pin | The recorded revision is frozen as a string. The harness attempt did not load it. DEC-011 still says Q full-run preconditions include a static revision and recorded weight hashes |
 | Replay contract | Frozen for M22.1-R. Out of scope for H1–H4 numbers |
 
 ## 18. Decision Logic
 
-DEC-011 does not modify DEC-010. Together they are one frozen package: the DEC-010 table is the terminal table, and DEC-011 adds arms, construction, budget semantics, and the M18.7 prohibition without changing that table.
+P2.1 assigns the governing rules. This section records those assignments. It does not freeze the contract.
 
-Specification sections 1.2 and 24 are not in that package. They use a different outcome vocabulary and a different GO rule. The differences are listed in `reports/P2_0_contract_conflicts.md` section B. The important ones are:
+| Topic | P2.1 status | What governs |
+| --- | --- | --- |
+| Terminal tree | `RESOLVED` | DEC-010. Specification §1.2 and §24 do not define another tree. GO still requires all eight keys, including `Q.H1` |
+| Q.H1 meaning | `RESOLVED_WITH_AMENDMENT_REQUIRED` | `P.H1` is the truth-validating discovery test. `Q.H1` is diagnostic / transfer evidence. `Q.H1 PASS` is not verified mechanism discovery. `DEC-010-A1` is `PROPOSED / NOT APPLIED`. Until it is applied, do not record `Q.H1` as `PASS` |
+| Planted mechanism | `RESOLVED` | `P_SPEC.md` L0H0 and L1H1. No replacement authorized |
+| H3 family | `DECISION_REQUIRED` | The invariance requirement does not depend on M18.7. No transformation family is frozen |
+| Run accounting | `RESOLVED` | DEC-011. Full run = locked-holdout read. 8 full runs. Q GPU sub-limit 2. Clocks not started |
 
-- DEC-010 GO requires `Q.H1` PASS. Specification GO does not.
-- DEC-010 STOP includes specified `P.H2` FAIL cases. Specification STOP names H1-P failure.
-- DEC-010 names `REDEFINE_CAUSAL_AUDIT`, `REDEFINE_SCALE`, `INCOMPLETE_BUDGET`, and `CONTRACT_ERROR`. Specification section 1.2 allows only GO, REDEFINE, and STOP.
-- Specification section 24 has no leaf for P.H4 failure. DEC-010 rule 3 assigns `REDEFINE_CAUSAL_AUDIT`.
-
-`DECISION_REQUIRED`
-
-The decision that is required, and that this phase does not make:
-
-1. Adopt DEC-010 unchanged as the only terminal rule, and treat specification sections 1.2 and 24 as non-binding proposal text; or amend DEC-010 so that its outcomes and its Q.H1 rule match the specification; or amend the specification so that it matches DEC-010. One of those three. Not a mixture written by an implementation pass.
-2. If Q.H1 remains a DEC-010 key, define `PASS` and `FAIL` for a diagnostic report so that `PASS` does not mean verified mechanism identity.
-3. Keep the frozen `P_SPEC.md` mechanism, or issue a new DEC that replaces it. The example names `M_COPY`, `M_INHIBIT`, and `M_BIND` are not a substitute DEC.
-4. Choose the H3 transformation family without using M18.7 or A4 as the reason, or leave H3 blocked. The phase-rotation formula is not required by this draft.
-5. Choose the full-run definition and the Q-run cap: DEC-011 (`any locked-holdout read`; Q GPU sub-limit 2) or the specification (complete benchmark execution; 2 full Qwen runs). The live ledger implements DEC-011. Changing it is a DEC, not an edit to the yaml in an implementation pass.
-
-Until item 1 is decided, this contract has no single GO, REDEFINE, or STOP procedure that satisfies every source. The executable DEC-010 function remains in the repository as the frozen table. This draft does not wrap it and does not replace it.
+The executable DEC-010 function remains the frozen table. This draft does not wrap it and does not replace it. The P2.0 conflict list in `reports/P2_0_contract_conflicts.md` is the record of the disagreement. P2.1 does not delete that record.

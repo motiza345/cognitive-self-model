@@ -407,6 +407,27 @@ files:
   role: Source inventory for P2.0. Status labels only.
   produced_by: P2.0 contract reconciliation
   consumed_by: UNKNOWN
+- path: reports/P2_1_amendment_proposals.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Proposed DEC-010-A1. Not applied.
+  produced_by: P2.1 decision resolution
+  consumed_by: UNKNOWN
+- path: reports/P2_1_decision_resolution.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Resolution of the five P2.0 contract conflicts. No scientific run.
+  produced_by: P2.1 decision resolution
+  consumed_by: UNKNOWN
+- path: reports/P2_1_freeze_readiness.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Freeze readiness after P2.1. Status NOT_READY.
+  produced_by: P2.1 decision resolution
+  consumed_by: UNKNOWN
 - path: reports/M22_1/README.md
   category: REPORT
   immutable: true
