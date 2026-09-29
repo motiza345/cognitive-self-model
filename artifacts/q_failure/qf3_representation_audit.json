@@ -1,0 +1,34 @@
+{
+  "families": {
+    "R1": {
+      "b2_linear_probe_mae": 0.07458013605188442,
+      "feature_dimensionality": 36,
+      "features": "discovery mean margin-drop for 8 singles and 28 pairs",
+      "name": "current_mrsm_representation",
+      "sample_count_discovery_prompts": 6,
+      "saved_validation_b2_mae": 0.028281130172588202,
+      "saved_validation_note": "diagnostic_reuse of q_run_001 means; not a new score",
+      "saved_validation_self_mae": 0.027457769270296455,
+      "self_model_mae": 0.07455910135198524,
+      "sign_accuracy": 0.6157407407407408,
+      "train_test_isolation": "leave-one-discovery-prompt-out; validation not used"
+    },
+    "R2": {
+      "b2_linear_probe_mae": 0.07458013605188442,
+      "feature_dimensionality": 8,
+      "reason": "SelfModelCore.predict is already the intervention-effect lookup. B2 is the additive probe on the 8 single effects.",
+      "self_model_mae": 0.07455910135198524,
+      "status": "SAME_AS_R1"
+    },
+    "R3": {
+      "reason": "run_q records logit-margin drops only. Residual trajectories were not part of the frozen Q observation and were not collected.",
+      "status": "NOT_AVAILABLE"
+    },
+    "R4": {
+      "reason": "R3 is absent, so a combined representation was not built.",
+      "status": "NOT_AVAILABLE"
+    }
+  },
+  "reason": "R2 is the same intervention-effect table already stored by SelfModelCore. R3 activation trajectories are not in the Q observation pipeline. R4 is not formed, because R3 is absent. No synthetic features were added.",
+  "status": "INCONCLUSIVE"
+}

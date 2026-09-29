@@ -84,6 +84,9 @@ artifacts/*
 !artifacts/mrsm/
 !artifacts/mrsm/**
 artifacts/mrsm/**/*.pt
+# QF diagnostic JSON only. Not an MRSM rerun and not a weight file.
+!artifacts/q_failure/
+!artifacts/q_failure/**
 
 # Archives
 *.zip

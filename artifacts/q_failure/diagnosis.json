@@ -1,0 +1,54 @@
+{
+  "leakage": {
+    "diagnostic_reuse": [
+      "QF-3 saved validation MAE",
+      "QF-4 O0/B2 reference",
+      "QF-5",
+      "QF-6 frozen MAE"
+    ],
+    "discovery_only_forwards": [
+      "QF-1",
+      "QF-2",
+      "QF-3 leave-one-out",
+      "QF-6 complement MAE"
+    ],
+    "p_holdout_accessed": false,
+    "planted_ground_truth_loaded": false,
+    "q_validation_reexecuted": false
+  },
+  "matrix": [
+    {
+      "evidence": "QF-1",
+      "layer": "Discovery",
+      "status": "PARTIALLY_STABLE"
+    },
+    {
+      "evidence": "QF-2",
+      "layer": "Intervention",
+      "status": "SIGNAL_CONTEXT_DEPENDENT"
+    },
+    {
+      "evidence": "QF-3",
+      "layer": "Representation",
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "evidence": "QF-4",
+      "layer": "Prediction",
+      "status": "ORACLE_INVALID"
+    },
+    {
+      "evidence": "QF-5",
+      "layer": "H2 localization",
+      "status": "global"
+    },
+    {
+      "evidence": "QF-6",
+      "layer": "Baseline ceiling",
+      "status": "NEAR_CEILING"
+    }
+  ],
+  "next_intervention": "Do not modify the Self-Model or the MRSM contract. The next intervention is a new preregistered decision on whether these Q residual slots produce a separable causal signal. Do not rerun the frozen MRSM gates to chase a pass.",
+  "primary_bottleneck": "INTERVENTION_BOTTLENECK",
+  "scientific_status": "DIAGNOSTIC_ONLY"
+}

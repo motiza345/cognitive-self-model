@@ -1,0 +1,144 @@
+{
+  "holdout_used": false,
+  "label": "PARTIALLY_STABLE",
+  "partition_regime_confounded": true,
+  "rows": [
+    {
+      "candidate": null,
+      "confidence": 0.03317185497360589,
+      "contradiction": 0,
+      "effect": null,
+      "n": 2,
+      "partition": "D1",
+      "prompt_ids": [
+        "completion-01",
+        "syntax-01"
+      ],
+      "scope": "Q:m22_1_residual:diagnostic",
+      "sign": null,
+      "source": null,
+      "status": "NOT_IDENTIFIABLE",
+      "support": 0,
+      "target": null
+    },
+    {
+      "candidate": "L0H0->L0H1",
+      "confidence": 0.549891797740948,
+      "contradiction": 1,
+      "effect": 0.018068313598632812,
+      "n": 2,
+      "partition": "D2",
+      "prompt_ids": [
+        "completion-04",
+        "syntax-04"
+      ],
+      "scope": "Q:m22_1_residual:diagnostic",
+      "sign": 1,
+      "source": "L0H0",
+      "status": "IDENTIFIED",
+      "support": 1,
+      "target": "L0H1"
+    },
+    {
+      "candidate": "L0H0->L0H1",
+      "confidence": 0.6060628411270099,
+      "contradiction": 1,
+      "effect": 0.025859832763671875,
+      "n": 1,
+      "partition": "D3",
+      "prompt_ids": [
+        "instruction-01"
+      ],
+      "scope": "Q:m22_1_residual:diagnostic",
+      "sign": 1,
+      "source": "L0H0",
+      "status": "IDENTIFIED",
+      "support": 1,
+      "target": "L0H1"
+    },
+    {
+      "candidate": "L0H0->L0H1",
+      "confidence": 0.3041318840856559,
+      "contradiction": 2,
+      "effect": 0.04992389678955078,
+      "n": 1,
+      "partition": "D4",
+      "prompt_ids": [
+        "instruction-04"
+      ],
+      "scope": "Q:m22_1_residual:diagnostic",
+      "sign": 1,
+      "source": "L0H0",
+      "status": "IDENTIFIED",
+      "support": 0,
+      "target": "L0H1"
+    }
+  ],
+  "support_definition": "For an identified candidate, support counts member singles whose discovery-partition margin-drop is positive above 1e-8. Contradiction counts the other member singles. This follows the existing Q.H1 member-sign rule. It is not a new selector.",
+  "tracked_edge": [
+    {
+      "candidate": "L0H0->L0H1",
+      "competing_pairs_with_larger_abs_interaction": 6,
+      "contradiction": 2,
+      "effect": -0.0044612884521484375,
+      "member_effects": {
+        "L0H0": -0.001827239990234375,
+        "L0H1": -0.026241302490234375
+      },
+      "partition": "D1",
+      "selected": false,
+      "sign": -1,
+      "source": "L0H0",
+      "support": 0,
+      "target": "L0H1"
+    },
+    {
+      "candidate": "L0H0->L0H1",
+      "competing_pairs_with_larger_abs_interaction": 0,
+      "contradiction": 1,
+      "effect": 0.018068313598632812,
+      "member_effects": {
+        "L0H0": 0.055138587951660156,
+        "L0H1": -0.11706256866455078
+      },
+      "partition": "D2",
+      "selected": true,
+      "sign": 1,
+      "source": "L0H0",
+      "support": 1,
+      "target": "L0H1"
+    },
+    {
+      "candidate": "L0H0->L0H1",
+      "competing_pairs_with_larger_abs_interaction": 0,
+      "contradiction": 1,
+      "effect": 0.025859832763671875,
+      "member_effects": {
+        "L0H0": -0.0026092529296875,
+        "L0H1": 0.038712501525878906
+      },
+      "partition": "D3",
+      "selected": true,
+      "sign": 1,
+      "source": "L0H0",
+      "support": 1,
+      "target": "L0H1"
+    },
+    {
+      "candidate": "L0H0->L0H1",
+      "competing_pairs_with_larger_abs_interaction": 0,
+      "contradiction": 2,
+      "effect": 0.04992389678955078,
+      "member_effects": {
+        "L0H0": -0.14783191680908203,
+        "L0H1": -0.05074024200439453
+      },
+      "partition": "D4",
+      "selected": true,
+      "sign": 1,
+      "source": "L0H0",
+      "support": 0,
+      "target": "L0H1"
+    }
+  ]
+}

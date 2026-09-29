@@ -1,0 +1,148 @@
+{
+  "buckets": [
+    {
+      "b2_mae": 0.020733038584391277,
+      "bucket": "type:single",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": 0.0,
+      "self_mae": 0.020733038584391277,
+      "sign_accuracy": 0.5
+    },
+    {
+      "b2_mae": 0.030437727769215904,
+      "bucket": "type:pair",
+      "informative": true,
+      "n": 28,
+      "relative_reduction": 0.034779431710594735,
+      "self_mae": 0.029379120894840786,
+      "sign_accuracy": 0.7857142857142857
+    },
+    {
+      "b2_mae": 0.042908032735188804,
+      "bucket": "sign:positive",
+      "informative": true,
+      "n": 5,
+      "relative_reduction": -0.03103269445905591,
+      "self_mae": 0.04423958460489909,
+      "sign_accuracy": 0.2
+    },
+    {
+      "b2_mae": 0.025921952339910695,
+      "bucket": "sign:negative",
+      "informative": true,
+      "n": 31,
+      "relative_reduction": 0.04517126885610003,
+      "self_mae": 0.024751024861489578,
+      "sign_accuracy": 0.8064516129032258
+    },
+    {
+      "bucket": "sign:zero",
+      "informative": false,
+      "n": 0
+    },
+    {
+      "bucket": "magnitude:at_or_below_1e-4",
+      "informative": false,
+      "n": 0
+    },
+    {
+      "b2_mae": 0.028281130172588202,
+      "bucket": "magnitude:above_1e-4",
+      "informative": true,
+      "n": 36,
+      "relative_reduction": 0.0291134370255754,
+      "self_mae": 0.027457769270296455,
+      "sign_accuracy": 0.7222222222222222
+    },
+    {
+      "b2_mae": 0.035472571849823,
+      "bucket": "target:L0H0",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": 0.11164264674500236,
+      "self_mae": 0.031512320041656494,
+      "sign_accuracy": 0.75
+    },
+    {
+      "b2_mae": 0.04703285296758016,
+      "bucket": "target:L0H1",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": 0.04841311045221002,
+      "self_mae": 0.04475584626197815,
+      "sign_accuracy": 0.625
+    },
+    {
+      "b2_mae": 0.028611103693644207,
+      "bucket": "target:L0H2",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": -0.018076878206499163,
+      "self_mae": 0.02912830313046773,
+      "sign_accuracy": 0.625
+    },
+    {
+      "b2_mae": 0.03580111265182495,
+      "bucket": "target:L0H3",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": 0.0309676463390067,
+      "self_mae": 0.0346924364566803,
+      "sign_accuracy": 0.5
+    },
+    {
+      "b2_mae": 0.023550997177759807,
+      "bucket": "target:L1H0",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": 0.00462939333645746,
+      "self_mae": 0.023441970348358158,
+      "sign_accuracy": 0.5
+    },
+    {
+      "b2_mae": 0.0213398536046346,
+      "bucket": "target:L1H1",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": 0.0326463824517954,
+      "self_mae": 0.020643184582392376,
+      "sign_accuracy": 1.0
+    },
+    {
+      "b2_mae": 0.020852466424306236,
+      "bucket": "target:L1H2",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": -0.0010900023724699768,
+      "self_mae": 0.02087519566218058,
+      "sign_accuracy": 1.0
+    },
+    {
+      "b2_mae": 0.02113617459932963,
+      "bucket": "target:L1H3",
+      "informative": true,
+      "n": 8,
+      "relative_reduction": -0.00953123112636236,
+      "self_mae": 0.021337628364562992,
+      "sign_accuracy": 1.0
+    }
+  ],
+  "decision_buckets": [
+    "type:single",
+    "type:pair",
+    "sign:positive",
+    "sign:negative",
+    "magnitude:above_1e-4"
+  ],
+  "diagnostic_reuse": true,
+  "in_distribution_vs_ood": {
+    "reason": "the frozen Q split has no OOD bucket",
+    "status": "NOT_AVAILABLE"
+  },
+  "regime": {
+    "reason": "q_run_001 stores validation means, not per-regime residuals",
+    "status": "NOT_AVAILABLE"
+  },
+  "status": "global"
+}

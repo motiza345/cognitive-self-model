@@ -1,0 +1,290 @@
+{
+  "floor": 0.0001,
+  "floor_rule": "max(1e-4, 10 * max abs alpha=0 drop), from configs/m22_1_preflight.json",
+  "holdout_used": false,
+  "label": "SIGNAL_CONTEXT_DEPENDENT",
+  "null": "same catalog slots at alpha 0, which is already on the M22.1 magnitude grid",
+  "rows": [
+    {
+      "context_dependence": {
+        "completion": 0.09634733200073242,
+        "instruction": -0.07522058486938477,
+        "syntax": -0.04303598403930664
+      },
+      "effect_distribution": {
+        "max": 0.11749839782714844,
+        "mean": -0.007303078969319661,
+        "min": -0.14783191680908203,
+        "n": 6,
+        "std": 0.09739106394727491
+      },
+      "intervention": "L0H0",
+      "normalized_effect": 0.07498715665816492,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": -0.007303078969319661,
+      "regime_conflict": true,
+      "regime_means": {
+        "completion": 0.09634733200073242,
+        "instruction": -0.07522058486938477,
+        "syntax": -0.04303598403930664
+      },
+      "separable": true,
+      "sign": -1,
+      "sign_consistency": 0.5,
+      "signal_to_noise": 0.07498715665816492,
+      "std": 0.09739106394727491,
+      "variance": 0.00948501933678219
+    },
+    {
+      "context_dependence": {
+        "completion": -0.06371450424194336,
+        "instruction": -0.0060138702392578125,
+        "syntax": -0.0795893669128418
+      },
+      "effect_distribution": {
+        "max": 0.038712501525878906,
+        "mean": -0.04977258046468099,
+        "min": -0.15542984008789062,
+        "n": 6,
+        "std": 0.06048386169019027
+      },
+      "intervention": "L0H1",
+      "normalized_effect": 0.8229067899074554,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": -0.04977258046468099,
+      "regime_conflict": false,
+      "regime_means": {
+        "completion": -0.06371450424194336,
+        "instruction": -0.0060138702392578125,
+        "syntax": -0.0795893669128418
+      },
+      "separable": true,
+      "sign": -1,
+      "sign_consistency": 0.8333333333333334,
+      "signal_to_noise": 0.8229067899074554,
+      "std": 0.06048386169019027,
+      "variance": 0.0036582975249580666
+    },
+    {
+      "context_dependence": {
+        "completion": 0.042964935302734375,
+        "instruction": -0.06976699829101562,
+        "syntax": 0.013933658599853516
+      },
+      "effect_distribution": {
+        "max": 0.0623626708984375,
+        "mean": -0.004289468129475911,
+        "min": -0.1309652328491211,
+        "n": 6,
+        "std": 0.060974360276101765
+      },
+      "intervention": "L0H2",
+      "normalized_effect": 0.07034871887220309,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": -0.004289468129475911,
+      "regime_conflict": true,
+      "regime_means": {
+        "completion": 0.042964935302734375,
+        "instruction": -0.06976699829101562,
+        "syntax": 0.013933658599853516
+      },
+      "separable": true,
+      "sign": -1,
+      "sign_consistency": 0.3333333333333333,
+      "signal_to_noise": 0.07034871887220309,
+      "std": 0.060974360276101765,
+      "variance": 0.003717872611079857
+    },
+    {
+      "context_dependence": {
+        "completion": 0.051741600036621094,
+        "instruction": 0.045259952545166016,
+        "syntax": -0.04810595512390137
+      },
+      "effect_distribution": {
+        "max": 0.15321636199951172,
+        "mean": 0.016298532485961914,
+        "min": -0.06269645690917969,
+        "n": 6,
+        "std": 0.07743712616076547
+      },
+      "intervention": "L0H3",
+      "normalized_effect": 0.21047439766972886,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": 0.016298532485961914,
+      "regime_conflict": true,
+      "regime_means": {
+        "completion": 0.051741600036621094,
+        "instruction": 0.045259952545166016,
+        "syntax": -0.04810595512390137
+      },
+      "separable": true,
+      "sign": 1,
+      "sign_consistency": 0.5,
+      "signal_to_noise": 0.21047439766972886,
+      "std": 0.07743712616076547,
+      "variance": 0.005996508508038308
+    },
+    {
+      "context_dependence": {
+        "completion": 0.07271766662597656,
+        "instruction": -0.005671024322509766,
+        "syntax": -0.03691744804382324
+      },
+      "effect_distribution": {
+        "max": 0.0732107162475586,
+        "mean": 0.010043064753214518,
+        "min": -0.062319278717041016,
+        "n": 6,
+        "std": 0.05597399790734818
+      },
+      "intervention": "L1H0",
+      "normalized_effect": 0.17942375261167615,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": 0.010043064753214518,
+      "regime_conflict": true,
+      "regime_means": {
+        "completion": 0.07271766662597656,
+        "instruction": -0.005671024322509766,
+        "syntax": -0.03691744804382324
+      },
+      "separable": true,
+      "sign": 1,
+      "sign_consistency": 0.5,
+      "signal_to_noise": 0.17942375261167615,
+      "std": 0.05597399790734818,
+      "variance": 0.0031330884417318182
+    },
+    {
+      "context_dependence": {
+        "completion": -0.03162527084350586,
+        "instruction": -0.06434202194213867,
+        "syntax": -0.06480598449707031
+      },
+      "effect_distribution": {
+        "max": -0.027823448181152344,
+        "mean": -0.05359109242757162,
+        "min": -0.100860595703125,
+        "n": 6,
+        "std": 0.026509687544518375
+      },
+      "intervention": "L1H1",
+      "normalized_effect": 2.021566355226736,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": -0.05359109242757162,
+      "regime_conflict": false,
+      "regime_means": {
+        "completion": -0.03162527084350586,
+        "instruction": -0.06434202194213867,
+        "syntax": -0.06480598449707031
+      },
+      "separable": true,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "signal_to_noise": 2.021566355226736,
+      "std": 0.026509687544518375,
+      "variance": 0.0007027635337079926
+    },
+    {
+      "context_dependence": {
+        "completion": -0.029954910278320312,
+        "instruction": -0.02984905242919922,
+        "syntax": -0.02835369110107422
+      },
+      "effect_distribution": {
+        "max": -0.02597808837890625,
+        "mean": -0.029385884602864582,
+        "min": -0.03372001647949219,
+        "n": 6,
+        "std": 0.00274371701209568
+      },
+      "intervention": "L1H2",
+      "normalized_effect": 10.710246163622879,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": -0.029385884602864582,
+      "regime_conflict": false,
+      "regime_means": {
+        "completion": -0.029954910278320312,
+        "instruction": -0.02984905242919922,
+        "syntax": -0.02835369110107422
+      },
+      "separable": true,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "signal_to_noise": 10.710246163622879,
+      "std": 0.00274371701209568,
+      "variance": 7.5279830424632456e-06
+    },
+    {
+      "context_dependence": {
+        "completion": -0.1093900203704834,
+        "instruction": -0.10521697998046875,
+        "syntax": -0.11154985427856445
+      },
+      "effect_distribution": {
+        "max": -0.09339046478271484,
+        "mean": -0.1087189515431722,
+        "min": -0.11975812911987305,
+        "n": 6,
+        "std": 0.010029521236788694
+      },
+      "intervention": "L1H3",
+      "normalized_effect": 10.839894445248955,
+      "null_distribution": {
+        "max_abs": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "raw_effect": -0.1087189515431722,
+      "regime_conflict": false,
+      "regime_means": {
+        "completion": -0.1093900203704834,
+        "instruction": -0.10521697998046875,
+        "syntax": -0.11154985427856445
+      },
+      "separable": true,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "signal_to_noise": 10.839894445248955,
+      "std": 0.010029521236788694,
+      "variance": 0.0001005912962391954
+    }
+  ],
+  "split": "discovery"
+}
