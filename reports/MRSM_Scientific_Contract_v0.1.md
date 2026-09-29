@@ -2,11 +2,11 @@
 
 Version: 0.1
 
-Status: `DRAFT — NOT FROZEN`
+Status: `DRAFT / NOT FROZEN`
 
 Not a preregistration.
 
-P2.1 (`reports/P2_1_decision_resolution.md`) names the governing frozen rule for the terminal tree, the planted mechanism, and the run counters. `DEC-010-A1` is proposed and not applied. The H3 family is still `DECISION_REQUIRED`. Numerical H1–H4 bars copied from the implementation specification remain `PROPOSED — NOT FROZEN`.
+P2.1 names the governing frozen rules. P2.2 adds operational definitions for Q.H1 and for the H3 family inside this draft. `DEC-010-A1` remains `PROPOSED / NOT APPLIED`. Concrete transformation parameters and every H1–H4 numerical bar remain deferred. DEC-011 was not amended.
 
 No MRSM code, planted execution, Qwen evaluation, or threshold edit was done to produce this draft.
 
@@ -160,7 +160,7 @@ The specification says to report, descriptively:
 
 Those reports are not verified mechanism identity.
 
-DEC-010 still requires a `Q.H1` key with status `PASS`, `FAIL`, or `NOT_EVALUATED`, and its GO rule requires `PASS`. P2.1 keeps that key. `DEC-010-A1` would state that `Q.H1` PASS is diagnostic or transfer evidence and is not verified mechanism identity. That amendment is `PROPOSED / NOT APPLIED`. The numeric diagnostic bar remains deferred by DEC-011. Until the amendment is applied, a Q.H1 narrative must not be entered as `PASS`.
+DEC-010 still requires a `Q.H1` key with status `PASS`, `FAIL`, or `NOT_EVALUATED`, and its GO rule requires `PASS`. P2.1 keeps that key. The observable quantities are in `## Q.H1 Operational Definition` below. They are a metric vector, not a pass bar. `DEC-010-A1` remains `PROPOSED / NOT APPLIED`. The numeric diagnostic bar remains deferred by DEC-011. Until the amendment is applied, a Q.H1 narrative must not be entered as `PASS`.
 
 ## 7. H2 — Counterfactual Prediction
 
@@ -196,7 +196,7 @@ H3 tests whether the learned mechanism object is tied to one coordinate system. 
 - On P: mechanism identity agreement between the canonical and transformed representations, and agreement of causal-effect signs.
 - On Q: functional invariance only. Prediction agreement and effect-sign agreement. Q-H3 is not proof of true mechanism identity. Specification section 11.
 
-**Transformation family.** Not frozen. DEC-011 defers the H3 components and their PASS combination. The specification asks for the phase rotation where applicable and for at least one additional invertible transformation, also unnamed.
+**Transformation family.** The draft names T1, T2, and T3 in `## H3 Transformation Family`. That naming is not a DEC freeze. DEC-011 still defers the PASS combination. The specification's phase-rotation formula is not one of the selected parameters.
 
 **Phase rotation, if a later decision retains it.** The specification writes
 
@@ -206,7 +206,7 @@ H3 tests whether the learned mechanism object is tied to one coordinate system. 
 
 This is an invertible linear map. Applying it twice sends `[X, Y]` to `[-X, -Y]`. Applying it four times returns `[X, Y]`. It changes the coordinates of a two-dimensional feature and does not, by itself, edit the planted edges. H3 then asks whether the mechanism id (P) or the predictions (Q) agree across the two coordinate systems. Agreement is a statement about the self-model's representation, not a replay of an old A4 outcome. The A4 outcome is not the target and is not a pass label.
 
-That formula is `PROPOSED — NOT FROZEN`. The specification's reason for requiring it is the M18.7/A4 failure. DEC-011 says that reason cannot be the basis of H3. P2.1 marks the phase-rotation justification ineligible and does not freeze any replacement family. The family remains `DECISION_REQUIRED`. See `reports/P2_1_decision_resolution.md` section 6.
+That formula is `PROPOSED — NOT FROZEN`. The specification's reason for requiring it is the M18.7/A4 failure. DEC-011 says that reason cannot be the basis of H3. P2.2 does not adopt the formula. The draft families are T1–T3, without matrices. See `## H3 Transformation Family`.
 
 Proposed P pass conjuncts, `PROPOSED — NOT FROZEN`: identity agreement >= 90%, causal-effect sign agreement >= 90%, counterfactual MAE degradation <= 10%. The Q phrase "no material performance collapse" has no frozen number.
 
@@ -385,7 +385,222 @@ P2.1 assigns the governing rules. This section records those assignments. It doe
 | Terminal tree | `RESOLVED` | DEC-010. Specification §1.2 and §24 do not define another tree. GO still requires all eight keys, including `Q.H1` |
 | Q.H1 meaning | `RESOLVED_WITH_AMENDMENT_REQUIRED` | `P.H1` is the truth-validating discovery test. `Q.H1` is diagnostic / transfer evidence. `Q.H1 PASS` is not verified mechanism discovery. `DEC-010-A1` is `PROPOSED / NOT APPLIED`. Until it is applied, do not record `Q.H1` as `PASS` |
 | Planted mechanism | `RESOLVED` | `P_SPEC.md` L0H0 and L1H1. No replacement authorized |
-| H3 family | `DECISION_REQUIRED` | The invariance requirement does not depend on M18.7. No transformation family is frozen |
+| H3 family | Draft names three families. Not a DEC freeze | T1 affine, T2 permutation, T3 orthogonal. Parameters and the PASS combination stay deferred. M18.7 is not the reason |
 | Run accounting | `RESOLVED` | DEC-011. Full run = locked-holdout read. 8 full runs. Q GPU sub-limit 2. Clocks not started |
 
 The executable DEC-010 function remains the frozen table. This draft does not wrap it and does not replace it. The P2.0 conflict list in `reports/P2_0_contract_conflicts.md` is the record of the disagreement. P2.1 does not delete that record.
+
+## Q.H1 Operational Definition
+
+P.H1 is a ground-truth-validating discovery gate. It compares a discovered object with the frozen planted mechanism in `P_SPEC.md`.
+
+Q.H1 is a diagnostic/transfer gate. It asks whether the candidate self-model on Q produces intervention-linked predictions that can be checked against executed interventions, using the same observable behavioral contract shape as P. Q is not ground-truth mechanism validation.
+
+```text
+Q.H1 PASS
+≠
+verified mechanism discovery on Q
+```
+
+```text
+Q.H1 FAIL
+≠
+proof that the method cannot discover mechanisms on real models
+```
+
+A Q failure is evidence against the current transfer of the method under the tested scope. It is not a universal impossibility claim.
+
+For every Q holdout claim the artifact must contain:
+
+- `claim_id`
+- representation or mechanism hypothesis
+- intervention
+- predicted behavioral delta
+- predicted direction
+- uncertainty
+- applicable regime
+- evidence references
+- falsification status
+
+The prediction is then compared with an intervention that is executed after that prediction is recorded.
+
+The observable vector, with no composite score and no numeric pass bar, is:
+
+```text
+Q_H1_diagnostic = {
+  "prediction_quality": sign correctness and MAE on the pre-registered outcome,
+  "counterfactual_consistency": agreement among predictions that share a hypothesis and differ only by a declared intervention,
+  "falsification_behavior": whether a contradicted prediction is marked falsified,
+  "abstention_quality": whether high uncertainty or inapplicability declines the claim instead of asserting it,
+  "scope_consistency": whether the stated regime matches the episode the intervention was applied to,
+  "status": "DIAGNOSTIC_ONLY"
+}
+```
+
+`prediction_quality` has two recorded parts, sign correctness and MAE. They stay separate entries in the vector. No weight combines them. Abstention applies when the claim records uncertainty or an applicability decision. No abstention policy threshold is set here.
+
+The exact numerical pass threshold remains deferred.
+
+## Q.H1 Leakage Boundary
+
+The Q arm may not use:
+
+- hidden mechanistic labels
+- manually selected correct heads
+- post-hoc mechanism labels
+- unpublished ground-truth circuit annotations
+- outcome-derived mechanism identity labels
+- test intervention outcomes when constructing the pre-intervention prediction
+
+The Q model may use only the observations and evidence the rest of this contract already permits.
+
+| Information class | What it contains | When it may be used |
+| --- | --- | --- |
+| Train / discovery | Training-split observations, training-split outcomes, and hypotheses fit on that split | Before the holdout prediction is issued |
+| Locked holdout | Holdout episode identity and the pre-intervention observation the contract allows | As input to the prediction. Not as a source of outcome labels |
+| Post-intervention outcome | The behavioral result of executing the intervention | Only after the prediction artifact for that `claim_id` exists. Used to score the vector. Not used to build the prediction |
+
+The prediction must be generated before the corresponding intervention outcome is observed. A run artifact is testable on this point when each claim records a prediction timestamp or write order that precedes the outcome record for the same `claim_id`. This phase does not create those artifacts.
+
+## H3 Representation Invariance
+
+H3 is not justified by M18.7 or by A4. The historical phase-rotation result is not evidence for this gate.
+
+If two internal representations encode the same underlying causal state or mechanism and differ only by an allowed invertible representation transformation, the self-model's causal prediction should remain invariant after the declared handling of that transformation.
+
+The invariant is not that raw internal vectors stay identical.
+
+The invariant is that these stay equivalent:
+
+- predicted causal consequence
+- mechanism identity at the allowed abstraction level
+- scope
+- falsification behavior
+
+H3 does not ask the raw self-model parameters to stay numerically identical.
+
+Four properties stay distinct:
+
+| Property | What it is | What it is not |
+| --- | --- | --- |
+| A. Mechanism discovery | Recovering a mechanism object from observations | A coordinate identity |
+| B. Mechanism identity | On P, a match to the frozen L0H0/L1H1 definition. On Q, a hypothesis label only | A proof that the Q hypothesis is the true circuit |
+| C. Representation invariance | Equivalence of the invariant list across an allowed transformation of coordinates | Identity of raw vectors |
+| D. Predictive invariance | Equivalence of the causal prediction across that same transformation | Mechanism-identity truth on Q |
+
+## H3 Transformation Family
+
+The draft names three families. This is not a DEC freeze and not a numerical parameterization. DEC-011 still defers the PASS combination. No matrix, permutation, subspace, or offset is chosen.
+
+### T1 — invertible affine reparameterization
+
+For a representation `x`:
+
+```text
+x' = A x + b
+```
+
+`A` is invertible. The same map is applied at the representation interface. The underlying causal semantics of the task stay in place. `A` and `b` are not selected in this phase.
+
+### T2 — permutation / relabeling of representation coordinates
+
+```text
+x' = P x
+```
+
+`P` is a permutation matrix. Coordinate identity changes. The encoded causal state does not. The particular permutation is not selected in this phase.
+
+### T3 — invertible orthogonal transformation
+
+```text
+x' = Q x
+```
+
+with
+
+```text
+Q^T Q = I
+```
+
+The coordinate basis changes. The represented state does not. `Q` is not selected in this phase.
+
+A transformation that edits the planted edges, the intervention, or the task labels is not an H3 transformation. It is a different system.
+
+Every H3 transformation must satisfy:
+
+1. invertibility
+2. a known mapping
+3. preservation of task input and output semantics
+4. no access to test outcomes during selection
+5. no transformation-specific threshold tuning
+6. identical intervention semantics before and after the transformation
+7. evaluation on held-out examples that were locked before the run
+
+## H3 Evaluation Metrics
+
+No single H3 score is defined. The record for each paired comparison contains at least:
+
+- prediction equivalence
+- sign agreement
+- normalized prediction error difference
+- mechanism-id consistency at the declared abstraction level
+- scope consistency
+- uncertainty consistency
+- falsification consistency
+
+The comparison is paired:
+
+```text
+original representation
+        vs
+transformed representation
+```
+
+on identical locked holdout cases. No numeric equivalence cutoff is set. Threshold status is deferred.
+
+## P/Q Epistemic Boundary
+
+```text
+P = ground truth known
+Q = ground truth unknown
+```
+
+| Property | P ground truth? | Q ground truth? | What can be claimed? |
+| --- | --- | --- | --- |
+| Discovery | yes | no | P discovery can be scored against the frozen planted mechanism. Q discovery cannot be scored as true or false mechanism identity |
+| Mechanism identity | yes | no | P identity is L0H0 and L1H1 as written in `P_SPEC.md`. A Q hypothesis is not an identity verdict |
+| Prediction | yes, against the planted outcome | empirical outcome only | A Q prediction can be right or wrong about the observed behavior. That does not identify the Q mechanism |
+| Representation invariance | testable against the planted identity and the outcome | testable as prediction, scope, and falsification equivalence only | Equivalence under T1–T3. Not uniqueness of the representation |
+| Transferability | partially testable, by moving a P-built procedure onto new P episodes | diagnostic | Q results speak to transfer under the tested scope. They do not establish mechanism identity |
+
+Q prediction success does not prove Q mechanism identity.
+
+## Non-Claims
+
+H3 does not prove:
+
+- that the representation is uniquely identified
+- that the mechanism is the only possible causal explanation
+- that all representation transformations preserve semantics
+- that arbitrary neural representations are interchangeable
+- that success on P automatically proves success on Q
+- that representation invariance alone proves self-model validity
+
+H3 only tests the declared families under the declared conditions.
+
+Q.H1 does not prove that a Qwen mechanism is the true mechanism. Q.H1 failure does not prove that no method can discover mechanisms.
+
+The absent pinned Qwen snapshot remains `REPLAY_BLOCKED`. That block is not a scientific failure and is not a Q.H1 result.
+
+## Deferred Decisions
+
+- Numerical H1–H4 thresholds, including every Q.H1 and H3 cutoff. Status: `PROPOSED — NOT FROZEN` where the implementation specification stated a number, and unset where it did not.
+- Final approval and application of `DEC-010-A1`.
+- Final preregistration freeze.
+- Qwen execution, which still waits on the pinned offline snapshot and on DEC-011's Q full-run preconditions.
+- `p_freeze`. `p_construction.outcome` is null. The MRSM clock has not started.
+- Locked holdout membership for the MRSM run.
+- Concrete `A`, `b`, `P`, and `Q` for T1–T3, and the PASS combination DEC-011 deferred.
+
+MRSM remains not ready for scientific execution.
+

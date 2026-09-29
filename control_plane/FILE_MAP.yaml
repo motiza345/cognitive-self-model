@@ -186,6 +186,13 @@ files:
   sha256: d9e1cf5dc3b88535cda0516b9b24ae3510082b7fed452f2e8adb86c574e8039a
   superseded_sha256: 3f9d2067149bf50ae99c5dfde1f11ffce9a232d8a7f1aac3f6ee82316deb07bb
   superseded_note: Preregistration before the revision_resolution fix
+- path: configs/mrsm_operational_contract_v0.1.yaml
+  category: CONTRACT
+  immutable: false
+  milestone: null
+  role: Draft operational definitions for Q.H1 and H3. Not a preregistration. No numeric thresholds.
+  produced_by: P2.2 operational definition resolution
+  consumed_by: scripts/validate_mrsm_operational_contract.py
 - path: configs/m22_1_preflight.json
   category: CONTRACT
   immutable: true
@@ -428,6 +435,27 @@ files:
   role: Freeze readiness after P2.1. Status NOT_READY.
   produced_by: P2.1 decision resolution
   consumed_by: UNKNOWN
+- path: reports/P2_2_DEC010_A1_final_proposal.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Final DEC-010-A1 text. Not applied.
+  produced_by: P2.2 operational definition resolution
+  consumed_by: UNKNOWN
+- path: reports/P2_2_operational_definition_resolution.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: P2.2 operational definitions for Q.H1 and H3. No scientific run.
+  produced_by: P2.2 operational definition resolution
+  consumed_by: UNKNOWN
+- path: reports/P2_2_repository_preflight.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Preflight inventory before the P2.2 edits.
+  produced_by: P2.2 operational definition resolution
+  consumed_by: UNKNOWN
 - path: reports/M22_1/README.md
   category: REPORT
   immutable: true
@@ -605,6 +633,13 @@ files:
   milestone: M22.1-R
   role: M22.1-R harness entrypoint. Default invocation does not load Qwen.
   produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: scripts/validate_mrsm_operational_contract.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Deterministic check of the draft operational contract. Does not load a model.
+  produced_by: P2.2 operational definition resolution
   consumed_by: UNKNOWN
 - path: scripts/run_m22_1_1_audit.py
   category: ACTIVE
@@ -1247,6 +1282,13 @@ files:
   milestone: M22.1-R
   role: Engineering tests for revision pin, fallback, weights, comparator, and the execution record.
   produced_by: UNKNOWN
+  consumed_by: UNKNOWN
+- path: tests/test_mrsm_operational_contract.py
+  category: ACTIVE
+  immutable: false
+  milestone: null
+  role: Unit tests for the draft Q.H1 and H3 operational contract.
+  produced_by: P2.2 operational definition resolution
   consumed_by: UNKNOWN
 - path: tests/test_npz_contract.py
   category: CONTRACT
