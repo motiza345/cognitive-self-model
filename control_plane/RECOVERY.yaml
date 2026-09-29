@@ -6,7 +6,108 @@ recovery_grade_criteria:
   ABSENT: no files, report, or reconstructable pointer
   chain_rule: recovery_grade_chain is the worst grade over self and all upstream depends_on (ABSENT < POINTER_ONLY < PARTIAL
     < EXACT)
-execution_records: []
+execution_records:
+  - block_reason: local snapshot for pinned revision 060db6499f32faf8b98477b0a26969ef7d8b9987
+      is absent at /home/ubuntu/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B/snapshots/060db6499f32faf8b98477b0a26969ef7d8b9987
+    block_reasons:
+    - local snapshot for pinned revision 060db6499f32faf8b98477b0a26969ef7d8b9987 is
+      absent at /home/ubuntu/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B/snapshots/060db6499f32faf8b98477b0a26969ef7d8b9987
+    comparison:
+      performed: false
+    comparison_performed: false
+    config_path: configs/m22_1_r_replay.yaml
+    config_sha256: d9e1cf5dc3b88535cda0516b9b24ae3510082b7fed452f2e8adb86c574e8039a
+    cpu_count: 4
+    cuda_available: false
+    cuda_version: N/A
+    cuda_version_reason: torch.cuda.is_available() is false
+    dec007_success: false
+    entrypoint: scripts/run_m22_1_r_harness.py
+    execute_forward_requested: false
+    expected_weight_hashes: ABSENT_NO_REFERENCE_RECORDED
+    failure_class: prerequisite
+    forward_executed: false
+    git_branch: cursor/m22-1-r-harness-4e19
+    git_commit: 74efd6bbe960834f4936878c03ecf821c6e69c4b
+    git_dirty: false
+    gpu_identity: N/A
+    gpu_identity_reason: cuda_available is false
+    holdout_identity: M22.1 preflight has no separate holdout file. The frozen prompt
+      manifest recorded in reports/M22_1/manifest.json is the split identity.
+    hub_recheck: not_executed_offline_phase
+    huggingface_cache_root: /home/ubuntu/.cache/huggingface/hub
+    invocation: PYTHONPATH=src python3 scripts/run_m22_1_r_harness.py
+    local_snapshot_identity: /home/ubuntu/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B/snapshots/060db6499f32faf8b98477b0a26969ef7d8b9987
+    local_snapshot_present: false
+    machine: x86_64
+    milestone: M22.1-R
+    model_id: Qwen/Qwen2.5-0.5B
+    model_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+    nondeterministic_fields:
+    - timestamp
+    numpy: 2.4.4
+    os: Linux-6.12.94+-x86_64-with-glibc2.39
+    preflight_config_path: configs/m22_1_preflight.json
+    preflight_config_sha256: 4c52fe878cd3582a3df873b43eab00b545623f98b25053a9c1c00801333716ca
+    python: 3.12.3
+    record_id: M22.1-R-harness
+    recorded_revision_in_config: 060db6499f32faf8b98477b0a26969ef7d8b9987
+    reference_artifacts:
+    - expected_sha256: 39a83b308aa819c07e65e07e1c5c41e780255d42df1a40669fc34b75a26dfddc
+      match: true
+      path: reports/M22_1/certificate.json
+      sha256: 39a83b308aa819c07e65e07e1c5c41e780255d42df1a40669fc34b75a26dfddc
+    - expected_sha256: 198318848e61d46e127740b255ab19ef7696b5a2b89521f216727e35f2a860d0
+      match: true
+      path: reports/M22_1/frozen_candidate.json
+      sha256: 198318848e61d46e127740b255ab19ef7696b5a2b89521f216727e35f2a860d0
+    - expected_sha256: 078acdc6bd086d22a2e394b7ed5d022bdf00898744fb6054b406ee84df0ff845
+      match: true
+      path: reports/M22_1/intervention_not_validated.json
+      sha256: 078acdc6bd086d22a2e394b7ed5d022bdf00898744fb6054b406ee84df0ff845
+    - expected_sha256: 90fd22defdfff28f5dccd2d8e79a93d61ea3a5c2391e94e1a963fba964ed5303
+      match: true
+      path: reports/M22_1/intervention_preflight_results.json
+      sha256: 90fd22defdfff28f5dccd2d8e79a93d61ea3a5c2391e94e1a963fba964ed5303
+    - expected_sha256: 9f190b9c752dac7952461cf4d266335a75e6a92da5782e4da40466f92c623ffd
+      match: true
+      path: reports/M22_1/manifest.json
+      sha256: 9f190b9c752dac7952461cf4d266335a75e6a92da5782e4da40466f92c623ffd
+    reference_manifest: artifacts/m22_1_r/manifest.sha256
+    reference_manifest_sha256: 89d07e833ebf0f3822146f7b2b787280604053bbb2c66d1d4c6fea34af0b8ec4
+    replay_tier: REPLAY_BLOCKED
+    revision_source: configs/m22_1_r_replay.yaml revision_pin.recorded_revision
+    scientific_claim_updated: false
+    scientific_failure: false
+    seed:
+      forward_seed_consumed: false
+      note: No replay forward was executed, so no additional seed was drawn.
+    timestamp: '2026-09-29T04:17:57.925944+00:00'
+    tolerance_keys:
+    - score_atol
+    - score_rtol
+    - delta_atol
+    - mean_atol
+    - null_atol
+    tolerance_label: PROPOSED
+    tolerance_values:
+      delta_atol: 1.0e-05
+      mean_atol: 1.0e-06
+      null_atol: 1.0e-06
+      score_atol: 1.0e-05
+      score_rtol: 1.0e-05
+    torch: 2.14.0+cpu
+    transformer_lens: 3.9.0
+    transformers: 5.17.0
+    warnings:
+    - The live huggingface_hub.model_info recheck described in configs/m22_1_r_replay.yaml
+      revision_resolution.precondition_recheck was not executed. This phase requires
+      an offline snapshot of the recorded revision and forbids network-fetched weights.
+      The local-cache clause of REPLAY_BLOCKED was evaluated instead.
+    - Tolerance values were read and were not modified.
+    weight_files: []
+    weight_mismatch: none
+    weight_status: local_snapshot_absent
 milestones:
   M18:
     branch: UNKNOWN
