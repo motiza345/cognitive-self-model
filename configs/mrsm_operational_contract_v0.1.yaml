@@ -1,0 +1,29 @@
+version: "0.1"
+status: "DRAFT"
+q_h1:
+  role: "DIAGNOSTIC_TRANSFER"
+  ground_truth_available: false
+  verifies_mechanism_identity: false
+  evaluates:
+    - prediction_quality
+    - counterfactual_consistency
+    - falsification_behavior
+    - abstention_quality
+    - scope_consistency
+  thresholds_status: "DEFERRED"
+h3:
+  role: "REPRESENTATION_INVARIANCE"
+  transformation_family:
+    - invertible_affine
+    - coordinate_permutation
+    - orthogonal_basis_change
+  primary_invariant:
+    - causal_prediction
+    - mechanism_identity_at_declared_abstraction
+    - scope
+    - falsification_behavior
+  thresholds_status: "DEFERRED"
+p_q_boundary:
+  P_ground_truth: true
+  Q_ground_truth: false
+  q_h1_is_mechanism_verification: false
