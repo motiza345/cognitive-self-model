@@ -1,0 +1,13 @@
+{
+  "b2_mae": 0.028281130172588202,
+  "candidate": "L0H0->L0H1",
+  "holdout_used_to_build_oracle": false,
+  "interpretation": "INCONCLUSIVE",
+  "o0_mae": 0.027457769270296455,
+  "o0_source": "diagnostic_reuse of q_run_001 self predictions",
+  "o1_mae": null,
+  "o2_mae": null,
+  "reason": "SelfModelCore.predict returns the stored margin-drop and does not read mechanism.abstraction. P_SPEC defines the planted P edge as an attention restriction on L0H0 and L1H1, not a numeric map from the Q slot label L0H0->L0H1 onto logit-margin drops. No repository function supplies that map. An oracle predictor was not invented, and holdout outcomes were not used to build one.",
+  "status": "ORACLE_INVALID",
+  "tuned_after_predictions": false
+}

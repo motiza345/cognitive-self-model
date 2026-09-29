@@ -283,6 +283,62 @@ files:
   role: Q scientific run q_run_001. Status SCORED. Diagnostic only. Not mechanism verification.
   produced_by: src/mrsm/run_q.py
   consumed_by: reports/MRSM_FINAL_RESULT.md
+- path: artifacts/q_failure/qf1_discovery_stability.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-1 discovery partitions. Diagnostic only. Not an H1 rescore.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: reports/Q_FAILURE_ANALYSIS.md
+- path: artifacts/q_failure/qf2_intervention_signal.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-2 real versus alpha-0 null on discovery prompts. Diagnostic only.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: reports/Q_FAILURE_ANALYSIS.md
+- path: artifacts/q_failure/qf3_representation_audit.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-3 representation comparison. R3 and R4 are NOT_AVAILABLE.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: reports/Q_FAILURE_ANALYSIS.md
+- path: artifacts/q_failure/qf4_oracle_prediction.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-4 oracle audit. Status ORACLE_INVALID. No invented predictor.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: reports/Q_FAILURE_ANALYSIS.md
+- path: artifacts/q_failure/qf5_h2_decomposition.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-5 decomposition of the saved Q validation residuals. Diagnostic reuse.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: reports/Q_FAILURE_ANALYSIS.md
+- path: artifacts/q_failure/qf6_baseline_ceiling.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-6 B2 ceiling audit. Baselines were not changed.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: reports/Q_FAILURE_ANALYSIS.md
+- path: artifacts/q_failure/diagnosis.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF primary bottleneck and leakage flags. Not an MRSM gate record.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: reports/Q_FAILURE_ANALYSIS.md
+- path: artifacts/q_failure/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the QF JSON artifacts.
+  produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: UNKNOWN
 - path: artifacts/m22_1_r/execution_record.json
   category: ARTIFACT
   immutable: true
@@ -637,6 +693,13 @@ files:
   milestone: null
   role: Terminal record of p_run_001 and q_run_001. DEC-010 outcome REDEFINE_SCALE.
   produced_by: P construction failure stop
+  consumed_by: UNKNOWN
+- path: reports/Q_FAILURE_ANALYSIS.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Diagnostic localization of the frozen Q failure. Not an MRSM rerun. Status DIAGNOSTIC_ONLY.
+  produced_by: scripts/run_qf_diagnosis.py
   consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT

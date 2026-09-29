@@ -1,0 +1,58 @@
+{
+  "approximately_linear": "On the saved validation means, B2 is within the frozen 20% band of the self-model. That is the preregistered additive probe, not a new fit.",
+  "b2_information": "8 discovery single-head mean effects; pair prediction is their sum",
+  "b2_mae_max": 0.0883547888861762,
+  "b2_mae_min": 0.02242103550169203,
+  "b2_sees_information_unavailable_to_self_model": false,
+  "discovery_complement_b2_mae": [
+    {
+      "b2_mae": 0.02242103550169203,
+      "holdout_used": false,
+      "partition": "D1",
+      "test": "complement_discovery_prompts",
+      "test_n": 4,
+      "train_n": 2
+    },
+    {
+      "b2_mae": 0.05709353420469496,
+      "holdout_used": false,
+      "partition": "D2",
+      "test": "complement_discovery_prompts",
+      "test_n": 4,
+      "train_n": 2
+    },
+    {
+      "b2_mae": 0.0883547888861762,
+      "holdout_used": false,
+      "partition": "D3",
+      "test": "complement_discovery_prompts",
+      "test_n": 5,
+      "train_n": 1
+    },
+    {
+      "b2_mae": 0.07759477827284073,
+      "holdout_used": false,
+      "partition": "D4",
+      "test": "complement_discovery_prompts",
+      "test_n": 5,
+      "train_n": 1
+    }
+  ],
+  "effective_sample_count_discovery_prompts": 6,
+  "feature_dimensionality_b2": 8,
+  "feature_dimensionality_self": 36,
+  "frozen_validation": {
+    "b2_mae": 0.028281130172588202,
+    "diagnostic_reuse": true,
+    "n_interventions": 36,
+    "relative_reduction": 0.0291134370255754,
+    "self_mae": 0.027457769270296455,
+    "sign_accuracy_b2": 0.7222222222222222,
+    "sign_accuracy_self": 0.7222222222222222,
+    "source": "artifacts/mrsm/q_run_001"
+  },
+  "self_information": "those 8 means plus 28 discovery joint means",
+  "status": "NEAR_CEILING",
+  "test_split_for_frozen_mae": "m22 validation role, diagnostic_reuse, 6 prompts aggregated to 36 intervention means",
+  "train_split": "m22 discovery role, 6 prompts"
+}
