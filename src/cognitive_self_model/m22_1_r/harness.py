@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import platform
+import subprocess
 from datetime import datetime, timezone
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
@@ -133,11 +134,34 @@ def load_reference_bundle(repo: Path) -> dict[str, Any]:
     return bundle
 
 
+def _porcelain(repo: Path) -> str | None:
+    """Return ``git status --porcelain`` text, or None if the command failed.
+
+    A clean worktree produces an empty string. That is a successful read.
+    ``m22_1.runtime_info._git`` collapses empty stdout to None, so the replay
+    path reads status itself and does not change that shared helper.
+    """
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(repo), "status", "--porcelain"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError, OSError):
+        return None
+    return result.stdout
+
+
 def _git_fields(repo: Path, identity: dict[str, Any] | None, block_reasons: list[str]) -> dict[str, Any]:
     current = identity if identity is not None else git_identity(repo)
     commit = current.get("commit")
-    dirty = current.get("dirty")
     branch = current.get("branch")
+    if identity is None:
+        porcelain = _porcelain(repo)
+        dirty = None if porcelain is None else porcelain.strip() != ""
+    else:
+        dirty = current.get("dirty")
     fields: dict[str, Any] = {}
     if not isinstance(commit, str) or not commit:
         fields["git_commit"] = "not_read_git_rev_parse_failed"

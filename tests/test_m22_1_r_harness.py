@@ -4,13 +4,14 @@ from __future__ import annotations
 
 import copy
 import math
+import subprocess
 from pathlib import Path
 
 import pytest
 
 from src.cognitive_self_model.m22_1_r.comparator import compare_bundles
 from src.cognitive_self_model.m22_1_r.config import REQUIRED_REVISION, load_replay_config
-from src.cognitive_self_model.m22_1_r.harness import run_harness, splice_execution_records
+from src.cognitive_self_model.m22_1_r.harness import _git_fields, run_harness, splice_execution_records
 from src.cognitive_self_model.m22_1_r.hashing import file_sha256
 from src.cognitive_self_model.m22_1_r.record import SENTINELS, assert_no_sentinels
 from src.cognitive_self_model.m22_1_r.strict_loader import ReplayBlockedError, load_pinned_revision
@@ -279,6 +280,32 @@ def test_h_harness_does_not_modify_tolerance_configuration(tmp_path: Path):
         "REPLAY_EXACT",
         "REPLAY_NUMERIC_EQUIVALENT",
     ]
+
+
+def _init_repo(path: Path) -> None:
+    subprocess.run(["git", "init"], cwd=path, check=True, capture_output=True)
+    subprocess.run(["git", "config", "user.email", "harness-test@example.com"], cwd=path, check=True)
+    subprocess.run(["git", "config", "user.name", "Harness Test"], cwd=path, check=True)
+    (path / "tracked.txt").write_text("tracked\n")
+    subprocess.run(["git", "add", "tracked.txt"], cwd=path, check=True)
+    subprocess.run(["git", "commit", "-m", "init"], cwd=path, check=True, capture_output=True)
+
+
+def test_clean_porcelain_is_not_an_unreadable_status(tmp_path: Path):
+    _init_repo(tmp_path)
+    reasons: list[str] = []
+    fields = _git_fields(tmp_path, None, reasons)
+    assert fields["git_dirty"] is False
+    assert "dirty_reason" not in fields
+    assert reasons == []
+    assert len(fields["git_commit"]) == 40
+
+    (tmp_path / "extra.txt").write_text("extra\n")
+    reasons = []
+    dirty = _git_fields(tmp_path, None, reasons)
+    assert dirty["git_dirty"] is True
+    assert "porcelain" in dirty["dirty_reason"]
+    assert reasons == ["worktree is dirty"]
 
 
 def test_strict_loader_does_not_call_live_revision_resolution():
