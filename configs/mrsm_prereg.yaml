@@ -1,0 +1,179 @@
+# MRSM preregistration. Numerical fields below are frozen at P2.3.
+# Checkpoint bytes are bound later by artifacts/mrsm/construction/checkpoint_manifest.json
+# at p_freeze, before any holdout metric is computed. Filling that hash is artifact
+# binding, not a threshold change. After p_freeze the fields in this file stay fixed.
+status: PREREGISTERED
+preregistration_id: mrsm-prereg-2026-09-29
+frozen_on: 2026-09-29T16:55:00Z
+authority:
+  terminal_decision: control_plane/DEC-010_decision_table.md
+  amendment: DEC-010-A1 APPLIED
+  scope_budget: control_plane/DEC-011_mrsm_scope.md
+  planted_mechanism_record: artifacts/mrsm/planted_ground_truth.json
+  operational_definitions: configs/mrsm_operational_contract_v0.1.yaml
+post_hoc_threshold_changes: forbidden
+post_hoc_holdout_changes: forbidden
+post_hoc_transform_changes: forbidden
+post_hoc_baseline_changes: forbidden
+post_hoc_metric_changes: forbidden
+
+model:
+  arm_p_substrate: transformer_lens.HookedTransformer
+  arm_p_hyperparameters: control_plane/P_SPEC.md architecture block
+  arm_p_checkpoint: artifacts/mrsm/construction/p_model_state.pt
+  arm_p_checkpoint_sha256: null
+  arm_p_checkpoint_binding: artifacts/mrsm/construction/checkpoint_manifest.json
+  arm_q_model_id: Qwen/Qwen2.5-0.5B
+  arm_q_revision: 060db6499f32faf8b98477b0a26969ef7d8b9987
+  arm_q_revision_substitution: forbidden
+  arm_q_if_exact_snapshot_absent: BLOCKED_NOT_A_SCIENTIFIC_FAILURE
+
+seeds:
+  construction_model_seed: 1729
+  construction_train_seed: 1829
+  discovery_seed: 1929
+  holdout_seed: 424242
+  bootstrap_seed: 1729
+  h3_orthogonal_seed: 17291
+  forbidden_holdout_seeds: [11, 111, 211, 311, 1729, 1829, 1929, 2029]
+
+splits:
+  dataset_version: MRSM_P_v1_layout_v1
+  train: {seed: 1829, n: 8192, role: construction_training_only}
+  discovery: {seed: 1929, n: 512, role: self_model_fit_only}
+  holdout: {seed: 424242, n: 512, role: locked_evaluation, manifest: artifacts/mrsm/holdout_manifest.json}
+
+maximum_runs:
+  dec011_full_runs: 8
+  dec011_q_gpu_full_runs: 2
+  preregistered_p_scientific_runs: 1
+  preregistered_q_scientific_runs: 1
+
+statistical_procedure:
+  name: paired_bootstrap_percentile
+  resamples: 1000
+  seed: 1729
+  interval: 0.95
+  interval_method: percentile
+  h2_statistic: mae_of_strongest_baseline_minus_mae_of_self_model
+  h2_resample_unit: holdout_episodes
+  h2_mae_unit: intervention
+  h2_baseline_selection: full_holdout_mae_then_held_fixed
+  h2_favorable: lower_bound_greater_than_zero
+  h4_statistic: mean_paired_episode_utility_full_minus_consumption_ablation
+  h4_favorable: lower_bound_greater_than_zero
+  sign_zero_floor: 1.0e-8
+
+h1:
+  arm_p:
+    metrics:
+      - {metric: mechanism_f1, threshold: 0.80, direction: greater_or_equal, hard_gate: true, rationale: "Specification section 9 proposed frozen threshold. One coherent set with precision and FDR. Not a P_SPEC construction predicate."}
+      - {metric: causal_edge_precision, threshold: 0.80, direction: greater_or_equal, hard_gate: true, rationale: "Specification section 9. All three H1 conjuncts are required."}
+      - {metric: false_discovery_rate, threshold: 0.20, direction: less_or_equal, hard_gate: true, rationale: "Specification section 9. No single favorable metric compensates for another."}
+    edge_count: 1
+    direction_rule: lower_layer_index_is_upstream_then_lower_head_index
+    sign_rule: both_endpoints_positive_margin_drop_on_holdout
+    if_not_identifiable: FAIL
+  arm_q:
+    role: DIAGNOSTIC_TRANSFER
+    verifies_mechanism_identity: false
+    score_against_mechanism_label: forbidden
+    hard_gate_for_dec010_key: true
+    epistemic_meaning: "PASS is diagnostic/transfer evidence only. It is not ground-truth mechanism verification."
+    pass_iff:
+      - candidate_identifiable_on_discovery
+      - same_candidate_on_both_discovery_halves
+      - both_member_effects_positive_on_both_halves
+      - evidence_records_exist
+    fail_if: candidate_emitted_but_reproducibility_or_sign_consistency_fails
+    not_evaluated_if: [NOT_IDENTIFIABLE, ARTIFACT_BLOCKED, NOT_RUN]
+    metrics:
+      - {metric: discovery_half_agreement, threshold: 1.0, direction: equal, hard_gate: true, rationale: "No specification number exists for Q.H1 identity. The diagnostic bar is exact reproducibility of the candidate across two discovery halves, frozen before any Q run. It is not an F1 against a Q label."}
+      - {metric: member_effect_sign_consistency, threshold: 1.0, direction: equal, hard_gate: true, rationale: "Both selected members must show a positive discovery effect on both halves. This is sign consistency of the diagnostic claim, not mechanism verification."}
+
+h2:
+  endpoint: paired_intervention_level_mae_of_margin_drop
+  interventions: all_single_head_ablations_and_all_unordered_pairs
+  prediction_time: before_holdout_execution
+  metrics:
+    - {metric: mae_reduction_vs_strongest_baseline, threshold: 0.20, direction: greater_or_equal, hard_gate: true, rationale: "Specification section 10: self-model MAE at least 20 percent lower than the strongest non-self baseline. Relative reduction (mae_b - mae_s) / mae_b."}
+    - {metric: paired_bootstrap_ci_excludes_zero, threshold: 0.0, direction: lower_bound_greater_than, hard_gate: true, rationale: "Specification section 10. Percentile interval on the paired MAE difference, 1000 resamples, seed 1729."}
+    - {metric: sign_accuracy, threshold: 0.75, direction: greater_or_equal, hard_gate: true, rationale: "Specification section 10."}
+  if_strongest_baseline_mae_is_zero: FAIL
+  holdout_only: true
+
+h3:
+  role: REPRESENTATION_INVARIANCE
+  retraining_per_transform: forbidden
+  readout: frozen_inverse_then_original_causal_units
+  families: [T1, T2, T3]
+  parameters_selected_from_holdout: forbidden
+  t1:
+    family: invertible_affine
+    form: "x' = A x + b"
+    A_diagonal: [1.5, 0.5, 2.0, 0.25, 1.25, 0.75, 1.1, 0.9]
+    b: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
+  t2:
+    family: coordinate_permutation
+    form: "x'_i = x[perm[i]]"
+    perm: [2, 0, 3, 1, 6, 4, 7, 5]
+  t3:
+    family: orthogonal_basis_change
+    form: "x' = Q x"
+    generator: numpy.random.default_rng
+    seed: 17291
+    distribution: standard_normal
+    shape: [8, 8]
+    orthogonalization: qr_positive_diagonal
+    matrix_sha256: 0194bd288a3c6fd1ac054158cf958d507d141a83c973ef50c565a040648bac9a
+  pass_rule: paired
+  if_not_identifiable: NOT_EVALUATED
+  not_identifiable_is_not_pass: true
+  metrics:
+    - {metric: sign_agreement, threshold: 0.90, direction: greater_or_equal, hard_gate: true, rationale: "Specification section 11 causal-effect sign agreement, applied to the paired readout."}
+    - {metric: normalized_prediction_difference, threshold: 0.10, direction: less_or_equal, hard_gate: true, rationale: "Specification section 11 counterfactual MAE degradation bound. Mean absolute paired difference divided by mean absolute original prediction."}
+    - {metric: mechanism_abstraction_consistency, threshold: 1.0, direction: equal, hard_gate: true, rationale: "Recovered abstraction after each frozen transform equals the original abstraction."}
+    - {metric: scope_consistency, threshold: 1.0, direction: equal, hard_gate: true, rationale: "Declared scope string is unchanged by the coordinate transform."}
+
+h4:
+  policy: S1_consumption
+  conditional_on: S1
+  utility: holdout_accuracy_after_chosen_single_head_ablation
+  higher_is_better: true
+  full_policy: choose_single_head_with_minimum_predicted_margin_drop
+  tie_break: lowest_head_index
+  consumption_ablation:
+    access_to_self_model_predictions: false
+    action: L0H3
+    selection: preregistered_constant_before_outcomes
+  candidate_set: all_eight_single_head_ablations
+  same_candidate_set_for_both_conditions: true
+  metrics:
+    - {metric: relative_utility_improvement, threshold: 0.10, direction: greater_or_equal, hard_gate: true, rationale: "Specification section 12. (u_full - u_blind) / max(abs(u_blind), 1e-8)."}
+    - {metric: paired_bootstrap_ci_excludes_zero, threshold: 0.0, direction: lower_bound_greater_than, hard_gate: true, rationale: "Specification section 12. Paired episode correctness difference."}
+  held_out_only: true
+  extra_compute_or_extra_candidates: forbidden
+
+identifiability:
+  min_abs_interaction: 1.0e-4
+  min_relative_gap_vs_second: 0.05
+  label_if_failed: NOT_IDENTIFIABLE
+
+baselines:
+  - {id: B0, name: null, prediction: zero_for_every_intervention}
+  - {id: B1, name: readout_only, prediction: grand_mean_single_head_discovery_effect_and_twice_that_for_pairs}
+  - {id: B2, name: linear_probe, prediction: discovery_single_head_effect_and_additive_sum_for_pairs}
+  - {id: B3, name: cold_start, prediction: zero_for_every_intervention}
+  primary_comparator: lowest_mae_among_B0_B1_B2_B3
+  excluded: [B4, B5]
+
+scope: "P:episodic-two-hop:query-position:n_layers=2:n_heads=4"
+head_order: [L0H0, L0H1, L0H2, L0H3, L1H0, L1H1, L1H2, L1H3]
+
+q_procedure:
+  reuse: configs/m22_1_preflight.json
+  prompts: src/cognitive_self_model/m22_1/prompts.py frozen_prompts
+  intervention: src/cognitive_self_model/m22_1/intervention.py last-token additive residual
+  run_only_if: "P.H1 PASS and P.H2 PASS and P.H3 PASS and P.H4 PASS and exact revision available"
+  do_not_run_if_p_h1_or_p_h2_fail: true
+  maximum_q_runs: 1

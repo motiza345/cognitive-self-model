@@ -2,7 +2,7 @@
 
 Version: 0.1
 
-Status: `DRAFT / NOT FROZEN`
+Status: `FROZEN for execution by configs/mrsm_prereg.yaml (P2.3)`. Earlier sections that say `PROPOSED — NOT FROZEN` are the pre-freeze record. Where they conflict with the preregistration, the preregistration is the numerical authority. DEC-010, including applied amendment DEC-010-A1, remains the terminal authority.
 
 Not a preregistration.
 
@@ -592,15 +592,17 @@ Q.H1 does not prove that a Qwen mechanism is the true mechanism. Q.H1 failure do
 
 The absent pinned Qwen snapshot remains `REPLAY_BLOCKED`. That block is not a scientific failure and is not a Q.H1 result.
 
+## P2.3 numerical freeze
+
+The deferrals below were closed on 2026-09-29 by `configs/mrsm_prereg.yaml` (`status: PREREGISTERED`) and by applying DEC-010-A1. They are not reopened by later result files.
+
+- DEC-010-A1 is APPLIED. The eight-key FIRST_MATCH table is unchanged. Q.H1 PASS is diagnostic/transfer evidence, not verified mechanism discovery.
+- H1–H4 numerical thresholds are the specification's proposed P values, plus the Q.H1 diagnostic reproducibility rule in the preregistration. They are hard gates.
+- H3 parameters are the preregistered T1 diagonal affine map, T2 permutation, and T3 orthogonal matrix from seed 17291. They were not selected from holdout outcomes.
+- H3 PASS is the paired sign, normalized-difference, abstraction, and scope rule in the preregistration. `NOT_IDENTIFIABLE` is not a PASS.
+- `p_freeze` and the locked holdout are recorded when construction meets the P_SPEC causal predicate. They are not implied by this section alone.
+
 ## Deferred Decisions
 
-- Numerical H1–H4 thresholds, including every Q.H1 and H3 cutoff. Status: `PROPOSED — NOT FROZEN` where the implementation specification stated a number, and unset where it did not.
-- Final approval and application of `DEC-010-A1`.
-- Final preregistration freeze.
-- Qwen execution, which still waits on the pinned offline snapshot and on DEC-011's Q full-run preconditions.
-- `p_freeze`. `p_construction.outcome` is null. The MRSM clock has not started.
-- Locked holdout membership for the MRSM run.
-- Concrete `A`, `b`, `P`, and `Q` for T1–T3, and the PASS combination DEC-011 deferred.
-
-MRSM remains not ready for scientific execution.
+Closed by the P2.3 section above. Q execution still requires the pinned Qwen revision and a P result that DEC-010 allows to continue.
 
