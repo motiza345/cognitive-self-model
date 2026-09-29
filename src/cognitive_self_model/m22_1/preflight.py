@@ -45,15 +45,21 @@ def _limitations(bundle: Any, outcome: dict[str, Any], protocol_result: dict[str
     return notes
 
 
-def run_preflight(output_dir: Path | None = None) -> dict[str, Any]:
+def run_preflight(output_dir: Path | None = None, loader=None) -> dict[str, Any]:
+    """Run the frozen preflight.
+
+    The default loader is ``load_qwen``. M22.1-R passes its own fail-closed
+    loader. Callers that omit ``loader`` keep the historical path.
+    """
     config = load_config()
+    load_model = load_qwen if loader is None else loader
     identity = git_identity()
     if identity["branch"] == "main":
         raise RuntimeError("M22.1 must not be executed on main.")
     prompts = frozen_prompts()
     assert_split_integrity(prompts)
     leakage = audit_package_imports()
-    bundle = load_qwen(config)
+    bundle = load_model(config)
     layers = candidate_layers(bundle.n_layers, int(config["n_candidate_layers"]))
     primary = primary_direction(bundle.d_model, int(config["direction_seed"]))
     regenerated = primary_direction(bundle.d_model, int(config["direction_seed"]))
