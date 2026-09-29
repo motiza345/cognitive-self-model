@@ -1,0 +1,126 @@
+{
+  "replication": [
+    {
+      "alpha": -2.0,
+      "context_consistency": true,
+      "effect": -0.05778606732686361,
+      "effect_minus_null": -0.05778606732686361,
+      "n": 6,
+      "null": 0.0,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "snr": 9.762461376634,
+      "variance": 3.5037057115358846e-05
+    },
+    {
+      "alpha": -1.0,
+      "context_consistency": true,
+      "effect": -0.02916296323140462,
+      "effect_minus_null": -0.02916296323140462,
+      "n": 6,
+      "null": 0.0,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "snr": 10.556845542543789,
+      "variance": 7.631237426469144e-06
+    },
+    {
+      "alpha": 0.0,
+      "context_consistency": true,
+      "effect": 0.0,
+      "effect_minus_null": 0.0,
+      "n": 6,
+      "null": 0.0,
+      "sign": 0,
+      "sign_consistency": 0.0,
+      "snr": null,
+      "variance": 0.0
+    },
+    {
+      "alpha": 1.0,
+      "context_consistency": true,
+      "effect": 0.029693762461344402,
+      "effect_minus_null": 0.029693762461344402,
+      "n": 6,
+      "null": 0.0,
+      "sign": 1,
+      "sign_consistency": 1.0,
+      "snr": 12.579531058768536,
+      "variance": 5.571877459765852e-06
+    },
+    {
+      "alpha": 2.0,
+      "context_consistency": true,
+      "effect": 0.059892892837524414,
+      "effect_minus_null": 0.059892892837524414,
+      "n": 6,
+      "null": 0.0,
+      "sign": 1,
+      "sign_consistency": 1.0,
+      "snr": 13.795867733087347,
+      "variance": 1.8847447241417587e-05
+    }
+  ],
+  "validation": [
+    {
+      "alpha": -2.0,
+      "context_consistency": true,
+      "effect": -0.05590716997782389,
+      "effect_minus_null": -0.05590716997782389,
+      "n": 6,
+      "null": 0.0,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "snr": 10.366852893207195,
+      "variance": 2.9083130085736124e-05
+    },
+    {
+      "alpha": -1.0,
+      "context_consistency": true,
+      "effect": -0.028185288111368816,
+      "effect_minus_null": -0.028185288111368816,
+      "n": 6,
+      "null": 0.0,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "snr": 10.56425753542293,
+      "variance": 7.118147733662125e-06
+    },
+    {
+      "alpha": 0.0,
+      "context_consistency": true,
+      "effect": 0.0,
+      "effect_minus_null": 0.0,
+      "n": 6,
+      "null": 0.0,
+      "sign": 0,
+      "sign_consistency": 0.0,
+      "snr": null,
+      "variance": 0.0
+    },
+    {
+      "alpha": 1.0,
+      "context_consistency": true,
+      "effect": 0.028637091318766277,
+      "effect_minus_null": 0.028637091318766277,
+      "n": 6,
+      "null": 0.0,
+      "sign": 1,
+      "sign_consistency": 1.0,
+      "snr": 10.868380504609066,
+      "variance": 6.942695841240088e-06
+    },
+    {
+      "alpha": 2.0,
+      "context_consistency": true,
+      "effect": 0.05772272745768229,
+      "effect_minus_null": 0.05772272745768229,
+      "n": 6,
+      "null": 0.0,
+      "sign": 1,
+      "sign_consistency": 1.0,
+      "snr": 10.949271040084179,
+      "variance": 2.7792222277235447e-05
+    }
+  ]
+}

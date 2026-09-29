@@ -339,6 +339,55 @@ files:
   role: SHA256 list for the QF JSON artifacts.
   produced_by: scripts/run_qf_diagnosis.py
   consumed_by: UNKNOWN
+- path: artifacts/qwen_bridge/experiment_inventory.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Inventory of recorded Qwen experiments. Missing fields are UNKNOWN. Not an MRSM gate.
+  produced_by: scripts/run_qwen_bridge.py
+  consumed_by: reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md
+- path: artifacts/qwen_bridge/identity_audit.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Setup comparison against the frozen MRSM Q protocol. No ranking.
+  produced_by: scripts/run_qwen_bridge.py
+  consumed_by: reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md
+- path: artifacts/qwen_bridge/bridge_reproduction.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Pinned-revision reproduction of M22.1 and the MRSM drop of the same forwards.
+  produced_by: scripts/run_qwen_bridge.py
+  consumed_by: reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md
+- path: artifacts/qwen_bridge/context_stratification.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-2 regime means. Within-regime std and median are UNKNOWN. Not a discovered mechanism.
+  produced_by: scripts/run_qwen_bridge.py
+  consumed_by: reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md
+- path: artifacts/qwen_bridge/intervention_strength.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Historical M22.1 magnitude grid on the reproduced selected layer.
+  produced_by: scripts/run_qwen_bridge.py
+  consumed_by: reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md
+- path: artifacts/qwen_bridge/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF bridge diagnostic decision. Not an MRSM gate result.
+  produced_by: scripts/run_qwen_bridge.py
+  consumed_by: reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md
+- path: artifacts/qwen_bridge/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the Qwen bridge JSON artifacts.
+  produced_by: scripts/run_qwen_bridge.py
+  consumed_by: UNKNOWN
 - path: artifacts/m22_1_r/execution_record.json
   category: ARTIFACT
   immutable: true
@@ -700,6 +749,13 @@ files:
   milestone: null
   role: Diagnostic localization of the frozen Q failure. Not an MRSM rerun. Status DIAGNOSTIC_ONLY.
   produced_by: scripts/run_qf_diagnosis.py
+  consumed_by: UNKNOWN
+- path: reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: QF bridge diagnostic. Does not rescore MRSM. Label QF-BRIDGE-DIAGNOSTIC.
+  produced_by: scripts/run_qwen_bridge.py
   consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT

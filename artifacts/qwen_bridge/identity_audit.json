@@ -1,0 +1,104 @@
+[
+  {
+    "category": "SAME_MODEL_DIFFERENT_SETUP",
+    "checks": {
+      "activation_extraction": "yes",
+      "dtype": "yes",
+      "indexing": "no",
+      "intervention_location": "no",
+      "intervention_magnitude": "yes",
+      "intervention_type": "yes",
+      "model_family": "yes",
+      "model_revision": "yes",
+      "prompt_distribution": "yes",
+      "tokenizer": "unknown"
+    },
+    "experiment_id": "M22.1",
+    "notes": "Same revision, dtype, hook, prompts, alpha 1.0, and outcome texts. Tokenizer name is not stored. Indexing differs because M22.1 selects one layer and MRSM names eight residual slots. The historical metric is intervened-minus-baseline; MRSM stores baseline-minus-intervened."
+  },
+  {
+    "category": "SAME_MODEL_DIFFERENT_SETUP",
+    "checks": {
+      "activation_extraction": "yes",
+      "dtype": "yes",
+      "indexing": "no",
+      "intervention_location": "no",
+      "intervention_magnitude": "yes",
+      "intervention_type": "yes",
+      "model_family": "yes",
+      "model_revision": "yes",
+      "prompt_distribution": "yes",
+      "tokenizer": "unknown"
+    },
+    "experiment_id": "M22.1.1",
+    "notes": "Same revision and layer-23 hook, but eight directions at one layer rather than the MRSM eight-slot map."
+  },
+  {
+    "category": "NOT_COMPARABLE",
+    "checks": {
+      "activation_extraction": "unknown",
+      "dtype": "unknown",
+      "indexing": "unknown",
+      "intervention_location": "unknown",
+      "intervention_magnitude": "unknown",
+      "intervention_type": "no",
+      "model_family": "unknown",
+      "model_revision": "unknown",
+      "prompt_distribution": "unknown",
+      "tokenizer": "unknown"
+    },
+    "experiment_id": "M22.1.2",
+    "notes": "No new forward. Model revision is not restated in the results JSON."
+  },
+  {
+    "category": "SAME_MODEL_DIFFERENT_SETUP",
+    "checks": {
+      "activation_extraction": "unknown",
+      "dtype": "unknown",
+      "indexing": "unknown",
+      "intervention_location": "unknown",
+      "intervention_magnitude": "unknown",
+      "intervention_type": "no",
+      "model_family": "yes",
+      "model_revision": "yes",
+      "prompt_distribution": "unknown",
+      "tokenizer": "unknown"
+    },
+    "experiment_id": "M22.1.3",
+    "notes": "Reconstruction of stored effects, not the MRSM eight-slot protocol."
+  },
+  {
+    "category": "NOT_COMPARABLE",
+    "checks": {
+      "activation_extraction": "unknown",
+      "dtype": "unknown",
+      "indexing": "unknown",
+      "intervention_location": "unknown",
+      "intervention_magnitude": "unknown",
+      "intervention_type": "no",
+      "model_family": "yes",
+      "model_revision": "unknown",
+      "prompt_distribution": "unknown",
+      "tokenizer": "unknown"
+    },
+    "experiment_id": "M22.1.3b",
+    "notes": "Stored-number reinterpretation. Revision is not restated in the README front matter."
+  },
+  {
+    "category": "NOT_COMPARABLE",
+    "checks": {
+      "activation_extraction": "unknown",
+      "dtype": "unknown",
+      "indexing": "unknown",
+      "intervention_location": "unknown",
+      "intervention_magnitude": "unknown",
+      "intervention_type": "unknown",
+      "model_family": "yes",
+      "model_revision": "yes",
+      "prompt_distribution": "unknown",
+      "tokenizer": "unknown"
+    },
+    "experiment_id": "M22.1-R",
+    "notes": "The recorded attempt did not run a forward. The pin matches, and the snapshot was absent at that time."
+  }
+]

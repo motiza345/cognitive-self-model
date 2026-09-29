@@ -1,0 +1,6 @@
+{
+  "bridge_result": "BRIDGE_SIGNAL_PRESENT_BUT_CONTEXT_DEPENDENT",
+  "failure_locus": null,
+  "next_intervention": "Do not modify the Self-Model or rerun MRSM. The next single step is a new preregistered decision to report each frozen regime separately, keeping every regime, before any architectural change.",
+  "primary_diagnosis": "INTERVENTION_CONTEXT_DEPENDENCE_CONFIRMED"
+}

@@ -1,0 +1,341 @@
+{
+  "cancelling_slots": [
+    "L0H0",
+    "L0H2",
+    "L0H3"
+  ],
+  "pooled_versus_stratified": "Stratification reveals opposing regime signs whose absolute values exceed the pooled mean.",
+  "rows": [
+    {
+      "context_cancellation": true,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": -0.007303078969319661,
+      "pooled_std": 0.09739106394727491,
+      "regimes": {
+        "completion": {
+          "mean": 0.09634733200073242,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": 1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": -0.07522058486938477,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": -0.04303598403930664,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 0.6666666666666666,
+      "slot": "L0H0"
+    },
+    {
+      "context_cancellation": false,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": -0.04977258046468099,
+      "pooled_std": 0.06048386169019027,
+      "regimes": {
+        "completion": {
+          "mean": -0.06371450424194336,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": -0.0060138702392578125,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": -0.0795893669128418,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 1.0,
+      "slot": "L0H1"
+    },
+    {
+      "context_cancellation": true,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": -0.004289468129475911,
+      "pooled_std": 0.060974360276101765,
+      "regimes": {
+        "completion": {
+          "mean": 0.042964935302734375,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": 1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": -0.06976699829101562,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": 0.013933658599853516,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": 1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 0.3333333333333333,
+      "slot": "L0H2"
+    },
+    {
+      "context_cancellation": true,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": 0.016298532485961914,
+      "pooled_std": 0.07743712616076547,
+      "regimes": {
+        "completion": {
+          "mean": 0.051741600036621094,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": 1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": 0.045259952545166016,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": 1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": -0.04810595512390137,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 0.6666666666666666,
+      "slot": "L0H3"
+    },
+    {
+      "context_cancellation": false,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": 0.010043064753214518,
+      "pooled_std": 0.05597399790734818,
+      "regimes": {
+        "completion": {
+          "mean": 0.07271766662597656,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": 1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": -0.005671024322509766,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": -0.03691744804382324,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 0.3333333333333333,
+      "slot": "L1H0"
+    },
+    {
+      "context_cancellation": false,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": -0.05359109242757162,
+      "pooled_std": 0.026509687544518375,
+      "regimes": {
+        "completion": {
+          "mean": -0.03162527084350586,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": -0.06434202194213867,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": -0.06480598449707031,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 1.0,
+      "slot": "L1H1"
+    },
+    {
+      "context_cancellation": false,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": -0.029385884602864582,
+      "pooled_std": 0.00274371701209568,
+      "regimes": {
+        "completion": {
+          "mean": -0.029954910278320312,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": -0.02984905242919922,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": -0.02835369110107422,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 1.0,
+      "slot": "L1H2"
+    },
+    {
+      "context_cancellation": false,
+      "intervention_strength": 1.0,
+      "not_a_discovered_mechanism": true,
+      "pooled_mean": -0.1087189515431722,
+      "pooled_std": 0.010029521236788694,
+      "regimes": {
+        "completion": {
+          "mean": -0.1093900203704834,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "instruction": {
+          "mean": -0.10521697998046875,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        },
+        "syntax": {
+          "mean": -0.11154985427856445,
+          "median": "UNKNOWN",
+          "n": 2,
+          "n_source": "frozen discovery split has two prompts in each regime",
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "sign": -1,
+          "std": "UNKNOWN"
+        }
+      },
+      "sign_consistency_across_regimes": 1.0,
+      "slot": "L1H3"
+    }
+  ],
+  "source": "artifacts/q_failure/qf2_intervention_signal.json",
+  "within_regime_median": "UNKNOWN",
+  "within_regime_std": "UNKNOWN"
+}

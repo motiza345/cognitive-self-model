@@ -1,0 +1,284 @@
+{
+  "comparison_rows": [
+    {
+      "control_effect": "UNKNOWN",
+      "historical_effect": 0.029387950897216797,
+      "historical_sign_consistency": 1.0,
+      "historical_snr": 10.697960238423166,
+      "mrsm_effect": -0.029387950897216797,
+      "mrsm_sign_consistency": 1.0,
+      "mrsm_snr": 10.697960238423166,
+      "null_effect": 0.0,
+      "regime_consistency": true,
+      "split": "discovery",
+      "standardized_effect": 10.697960238423166,
+      "variance": 7.546344932052307e-06
+    },
+    {
+      "control_effect": 0.10541534423828125,
+      "historical_effect": 0.028637091318766277,
+      "historical_sign_consistency": 1.0,
+      "historical_snr": 10.868380504609066,
+      "mrsm_effect": -0.028637091318766277,
+      "mrsm_sign_consistency": 1.0,
+      "mrsm_snr": 10.868380504609066,
+      "null_effect": 0.0,
+      "regime_consistency": true,
+      "split": "validation",
+      "standardized_effect": 10.868380504609066,
+      "variance": 6.942695841240088e-06
+    },
+    {
+      "control_effect": 0.10765441258748372,
+      "historical_effect": 0.029693762461344402,
+      "historical_sign_consistency": 1.0,
+      "historical_snr": 12.579531058768536,
+      "mrsm_effect": -0.029693762461344402,
+      "mrsm_sign_consistency": 1.0,
+      "mrsm_snr": 12.579531058768536,
+      "null_effect": 0.0,
+      "regime_consistency": true,
+      "split": "replication",
+      "standardized_effect": 12.579531058768536,
+      "variance": 5.571877459765852e-06
+    }
+  ],
+  "historical": {
+    "evidence": {
+      "definition_reproducible": true,
+      "discovery_mean": 0.029387950897216797,
+      "floor": 0.0001,
+      "hook_integrity_pass": true,
+      "leakage_pass": true,
+      "null_pass": true,
+      "replication_control_mean": 0.10765441258748372,
+      "replication_mean": 0.029693762461344402,
+      "replication_paired_difference_mean": -0.07796065012613933,
+      "revision_pinned": true,
+      "scores_finite": true,
+      "split_integrity_pass": true,
+      "validation_control_mean": 0.10541534423828125,
+      "validation_mean": 0.028637091318766277,
+      "validation_paired_difference_mean": -0.07677825291951497
+    },
+    "failure_locus": null,
+    "reproduced": true,
+    "selected_layer": 23,
+    "splits": {
+      "discovery": {
+        "median": 0.02885580062866211,
+        "n": 6,
+        "raw_effect": 0.029387950897216797,
+        "regime": {
+          "completion": {
+            "mean": 0.029959440231323242,
+            "median": 0.029959440231323242,
+            "n": 2,
+            "sign": 1,
+            "std": 0.002004384994506836
+          },
+          "instruction": {
+            "mean": 0.029855728149414062,
+            "median": 0.029855728149414062,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0038747787475585938
+          },
+          "syntax": {
+            "mean": 0.028348684310913086,
+            "median": 0.028348684310913086,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0014078617095947266
+          }
+        },
+        "regime_sign_agreement": true,
+        "sign": 1,
+        "sign_consistency": 1.0,
+        "snr": 10.697960238423166,
+        "standardized_effect": 10.697960238423166,
+        "std": 0.002747061144578385,
+        "variance": 7.546344932052307e-06
+      },
+      "replication": {
+        "median": 0.030262470245361328,
+        "n": 6,
+        "raw_effect": 0.029693762461344402,
+        "regime": {
+          "completion": {
+            "mean": 0.030283689498901367,
+            "median": 0.030283689498901367,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0010421276092529297
+          },
+          "instruction": {
+            "mean": 0.031951904296875,
+            "median": 0.031951904296875,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0006685256958007812
+          },
+          "syntax": {
+            "mean": 0.026845693588256836,
+            "median": 0.026845693588256836,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0012743473052978516
+          }
+        },
+        "regime_sign_agreement": true,
+        "sign": 1,
+        "sign_consistency": 1.0,
+        "snr": 12.579531058768536,
+        "standardized_effect": 12.579531058768536,
+        "std": 0.002360482463346392,
+        "variance": 5.571877459765852e-06
+      },
+      "validation": {
+        "median": 0.02820444107055664,
+        "n": 6,
+        "raw_effect": 0.028637091318766277,
+        "regime": {
+          "completion": {
+            "mean": 0.029934406280517578,
+            "median": 0.029934406280517578,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0020813941955566406
+          },
+          "instruction": {
+            "mean": 0.02828216552734375,
+            "median": 0.02828216552734375,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0036134719848632812
+          },
+          "syntax": {
+            "mean": 0.0276947021484375,
+            "median": 0.0276947021484375,
+            "n": 2,
+            "sign": 1,
+            "std": 0.0008611679077148438
+          }
+        },
+        "regime_sign_agreement": true,
+        "sign": 1,
+        "sign_consistency": 1.0,
+        "snr": 10.868380504609066,
+        "standardized_effect": 10.868380504609066,
+        "std": 0.0026348995884549545,
+        "variance": 6.942695841240088e-06
+      }
+    },
+    "status": "CANDIDATE"
+  },
+  "mrsm": {
+    "discovery": {
+      "median": -0.02885580062866211,
+      "n": 6,
+      "raw_effect": -0.029387950897216797,
+      "regime": {
+        "completion": {
+          "mean": -0.029959440231323242,
+          "median": -0.029959440231323242,
+          "n": 2,
+          "sign": -1,
+          "std": 0.002004384994506836
+        },
+        "instruction": {
+          "mean": -0.029855728149414062,
+          "median": -0.029855728149414062,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0038747787475585938
+        },
+        "syntax": {
+          "mean": -0.028348684310913086,
+          "median": -0.028348684310913086,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0014078617095947266
+        }
+      },
+      "regime_sign_agreement": true,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "snr": 10.697960238423166,
+      "standardized_effect": -10.697960238423166,
+      "std": 0.002747061144578385,
+      "variance": 7.546344932052307e-06
+    },
+    "replication": {
+      "median": -0.030262470245361328,
+      "n": 6,
+      "raw_effect": -0.029693762461344402,
+      "regime": {
+        "completion": {
+          "mean": -0.030283689498901367,
+          "median": -0.030283689498901367,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0010421276092529297
+        },
+        "instruction": {
+          "mean": -0.031951904296875,
+          "median": -0.031951904296875,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0006685256958007812
+        },
+        "syntax": {
+          "mean": -0.026845693588256836,
+          "median": -0.026845693588256836,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0012743473052978516
+        }
+      },
+      "regime_sign_agreement": true,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "snr": 12.579531058768536,
+      "standardized_effect": -12.579531058768536,
+      "std": 0.002360482463346392,
+      "variance": 5.571877459765852e-06
+    },
+    "validation": {
+      "median": -0.02820444107055664,
+      "n": 6,
+      "raw_effect": -0.028637091318766277,
+      "regime": {
+        "completion": {
+          "mean": -0.029934406280517578,
+          "median": -0.029934406280517578,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0020813941955566406
+        },
+        "instruction": {
+          "mean": -0.02828216552734375,
+          "median": -0.02828216552734375,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0036134719848632812
+        },
+        "syntax": {
+          "mean": -0.0276947021484375,
+          "median": -0.0276947021484375,
+          "n": 2,
+          "sign": -1,
+          "std": 0.0008611679077148438
+        }
+      },
+      "regime_sign_agreement": true,
+      "sign": -1,
+      "sign_consistency": 1.0,
+      "snr": 10.868380504609066,
+      "standardized_effect": -10.868380504609066,
+      "std": 0.0026348995884549545,
+      "variance": 6.942695841240088e-06
+    }
+  },
+  "shuffled_control": "NOT_AVAILABLE"
+}
