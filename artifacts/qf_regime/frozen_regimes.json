@@ -1,0 +1,64 @@
+{
+  "dropped": [],
+  "frozen_file_sha256": {
+    "configs/m22_1_preflight.json": "4c52fe878cd3582a3df873b43eab00b545623f98b25053a9c1c00801333716ca",
+    "configs/mrsm_prereg.yaml": "1c83d94ba3dbc27e101f1f4c14ca4a404e6b529793814dcaf1f7062ce4483471",
+    "reports/MRSM_FINAL_RESULT.md": "b44940da035fb42d71eb621f495179c066150b64c03d17a78b9371db73e48c20",
+    "reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md": "67ac03215259869fd74dcdc6735623b25a79ba8e3ae0d5e9dc2eae6f8d7dd195",
+    "reports/Q_FAILURE_ANALYSIS.md": "d238f8d0e1803497f43e1e71f989c3ea2e2c90de7ca4ff1699bee8abae325423"
+  },
+  "merged": [],
+  "p_freeze": "2cccafd047044332828eaf602b69f4267852cba2",
+  "prompts": {
+    "completion": {
+      "discovery": [
+        "completion-01",
+        "completion-04"
+      ],
+      "replication": [
+        "completion-03",
+        "completion-06"
+      ],
+      "validation": [
+        "completion-02",
+        "completion-05"
+      ]
+    },
+    "instruction": {
+      "discovery": [
+        "instruction-01",
+        "instruction-04"
+      ],
+      "replication": [
+        "instruction-03",
+        "instruction-06"
+      ],
+      "validation": [
+        "instruction-02",
+        "instruction-05"
+      ]
+    },
+    "syntax": {
+      "discovery": [
+        "syntax-01",
+        "syntax-04"
+      ],
+      "replication": [
+        "syntax-03",
+        "syntax-06"
+      ],
+      "validation": [
+        "syntax-02",
+        "syntax-05"
+      ]
+    }
+  },
+  "qwen_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "regimes": [
+    "completion",
+    "instruction",
+    "syntax"
+  ],
+  "renamed": [],
+  "source": "src/cognitive_self_model/m22_1/prompts.py"
+}

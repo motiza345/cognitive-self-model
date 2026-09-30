@@ -388,6 +388,55 @@ files:
   role: SHA256 list for the Qwen bridge JSON artifacts.
   produced_by: scripts/run_qwen_bridge.py
   consumed_by: UNKNOWN
+- path: artifacts/qf_regime/frozen_regimes.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Frozen completion, instruction, and syntax regime ids. None dropped. Not an MRSM gate.
+  produced_by: scripts/run_qf_regime.py
+  consumed_by: reports/QF_REGIME_SEPARATION.md
+- path: artifacts/qf_regime/regime_effects.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Per-slot per-regime margin drops. Pooled means are descriptive only.
+  produced_by: scripts/run_qf_regime.py
+  consumed_by: reports/QF_REGIME_SEPARATION.md
+- path: artifacts/qf_regime/regime_nulls.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Alpha-0 null inside each slot and regime. Not one global null.
+  produced_by: scripts/run_qf_regime.py
+  consumed_by: reports/QF_REGIME_SEPARATION.md
+- path: artifacts/qf_regime/regime_heterogeneity.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Exploratory between-regime and within-regime variances. Not a gate.
+  produced_by: scripts/run_qf_regime.py
+  consumed_by: reports/QF_REGIME_SEPARATION.md
+- path: artifacts/qf_regime/effect_consistency_matrix.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Measured sign symbols by slot and regime. Not a mechanism matrix.
+  produced_by: scripts/run_qf_regime.py
+  consumed_by: reports/QF_REGIME_SEPARATION.md
+- path: artifacts/qf_regime/regime_decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF regime diagnostic decision. Not an MRSM gate result.
+  produced_by: scripts/run_qf_regime.py
+  consumed_by: reports/QF_REGIME_SEPARATION.md
+- path: artifacts/qf_regime/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the regime-separation JSON artifacts.
+  produced_by: scripts/run_qf_regime.py
+  consumed_by: UNKNOWN
 - path: artifacts/m22_1_r/execution_record.json
   category: ARTIFACT
   immutable: true
@@ -756,6 +805,13 @@ files:
   milestone: null
   role: QF bridge diagnostic. Does not rescore MRSM. Label QF-BRIDGE-DIAGNOSTIC.
   produced_by: scripts/run_qwen_bridge.py
+  consumed_by: UNKNOWN
+- path: reports/QF_REGIME_SEPARATION.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: QF regime-separation diagnostic. Does not rescore MRSM. Not a mechanism claim.
+  produced_by: scripts/run_qf_regime.py
   consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT

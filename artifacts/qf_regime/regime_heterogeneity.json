@@ -1,0 +1,204 @@
+{
+  "label": "EXPLORATORY",
+  "splits": {
+    "discovery": {
+      "L0H0": {
+        "between_regime_variance": 0.0055443452688955916,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 1.4069535245448623,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0039406740678866
+      },
+      "L0H1": {
+        "between_regime_variance": 0.0009994142377662582,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.3758774379381632,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.002658883287191808
+      },
+      "L0H2": {
+        "between_regime_variance": 0.0022841226491942105,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 1.5931108700363377,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.001433749961885648
+      },
+      "L0H3": {
+        "between_regime_variance": 0.0020809709711784308,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.5314649525355581,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.003915537536859877
+      },
+      "L1H0": {
+        "between_regime_variance": 0.002126776025849924,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 2.11343514427982,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0010063124158818937
+      },
+      "L1H1": {
+        "between_regime_variance": 0.00024128453580690097,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.5228505238685103,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.00046147899790109176
+      },
+      "L1H2": {
+        "between_regime_variance": 5.345793599392184e-07,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.07644051226087387,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 6.993403682524028e-06
+      },
+      "L1H3": {
+        "between_regime_variance": 6.909382831407937e-06,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.07375364763668014,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 9.368191340778746e-05
+      }
+    },
+    "replication": {
+      "L0H0": {
+        "between_regime_variance": 0.007485929512881739,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 2.565012954012955,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.002918476298987116
+      },
+      "L0H1": {
+        "between_regime_variance": 0.0003357035627434218,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.26708712105421845,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0012569065906973265
+      },
+      "L0H2": {
+        "between_regime_variance": 6.354021526375518e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.01340449514902221,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.004740216961351962
+      },
+      "L0H3": {
+        "between_regime_variance": 0.0017720837201725063,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 2.144300151456759,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0008264158909696562
+      },
+      "L1H0": {
+        "between_regime_variance": 0.0009736844247198759,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.5682053880696423,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0017136135016736869
+      },
+      "L1H1": {
+        "between_regime_variance": 0.00010053540063381661,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.23563136773418372,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0004266639098204905
+      },
+      "L1H2": {
+        "between_regime_variance": 4.51506199776001e-06,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 4.331094369044073,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 1.042476014845306e-06
+      },
+      "L1H3": {
+        "between_regime_variance": 3.44575203270223e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 1.5496216317026734,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 2.2236086294924462e-05
+      }
+    },
+    "validation": {
+      "L0H0": {
+        "between_regime_variance": 0.0019949345242417215,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.4260630279472429,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.004682252139673437
+      },
+      "L0H1": {
+        "between_regime_variance": 0.0024292953274880347,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.8324546082952411,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0029182315807740147
+      },
+      "L0H2": {
+        "between_regime_variance": 0.0013613286149620762,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 2.492023926431505,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0005462742955728572
+      },
+      "L0H3": {
+        "between_regime_variance": 0.0016168762422365845,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 3.0741606396310597,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.0005259569787578281
+      },
+      "L1H0": {
+        "between_regime_variance": 0.0005896621075988959,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 1.6341045326575545,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.00036084723823629855
+      },
+      "L1H1": {
+        "between_regime_variance": 0.0011519567188997826,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 3.9113795492035472,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.00029451417445140277
+      },
+      "L1H2": {
+        "between_regime_variance": 9.017627462526433e-07,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.14943950968700762,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 6.0342994174789055e-06
+      },
+      "L1H3": {
+        "between_regime_variance": 9.646724303517356e-06,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.14766334896601502,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 6.53291718701136e-05
+      }
+    }
+  },
+  "used_as_gate": false
+}
