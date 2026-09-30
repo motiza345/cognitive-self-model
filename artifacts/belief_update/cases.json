@@ -1,0 +1,19 @@
+{
+  "controls": {
+    "double": "ABSTAIN",
+    "holdout": "HOLD",
+    "scope_string_alone": "HOLD"
+  },
+  "primary": {
+    "hypothesis": "REVISE_HYPOTHESIS",
+    "interaction": "ADD_INTERACTION",
+    "none": "ABSTAIN",
+    "scope": "REVISE_SCOPE"
+  },
+  "primary_defined": [
+    "hypothesis",
+    "interaction",
+    "none",
+    "scope"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "arm": "P",
+  "belief_fields_read_by_the_rule": [
+    "scope",
+    "effects",
+    "joints",
+    "mechanism_ordered",
+    "uncertainty",
+    "min_abs_interaction",
+    "min_relative_gap"
+  ],
+  "construction_clearance": {
+    "decision_input": false,
+    "role": "places an injected residual strictly beyond the existing tolerance",
+    "value": 1.0
+  },
+  "control_expectation": {
+    "double": "ABSTAIN",
+    "holdout": "HOLD",
+    "scope_string_alone": "HOLD"
+  },
+  "controls": {
+    "double": "Hypothesis table plus one out-of-scope record beyond tolerance.",
+    "holdout": "Frozen holdout_scored records. The stored residual is not an input.",
+    "scope_string_alone": "Matching actuals with a different scope string."
+  },
+  "decision_order": [
+    "reconstruction or recorded-tolerance mismatch -> INCONCLUSIVE",
+    "undefined construction -> INCONCLUSIVE",
+    "primary expectation fails -> UPDATE_RULE_COLLAPSES_FAILURES",
+    "a control expectation fails -> INCONCLUSIVE",
+    "otherwise -> UPDATE_RULE_SEPARATES_FAILURES"
+  ],
+  "decisions": [
+    "UPDATE_RULE_SEPARATES_FAILURES",
+    "UPDATE_RULE_COLLAPSES_FAILURES",
+    "INCONCLUSIVE"
+  ],
+  "diagnostic": "causal_belief_update",
+  "does_not": [
+    "modify SelfModelCore",
+    "modify artifacts/mrsm",
+    "modify the holdout",
+    "modify thresholds",
+    "load Qwen",
+    "start M22",
+    "use M18.7 as evidence",
+    "claim mechanism identity"
+  ],
+  "forbidden_keys": [
+    "expected",
+    "expected_label",
+    "failure_type",
+    "ground_truth",
+    "holdout_accuracy",
+    "holdout_margin",
+    "holdout_outcome",
+    "injection",
+    "mechanism_label",
+    "planted"
+  ],
+  "identifiability_source": "configs/mrsm_prereg.yaml identifiability",
+  "injections": {
+    "hypothesis": "Move the winning interaction onto the lexicographic first other pair and zero the old pair.",
+    "interaction": "Add a signed clearance step to the lexicographic first non-winning pair whose new interaction keeps the same identified pair.",
+    "none": "Shift one in-scope single by tolerance plus clearance and supply no pair.",
+    "scope": "Shift every actual by tolerance plus clearance and set scope to the belief scope plus '::outside'.",
+    "undefined_construction": "If the interaction move has no legal pair, that run is INCONCLUSIVE. The clearance is not searched."
+  },
+  "negative_result_scope": "A collapse is local to this frozen P belief and these injections. It does not say a belief object cannot exist.",
+  "predicates": {
+    "exactly_one": "One supported predicate selects its update.",
+    "hypothesis": "The in-scope records contain every single and every pair, and the existing selection rule identifies a different ordered pair.",
+    "interaction": "An in-scope pair has singles inside tolerance and a joint beyond tolerance, and a complete in-scope table does not identify a different pair.",
+    "more_than_one": "ABSTAIN",
+    "none_and_no_residual_beyond_tolerance": "HOLD",
+    "none_but_a_residual_beyond_tolerance": "ABSTAIN",
+    "scope": "At least one record has a scope string different from the belief and a residual beyond tolerance.",
+    "undefined_prediction": "ABSTAIN"
+  },
+  "primary_expectation": {
+    "hypothesis": "REVISE_HYPOTHESIS",
+    "interaction": "ADD_INTERACTION",
+    "none": "ABSTAIN",
+    "scope": "REVISE_SCOPE"
+  },
+  "question": "Given the frozen P belief and a new set of evidence records, does one preregistered rule map four single contradictions onto four different updates?",
+  "record_fields_read_by_the_rule": [
+    "intervention_id",
+    "actual_outcome",
+    "scope"
+  ],
+  "rule_labels": [
+    "REVISE_HYPOTHESIS",
+    "REVISE_SCOPE",
+    "ADD_INTERACTION",
+    "ABSTAIN",
+    "HOLD"
+  ],
+  "status": "diagnostic",
+  "tolerance": {
+    "expression": "max(1.0, 2.0 * uncertainty)",
+    "new_threshold": false,
+    "source": "src/mrsm/run_p.py falsification tolerance"
+  }
+}
