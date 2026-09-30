@@ -1,0 +1,40 @@
+{
+  "cross_model": {
+    "cosine": {
+      "completion": 0.20020113770835252,
+      "instruction": -0.6026287395215716,
+      "syntax": -0.5208305174652975
+    },
+    "pearson": {
+      "completion": 0.20680884159675497,
+      "instruction": -0.6556702794381903,
+      "syntax": -0.4801074555650836
+    },
+    "pearson_role": "EXPLORATORY"
+  },
+  "primary_metric": "cosine_similarity_of_r1_null_corrected_slot_vectors",
+  "within_model": {
+    "decision_input": "cosine",
+    "gpt2_cosine": {
+      "completion__instruction": 0.13507983070545804,
+      "completion__syntax": 0.7803730952570446,
+      "instruction__syntax": -0.25158769437173
+    },
+    "gpt2_pearson": {
+      "completion__instruction": 0.04673770780938356,
+      "completion__syntax": 0.769215791130016,
+      "instruction__syntax": -0.3272625768736737
+    },
+    "pearson_role": "EXPLORATORY",
+    "qwen_cosine": {
+      "completion__instruction": 0.19946605312506613,
+      "completion__syntax": 0.3464909757534871,
+      "instruction__syntax": 0.601912484917359
+    },
+    "qwen_pearson": {
+      "completion__instruction": 0.30787799258943777,
+      "completion__syntax": 0.6830578074438736,
+      "instruction__syntax": 0.16146157722988
+    }
+  }
+}

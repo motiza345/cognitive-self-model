@@ -500,6 +500,69 @@ files:
   role: SHA256 list for the M1 JSON artifacts and frozen inputs.
   produced_by: scripts/run_qf_m1.py
   consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m2/normalized_effect_matrix.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Raw, null-corrected, and standardized regime effects. R2 stays undefined when null std is zero.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/regime_profiles.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Eight-slot regime profiles for Qwen and GPT-2. Not comparable cells are not imputed.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/regime_relationships.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Within-model and cross-model cosine profiles. Pearson is exploratory.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/sign_agreement.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Sign agreement, disagreement, near-zero, and not-comparable counts. Not mechanism identity.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/heterogeneity_comparison.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Exploratory heterogeneity for both models. Not a ranking and not a gate.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/context_cancellation.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Separate Qwen and GPT-2 cancellation slots. Not collapsed into one result.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/cross_model_null.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Exhaustive three-regime label permutation. Count is 3 factorial, not a tuned draw count.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-M2 regime comparison decision. Not a mechanism claim. M3 was not run.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
+- path: artifacts/qf_cross_model/m2/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the M2 JSON artifacts.
+  produced_by: scripts/run_qf_m2.py
+  consumed_by: reports/QF_M2_CROSS_MODEL_REGIMES.md
 - path: artifacts/m22_1_r/execution_record.json
   category: ARTIFACT
   immutable: true
@@ -882,6 +945,13 @@ files:
   milestone: null
   role: QF-M1 cross-model diagnostic. Does not rescore MRSM. M2 and M3 were not run.
   produced_by: scripts/run_qf_m1.py
+  consumed_by: UNKNOWN
+- path: reports/QF_M2_CROSS_MODEL_REGIMES.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: QF-M2 regime comparison. Does not rescore MRSM. M3 was not run.
+  produced_by: scripts/run_qf_m2.py
   consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT
