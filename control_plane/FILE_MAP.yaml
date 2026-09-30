@@ -1142,6 +1142,13 @@ files:
   role: Scope-update diagnostic on frozen Qwen measurements. Does not build a Self-Model.
   produced_by: scripts/run_qwen_belief_update.py
   consumed_by: UNKNOWN
+- path: reports/PATH_CORRECTION_REPORT.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Narrative report from the mechanism-representation check through the Qwen scope result. Does not rescore MRSM.
+  produced_by: path correction
+  consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT
   immutable: false
