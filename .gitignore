@@ -111,6 +111,8 @@ artifacts/mrsm/**/*.pt
 # Qwen belief-update diagnostic JSON only. Not a new forward and not a weight file.
 !artifacts/qwen_belief_update/
 !artifacts/qwen_belief_update/**
+!artifacts/evidence_belief/
+!artifacts/evidence_belief/**
 
 # Archives
 *.zip
