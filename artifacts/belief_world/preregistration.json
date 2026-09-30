@@ -1,0 +1,62 @@
+{
+  "arm": "P",
+  "ceiling_search": false,
+  "control_expectation": {
+    "holdout": "HOLD"
+  },
+  "decision_order": [
+    "reconstruction, tolerance, instrument, or non-finite measurement -> INCONCLUSIVE",
+    "primary expectation fails -> WORLD_CHANGE_DOES_NOT_SEPARATE",
+    "holdout is not HOLD -> INCONCLUSIVE",
+    "otherwise -> WORLD_CHANGE_SEPARATES"
+  ],
+  "decisions": [
+    "WORLD_CHANGE_SEPARATES",
+    "WORLD_CHANGE_DOES_NOT_SEPARATE",
+    "INCONCLUSIVE"
+  ],
+  "declaration": {
+    "hypothesis_heads": [
+      "L0H2",
+      "L1H2"
+    ],
+    "interaction_pair": "L0H0+L0H1",
+    "magnitude": 14.35336685180664,
+    "none_head": "L0H3",
+    "scope_name": "P:shuffled-target:seed=21011",
+    "scope_permutation_seed": 21011,
+    "winner_pair": "L0H0+L1H1"
+  },
+  "diagnostic": "belief_world_change",
+  "does_not": [
+    "modify belief_update.classify",
+    "modify SelfModelCore",
+    "modify artifacts/mrsm",
+    "modify the holdout",
+    "modify thresholds",
+    "load Qwen",
+    "start M22",
+    "finetune the frozen checkpoint",
+    "choose a new magnitude after scoring"
+  ],
+  "ground_truth_file_loaded": false,
+  "holdout_remeasured": false,
+  "magnitude_is_searched": false,
+  "magnitude_source": "absolute interaction of the frozen belief's identified pair",
+  "primary_expectation": {
+    "hypothesis": "REVISE_HYPOTHESIS",
+    "interaction": "ADD_INTERACTION",
+    "none": "ABSTAIN",
+    "scope": "REVISE_SCOPE"
+  },
+  "question": "When evidence is measured from a changed planted world, does the unchanged belief-update rule map each change to its own update?",
+  "rule": "src.mrsm.belief_update.classify",
+  "rule_modified": false,
+  "status": "diagnostic",
+  "worlds": {
+    "hypothesis": "Train a new copy from the same model seed with the construction mask on L0H2 and L1H2. Measure discovery ablations. Do not finetune the frozen checkpoint.",
+    "interaction": "Keep the frozen weights. On the lexicographic first non-winning pair, subtract the frozen winner's absolute interaction from the target logit only when both heads of that pair are ablated.",
+    "none": "Keep the frozen weights. Subtract that same magnitude from the target logit whenever L0H3 is ablated, and publish the full measured table.",
+    "scope": "Keep the frozen weights. Permute discovery targets with seed 21011 and label the records with a scope string other than the belief scope."
+  }
+}
