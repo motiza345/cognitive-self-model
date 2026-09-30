@@ -90,6 +90,9 @@ artifacts/mrsm/**/*.pt
 # Qwen bridge diagnostic JSON only. Not an MRSM rerun and not a weight file.
 !artifacts/qwen_bridge/
 !artifacts/qwen_bridge/**
+# Regime-separation diagnostic JSON only. Not an MRSM rerun and not a weight file.
+!artifacts/qf_regime/
+!artifacts/qf_regime/**
 
 # Archives
 *.zip

@@ -1,0 +1,50 @@
+{
+  "effect_matrix": {
+    "L0H0": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L0H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L0H2": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L0H3": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L1H0": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H2": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H3": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    }
+  },
+  "mechanism_identity": "NOT_EVALUATED",
+  "next_single_intervention": "Do not modify the Self-Model or rerun MRSM. Do not drop a regime. The next single step is a preregistered decision that keeps every frozen regime visible, because the intervention slots do not share one regime pattern.",
+  "previous_diagnosis_retained": "INTERVENTION_CONTEXT_DEPENDENCE_CONFIRMED",
+  "primary_interpretation": "Every measured discovery regime cell separates from that regime's own null, but the slots do not share one sign pattern. A single regime explanation is not supported. This does not identify a mechanism.",
+  "primary_split": "discovery",
+  "regime_decision": "MIXED_SIGNAL"
+}
