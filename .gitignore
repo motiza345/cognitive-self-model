@@ -105,6 +105,9 @@ artifacts/mrsm/**/*.pt
 # Belief-update diagnostic JSON only. Not an MRSM rerun and not a weight file.
 !artifacts/belief_update/
 !artifacts/belief_update/**
+# World-change diagnostic JSON only. Trained copies are not committed.
+!artifacts/belief_world/
+!artifacts/belief_world/**
 
 # Archives
 *.zip
