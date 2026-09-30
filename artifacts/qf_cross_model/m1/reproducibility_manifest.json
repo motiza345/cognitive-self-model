@@ -1,0 +1,23 @@
+{
+  "artifact_sha256": [
+    "2e09de07ec28d0223f427695016072832be3a36209fcce3594086925f2caf0ed  decision.json",
+    "ccfeecd1833ed2342cda82389beb61b47a22898bdd5c5de804ada50e7efeb2bf  effect_matrix.json",
+    "a284478c9c313c03b1b70d936d30ad9216fc7c17a97dd8b48206a7737f93a4d7  intervention_mapping.json",
+    "268c570a61a7e7974560f5440962e38a53a9e4a3a43125ad1396133ce335a828  model_manifest.json",
+    "a37244f931f0f52fb41960b703722f97d0e05cda12a232863346c632b83929de  regime_effects.json",
+    "473f1c77cfc7609e980ae1d5bc213bf050822e3003ffcd2ecdc5d0a11cb7c48b  regime_nulls.json",
+    "bf947e6d846895ee03fe0614e1a8e8a4cc4847b4a5cefef1cfbbc0806fb09e55  task_mapping.json"
+  ],
+  "frozen_file_sha256": {
+    "configs/mrsm_prereg.yaml": "1c83d94ba3dbc27e101f1f4c14ca4a404e6b529793814dcaf1f7062ce4483471",
+    "reports/MRSM_FINAL_RESULT.md": "b44940da035fb42d71eb621f495179c066150b64c03d17a78b9371db73e48c20",
+    "reports/QF_REGIME_SEPARATION.md": "62eeff02133fca28fc86e27b333a749269ce2cd35b0ac87127cc30369b78bdd8",
+    "reports/QWEN_BRIDGE_INTERVENTION_ANALYSIS.md": "67ac03215259869fd74dcdc6735623b25a79ba8e3ae0d5e9dc2eae6f8d7dd195",
+    "reports/Q_FAILURE_ANALYSIS.md": "d238f8d0e1803497f43e1e71f989c3ea2e2c90de7ca4ff1699bee8abae325423"
+  },
+  "m2_executed": false,
+  "m3_executed": false,
+  "model_b_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "p_freeze": "2cccafd047044332828eaf602b69f4267852cba2",
+  "qwen_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+}

@@ -1,0 +1,210 @@
+{
+  "alpha": 1.0,
+  "alpha_conversion": "NONE",
+  "alpha_rule": "Alpha remains 1.0 times a unit direction in this model's residual stream. It was not rescaled.",
+  "coordinate": [
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 0,
+      "reason": null,
+      "slot": "L0H0",
+      "status": "SCHEDULED",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 0,
+      "reason": null,
+      "slot": "L0H1",
+      "status": "SCHEDULED",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 8,
+      "reason": null,
+      "slot": "L0H2",
+      "status": "SCHEDULED",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 8,
+      "reason": null,
+      "slot": "L0H3",
+      "status": "SCHEDULED",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": false,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 15,
+      "reason": "layer index is outside this model",
+      "slot": "L1H0",
+      "status": "NOT_COMPARABLE",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": false,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 15,
+      "reason": "layer index is outside this model",
+      "slot": "L1H1",
+      "status": "NOT_COMPARABLE",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": false,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 23,
+      "reason": "layer index is outside this model",
+      "slot": "L1H2",
+      "status": "NOT_COMPARABLE",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": false,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 23,
+      "reason": "layer index is outside this model",
+      "slot": "L1H3",
+      "status": "NOT_COMPARABLE",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    }
+  ],
+  "coordinate_rule": "Qwen layer index if it exists in Model B; otherwise NOT_COMPARABLE",
+  "d_model": 768,
+  "declared_before_effects": true,
+  "direction_seeds": {
+    "orthogonal": 22103,
+    "primary": 22101
+  },
+  "functional_counterpart": [
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 0,
+      "reason": null,
+      "slot": "L0H0",
+      "status": "SCHEDULED",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 0,
+      "reason": null,
+      "slot": "L0H1",
+      "status": "SCHEDULED",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 4,
+      "reason": null,
+      "slot": "L0H2",
+      "status": "SCHEDULED",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 4,
+      "reason": null,
+      "slot": "L0H3",
+      "status": "SCHEDULED",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 7,
+      "reason": null,
+      "slot": "L1H0",
+      "status": "SCHEDULED",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 7,
+      "reason": null,
+      "slot": "L1H1",
+      "status": "SCHEDULED",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "primary",
+      "direction_seed": 22101,
+      "layer": 11,
+      "reason": null,
+      "slot": "L1H2",
+      "status": "SCHEDULED",
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    {
+      "alpha": 1.0,
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "direction_seed": 22103,
+      "layer": 11,
+      "reason": null,
+      "slot": "L1H3",
+      "status": "SCHEDULED",
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    }
+  ],
+  "functional_layers": [
+    0,
+    4,
+    7,
+    11
+  ],
+  "functional_rule": "candidate_layers(n_layers, 4), declared before effects",
+  "hook": "blocks.{layer}.hook_resid_post",
+  "metric": "margin_drop_unhooked_minus_intervened",
+  "n_layers": 12,
+  "null": "alpha_0_inside_the_same_slot_and_regime",
+  "qwen_coordinate_layers": [
+    0,
+    8,
+    15,
+    23
+  ],
+  "slot_meaning": "residual-stream label, not an attention head"
+}

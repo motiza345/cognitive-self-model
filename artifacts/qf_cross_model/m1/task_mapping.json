@@ -1,0 +1,47 @@
+{
+  "dropped_regimes": [],
+  "minimum_transformation": "No prompt text was changed. Batching uses left padding, the same call setting as the Qwen measurement.",
+  "outcome": {
+    "negative_text": " no",
+    "negative_token_id": 645,
+    "negative_token_ids": [
+      645
+    ],
+    "positive_text": " yes",
+    "positive_token_id": 3763,
+    "positive_token_ids": [
+      3763
+    ],
+    "single_piece": true,
+    "token_ids": [
+      3763,
+      645
+    ],
+    "token_position": "last",
+    "type": "logit_margin"
+  },
+  "prepend_bos": true,
+  "primary_split": "discovery",
+  "prompt_ids": [
+    "completion-01",
+    "completion-04",
+    "instruction-01",
+    "instruction-04",
+    "syntax-01",
+    "syntax-04"
+  ],
+  "prompt_sha256": {
+    "completion-01": "bbaff4d2ecd5892d4a442b0f53131641bf6e6f284761dd20fc0664bc97145762",
+    "completion-04": "cdf1347c153639e3f67e4cdabf1c6e1acf41f33bb067ed6f4e82b4d518a91a65",
+    "instruction-01": "185d6bdce10958ddcabd0b3e28cbe5e3a2cb7cc4992b913aadde12d5e6642e23",
+    "instruction-04": "eea76aad868c2ac80750127e99404df4ae6e5fababccecb575b00d479771aad9",
+    "syntax-01": "cbb79258d2f7af7f499c4f9e18694603978529f2372c99db4d1938e9bf45e7b5",
+    "syntax-04": "05794db73e29416234180c91643eb3fa0bb924c95bb01f19579851c783acb2f7"
+  },
+  "regimes": [
+    "completion",
+    "instruction",
+    "syntax"
+  ],
+  "texts_modified": false
+}
