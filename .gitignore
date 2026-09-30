@@ -102,6 +102,9 @@ artifacts/mrsm/**/*.pt
 # CCSO diagnostic arrays and JSON. Not a weight file and not an MRSM rerun.
 !artifacts/ccso/
 !artifacts/ccso/**
+# Belief-update diagnostic JSON only. Not an MRSM rerun and not a weight file.
+!artifacts/belief_update/
+!artifacts/belief_update/**
 
 # Archives
 *.zip
