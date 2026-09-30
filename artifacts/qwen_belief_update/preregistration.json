@@ -1,0 +1,59 @@
+{
+  "belief_fit": "discovery prompts of one regime, train directions, primary alphas, frozen layers",
+  "control_expectation": {
+    "scope_string_alone": "HOLD"
+  },
+  "decision_order": [
+    "split, finiteness, or discovery self-check fails -> INCONCLUSIVE",
+    "a primary label mismatches -> QWEN_UPDATE_DOES_NOT_SEPARATE",
+    "scope-string control mismatches -> INCONCLUSIVE",
+    "otherwise -> QWEN_UPDATE_SEPARATES"
+  ],
+  "decisions": [
+    "QWEN_UPDATE_SEPARATES",
+    "QWEN_UPDATE_DOES_NOT_SEPARATE",
+    "INCONCLUSIVE"
+  ],
+  "diagnostic": "qwen_belief_scope",
+  "does_not": [
+    "modify belief_update.classify",
+    "modify SelfModelCore",
+    "modify the CCSO measurements",
+    "load a new Qwen forward",
+    "start M22",
+    "claim mechanism identity",
+    "choose a new multiplier after scoring"
+  ],
+  "excluded": [
+    "alpha \u00b10.25",
+    "novel directions inside the belief",
+    "P tolerance 10.48",
+    "eight-head table"
+  ],
+  "hypothesis_output": false,
+  "mechanism_identity": "NOT_EVALUATED",
+  "model": "frozen Qwen measurements from the CCSO run",
+  "primary_expectation": {
+    "regime_change": "REVISE_SCOPE",
+    "same_regime": "HOLD",
+    "two_changes": "ABSTAIN"
+  },
+  "question": "Using a belief stored from discovery prompts of one regime, does an unchanged-context measurement hold, does a regime change revise scope when the stored effect misses, and does an unseen direction block the update?",
+  "regime_change": "all ordered pairs of regimes; mixed pair labels become MIXED",
+  "rule_labels": [
+    "HOLD",
+    "REVISE_SCOPE",
+    "ABSTAIN"
+  ],
+  "same_regime_prompts": "validation and replication of that regime",
+  "scope_string_alone": "Same-regime numbers with a scope string that only adds '::label-only'.",
+  "status": "diagnostic",
+  "tolerance": {
+    "expression": "2.0 * per_intervention_discovery_std",
+    "multiplier": 2.0,
+    "p_absolute_floor_1": false,
+    "p_head_table": false,
+    "std": "ddof=0 of \u0394/\u03b1 on discovery prompts, primary alphas, one intervention"
+  },
+  "two_changes": "Regime-changed records plus novel directions. A novel direction has no stored prediction, so the existing undefined-intervention rule abstains."
+}
