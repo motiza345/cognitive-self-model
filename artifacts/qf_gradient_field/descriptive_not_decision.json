@@ -1,0 +1,192 @@
+{
+  "decision_input": false,
+  "field": {
+    "discovery": {
+      "best_other_mean_cosine": 0.21662270555132043,
+      "decision_input": false,
+      "identity_cosines": [
+        0.11446912540969427,
+        -0.2119613632997231,
+        -0.27646693058637706,
+        -0.16066844683302453,
+        -0.20060526012714236,
+        -0.5593757982427324
+      ],
+      "identity_mean_cosine": -0.2157681122798842,
+      "n_equal_to_identity": 1,
+      "n_permutations": 720,
+      "n_strictly_better": 624,
+      "null": "exhaustive permutation of the six GPT-2 prompt rows within the split",
+      "status": "NOT_SUPPORTED",
+      "within_regime_null": "not used; two prompts per regime cannot support this claim"
+    },
+    "replication": {
+      "best_other_mean_cosine": 0.09486911861963865,
+      "decision_input": false,
+      "identity_cosines": [
+        0.18021026397651815,
+        -0.8633788283142887,
+        -0.4422887712693229,
+        -0.42744715238151343,
+        0.2983116276271131,
+        -0.6151338873909264
+      ],
+      "identity_mean_cosine": -0.31162112462540337,
+      "n_equal_to_identity": 1,
+      "n_permutations": 720,
+      "n_strictly_better": 641,
+      "null": "exhaustive permutation of the six GPT-2 prompt rows within the split",
+      "status": "NOT_SUPPORTED",
+      "within_regime_null": "not used; two prompts per regime cannot support this claim"
+    },
+    "validation": {
+      "best_other_mean_cosine": 0.16483512224787994,
+      "decision_input": false,
+      "identity_cosines": [
+        -0.14062018731813128,
+        -0.2730533759780366,
+        -0.09483317346303467,
+        0.1443399172792115,
+        -0.27086383150878796,
+        0.020178754856771862
+      ],
+      "identity_mean_cosine": -0.10247531602200118,
+      "n_equal_to_identity": 1,
+      "n_permutations": 720,
+      "n_strictly_better": 231,
+      "null": "exhaustive permutation of the six GPT-2 prompt rows within the split",
+      "status": "NOT_SUPPORTED",
+      "within_regime_null": "not used; two prompts per regime cannot support this claim"
+    }
+  },
+  "gradient_check": {
+    "gpt2": {
+      "failed": 45,
+      "max_relative": 0.7646520914886082,
+      "median_absolute": 7.270278786135082e-05,
+      "median_relative": 0.011455223090589401,
+      "n": 144
+    },
+    "qwen": {
+      "failed": 43,
+      "max_relative": 1.280014817569257,
+      "median_absolute": 0.000232039654943679,
+      "median_relative": 0.003857697289581772,
+      "n": 144
+    }
+  },
+  "reason": "The preregistered gradient check failed, so these readings do not replace the inconclusive labels.",
+  "scope": "The blocked field reading is about these models, these prompts, and the functional slot map. It does not say the structure cannot exist.",
+  "small_grid_disagreements": [
+    {
+      "alpha_key": "0.25",
+      "delta": 0.0009379386901855469,
+      "linear": -0.0009063361068971584,
+      "model": "qwen",
+      "projection": 0.0036253444275886337,
+      "prompt_id": "syntax-05",
+      "ratio": -1.0348685030287272,
+      "slot": "L0H0",
+      "split": "validation"
+    },
+    {
+      "alpha_key": "-0.25",
+      "delta": 0.000308990478515625,
+      "linear": -0.0003793606325513989,
+      "model": "qwen",
+      "projection": -0.0015174425302055955,
+      "prompt_id": "completion-02",
+      "ratio": -0.814503277363026,
+      "slot": "L0H3",
+      "split": "validation"
+    },
+    {
+      "alpha_key": "-0.25",
+      "delta": 0.000469207763671875,
+      "linear": -0.0012328651572292935,
+      "model": "qwen",
+      "projection": -0.004931460628917174,
+      "prompt_id": "completion-06",
+      "ratio": -0.3805831975382931,
+      "slot": "L0H0",
+      "split": "replication"
+    },
+    {
+      "alpha_key": "0.01",
+      "delta": 1.430511474609375e-05,
+      "linear": -3.405799466917048e-06,
+      "model": "qwen",
+      "projection": 0.00034057994669170477,
+      "prompt_id": "instruction-06",
+      "ratio": -4.200222263538856,
+      "slot": "L0H1",
+      "split": "replication"
+    },
+    {
+      "alpha_key": "0.05",
+      "delta": 0.00014019012451171875,
+      "linear": -1.702899733458524e-05,
+      "model": "qwen",
+      "projection": 0.00034057994669170477,
+      "prompt_id": "instruction-06",
+      "ratio": -8.232435636536158,
+      "slot": "L0H1",
+      "split": "replication"
+    },
+    {
+      "alpha_key": "0.10",
+      "delta": 0.000629425048828125,
+      "linear": -3.405799466917048e-05,
+      "model": "qwen",
+      "projection": 0.00034057994669170477,
+      "prompt_id": "instruction-06",
+      "ratio": -18.480977959570964,
+      "slot": "L0H1",
+      "split": "replication"
+    },
+    {
+      "alpha_key": "0.25",
+      "delta": 0.0039081573486328125,
+      "linear": -8.514498667292619e-05,
+      "model": "qwen",
+      "projection": 0.00034057994669170477,
+      "prompt_id": "instruction-06",
+      "ratio": -45.900028895952616,
+      "slot": "L0H1",
+      "split": "replication"
+    },
+    {
+      "alpha_key": "0.01",
+      "delta": 5.7220458984375e-06,
+      "linear": -2.0260947344685843e-06,
+      "model": "gpt2",
+      "projection": 0.0002026094734468584,
+      "prompt_id": "completion-01",
+      "ratio": -2.8241749021367015,
+      "slot": "L1H1",
+      "split": "discovery"
+    },
+    {
+      "alpha_key": "0.01",
+      "delta": 2.86102294921875e-06,
+      "linear": -7.728402196670748e-07,
+      "model": "gpt2",
+      "projection": 7.728402196670748e-05,
+      "prompt_id": "syntax-01",
+      "ratio": -3.7019591843333743,
+      "slot": "L1H1",
+      "split": "discovery"
+    },
+    {
+      "alpha_key": "0.05",
+      "delta": 1.9073486328125e-06,
+      "linear": -3.864201098335374e-06,
+      "model": "gpt2",
+      "projection": 7.728402196670748e-05,
+      "prompt_id": "syntax-01",
+      "ratio": -0.49359455791111656,
+      "slot": "L1H1",
+      "split": "discovery"
+    }
+  ]
+}
