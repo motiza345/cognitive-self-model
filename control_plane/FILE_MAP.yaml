@@ -1142,6 +1142,34 @@ files:
   role: Scope-update diagnostic on frozen Qwen measurements. Does not build a Self-Model.
   produced_by: scripts/run_qwen_belief_update.py
   consumed_by: UNKNOWN
+- path: artifacts/evidence_belief/preregistration.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Sign-level evidence trace rule, written before the frozen CCSO measurements are scored.
+  produced_by: scripts/run_evidence_belief.py
+  consumed_by: reports/EVIDENCE_BELIEF.md
+- path: artifacts/evidence_belief/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Sign-level evidence trace decision. Not a mechanism claim and not a new Qwen forward.
+  produced_by: scripts/run_evidence_belief.py
+  consumed_by: reports/EVIDENCE_BELIEF.md
+- path: artifacts/evidence_belief/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the evidence-belief artifacts.
+  produced_by: scripts/run_evidence_belief.py
+  consumed_by: reports/EVIDENCE_BELIEF.md
+- path: reports/EVIDENCE_BELIEF.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Sign claim, scope, falsification, and persistence on frozen Qwen measurements. Does not build a Self-Model.
+  produced_by: scripts/run_evidence_belief.py
+  consumed_by: UNKNOWN
 - path: reports/PATH_CORRECTION_REPORT.md
   category: REPORT
   immutable: false
