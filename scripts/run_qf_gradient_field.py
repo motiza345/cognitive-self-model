@@ -274,7 +274,7 @@ def _fmt(value) -> str:
     return str(value)
 
 
-def _report(decision: dict, qwen_audit: dict, gpt_audit: dict) -> str:
+def _report(decision: dict, qwen_audit: dict, gpt_audit: dict, descriptive: dict | None = None) -> str:
     lines = [
         "# QF Gradient Field",
         "",
@@ -315,6 +315,10 @@ def _report(decision: dict, qwen_audit: dict, gpt_audit: dict) -> str:
         f"- GPT-2 linear: `{decision['linear']['gpt2']['label']}`.",
         f"- Field: `{decision['field_decision']}`.",
         f"- {decision['primary_interpretation']}",
+        "",
+        "These labels are the preregistered instrument result. "
+        "A failed gradient check blocks the linear and field classifications. "
+        "The check is not loosened after the run, and the blocked readings in section 8 do not replace the labels.",
         "",
         "## 4. Instrument audit",
         "",
@@ -406,9 +410,136 @@ def _report(decision: dict, qwen_audit: dict, gpt_audit: dict) -> str:
             "M3 was not run. MRSM was not rerun. The Self-Model was not modified.",
             "No model is ranked.",
             "",
+            "## 8. Descriptive readings blocked by the instrument check",
+            "",
+            "The gradient check compares `vᵀ g` with a central difference at ε = "
+            + f"{EPSILON:g}. "
+            "It fails when the absolute discrepancy exceeds 1e-4 and the relative discrepancy exceeds 1e-2. "
+            "Alpha 0 is a separate audit. "
+            "Section 5 is the sign and magnitude comparison. "
+            "Neither table reopens the classification.",
+            "",
         ]
     )
+    if descriptive:
+        lines.extend(
+            [
+                "| Model | Median relative discrepancy | Median absolute discrepancy | Maximum relative discrepancy | Failed cells |",
+                "| --- | ---: | ---: | ---: | ---: |",
+            ]
+        )
+        for name in ("qwen", "gpt2"):
+            item = descriptive["gradient_check"][name]
+            lines.append(
+                "| "
+                + " | ".join(
+                    [
+                        name,
+                        _fmt(item["median_relative"]),
+                        _fmt(item["median_absolute"]),
+                        _fmt(item["max_relative"]),
+                        str(item["failed"]),
+                    ]
+                )
+                + " |"
+            )
+        lines.extend(
+            [
+                "",
+                "The field permutation below uses the recorded projections. `decision_input` is false.",
+                "",
+                "| Split | Blocked status | Identity mean cosine | Permutations strictly better |",
+                "| --- | --- | ---: | ---: |",
+            ]
+        )
+        for split in SPLITS:
+            item = descriptive["field"][split]
+            lines.append(
+                "| "
+                + " | ".join(
+                    [
+                        split,
+                        f"`{item['status']}`",
+                        _fmt(item.get("identity_mean_cosine")),
+                        _fmt(item.get("n_strictly_better")),
+                    ]
+                )
+                + " |"
+            )
+        lines.extend(
+            [
+                "",
+                "Where a small-grid sign disagrees, the linear term is small. "
+                "Those cells are listed in `descriptive_not_decision.json`. "
+                "They are not a new threshold and not a repaired label.",
+                "",
+                descriptive["scope"],
+                "",
+            ]
+        )
     return "\n".join(lines)
+
+
+def build_descriptive(qwen_doc: dict, gpt_doc: dict) -> dict:
+    """Readings that stay outside the decision when the instrument check fails."""
+    from statistics import median
+
+    from src.mrsm.qf_gradient_field import field_null
+
+    def check_summary(doc: dict) -> dict:
+        relative = []
+        absolute = []
+        failed = 0
+        for row in doc["audits"]:
+            error = abs(float(row["projection"]) - float(row["central_difference"]))
+            scale = max(abs(float(row["projection"])), abs(float(row["central_difference"])), 1e-12)
+            relative.append(error / scale)
+            absolute.append(error)
+            if not row["gradient_check_passed"]:
+                failed += 1
+        return {
+            "n": len(relative),
+            "failed": failed,
+            "median_relative": median(relative),
+            "median_absolute": median(absolute),
+            "max_relative": max(relative),
+        }
+
+    disagreements = []
+    for model, doc in (("qwen", qwen_doc), ("gpt2", gpt_doc)):
+        for split in SPLITS:
+            for cell in doc["splits"][split]["cells"]:
+                if cell["in_small_grid"] and cell["relation"] == "DISAGREE":
+                    disagreements.append({
+                        "model": model,
+                        "split": split,
+                        "prompt_id": cell["prompt_id"],
+                        "slot": cell["slot"],
+                        "alpha_key": cell["alpha_key"],
+                        "projection": cell["projection"],
+                        "linear": cell["linear"],
+                        "delta": cell["delta"],
+                        "ratio": cell["ratio"],
+                    })
+    field = {}
+    for split in SPLITS:
+        result = field_null(
+            [row["vector"] for row in qwen_doc["splits"][split]["field"]],
+            [row["vector"] for row in gpt_doc["splits"][split]["field"]],
+        )
+        result["decision_input"] = False
+        field[split] = result
+    return {
+        "decision_input": False,
+        "reason": "The preregistered gradient check failed, so these readings do not replace the inconclusive labels.",
+        "gradient_check": {"qwen": check_summary(qwen_doc), "gpt2": check_summary(gpt_doc)},
+        "small_grid_disagreements": disagreements,
+        "field": field,
+        "scope": (
+            "The blocked field reading is about these models, these prompts, and the functional slot map. "
+            "It does not say the structure cannot exist."
+        ),
+    }
 
 
 def _public_measurement(model_name: str, revision: str, payload: dict, slots: list[dict]) -> dict:
@@ -457,9 +588,14 @@ def main() -> None:
         }
     )
     _write(OUT / "decision.json", decision)
+    descriptive = build_descriptive(
+        _public_measurement("Qwen/Qwen2.5-0.5B", QWEN_REVISION, qwen_payload, qwen_slots),
+        _public_measurement("gpt2", GPT2_REVISION, gpt_payload, gpt_slots),
+    )
+    _write(OUT / "descriptive_not_decision.json", descriptive)
     manifest_lines = [f"{_sha(path)}  {path.name}" for path in sorted(OUT.glob("*.json"))]
     (OUT / "manifest.sha256").write_text("\n".join(manifest_lines) + "\n", encoding="utf-8")
-    REPORT.write_text(_report(decision, qwen_payload, gpt_payload), encoding="utf-8")
+    REPORT.write_text(_report(decision, qwen_payload, gpt_payload, descriptive), encoding="utf-8")
     print(decision["linear"]["qwen"]["label"])
     print(decision["linear"]["gpt2"]["label"])
     print(decision["field_decision"])

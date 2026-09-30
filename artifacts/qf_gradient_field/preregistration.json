@@ -1,0 +1,91 @@
+{
+  "assumes_context_independent_mechanism": false,
+  "assumes_model_independent_mechanism": false,
+  "delta_definition": "m(h) - m(h + alpha * v)",
+  "expansion": "delta \u2248 -alpha * v^T g(x) - (alpha^2 / 2) * v^T H_m(x) v",
+  "experiment": "QF-GRADIENT-FIELD",
+  "field_null": "all 720 permutations of GPT-2 prompts inside one split",
+  "gradient_check_absolute": 0.0001,
+  "gradient_check_epsilon": 0.01,
+  "gradient_check_epsilon_reason": "1e-4 is below float32 resolution of the logit-margin difference. 1e-2 is the instrument step. The scientific alpha grid is unchanged.",
+  "gradient_check_relative": 0.01,
+  "linear_term": "-alpha * v^T g(x)",
+  "m3": false,
+  "map": {
+    "direction_seeds": {
+      "orthogonal": 22103,
+      "primary": 22101
+    },
+    "directions_resampled_at_each_d_model": true,
+    "gpt2_layers": [
+      0,
+      4,
+      7,
+      11
+    ],
+    "imputation": false,
+    "layers_15_and_23_on_gpt2": "NOT_COMPARABLE",
+    "learned_rotation": false,
+    "name": "functional_slot_alignment",
+    "qwen_layers": [
+      0,
+      8,
+      15,
+      23
+    ],
+    "slot_order": [
+      "L0H0",
+      "L0H1",
+      "L0H2",
+      "L0H3",
+      "L1H0",
+      "L1H1",
+      "L1H2",
+      "L1H3"
+    ]
+  },
+  "mrsm_rerun": false,
+  "negative_result_scope": "A negative or partial result says this structure was not found for these models, these prompts, and this declared map. It does not say the structure cannot exist.",
+  "reference_alphas_not_in_linear_test": [
+    "-1.00",
+    "1.00"
+  ],
+  "related_not_this_test": [
+    {
+      "arxiv": "2606.27510",
+      "name": "Curse of Multiple Mediators",
+      "relation": "Discusses state-dependent interactions in activation-patching estimates. Related context, not this additive residual protocol."
+    },
+    {
+      "arxiv": "2303.02536",
+      "name": "Distributed Alignment Search",
+      "relation": "Learns an alignment to a prespecified high-level variable. It does not by itself remove context dependence, and it is not the map used here."
+    },
+    {
+      "arxiv": "2305.08809",
+      "name": "Boundless DAS",
+      "relation": "Extends DAS on Alpaca. Included as related work only. This diagnostic does not learn a rotation between models."
+    }
+  ],
+  "representation": "phi_s = v_s^T g_layer(s)",
+  "self_model_modified": false,
+  "sign_correction": "For alpha > 0 the first-order term in delta has the opposite sign of v^T g(x).",
+  "sign_floor": 1e-08,
+  "small_alphas": [
+    "-0.25",
+    "-0.10",
+    "-0.05",
+    "-0.01",
+    "0.01",
+    "0.05",
+    "0.10",
+    "0.25"
+  ],
+  "smallest_abs_alpha": 0.01,
+  "splits": {
+    "discovery": "same frozen discovery prompts as the regime matrix; primary linear reading",
+    "pooling": false,
+    "replication": "held-out repeat",
+    "validation": "held-out repeat"
+  }
+}
