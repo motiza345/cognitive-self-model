@@ -37,6 +37,7 @@ from src.mrsm.ccso import (  # noqa: E402
     QWEN_POSITIVE_ID,
     QWEN_REVISION,
     READOUTS,
+    beats,
     decide,
     preregistration_document,
     residual_state_and_gradient,
@@ -254,8 +255,27 @@ def _report(decision: dict, metrics: dict) -> str:
             "The result is local to this frozen revision and these frozen prompts.",
             "It does not say a richer observation cannot exist.",
             "",
+            "## 8. Which strict comparisons fired",
+            "",
+            "A cell is true only when MAE falls and sign agreement rises. This trace does not change the decision.",
+            "",
+            "| Comparison | Validation | Replication | Unseen direction | Held-out regime |",
+            "| --- | --- | --- | --- | --- |",
         ]
     )
+    for left, right in (
+        ("B3", "B2"),
+        ("C1", "B2"),
+        ("C1", "B3"),
+        ("C2", "B2"),
+        ("C2", "B3"),
+        ("C2", "C1"),
+        ("B2", "B0"),
+        ("B2", "B1"),
+    ):
+        flags = [str(beats(metrics["linear"][left][sl], metrics["linear"][right][sl])) for sl in PRIMARY_SLICES]
+        lines.append("| " + " | ".join([f"{left} over {right}", *flags]) + " |")
+    lines.extend(["", "The table uses the same `beats` rule as the decision. It does not reopen the label.", ""])
     return "\n".join(lines)
 
 
