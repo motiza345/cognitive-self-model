@@ -99,6 +99,9 @@ artifacts/mrsm/**/*.pt
 # Gradient-field diagnostic JSON only. Not an MRSM rerun and not a weight file.
 !artifacts/qf_gradient_field/
 !artifacts/qf_gradient_field/**
+# CCSO diagnostic arrays and JSON. Not a weight file and not an MRSM rerun.
+!artifacts/ccso/
+!artifacts/ccso/**
 
 # Archives
 *.zip

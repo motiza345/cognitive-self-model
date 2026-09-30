@@ -1002,6 +1002,55 @@ files:
   role: Gradient-field diagnostic. Does not rescore MRSM. M3 was not run.
   produced_by: scripts/run_qf_gradient_field.py
   consumed_by: UNKNOWN
+- path: artifacts/ccso/preregistration.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: CCSO rules fixed before the Qwen measurement. Not an MRSM preregistration edit.
+  produced_by: scripts/run_ccso.py
+  consumed_by: reports/CCSO_OBSERVATION.md
+- path: artifacts/ccso/measurement_index.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Prompt, layer, direction, and alpha index for the CCSO measurement.
+  produced_by: scripts/run_ccso.py
+  consumed_by: reports/CCSO_OBSERVATION.md
+- path: artifacts/ccso/measurements.npz
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Frozen-Qwen residual states, gradients, directions, and margin drops. Not a weight file.
+  produced_by: scripts/run_ccso.py
+  consumed_by: reports/CCSO_OBSERVATION.md
+- path: artifacts/ccso/metrics.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: CCSO readout metrics. Pearson is not a decision input.
+  produced_by: scripts/run_ccso.py
+  consumed_by: reports/CCSO_OBSERVATION.md
+- path: artifacts/ccso/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: CCSO observation decision. Not a mechanism claim and not a Self-Model.
+  produced_by: scripts/run_ccso.py
+  consumed_by: reports/CCSO_OBSERVATION.md
+- path: artifacts/ccso/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the CCSO artifacts.
+  produced_by: scripts/run_ccso.py
+  consumed_by: reports/CCSO_OBSERVATION.md
+- path: reports/CCSO_OBSERVATION.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Contextual causal-state observation diagnostic. Does not build a Self-Model.
+  produced_by: scripts/run_ccso.py
+  consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT
   immutable: false

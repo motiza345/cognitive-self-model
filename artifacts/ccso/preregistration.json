@@ -1,0 +1,83 @@
+{
+  "cross_model": false,
+  "decision_uses_nonlinear_probe": false,
+  "decision_uses_pearson": false,
+  "decision_uses_regime_permutation": false,
+  "direction_seeds": [
+    23101,
+    23102,
+    23103,
+    23104,
+    23105,
+    23106,
+    23107,
+    23108
+  ],
+  "experiment": "CCSO",
+  "feature_dim": 28,
+  "fine_tuning": false,
+  "held_out_prompts_excluded_from_fitting": true,
+  "historical_alpha_pm_1_in_primary_endpoint": false,
+  "lambda_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "lambda_selection": "leave-one-discovery-prompt-out MAE; smallest lambda wins ties",
+  "layers": [
+    0,
+    8,
+    15,
+    23
+  ],
+  "mlp_epochs": 400,
+  "mlp_hidden": 16,
+  "mlp_large_hidden": 128,
+  "model": "Qwen/Qwen2.5-0.5B",
+  "mrsm_modified": false,
+  "negative_result_scope": "A negative result says that additional information was not shown on this frozen Qwen revision and these frozen prompts. It does not say a richer observation cannot exist.",
+  "nonlinear_probe_alphas": [
+    "-0.25",
+    "0.25"
+  ],
+  "novel_direction_seeds": [
+    23107,
+    23108
+  ],
+  "nulls_that_can_block_a_positive_claim": [
+    "N1",
+    "N2",
+    "N4"
+  ],
+  "observation": {
+    "O0": "h at the intervened layer",
+    "O1": "(h, g) at the intervened layer; g is the direct residual gradient, not the target drop",
+    "O2": "h and g at every frozen layer; a depth profile, not a temporal trajectory"
+  },
+  "primary_alphas": [
+    "-0.10",
+    "-0.05",
+    "-0.01",
+    "0.01",
+    "0.05",
+    "0.10"
+  ],
+  "question": "Does a richer observation supply counterfactual information about Qwen's causal response that is not available from the snapshot or the local gradient?",
+  "qwen_modified": false,
+  "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "same_readout_width_for_B2_B3_C1_C2": true,
+  "self_model_built": false,
+  "status": "diagnostic_pre_self_model",
+  "target": "delta = m(h) - m(h + alpha v)",
+  "target_excluded_from_features": true,
+  "train_direction_seeds": [
+    23101,
+    23102,
+    23103,
+    23104,
+    23105,
+    23106
+  ]
+}

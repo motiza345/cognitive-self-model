@@ -1,0 +1,10 @@
+{
+  "decision": "INCONCLUSIVE",
+  "mechanism_identity": "NOT_EVALUATED",
+  "mrsm_modified": false,
+  "primary_interpretation": "The preregistered comparisons do not meet one decision rule. This result is local to the frozen Qwen revision and the frozen prompts. It does not say a richer observation cannot exist. No mechanism was identified. A Self-Model was not built. Pearson correlation, the alpha = \u00b10.25 probe, and the regime-label permutation are not decision inputs.",
+  "qwen_modified": false,
+  "reason": "The preregistered comparisons do not meet one decision rule.",
+  "self_model_built": false,
+  "trajectory_encoder_built": false
+}
