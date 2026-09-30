@@ -1,0 +1,96 @@
+{
+  "count_rule": "3 factorial, fixed by the frozen regime count",
+  "identity_mean_cosine": -0.3077527064261722,
+  "identity_strictly_best": false,
+  "metric": "cosine_similarity_of_r1_null_corrected_slot_vectors",
+  "numeric_threshold": null,
+  "permutation_count": 6,
+  "procedure": "exhaustive permutation of the three GPT-2 regime labels; Qwen labels stay fixed",
+  "rows": [
+    {
+      "cosines": [
+        0.20020113770835252,
+        -0.6026287395215716,
+        -0.5208305174652975
+      ],
+      "gpt2_regime_order": [
+        "completion",
+        "instruction",
+        "syntax"
+      ],
+      "identity": true,
+      "mean_cosine": -0.3077527064261722
+    },
+    {
+      "cosines": [
+        0.20020113770835252,
+        -0.07945797704754123,
+        0.0815193054882626
+      ],
+      "gpt2_regime_order": [
+        "completion",
+        "syntax",
+        "instruction"
+      ],
+      "identity": false,
+      "mean_cosine": 0.0674208220496913
+    },
+    {
+      "cosines": [
+        0.22789576424100338,
+        -0.17926905901094348,
+        -0.5208305174652975
+      ],
+      "gpt2_regime_order": [
+        "instruction",
+        "completion",
+        "syntax"
+      ],
+      "identity": false,
+      "mean_cosine": -0.1574012707450792
+    },
+    {
+      "cosines": [
+        0.22789576424100338,
+        -0.07945797704754123,
+        -0.5268924957852064
+      ],
+      "gpt2_regime_order": [
+        "instruction",
+        "syntax",
+        "completion"
+      ],
+      "identity": false,
+      "mean_cosine": -0.1261515695305814
+    },
+    {
+      "cosines": [
+        -0.14766209260076163,
+        -0.17926905901094348,
+        0.0815193054882626
+      ],
+      "gpt2_regime_order": [
+        "syntax",
+        "completion",
+        "instruction"
+      ],
+      "identity": false,
+      "mean_cosine": -0.08180394870781417
+    },
+    {
+      "cosines": [
+        -0.14766209260076163,
+        -0.6026287395215716,
+        -0.5268924957852064
+      ],
+      "gpt2_regime_order": [
+        "syntax",
+        "instruction",
+        "completion"
+      ],
+      "identity": false,
+      "mean_cosine": -0.4257277759691798
+    }
+  ],
+  "status": "COMPUTED"
+}

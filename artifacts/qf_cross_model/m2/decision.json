@@ -1,0 +1,21 @@
+{
+  "levels": {
+    "A": "NOT_SUPPORTED",
+    "B": "NOT_SUPPORTED",
+    "C": "PARTIAL"
+  },
+  "m2_decision": "PARTIAL_CROSS_MODEL_CONSISTENCY",
+  "m3_executed": false,
+  "mechanism_identity": "NOT_EVALUATED",
+  "primary_interpretation": "Some higher-level regime structure appears transferable, but the evidence is insufficient for a general model-independent causal representation.",
+  "recommendation_for_m3": "Do not run M3. Partial transfer is not sufficient to test a general model-independent representation.",
+  "regime_profile_result": {
+    "identity_mean_cosine": -0.3077527064261722,
+    "identity_strictly_best": false,
+    "matched_r1_cosine": {
+      "completion": 0.20020113770835252,
+      "instruction": -0.6026287395215716,
+      "syntax": -0.5208305174652975
+    }
+  }
+}

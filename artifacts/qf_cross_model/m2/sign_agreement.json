@@ -1,0 +1,49 @@
+{
+  "coordinate_not_comparable_excluded_from_profiles": true,
+  "functional_cells": {
+    "L0H0": {
+      "completion": "sign_agreement",
+      "instruction": "sign_disagreement",
+      "syntax": "sign_agreement"
+    },
+    "L0H1": {
+      "completion": "sign_disagreement",
+      "instruction": "sign_agreement",
+      "syntax": "sign_disagreement"
+    },
+    "L0H2": {
+      "completion": "sign_agreement",
+      "instruction": "sign_disagreement",
+      "syntax": "sign_disagreement"
+    },
+    "L0H3": {
+      "completion": "sign_agreement",
+      "instruction": "sign_disagreement",
+      "syntax": "sign_agreement"
+    },
+    "L1H0": {
+      "completion": "sign_agreement",
+      "instruction": "sign_disagreement",
+      "syntax": "sign_disagreement"
+    },
+    "L1H1": {
+      "completion": "sign_agreement",
+      "instruction": "sign_agreement",
+      "syntax": "sign_disagreement"
+    },
+    "L1H2": {
+      "completion": "sign_disagreement",
+      "instruction": "sign_disagreement",
+      "syntax": "sign_disagreement"
+    },
+    "L1H3": {
+      "completion": "sign_disagreement",
+      "instruction": "sign_disagreement",
+      "syntax": "sign_disagreement"
+    }
+  },
+  "near_zero": 0,
+  "not_comparable": 12,
+  "sign_agreement": 9,
+  "sign_disagreement": 15
+}

@@ -1,0 +1,860 @@
+{
+  "coordinate_layers_15_and_23": "NOT_COMPARABLE",
+  "models": {
+    "gpt2": {
+      "L0H0": {
+        "completion": {
+          "effects": [
+            -0.0037097930908203125,
+            0.008258342742919922
+          ],
+          "null_corrected_effect": 0.0022742748260498047,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.38005498227020995,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0022742748260498047,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            0.026776790618896484,
+            -0.0017490386962890625
+          ],
+          "null_corrected_effect": 0.012513875961303711,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.8773715794928372,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.012513875961303711,
+          "sign": "+"
+        },
+        "syntax": {
+          "effects": [
+            0.004131793975830078,
+            -0.008490562438964844
+          ],
+          "null_corrected_effect": -0.002179384231567383,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -0.34532129500207775,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.002179384231567383,
+          "sign": "-"
+        }
+      },
+      "L0H1": {
+        "completion": {
+          "effects": [
+            -0.00438690185546875,
+            0.012938499450683594
+          ],
+          "null_corrected_effect": 0.004275798797607422,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.4935872736280068,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.004275798797607422,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            0.0018887519836425781,
+            -0.007789134979248047
+          ],
+          "null_corrected_effect": -0.0029501914978027344,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -0.6096767836026803,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.0029501914978027344,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.0018968582153320312,
+            0.005547523498535156
+          ],
+          "null_corrected_effect": 0.0018253326416015625,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.49039200614911604,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0018253326416015625,
+          "sign": "+"
+        }
+      },
+      "L0H2": {
+        "completion": {
+          "effects": [
+            0.011447906494140625,
+            -0.011435985565185547
+          ],
+          "null_corrected_effect": 5.9604644775390625e-06,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.0005209310078973141,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 5.9604644775390625e-06,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            0.01545858383178711,
+            0.01561117172241211
+          ],
+          "null_corrected_effect": 0.01553487777709961,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 203.61875,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.01553487777709961,
+          "sign": "+"
+        },
+        "syntax": {
+          "effects": [
+            0.005083560943603516,
+            -0.01951885223388672
+          ],
+          "null_corrected_effect": -0.0072176456451416016,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -0.5867429014439384,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.0072176456451416016,
+          "sign": "-"
+        }
+      },
+      "L0H3": {
+        "completion": {
+          "effects": [
+            -0.013289451599121094,
+            0.020030975341796875
+          ],
+          "null_corrected_effect": 0.0033707618713378906,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.20232405048799337,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0033707618713378906,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            -0.006289005279541016,
+            -0.019188880920410156
+          ],
+          "null_corrected_effect": -0.012738943099975586,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -1.9750489779322071,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.012738943099975586,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.009229183197021484,
+            0.009080886840820312
+          ],
+          "null_corrected_effect": -7.414817810058594e-05,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -0.008099169249199198,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -7.414817810058594e-05,
+          "sign": "-"
+        }
+      },
+      "L1H0": {
+        "completion": {
+          "effects": [
+            0.02838420867919922,
+            0.002086162567138672
+          ],
+          "null_corrected_effect": 0.015235185623168945,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 1.1586553280992185,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.015235185623168945,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            0.0004153251647949219,
+            0.0028862953186035156
+          ],
+          "null_corrected_effect": 0.0016508102416992188,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 1.336163643380934,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0016508102416992188,
+          "sign": "+"
+        },
+        "syntax": {
+          "effects": [
+            0.023668766021728516,
+            0.0019359588623046875
+          ],
+          "null_corrected_effect": 0.012802362442016602,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 1.1781600368606973,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.012802362442016602,
+          "sign": "+"
+        }
+      },
+      "L1H1": {
+        "completion": {
+          "effects": [
+            -0.000347137451171875,
+            -0.006758213043212891
+          ],
+          "null_corrected_effect": -0.003552675247192383,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -1.1082930457419116,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.003552675247192383,
+          "sign": "-"
+        },
+        "instruction": {
+          "effects": [
+            -0.006433963775634766,
+            -0.010927677154541016
+          ],
+          "null_corrected_effect": -0.00868082046508789,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -3.863539898132428,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.00868082046508789,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.000102996826171875,
+            0.004452228546142578
+          ],
+          "null_corrected_effect": 0.0021746158599853516,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.9547786035800272,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0021746158599853516,
+          "sign": "+"
+        }
+      },
+      "L1H2": {
+        "completion": {
+          "effects": [
+            0.0010786056518554688,
+            0.0013337135314941406
+          ],
+          "null_corrected_effect": 0.0012061595916748047,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 9.45607476635514,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0012061595916748047,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            0.0018177032470703125,
+            0.0017538070678710938
+          ],
+          "null_corrected_effect": 0.0017857551574707031,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 55.8955223880597,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0017857551574707031,
+          "sign": "+"
+        },
+        "syntax": {
+          "effects": [
+            0.0014657974243164062,
+            0.0013761520385742188
+          ],
+          "null_corrected_effect": 0.0014209747314453125,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 31.70212765957447,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0014209747314453125,
+          "sign": "+"
+        }
+      },
+      "L1H3": {
+        "completion": {
+          "effects": [
+            0.006317138671875,
+            0.005081653594970703
+          ],
+          "null_corrected_effect": 0.0056993961334228516,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 9.226167502894635,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.0056993961334228516,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            0.005509376525878906,
+            0.005451202392578125
+          ],
+          "null_corrected_effect": 0.005480289459228516,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 188.40983606557376,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.005480289459228516,
+          "sign": "+"
+        },
+        "syntax": {
+          "effects": [
+            0.006421566009521484,
+            0.005318641662597656
+          ],
+          "null_corrected_effect": 0.00587010383605957,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 10.64461738002594,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.00587010383605957,
+          "sign": "+"
+        }
+      }
+    },
+    "qwen": {
+      "L0H0": {
+        "completion": {
+          "effects": [
+            0.11749839782714844,
+            0.0751962661743164
+          ],
+          "null_corrected_effect": 0.09634733200073242,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 4.555199855716121,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.09634733200073242,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            -0.0026092529296875,
+            -0.14783191680908203
+          ],
+          "null_corrected_effect": -0.07522058486938477,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -1.0359345140763214,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.07522058486938477,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.12115287780761719,
+            0.035080909729003906
+          ],
+          "null_corrected_effect": -0.04303598403930664,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -0.5509177588006569,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.04303598403930664,
+          "sign": "-"
+        }
+      },
+      "L0H1": {
+        "completion": {
+          "effects": [
+            -0.04873371124267578,
+            -0.07869529724121094
+          ],
+          "null_corrected_effect": -0.06371450424194336,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -4.253079542922621,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.06371450424194336,
+          "sign": "-"
+        },
+        "instruction": {
+          "effects": [
+            0.038712501525878906,
+            -0.05074024200439453
+          ],
+          "null_corrected_effect": -0.0060138702392578125,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -0.13445915691166124,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.0060138702392578125,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.0037488937377929688,
+            -0.15542984008789062
+          ],
+          "null_corrected_effect": -0.0795893669128418,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -1.0494313073329602,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.0795893669128418,
+          "sign": "-"
+        }
+      },
+      "L0H2": {
+        "completion": {
+          "effects": [
+            0.02356719970703125,
+            0.0623626708984375
+          ],
+          "null_corrected_effect": 0.042964935302734375,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 2.214945919370698,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.042964935302734375,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            -0.1309652328491211,
+            -0.008568763732910156
+          ],
+          "null_corrected_effect": -0.06976699829101562,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -1.1400165183649935,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.06976699829101562,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            0.00052642822265625,
+            0.02734088897705078
+          ],
+          "null_corrected_effect": 0.013933658599853516,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 1.0392645019027635,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.013933658599853516,
+          "sign": "+"
+        }
+      },
+      "L0H3": {
+        "completion": {
+          "effects": [
+            0.06133270263671875,
+            0.04215049743652344
+          ],
+          "null_corrected_effect": 0.051741600036621094,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 5.394749925425077,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.051741600036621094,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            -0.06269645690917969,
+            0.15321636199951172
+          ],
+          "null_corrected_effect": 0.045259952545166016,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 0.4192428478672797,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.045259952545166016,
+          "sign": "+"
+        },
+        "syntax": {
+          "effects": [
+            -0.047913551330566406,
+            -0.04829835891723633
+          ],
+          "null_corrected_effect": -0.04810595512390137,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -250.0260223048327,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.04810595512390137,
+          "sign": "-"
+        }
+      },
+      "L1H0": {
+        "completion": {
+          "effects": [
+            0.07222461700439453,
+            0.0732107162475586
+          ],
+          "null_corrected_effect": 0.07271766662597656,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": 147.4854932301741,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": 0.07271766662597656,
+          "sign": "+"
+        },
+        "instruction": {
+          "effects": [
+            -0.054388999938964844,
+            0.04304695129394531
+          ],
+          "null_corrected_effect": -0.005671024322509766,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -0.11640517182315575,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.005671024322509766,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.011515617370605469,
+            -0.062319278717041016
+          ],
+          "null_corrected_effect": -0.03691744804382324,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -1.4533380888467566,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.03691744804382324,
+          "sign": "-"
+        }
+      },
+      "L1H1": {
+        "completion": {
+          "effects": [
+            -0.031952857971191406,
+            -0.03129768371582031
+          ],
+          "null_corrected_effect": -0.03162527084350586,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -96.54002911208151,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.03162527084350586,
+          "sign": "-"
+        },
+        "instruction": {
+          "effects": [
+            -0.100860595703125,
+            -0.027823448181152344
+          ],
+          "null_corrected_effect": -0.06434202194213867,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -1.7618985441013253,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.06434202194213867,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.07192802429199219,
+            -0.05768394470214844
+          ],
+          "null_corrected_effect": -0.06480598449707031,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -9.099357257632565,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.06480598449707031,
+          "sign": "-"
+        }
+      },
+      "L1H2": {
+        "completion": {
+          "effects": [
+            -0.03195381164550781,
+            -0.027956008911132812
+          ],
+          "null_corrected_effect": -0.029954910278320312,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -14.985687022900763,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.029954910278320312,
+          "sign": "-"
+        },
+        "instruction": {
+          "effects": [
+            -0.02597808837890625,
+            -0.03372001647949219
+          ],
+          "null_corrected_effect": -0.02984905242919922,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -7.711012564671101,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.02984905242919922,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.029767990112304688,
+            -0.02693939208984375
+          ],
+          "null_corrected_effect": -0.02835369110107422,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -20.047875927174648,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.02835369110107422,
+          "sign": "-"
+        }
+      },
+      "L1H3": {
+        "completion": {
+          "effects": [
+            -0.11975812911987305,
+            -0.09902191162109375
+          ],
+          "null_corrected_effect": -0.1093900203704834,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -10.550624324510773,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.1093900203704834,
+          "sign": "-"
+        },
+        "instruction": {
+          "effects": [
+            -0.09339046478271484,
+            -0.11704349517822266
+          ],
+          "null_corrected_effect": -0.10521697998046875,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -8.896701878880735,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.10521697998046875,
+          "sign": "-"
+        },
+        "syntax": {
+          "effects": [
+            -0.11735343933105469,
+            -0.10574626922607422
+          ],
+          "null_corrected_effect": -0.11154985427856445,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "qf_regime_standardized_effect": -19.22085284693123,
+          "r2": {
+            "formula": "(effect - null_mean) / null_std",
+            "status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO",
+            "value": null
+          },
+          "raw_effect": -0.11154985427856445,
+          "sign": "-"
+        }
+      }
+    }
+  },
+  "primary_representation": "R1",
+  "r2_formula": "(effect - null_mean) / null_std",
+  "r2_status": "UNDEFINED_BECAUSE_NULL_STD_IS_ZERO"
+}

@@ -1,0 +1,37 @@
+{
+  "GPT2_CONTEXT_CANCELLATION": {
+    "per_slot": {
+      "L0H0": false,
+      "L0H1": true,
+      "L0H2": true,
+      "L0H3": true,
+      "L1H0": false,
+      "L1H1": false,
+      "L1H2": false,
+      "L1H3": false
+    },
+    "slots": [
+      "L0H1",
+      "L0H2",
+      "L0H3"
+    ]
+  },
+  "QWEN_CONTEXT_CANCELLATION": {
+    "per_slot": {
+      "L0H0": true,
+      "L0H1": false,
+      "L0H2": true,
+      "L0H3": true,
+      "L1H0": false,
+      "L1H1": false,
+      "L1H2": false,
+      "L1H3": false
+    },
+    "slots": [
+      "L0H0",
+      "L0H2",
+      "L0H3"
+    ]
+  },
+  "collapsed_into_one_result": false
+}
