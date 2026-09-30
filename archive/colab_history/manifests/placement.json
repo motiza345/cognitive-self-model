@@ -1,0 +1,380 @@
+{
+  "sources": [
+    {
+      "archive_source": "archive_01",
+      "declared_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "read_from": "/home/ubuntu/.cursor/projects/workspace/uploads/Colab_Notebooks-20260930T183832Z-1-001_2027.zip",
+      "sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "bytes": 623432
+    },
+    {
+      "archive_source": "archive_02",
+      "declared_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "read_from": "/home/ubuntu/.cursor/projects/workspace/uploads/Colab_Notebooks-20260930T183712Z-1-001__1__8ce2.zip",
+      "sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "bytes": 826574
+    }
+  ],
+  "notebooks": [
+    {
+      "archived_name": "Untitled17.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled17.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled17.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled11__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled11.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled11.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled6__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled6.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled6.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled9__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled9.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled9.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled16.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled16.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled16.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled10__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled10.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled10.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled8__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled8.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled8.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled18.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled18.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled18.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled7__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled7.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled7.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled15__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled15.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled15.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled4__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled4.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled4.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled13__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled13.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled13.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled0__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled0.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled0.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled14__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled14.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled14.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled3__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled3.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled3.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled5__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled5.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled5.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled2__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled2.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled2.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled1__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled1.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled1.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "m10.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "m10.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/m10.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled12__archive01.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled12.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled12.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled19.ipynb",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled19.ipynb",
+      "raw_path": "raw/archive_01/Colab Notebooks/Untitled19.ipynb",
+      "source_zip_sha256": "6ddf910e5666f3a6afe135827522438514ee304475b5f8a0cc8a4881d6b2e662",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip"
+    },
+    {
+      "archived_name": "Untitled8__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled8.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled8.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled5__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled5.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled5.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled4__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled4.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled4.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "gemini.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "gemini.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/gemini.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled9__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled9.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled9.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled6__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled6.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled6.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled2__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled2.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled2.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled3__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled3.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled3.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled11__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled11.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled11.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled14__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled14.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled14.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "M20_6_3_2_Execution_Readiness.ipynb.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "M20_6_3_2_Execution_Readiness.ipynb.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/M20_6_3_2_Execution_Readiness.ipynb.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled(1)",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled(1)",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled(1)",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled15__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled15.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled15.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled12__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled12.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled12.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "01_repository_setup.ipynb.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "01_repository_setup.ipynb.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/01_repository_setup.ipynb.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled10__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled10.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled10.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled0__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled0.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled0.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "m20.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "m20.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/m20.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled13__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled13.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled13.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled1__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled1.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled1.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "Untitled7__archive02.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled7.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/Untitled7.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "m20-5.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "m20-5.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/m20-5.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    },
+    {
+      "archived_name": "claudemori.ipynb",
+      "archive_source": "archive_02",
+      "original_filename": "claudemori.ipynb",
+      "raw_path": "raw/archive_02/Colab Notebooks/claudemori.ipynb",
+      "source_zip_sha256": "e8c0eb795c28c8f701224e783abe84fee840bfec8226ff0871205e00e7f110f7",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip"
+    }
+  ]
+}

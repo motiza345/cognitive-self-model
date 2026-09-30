@@ -1,0 +1,3659 @@
+{
+  "notebooks": [
+    {
+      "archive_experiment_id": "HIST-0001",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled0.ipynb",
+      "archived_name": "Untitled0__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "ca68f50189680db758775e5ab9aa556bbcd8aeca6585f742f9f5663d34dccfe1",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M1"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "GPT-2",
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.7.2",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.29.7",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2",
+        "transformer_lens) (2026.3",
+        "transformer_lens) (4.2.0"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [
+        "heads = [(l, h) for l in range(self.n_layers) for h in range(self.n_heads)]",
+        "heads = [h_tuple for h_tuple, val in sorted_discovered_heads[:top_k_synergy]"
+      ],
+      "metrics": [
+        {
+          "metric": "MSE",
+          "line": "\ud83d\udea8 [CAUSAL INCONSISTENCY] Predictive MSE (inf) > Threshold (0.35)",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0002",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled1.ipynb",
+      "archived_name": "Untitled1__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "2b7c06ca27817ab866d46931f30023e39710f9888a1ecd602e7516cc82911237",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M2"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "GPT-2",
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens in /usr/local/lib/python3.12/dist-packages (3.7.2",
+        "torch in /usr/local/lib/python3.12/dist-packages (2.11.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (0.0.3",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "transformer_lens) (0.3.11",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5 in /usr/local/lib/python3.12",
+        "transformer_lens) (0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "torch) (3.29.7",
+        "torch) (75.2.0",
+        "torch) (1.14.0",
+        "torch) (3.6.1",
+        "torch) (3.1.6",
+        "torch) (2025.3.0",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "patching",
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 4,
+      "code_cell_count": 4,
+      "markdown_cell_count": 0,
+      "output_cell_count": 4,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0003",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled10.ipynb",
+      "archived_name": "Untitled10__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "d8564b6e10a4bd118420118194bf826ed9cb9a33125c2f5d7a39672ac510873a",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M7.10",
+        "M8.1",
+        "M8.2",
+        "M8.3"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "torch.dot(head_out, d_u).item())) + 0.15"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [
+        "heads = [(21, 6), (21, 1), (17, 1), (14, 4), (10, 0)]"
+      ],
+      "metrics": [
+        {
+          "metric": "accuracy",
+          "line": "\u2022 Clean Tasks Accuracy (Base Model) : 6/10 (60.0%)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "/tmp/ipykernel_2736/4164165410.py:332: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention",
+        "self-model",
+        "adaptive probing"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 10,
+      "code_cell_count": 10,
+      "markdown_cell_count": 0,
+      "output_cell_count": 10,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0004",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled11.ipynb",
+      "archived_name": "Untitled11__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "3435f76f284fb1c028e04c53f41c20a88cae8358525d81658fe1fa9569f69f0e",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M9.2",
+        "M9.1",
+        "M9.3",
+        "M9.3A",
+        "M9.3B",
+        "M9.4",
+        "M9.5"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "\u2022 Predictive Self-Model MAE : 0.1345 (Sign Accuracy: 17.5%)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "\u2022 Predictive Self-Model MAE : 0.1345 (Sign Accuracy: 17.5%)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "\u2022 Mean Cross-Component Correlation (LOCO) : +0.3382",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "sign accuracy",
+          "line": "\u2022 Predictive Self-Model MAE : 0.1345 (Sign Accuracy: 17.5%)",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention",
+        "counterfactual",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 8,
+      "code_cell_count": 8,
+      "markdown_cell_count": 0,
+      "output_cell_count": 8,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0005",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled12.ipynb",
+      "archived_name": "Untitled12__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "1a63df2ec958607becac9c1ce827a24f65d6c3ac599486dfe5a1643efd22465b",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M11",
+        "M11.1",
+        "M11.2",
+        "M11.3"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "torch.float32) * 0.02",
+        "torch.optim.Adam([V], lr=0.05",
+        "torch.linalg.solve(Resp.T @ Resp + 1.0"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MSE",
+          "line": "epoch 000 | joint MSE loss = 0.16510",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "Mean Correlation (\u03c1) | Learned: +0.1103 | Fixed: +0.0607 | Random: +0.3380 | Passive: -0.2445",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 5,
+      "code_cell_count": 5,
+      "markdown_cell_count": 0,
+      "output_cell_count": 4,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0006",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled13.ipynb",
+      "archived_name": "Untitled13__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "9f4fbf40e8997fea4890f5dd824516355a88f1e915a69aa5d496be0570edbfc6",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M12",
+        "M12.1",
+        "M12.2"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.8.0",
+        "torch in /usr/local/lib/python3.13/dist-packages (2.11.0",
+        "numpy in /usr/local/lib/python3.13/dist-packages (2.1.3",
+        "transformer-lens) (1.14.0",
+        "transformer-lens) (0.22.9",
+        "transformer-lens) (4.0.0",
+        "transformer-lens) (1.28.0",
+        "transformer-lens) (26.3",
+        "transformer-lens) (2.2.3",
+        "transformer-lens) (5.29.6",
+        "transformer-lens) (13.9.4",
+        "transformer-lens) (0.2.2",
+        "transformer-lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.13",
+        "transformer-lens) (5.15.1",
+        "transformer-lens) (4.6.0",
+        "transformer-lens) (4.16.0",
+        "transformer-lens) (0.28.1",
+        "torch) (3.32.4",
+        "torch) (75.2.0",
+        "torch) (1.14.0",
+        "torch) (3.6.1",
+        "torch) (3.1.6",
+        "torch) (2025.3.0",
+        "torch) (12.8.1",
+        "torch) (12.9.7",
+        "torch) (9.19.0.56",
+        "torch) (0.7.1",
+        "torch) (2.28.9",
+        "torch) (3.4.5",
+        "torch) (3.6.0",
+        "torch) (12.8.4.1",
+        "torch) (12.8.90",
+        "torch) (11.3.3.83",
+        "torch) (1.13.1.3",
+        "torch) (10.3.9.90",
+        "torch) (11.7.3.90",
+        "torch) (12.5.8.93"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "25.0% (1/4) | \u03c3 <= 1.2268 | MAE = 0.0316 | 100.0%",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "\u2022 Overall Direction Accuracy : 50.0%",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention",
+        "counterfactual",
+        "self-model",
+        "epistemic graph"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 5,
+      "code_cell_count": 5,
+      "markdown_cell_count": 0,
+      "output_cell_count": 3,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0007",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled14.ipynb",
+      "archived_name": "Untitled14__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "9525f63aeda8ceee638eeaefadaaba85fa204babf84385d26d40c9a8da3f8cd7",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M14.3",
+        "M14.2",
+        "M14.4",
+        "M15",
+        "M14.5"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "torch.std(clean_margins).item()) if len(clean_margins) > 1 else 0.0",
+        "torch.std(deltas).item()) if len(deltas) > 1 else 0.0",
+        "torch.std(dm_contrast).item()) if len(dm_contrast) > 1 else 0.0",
+        "transformer_lens-3.8.0",
+        "torch in /usr/local/lib/python3.13/dist-packages (2.11.0",
+        "numpy in /usr/local/lib/python3.13/dist-packages (2.1.3",
+        "transformer-lens) (0.22.9",
+        "transformer-lens) (4.0.0",
+        "transformer-lens) (1.28.0",
+        "transformer-lens) (26.3",
+        "transformer-lens) (2.2.3",
+        "transformer-lens) (5.29.6",
+        "transformer-lens) (13.9.4",
+        "transformer-lens) (0.2.2",
+        "transformer-lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.13",
+        "transformer-lens) (5.15.1",
+        "transformer-lens) (4.6.0",
+        "transformer-lens) (4.16.0",
+        "transformer-lens) (0.28.1",
+        "torch) (3.32.4",
+        "torch) (75.2.0",
+        "torch) (1.14.0",
+        "torch) (3.6.1",
+        "torch) (3.1.6",
+        "torch) (2025.3.0",
+        "torch) (12.8.1",
+        "torch) (12.9.7",
+        "torch) (9.19.0.56",
+        "torch) (0.7.1",
+        "torch) (2.28.9",
+        "torch) (3.4.5",
+        "torch) (3.6.0",
+        "torch) (12.8.4.1",
+        "torch) (12.8.90",
+        "torch) (11.3.3.83",
+        "torch) (1.13.1.3",
+        "torch) (10.3.9.90"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "\u2022 Calibration Partition MAE (Unseen) : 0.0075",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "\u2022 3-Class Sign Accuracy (Calib) : 66.7%",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "\u2022 Legacy Sensor Correlation with True Prob (r_s): +1.0000 (MODERATE)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "sign accuracy",
+          "line": "\u2022 3-Class Sign Accuracy (Calib) : 66.7%",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "coverage",
+          "line": "\u2022 Interval Coverage Error (ICE-90) : 0.082",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention",
+        "self-model",
+        "causal graph"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 5,
+      "code_cell_count": 5,
+      "markdown_cell_count": 0,
+      "output_cell_count": 5,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0008",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled15.ipynb",
+      "archived_name": "Untitled15__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "b4e9085263606fd782ecac53756405194c9bcfecd2459047dc2f4cdb35f44be4",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M15",
+        "M14.5",
+        "M15.5",
+        "M16"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "torch.std(dm_contrast).item()) if len(dm_contrast) > 1 else 0.0",
+        "transformer_lens-3.8.0",
+        "torch in /usr/local/lib/python3.13/dist-packages (2.11.0",
+        "numpy in /usr/local/lib/python3.13/dist-packages (2.1.3",
+        "transformer-lens) (0.22.9",
+        "transformer-lens) (4.0.0",
+        "transformer-lens) (1.28.0",
+        "transformer-lens) (26.3",
+        "transformer-lens) (2.2.3",
+        "transformer-lens) (5.29.6",
+        "transformer-lens) (13.9.4",
+        "transformer-lens) (0.2.2",
+        "transformer-lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.13",
+        "transformer-lens) (5.15.1",
+        "transformer-lens) (4.6.0",
+        "transformer-lens) (4.16.0",
+        "transformer-lens) (0.28.1",
+        "torch) (3.32.4",
+        "torch) (75.2.0",
+        "torch) (1.14.0",
+        "torch) (3.6.1",
+        "torch) (3.1.6",
+        "torch) (2025.3.0",
+        "torch) (12.8.1",
+        "torch) (12.9.7",
+        "torch) (9.19.0.56",
+        "torch) (0.7.1",
+        "torch) (2.28.9",
+        "torch) (3.4.5",
+        "torch) (3.6.0",
+        "torch) (12.8.4.1",
+        "torch) (12.8.90",
+        "torch) (11.3.3.83",
+        "torch) (1.13.1.3",
+        "torch) (10.3.9.90",
+        "torch) (11.7.3.90",
+        "torch) (12.5.8.93"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Prediction Error (MAE) : 0.0052",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 4,
+      "code_cell_count": 4,
+      "markdown_cell_count": 0,
+      "output_cell_count": 4,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0009",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled16.ipynb",
+      "archived_name": "Untitled16.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "623e7a01eb21c0fa74f1275abd3b64f4b73e32e397d4f7d9f9e11769fdcf863e",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M16.5",
+        "M17",
+        "M16"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer-lens in /usr/local/lib/python3.13/dist-packages (3.8.0",
+        "torch in /usr/local/lib/python3.13/dist-packages (2.11.0",
+        "numpy in /usr/local/lib/python3.13/dist-packages (2.1.3",
+        "transformer-lens) (0.22.9",
+        "transformer-lens) (0.0.3",
+        "transformer-lens) (4.0.0",
+        "transformer-lens) (1.28.0",
+        "transformer-lens) (0.3.11",
+        "transformer-lens) (26.3",
+        "transformer-lens) (2.2.3",
+        "transformer-lens) (5.29.6",
+        "transformer-lens) (13.9.4",
+        "transformer-lens) (0.2.2",
+        "transformer-lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5 in /usr/local/lib/python3.13",
+        "transformer-lens) (0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.13",
+        "transformer-lens) (5.15.1",
+        "transformer-lens) (4.6.0",
+        "transformer-lens) (4.16.0",
+        "transformer-lens) (0.28.1",
+        "torch) (3.32.4",
+        "torch) (75.2.0",
+        "torch) (1.14.0",
+        "torch) (3.6.1",
+        "torch) (3.1.6",
+        "torch) (2025.3.0",
+        "torch) (12.8.1",
+        "torch) (12.9.7",
+        "torch) (9.19.0.56",
+        "torch) (0.7.1",
+        "torch) (2.28.9",
+        "torch) (3.4.5",
+        "torch) (3.6.0",
+        "torch) (12.8.4.1",
+        "torch) (12.8.90",
+        "torch) (11.3.3.83",
+        "torch) (1.13.1.3",
+        "torch) (10.3.9.90",
+        "torch) (11.7.3.90"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MSE",
+          "line": "\u001b[0;32m--> 371\u001b[0;31m \u001b[0md\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mengine_ig\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mselect_ig_active_dose\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtarget\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mkey\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0meval_ctx\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mig_doses\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0010",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled17.ipynb",
+      "archived_name": "Untitled17.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "74f152c650e5e076f3fe9dc5ce180f227653952631f452818940a80dd1169647",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M16",
+        "M17.5",
+        "M17",
+        "M17.6"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 7,
+      "code_cell_count": 7,
+      "markdown_cell_count": 0,
+      "output_cell_count": 5,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0011",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled18.ipynb",
+      "archived_name": "Untitled18.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "323b2804709e78f892223ffcb1847f149c0b46796ab5a89fc2e9038038fa98c2",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M16",
+        "M17",
+        "M17.6"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 4,
+      "code_cell_count": 4,
+      "markdown_cell_count": 0,
+      "output_cell_count": 4,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0012",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled19.ipynb",
+      "archived_name": "Untitled19.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "21ea6d383441973fed670868e75a0e4ea42ca1b368bbdf726a2f97dbfd7ee760",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M17.7"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0013",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled2.ipynb",
+      "archived_name": "Untitled2__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "47852e06a0272cb9e5a938fbf58a8a6619402e7ba3d205d9a2611a8c15f5229e",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M2",
+        "M2.2",
+        "M3"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.7.2",
+        "torch in /usr/local/lib/python3.12/dist-packages (2.11.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "torch) (3.29.7",
+        "torch) (75.2.0",
+        "torch) (1.14.0",
+        "torch) (3.6.1",
+        "torch) (3.1.6",
+        "torch) (2025.3.0",
+        "torch) (12.8.1",
+        "torch) (12.9.7",
+        "torch) (9.19.0.56",
+        "torch) (0.7.1",
+        "torch) (2.28.9",
+        "torch) (3.4.5",
+        "torch) (3.6.0",
+        "torch) (12.8.4.1",
+        "torch) (12.8.90",
+        "torch) (11.3.3.83",
+        "torch) (1.13.1.3",
+        "torch) (10.3.9.90"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Mean Absolute Error (MAE): 0.3043",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "patching",
+        "intervention",
+        "counterfactual",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 10,
+      "code_cell_count": 10,
+      "markdown_cell_count": 0,
+      "output_cell_count": 8,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0014",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled3.ipynb",
+      "archived_name": "Untitled3__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "0465f06c107e305173796c9a853e00d17f87be95638eb5fb92a6b3e7688d39fa",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M0",
+        "M7",
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M2.2",
+        "M3.1",
+        "M3.2",
+        "M3.3",
+        "M3.4",
+        "M3.5",
+        "M3.6",
+        "M3.7"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2",
+        "GPT-2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens in /usr/local/lib/python3.12/dist-packages (3.7.3",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (0.0.3",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.27.0",
+        "transformer_lens) (0.3.11",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.3",
+        "transformer_lens) (2.2.3",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5 in /usr/local/lib/python3.12",
+        "transformer_lens) (0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.15.0",
+        "transformer_lens) (4.6.0",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.2",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.32.3",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.6.0",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (0.1.7",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Mean Absolute Error (MAE): 0.3043",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "Sign Accuracy (Additive): 11/20 (55.0%)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "sign accuracy",
+          "line": "Sign Accuracy (Additive): 11/20 (55.0%)",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "patching",
+        "intervention",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 12,
+      "code_cell_count": 12,
+      "markdown_cell_count": 0,
+      "output_cell_count": 11,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0015",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled4.ipynb",
+      "archived_name": "Untitled4__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "25473713ab7bbfe5e56a05795496b810439d31abb90c0e1c42450dd793e88675",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M4.1",
+        "M4.2",
+        "M4.3"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.7.3",
+        "torch in /usr/local/lib/python3.12/dist-packages (2.11.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.27.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.3",
+        "transformer_lens) (2.2.3",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.15.0",
+        "transformer_lens) (4.6.0",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.2",
+        "torch) (3.32.3",
+        "torch) (75.2.0",
+        "torch) (1.14.0",
+        "torch) (3.6.1",
+        "torch) (3.1.6",
+        "torch) (2025.3.0",
+        "torch) (12.8.1",
+        "torch) (12.9.7",
+        "torch) (9.19.0.56",
+        "torch) (0.7.1",
+        "torch) (2.28.9",
+        "torch) (3.4.5",
+        "torch) (3.6.0",
+        "torch) (12.8.4.1",
+        "torch) (12.8.90",
+        "torch) (11.3.3.83",
+        "torch) (1.13.1.3",
+        "torch) (10.3.9.90"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Self-Model Prediction MAE: 0.9610",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "MSE",
+          "line": "\u001b[0;32m--> 163\u001b[0;31m \u001b[0mevaluate_dynamic_task\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodel\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;36m9\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m9\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;36m10\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m7\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 5,
+      "code_cell_count": 5,
+      "markdown_cell_count": 0,
+      "output_cell_count": 5,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0016",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled5.ipynb",
+      "archived_name": "Untitled5__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "d0bb9b690912f92ed902d7a594472af7d4b652f023a2c8532a8b29bd90c8399a",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "Resolve whether C4 <-> C6 failure was due to an underpowered held-out set (2 points)",
+      "milestone_ids": [
+        "M4.3b",
+        "M4.1",
+        "M4.2",
+        "M4.3",
+        "M4.3c",
+        "M4.4",
+        "M4.4b",
+        "M4.5",
+        "M4.5b",
+        "M4.5c",
+        "M4.5d",
+        "M4.5e",
+        "M4.5f",
+        "M4.5g",
+        "M4.5h",
+        "M4.6",
+        "M4.6b",
+        "M4.6c",
+        "M4.6d",
+        "M4.6e",
+        "M4.7",
+        "M4.7b",
+        "M4.8"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.7.3",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.27.0",
+        "transformer_lens) (26.3",
+        "transformer_lens) (2.2.3",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.13",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.13",
+        "transformer_lens) (5.15.0",
+        "transformer_lens) (4.6.0",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.1",
+        "numpy>=1.19.5 in /usr/local/lib/python3.13",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.32.3",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (4.0.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.6.0",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2",
+        "transformer_lens) (2026.3",
+        "transformer_lens) (4.2.0",
+        "transformer_lens) (2.21.0",
+        "torch>=2.6->transformer_lens) (75.2.0"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [
+        "layers = []"
+      ],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "\ud83d\udc49 MAE Learned Self-Model: 0.0013 | MAE Naive Additive: 0.0066",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "MSE",
+          "line": "Context | Model | Params | Held-Out MAE | Held-Out RMSE | R^2 | AIC",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "\ud83d\udd2c STAGE 2: UN-GATED VS GATED ZERO-PROBE PREDICTION ACCURACY",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "z-score",
+          "line": "\u2022 Z-Score: 10.22 | p-value: 0.0000",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C1 -> C2 (Held-out): MAE Naive=0.2095, Transfer=0.2074 (+1.0%) -> FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C2 -> C1 (Held-out): MAE Naive=0.0064, Transfer=0.1389 (-2087.1%) -> FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C3 -> C4 (Held-out): MAE Naive=0.7641, Transfer=0.7274 (+4.8%) -> FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C4 -> C3 (Held-out): MAE Naive=0.0552, Transfer=0.4257 (-671.5%) -> FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C3 -> C5 (Held-out): MAE Naive=1.3776, Transfer=1.3409 (+2.7%) -> FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C5 -> C3 (Held-out): MAE Naive=0.0552, Transfer=0.8121 (-1371.8%) -> FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C3 -> C6 (Held-out): MAE Naive=2.2262, Transfer=2.1895 (+1.7%) -> FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C6 -> C3 (Held-out): MAE Naive=0.0552, Transfer=1.3780 (-2397.3%) -> FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "- C4 -> C5 (Held-out): MAE Naive=1.3776, Transfer=0.8968 (+34.9%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "- C5 -> C4 (Held-out): MAE Naive=0.7641, Transfer=0.1031 (+86.5%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "- C4 -> C6 (Held-out): MAE Naive=2.2262, Transfer=1.7453 (+21.6%) -> PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "- C6 -> C4 (Held-out): MAE Naive=0.7641, Transfer=0.6690 (+12.5%) -> FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "- C5 -> C6 (Held-out): MAE Naive=2.2262, Transfer=1.3589 (+39.0%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "- C6 -> C5 (Held-out): MAE Naive=1.3776, Transfer=0.1285 (+90.7%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2022 C4 -> C5: Naive MAE=0.9819, Transfer=0.5625 (+42.7%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2022 C5 -> C4: Naive MAE=0.5443, Transfer=0.2103 (+61.4%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2022 C5 -> C6: Naive MAE=1.6057, Transfer=0.8510 (+47.0%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2022 C6 -> C5: Naive MAE=0.9819, Transfer=0.2697 (+72.5%) -> PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2022 C4 -> C6: Naive MAE=1.6057, Transfer=1.1864 (+26.1%) -> PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u2022 C6 -> C4: Naive MAE=0.5443, Transfer=0.7072 (-29.9%) -> FAIL"
+        }
+      ],
+      "status_keywords": [
+        "FAIL",
+        "PASS"
+      ],
+      "methods": [
+        "intervention",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 27,
+      "code_cell_count": 27,
+      "markdown_cell_count": 0,
+      "output_cell_count": 27,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0017",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled6.ipynb",
+      "archived_name": "Untitled6__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "b83e2587f20e2893ba01260b74936703df2896f401cbab0160eb8e36f51ce01c",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M4.8b",
+        "M4.9",
+        "M4.5",
+        "M5.0",
+        "M5.1",
+        "M5.1.5b",
+        "M5.1.6",
+        "M5.1.6b",
+        "M5.2"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "GPT-2",
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [
+        "layers = []",
+        "layers = [7, 8, 9, 10]"
+      ],
+      "heads": [
+        "heads = [(9, 9, 50.0), (10, 7, 40.0)]",
+        "heads=[(9, 9)]",
+        "heads = [src_a, src_b, (7, 10), (8, 8), (9, 0), (10, 0), (8, 2), (7, 0)]"
+      ],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Mean Zero-Probe MAE: 0.3479 (Baseline: 0.6226) | Overall Improvement: +44.13%",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "\u2022 SelfGraph Routing Accuracy to Node 0: 93.75% (15/16)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "\u2022 Causal Gain Pearson Correlation (r): +0.5947 (p-value: 1.5098e-02)",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention",
+        "counterfactual",
+        "blind discovery",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 10,
+      "code_cell_count": 10,
+      "markdown_cell_count": 0,
+      "output_cell_count": 10,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0018",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled7.ipynb",
+      "archived_name": "Untitled7__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "4eb18d76739338bea534ce9db8b58d903e3e3625f2b6e0cecafae71954165537",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M5.3",
+        "M5.4",
+        "M5.9",
+        "M5.3b",
+        "M5.5",
+        "M5.6",
+        "M5.7",
+        "M5.8",
+        "M5.9b"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2",
+        "GPT-2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "torch.randn(d_model, d_head) * 0.02"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [
+        "layers = [7, 8, 9, 10]"
+      ],
+      "heads": [
+        "n_heads=[(9, 9), (10, 7)]"
+      ],
+      "metrics": [
+        {
+          "metric": "accuracy",
+          "line": "\u2022 Fault Localization Accuracy: 100.00% (Correctly pinpointed L9H9)",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 10,
+      "code_cell_count": 10,
+      "markdown_cell_count": 0,
+      "output_cell_count": 10,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0019",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled8.ipynb",
+      "archived_name": "Untitled8__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "ebca60ee29c4eaf4977b763183e19f0377346274669ee9d3f8aead098a39ba45",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M5.8",
+        "M6.5",
+        "M6",
+        "M6.1",
+        "M6.2",
+        "M6.3",
+        "M6.4b",
+        "M6.4",
+        "M1.0",
+        "M6.6",
+        "M6.7",
+        "M6.8",
+        "M7.10"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen2.5-0.5B.",
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "torch.clamp(log_var, min=-6.0, max=4.0",
+        "torch.exp(-0.5",
+        "torch.log(var) + 0.5",
+        "torch.clamp(self.logvar_head(feat).squeeze(-1), min=-5.0, max=3.0",
+        "torch.relu(-1.0",
+        "torch.cat([r_last, torch.tensor([nom, 0.9"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [
+        "heads = [(21, 6), (21, 1), (17, 1), (20, 5), (17, 2)]",
+        "heads=[(l, h)]",
+        "heads=[(21, 6)]",
+        "heads=[chosen_fault]",
+        "heads=[(21, 6), (21, 1)]",
+        "heads = [(21, 6), (21, 1), (17, 1)]",
+        "heads = [(21, 6), (21, 1), (17, 1), (20, 5)]",
+        "heads = [chosen_head]",
+        "n_heads=3"
+      ],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "\u2022 Mean Calibrated Damage Error (MAE): 0.7730 Logits",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "MSE",
+          "line": "\u001b[1;32m 25\u001b[0m \u001b[0mSEED\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m42\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "\u2022 Directional Sign Accuracy: 68.75% (Strict Positive/Negative Alignment)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "\u2022 Pearson Correlation (r): 0.5299",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "sign accuracy",
+          "line": "\u2022 Directional Sign Accuracy: 68.75% (Strict Positive/Negative Alignment)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "z-score",
+          "line": "\u2022 Target Circuit Z-Score: 10.14 sigma (Statistically Unique if Z > 2.0)",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "patching",
+        "intervention",
+        "counterfactual",
+        "blind discovery",
+        "self-model",
+        "adaptive probing"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 12,
+      "code_cell_count": 12,
+      "markdown_cell_count": 0,
+      "output_cell_count": 11,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0020",
+      "archive_source": "archive_01",
+      "original_filename": "Untitled9.ipynb",
+      "archived_name": "Untitled9__archive01.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "e2cdc3c39b6e2e44233ba6250ad11865d1c952b09bf411a48dc4eb1e50a42774",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M0",
+        "M1",
+        "M2",
+        "M7.2",
+        "M7.1",
+        "M7.3",
+        "M7.4",
+        "M7.5",
+        "M7.6",
+        "M7.7",
+        "M7.8",
+        "M7.9"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "torch.tanh(d_logit_diff * 0.5"
+      ],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [
+        "heads = [(21, 6), (21, 1), (17, 1)]",
+        "heads=[h]",
+        "heads=[best_head]",
+        "heads = [(21, 6), (21, 1)]",
+        "heads=[head]",
+        "heads=[(21, 6)]"
+      ],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Budget (K) | Policy | MAE (Logits) | Sign Acc (%) | 2\u03c3 Coverage (%)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "accuracy",
+          "line": "\u2022 Directional Sign Accuracy: 66.67% across unseen OOD benchmarks",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "sign accuracy",
+          "line": "\u2022 Directional Sign Accuracy: 66.67% across unseen OOD benchmarks",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "coverage",
+          "line": "\u2022 2-Sigma Uncertainty Coverage: 66.67% of true observations fall within \u00b12\u03c3",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention",
+        "counterfactual",
+        "epistemic graph"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 10,
+      "code_cell_count": 10,
+      "markdown_cell_count": 0,
+      "output_cell_count": 10,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0021",
+      "archive_source": "archive_01",
+      "original_filename": "m10.ipynb",
+      "archived_name": "m10.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183832Z-1-001.zip",
+      "sha256": "9193407e834ced80612f3e1739f8242755240168ec05354b9c42a034ec13e410",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M9.4",
+        "M9.5",
+        "M9.3A",
+        "M10.1",
+        "M10.2",
+        "M10.2b",
+        "M10.2B",
+        "M10.2c",
+        "M10.2C",
+        "M10.2d",
+        "M10.2D"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B",
+        "Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [
+        "n_heads = 14",
+        "heads = [0, 2, 4, 5, 7, 9, 11, 13]",
+        "heads = [0, 2, 5, 11]"
+      ],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Target Head | Phi MAE | Phi \u03c1 | Global Mean MAE | Perm p-val | FDR Sig (q < 0.05)",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "\ud83d\udcca 1. GROUND-TRUTH TARGET CORRELATION: Corr(Y) [Actual System Behavior]",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 8,
+      "code_cell_count": 8,
+      "markdown_cell_count": 0,
+      "output_cell_count": 4,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0022",
+      "archive_source": "archive_02",
+      "original_filename": "01_repository_setup.ipynb.ipynb",
+      "archived_name": "01_repository_setup.ipynb.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "bcb7755c7bd02d98459a6520bb99093fb3900a50dc222e632b68992da5cbd824",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M20.6.3.2"
+      ],
+      "experiment_ids": [],
+      "model_names": [],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "3163 | print(f\" MAE : {validation_point_metrics['mae']:.4f}\")",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "5732 | print(f\"Final scientific status: {('PASS' if overall_valid else 'FAIL')}\")"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "5478-5484 | FOR_BLOCK | for status_name, status_value in overall_statuses.items(): print(f\" {status_name:<38}: {('PASS' if status_value else 'FAIL')}\")"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "5732-5735 | EXPRESSION_OR_CALL | print(f\"Final scientific status: {('PASS' if overall_valid else 'FAIL')}\")"
+        },
+        {
+          "status": "SUCCESS",
+          "label": "historical_reported",
+          "line": "\u2705 SUCCESS \u2014 \u06a9\u062f \u0648 commit\u0647\u0627\u06cc \u0645\u0648\u062c\u0648\u062f \u0631\u0648\u06cc GitHub \u0630\u062e\u06cc\u0631\u0647 \u0634\u062f\u0646\u062f."
+        }
+      ],
+      "status_keywords": [
+        "PASS",
+        "FAIL",
+        "SUCCESS"
+      ],
+      "methods": [
+        "ablation",
+        "self-model",
+        "self model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 22,
+      "code_cell_count": 22,
+      "markdown_cell_count": 0,
+      "output_cell_count": 22,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0023",
+      "archive_source": "archive_02",
+      "original_filename": "M20_6_3_2_Execution_Readiness.ipynb.ipynb",
+      "archived_name": "M20_6_3_2_Execution_Readiness.ipynb.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "c6feec98bbeff704ca90ee9ed9d8710153759b24478833a1037f2e9b342e65d5",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 1,
+      "code_cell_count": 1,
+      "markdown_cell_count": 0,
+      "output_cell_count": 1,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0024",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled",
+      "archived_name": "Untitled",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "7ef6ba560dbc7895af48ccb73e4ff854247db0184fc506b1a7865bb4571444ca",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [],
+      "duplicate_relations": [
+        {
+          "kind": "NEAR_DUPLICATE",
+          "with": "HIST-0040",
+          "reason": "same_cell_source"
+        }
+      ],
+      "parse_status": "OK",
+      "cell_count": 1,
+      "code_cell_count": 1,
+      "markdown_cell_count": 0,
+      "output_cell_count": 0,
+      "duplicate_class": "NEAR_DUPLICATE",
+      "similar_to": [
+        "HIST-0040"
+      ]
+    },
+    {
+      "archive_experiment_id": "HIST-0025",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled(1)",
+      "archived_name": "Untitled(1)",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "e461280963505a86249d4e20109782778a21acc778900963be78267fd36da435",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M17.17",
+        "M17.12",
+        "M17.13",
+        "M17.14",
+        "M17.15",
+        "M17.15b",
+        "M17.16"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [
+        {
+          "status": "SUCCESS",
+          "label": "historical_reported",
+          "line": "\ud83d\udce6 PHASE 2: Empirical Calibrator Training Status: \u2705 SUCCESS"
+        },
+        {
+          "status": "SUCCESS",
+          "label": "historical_reported",
+          "line": "\ud83d\udce6 PHASE 2: Calibrator Fitting: \u2705 SUCCESS (Multinomial Logistic Trained)"
+        },
+        {
+          "status": "SUCCESS",
+          "label": "historical_reported",
+          "line": "\ud83d\udce6 Calibration Fitting Status: \u2705 SUCCESS (Empirical Calibrator Trained on 18 Real Samples)"
+        },
+        {
+          "status": "SUCCESS",
+          "label": "historical_reported",
+          "line": "\ud83d\udce6 Calibration Status: \u2705 SUCCESS (18 Samples Fitted)"
+        }
+      ],
+      "status_keywords": [
+        "SUCCESS"
+      ],
+      "methods": [
+        "ablation",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 8,
+      "code_cell_count": 8,
+      "markdown_cell_count": 0,
+      "output_cell_count": 8,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0026",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled0.ipynb",
+      "archived_name": "Untitled0__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "e397b49c8943f28859246a282f2ec504d94305796d031f52665f9bcd1ae66d84",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2",
+        "GPT-2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.6.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.29.7",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2",
+        "transformer_lens) (2026.3",
+        "transformer_lens) (4.2.0"
+      ],
+      "seeds": [
+        "0",
+        "1"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "patching"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0027",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled1.ipynb",
+      "archived_name": "Untitled1__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "8247226f321e5dcc7603be7bc5f210bac5a550e838677f6f1e63c9dde99c3f5a",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2",
+        "GPT-2"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "0",
+        "1"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MSE",
+          "line": "\u001b[1;32m 315\u001b[0m \u001b[0;32mwith\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhooks\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfwd_hooks\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mbwd_hooks\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mreset_hooks_end\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mclear_contexts\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mhooked_mod",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "patching",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 3,
+      "code_cell_count": 3,
+      "markdown_cell_count": 0,
+      "output_cell_count": 1,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0028",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled10.ipynb",
+      "archived_name": "Untitled10__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "19b786b03c8d44438ec222d417ccb0c6cae2d6156f750f73d3e486f5a5734a02",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M17.18"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [
+        {
+          "status": "SUCCESS",
+          "label": "historical_reported",
+          "line": "\ud83d\udce6 Calibration Status: \u2705 SUCCESS (18 Samples Fitted)"
+        }
+      ],
+      "status_keywords": [
+        "SUCCESS"
+      ],
+      "methods": [],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0029",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled11.ipynb",
+      "archived_name": "Untitled11__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "55323a79e0f8dc7f6ddf170591d42006769633c00afed4ee458aa9f5e2d0aa84",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M19.2",
+        "M19.3"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "193026"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 1,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0030",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled12.ipynb",
+      "archived_name": "Untitled12__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "f87991b668a3705fbecbe9103a25aef49783995d91e2ec8dd9593ad167c601cd",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M19.4",
+        "M19.5"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "194026",
+        "195026",
+        "195226",
+        "195326",
+        "195426",
+        "195526"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [
+        "n_heads=5",
+        "heads = []"
+      ],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "1. Predictive MAE : Self = 0.3552 | Global = 0.8017 | Gain = 0.4465",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "coverage",
+          "line": "\ud83d\udd2c MILESTONE 19.5-R3 \u2014 SEQUENTIAL CHANGE-POINT & RISK-COVERAGE BENCHMARK",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\ud83d\udd10 Leakage Guard: PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | LEAKAGE_FREE"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | SELF_PREDICTIVE_VALUE"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | ANTI_COLLAPSE_VARIANCE"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | TRUST_SEPARATION_KNOWN"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | TRUST_SEPARATION_UNKNOWN"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | ATTACK_DETECTION_AUROC"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | ANTI_DEGENERATE_GOVERNANCE"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | KNOWN_ATTACK_SAFETY"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | UNKNOWN_ATTACK_SAFETY"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | TRUST_ERROR_ALIGNMENT"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | CLOSED_LOOP_LEARNING"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | LINEAGE_AUDIT"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Overall M19.4 Status: FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | SELF_MODEL_VALUE"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | L1_AUROC_GAIN"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | L2_AUROC_GAIN"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | L3_SEQUENTIAL_SUPERIORITY"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | L3_FINITE_DETECTION_DELAY"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | ANTI_DEGENERATE_CLEAN_ACT"
+        }
+      ],
+      "status_keywords": [
+        "PASS",
+        "FAIL"
+      ],
+      "methods": [
+        "ablation",
+        "counterfactual",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 9,
+      "code_cell_count": 9,
+      "markdown_cell_count": 0,
+      "output_cell_count": 6,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0031",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled13.ipynb",
+      "archived_name": "Untitled13__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "f6f6518bcd05a9693833f17b80531d16ab6862059c6e13d9ca733b140d39873b",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M19.5"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "195526",
+        "195626",
+        "195726",
+        "195826",
+        "195926",
+        "196026",
+        "196126",
+        "196226"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\ud83d\udd10 Static Leakage Guard: PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | PRE_SHIFT_STABILITY_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | FALSE_ALARM_STRESS_PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | CAUSAL_DETECTION_DELAY_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | BIDIRECTIONAL_RECOVERY_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | CAUSAL_ATTRIBUTION_SUPERIORITY"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | DISCRIMINATIVE_AUROC_PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | LINEAGE_AUDIT_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Overall M19.5-R5 Status: FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | BIDIRECTIONAL_RECOVERY_PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | CAUSAL_ATTRIBUTION_SUPERIORITY"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | DISCRIMINATIVE_AUROC_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Overall M19.5-R6 Status: FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | LONG_HORIZON_FAR_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | HARD_CLEAN_FAR_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Overall M19.5-R7 Status: FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\ud83d\udd10 Content-Only Leakage Guard: PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | PRE_SHIFT_STABILITY_PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | HARD_CLEAN_FAR_PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | LONG_HORIZON_FAR_PASS"
+        }
+      ],
+      "status_keywords": [
+        "PASS",
+        "FAIL"
+      ],
+      "methods": [
+        "ablation"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 10,
+      "code_cell_count": 10,
+      "markdown_cell_count": 0,
+      "output_cell_count": 9,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0032",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled14.ipynb",
+      "archived_name": "Untitled14__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "b5e6380cc155affdc36a7e3ca069c9c2dbfabe6f397034647333a637ba1b0a91",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M19.5"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "195926"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\ud83d\udd10 Content & Split Leakage Guard: PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | REGIME_A_NOMINAL_ACT_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | REGIME_B_NOVEL_VALID_DECOUPLED"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | REGIME_C_FAMILIAR_SHIFT_DETECTED"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | REGIME_D_NOVEL_SHIFT_DETECTED"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | ORTHOGONAL_AXIS_SEPARATION"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | TEMPORAL_CAUSAL_ORDER_ADVANTAGE"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | LINEAGE_AUDIT_PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Overall M19.5-R10 Status: FAIL"
+        }
+      ],
+      "status_keywords": [
+        "PASS",
+        "FAIL"
+      ],
+      "methods": [],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0033",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled15.ipynb",
+      "archived_name": "Untitled15__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "b5a270f0264cf2f1021320b0228137a21a1434099cb508885b6c0e8aa673f75d",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M20.6.3.3"
+      ],
+      "experiment_ids": [],
+      "model_names": [],
+      "model_revisions": [],
+      "library_versions": [
+        "numpy<2.3,>=1.24, but you have numpy 2.5.3"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 6,
+      "code_cell_count": 6,
+      "markdown_cell_count": 0,
+      "output_cell_count": 4,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0034",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled2.ipynb",
+      "archived_name": "Untitled2__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "7b09b0b9654a23245108c66391f220136b2016731c2e182e4ce4247af9afc1da",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "GPT-2",
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.6.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.29.7",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2",
+        "transformer_lens) (2026.3",
+        "transformer_lens) (4.2.0"
+      ],
+      "seeds": [
+        "0",
+        "7"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "accuracy",
+          "line": "=== Exact greedy accuracy on all 16 pairs in [1,4]x[1,4] ===",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "patching",
+        "intervention",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 5,
+      "code_cell_count": 5,
+      "markdown_cell_count": 0,
+      "output_cell_count": 5,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0035",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled3.ipynb",
+      "archived_name": "Untitled3__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "076d0218c78f66158faf6f5589432daf509361acc036438ea5d2d1a54196ffaf",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2",
+        "GPT-2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.6.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.29.7",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2",
+        "transformer_lens) (2026.3",
+        "transformer_lens) (4.2.0"
+      ],
+      "seeds": [
+        "0",
+        "7",
+        "1"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0036",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled4.ipynb",
+      "archived_name": "Untitled4__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "7a5163420922eb96c53bfd757aa82e0a39a9584f28b1ccf7fc574925b69f6ce9",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "GPT-2",
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [
+        "layers=[7, 8, 9, 10, 11]",
+        "layers = [int(x.replace(\"layer\", \"\")) for x in metadata[\"accepted_mechanisms\"]"
+      ],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 6,
+      "code_cell_count": 6,
+      "markdown_cell_count": 0,
+      "output_cell_count": 5,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0037",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled5.ipynb",
+      "archived_name": "Untitled5__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "caf85a13b649e86578d9e1ed543867823d13882a912b259fd3f39b59ee1dee63",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-3B",
+        "Qwen/Qwen2.5-3B-Instruct",
+        "qwen2.5-3b",
+        "GPT-2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens in /usr/local/lib/python3.12/dist-packages (3.7.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (0.0.3",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "transformer_lens) (0.3.11",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5 in /usr/local/lib/python3.12",
+        "transformer_lens) (0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.29.7",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (0.1.7",
+        "transformer_lens) (2.9.0"
+      ],
+      "seeds": [
+        "0",
+        "7",
+        "1"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "patching",
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 2,
+      "code_cell_count": 2,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0038",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled6.ipynb",
+      "archived_name": "Untitled6__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "175af2fccb2f9f6a4cfcf4081569cc63f1986e31a31662ae17c2012db14291f6",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-3B-Instruct"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 4,
+      "code_cell_count": 4,
+      "markdown_cell_count": 0,
+      "output_cell_count": 4,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0039",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled7.ipynb",
+      "archived_name": "Untitled7__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "dc06bf975b4c02d8a451746cec0b9b2e93a538893e50c93f945c18aa4fbe2636",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "GPT-2",
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.7.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "transformer_lens) (3.29.7",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2",
+        "transformer_lens) (2026.3",
+        "transformer_lens) (4.2.0",
+        "transformer_lens) (2.20.0",
+        "torch>=2.6->transformer_lens) (75.2.0",
+        "torch>=2.6->transformer_lens) (1.14.0",
+        "torch>=2.6->transformer_lens) (3.6.1"
+      ],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [
+        "layers = [l for l, d in single_deltas.items() if abs(d) > 0.3]"
+      ],
+      "heads": [
+        "heads=10",
+        "heads = [(7, 4), (8, 5), (10, 9), (6, 0), (10, 5)]",
+        "HEADS = [(10, 9), (10, 5)]"
+      ],
+      "metrics": [
+        {
+          "metric": "MSE",
+          "line": "\u001b[0;32m---> 97\u001b[0;31m \u001b[0mpatched_logits\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmodel\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrun_with_hooks\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcorrupted_toks\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfwd_hooks\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mhook\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "ablation",
+        "patching",
+        "intervention",
+        "blind discovery",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 12,
+      "code_cell_count": 12,
+      "markdown_cell_count": 0,
+      "output_cell_count": 12,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0040",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled8.ipynb",
+      "archived_name": "Untitled8__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "73c8e66b6d2a7a0592860be5755fbfc67274c2e1786509d2c99deb9f421fa287",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [],
+      "duplicate_relations": [
+        {
+          "kind": "NEAR_DUPLICATE",
+          "with": "HIST-0024",
+          "reason": "same_cell_source"
+        }
+      ],
+      "parse_status": "OK",
+      "cell_count": 1,
+      "code_cell_count": 1,
+      "markdown_cell_count": 0,
+      "output_cell_count": 0,
+      "duplicate_class": "NEAR_DUPLICATE",
+      "similar_to": [
+        "HIST-0024"
+      ]
+    },
+    {
+      "archive_experiment_id": "HIST-0041",
+      "archive_source": "archive_02",
+      "original_filename": "Untitled9.ipynb",
+      "archived_name": "Untitled9__archive02.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "22cc4b48b5f8f156719cfdb249d1691a48dcd080166ac7fd9567966854cc0590",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M17.17",
+        "M18A",
+        "M18B",
+        "M18C"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "42"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [
+        {
+          "status": "SUCCESS",
+          "label": "historical_reported",
+          "line": "\ud83d\udce6 Calibration Status: \u2705 SUCCESS (18 Samples Fitted)"
+        }
+      ],
+      "status_keywords": [
+        "SUCCESS"
+      ],
+      "methods": [
+        "ablation"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 5,
+      "code_cell_count": 5,
+      "markdown_cell_count": 0,
+      "output_cell_count": 5,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0042",
+      "archive_source": "archive_02",
+      "original_filename": "claudemori.ipynb",
+      "archived_name": "claudemori.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "3d98862429308e8dd1478795fecdaf838e27a65e6e1f27610d8b755f5fed83da",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "GPT-2",
+        "Qwen/Qwen2.5-3B",
+        "Qwen/Qwen2.5-3B-Instruct",
+        "qwen2.5-3b",
+        "Qwen/Qwen2.5-1.5B",
+        "Qwen/Qwen2.5-0.5B",
+        "Qwen2.5-1.5B"
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "0",
+        "7",
+        "1"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "patching",
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 3,
+      "code_cell_count": 3,
+      "markdown_cell_count": 0,
+      "output_cell_count": 2,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0043",
+      "archive_source": "archive_02",
+      "original_filename": "gemini.ipynb",
+      "archived_name": "gemini.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "78376666495b35f073a75fc1864ef7fec81c0a303739113b0e743dd1121ebcd0",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [],
+      "experiment_ids": [],
+      "model_names": [
+        "gpt2"
+      ],
+      "model_revisions": [],
+      "library_versions": [
+        "transformer_lens-3.6.0",
+        "transformer_lens) (1.14.0",
+        "transformer_lens) (0.22.9",
+        "transformer_lens) (4.0.0",
+        "transformer_lens) (0.8.2",
+        "transformer_lens) (1.23.0",
+        "numpy>=1.26 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.0.2",
+        "transformer_lens) (26.2",
+        "transformer_lens) (2.2.2",
+        "transformer_lens) (5.29.6",
+        "transformer_lens) (13.9.4",
+        "transformer_lens) (0.2.2",
+        "torch>=2.6 in /usr/local/lib/python3.12",
+        "transformer_lens) (2.11.0",
+        "transformer_lens) (4.67.3",
+        "transformers-stream-generator<0.1,>=0.0.5",
+        "transformers-stream-generator-0.0.5",
+        "transformers>=5.9.0 in /usr/local/lib/python3.12",
+        "transformer_lens) (5.13.1",
+        "transformer_lens) (4.5.2",
+        "transformer_lens) (4.16.0",
+        "transformer_lens) (0.28.0",
+        "transformer_lens) (5.9.5",
+        "transformer_lens) (6.0.3",
+        "transformer_lens) (0.8.0",
+        "transformer_lens) (3.29.7",
+        "transformer_lens) (18.1.0",
+        "transformer_lens) (0.3.8",
+        "transformer_lens) (2.32.4",
+        "transformer_lens) (3.8.1",
+        "transformer_lens) (0.70.16",
+        "transformer_lens) (2025.3.0",
+        "transformer_lens) (8.4.2",
+        "transformer_lens) (1.5.1",
+        "transformer_lens) (0.28.1",
+        "transformer_lens) (2.9.0",
+        "transformer_lens) (2025.2",
+        "transformer_lens) (2026.3",
+        "transformer_lens) (4.2.0"
+      ],
+      "seeds": [
+        "0",
+        "7",
+        "1"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [
+        "LAYERS = [7, 8, 9, 10, 11]"
+      ],
+      "heads": [],
+      "metrics": [],
+      "decisions": [],
+      "status_keywords": [],
+      "methods": [
+        "intervention"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 4,
+      "code_cell_count": 4,
+      "markdown_cell_count": 0,
+      "output_cell_count": 1,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0044",
+      "archive_source": "archive_02",
+      "original_filename": "m20-5.ipynb",
+      "archived_name": "m20-5.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "2edab22db82e2fd7b34b6df98bee54f4a201fb328b0414ee53053691e8d79031",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M20.5.8",
+        "M20.5.9",
+        "M20.5.10",
+        "M20.5.11",
+        "M20.5.12",
+        "M20.5.13",
+        "M20.5.7",
+        "M20.6",
+        "M20.6.1",
+        "M20.6.2",
+        "M20.6.3",
+        "M20.6.3.1",
+        "M20.6.3.2"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B",
+        "Qwen/Qwen2.5-0.5B..."
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "205930",
+        "205931",
+        "205932",
+        "205933",
+        "206001",
+        "206101"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [
+        "LAYERS = [0, 3, 6, 9, 12, 15, 18, 21]"
+      ],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "MAE",
+          "line": "Layer 0 | Rho= 0.8653 | R\u00b2= 0.7625 | MAE= 0.2207",
+          "label": "historical_reported"
+        },
+        {
+          "metric": "correlation",
+          "line": "Baseline 0 (Null P95 Limit) : Rank Correlation Rho = 0.0000",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | CR1_GRADUAL_RAMP_ANTICIPATION"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | CR2_ABRUPT_SHOCK_CONTAINMENT"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | CR3_OSCILLATORY_DWELL_TRACKING"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | CR4_COMPOUND_NOVELTY_DECOUPLING"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Criteria Passed: 2/4 | Overall Status: FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Benchmark construction : FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Temporal self-model : FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Cross-regime transfer : FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "Point | rho= 0.4194 | Macro= 0.2627 | R\u00b2= 0.1748 | Persist= 0.4250 | Oracle= 0.4250 | Gate=PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Hazard | AUC= 0.7304 | AP= 0.0763 | Prev= 0.0292 | \u0394AP= 0.0471 | FPR= 0.0689 | Gate=FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Point | rho= 0.2656 | Macro= 0.1658 | R\u00b2=-0.0150 | Persist= 0.2612 | Oracle= 0.2612 | Gate=FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "Hazard | AUC= 0.6899 | AP= 0.0856 | Prev= 0.0097 | \u0394AP= 0.0759 | FPR= 0.0354 | Gate=PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "Point | rho= 0.9281 | Macro= 0.6962 | R\u00b2= 0.6638 | Persist= 0.9358 | Oracle= 0.9358 | Gate=PASS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "Hazard | AUC= 0.8209 | AP= 0.3869 | Prev= 0.1204 | \u0394AP= 0.2666 | FPR= 0.1610 | Gate=PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Point | rho=-0.3093 | Macro=-0.3283 | R\u00b2=-0.6015 | Persist=-0.3383 | Oracle=-0.3383 | Gate=FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Hazard | AUC= 0.6125 | AP= 0.0870 | Prev= 0.0365 | \u0394AP= 0.0505 | FPR= 0.0833 | Gate=FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Point | rho= 0.2617 | Macro= 0.1816 | R\u00b2=-0.0188 | Persist= 0.2815 | Oracle= 0.2815 | Gate=FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Hazard | AUC= 0.6069 | AP= 0.2759 | Prev= 0.1984 | \u0394AP= 0.0775 | FPR= 0.1131 | Gate=FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Point | rho= 0.1588 | Macro= 0.0535 | R\u00b2=-0.1046 | Persist= 0.1669 | Oracle= 0.1669 | Gate=FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Hazard | AUC= 0.5536 | AP= 0.3011 | Prev= 0.2462 | \u0394AP= 0.0549 | FPR= 0.5693 | Gate=FAIL"
+        }
+      ],
+      "status_keywords": [
+        "FAIL",
+        "PASS"
+      ],
+      "methods": [
+        "ablation",
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 11,
+      "code_cell_count": 11,
+      "markdown_cell_count": 0,
+      "output_cell_count": 11,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    },
+    {
+      "archive_experiment_id": "HIST-0045",
+      "archive_source": "archive_02",
+      "original_filename": "m20.ipynb",
+      "archived_name": "m20.ipynb",
+      "declared_zip_name": "Colab Notebooks-20260930T183712Z-1-001 (1).zip",
+      "sha256": "236080b85de2ebebe85ce110fdd72108a9ae4d1fadd13eaffdb12c6418fb9037",
+      "scientific_interpretation": "UNKNOWN",
+      "objective": "NOT_DETERMINED",
+      "milestone_ids": [
+        "M20.1",
+        "M20.2",
+        "M20.3",
+        "M20.4",
+        "M20.5",
+        "M20.5.1",
+        "M20.5.2",
+        "M20.5.3",
+        "M20.5.4",
+        "M20.5.5",
+        "M20.5.6",
+        "M20.5.7",
+        "M20.5.8",
+        "M20.5.9",
+        "M20.5.10",
+        "M20"
+      ],
+      "experiment_ids": [],
+      "model_names": [
+        "Qwen/Qwen2.5-0.5B",
+        "Qwen/Qwen2.5-0.5B..."
+      ],
+      "model_revisions": [],
+      "library_versions": [],
+      "seeds": [
+        "202609",
+        "205926",
+        "205927",
+        "205928",
+        "205929",
+        "205930"
+      ],
+      "datasets": [],
+      "regimes": [],
+      "layers": [],
+      "heads": [],
+      "metrics": [
+        {
+          "metric": "correlation",
+          "line": "Baseline 0 (Null Limit) : 95th Percentile Random Correlation Rho = 0.3186",
+          "label": "historical_reported"
+        }
+      ],
+      "decisions": [
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Monotonic Ordering : \u274c FAIL"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "SEVERITY RECOVERABILITY STATUS: \u274c FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T1_CALIBRATION_INDEPENDENCE"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T2_NOMINAL_STABILITY"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T3_SINGLE_SPIKE_ROBUSTNESS"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T4_PERSISTENT_DRIFT_DETECTION"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T5_DRIFT_SEVERITY_ORDERING"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T6_RECOVERY_ONSET"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T7_RECOVERY_PERSISTENCE"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T8_POST_RECOVERY_NORMAL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T9_NOVEL_VALID_DECOUPLING"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T10_UNKNOWN_BOUNDARY"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T11_NOISE_ROBUSTNESS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | T12_TEMPORAL_ANTICIPATION"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T13_FALSE_RECOVERY_IMMUNITY"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "Criteria Passed: 12/13 | Status: FAIL"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "\u2705 PASS | T12_TEMPORAL_ANTICIPATION"
+        },
+        {
+          "status": "PASS",
+          "label": "historical_reported",
+          "line": "Criteria Passed: 13/13 | Status: PASS"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | T4_PERSISTENT_DRIFT_DETECTION"
+        },
+        {
+          "status": "FAIL",
+          "label": "historical_reported",
+          "line": "\u274c FAIL | T14_ADVERSARIAL_INVERSION_IMMUNITY"
+        }
+      ],
+      "status_keywords": [
+        "FAIL",
+        "PASS"
+      ],
+      "methods": [
+        "self-model"
+      ],
+      "duplicate_relations": [],
+      "parse_status": "OK",
+      "cell_count": 17,
+      "code_cell_count": 17,
+      "markdown_cell_count": 0,
+      "output_cell_count": 9,
+      "duplicate_class": "DISTINCT",
+      "similar_to": []
+    }
+  ]
+}
