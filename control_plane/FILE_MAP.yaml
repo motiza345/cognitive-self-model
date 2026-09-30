@@ -1114,6 +1114,34 @@ files:
   role: Unchanged belief rule scored on changed planted worlds. Does not modify the Self-Model.
   produced_by: scripts/run_belief_world.py
   consumed_by: UNKNOWN
+- path: artifacts/qwen_belief_update/preregistration.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Qwen scope-update rule, written before the frozen CCSO measurements are scored.
+  produced_by: scripts/run_qwen_belief_update.py
+  consumed_by: reports/QWEN_BELIEF_UPDATE.md
+- path: artifacts/qwen_belief_update/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Qwen scope-update decision. Not a mechanism claim and not a new Qwen forward.
+  produced_by: scripts/run_qwen_belief_update.py
+  consumed_by: reports/QWEN_BELIEF_UPDATE.md
+- path: artifacts/qwen_belief_update/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the Qwen scope-update artifacts.
+  produced_by: scripts/run_qwen_belief_update.py
+  consumed_by: reports/QWEN_BELIEF_UPDATE.md
+- path: reports/QWEN_BELIEF_UPDATE.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Scope-update diagnostic on frozen Qwen measurements. Does not build a Self-Model.
+  produced_by: scripts/run_qwen_belief_update.py
+  consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT
   immutable: false

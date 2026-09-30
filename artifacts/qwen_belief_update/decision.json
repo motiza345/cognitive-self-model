@@ -1,0 +1,61 @@
+{
+  "controls": {
+    "scope_string_alone": "REVISE_SCOPE"
+  },
+  "decision": {
+    "decision": "QWEN_UPDATE_DOES_NOT_SEPARATE",
+    "reason": "The Qwen cases did not receive the three preregistered updates.",
+    "reason_code": "PRIMARY_MISMATCH"
+  },
+  "finite_ok": true,
+  "m22_started": false,
+  "measurement_sha256_after": "1c322bfa54fa2def807dfae5a225834efb1ef642e6c5a048507829a26951792d",
+  "measurement_sha256_before": "1c322bfa54fa2def807dfae5a225834efb1ef642e6c5a048507829a26951792d",
+  "mechanism_identity": "NOT_EVALUATED",
+  "new_qwen_forward": false,
+  "p_floor_used": false,
+  "p_head_table_used": false,
+  "primary": {
+    "regime_change": "REVISE_SCOPE",
+    "same_regime": "ABSTAIN",
+    "two_changes": "ABSTAIN"
+  },
+  "rule_sha256_after": "fe591f2bff2e31b69925724027c8d1cdcb5094064073591bddbaf0000a714c35",
+  "rule_sha256_before": "fe591f2bff2e31b69925724027c8d1cdcb5094064073591bddbaf0000a714c35",
+  "self_ok": true,
+  "split_ok": true,
+  "trace": {
+    "decision_input": false,
+    "discovery_self": {
+      "completion": "HOLD",
+      "instruction": "HOLD",
+      "syntax": "HOLD"
+    },
+    "regime_change": {
+      "completion->instruction": "REVISE_SCOPE",
+      "completion->syntax": "REVISE_SCOPE",
+      "instruction->completion": "REVISE_SCOPE",
+      "instruction->syntax": "REVISE_SCOPE",
+      "syntax->completion": "REVISE_SCOPE",
+      "syntax->instruction": "REVISE_SCOPE"
+    },
+    "same_regime": {
+      "completion": "ABSTAIN",
+      "instruction": "ABSTAIN",
+      "syntax": "ABSTAIN"
+    },
+    "scope_string_alone": {
+      "completion": "REVISE_SCOPE",
+      "instruction": "REVISE_SCOPE",
+      "syntax": "REVISE_SCOPE"
+    },
+    "two_changes": {
+      "completion->instruction": "ABSTAIN",
+      "completion->syntax": "ABSTAIN",
+      "instruction->completion": "ABSTAIN",
+      "instruction->syntax": "ABSTAIN",
+      "syntax->completion": "ABSTAIN",
+      "syntax->instruction": "ABSTAIN"
+    }
+  }
+}
