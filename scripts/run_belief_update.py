@@ -165,10 +165,13 @@ def _markdown(result: dict[str, Any]) -> str:
             "## 6. What this does not say",
             "",
             "Section 3 is the decision trace. It does not reopen the label.",
-            "Separation means these injections were distinguishable on this belief.",
+            "The four injections are built so that each one supports a different predicate.",
+            "On this belief, a legal interaction move exists and the frozen holdout stays inside tolerance.",
+            "Separation means those constructed records were distinguishable.",
+            "It does not say the rule recovered a failure type from unstructured history.",
             "It does not say the same rule separates failures on Qwen.",
-            "A collapse means this rule did not keep the four contradictions apart.",
-            "It does not say a belief object cannot be defined.",
+            "A collapse would mean this rule did not keep the four contradictions apart.",
+            "It would not say a belief object cannot be defined.",
             "",
         ]
     )

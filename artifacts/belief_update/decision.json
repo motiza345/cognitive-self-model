@@ -1,0 +1,46 @@
+{
+  "arm": "P",
+  "audit": {
+    "effects_match": true,
+    "interaction_match": true,
+    "n_discovery_pairs": 28,
+    "n_discovery_singles": 8,
+    "reconstructed_winner_interaction": -14.35336685180664,
+    "recorded_winner_interaction": -14.35336685180664
+  },
+  "construction_defined": true,
+  "controls": {
+    "double": "ABSTAIN",
+    "holdout": "HOLD",
+    "scope_string_alone": "HOLD"
+  },
+  "decision": {
+    "decision": "UPDATE_RULE_SEPARATES_FAILURES",
+    "reason": "The four injected contradictions received four different updates, and the controls matched.",
+    "reason_code": "SEPARATED"
+  },
+  "formula_tolerance": 10.476338585083338,
+  "input_sha256_after_scoring": {
+    "evidence.json": "3f24ddf276c98c0760718bbe1800d5c5a5438222cbcd73e4f78eba648085c3f2",
+    "falsification.json": "c01ad1abf893b9fdc466c4afe35c7898a058714d60f1d45ab73c9634da41aa98",
+    "self_model_state.json": "45b946a8db75a2ab38c85065887f7d8b51745045585a288a8814fcface44abb4"
+  },
+  "input_sha256_before_scoring": {
+    "evidence.json": "3f24ddf276c98c0760718bbe1800d5c5a5438222cbcd73e4f78eba648085c3f2",
+    "falsification.json": "c01ad1abf893b9fdc466c4afe35c7898a058714d60f1d45ab73c9634da41aa98",
+    "mrsm_prereg.yaml": "1c83d94ba3dbc27e101f1f4c14ca4a404e6b529793814dcaf1f7062ce4483471",
+    "self_model_state.json": "45b946a8db75a2ab38c85065887f7d8b51745045585a288a8814fcface44abb4"
+  },
+  "m22_started": false,
+  "mechanism_identity": "NOT_EVALUATED",
+  "mrsm_modified": false,
+  "primary": {
+    "hypothesis": "REVISE_HYPOTHESIS",
+    "interaction": "ADD_INTERACTION",
+    "none": "ABSTAIN",
+    "scope": "REVISE_SCOPE"
+  },
+  "qwen_loaded": false,
+  "recorded_tolerance": 10.476338585083338,
+  "self_model_modified": false
+}

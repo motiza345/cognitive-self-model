@@ -1051,6 +1051,41 @@ files:
   role: Contextual causal-state observation diagnostic. Does not build a Self-Model.
   produced_by: scripts/run_ccso.py
   consumed_by: UNKNOWN
+- path: artifacts/belief_update/preregistration.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Preregistered belief-update rule. Written before the frozen P copies are scored.
+  produced_by: scripts/run_belief_update.py
+  consumed_by: reports/BELIEF_UPDATE.md
+- path: artifacts/belief_update/cases.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Rule outputs for the four P injections and the three controls.
+  produced_by: scripts/run_belief_update.py
+  consumed_by: reports/BELIEF_UPDATE.md
+- path: artifacts/belief_update/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Belief-update decision on frozen arm P. Not an MRSM rescore and not a Self-Model.
+  produced_by: scripts/run_belief_update.py
+  consumed_by: reports/BELIEF_UPDATE.md
+- path: artifacts/belief_update/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the belief-update artifacts.
+  produced_by: scripts/run_belief_update.py
+  consumed_by: reports/BELIEF_UPDATE.md
+- path: reports/BELIEF_UPDATE.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Causal belief-update diagnostic on frozen arm P. Does not modify the Self-Model.
+  produced_by: scripts/run_belief_update.py
+  consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT
   immutable: false
