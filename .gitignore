@@ -96,6 +96,9 @@ artifacts/mrsm/**/*.pt
 # Cross-model diagnostic JSON only. Not an MRSM rerun and not a weight file.
 !artifacts/qf_cross_model/
 !artifacts/qf_cross_model/**
+# Gradient-field diagnostic JSON only. Not an MRSM rerun and not a weight file.
+!artifacts/qf_gradient_field/
+!artifacts/qf_gradient_field/**
 
 # Archives
 *.zip
