@@ -1,0 +1,86 @@
+{
+  "arm": "P",
+  "audit": {
+    "effects_match": true,
+    "interaction_match": true
+  },
+  "checkpoint_sha256_after": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+  "checkpoint_sha256_before": "6d2bdaad604ab544b47109c262d41d68915cf2f0fdf1c6343c8e7925876e0bd9",
+  "controls": {
+    "holdout": "HOLD"
+  },
+  "decision": {
+    "decision": "WORLD_CHANGE_SEPARATES",
+    "reason": "Each measured world received its own update, and the frozen holdout stayed HOLD.",
+    "reason_code": "SEPARATED"
+  },
+  "declaration": {
+    "hypothesis_heads": [
+      "L0H2",
+      "L1H2"
+    ],
+    "interaction_pair": "L0H0+L0H1",
+    "magnitude": 14.35336685180664,
+    "none_head": "L0H3",
+    "scope_name": "P:shuffled-target:seed=21011",
+    "scope_permutation_seed": 21011,
+    "winner_pair": "L0H0+L1H1"
+  },
+  "descriptive_selection": {
+    "hypothesis": {
+      "decision_input": false,
+      "ordered": [
+        "L0H2",
+        "L1H2"
+      ],
+      "status": "IDENTIFIED"
+    },
+    "interaction": {
+      "decision_input": false,
+      "ordered": [
+        "L0H0",
+        "L1H1"
+      ],
+      "status": "IDENTIFIED"
+    },
+    "none": {
+      "decision_input": false,
+      "ordered": [
+        "L0H0",
+        "L1H1"
+      ],
+      "status": "IDENTIFIED"
+    },
+    "scope": {
+      "decision_input": false,
+      "ordered": [
+        "L0H1",
+        "L1H1"
+      ],
+      "status": "IDENTIFIED"
+    }
+  },
+  "finite_ok": true,
+  "formula_tolerance": 10.476338585083338,
+  "instrument_ok": true,
+  "m22_started": false,
+  "mrsm_modified": false,
+  "primary": {
+    "hypothesis": "REVISE_HYPOTHESIS",
+    "interaction": "ADD_INTERACTION",
+    "none": "ABSTAIN",
+    "scope": "REVISE_SCOPE"
+  },
+  "qwen_loaded": false,
+  "recorded_tolerance": 10.476338585083338,
+  "rule_modified": false,
+  "rule_sha256_after": "fe591f2bff2e31b69925724027c8d1cdcb5094064073591bddbaf0000a714c35",
+  "rule_sha256_before": "fe591f2bff2e31b69925724027c8d1cdcb5094064073591bddbaf0000a714c35",
+  "self_model_modified": false,
+  "train_log": {
+    "decision_input": false,
+    "final_loss": 0.5668859481811523,
+    "seconds": 33.44850397109985,
+    "steps": 3000
+  }
+}

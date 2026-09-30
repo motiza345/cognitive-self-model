@@ -1086,6 +1086,34 @@ files:
   role: Causal belief-update diagnostic on frozen arm P. Does not modify the Self-Model.
   produced_by: scripts/run_belief_update.py
   consumed_by: UNKNOWN
+- path: artifacts/belief_world/preregistration.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: World-change declarations written before the planted worlds are measured.
+  produced_by: scripts/run_belief_world.py
+  consumed_by: reports/BELIEF_WORLD.md
+- path: artifacts/belief_world/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Belief-rule outputs on four changed P worlds. Not an MRSM rescore.
+  produced_by: scripts/run_belief_world.py
+  consumed_by: reports/BELIEF_WORLD.md
+- path: artifacts/belief_world/manifest.sha256
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the world-change artifacts.
+  produced_by: scripts/run_belief_world.py
+  consumed_by: reports/BELIEF_WORLD.md
+- path: reports/BELIEF_WORLD.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: Unchanged belief rule scored on changed planted worlds. Does not modify the Self-Model.
+  produced_by: scripts/run_belief_world.py
+  consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT
   immutable: false
