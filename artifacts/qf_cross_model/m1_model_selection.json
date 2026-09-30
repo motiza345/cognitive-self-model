@@ -1,0 +1,25 @@
+{
+  "architecture": "GPT2LMHeadModel",
+  "compatibility_status": "IDENTITY_FROZEN",
+  "declared_before_effects": true,
+  "device": "cpu",
+  "dtype": "float32",
+  "model_name": "gpt2",
+  "parameter_count": 163049041,
+  "parameter_count_definition": "Sum of parameters in the loaded HookedTransformer. The source checkpoint has 12 layers, d_model 768, and 12 heads. Loading unties the token embedding, so this count is larger than the tied checkpoint.",
+  "ranked_candidates": false,
+  "reason_for_selection": "gpt2 is an open-weight GPT-2 checkpoint with a pinned Hugging Face revision, a tokenizer, and TransformerLens residual hooks. Its family is GPT-2, not Qwen2. The checkpoint is small enough for repeated residual interventions. It is not another Qwen checkpoint. Candidates were not ranked.",
+  "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "selection_criteria": {
+    "activation_access": true,
+    "different_family_from_qwen": true,
+    "hook_access": true,
+    "hook_name": "blocks.{layer}.hook_resid_post",
+    "not_another_qwen_checkpoint": true,
+    "open_weight": true,
+    "practical_size": true,
+    "reproducible_checkpoint": true,
+    "tokenizer_available": true
+  },
+  "tokenizer": "GPT2Tokenizer:gpt2"
+}

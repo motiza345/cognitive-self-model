@@ -437,6 +437,69 @@ files:
   role: SHA256 list for the regime-separation JSON artifacts.
   produced_by: scripts/run_qf_regime.py
   consumed_by: UNKNOWN
+- path: artifacts/qf_cross_model/m1_model_selection.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Frozen Model B selection. Candidates are not ranked. Not an MRSM gate.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/model_manifest.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Pinned Model B identity. No fallback revision.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/task_mapping.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Unchanged frozen regimes and discovery prompts for Model B.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/intervention_mapping.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Coordinate and functional slot map declared before Model B effects.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/regime_effects.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Model B regime effects under the QF-Regime statistics. Not an MRSM gate.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/regime_nulls.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Alpha-0 null inside each Model B slot and regime. Not one global null.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/effect_matrix.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: Frozen Qwen signs and Model B functional and coordinate signs.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/decision.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: QF-M1 decision. Not a mechanism claim. M2 and M3 were not run.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
+- path: artifacts/qf_cross_model/m1/reproducibility_manifest.json
+  category: ARTIFACT
+  immutable: false
+  milestone: null
+  role: SHA256 list for the M1 JSON artifacts and frozen inputs.
+  produced_by: scripts/run_qf_m1.py
+  consumed_by: reports/QF_M1_CROSS_MODEL.md
 - path: artifacts/m22_1_r/execution_record.json
   category: ARTIFACT
   immutable: true
@@ -812,6 +875,13 @@ files:
   milestone: null
   role: QF regime-separation diagnostic. Does not rescore MRSM. Not a mechanism claim.
   produced_by: scripts/run_qf_regime.py
+  consumed_by: UNKNOWN
+- path: reports/QF_M1_CROSS_MODEL.md
+  category: REPORT
+  immutable: false
+  milestone: null
+  role: QF-M1 cross-model diagnostic. Does not rescore MRSM. M2 and M3 were not run.
+  produced_by: scripts/run_qf_m1.py
   consumed_by: UNKNOWN
 - path: reports/DEC-010-A1_application.md
   category: REPORT

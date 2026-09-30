@@ -1,0 +1,118 @@
+{
+  "inferred": "A regime-level signal separates from Model B's own nulls, and the sign pattern differs from Qwen. The Qwen profile may be model-dependent. This is not a claim that Model B is better.",
+  "key_difference": "Model B has regime cells separated from their own nulls, but the pattern is not the frozen Qwen pattern. Differences: L0H0 instruction: Qwen -, Model B +; L0H1 completion: Qwen -, Model B +; L0H1 syntax: Qwen -, Model B +; L0H2 instruction: Qwen -, Model B +; L0H2 syntax: Qwen +, Model B -; L0H3 instruction: Qwen +, Model B -; L1H0 instruction: Qwen -, Model B +; L1H0 syntax: Qwen -, Model B +; L1H1 syntax: Qwen -, Model B +; L1H2 completion: Qwen -, Model B +; L1H2 instruction: Qwen -, Model B +; L1H2 syntax: Qwen -, Model B +; L1H3 completion: Qwen -, Model B +; L1H3 instruction: Qwen -, Model B +; L1H3 syntax: Qwen -, Model B +.",
+  "m1_decision": "MODEL_B_SIGNAL_PRESENT_BUT_DIFFERENT",
+  "m2_executed": false,
+  "m3_executed": false,
+  "mechanism_identity": "NOT_EVALUATED",
+  "model_b": "gpt2",
+  "model_b_effect_matrix": {
+    "L0H0": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L0H1": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L0H2": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L0H3": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H0": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "+"
+    },
+    "L1H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L1H2": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "+"
+    },
+    "L1H3": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "+"
+    }
+  },
+  "not_established": [
+    "mechanism identity",
+    "that one model is better",
+    "that MRSM is wrong",
+    "a cross-model regime pattern from M2",
+    "a model-independent causal signature from M3"
+  ],
+  "qwen_effect_matrix": {
+    "L0H0": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L0H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L0H2": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L0H3": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L1H0": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H2": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H3": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    }
+  },
+  "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "sign_differences": [
+    "L0H0 instruction: Qwen -, Model B +",
+    "L0H1 completion: Qwen -, Model B +",
+    "L0H1 syntax: Qwen -, Model B +",
+    "L0H2 instruction: Qwen -, Model B +",
+    "L0H2 syntax: Qwen +, Model B -",
+    "L0H3 instruction: Qwen +, Model B -",
+    "L1H0 instruction: Qwen -, Model B +",
+    "L1H0 syntax: Qwen -, Model B +",
+    "L1H1 syntax: Qwen -, Model B +",
+    "L1H2 completion: Qwen -, Model B +",
+    "L1H2 instruction: Qwen -, Model B +",
+    "L1H2 syntax: Qwen -, Model B +",
+    "L1H3 completion: Qwen -, Model B +",
+    "L1H3 instruction: Qwen -, Model B +",
+    "L1H3 syntax: Qwen -, Model B +"
+  ]
+}

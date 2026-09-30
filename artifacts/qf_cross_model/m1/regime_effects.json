@@ -1,0 +1,1585 @@
+{
+  "coordinate": {
+    "L0H0": {
+      "comparable": true,
+      "direction_name": "primary",
+      "heterogeneity": {
+        "between_regime_variance": 3.784182283399989e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.40679812860745773,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 9.30235912430059e-05
+      },
+      "layer": 0,
+      "pooled_mean_descriptive_only": 0.004202922185262044,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.0037097930908203125,
+            0.008258342742919922
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0022742748260498047,
+          "effects": [
+            -0.0037097930908203125,
+            0.008258342742919922
+          ],
+          "mean_effect": 0.0022742748260498047,
+          "median_effect": 0.0022742748260498047,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.0042313750030997166,
+          "standardized_effect": 0.38005498227020995,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.005984067916870117
+        },
+        "instruction": {
+          "confidence_interval": [
+            -0.0017490386962890625,
+            0.026776790618896484
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.012513875961303711,
+          "effects": [
+            0.026776790618896484,
+            -0.0017490386962890625
+          ],
+          "mean_effect": 0.012513875961303711,
+          "median_effect": 0.012513875961303711,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.010085403673868855,
+          "standardized_effect": 0.8773715794928372,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.014262914657592773
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.008490562438964844,
+            0.004131793975830078
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.002179384231567383,
+          "effects": [
+            0.004131793975830078,
+            -0.008490562438964844
+          ],
+          "mean_effect": -0.002179384231567383,
+          "median_effect": -0.002179384231567383,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "-",
+          "standard_error": 0.004462676907727503,
+          "standardized_effect": -0.34532129500207775,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.006311178207397461
+        }
+      },
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    "L0H1": {
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "heterogeneity": {
+        "between_regime_variance": 9.00281677079167e-06,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.24047598972065687,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 3.7437487132289483e-05
+      },
+      "layer": 0,
+      "pooled_mean_descriptive_only": 0.0010503133138020833,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.00438690185546875,
+            0.012938499450683594
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.004275798797607422,
+          "effects": [
+            -0.00438690185546875,
+            0.012938499450683594
+          ],
+          "mean_effect": 0.004275798797607422,
+          "median_effect": 0.004275798797607422,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.0061254543751792945,
+          "standardized_effect": 0.4935872736280068,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.008662700653076172
+        },
+        "instruction": {
+          "confidence_interval": [
+            -0.007789134979248047,
+            0.0018887519836425781
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.0029501914978027344,
+          "effects": [
+            0.0018887519836425781,
+            -0.007789134979248047
+          ],
+          "mean_effect": -0.0029501914978027344,
+          "median_effect": -0.0029501914978027344,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "-",
+          "standard_error": 0.0034216497495084207,
+          "standardized_effect": -0.6096767836026803,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0048389434814453125
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.0018968582153320312,
+            0.005547523498535156
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0018253326416015625,
+          "effects": [
+            -0.0018968582153320312,
+            0.005547523498535156
+          ],
+          "mean_effect": 0.0018253326416015625,
+          "median_effect": 0.0018253326416015625,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.0026319863958083104,
+          "standardized_effect": 0.49039200614911604,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0037221908569335938
+        }
+      },
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    "L0H2": {
+      "comparable": true,
+      "direction_name": "primary",
+      "heterogeneity": {
+        "between_regime_variance": 2.6741709929309665e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.5110851769926009,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 5.2323391741992964e-05
+      },
+      "layer": 8,
+      "pooled_mean_descriptive_only": 0.009980519612630209,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            0.007025241851806641,
+            0.022856712341308594
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.014940977096557617,
+          "effects": [
+            0.022856712341308594,
+            0.007025241851806641
+          ],
+          "mean_effect": 0.014940977096557617,
+          "median_effect": 0.014940977096557617,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.00559727006964077,
+          "standardized_effect": 1.887503388452155,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.007915735244750977
+        },
+        "instruction": {
+          "confidence_interval": [
+            0.0020346641540527344,
+            0.003658294677734375
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0028464794158935547,
+          "effects": [
+            0.0020346641540527344,
+            0.003658294677734375
+          ],
+          "mean_effect": 0.0028464794158935547,
+          "median_effect": 0.0028464794158935547,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.0005740400767183767,
+          "standardized_effect": 3.506314243759178,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0008118152618408203
+        },
+        "syntax": {
+          "confidence_interval": [
+            0.0024766921997070312,
+            0.021831512451171875
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.012154102325439453,
+          "effects": [
+            0.021831512451171875,
+            0.0024766921997070312
+          ],
+          "mean_effect": 0.012154102325439453,
+          "median_effect": 0.012154102325439453,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.006842962324228754,
+          "standardized_effect": 1.2559251047055926,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.009677410125732422
+        }
+      },
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    "L0H3": {
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "heterogeneity": {
+        "between_regime_variance": 1.4604426963968661e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 3.212715087303632,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 4.545820767513457e-06
+      },
+      "layer": 8,
+      "pooled_mean_descriptive_only": -0.0018246968587239583,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.0014300346374511719,
+            0.004956245422363281
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0017631053924560547,
+          "effects": [
+            0.004956245422363281,
+            -0.0014300346374511719
+          ],
+          "mean_effect": 0.0017631053924560547,
+          "median_effect": 0.0017631053924560547,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.002257890968425615,
+          "standardized_effect": 0.5521541103561562,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0031931400299072266
+        },
+        "instruction": {
+          "confidence_interval": [
+            -0.008755207061767578,
+            -0.005482673645019531
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.007118940353393555,
+          "effects": [
+            -0.008755207061767578,
+            -0.005482673645019531
+          ],
+          "mean_effect": -0.007118940353393555,
+          "median_effect": -0.007118940353393555,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "NEGATIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "-",
+          "standard_error": 0.001157015285321063,
+          "standardized_effect": -4.350721258924668,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0016362667083740234
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.0009922981262207031,
+            0.0007557868957519531
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.000118255615234375,
+          "effects": [
+            0.0007557868957519531,
+            -0.0009922981262207031
+          ],
+          "mean_effect": -0.000118255615234375,
+          "median_effect": -0.000118255615234375,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "-",
+          "standard_error": 0.00061804138656375,
+          "standardized_effect": -0.1352973267866885,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0008740425109863281
+        }
+      },
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    "L1H0": {
+      "comparable": false,
+      "layer": 15,
+      "regimes": {
+        "completion": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "instruction": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "syntax": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        }
+      },
+      "status": "NOT_COMPARABLE"
+    },
+    "L1H1": {
+      "comparable": false,
+      "layer": 15,
+      "regimes": {
+        "completion": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "instruction": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "syntax": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        }
+      },
+      "status": "NOT_COMPARABLE"
+    },
+    "L1H2": {
+      "comparable": false,
+      "layer": 23,
+      "regimes": {
+        "completion": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "instruction": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "syntax": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        }
+      },
+      "status": "NOT_COMPARABLE"
+    },
+    "L1H3": {
+      "comparable": false,
+      "layer": 23,
+      "regimes": {
+        "completion": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "instruction": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        },
+        "syntax": {
+          "sign_symbol": "NOT_COMPARABLE",
+          "status": "NOT_COMPARABLE"
+        }
+      },
+      "status": "NOT_COMPARABLE"
+    }
+  },
+  "functional_counterpart": {
+    "L0H0": {
+      "comparable": true,
+      "direction_name": "primary",
+      "heterogeneity": {
+        "between_regime_variance": 3.784182283399989e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.40679812860745773,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 9.30235912430059e-05
+      },
+      "layer": 0,
+      "pooled_mean_descriptive_only": 0.004202922185262044,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.0037097930908203125,
+            0.008258342742919922
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0022742748260498047,
+          "effects": [
+            -0.0037097930908203125,
+            0.008258342742919922
+          ],
+          "mean_effect": 0.0022742748260498047,
+          "median_effect": 0.0022742748260498047,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.0042313750030997166,
+          "standardized_effect": 0.38005498227020995,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.005984067916870117
+        },
+        "instruction": {
+          "confidence_interval": [
+            -0.0017490386962890625,
+            0.026776790618896484
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.012513875961303711,
+          "effects": [
+            0.026776790618896484,
+            -0.0017490386962890625
+          ],
+          "mean_effect": 0.012513875961303711,
+          "median_effect": 0.012513875961303711,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.010085403673868855,
+          "standardized_effect": 0.8773715794928372,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.014262914657592773
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.008490562438964844,
+            0.004131793975830078
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.002179384231567383,
+          "effects": [
+            0.004131793975830078,
+            -0.008490562438964844
+          ],
+          "mean_effect": -0.002179384231567383,
+          "median_effect": -0.002179384231567383,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "-",
+          "standard_error": 0.004462676907727503,
+          "standardized_effect": -0.34532129500207775,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.006311178207397461
+        }
+      },
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    "L0H1": {
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "heterogeneity": {
+        "between_regime_variance": 9.00281677079167e-06,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.24047598972065687,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 3.7437487132289483e-05
+      },
+      "layer": 0,
+      "pooled_mean_descriptive_only": 0.0010503133138020833,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.00438690185546875,
+            0.012938499450683594
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.004275798797607422,
+          "effects": [
+            -0.00438690185546875,
+            0.012938499450683594
+          ],
+          "mean_effect": 0.004275798797607422,
+          "median_effect": 0.004275798797607422,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.0061254543751792945,
+          "standardized_effect": 0.4935872736280068,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.008662700653076172
+        },
+        "instruction": {
+          "confidence_interval": [
+            -0.007789134979248047,
+            0.0018887519836425781
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.0029501914978027344,
+          "effects": [
+            0.0018887519836425781,
+            -0.007789134979248047
+          ],
+          "mean_effect": -0.0029501914978027344,
+          "median_effect": -0.0029501914978027344,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "-",
+          "standard_error": 0.0034216497495084207,
+          "standardized_effect": -0.6096767836026803,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0048389434814453125
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.0018968582153320312,
+            0.005547523498535156
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0018253326416015625,
+          "effects": [
+            -0.0018968582153320312,
+            0.005547523498535156
+          ],
+          "mean_effect": 0.0018253326416015625,
+          "median_effect": 0.0018253326416015625,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.0026319863958083104,
+          "standardized_effect": 0.49039200614911604,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0037221908569335938
+        }
+      },
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    "L0H2": {
+      "comparable": true,
+      "direction_name": "primary",
+      "heterogeneity": {
+        "between_regime_variance": 9.011167557875726e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.9578073511265114,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 9.408121108360017e-05
+      },
+      "layer": 4,
+      "pooled_mean_descriptive_only": 0.002774397532145182,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.011435985565185547,
+            0.011447906494140625
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 5.9604644775390625e-06,
+          "effects": [
+            0.011447906494140625,
+            -0.011435985565185547
+          ],
+          "mean_effect": 5.9604644775390625e-06,
+          "median_effect": 5.9604644775390625e-06,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": false,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.008090677627545262,
+          "standardized_effect": 0.0005209310078973141,
+          "status": "CAUSAL_SIGNAL_NOT_SEPARATED_FROM_NULL",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.011441946029663086
+        },
+        "instruction": {
+          "confidence_interval": [
+            0.01545858383178711,
+            0.01561117172241211
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.01553487777709961,
+          "effects": [
+            0.01545858383178711,
+            0.01561117172241211
+          ],
+          "mean_effect": 0.01553487777709961,
+          "median_effect": 0.01553487777709961,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 5.3947966093944356e-05,
+          "standardized_effect": 203.61875,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 7.62939453125e-05
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.01951885223388672,
+            0.005083560943603516
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.0072176456451416016,
+          "effects": [
+            0.005083560943603516,
+            -0.01951885223388672
+          ],
+          "mean_effect": -0.0072176456451416016,
+          "median_effect": -0.0072176456451416016,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "-",
+          "standard_error": 0.00869826659567831,
+          "standardized_effect": -0.5867429014439384,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.012301206588745117
+        }
+      },
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    "L0H3": {
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "heterogeneity": {
+        "between_regime_variance": 4.797633665829279e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.3571624885797182,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 0.00013432635898880108
+      },
+      "layer": 4,
+      "pooled_mean_descriptive_only": -0.0031474431355794272,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.013289451599121094,
+            0.020030975341796875
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0033707618713378906,
+          "effects": [
+            -0.013289451599121094,
+            0.020030975341796875
+          ],
+          "mean_effect": 0.0033707618713378906,
+          "median_effect": 0.0033707618713378906,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.011780549920977011,
+          "standardized_effect": 0.20232405048799337,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.016660213470458984
+        },
+        "instruction": {
+          "confidence_interval": [
+            -0.019188880920410156,
+            -0.006289005279541016
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.012738943099975586,
+          "effects": [
+            -0.006289005279541016,
+            -0.019188880920410156
+          ],
+          "mean_effect": -0.012738943099975586,
+          "median_effect": -0.012738943099975586,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "NEGATIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "-",
+          "standard_error": 0.004560794771060864,
+          "standardized_effect": -1.9750489779322071,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.00644993782043457
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.009229183197021484,
+            0.009080886840820312
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -7.414817810058594e-05,
+          "effects": [
+            -0.009229183197021484,
+            0.009080886840820312
+          ],
+          "mean_effect": -7.414817810058594e-05,
+          "median_effect": -7.414817810058594e-05,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": false,
+          "sign": -1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "-",
+          "standard_error": 0.0064735873438792795,
+          "standardized_effect": -0.008099169249199198,
+          "status": "CAUSAL_SIGNAL_NOT_SEPARATED_FROM_NULL",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.009155035018920898
+        }
+      },
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    "L1H0": {
+      "comparable": true,
+      "direction_name": "primary",
+      "heterogeneity": {
+        "between_regime_variance": 3.497899995687072e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.35875657305576436,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 9.750065248681494e-05
+      },
+      "layer": 7,
+      "pooled_mean_descriptive_only": 0.009896119435628256,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            0.002086162567138672,
+            0.02838420867919922
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.015235185623168945,
+          "effects": [
+            0.02838420867919922,
+            0.002086162567138672
+          ],
+          "mean_effect": 0.015235185623168945,
+          "median_effect": 0.015235185623168945,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.009297763368897266,
+          "standardized_effect": 1.1586553280992185,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.013149023056030273
+        },
+        "instruction": {
+          "confidence_interval": [
+            0.0004153251647949219,
+            0.0028862953186035156
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0016508102416992188,
+          "effects": [
+            0.0004153251647949219,
+            0.0028862953186035156
+          ],
+          "mean_effect": 0.0016508102416992188,
+          "median_effect": 0.0016508102416992188,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.0008736198759338114,
+          "standardized_effect": 1.336163643380934,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0012354850769042969
+        },
+        "syntax": {
+          "confidence_interval": [
+            0.0019359588623046875,
+            0.023668766021728516
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.012802362442016602,
+          "effects": [
+            0.023668766021728516,
+            0.0019359588623046875
+          ],
+          "mean_effect": 0.012802362442016602,
+          "median_effect": 0.012802362442016602,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.0076837076583240686,
+          "standardized_effect": 1.1781600368606973,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.010866403579711914
+        }
+      },
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    "L1H1": {
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "heterogeneity": {
+        "between_regime_variance": 1.966002606776682e-05,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 2.875483954399204,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 6.837119030933536e-06
+      },
+      "layer": 7,
+      "pooled_mean_descriptive_only": -0.003352959950764974,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            -0.006758213043212891,
+            -0.000347137451171875
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.003552675247192383,
+          "effects": [
+            -0.000347137451171875,
+            -0.006758213043212891
+          ],
+          "mean_effect": -0.003552675247192383,
+          "median_effect": -0.003552675247192383,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "NEGATIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "-",
+          "standard_error": 0.002266657512915881,
+          "standardized_effect": -1.1082930457419116,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.003205537796020508
+        },
+        "instruction": {
+          "confidence_interval": [
+            -0.010927677154541016,
+            -0.006433963775634766
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": -0.00868082046508789,
+          "effects": [
+            -0.006433963775634766,
+            -0.010927677154541016
+          ],
+          "mean_effect": -0.00868082046508789,
+          "median_effect": -0.00868082046508789,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": -1,
+          "sign_class": "NEGATIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "-",
+          "standard_error": 0.0015887676014666612,
+          "standardized_effect": -3.863539898132428,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.002246856689453125
+        },
+        "syntax": {
+          "confidence_interval": [
+            -0.000102996826171875,
+            0.004452228546142578
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0021746158599853516,
+          "effects": [
+            -0.000102996826171875,
+            0.004452228546142578
+          ],
+          "mean_effect": 0.0021746158599853516,
+          "median_effect": 0.0021746158599853516,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "UNSTABLE",
+          "sign_consistency": 0.5,
+          "sign_symbol": "+",
+          "standard_error": 0.0016105153752982825,
+          "standardized_effect": 0.9547786035800272,
+          "status": "CAUSAL_SIGNAL_WEAK",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0022776126861572266
+        }
+      },
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    },
+    "L1H2": {
+      "comparable": true,
+      "direction_name": "primary",
+      "heterogeneity": {
+        "between_regime_variance": 5.7237924819572875e-08,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": null,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 6.433253929571947e-09
+      },
+      "layer": 11,
+      "pooled_mean_descriptive_only": 0.0014709631601969402,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            0.0010786056518554688,
+            0.0013337135314941406
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0012061595916748047,
+          "effects": [
+            0.0010786056518554688,
+            0.0013337135314941406
+          ],
+          "mean_effect": 0.0012061595916748047,
+          "median_effect": 0.0012061595916748047,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 9.019425581331322e-05,
+          "standardized_effect": 9.45607476635514,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.00012755393981933594
+        },
+        "instruction": {
+          "confidence_interval": [
+            0.0017538070678710938,
+            0.0018177032470703125
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0017857551574707031,
+          "effects": [
+            0.0018177032470703125,
+            0.0017538070678710938
+          ],
+          "mean_effect": 0.0017857551574707031,
+          "median_effect": 0.0017857551574707031,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 2.25907108018392e-05,
+          "standardized_effect": 55.8955223880597,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 3.1948089599609375e-05
+        },
+        "syntax": {
+          "confidence_interval": [
+            0.0013761520385742188,
+            0.0014657974243164062
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0014209747314453125,
+          "effects": [
+            0.0014657974243164062,
+            0.0013761520385742188
+          ],
+          "mean_effect": 0.0014209747314453125,
+          "median_effect": 0.0014209747314453125,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 3.169443008019231e-05,
+          "standardized_effect": 31.70212765957447,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 4.482269287109375e-05
+        }
+      },
+      "vector_sha256": "205c32370392fe2f31347596cfff9d3e4d24d33e911b2e97d2ce1bbdd783f525"
+    },
+    "L1H3": {
+      "comparable": true,
+      "direction_name": "orthogonal",
+      "heterogeneity": {
+        "between_regime_variance": 2.545601142224364e-08,
+        "definition": "between is the variance of the three regime means; within is the mean of the within-regime variances. Not an ANOVA and not a gate.",
+        "heterogeneity_ratio": 0.11123246907731497,
+        "label": "EXPLORATORY",
+        "used_as_gate": false,
+        "within_regime_variance": 2.288541433396555e-07
+      },
+      "layer": 11,
+      "pooled_mean_descriptive_only": 0.0056832631429036455,
+      "regimes": {
+        "completion": {
+          "confidence_interval": [
+            0.005081653594970703,
+            0.006317138671875
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.0056993961334228516,
+          "effects": [
+            0.006317138671875,
+            0.005081653594970703
+          ],
+          "mean_effect": 0.0056993961334228516,
+          "median_effect": 0.0056993961334228516,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "completion-01",
+            "completion-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.0004368099379669057,
+          "standardized_effect": 9.226167502894635,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0006177425384521484
+        },
+        "instruction": {
+          "confidence_interval": [
+            0.005451202392578125,
+            0.005509376525878906
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.005480289459228516,
+          "effects": [
+            0.005509376525878906,
+            0.005451202392578125
+          ],
+          "mean_effect": 0.005480289459228516,
+          "median_effect": 0.005480289459228516,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "instruction-01",
+            "instruction-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 2.0567662073316288e-05,
+          "standardized_effect": 188.40983606557376,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 2.9087066650390625e-05
+        },
+        "syntax": {
+          "confidence_interval": [
+            0.005318641662597656,
+            0.006421566009521484
+          ],
+          "confidence_interval_method": "percentile bootstrap of the paired margin-drop mean via cognitive_self_model.m22_1.metrics.bootstrap_mean_interval; draws and seed are the frozen m22_1_preflight values 2000 and 22102",
+          "effect_floor": 0.0001,
+          "effect_minus_null": 0.00587010383605957,
+          "effects": [
+            0.006421566009521484,
+            0.005318641662597656
+          ],
+          "mean_effect": 0.00587010383605957,
+          "median_effect": 0.00587010383605957,
+          "n": 2,
+          "null_mean": 0.0,
+          "null_std": 0.0,
+          "nulls": [
+            0.0,
+            0.0
+          ],
+          "prompt_ids": [
+            "syntax-01",
+            "syntax-04"
+          ],
+          "separable_from_regime_null": true,
+          "sign": 1,
+          "sign_class": "POSITIVE",
+          "sign_consistency": 1.0,
+          "sign_symbol": "+",
+          "standard_error": 0.00038994264242279156,
+          "standardized_effect": 10.64461738002594,
+          "status": "CAUSAL_SIGNAL_SUPPORTED",
+          "std_definition": "population standard deviation, matching m22 summarize_deltas ddof=0",
+          "std_effect": 0.0005514621734619141
+        }
+      },
+      "vector_sha256": "08a9dbf2285be52a70aafec03e90623603dee824fd7f70895b3f5a098fa87c04"
+    }
+  },
+  "metric": "margin_drop_unhooked_minus_intervened",
+  "primary_split": "discovery",
+  "statistics": "QF-Regime regime_cell"
+}

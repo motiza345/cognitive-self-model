@@ -93,6 +93,9 @@ artifacts/mrsm/**/*.pt
 # Regime-separation diagnostic JSON only. Not an MRSM rerun and not a weight file.
 !artifacts/qf_regime/
 !artifacts/qf_regime/**
+# Cross-model diagnostic JSON only. Not an MRSM rerun and not a weight file.
+!artifacts/qf_cross_model/
+!artifacts/qf_cross_model/**
 
 # Archives
 *.zip

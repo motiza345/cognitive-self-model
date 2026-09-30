@@ -1,0 +1,129 @@
+{
+  "decision_uses": "model_b_functional_discovery",
+  "model_b_coordinate_discovery": {
+    "L0H0": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L0H1": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L0H2": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "+"
+    },
+    "L0H3": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H0": {
+      "completion": "NOT_COMPARABLE",
+      "instruction": "NOT_COMPARABLE",
+      "syntax": "NOT_COMPARABLE"
+    },
+    "L1H1": {
+      "completion": "NOT_COMPARABLE",
+      "instruction": "NOT_COMPARABLE",
+      "syntax": "NOT_COMPARABLE"
+    },
+    "L1H2": {
+      "completion": "NOT_COMPARABLE",
+      "instruction": "NOT_COMPARABLE",
+      "syntax": "NOT_COMPARABLE"
+    },
+    "L1H3": {
+      "completion": "NOT_COMPARABLE",
+      "instruction": "NOT_COMPARABLE",
+      "syntax": "NOT_COMPARABLE"
+    }
+  },
+  "model_b_functional_discovery": {
+    "L0H0": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L0H1": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L0H2": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L0H3": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H0": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "+"
+    },
+    "L1H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L1H2": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "+"
+    },
+    "L1H3": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "+"
+    }
+  },
+  "qwen_frozen_discovery": {
+    "L0H0": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L0H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L0H2": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "+"
+    },
+    "L0H3": {
+      "completion": "+",
+      "instruction": "+",
+      "syntax": "-"
+    },
+    "L1H0": {
+      "completion": "+",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H1": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H2": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    },
+    "L1H3": {
+      "completion": "-",
+      "instruction": "-",
+      "syntax": "-"
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "control": "alpha_0_inside_the_same_slot_and_regime",
+  "functional_counterpart": {
+    "L0H0": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L0H1": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L0H2": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L0H3": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L1H0": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L1H1": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L1H2": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L1H3": {
+      "completion": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "instruction": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      },
+      "syntax": {
+        "null_mean": 0.0,
+        "null_std": 0.0,
+        "nulls": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "global_null": false
+}
