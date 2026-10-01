@@ -1,0 +1,6 @@
+{
+  "predict_rejects_outcome_argument": true,
+  "published_m22_means_not_loaded": true,
+  "replication_predictions_before_outcomes": true,
+  "validation_predictions_before_outcomes": true
+}

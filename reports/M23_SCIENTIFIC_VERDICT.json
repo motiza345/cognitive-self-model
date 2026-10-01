@@ -1,0 +1,113 @@
+{
+  "discovery_d1_mean": 0.028899987538655598,
+  "discovery_d2_mean": 0.10663819313049316,
+  "failure_class": [],
+  "initial_predicted_effect": 0.028899987538655598,
+  "leakage_ok": true,
+  "mechanism_id": "M22.1-D1-L23",
+  "metrics": {
+    "Q1": {
+      "mae_belief": 0.00280716684129503,
+      "mae_interval": {
+        "class": "CI_POSITIVE",
+        "high": 0.02758449978298611,
+        "low": 0.023180643717447918,
+        "mean": 0.025382571750217017
+      },
+      "mae_zero": 0.028189738591512043,
+      "n_critical": 0,
+      "sign_high": 1.0,
+      "sign_low": 0.5407418735600994,
+      "sign_n": 6,
+      "sign_successes": 6,
+      "uncertainty_coverage": 1.0
+    },
+    "eval_context": {
+      "mae_no_update": 0.0026690165201822915,
+      "mae_outcome_only": 0.03895318508148194,
+      "mae_shuffled": 0.037352959314982094,
+      "mae_updated": 0.0026690165201822915,
+      "q4_fail_reason": null,
+      "shuffled_vs_no_update": {
+        "class": "CI_NEGATIVE",
+        "high": -0.0319319036271837,
+        "low": -0.0371502505408393,
+        "mean": -0.0346839427947998
+      },
+      "specific_vs_outcome_only": {
+        "class": "CI_POSITIVE",
+        "high": 0.038987225956387,
+        "low": 0.033344109853108726,
+        "mean": 0.036284168561299644
+      },
+      "update_vs_no_update": {
+        "class": "CI_INCLUDES_ZERO",
+        "high": 0.00023674964904785156,
+        "low": -0.00023674964904785156,
+        "mean": 0.0
+      }
+    },
+    "eval_magnitude": {
+      "mae_no_update": 0.00503842035929362,
+      "mae_outcome_only": 0.07744399706522624,
+      "mae_shuffled": 0.07424354553222655,
+      "mae_updated": 0.0051428741878933384,
+      "q4_fail_reason": null,
+      "shuffled_vs_no_update": {
+        "class": "CI_NEGATIVE",
+        "high": -0.06387249628702797,
+        "low": -0.07411358091566297,
+        "mean": -0.06920512517293294
+      },
+      "specific_vs_outcome_only": {
+        "class": "CI_POSITIVE",
+        "high": 0.07768307791815865,
+        "low": 0.06636269887288411,
+        "mean": 0.07230112287733291
+      },
+      "update_vs_no_update": {
+        "class": "CI_INCLUDES_ZERO",
+        "high": 0.00039688746134439873,
+        "low": -0.0005779531266954218,
+        "mean": -0.00010445382859971865
+      }
+    }
+  },
+  "milestone": "M23",
+  "outcome_only_predicted_effect": 0.06776909033457439,
+  "prior_status": "CANDIDATE",
+  "q4_fail_reason": null,
+  "q6_fail_reason": null,
+  "questions": {
+    "Q1": "PASS",
+    "Q2": "INCONCLUSIVE",
+    "Q3": "PASS",
+    "Q4": "INCONCLUSIVE",
+    "Q5": "PASS",
+    "Q6": "INCONCLUSIVE"
+  },
+  "reproducibility": {
+    "bootstrap_seed": "23001",
+    "branch": "cursor/m23-direct-qwen-audit-5fe5",
+    "control_direction_sha256": "8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e",
+    "dataset_manifest": "fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db",
+    "device": "cpu",
+    "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+    "git_commit": "04fc5793deec20d6668c57293dafdee543c2ecd4",
+    "hook_name": "blocks.23.hook_resid_post",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "negative_token_id": "902",
+    "positive_token_id": "9834",
+    "preregistration_sha256": "e590df86cbb057f4dbe2b0f211809927dcd7a9839f4a069cf936bae14f1472dd",
+    "python": "3.12.3",
+    "seed_control": "22103",
+    "seed_direction": "22101",
+    "torch": "2.14.0+cpu",
+    "transformer_lens": "3.9.0",
+    "transformers": "5.18.0"
+  },
+  "shuffled_predicted_effect": 0.06616886456807454,
+  "updated_predicted_effect": 0.02854486306508382,
+  "verdict": "INCONCLUSIVE"
+}

@@ -1,0 +1,138 @@
+{
+  "alpha_1": [
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.140007972717285,
+      "intervened_margin": -4.111610412597656,
+      "observed_delta": 0.028397560119628906,
+      "observed_direction": 1,
+      "pre_dot": -1.1674320697784424,
+      "prompt_id": "completion-03",
+      "regime_id": "completion",
+      "role": "replication"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.741713047027588,
+      "intervened_margin": -3.7124571800231934,
+      "observed_delta": 0.02925586700439453,
+      "observed_direction": 1,
+      "pre_dot": -0.8319613337516785,
+      "prompt_id": "completion-06",
+      "regime_id": "completion",
+      "role": "replication"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.4789237976074219,
+      "intervened_margin": 0.5118265151977539,
+      "observed_delta": 0.03290271759033203,
+      "observed_direction": 1,
+      "pre_dot": -2.9644088745117188,
+      "prompt_id": "instruction-03",
+      "regime_id": "instruction",
+      "role": "replication"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.052430152893066406,
+      "intervened_margin": 0.08472633361816406,
+      "observed_delta": 0.032296180725097656,
+      "observed_direction": 1,
+      "pre_dot": -3.663973569869995,
+      "prompt_id": "instruction-06",
+      "regime_id": "instruction",
+      "role": "replication"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -6.686509609222412,
+      "intervened_margin": -6.6620402336120605,
+      "observed_delta": 0.024469375610351562,
+      "observed_direction": 1,
+      "pre_dot": -4.786593437194824,
+      "prompt_id": "syntax-03",
+      "regime_id": "syntax",
+      "role": "replication"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -6.989002227783203,
+      "intervened_margin": -6.963428497314453,
+      "observed_delta": 0.02557373046875,
+      "observed_direction": 1,
+      "pre_dot": 1.9588795900344849,
+      "prompt_id": "syntax-06",
+      "regime_id": "syntax",
+      "role": "replication"
+    }
+  ],
+  "alpha_2": [
+    {
+      "alpha": 2.0,
+      "baseline_margin": -4.140007972717285,
+      "intervened_margin": -4.082604885101318,
+      "observed_delta": 0.0574030876159668,
+      "observed_direction": 1,
+      "pre_dot": -1.1674320697784424,
+      "prompt_id": "completion-03",
+      "regime_id": "completion",
+      "role": "replication"
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -3.741713047027588,
+      "intervened_margin": -3.682640552520752,
+      "observed_delta": 0.05907249450683594,
+      "observed_direction": 1,
+      "pre_dot": -0.8319613337516785,
+      "prompt_id": "completion-06",
+      "regime_id": "completion",
+      "role": "replication"
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.4789237976074219,
+      "intervened_margin": 0.5446462631225586,
+      "observed_delta": 0.06572246551513672,
+      "observed_direction": 1,
+      "pre_dot": -2.9644088745117188,
+      "prompt_id": "instruction-03",
+      "regime_id": "instruction",
+      "role": "replication"
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.052430152893066406,
+      "intervened_margin": 0.11703300476074219,
+      "observed_delta": 0.06460285186767578,
+      "observed_direction": 1,
+      "pre_dot": -3.663973569869995,
+      "prompt_id": "instruction-06",
+      "regime_id": "instruction",
+      "role": "replication"
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -6.686509609222412,
+      "intervened_margin": -6.636565208435059,
+      "observed_delta": 0.049944400787353516,
+      "observed_direction": 1,
+      "pre_dot": -4.786593437194824,
+      "prompt_id": "syntax-03",
+      "regime_id": "syntax",
+      "role": "replication"
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -6.989002227783203,
+      "intervened_margin": -6.937182426452637,
+      "observed_delta": 0.051819801330566406,
+      "observed_direction": 1,
+      "pre_dot": 1.9588795900344849,
+      "prompt_id": "syntax-06",
+      "regime_id": "syntax",
+      "role": "replication"
+    }
+  ]
+}

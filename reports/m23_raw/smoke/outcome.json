@@ -1,0 +1,9 @@
+{
+  "baseline_margin": -5.721855163574219,
+  "hook_fired": 1,
+  "intervened_margin": -5.691022872924805,
+  "observed_delta": 0.030832290649414062,
+  "pre_dot": -2.3416569232940674,
+  "prompt_id": "completion-01",
+  "scored": false
+}

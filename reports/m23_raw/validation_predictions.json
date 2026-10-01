@@ -1,0 +1,89 @@
+{
+  "belief_version": 1,
+  "rows": [
+    {
+      "alpha": 1.0,
+      "evidence_version": 1,
+      "mechanism_id": "M22.1-D1-L23",
+      "model_version": 1,
+      "outcome_present": false,
+      "predicted_direction": 1,
+      "predicted_effect": 0.028899987538655598,
+      "prompt_id": "completion-02",
+      "regime_id": "completion",
+      "role": "validation",
+      "sequence_index": 0,
+      "uncertainty": 0.003592417625678755
+    },
+    {
+      "alpha": 1.0,
+      "evidence_version": 1,
+      "mechanism_id": "M22.1-D1-L23",
+      "model_version": 1,
+      "outcome_present": false,
+      "predicted_direction": 1,
+      "predicted_effect": 0.028899987538655598,
+      "prompt_id": "completion-05",
+      "regime_id": "completion",
+      "role": "validation",
+      "sequence_index": 1,
+      "uncertainty": 0.003592417625678755
+    },
+    {
+      "alpha": 1.0,
+      "evidence_version": 1,
+      "mechanism_id": "M22.1-D1-L23",
+      "model_version": 1,
+      "outcome_present": false,
+      "predicted_direction": 1,
+      "predicted_effect": 0.028899987538655598,
+      "prompt_id": "instruction-02",
+      "regime_id": "instruction",
+      "role": "validation",
+      "sequence_index": 2,
+      "uncertainty": 0.003592417625678755
+    },
+    {
+      "alpha": 1.0,
+      "evidence_version": 1,
+      "mechanism_id": "M22.1-D1-L23",
+      "model_version": 1,
+      "outcome_present": false,
+      "predicted_direction": 1,
+      "predicted_effect": 0.028899987538655598,
+      "prompt_id": "instruction-05",
+      "regime_id": "instruction",
+      "role": "validation",
+      "sequence_index": 3,
+      "uncertainty": 0.003592417625678755
+    },
+    {
+      "alpha": 1.0,
+      "evidence_version": 1,
+      "mechanism_id": "M22.1-D1-L23",
+      "model_version": 1,
+      "outcome_present": false,
+      "predicted_direction": 1,
+      "predicted_effect": 0.028899987538655598,
+      "prompt_id": "syntax-02",
+      "regime_id": "syntax",
+      "role": "validation",
+      "sequence_index": 4,
+      "uncertainty": 0.003592417625678755
+    },
+    {
+      "alpha": 1.0,
+      "evidence_version": 1,
+      "mechanism_id": "M22.1-D1-L23",
+      "model_version": 1,
+      "outcome_present": false,
+      "predicted_direction": 1,
+      "predicted_effect": 0.028899987538655598,
+      "prompt_id": "syntax-05",
+      "regime_id": "syntax",
+      "role": "validation",
+      "sequence_index": 5,
+      "uncertainty": 0.003592417625678755
+    }
+  ]
+}

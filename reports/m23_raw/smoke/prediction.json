@@ -1,0 +1,14 @@
+{
+  "alpha": 1.0,
+  "evidence_version": 1,
+  "mechanism_id": "M22.1-D1-L23",
+  "model_version": 1,
+  "outcome_present": false,
+  "predicted_direction": 1,
+  "predicted_effect": 0.025,
+  "prompt_id": "completion-01",
+  "regime_id": "completion",
+  "role": "discovery",
+  "sequence_index": 0,
+  "uncertainty": 0.007071067811865474
+}

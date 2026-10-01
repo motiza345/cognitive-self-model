@@ -1,0 +1,287 @@
+{
+  "final_primary": {
+    "predicted_effect": 0.02854486306508382,
+    "uncertainty": 0.003228099193892162,
+    "validity_scope": {
+      "anchor_alpha": 1.0,
+      "hook": "blocks.23.hook_resid_post",
+      "mechanism_id": "M22.1-D1-L23",
+      "prompt_catalog": "M22.1",
+      "status": "IN_SCOPE"
+    },
+    "version": 7
+  },
+  "initial": [],
+  "updated_history": [
+    {
+      "belief_after": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 7,
+        "predicted_effect": 0.029241425650460378,
+        "uncertainty": 0.0034015604586359843,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 2
+      },
+      "belief_before": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 6,
+        "predicted_effect": 0.028899987538655598,
+        "uncertainty": 0.003592417625678755,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 1
+      },
+      "evidence": {
+        "confident": true,
+        "critical": false,
+        "evidence_id": "completion-02",
+        "observed_effect": 0.03129005432128906,
+        "outside_interval": false,
+        "sign_mismatch": false
+      },
+      "model_version_after": 2,
+      "model_version_before": 1,
+      "update_reason": "PRECISION_WEIGHTED_MEAN"
+    },
+    {
+      "belief_after": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 8,
+        "predicted_effect": 0.028915464878082275,
+        "uncertainty": 0.0032814131348242025,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 3
+      },
+      "belief_before": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 7,
+        "predicted_effect": 0.029241425650460378,
+        "uncertainty": 0.0034015604586359843,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 2
+      },
+      "evidence": {
+        "confident": true,
+        "critical": false,
+        "evidence_id": "completion-05",
+        "observed_effect": 0.026633739471435547,
+        "outside_interval": false,
+        "sign_mismatch": false
+      },
+      "model_version_after": 3,
+      "model_version_before": 2,
+      "update_reason": "PRECISION_WEIGHTED_MEAN"
+    },
+    {
+      "belief_after": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 9,
+        "predicted_effect": 0.028471893734402128,
+        "uncertainty": 0.0033455210919636474,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 4
+      },
+      "belief_before": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 8,
+        "predicted_effect": 0.028915464878082275,
+        "uncertainty": 0.0032814131348242025,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 3
+      },
+      "evidence": {
+        "confident": true,
+        "critical": false,
+        "evidence_id": "instruction-02",
+        "observed_effect": 0.024923324584960938,
+        "outside_interval": false,
+        "sign_mismatch": false
+      },
+      "model_version_after": 4,
+      "model_version_before": 3,
+      "update_reason": "PRECISION_WEIGHTED_MEAN"
+    },
+    {
+      "belief_after": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 10,
+        "predicted_effect": 0.02890477180480957,
+        "uncertainty": 0.0034384201662934215,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 5
+      },
+      "belief_before": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 9,
+        "predicted_effect": 0.028471893734402128,
+        "uncertainty": 0.0033455210919636474,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 4
+      },
+      "evidence": {
+        "confident": true,
+        "critical": false,
+        "evidence_id": "instruction-05",
+        "observed_effect": 0.03280067443847656,
+        "outside_interval": false,
+        "sign_mismatch": false
+      },
+      "model_version_after": 5,
+      "model_version_before": 4,
+      "update_reason": "PRECISION_WEIGHTED_MEAN"
+    },
+    {
+      "belief_after": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 11,
+        "predicted_effect": 0.028751590035178444,
+        "uncertainty": 0.003301298398508761,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 6
+      },
+      "belief_before": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 10,
+        "predicted_effect": 0.02890477180480957,
+        "uncertainty": 0.0034384201662934215,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 5
+      },
+      "evidence": {
+        "confident": true,
+        "critical": false,
+        "evidence_id": "syntax-02",
+        "observed_effect": 0.027219772338867188,
+        "outside_interval": false,
+        "sign_mismatch": false
+      },
+      "model_version_after": 6,
+      "model_version_before": 5,
+      "update_reason": "PRECISION_WEIGHTED_MEAN"
+    },
+    {
+      "belief_after": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 12,
+        "predicted_effect": 0.02854486306508382,
+        "uncertainty": 0.003228099193892162,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 7
+      },
+      "belief_before": {
+        "inflation": 1.0,
+        "intervention_type": "additive_last_token",
+        "mechanism_id": "M22.1-D1-L23",
+        "n_observations": 11,
+        "predicted_effect": 0.028751590035178444,
+        "uncertainty": 0.003301298398508761,
+        "validity_scope": {
+          "anchor_alpha": 1.0,
+          "hook": "blocks.23.hook_resid_post",
+          "mechanism_id": "M22.1-D1-L23",
+          "prompt_catalog": "M22.1",
+          "status": "IN_SCOPE"
+        },
+        "version": 6
+      },
+      "evidence": {
+        "confident": true,
+        "critical": false,
+        "evidence_id": "syntax-05",
+        "observed_effect": 0.02627086639404297,
+        "outside_interval": false,
+        "sign_mismatch": false
+      },
+      "model_version_after": 7,
+      "model_version_before": 6,
+      "update_reason": "PRECISION_WEIGHTED_MEAN"
+    }
+  ]
+}

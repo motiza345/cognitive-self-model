@@ -1,0 +1,138 @@
+{
+  "d1": [
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.117710113525391,
+      "intervened_margin": -4.086420059204102,
+      "observed_delta": 0.03129005432128906,
+      "observed_direction": 1,
+      "pre_dot": 0.12789666652679443,
+      "prompt_id": "completion-02",
+      "regime_id": "completion",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.191883087158203,
+      "intervened_margin": -3.1652493476867676,
+      "observed_delta": 0.026633739471435547,
+      "observed_direction": 1,
+      "pre_dot": -3.175248146057129,
+      "prompt_id": "completion-05",
+      "regime_id": "completion",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.4678773880004883,
+      "intervened_margin": 0.4928007125854492,
+      "observed_delta": 0.024923324584960938,
+      "observed_direction": 1,
+      "pre_dot": -3.4794533252716064,
+      "prompt_id": "instruction-02",
+      "regime_id": "instruction",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -0.042476654052734375,
+      "intervened_margin": -0.009675979614257812,
+      "observed_delta": 0.03280067443847656,
+      "observed_direction": 1,
+      "pre_dot": -1.0861270427703857,
+      "prompt_id": "instruction-05",
+      "regime_id": "instruction",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.5460166931152344,
+      "intervened_margin": -3.518796920776367,
+      "observed_delta": 0.027219772338867188,
+      "observed_direction": 1,
+      "pre_dot": -2.5343363285064697,
+      "prompt_id": "syntax-02",
+      "regime_id": "syntax",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -5.55214262008667,
+      "intervened_margin": -5.525871753692627,
+      "observed_delta": 0.02627086639404297,
+      "observed_direction": 1,
+      "pre_dot": -3.3276872634887695,
+      "prompt_id": "syntax-05",
+      "regime_id": "syntax",
+      "role": "validation"
+    }
+  ],
+  "d2": [
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.117710113525391,
+      "intervened_margin": -4.007656097412109,
+      "observed_delta": 0.11005401611328125,
+      "observed_direction": 1,
+      "pre_dot": -0.8673853874206543,
+      "prompt_id": "completion-02",
+      "regime_id": "completion",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.191883087158203,
+      "intervened_margin": -3.0936684608459473,
+      "observed_delta": 0.09821462631225586,
+      "observed_direction": 1,
+      "pre_dot": -3.146130323410034,
+      "prompt_id": "completion-05",
+      "regime_id": "completion",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.4678773880004883,
+      "intervened_margin": 0.5565738677978516,
+      "observed_delta": 0.08869647979736328,
+      "observed_direction": 1,
+      "pre_dot": -2.9511115550994873,
+      "prompt_id": "instruction-02",
+      "regime_id": "instruction",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -0.042476654052734375,
+      "intervened_margin": 0.0747995376586914,
+      "observed_delta": 0.11727619171142578,
+      "observed_direction": 1,
+      "pre_dot": -0.9722812175750732,
+      "prompt_id": "instruction-05",
+      "regime_id": "instruction",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.5460166931152344,
+      "intervened_margin": -3.4422073364257812,
+      "observed_delta": 0.10380935668945312,
+      "observed_direction": 1,
+      "pre_dot": 5.532967567443848,
+      "prompt_id": "syntax-02",
+      "regime_id": "syntax",
+      "role": "validation"
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -5.55214262008667,
+      "intervened_margin": -5.449566841125488,
+      "observed_delta": 0.10257577896118164,
+      "observed_direction": 1,
+      "pre_dot": 0.3323081135749817,
+      "prompt_id": "syntax-05",
+      "regime_id": "syntax",
+      "role": "validation"
+    }
+  ]
+}
