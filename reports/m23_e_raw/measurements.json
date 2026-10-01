@@ -1,0 +1,1228 @@
+{
+  "rows": [
+    {
+      "alpha": 1.0,
+      "baseline_margin": -5.721855163574219,
+      "baseline_output": -5.721855163574219,
+      "episode_id": "completion-01-a1-r0",
+      "intervened_output": -5.691022872924805,
+      "observed_effect": 0.030832290649414062,
+      "partition": "train",
+      "pre_dot": -2.3416569232940674,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.721855163574219,
+        "pre_dot": -2.3416569232940674
+      },
+      "prompt_id": "completion-01",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -5.721855163574219,
+      "baseline_output": -5.721855163574219,
+      "episode_id": "completion-01-a2-r0",
+      "intervened_output": -5.659100532531738,
+      "observed_effect": 0.06275463104248047,
+      "partition": "train",
+      "pre_dot": -2.3416569232940674,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.721855163574219,
+        "pre_dot": -2.3416569232940674
+      },
+      "prompt_id": "completion-01",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.117710113525391,
+      "baseline_output": -4.117710113525391,
+      "episode_id": "completion-02-a1-r0",
+      "intervened_output": -4.086420059204102,
+      "observed_effect": 0.03129005432128906,
+      "partition": "evaluation",
+      "pre_dot": 0.12789666652679443,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.117710113525391,
+        "pre_dot": 0.12789666652679443
+      },
+      "prompt_id": "completion-02",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -4.117710113525391,
+      "baseline_output": -4.117710113525391,
+      "episode_id": "completion-02-a2-r0",
+      "intervened_output": -4.054462432861328,
+      "observed_effect": 0.0632476806640625,
+      "partition": "evaluation",
+      "pre_dot": 0.12789666652679443,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.117710113525391,
+        "pre_dot": 0.12789666652679443
+      },
+      "prompt_id": "completion-02",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.140007972717285,
+      "baseline_output": -4.140007972717285,
+      "episode_id": "completion-03-a1-r0",
+      "intervened_output": -4.111610412597656,
+      "observed_effect": 0.028397560119628906,
+      "partition": "train",
+      "pre_dot": -1.1674320697784424,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.140007972717285,
+        "pre_dot": -1.1674320697784424
+      },
+      "prompt_id": "completion-03",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -4.140007972717285,
+      "baseline_output": -4.140007972717285,
+      "episode_id": "completion-03-a2-r0",
+      "intervened_output": -4.082604885101318,
+      "observed_effect": 0.0574030876159668,
+      "partition": "train",
+      "pre_dot": -1.1674320697784424,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.140007972717285,
+        "pre_dot": -1.1674320697784424
+      },
+      "prompt_id": "completion-03",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -2.13018798828125,
+      "baseline_output": -2.13018798828125,
+      "episode_id": "completion-04-a1-r0",
+      "intervened_output": -2.1043615341186523,
+      "observed_effect": 0.025826454162597656,
+      "partition": "evaluation",
+      "pre_dot": -0.37421470880508423,
+      "pre_intervention_observation": {
+        "baseline_margin": -2.13018798828125,
+        "pre_dot": -0.37421470880508423
+      },
+      "prompt_id": "completion-04",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -2.13018798828125,
+      "baseline_output": -2.13018798828125,
+      "episode_id": "completion-04-a2-r0",
+      "intervened_output": -2.078280448913574,
+      "observed_effect": 0.05190753936767578,
+      "partition": "evaluation",
+      "pre_dot": -0.37421470880508423,
+      "pre_intervention_observation": {
+        "baseline_margin": -2.13018798828125,
+        "pre_dot": -0.37421470880508423
+      },
+      "prompt_id": "completion-04",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.191883087158203,
+      "baseline_output": -3.191883087158203,
+      "episode_id": "completion-05-a1-r0",
+      "intervened_output": -3.1652493476867676,
+      "observed_effect": 0.026633739471435547,
+      "partition": "train",
+      "pre_dot": -3.175248146057129,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.191883087158203,
+        "pre_dot": -3.175248146057129
+      },
+      "prompt_id": "completion-05",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -3.191883087158203,
+      "baseline_output": -3.191883087158203,
+      "episode_id": "completion-05-a2-r0",
+      "intervened_output": -3.138176918029785,
+      "observed_effect": 0.05370616912841797,
+      "partition": "train",
+      "pre_dot": -3.175248146057129,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.191883087158203,
+        "pre_dot": -3.175248146057129
+      },
+      "prompt_id": "completion-05",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.741713047027588,
+      "baseline_output": -3.741713047027588,
+      "episode_id": "completion-06-a1-r0",
+      "intervened_output": -3.7124571800231934,
+      "observed_effect": 0.02925586700439453,
+      "partition": "evaluation",
+      "pre_dot": -0.8319613337516785,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.741713047027588,
+        "pre_dot": -0.8319613337516785
+      },
+      "prompt_id": "completion-06",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -3.741713047027588,
+      "baseline_output": -3.741713047027588,
+      "episode_id": "completion-06-a2-r0",
+      "intervened_output": -3.682640552520752,
+      "observed_effect": 0.05907249450683594,
+      "partition": "evaluation",
+      "pre_dot": -0.8319613337516785,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.741713047027588,
+        "pre_dot": -0.8319613337516785
+      },
+      "prompt_id": "completion-06",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -1.1396236419677734,
+      "baseline_output": -1.1396236419677734,
+      "episode_id": "instruction-01-a1-r0",
+      "intervened_output": -1.1130752563476562,
+      "observed_effect": 0.026548385620117188,
+      "partition": "train",
+      "pre_dot": -0.9869740009307861,
+      "pre_intervention_observation": {
+        "baseline_margin": -1.1396236419677734,
+        "pre_dot": -0.9869740009307861
+      },
+      "prompt_id": "instruction-01",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -1.1396236419677734,
+      "baseline_output": -1.1396236419677734,
+      "episode_id": "instruction-01-a2-r0",
+      "intervened_output": -1.0863819122314453,
+      "observed_effect": 0.053241729736328125,
+      "partition": "train",
+      "pre_dot": -0.9869740009307861,
+      "pre_intervention_observation": {
+        "baseline_margin": -1.1396236419677734,
+        "pre_dot": -0.9869740009307861
+      },
+      "prompt_id": "instruction-01",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.4678773880004883,
+      "baseline_output": 0.4678773880004883,
+      "episode_id": "instruction-02-a1-r0",
+      "intervened_output": 0.4928007125854492,
+      "observed_effect": 0.024923324584960938,
+      "partition": "evaluation",
+      "pre_dot": -3.4794533252716064,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4678773880004883,
+        "pre_dot": -3.4794533252716064
+      },
+      "prompt_id": "instruction-02",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.4678773880004883,
+      "baseline_output": 0.4678773880004883,
+      "episode_id": "instruction-02-a2-r0",
+      "intervened_output": 0.517695426940918,
+      "observed_effect": 0.04981803894042969,
+      "partition": "evaluation",
+      "pre_dot": -3.4794533252716064,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4678773880004883,
+        "pre_dot": -3.4794533252716064
+      },
+      "prompt_id": "instruction-02",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.4789237976074219,
+      "baseline_output": 0.4789237976074219,
+      "episode_id": "instruction-03-a1-r0",
+      "intervened_output": 0.5118265151977539,
+      "observed_effect": 0.03290271759033203,
+      "partition": "train",
+      "pre_dot": -2.9644088745117188,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4789237976074219,
+        "pre_dot": -2.9644088745117188
+      },
+      "prompt_id": "instruction-03",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.4789237976074219,
+      "baseline_output": 0.4789237976074219,
+      "episode_id": "instruction-03-a2-r0",
+      "intervened_output": 0.5446462631225586,
+      "observed_effect": 0.06572246551513672,
+      "partition": "train",
+      "pre_dot": -2.9644088745117188,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4789237976074219,
+        "pre_dot": -2.9644088745117188
+      },
+      "prompt_id": "instruction-03",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 1.6648273468017578,
+      "baseline_output": 1.6648273468017578,
+      "episode_id": "instruction-04-a1-r0",
+      "intervened_output": 1.6985187530517578,
+      "observed_effect": 0.03369140625,
+      "partition": "evaluation",
+      "pre_dot": -3.281754970550537,
+      "pre_intervention_observation": {
+        "baseline_margin": 1.6648273468017578,
+        "pre_dot": -3.281754970550537
+      },
+      "prompt_id": "instruction-04",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 1.6648273468017578,
+      "baseline_output": 1.6648273468017578,
+      "episode_id": "instruction-04-a2-r0",
+      "intervened_output": 1.731907844543457,
+      "observed_effect": 0.06708049774169922,
+      "partition": "evaluation",
+      "pre_dot": -3.281754970550537,
+      "pre_intervention_observation": {
+        "baseline_margin": 1.6648273468017578,
+        "pre_dot": -3.281754970550537
+      },
+      "prompt_id": "instruction-04",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -0.042476654052734375,
+      "baseline_output": -0.042476654052734375,
+      "episode_id": "instruction-05-a1-r0",
+      "intervened_output": -0.009675979614257812,
+      "observed_effect": 0.03280067443847656,
+      "partition": "train",
+      "pre_dot": -1.0861270427703857,
+      "pre_intervention_observation": {
+        "baseline_margin": -0.042476654052734375,
+        "pre_dot": -1.0861270427703857
+      },
+      "prompt_id": "instruction-05",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -0.042476654052734375,
+      "baseline_output": -0.042476654052734375,
+      "episode_id": "instruction-05-a2-r0",
+      "intervened_output": 0.023138046264648438,
+      "observed_effect": 0.06561470031738281,
+      "partition": "train",
+      "pre_dot": -1.0861270427703857,
+      "pre_intervention_observation": {
+        "baseline_margin": -0.042476654052734375,
+        "pre_dot": -1.0861270427703857
+      },
+      "prompt_id": "instruction-05",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.052430152893066406,
+      "baseline_output": 0.052430152893066406,
+      "episode_id": "instruction-06-a1-r0",
+      "intervened_output": 0.08472633361816406,
+      "observed_effect": 0.032296180725097656,
+      "partition": "evaluation",
+      "pre_dot": -3.663973569869995,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.052430152893066406,
+        "pre_dot": -3.663973569869995
+      },
+      "prompt_id": "instruction-06",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.052430152893066406,
+      "baseline_output": 0.052430152893066406,
+      "episode_id": "instruction-06-a2-r0",
+      "intervened_output": 0.11703300476074219,
+      "observed_effect": 0.06460285186767578,
+      "partition": "evaluation",
+      "pre_dot": -3.663973569869995,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.052430152893066406,
+        "pre_dot": -3.663973569869995
+      },
+      "prompt_id": "instruction-06",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -8.649645805358887,
+      "baseline_output": -8.649645805358887,
+      "episode_id": "syntax-01-a1-r0",
+      "intervened_output": -8.618077278137207,
+      "observed_effect": 0.03156852722167969,
+      "partition": "train",
+      "pre_dot": -0.20727872848510742,
+      "pre_intervention_observation": {
+        "baseline_margin": -8.649645805358887,
+        "pre_dot": -0.20727872848510742
+      },
+      "prompt_id": "syntax-01",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -8.649645805358887,
+      "baseline_output": -8.649645805358887,
+      "episode_id": "syntax-01-a2-r0",
+      "intervened_output": -8.585054397583008,
+      "observed_effect": 0.0645914077758789,
+      "partition": "train",
+      "pre_dot": -0.20727872848510742,
+      "pre_intervention_observation": {
+        "baseline_margin": -8.649645805358887,
+        "pre_dot": -0.20727872848510742
+      },
+      "prompt_id": "syntax-01",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.5460166931152344,
+      "baseline_output": -3.5460166931152344,
+      "episode_id": "syntax-02-a1-r0",
+      "intervened_output": -3.518796920776367,
+      "observed_effect": 0.027219772338867188,
+      "partition": "evaluation",
+      "pre_dot": -2.5343363285064697,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.5460166931152344,
+        "pre_dot": -2.5343363285064697
+      },
+      "prompt_id": "syntax-02",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -3.5460166931152344,
+      "baseline_output": -3.5460166931152344,
+      "episode_id": "syntax-02-a2-r0",
+      "intervened_output": -3.4910717010498047,
+      "observed_effect": 0.05494499206542969,
+      "partition": "evaluation",
+      "pre_dot": -2.5343363285064697,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.5460166931152344,
+        "pre_dot": -2.5343363285064697
+      },
+      "prompt_id": "syntax-02",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -6.686509609222412,
+      "baseline_output": -6.686509609222412,
+      "episode_id": "syntax-03-a1-r0",
+      "intervened_output": -6.6620402336120605,
+      "observed_effect": 0.024469375610351562,
+      "partition": "train",
+      "pre_dot": -4.786593437194824,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.686509609222412,
+        "pre_dot": -4.786593437194824
+      },
+      "prompt_id": "syntax-03",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -6.686509609222412,
+      "baseline_output": -6.686509609222412,
+      "episode_id": "syntax-03-a2-r0",
+      "intervened_output": -6.636565208435059,
+      "observed_effect": 0.049944400787353516,
+      "partition": "train",
+      "pre_dot": -4.786593437194824,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.686509609222412,
+        "pre_dot": -4.786593437194824
+      },
+      "prompt_id": "syntax-03",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.178995132446289,
+      "baseline_output": -4.178995132446289,
+      "episode_id": "syntax-04-a1-r0",
+      "intervened_output": -4.154062271118164,
+      "observed_effect": 0.024932861328125,
+      "partition": "evaluation",
+      "pre_dot": -5.563745975494385,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.178995132446289,
+        "pre_dot": -5.563745975494385
+      },
+      "prompt_id": "syntax-04",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -4.178995132446289,
+      "baseline_output": -4.178995132446289,
+      "episode_id": "syntax-04-a2-r0",
+      "intervened_output": -4.128538608551025,
+      "observed_effect": 0.05045652389526367,
+      "partition": "evaluation",
+      "pre_dot": -5.563745975494385,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.178995132446289,
+        "pre_dot": -5.563745975494385
+      },
+      "prompt_id": "syntax-04",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -5.55214262008667,
+      "baseline_output": -5.55214262008667,
+      "episode_id": "syntax-05-a1-r0",
+      "intervened_output": -5.525871753692627,
+      "observed_effect": 0.02627086639404297,
+      "partition": "train",
+      "pre_dot": -3.3276872634887695,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.55214262008667,
+        "pre_dot": -3.3276872634887695
+      },
+      "prompt_id": "syntax-05",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -5.55214262008667,
+      "baseline_output": -5.55214262008667,
+      "episode_id": "syntax-05-a2-r0",
+      "intervened_output": -5.498787879943848,
+      "observed_effect": 0.053354740142822266,
+      "partition": "train",
+      "pre_dot": -3.3276872634887695,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.55214262008667,
+        "pre_dot": -3.3276872634887695
+      },
+      "prompt_id": "syntax-05",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -6.989002227783203,
+      "baseline_output": -6.989002227783203,
+      "episode_id": "syntax-06-a1-r0",
+      "intervened_output": -6.963428497314453,
+      "observed_effect": 0.02557373046875,
+      "partition": "evaluation",
+      "pre_dot": 1.9588795900344849,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.989002227783203,
+        "pre_dot": 1.9588795900344849
+      },
+      "prompt_id": "syntax-06",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -6.989002227783203,
+      "baseline_output": -6.989002227783203,
+      "episode_id": "syntax-06-a2-r0",
+      "intervened_output": -6.937182426452637,
+      "observed_effect": 0.051819801330566406,
+      "partition": "evaluation",
+      "pre_dot": 1.9588795900344849,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.989002227783203,
+        "pre_dot": 1.9588795900344849
+      },
+      "prompt_id": "syntax-06",
+      "repeat_index": 0,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -5.721855163574219,
+      "baseline_output": -5.721855163574219,
+      "episode_id": "completion-01-a1-r1",
+      "intervened_output": -5.691022872924805,
+      "observed_effect": 0.030832290649414062,
+      "partition": "train",
+      "pre_dot": -2.3416569232940674,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.721855163574219,
+        "pre_dot": -2.3416569232940674
+      },
+      "prompt_id": "completion-01",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -5.721855163574219,
+      "baseline_output": -5.721855163574219,
+      "episode_id": "completion-01-a2-r1",
+      "intervened_output": -5.659100532531738,
+      "observed_effect": 0.06275463104248047,
+      "partition": "train",
+      "pre_dot": -2.3416569232940674,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.721855163574219,
+        "pre_dot": -2.3416569232940674
+      },
+      "prompt_id": "completion-01",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.117710113525391,
+      "baseline_output": -4.117710113525391,
+      "episode_id": "completion-02-a1-r1",
+      "intervened_output": -4.086420059204102,
+      "observed_effect": 0.03129005432128906,
+      "partition": "evaluation",
+      "pre_dot": 0.12789666652679443,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.117710113525391,
+        "pre_dot": 0.12789666652679443
+      },
+      "prompt_id": "completion-02",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -4.117710113525391,
+      "baseline_output": -4.117710113525391,
+      "episode_id": "completion-02-a2-r1",
+      "intervened_output": -4.054462432861328,
+      "observed_effect": 0.0632476806640625,
+      "partition": "evaluation",
+      "pre_dot": 0.12789666652679443,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.117710113525391,
+        "pre_dot": 0.12789666652679443
+      },
+      "prompt_id": "completion-02",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.140007972717285,
+      "baseline_output": -4.140007972717285,
+      "episode_id": "completion-03-a1-r1",
+      "intervened_output": -4.111610412597656,
+      "observed_effect": 0.028397560119628906,
+      "partition": "train",
+      "pre_dot": -1.1674320697784424,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.140007972717285,
+        "pre_dot": -1.1674320697784424
+      },
+      "prompt_id": "completion-03",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -4.140007972717285,
+      "baseline_output": -4.140007972717285,
+      "episode_id": "completion-03-a2-r1",
+      "intervened_output": -4.082604885101318,
+      "observed_effect": 0.0574030876159668,
+      "partition": "train",
+      "pre_dot": -1.1674320697784424,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.140007972717285,
+        "pre_dot": -1.1674320697784424
+      },
+      "prompt_id": "completion-03",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -2.13018798828125,
+      "baseline_output": -2.13018798828125,
+      "episode_id": "completion-04-a1-r1",
+      "intervened_output": -2.1043615341186523,
+      "observed_effect": 0.025826454162597656,
+      "partition": "evaluation",
+      "pre_dot": -0.37421470880508423,
+      "pre_intervention_observation": {
+        "baseline_margin": -2.13018798828125,
+        "pre_dot": -0.37421470880508423
+      },
+      "prompt_id": "completion-04",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -2.13018798828125,
+      "baseline_output": -2.13018798828125,
+      "episode_id": "completion-04-a2-r1",
+      "intervened_output": -2.078280448913574,
+      "observed_effect": 0.05190753936767578,
+      "partition": "evaluation",
+      "pre_dot": -0.37421470880508423,
+      "pre_intervention_observation": {
+        "baseline_margin": -2.13018798828125,
+        "pre_dot": -0.37421470880508423
+      },
+      "prompt_id": "completion-04",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.191883087158203,
+      "baseline_output": -3.191883087158203,
+      "episode_id": "completion-05-a1-r1",
+      "intervened_output": -3.1652493476867676,
+      "observed_effect": 0.026633739471435547,
+      "partition": "train",
+      "pre_dot": -3.175248146057129,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.191883087158203,
+        "pre_dot": -3.175248146057129
+      },
+      "prompt_id": "completion-05",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -3.191883087158203,
+      "baseline_output": -3.191883087158203,
+      "episode_id": "completion-05-a2-r1",
+      "intervened_output": -3.138176918029785,
+      "observed_effect": 0.05370616912841797,
+      "partition": "train",
+      "pre_dot": -3.175248146057129,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.191883087158203,
+        "pre_dot": -3.175248146057129
+      },
+      "prompt_id": "completion-05",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.741713047027588,
+      "baseline_output": -3.741713047027588,
+      "episode_id": "completion-06-a1-r1",
+      "intervened_output": -3.7124571800231934,
+      "observed_effect": 0.02925586700439453,
+      "partition": "evaluation",
+      "pre_dot": -0.8319613337516785,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.741713047027588,
+        "pre_dot": -0.8319613337516785
+      },
+      "prompt_id": "completion-06",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -3.741713047027588,
+      "baseline_output": -3.741713047027588,
+      "episode_id": "completion-06-a2-r1",
+      "intervened_output": -3.682640552520752,
+      "observed_effect": 0.05907249450683594,
+      "partition": "evaluation",
+      "pre_dot": -0.8319613337516785,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.741713047027588,
+        "pre_dot": -0.8319613337516785
+      },
+      "prompt_id": "completion-06",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -1.1396236419677734,
+      "baseline_output": -1.1396236419677734,
+      "episode_id": "instruction-01-a1-r1",
+      "intervened_output": -1.1130752563476562,
+      "observed_effect": 0.026548385620117188,
+      "partition": "train",
+      "pre_dot": -0.9869740009307861,
+      "pre_intervention_observation": {
+        "baseline_margin": -1.1396236419677734,
+        "pre_dot": -0.9869740009307861
+      },
+      "prompt_id": "instruction-01",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -1.1396236419677734,
+      "baseline_output": -1.1396236419677734,
+      "episode_id": "instruction-01-a2-r1",
+      "intervened_output": -1.0863819122314453,
+      "observed_effect": 0.053241729736328125,
+      "partition": "train",
+      "pre_dot": -0.9869740009307861,
+      "pre_intervention_observation": {
+        "baseline_margin": -1.1396236419677734,
+        "pre_dot": -0.9869740009307861
+      },
+      "prompt_id": "instruction-01",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.4678773880004883,
+      "baseline_output": 0.4678773880004883,
+      "episode_id": "instruction-02-a1-r1",
+      "intervened_output": 0.4928007125854492,
+      "observed_effect": 0.024923324584960938,
+      "partition": "evaluation",
+      "pre_dot": -3.4794533252716064,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4678773880004883,
+        "pre_dot": -3.4794533252716064
+      },
+      "prompt_id": "instruction-02",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.4678773880004883,
+      "baseline_output": 0.4678773880004883,
+      "episode_id": "instruction-02-a2-r1",
+      "intervened_output": 0.517695426940918,
+      "observed_effect": 0.04981803894042969,
+      "partition": "evaluation",
+      "pre_dot": -3.4794533252716064,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4678773880004883,
+        "pre_dot": -3.4794533252716064
+      },
+      "prompt_id": "instruction-02",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.4789237976074219,
+      "baseline_output": 0.4789237976074219,
+      "episode_id": "instruction-03-a1-r1",
+      "intervened_output": 0.5118265151977539,
+      "observed_effect": 0.03290271759033203,
+      "partition": "train",
+      "pre_dot": -2.9644088745117188,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4789237976074219,
+        "pre_dot": -2.9644088745117188
+      },
+      "prompt_id": "instruction-03",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.4789237976074219,
+      "baseline_output": 0.4789237976074219,
+      "episode_id": "instruction-03-a2-r1",
+      "intervened_output": 0.5446462631225586,
+      "observed_effect": 0.06572246551513672,
+      "partition": "train",
+      "pre_dot": -2.9644088745117188,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.4789237976074219,
+        "pre_dot": -2.9644088745117188
+      },
+      "prompt_id": "instruction-03",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 1.6648273468017578,
+      "baseline_output": 1.6648273468017578,
+      "episode_id": "instruction-04-a1-r1",
+      "intervened_output": 1.6985187530517578,
+      "observed_effect": 0.03369140625,
+      "partition": "evaluation",
+      "pre_dot": -3.281754970550537,
+      "pre_intervention_observation": {
+        "baseline_margin": 1.6648273468017578,
+        "pre_dot": -3.281754970550537
+      },
+      "prompt_id": "instruction-04",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 1.6648273468017578,
+      "baseline_output": 1.6648273468017578,
+      "episode_id": "instruction-04-a2-r1",
+      "intervened_output": 1.731907844543457,
+      "observed_effect": 0.06708049774169922,
+      "partition": "evaluation",
+      "pre_dot": -3.281754970550537,
+      "pre_intervention_observation": {
+        "baseline_margin": 1.6648273468017578,
+        "pre_dot": -3.281754970550537
+      },
+      "prompt_id": "instruction-04",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -0.042476654052734375,
+      "baseline_output": -0.042476654052734375,
+      "episode_id": "instruction-05-a1-r1",
+      "intervened_output": -0.009675979614257812,
+      "observed_effect": 0.03280067443847656,
+      "partition": "train",
+      "pre_dot": -1.0861270427703857,
+      "pre_intervention_observation": {
+        "baseline_margin": -0.042476654052734375,
+        "pre_dot": -1.0861270427703857
+      },
+      "prompt_id": "instruction-05",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -0.042476654052734375,
+      "baseline_output": -0.042476654052734375,
+      "episode_id": "instruction-05-a2-r1",
+      "intervened_output": 0.023138046264648438,
+      "observed_effect": 0.06561470031738281,
+      "partition": "train",
+      "pre_dot": -1.0861270427703857,
+      "pre_intervention_observation": {
+        "baseline_margin": -0.042476654052734375,
+        "pre_dot": -1.0861270427703857
+      },
+      "prompt_id": "instruction-05",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": 0.052430152893066406,
+      "baseline_output": 0.052430152893066406,
+      "episode_id": "instruction-06-a1-r1",
+      "intervened_output": 0.08472633361816406,
+      "observed_effect": 0.032296180725097656,
+      "partition": "evaluation",
+      "pre_dot": -3.663973569869995,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.052430152893066406,
+        "pre_dot": -3.663973569869995
+      },
+      "prompt_id": "instruction-06",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": 0.052430152893066406,
+      "baseline_output": 0.052430152893066406,
+      "episode_id": "instruction-06-a2-r1",
+      "intervened_output": 0.11703300476074219,
+      "observed_effect": 0.06460285186767578,
+      "partition": "evaluation",
+      "pre_dot": -3.663973569869995,
+      "pre_intervention_observation": {
+        "baseline_margin": 0.052430152893066406,
+        "pre_dot": -3.663973569869995
+      },
+      "prompt_id": "instruction-06",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -8.649645805358887,
+      "baseline_output": -8.649645805358887,
+      "episode_id": "syntax-01-a1-r1",
+      "intervened_output": -8.618077278137207,
+      "observed_effect": 0.03156852722167969,
+      "partition": "train",
+      "pre_dot": -0.20727872848510742,
+      "pre_intervention_observation": {
+        "baseline_margin": -8.649645805358887,
+        "pre_dot": -0.20727872848510742
+      },
+      "prompt_id": "syntax-01",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -8.649645805358887,
+      "baseline_output": -8.649645805358887,
+      "episode_id": "syntax-01-a2-r1",
+      "intervened_output": -8.585054397583008,
+      "observed_effect": 0.0645914077758789,
+      "partition": "train",
+      "pre_dot": -0.20727872848510742,
+      "pre_intervention_observation": {
+        "baseline_margin": -8.649645805358887,
+        "pre_dot": -0.20727872848510742
+      },
+      "prompt_id": "syntax-01",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -3.5460166931152344,
+      "baseline_output": -3.5460166931152344,
+      "episode_id": "syntax-02-a1-r1",
+      "intervened_output": -3.518796920776367,
+      "observed_effect": 0.027219772338867188,
+      "partition": "evaluation",
+      "pre_dot": -2.5343363285064697,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.5460166931152344,
+        "pre_dot": -2.5343363285064697
+      },
+      "prompt_id": "syntax-02",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -3.5460166931152344,
+      "baseline_output": -3.5460166931152344,
+      "episode_id": "syntax-02-a2-r1",
+      "intervened_output": -3.4910717010498047,
+      "observed_effect": 0.05494499206542969,
+      "partition": "evaluation",
+      "pre_dot": -2.5343363285064697,
+      "pre_intervention_observation": {
+        "baseline_margin": -3.5460166931152344,
+        "pre_dot": -2.5343363285064697
+      },
+      "prompt_id": "syntax-02",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -6.686509609222412,
+      "baseline_output": -6.686509609222412,
+      "episode_id": "syntax-03-a1-r1",
+      "intervened_output": -6.6620402336120605,
+      "observed_effect": 0.024469375610351562,
+      "partition": "train",
+      "pre_dot": -4.786593437194824,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.686509609222412,
+        "pre_dot": -4.786593437194824
+      },
+      "prompt_id": "syntax-03",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -6.686509609222412,
+      "baseline_output": -6.686509609222412,
+      "episode_id": "syntax-03-a2-r1",
+      "intervened_output": -6.636565208435059,
+      "observed_effect": 0.049944400787353516,
+      "partition": "train",
+      "pre_dot": -4.786593437194824,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.686509609222412,
+        "pre_dot": -4.786593437194824
+      },
+      "prompt_id": "syntax-03",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -4.178995132446289,
+      "baseline_output": -4.178995132446289,
+      "episode_id": "syntax-04-a1-r1",
+      "intervened_output": -4.154062271118164,
+      "observed_effect": 0.024932861328125,
+      "partition": "evaluation",
+      "pre_dot": -5.563745975494385,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.178995132446289,
+        "pre_dot": -5.563745975494385
+      },
+      "prompt_id": "syntax-04",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -4.178995132446289,
+      "baseline_output": -4.178995132446289,
+      "episode_id": "syntax-04-a2-r1",
+      "intervened_output": -4.128538608551025,
+      "observed_effect": 0.05045652389526367,
+      "partition": "evaluation",
+      "pre_dot": -5.563745975494385,
+      "pre_intervention_observation": {
+        "baseline_margin": -4.178995132446289,
+        "pre_dot": -5.563745975494385
+      },
+      "prompt_id": "syntax-04",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -5.55214262008667,
+      "baseline_output": -5.55214262008667,
+      "episode_id": "syntax-05-a1-r1",
+      "intervened_output": -5.525871753692627,
+      "observed_effect": 0.02627086639404297,
+      "partition": "train",
+      "pre_dot": -3.3276872634887695,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.55214262008667,
+        "pre_dot": -3.3276872634887695
+      },
+      "prompt_id": "syntax-05",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -5.55214262008667,
+      "baseline_output": -5.55214262008667,
+      "episode_id": "syntax-05-a2-r1",
+      "intervened_output": -5.498787879943848,
+      "observed_effect": 0.053354740142822266,
+      "partition": "train",
+      "pre_dot": -3.3276872634887695,
+      "pre_intervention_observation": {
+        "baseline_margin": -5.55214262008667,
+        "pre_dot": -3.3276872634887695
+      },
+      "prompt_id": "syntax-05",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "baseline_margin": -6.989002227783203,
+      "baseline_output": -6.989002227783203,
+      "episode_id": "syntax-06-a1-r1",
+      "intervened_output": -6.963428497314453,
+      "observed_effect": 0.02557373046875,
+      "partition": "evaluation",
+      "pre_dot": 1.9588795900344849,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.989002227783203,
+        "pre_dot": 1.9588795900344849
+      },
+      "prompt_id": "syntax-06",
+      "repeat_index": 1,
+      "seed": 22101
+    },
+    {
+      "alpha": 2.0,
+      "baseline_margin": -6.989002227783203,
+      "baseline_output": -6.989002227783203,
+      "episode_id": "syntax-06-a2-r1",
+      "intervened_output": -6.937182426452637,
+      "observed_effect": 0.051819801330566406,
+      "partition": "evaluation",
+      "pre_dot": 1.9588795900344849,
+      "pre_intervention_observation": {
+        "baseline_margin": -6.989002227783203,
+        "pre_dot": 1.9588795900344849
+      },
+      "prompt_id": "syntax-06",
+      "repeat_index": 1,
+      "seed": 22101
+    }
+  ]
+}

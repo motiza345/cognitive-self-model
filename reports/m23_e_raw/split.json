@@ -1,0 +1,24 @@
+{
+  "evaluation": [
+    "completion-02",
+    "completion-04",
+    "completion-06",
+    "instruction-02",
+    "instruction-04",
+    "instruction-06",
+    "syntax-02",
+    "syntax-04",
+    "syntax-06"
+  ],
+  "train": [
+    "completion-01",
+    "completion-03",
+    "completion-05",
+    "instruction-01",
+    "instruction-03",
+    "instruction-05",
+    "syntax-01",
+    "syntax-03",
+    "syntax-05"
+  ]
+}

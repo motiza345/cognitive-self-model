@@ -1,0 +1,608 @@
+{
+  "alphas": {
+    "1.0": {
+      "baseline_margin": {
+        "max": 1.6648273468017578,
+        "mean": -3.175761726167467,
+        "min": -8.649645805358887,
+        "n": 18,
+        "range": 10.314473152160645,
+        "sample_sd": 2.9484035441639946,
+        "sample_variance": 8.693083459238805
+      },
+      "baseline_margin_predictor": {
+        "eval_mean_abs_error": 0.002772879667704526,
+        "eval_predictions": [
+          0.028850414905226853,
+          0.029484667164562217,
+          0.028970401991609808,
+          0.030313754204086496,
+          0.030695721381225626,
+          0.030181177895045836,
+          0.029032852040862644,
+          0.028830857808870396,
+          0.027934136546586635
+        ],
+        "eval_prompt_ids": [
+          "completion-02",
+          "completion-04",
+          "completion-06",
+          "instruction-02",
+          "instruction-04",
+          "instruction-06",
+          "syntax-02",
+          "syntax-04",
+          "syntax-06"
+        ],
+        "intercept": 0.030164446537690185,
+        "interval_class": "CI_INCLUDES_ZERO",
+        "interval_high": 0.0008100369557046016,
+        "interval_low": -0.00035256643147935237,
+        "interval_mean": 0.00022638484924365572,
+        "interval_width": 0.001162603387183954,
+        "paired_differences": [
+          -8.560032982631374e-05,
+          -0.0005486519295090503,
+          3.4386756556641085e-05,
+          -0.0013777389690333292,
+          0.0017597061461724593,
+          0.0012451626599926692,
+          -9.683680580947762e-05,
+          0.00010515742618277119,
+          0.0010018786884665315
+        ],
+        "slope": 0.0003191170811532233,
+        "train_mean_abs_error": 0.0026429638781354254
+      },
+      "constant": {
+        "eval_mean_abs_error": 0.002999264516948182,
+        "eval_predictions": [
+          0.028936015235053167,
+          0.028936015235053167,
+          0.028936015235053167,
+          0.028936015235053167,
+          0.028936015235053167,
+          0.028936015235053167,
+          0.028936015235053167,
+          0.028936015235053167,
+          0.028936015235053167
+        ],
+        "eval_prompt_ids": [
+          "completion-02",
+          "completion-04",
+          "completion-06",
+          "instruction-02",
+          "instruction-04",
+          "instruction-06",
+          "syntax-02",
+          "syntax-04",
+          "syntax-06"
+        ],
+        "intercept": 0.028936015235053167,
+        "slope": 0.0,
+        "train_mean_abs_error": 0.0027466997688199266
+      },
+      "correlation_all_descriptive": {
+        "baseline_margin": 0.35062809449257876,
+        "pre_dot": 0.1506488352668959
+      },
+      "correlation_evaluation": {
+        "baseline_margin": 0.46246116996295566,
+        "pre_dot": -0.05245642883730313
+      },
+      "correlation_train": {
+        "baseline_margin": 0.3171901835964982,
+        "pre_dot": 0.5290199328984694
+      },
+      "effect": {
+        "max": 0.03369140625,
+        "mean": 0.028635210461086698,
+        "min": 0.024469375610351562,
+        "n": 18,
+        "range": 0.009222030639648438,
+        "sample_sd": 0.003194735307400828,
+        "sample_variance": 1.0206333684353464e-05
+      },
+      "pre_dot": {
+        "max": 1.9588795900344849,
+        "mean": -2.0936705801222057,
+        "min": -5.563745975494385,
+        "n": 18,
+        "range": 7.52262556552887,
+        "sample_sd": 1.8998575552355634,
+        "sample_variance": 3.609458730185652
+      },
+      "pre_dot_predictor": {
+        "eval_mean_abs_error": 0.0033368054305972054,
+        "eval_predictions": [
+          0.03161040135819023,
+          0.031040179335555182,
+          0.03052034007447712,
+          0.02751371980558408,
+          0.027738235642585696,
+          0.027304169669376828,
+          0.02858704049099171,
+          0.025146696015318756,
+          0.03368975434110701
+        ],
+        "eval_prompt_ids": [
+          "completion-02",
+          "completion-04",
+          "completion-06",
+          "instruction-02",
+          "instruction-04",
+          "instruction-06",
+          "syntax-02",
+          "syntax-04",
+          "syntax-06"
+        ],
+        "intercept": 0.031465155702628284,
+        "interval_class": "CI_INCLUDES_ZERO",
+        "interval_high": 0.0012267150105604527,
+        "interval_low": -0.0019019673746615156,
+        "interval_mean": -0.00033754091364902373,
+        "interval_width": 0.0031286823852219683,
+        "paired_differences": [
+          0.0020336920493347274,
+          -0.002104164100502015,
+          -0.0009446213007412232,
+          0.0014222954294690858,
+          -0.0011977795924674704,
+          -0.001631845565676339,
+          0.0003489747440614567,
+          0.0037893192197344105,
+          -0.004753739106053846
+        ],
+        "slope": 0.0011356484848767882,
+        "train_mean_abs_error": 0.0021640593283957944
+      }
+    },
+    "2.0": {
+      "baseline_margin": {
+        "max": 1.6648273468017578,
+        "mean": -3.175761726167467,
+        "min": -8.649645805358887,
+        "n": 18,
+        "range": 10.314473152160645,
+        "sample_sd": 2.9484035441639946,
+        "sample_variance": 8.693083459238805
+      },
+      "baseline_margin_predictor": {
+        "eval_mean_abs_error": 0.005613836079526216,
+        "eval_predictions": [
+          0.05835487101281152,
+          0.05929298522758138,
+          0.05853234234171561,
+          0.060519277015448604,
+          0.06108423966741492,
+          0.0603231851320975,
+          0.0586247113921287,
+          0.05832594436758231,
+          0.0569996156861263
+        ],
+        "eval_prompt_ids": [
+          "completion-02",
+          "completion-04",
+          "completion-06",
+          "instruction-02",
+          "instruction-04",
+          "instruction-06",
+          "syntax-02",
+          "syntax-04",
+          "syntax-06"
+        ],
+        "intercept": 0.060298438000437014,
+        "interval_class": "CI_INCLUDES_ZERO",
+        "interval_high": 0.0011981150582446541,
+        "interval_low": -0.0005214763939005224,
+        "interval_mean": 0.0003348428672631844,
+        "interval_width": 0.0017195914521451767,
+        "paired_differences": [
+          -0.00012661032738488232,
+          -0.0008115038873849761,
+          5.086100151920764e-05,
+          -0.0020377956752522033,
+          0.00260275832721852,
+          0.0018417037919011003,
+          -0.00014323005193229987,
+          0.00015553697261409122,
+          0.0014818656540701025
+        ],
+        "slope": 0.00047200189766673613,
+        "train_mean_abs_error": 0.00534818322195502
+      },
+      "constant": {
+        "eval_mean_abs_error": 0.0059486789467894,
+        "eval_predictions": [
+          0.0584814813401964,
+          0.0584814813401964,
+          0.0584814813401964,
+          0.0584814813401964,
+          0.0584814813401964,
+          0.0584814813401964,
+          0.0584814813401964,
+          0.0584814813401964,
+          0.0584814813401964
+        ],
+        "eval_prompt_ids": [
+          "completion-02",
+          "completion-04",
+          "completion-06",
+          "instruction-02",
+          "instruction-04",
+          "instruction-06",
+          "syntax-02",
+          "syntax-04",
+          "syntax-06"
+        ],
+        "intercept": 0.0584814813401964,
+        "slope": 0.0,
+        "train_mean_abs_error": 0.005501617620020737
+      },
+      "correlation_all_descriptive": {
+        "baseline_margin": 0.28518067198256597,
+        "pre_dot": 0.16550656869292782
+      },
+      "correlation_evaluation": {
+        "baseline_margin": 0.4210560594992011,
+        "pre_dot": -0.02890261949827802
+      },
+      "correlation_train": {
+        "baseline_margin": 0.23784002748828656,
+        "pre_dot": 0.5340292066522973
+      },
+      "effect": {
+        "max": 0.06708049774169922,
+        "mean": 0.05773798624674479,
+        "min": 0.04981803894042969,
+        "n": 18,
+        "range": 0.01726245880126953,
+        "sample_sd": 0.006294624879313493,
+        "sample_variance": 3.9622302371272404e-05
+      },
+      "pre_dot": {
+        "max": 1.9588795900344849,
+        "mean": -2.0936705801222057,
+        "min": -5.563745975494385,
+        "n": 18,
+        "range": 7.52262556552887,
+        "sample_sd": 1.8998575552355634,
+        "sample_variance": 3.609458730185652
+      },
+      "pre_dot_predictor": {
+        "eval_mean_abs_error": 0.006613493834232568,
+        "eval_predictions": [
+          0.06380679961880328,
+          0.06267135633567682,
+          0.061636236726355306,
+          0.05564936380017333,
+          0.05609642650375144,
+          0.055232101251218704,
+          0.0577865923085622,
+          0.050936074665464764,
+          0.06794726996891623
+        ],
+        "eval_prompt_ids": [
+          "completion-02",
+          "completion-04",
+          "completion-06",
+          "instruction-02",
+          "instruction-04",
+          "instruction-06",
+          "syntax-02",
+          "syntax-04",
+          "syntax-06"
+        ],
+        "intercept": 0.06351758209042897,
+        "interval_class": "CI_INCLUDES_ZERO",
+        "interval_high": 0.0024580912785688905,
+        "interval_low": -0.003784344748839971,
+        "interval_mean": -0.000664814887443168,
+        "interval_width": 0.006242436027408862,
+        "paired_differences": [
+          0.004207080369125316,
+          -0.0041898749954804165,
+          -0.001972729052879832,
+          0.00283211754002307,
+          -0.0023850548364449595,
+          -0.0032493800889776964,
+          0.0006948890316341994,
+          0.007545406674731636,
+          -0.009465788628719829
+        ],
+        "slope": 0.002261337501816164,
+        "train_mean_abs_error": 0.004341446408989072
+      }
+    }
+  },
+  "any_contrast_supported": false,
+  "baseline_output_is_baseline_margin": true,
+  "contrasts": [
+    {
+      "alpha": 1.0,
+      "eval_mean_abs_error_constant": 0.002999264516948182,
+      "eval_mean_abs_error_feature": 0.0033368054305972054,
+      "feature": "pre_dot",
+      "interval_high": 0.0012267150105604527,
+      "interval_low": -0.0019019673746615156,
+      "interval_width": 0.0031286823852219683,
+      "label": "INCONCLUSIVE",
+      "mean_paired_difference": -0.00033754091364902373,
+      "result": "INCONCLUSIVE"
+    },
+    {
+      "alpha": 1.0,
+      "eval_mean_abs_error_constant": 0.002999264516948182,
+      "eval_mean_abs_error_feature": 0.002772879667704526,
+      "feature": "baseline_margin",
+      "interval_high": 0.0008100369557046016,
+      "interval_low": -0.00035256643147935237,
+      "interval_width": 0.001162603387183954,
+      "label": "INCONCLUSIVE",
+      "mean_paired_difference": 0.00022638484924365572,
+      "result": "INCONCLUSIVE"
+    },
+    {
+      "alpha": 2.0,
+      "eval_mean_abs_error_constant": 0.0059486789467894,
+      "eval_mean_abs_error_feature": 0.006613493834232568,
+      "feature": "pre_dot",
+      "interval_high": 0.0024580912785688905,
+      "interval_low": -0.003784344748839971,
+      "interval_width": 0.006242436027408862,
+      "label": "INCONCLUSIVE",
+      "mean_paired_difference": -0.000664814887443168,
+      "result": "INCONCLUSIVE"
+    },
+    {
+      "alpha": 2.0,
+      "eval_mean_abs_error_constant": 0.0059486789467894,
+      "eval_mean_abs_error_feature": 0.005613836079526216,
+      "feature": "baseline_margin",
+      "interval_high": 0.0011981150582446541,
+      "interval_low": -0.0005214763939005224,
+      "interval_width": 0.0017195914521451767,
+      "label": "INCONCLUSIVE",
+      "mean_paired_difference": 0.0003348428672631844,
+      "result": "INCONCLUSIVE"
+    }
+  ],
+  "historical_consistency": {
+    "max_abs_difference": 0.0,
+    "n_comparisons": 60,
+    "used_as_fit_input": false
+  },
+  "historical_d2": "INCONCLUSIVE",
+  "historical_diagnostic": {
+    "BELIEF_UPDATE_INFORMATION_FAILURE": "NOT_SUPPORTED",
+    "IDENTIFIABILITY_FAILURE": "INCONCLUSIVE",
+    "INTERVENTION_DESIGN_FAILURE": "INCONCLUSIVE",
+    "REPRESENTATION_BOTTLENECK": "INCONCLUSIVE"
+  },
+  "historical_m23_verdict": "INCONCLUSIVE",
+  "identifiability_statement": "No evidence that the tested pre-intervention measurements identify variation in intervention response.",
+  "intervention_design_failure": "INCONCLUSIVE",
+  "leakage": {
+    "coefficients_written_before_eval_scores": true,
+    "evaluation_not_replication_only": true,
+    "features_exclude_outcome_and_regime": true,
+    "fit_uses_train_ids_only": true,
+    "historical_files_not_used_as_measurements": true,
+    "repeats_share_prompt_seed_alpha": true,
+    "split_written_before_outcomes": true
+  },
+  "leakage_ok": true,
+  "n_evaluation": 9,
+  "n_train": 9,
+  "repeatability": {
+    "between_prompt_variance": {
+      "1.0": 1.0206333684353464e-05,
+      "2.0": 3.9622302371272404e-05
+    },
+    "deterministic_identical": true,
+    "estimates_stochastic_noise": false,
+    "max_abs_repeat_difference": 0.0,
+    "n_repeats": 2,
+    "within_condition_mean_variance": 0.0
+  },
+  "scaling": {
+    "mean_ratio": 2.016878657674608,
+    "median_ratio": 2.0188682903223416,
+    "n_prompts": 18,
+    "ratios": [
+      {
+        "prompt_id": "completion-01",
+        "ratio": 2.0353541602227034
+      },
+      {
+        "prompt_id": "completion-02",
+        "ratio": 2.0213349588540077
+      },
+      {
+        "prompt_id": "completion-03",
+        "ratio": 2.021409141283541
+      },
+      {
+        "prompt_id": "completion-04",
+        "ratio": 2.009859310956021
+      },
+      {
+        "prompt_id": "completion-05",
+        "ratio": 2.016471220123534
+      },
+      {
+        "prompt_id": "completion-06",
+        "ratio": 2.019167454444698
+      },
+      {
+        "prompt_id": "instruction-01",
+        "ratio": 2.0054601623679864
+      },
+      {
+        "prompt_id": "instruction-02",
+        "ratio": 1.9988520701002526
+      },
+      {
+        "prompt_id": "instruction-03",
+        "ratio": 1.9974783339613345
+      },
+      {
+        "prompt_id": "instruction-04",
+        "ratio": 1.991026947463768
+      },
+      {
+        "prompt_id": "instruction-05",
+        "ratio": 2.000407047740885
+      },
+      {
+        "prompt_id": "instruction-06",
+        "ratio": 2.0003248191348
+      },
+      {
+        "prompt_id": "syntax-01",
+        "ratio": 2.046069723883753
+      },
+      {
+        "prompt_id": "syntax-02",
+        "ratio": 2.018569126199986
+      },
+      {
+        "prompt_id": "syntax-03",
+        "ratio": 2.0410982929300805
+      },
+      {
+        "prompt_id": "syntax-04",
+        "ratio": 2.0236956854345167
+      },
+      {
+        "prompt_id": "syntax-05",
+        "ratio": 2.0309471085780664
+      },
+      {
+        "prompt_id": "syntax-06",
+        "ratio": 2.0262902744630074
+      }
+    ],
+    "residual": {
+      "max": 0.0014543533325195312,
+      "mean": 0.00046756532457139756,
+      "min": -0.00030231475830078125,
+      "n": 18,
+      "range": 0.0017566680908203125,
+      "sample_sd": 0.00046046842944423105,
+      "sample_variance": 2.1203117451483681e-07,
+      "values": [
+        {
+          "effect_alpha1": 0.030832290649414062,
+          "effect_alpha2": 0.06275463104248047,
+          "prompt_id": "completion-01",
+          "scaling_residual": 0.0010900497436523438
+        },
+        {
+          "effect_alpha1": 0.03129005432128906,
+          "effect_alpha2": 0.0632476806640625,
+          "prompt_id": "completion-02",
+          "scaling_residual": 0.000667572021484375
+        },
+        {
+          "effect_alpha1": 0.028397560119628906,
+          "effect_alpha2": 0.0574030876159668,
+          "prompt_id": "completion-03",
+          "scaling_residual": 0.0006079673767089844
+        },
+        {
+          "effect_alpha1": 0.025826454162597656,
+          "effect_alpha2": 0.05190753936767578,
+          "prompt_id": "completion-04",
+          "scaling_residual": 0.00025463104248046875
+        },
+        {
+          "effect_alpha1": 0.026633739471435547,
+          "effect_alpha2": 0.05370616912841797,
+          "prompt_id": "completion-05",
+          "scaling_residual": 0.000438690185546875
+        },
+        {
+          "effect_alpha1": 0.02925586700439453,
+          "effect_alpha2": 0.05907249450683594,
+          "prompt_id": "completion-06",
+          "scaling_residual": 0.000560760498046875
+        },
+        {
+          "effect_alpha1": 0.026548385620117188,
+          "effect_alpha2": 0.053241729736328125,
+          "prompt_id": "instruction-01",
+          "scaling_residual": 0.00014495849609375
+        },
+        {
+          "effect_alpha1": 0.024923324584960938,
+          "effect_alpha2": 0.04981803894042969,
+          "prompt_id": "instruction-02",
+          "scaling_residual": -2.86102294921875e-05
+        },
+        {
+          "effect_alpha1": 0.03290271759033203,
+          "effect_alpha2": 0.06572246551513672,
+          "prompt_id": "instruction-03",
+          "scaling_residual": -8.296966552734375e-05
+        },
+        {
+          "effect_alpha1": 0.03369140625,
+          "effect_alpha2": 0.06708049774169922,
+          "prompt_id": "instruction-04",
+          "scaling_residual": -0.00030231475830078125
+        },
+        {
+          "effect_alpha1": 0.03280067443847656,
+          "effect_alpha2": 0.06561470031738281,
+          "prompt_id": "instruction-05",
+          "scaling_residual": 1.33514404296875e-05
+        },
+        {
+          "effect_alpha1": 0.032296180725097656,
+          "effect_alpha2": 0.06460285186767578,
+          "prompt_id": "instruction-06",
+          "scaling_residual": 1.049041748046875e-05
+        },
+        {
+          "effect_alpha1": 0.03156852722167969,
+          "effect_alpha2": 0.0645914077758789,
+          "prompt_id": "syntax-01",
+          "scaling_residual": 0.0014543533325195312
+        },
+        {
+          "effect_alpha1": 0.027219772338867188,
+          "effect_alpha2": 0.05494499206542969,
+          "prompt_id": "syntax-02",
+          "scaling_residual": 0.0005054473876953125
+        },
+        {
+          "effect_alpha1": 0.024469375610351562,
+          "effect_alpha2": 0.049944400787353516,
+          "prompt_id": "syntax-03",
+          "scaling_residual": 0.0010056495666503906
+        },
+        {
+          "effect_alpha1": 0.024932861328125,
+          "effect_alpha2": 0.05045652389526367,
+          "prompt_id": "syntax-04",
+          "scaling_residual": 0.0005908012390136719
+        },
+        {
+          "effect_alpha1": 0.02627086639404297,
+          "effect_alpha2": 0.053354740142822266,
+          "prompt_id": "syntax-05",
+          "scaling_residual": 0.0008130073547363281
+        },
+        {
+          "effect_alpha1": 0.02557373046875,
+          "effect_alpha2": 0.051819801330566406,
+          "prompt_id": "syntax-06",
+          "scaling_residual": 0.0006723403930664062
+        }
+      ]
+    },
+    "sample_sd_ratio": 0.01582312022402805,
+    "undefined_ratios": 0
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "1.0": {
+    "baseline_margin": {
+      "intercept": 0.030164446537690185,
+      "slope": 0.0003191170811532233
+    },
+    "constant": 0.028936015235053167,
+    "pre_dot": {
+      "intercept": 0.031465155702628284,
+      "slope": 0.0011356484848767882
+    },
+    "train_prompt_ids": [
+      "completion-01",
+      "completion-03",
+      "completion-05",
+      "instruction-01",
+      "instruction-03",
+      "instruction-05",
+      "syntax-01",
+      "syntax-03",
+      "syntax-05"
+    ]
+  },
+  "2.0": {
+    "baseline_margin": {
+      "intercept": 0.060298438000437014,
+      "slope": 0.00047200189766673613
+    },
+    "constant": 0.0584814813401964,
+    "pre_dot": {
+      "intercept": 0.06351758209042897,
+      "slope": 0.002261337501816164
+    },
+    "train_prompt_ids": [
+      "completion-01",
+      "completion-03",
+      "completion-05",
+      "instruction-01",
+      "instruction-03",
+      "instruction-05",
+      "syntax-01",
+      "syntax-03",
+      "syntax-05"
+    ]
+  }
+}
