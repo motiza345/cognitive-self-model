@@ -1,0 +1,128 @@
+{
+  "M22.1-D1-L0": {
+    "evidence_ids": [
+      "M22.1-D1-L0:g-completion-01",
+      "M22.1-D1-L0:g-completion-04",
+      "M22.1-D1-L0:g-completion-07",
+      "M22.1-D1-L0:g-completion-10",
+      "M22.1-D1-L0:g-instruction-01",
+      "M22.1-D1-L0:g-instruction-04",
+      "M22.1-D1-L0:g-instruction-07",
+      "M22.1-D1-L0:g-instruction-10",
+      "M22.1-D1-L0:g-syntax-01",
+      "M22.1-D1-L0:g-syntax-04",
+      "M22.1-D1-L0:g-syntax-07",
+      "M22.1-D1-L0:g-syntax-10"
+    ],
+    "model_version": 1,
+    "n_train": 12,
+    "predicted_direction": 1,
+    "predicted_effect": 0.041385809580485024,
+    "uncertainty": 0.1591114502042553
+  },
+  "M22.1-D1-L15": {
+    "evidence_ids": [
+      "M22.1-D1-L15:g-completion-01",
+      "M22.1-D1-L15:g-completion-04",
+      "M22.1-D1-L15:g-completion-07",
+      "M22.1-D1-L15:g-completion-10",
+      "M22.1-D1-L15:g-instruction-01",
+      "M22.1-D1-L15:g-instruction-04",
+      "M22.1-D1-L15:g-instruction-07",
+      "M22.1-D1-L15:g-instruction-10",
+      "M22.1-D1-L15:g-syntax-01",
+      "M22.1-D1-L15:g-syntax-04",
+      "M22.1-D1-L15:g-syntax-07",
+      "M22.1-D1-L15:g-syntax-10"
+    ],
+    "model_version": 1,
+    "n_train": 12,
+    "predicted_direction": -1,
+    "predicted_effect": -0.026706496874491375,
+    "uncertainty": 0.05119368378378787
+  },
+  "M22.1-D1-L8": {
+    "evidence_ids": [
+      "M22.1-D1-L8:g-completion-01",
+      "M22.1-D1-L8:g-completion-04",
+      "M22.1-D1-L8:g-completion-07",
+      "M22.1-D1-L8:g-completion-10",
+      "M22.1-D1-L8:g-instruction-01",
+      "M22.1-D1-L8:g-instruction-04",
+      "M22.1-D1-L8:g-instruction-07",
+      "M22.1-D1-L8:g-instruction-10",
+      "M22.1-D1-L8:g-syntax-01",
+      "M22.1-D1-L8:g-syntax-04",
+      "M22.1-D1-L8:g-syntax-07",
+      "M22.1-D1-L8:g-syntax-10"
+    ],
+    "model_version": 1,
+    "n_train": 12,
+    "predicted_direction": -1,
+    "predicted_effect": -0.008025685946146647,
+    "uncertainty": 0.08130007826084083
+  },
+  "M22.1-D2-L0": {
+    "evidence_ids": [
+      "M22.1-D2-L0:g-completion-01",
+      "M22.1-D2-L0:g-completion-04",
+      "M22.1-D2-L0:g-completion-07",
+      "M22.1-D2-L0:g-completion-10",
+      "M22.1-D2-L0:g-instruction-01",
+      "M22.1-D2-L0:g-instruction-04",
+      "M22.1-D2-L0:g-instruction-07",
+      "M22.1-D2-L0:g-instruction-10",
+      "M22.1-D2-L0:g-syntax-01",
+      "M22.1-D2-L0:g-syntax-04",
+      "M22.1-D2-L0:g-syntax-07",
+      "M22.1-D2-L0:g-syntax-10"
+    ],
+    "model_version": 1,
+    "n_train": 12,
+    "predicted_direction": 1,
+    "predicted_effect": 0.05268343289693197,
+    "uncertainty": 0.21259381497247531
+  },
+  "M22.1-D2-L15": {
+    "evidence_ids": [
+      "M22.1-D2-L15:g-completion-01",
+      "M22.1-D2-L15:g-completion-04",
+      "M22.1-D2-L15:g-completion-07",
+      "M22.1-D2-L15:g-completion-10",
+      "M22.1-D2-L15:g-instruction-01",
+      "M22.1-D2-L15:g-instruction-04",
+      "M22.1-D2-L15:g-instruction-07",
+      "M22.1-D2-L15:g-instruction-10",
+      "M22.1-D2-L15:g-syntax-01",
+      "M22.1-D2-L15:g-syntax-04",
+      "M22.1-D2-L15:g-syntax-07",
+      "M22.1-D2-L15:g-syntax-10"
+    ],
+    "model_version": 1,
+    "n_train": 12,
+    "predicted_direction": 1,
+    "predicted_effect": 0.01736768086751302,
+    "uncertainty": 0.03531903214095229
+  },
+  "M22.1-D2-L8": {
+    "evidence_ids": [
+      "M22.1-D2-L8:g-completion-01",
+      "M22.1-D2-L8:g-completion-04",
+      "M22.1-D2-L8:g-completion-07",
+      "M22.1-D2-L8:g-completion-10",
+      "M22.1-D2-L8:g-instruction-01",
+      "M22.1-D2-L8:g-instruction-04",
+      "M22.1-D2-L8:g-instruction-07",
+      "M22.1-D2-L8:g-instruction-10",
+      "M22.1-D2-L8:g-syntax-01",
+      "M22.1-D2-L8:g-syntax-04",
+      "M22.1-D2-L8:g-syntax-07",
+      "M22.1-D2-L8:g-syntax-10"
+    ],
+    "model_version": 1,
+    "n_train": 12,
+    "predicted_direction": 1,
+    "predicted_effect": 0.0035112698872884116,
+    "uncertainty": 0.07094480467508316
+  }
+}
