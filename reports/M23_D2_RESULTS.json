@@ -1,0 +1,68 @@
+{
+  "effect_sample_variance": 1.2905464397287384e-05,
+  "historical_m23_verdict": "INCONCLUSIVE",
+  "interval_class": "CI_INCLUDES_ZERO",
+  "interval_high": 0.0008342530992296003,
+  "interval_low": -0.0008342530992296003,
+  "interval_width": 0.0016685061984592006,
+  "leakage": {
+    "evaluation_prompt_ids_match_manifest": true,
+    "no_outcome_field_in_prediction_rows": true,
+    "prediction_A_constant_across_regimes": true,
+    "prediction_B_constant_within_regime": true,
+    "predictions_before_outcomes": true,
+    "replication_prompts_absent": true
+  },
+  "leakage_note": null,
+  "leakage_ok": true,
+  "mean_abs_error_A": 0.003130753835042318,
+  "mean_abs_error_B": 0.003130753835042318,
+  "mean_paired_difference": 0.0,
+  "n": 6,
+  "paired_differences": [
+    0.0007721583048502616,
+    -0.0007721583048502616,
+    -0.0006722609202067069,
+    0.0006722609202067069,
+    -0.001444419225056965,
+    0.001444419225056965
+  ],
+  "per_regime": {
+    "completion": {
+      "effects": [
+        0.030832290649414062,
+        0.025826454162597656
+      ],
+      "mean_observed": 0.02832937240600586,
+      "n": 2,
+      "prediction_B": 0.028961896896362305
+    },
+    "instruction": {
+      "effects": [
+        0.026548385620117188,
+        0.03369140625
+      ],
+      "mean_observed": 0.030119895935058594,
+      "n": 2,
+      "prediction_B": 0.02886199951171875
+    },
+    "syntax": {
+      "effects": [
+        0.03156852722167969,
+        0.024932861328125
+      ],
+      "mean_observed": 0.028250694274902344,
+      "n": 2,
+      "prediction_B": 0.026745319366455078
+    }
+  },
+  "per_regime_n": {
+    "completion": 2,
+    "instruction": 2,
+    "syntax": 2
+  },
+  "prediction_A_variance": 0.0,
+  "prediction_B_sample_variance": 1.2538040361202245e-06,
+  "result": "INCONCLUSIVE",
+  "small_sample": true
+}

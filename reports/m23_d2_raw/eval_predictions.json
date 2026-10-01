@@ -1,0 +1,64 @@
+{
+  "rows": [
+    {
+      "alpha": 1.0,
+      "episode_id": "d2-eval-00",
+      "intervention_id": "M22.1-D1-L23",
+      "prediction_A": 0.028189738591512043,
+      "prediction_B": 0.028961896896362305,
+      "prompt_id": "completion-01",
+      "regime": "completion",
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "episode_id": "d2-eval-01",
+      "intervention_id": "M22.1-D1-L23",
+      "prediction_A": 0.028189738591512043,
+      "prediction_B": 0.028961896896362305,
+      "prompt_id": "completion-04",
+      "regime": "completion",
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "episode_id": "d2-eval-02",
+      "intervention_id": "M22.1-D1-L23",
+      "prediction_A": 0.028189738591512043,
+      "prediction_B": 0.02886199951171875,
+      "prompt_id": "instruction-01",
+      "regime": "instruction",
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "episode_id": "d2-eval-03",
+      "intervention_id": "M22.1-D1-L23",
+      "prediction_A": 0.028189738591512043,
+      "prediction_B": 0.02886199951171875,
+      "prompt_id": "instruction-04",
+      "regime": "instruction",
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "episode_id": "d2-eval-04",
+      "intervention_id": "M22.1-D1-L23",
+      "prediction_A": 0.028189738591512043,
+      "prediction_B": 0.026745319366455078,
+      "prompt_id": "syntax-01",
+      "regime": "syntax",
+      "seed": 22101
+    },
+    {
+      "alpha": 1.0,
+      "episode_id": "d2-eval-05",
+      "intervention_id": "M22.1-D1-L23",
+      "prediction_A": 0.028189738591512043,
+      "prediction_B": 0.026745319366455078,
+      "prompt_id": "syntax-04",
+      "regime": "syntax",
+      "seed": 22101
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "observed_effect": 0.030832290649414062,
+      "prompt_id": "completion-01"
+    },
+    {
+      "observed_effect": 0.025826454162597656,
+      "prompt_id": "completion-04"
+    },
+    {
+      "observed_effect": 0.026548385620117188,
+      "prompt_id": "instruction-01"
+    },
+    {
+      "observed_effect": 0.03369140625,
+      "prompt_id": "instruction-04"
+    },
+    {
+      "observed_effect": 0.03156852722167969,
+      "prompt_id": "syntax-01"
+    },
+    {
+      "observed_effect": 0.024932861328125,
+      "prompt_id": "syntax-04"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "milestone": "M23-D2",
+  "frozen_before_evaluation_forward": true,
+  "three_way_split": false,
+  "three_way_reason": "Each regime has two prompts in the untouched pool. A calibration partition would empty a regime or leave a singleton. Both predictors are means and do not need a calibration split.",
+  "prompt_manifest_sha256": "fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db",
+  "intervention_id": "M22.1-D1-L23",
+  "alpha": 1.0,
+  "direction_seed": 22101,
+  "excluded_because_regime_errors_were_already_inspected": {
+    "role": "replication",
+    "prompt_ids": [
+      "completion-03",
+      "completion-06",
+      "instruction-03",
+      "instruction-06",
+      "syntax-03",
+      "syntax-06"
+    ]
+  },
+  "train": {
+    "source": "reports/m23_raw/validation_outcomes.json d1",
+    "role": "validation",
+    "prompt_ids": [
+      "completion-02",
+      "completion-05",
+      "instruction-02",
+      "instruction-05",
+      "syntax-02",
+      "syntax-05"
+    ],
+    "per_regime_n": {
+      "completion": 2,
+      "instruction": 2,
+      "syntax": 2
+    },
+    "prediction_A": 0.028189738591512043,
+    "prediction_B": {
+      "completion": 0.028961896896362305,
+      "instruction": 0.02886199951171875,
+      "syntax": 0.026745319366455078
+    },
+    "limitation": "These train regime means were already printed in reports/M23_DIAGNOSTIC_REPORT.md. Evaluation outcomes were not."
+  },
+  "evaluation": {
+    "role": "discovery",
+    "reason": "Per-prompt discovery effects were not saved and were not used to choose or inspect the regime predictor.",
+    "prompt_ids": [
+      "completion-01",
+      "completion-04",
+      "instruction-01",
+      "instruction-04",
+      "syntax-01",
+      "syntax-04"
+    ],
+    "per_regime_n": {
+      "completion": 2,
+      "instruction": 2,
+      "syntax": 2
+    }
+  }
+}
