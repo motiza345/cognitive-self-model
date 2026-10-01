@@ -1,0 +1,78 @@
+{
+  "milestone": "M23",
+  "frozen_before_scored_run": true,
+  "source": "M22.1 frozen_prompts and assign_role(index % 3)",
+  "source_commit": "aba115119f81c1737e5a964458b701ddd82be5eb",
+  "prompt_manifest_sha256": "fad6049b26ee8444ef39360b27b4cb328ed0691279b54a9b54e8c6227dda94db",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "hook_name": "blocks.23.hook_resid_post",
+  "anchor_alpha": 1.0,
+  "partitions": {
+    "calibration": {
+      "role": "discovery",
+      "directions": ["M22.1-D1-L23", "M22.1-D2-L23"],
+      "alphas": [1.0],
+      "prompt_ids": [
+        "completion-01",
+        "completion-04",
+        "instruction-01",
+        "instruction-04",
+        "syntax-01",
+        "syntax-04"
+      ]
+    },
+    "update": {
+      "role": "validation",
+      "direction": "M22.1-D1-L23",
+      "alphas": [1.0],
+      "prompt_ids": [
+        "completion-02",
+        "completion-05",
+        "instruction-02",
+        "instruction-05",
+        "syntax-02",
+        "syntax-05"
+      ]
+    },
+    "shuffle_evidence": {
+      "role": "validation",
+      "direction": "M22.1-D2-L23",
+      "alphas": [1.0],
+      "prompt_ids": [
+        "completion-02",
+        "completion-05",
+        "instruction-02",
+        "instruction-05",
+        "syntax-02",
+        "syntax-05"
+      ]
+    },
+    "eval_context": {
+      "role": "replication",
+      "direction": "M22.1-D1-L23",
+      "alphas": [1.0],
+      "prompt_ids": [
+        "completion-03",
+        "completion-06",
+        "instruction-03",
+        "instruction-06",
+        "syntax-03",
+        "syntax-06"
+      ]
+    },
+    "eval_magnitude": {
+      "role": "replication",
+      "direction": "M22.1-D1-L23",
+      "alphas": [2.0],
+      "prompt_ids": [
+        "completion-03",
+        "completion-06",
+        "instruction-03",
+        "instruction-06",
+        "syntax-03",
+        "syntax-06"
+      ]
+    }
+  }
+}
