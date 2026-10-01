@@ -1,0 +1,14 @@
+{"path": "reports/feasibility_gate_raw/catalog_freeze.json", "utc": "2026-10-01T21:05:24Z", "sha256": "72d87ae8b6b84dfc2943742d5150519f46cba976e80ca41804366b99d15a08ed"}
+{"path": "reports/feasibility_gate_raw/train_derivatives.json", "utc": "2026-10-01T21:05:58Z", "sha256": "c87081ac94f4d0f21c3d71864a63efc517e8075a349588c048d86a64738178cd"}
+{"path": "reports/feasibility_gate_raw/train_outcomes.json", "utc": "2026-10-01T21:06:54Z", "sha256": "55cc22d3eab1b2ca498d28e043cf9161eefcedd5a06b4df039f136f4bb63cfce"}
+{"path": "reports/feasibility_gate_raw/train_means.json", "utc": "2026-10-01T21:06:54Z", "sha256": "5f3a62ef40865e6acb6d3ce5a39a6e7286526d9edc269c43b84abbe4745b7766"}
+{"path": "reports/feasibility_gate_raw/validation_derivatives.json", "utc": "2026-10-01T21:07:22Z", "sha256": "2f872f78cc75c5e0bedfede55ae7436e99290a0c44fc61cba120b547e33b53d0"}
+{"path": "reports/feasibility_gate_raw/validation_predictions.json", "utc": "2026-10-01T21:07:22Z", "sha256": "1496009575b058b8d2bd449f009365fbedc3147add885f0f49385cfcd216868e"}
+{"path": "reports/feasibility_gate_raw/evaluation_derivatives.json", "utc": "2026-10-01T21:07:50Z", "sha256": "1a2512d312f3db3af6d45c0e8ca3bac7c9e1f2e57fabfb530383153cd7846b86"}
+{"path": "reports/feasibility_gate_raw/evaluation_predictions.json", "utc": "2026-10-01T21:07:50Z", "sha256": "ec6c3bb62aae73b2fb03d126593f8752ea8830288675c1d685d8afd6b49d6dfe"}
+{"path": "reports/feasibility_gate_raw/replication_derivatives.json", "utc": "2026-10-01T21:08:17Z", "sha256": "945ebe7ffb4ac93815479b1a92b20999d10cd66ea7668c19906686eb8f14f1e6"}
+{"path": "reports/feasibility_gate_raw/replication_predictions.json", "utc": "2026-10-01T21:08:17Z", "sha256": "373d6a5cf4bf575d8e6de7c70423fc643a4d5f2a582bff4a256c9d4df0649321"}
+{"path": "reports/feasibility_gate_raw/validation_outcomes.json", "utc": "2026-10-01T21:09:13Z", "sha256": "4404913227ec8ae2fa2d419c89251a428d7e15ab977ace13e5ce4bfd2abc6c1a"}
+{"path": "reports/feasibility_gate_raw/evaluation_outcomes.json", "utc": "2026-10-01T21:10:08Z", "sha256": "bd33e978108839690587971de619d55b53d5abbfedcf502223fef232cb2bbb7d"}
+{"path": "reports/feasibility_gate_raw/replication_outcomes.json", "utc": "2026-10-01T21:11:03Z", "sha256": "443d0625bfc9905f8dae86e7d9fb6586647607d9e1df99dac821503f0beead64"}
+{"path": "reports/PROJECT_FEASIBILITY_GATE_RESULTS.json", "utc": "2026-10-01T21:11:03Z", "sha256": "e3d26ca90c0f1d095f721167943de09ed97f7e615d8dc56d826dc608d22a410d"}

@@ -1,0 +1,293 @@
+{
+  "prompts": [
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "f-completion-01",
+      "text": "The boiling point of ethanol is"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "f-completion-02",
+      "text": "A standard chessboard has"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "f-completion-03",
+      "text": "The painter of the Mona Lisa is"
+    },
+    {
+      "family": "completion",
+      "partition": "replication",
+      "prompt_id": "f-completion-04",
+      "text": "Mercury is a metal that is"
+    },
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "f-completion-05",
+      "text": "The Nile is a"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "f-completion-06",
+      "text": "A pentagon has five"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "f-completion-07",
+      "text": "The currency of Canada is the"
+    },
+    {
+      "family": "completion",
+      "partition": "replication",
+      "prompt_id": "f-completion-08",
+      "text": "Glass is usually melted in a"
+    },
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "f-completion-09",
+      "text": "The slowest mammal is the"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "f-completion-10",
+      "text": "An hour has sixty"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "f-completion-11",
+      "text": "The chemical symbol for silver is"
+    },
+    {
+      "family": "completion",
+      "partition": "replication",
+      "prompt_id": "f-completion-12",
+      "text": "Cotton grows on a"
+    },
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "f-completion-13",
+      "text": "The inventor of the telephone is"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "f-completion-14",
+      "text": "A leap year has"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "f-completion-15",
+      "text": "The largest bone in the body is the"
+    },
+    {
+      "family": "completion",
+      "partition": "replication",
+      "prompt_id": "f-completion-16",
+      "text": "Honey is made by a"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "f-syntax-01",
+      "text": "After the bridge closed,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "f-syntax-02",
+      "text": "If the ink spills,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "f-syntax-03",
+      "text": "Before the curtain fell,"
+    },
+    {
+      "family": "syntax",
+      "partition": "replication",
+      "prompt_id": "f-syntax-04",
+      "text": "Although the well was dry,"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "f-syntax-05",
+      "text": "Because the rope had snapped,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "f-syntax-06",
+      "text": "Unless the gate is shut,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "f-syntax-07",
+      "text": "While the dough was rising,"
+    },
+    {
+      "family": "syntax",
+      "partition": "replication",
+      "prompt_id": "f-syntax-08",
+      "text": "As soon as the whistle blew,"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "f-syntax-09",
+      "text": "Even though the lens was cracked,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "f-syntax-10",
+      "text": "Whenever the tide turns,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "f-syntax-11",
+      "text": "Since the harbor was empty,"
+    },
+    {
+      "family": "syntax",
+      "partition": "replication",
+      "prompt_id": "f-syntax-12",
+      "text": "Until the frost ended,"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "f-syntax-13",
+      "text": "Once the letter was sealed,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "f-syntax-14",
+      "text": "Provided the axle is greased,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "f-syntax-15",
+      "text": "Whether or not the lamp works,"
+    },
+    {
+      "family": "syntax",
+      "partition": "replication",
+      "prompt_id": "f-syntax-16",
+      "text": "Whereas the second sample passed,"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "f-instruction-01",
+      "text": "Reply with one word. A gas used in balloons:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "f-instruction-02",
+      "text": "Reply with one word. The meal eaten at dawn:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "f-instruction-03",
+      "text": "Name a tool used for digging:"
+    },
+    {
+      "family": "instruction",
+      "partition": "replication",
+      "prompt_id": "f-instruction-04",
+      "text": "Name a month with thirty days:"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "f-instruction-05",
+      "text": "Reply with one word. Opposite of narrow:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "f-instruction-06",
+      "text": "Name a kind of grain:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "f-instruction-07",
+      "text": "Reply with one word. A baked fruit dessert:"
+    },
+    {
+      "family": "instruction",
+      "partition": "replication",
+      "prompt_id": "f-instruction-08",
+      "text": "Name a percussion instrument:"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "f-instruction-09",
+      "text": "Reply with one word. The number of sides on a pentagon:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "f-instruction-10",
+      "text": "Name a sea:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "f-instruction-11",
+      "text": "Reply with one word. A fish that can shock:"
+    },
+    {
+      "family": "instruction",
+      "partition": "replication",
+      "prompt_id": "f-instruction-12",
+      "text": "Name a piece of jewelry:"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "f-instruction-13",
+      "text": "Reply with one word. A stone used in pencils:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "f-instruction-14",
+      "text": "Name a unit of length:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "f-instruction-15",
+      "text": "Reply with one word. The color of emeralds:"
+    },
+    {
+      "family": "instruction",
+      "partition": "replication",
+      "prompt_id": "f-instruction-16",
+      "text": "Name a room in a house:"
+    }
+  ],
+  "source": "reports/PROJECT_FEASIBILITY_GATE_CATALOG.md"
+}
