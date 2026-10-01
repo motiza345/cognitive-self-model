@@ -1,0 +1,10 @@
+{
+  "alpha": 1.0,
+  "b": 0.017036139867335046,
+  "fit_source": "train outcomes only",
+  "intervention_id": "M22.1-D1-L15",
+  "m": 0.009110331535339355,
+  "measurement": "pre_dot",
+  "n_train": 12,
+  "pre_dot_mean": 0.5010738844672838
+}

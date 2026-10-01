@@ -1,0 +1,134 @@
+[
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": -0.25899428129196167,
+    "prompt_id": "s-completion-01"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.8143934607505798,
+    "prompt_id": "s-completion-04"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 2.4336299896240234,
+    "prompt_id": "s-completion-07"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 1.097322702407837,
+    "prompt_id": "s-completion-10"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.15085643529891968,
+    "prompt_id": "s-instruction-01"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.29185861349105835,
+    "prompt_id": "s-instruction-04"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.316786527633667,
+    "prompt_id": "s-instruction-07"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.21247416734695435,
+    "prompt_id": "s-instruction-10"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.15502363443374634,
+    "prompt_id": "s-syntax-01"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.38023388385772705,
+    "prompt_id": "s-syntax-04"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.07039877772331238,
+    "prompt_id": "s-syntax-07"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "train",
+    "pre_dot": 0.34890270233154297,
+    "prompt_id": "s-syntax-10"
+  }
+]

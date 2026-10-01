@@ -1,0 +1,90 @@
+{
+  "alpha": 1.0,
+  "audit_max_abs_diff_unintervened_vs_pre_add": 0.0,
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 23001,
+  "cell": "M22.1-D1-L15",
+  "device": "cpu",
+  "direction_id": "D1",
+  "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+  "evaluation": {
+    "baseline_mae": 0.060514469941457115,
+    "candidate_mae": 0.05791568839203672,
+    "class": "CI_INCLUDES_ZERO",
+    "high": 0.006615873616569495,
+    "low": -0.0019827815526613146,
+    "n": 12,
+    "paired_mean": 0.002598781549420394,
+    "secondary_not_used_for_verdict": false
+  },
+  "hook": "blocks.15.hook_resid_post",
+  "interpretation": "The interval includes zero. This test does not show that pre_dot reduces held-out absolute error relative to the train mean. The measurement is not declared useless. The uncertainty is the reported interval.",
+  "leakage": {
+    "alpha": "1.0",
+    "cell": "M22.1-D1-L15",
+    "coefficients_stamp": "2026-10-01T20:45:52Z",
+    "first_heldout_outcome_mtime": 1790887584.5309796,
+    "fit_inputs": "train only",
+    "heldout_predictions_mtime": 1790887568.7509794,
+    "leakage_ok": true,
+    "measurement": "pre_dot",
+    "prediction_files_lack_observed_effect": true
+  },
+  "measurement": "pre_dot",
+  "per_family": [
+    {
+      "baseline_mae": 0.060830891132354736,
+      "candidate_mae": 0.06431934165891724,
+      "class": "CI_INCLUDES_ZERO",
+      "family": "completion",
+      "high": 0.00394347403727579,
+      "low": -0.011496141779487884,
+      "n": 4,
+      "paired_mean": -0.003488450526562502,
+      "secondary_not_used_for_verdict": true
+    },
+    {
+      "baseline_mae": 0.08645355701446533,
+      "candidate_mae": 0.0845682517755497,
+      "class": "CI_INCLUDES_ZERO",
+      "family": "instruction",
+      "high": 0.005713687554006193,
+      "low": -0.0010384181118308355,
+      "n": 4,
+      "paired_mean": 0.001885305238915621,
+      "secondary_not_used_for_verdict": true
+    },
+    {
+      "baseline_mae": 0.03425896167755127,
+      "candidate_mae": 0.024859471741643206,
+      "class": "CI_POSITIVE",
+      "family": "syntax",
+      "high": 0.013112518350367183,
+      "low": 0.005883272447132565,
+      "n": 4,
+      "paired_mean": 0.009399489935908063,
+      "secondary_not_used_for_verdict": true
+    }
+  ],
+  "train": {
+    "b": 0.017036139867335046,
+    "m": 0.009110331535339355,
+    "n": 12,
+    "pre_dot_max": 2.4336299896240234,
+    "pre_dot_mean": 0.5010738844672838,
+    "pre_dot_min": -0.25899428129196167,
+    "pre_dot_sample_sd": 0.700183329331844,
+    "pre_dot_sum_of_squares": 5.392823641416481
+  },
+  "validation": {
+    "baseline_mae": 0.03475358088811239,
+    "candidate_mae": 0.031393316918930235,
+    "class": "CI_POSITIVE",
+    "high": 0.006428762181473895,
+    "low": 0.00047484457375104714,
+    "n": 12,
+    "paired_mean": 0.003360263969182155,
+    "secondary_not_used_for_verdict": true
+  },
+  "verdict": "INCONCLUSIVE"
+}

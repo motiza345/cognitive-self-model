@@ -1,0 +1,134 @@
+[
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.3477841019630432,
+    "prompt_id": "s-completion-02"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": -0.02552849054336548,
+    "prompt_id": "s-completion-05"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.004069000482559204,
+    "prompt_id": "s-completion-08"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "completion",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.5489888787269592,
+    "prompt_id": "s-completion-11"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.6461681127548218,
+    "prompt_id": "s-instruction-02"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.26610568165779114,
+    "prompt_id": "s-instruction-05"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.6647000908851624,
+    "prompt_id": "s-instruction-08"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "instruction",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": -0.037145793437957764,
+    "prompt_id": "s-instruction-11"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": -0.3222317099571228,
+    "prompt_id": "s-syntax-02"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.5067377090454102,
+    "prompt_id": "s-syntax-05"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.2409837245941162,
+    "prompt_id": "s-syntax-08"
+  },
+  {
+    "alpha": 1.0,
+    "direction_id": "D1",
+    "family": "syntax",
+    "intervention_id": "M22.1-D1-L15",
+    "layer": 15,
+    "measurement": "pre_dot",
+    "partition": "validation",
+    "pre_dot": 0.41773971915245056,
+    "prompt_id": "s-syntax-11"
+  }
+]
