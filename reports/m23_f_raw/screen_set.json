@@ -1,0 +1,15 @@
+{
+  "alphas": [
+    1.0,
+    2.0
+  ],
+  "prompt_ids": [
+    "completion-01",
+    "completion-04",
+    "instruction-01",
+    "instruction-04",
+    "syntax-01",
+    "syntax-04"
+  ],
+  "repeats": 2
+}

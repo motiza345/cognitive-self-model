@@ -1,0 +1,1851 @@
+{
+  "audit_status": "NO_SUITABLE_EXISTING_INTERVENTION",
+  "candidates": [
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": -0.1304302215576172,
+            "pre_dot": -0.04123169928789139,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": -0.17861461639404297,
+            "pre_dot": 0.040462419390678406,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": -0.0048580169677734375,
+            "pre_dot": 0.008781775832176208,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.03859901428222656,
+            "pre_dot": 0.010288387537002563,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.095794677734375,
+            "pre_dot": -0.11956635117530823,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.014954090118408203,
+            "pre_dot": 0.07696749269962311,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.095794677734375,
+        "mean": -0.027425845464070637,
+        "min": -0.17861461639404297,
+        "range": 0.27440929412841797,
+        "same_sign": false,
+        "sample_sd": 0.10518164403979115,
+        "sample_variance": 0.011063178242913332,
+        "sign_disagreement": true,
+        "signs": [
+          -1,
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 3.888396223966191,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 1.6772004738019684
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.1000315017806517
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 6.606007067137809
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 4.149182191036221
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.5339976903472445
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 6.26395841969325
+          }
+        ],
+        "sample_sd_ratio": 2.145634832597728,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": -0.1304302215576172,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": -0.17861461639404297,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": -0.0048580169677734375,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.03859901428222656,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.095794677734375,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.014954090118408203,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D1",
+      "inspection": {
+        "discovery": true,
+        "replication": false,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D1-L0",
+      "layer": 0,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.0664968490600586,
+            "pre_dot": -0.2163277566432953,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": -0.045688629150390625,
+            "pre_dot": 0.2132873237133026,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.03299236297607422,
+            "pre_dot": 0.06990891695022583,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": -0.06824111938476562,
+            "pre_dot": 0.32097476720809937,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.01720714569091797,
+            "pre_dot": -0.15907561779022217,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.035809993743896484,
+            "pre_dot": 0.223391592502594,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.0664968490600586,
+        "mean": 0.006429433822631836,
+        "min": -0.06824111938476562,
+        "range": 0.13473796844482422,
+        "same_sign": false,
+        "sample_sd": 0.05212493445037178,
+        "sample_variance": 0.002717008791455555,
+        "sign_disagreement": true,
+        "signs": [
+          -1,
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.2503013983994893,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.0050267471711103
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.750396593470819
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.1858939153056802
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 2.5503381966571634
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.08762400931109
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 1.9225289284810716
+          }
+        ],
+        "sample_sd_ratio": 0.32812314389962444,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.0664968490600586,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": -0.045688629150390625,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.03299236297607422,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": -0.06824111938476562,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.01720714569091797,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.035809993743896484,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D1",
+      "inspection": {
+        "discovery": true,
+        "replication": false,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D1-L8",
+      "layer": 8,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": -0.051438331604003906,
+            "pre_dot": 0.46378982067108154,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.025490760803222656,
+            "pre_dot": 0.6732167601585388,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.045813560485839844,
+            "pre_dot": 0.4044450521469116,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": -0.027204513549804688,
+            "pre_dot": 0.5021547079086304,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.019486427307128906,
+            "pre_dot": -0.4371931552886963,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.05189228057861328,
+            "pre_dot": 0.1345103681087494,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.05189228057861328,
+        "mean": 0.01067336400349935,
+        "min": -0.051438331604003906,
+        "range": 0.10333061218261719,
+        "same_sign": false,
+        "sample_sd": 0.04128838617417775,
+        "sample_variance": 0.0017047308328680326,
+        "sign_disagreement": true,
+        "signs": [
+          -1,
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.044519941637627,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 1.6550605335854793
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.370833177447716
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 1.9075334623951372
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.8832643903807054
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.424754074291587
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 2.025674011725139
+          }
+        ],
+        "sample_sd_ratio": 0.29928607431719323,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": -0.051438331604003906,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.025490760803222656,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.045813560485839844,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": -0.027204513549804688,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.019486427307128906,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.05189228057861328,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D1",
+      "inspection": {
+        "discovery": true,
+        "replication": false,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D1-L15",
+      "layer": 15,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.030832290649414062,
+            "pre_dot": -2.3416569232940674,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.025826454162597656,
+            "pre_dot": -0.37421470880508423,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.026548385620117188,
+            "pre_dot": -0.9869740009307861,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.03369140625,
+            "pre_dot": -3.281754970550537,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.03156852722167969,
+            "pre_dot": -0.20727872848510742,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.024932861328125,
+            "pre_dot": -5.563745975494385,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.03369140625,
+        "mean": 0.028899987538655598,
+        "min": 0.024932861328125,
+        "range": 0.008758544921875,
+        "same_sign": true,
+        "sample_sd": 0.003592417625678755,
+        "sample_variance": 1.2905464397287384e-05,
+        "sign_disagreement": false,
+        "signs": [
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.0185776650547917,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.0353541602227034
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.009859310956021
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.0054601623679864
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.991026947463768
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.046069723883753
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 2.0236956854345167
+          }
+        ],
+        "sample_sd_ratio": 0.020349834574716102,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.030832290649414062,
+          "equal_to_d1_l23": true,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.025826454162597656,
+          "equal_to_d1_l23": true,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.026548385620117188,
+          "equal_to_d1_l23": true,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.03369140625,
+          "equal_to_d1_l23": true,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.03156852722167969,
+          "equal_to_d1_l23": true,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.024932861328125,
+          "equal_to_d1_l23": true,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": false,
+      "direction_id": "D1",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D1-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": false
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.06034660339355469,
+            "pre_dot": -0.3834506869316101,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.1063852310180664,
+            "pre_dot": -0.1564849317073822,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": -0.004055976867675781,
+            "pre_dot": -0.3750585913658142,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.0065441131591796875,
+            "pre_dot": -0.4085148572921753,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": -0.008940696716308594,
+            "pre_dot": -0.3365784287452698,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.16130828857421875,
+            "pre_dot": -0.2975824475288391,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.16130828857421875,
+        "mean": 0.05359792709350586,
+        "min": -0.008940696716308594,
+        "range": 0.17024898529052734,
+        "same_sign": false,
+        "sample_sd": 0.06911248740059851,
+        "sample_variance": 0.004776535914697888,
+        "sign_disagreement": true,
+        "signs": [
+          -1,
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": -1.056338753828091,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.509813837352634
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 1.033867309709286
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": -6.6451916294380435
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 0.10375983678227922
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": -4.991466666666667
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 1.6511847892919642
+          }
+        ],
+        "sample_sd_ratio": 3.8074512819925586,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.06034660339355469,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.1063852310180664,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": -0.004055976867675781,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.0065441131591796875,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": -0.008940696716308594,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.16130828857421875,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D2",
+      "inspection": {
+        "discovery": true,
+        "replication": false,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D2-L0",
+      "layer": 0,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.053829193115234375,
+            "pre_dot": -1.1426784992218018,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.036337852478027344,
+            "pre_dot": -0.43733471632003784,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.025983810424804688,
+            "pre_dot": -1.084326982498169,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": -0.1303396224975586,
+            "pre_dot": -1.4549615383148193,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.007899284362792969,
+            "pre_dot": -0.6930983066558838,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.044037818908691406,
+            "pre_dot": -0.3753683865070343,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.053829193115234375,
+        "mean": 0.006291389465332031,
+        "min": -0.1303396224975586,
+        "range": 0.18416881561279297,
+        "same_sign": false,
+        "sample_sd": 0.0687689404461089,
+        "sample_variance": 0.0047291671700804725,
+        "sign_disagreement": true,
+        "signs": [
+          -1,
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 1.9682773871895431,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.0971228119906455
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 1.218145552843608
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.7123981501871834
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.9809469455846522
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 1.9300977906555596
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 1.870953071875609
+          }
+        ],
+        "sample_sd_ratio": 0.4783523479545836,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.053829193115234375,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.036337852478027344,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.025983810424804688,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": -0.1303396224975586,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.007899284362792969,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.044037818908691406,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D2",
+      "inspection": {
+        "discovery": true,
+        "replication": false,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D2-L8",
+      "layer": 8,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.010921478271484375,
+            "pre_dot": -2.2037384510040283,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.048343658447265625,
+            "pre_dot": -0.025064915418624878,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.11125373840332031,
+            "pre_dot": -1.6305633783340454,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.05859375,
+            "pre_dot": -1.9906508922576904,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.049729347229003906,
+            "pre_dot": -1.0096802711486816,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.0742959976196289,
+            "pre_dot": -0.23357561230659485,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.11125373840332031,
+        "mean": 0.05885632832845052,
+        "min": 0.010921478271484375,
+        "range": 0.10033226013183594,
+        "same_sign": true,
+        "sample_sd": 0.033092321706878924,
+        "sample_variance": 0.00109510175595157,
+        "sign_disagreement": false,
+        "signs": [
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.198938150846542,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 3.084395738735592
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.0309713564270497
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.0253133089886677
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.9532063802083333
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.118688273084668
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 1.98105384763494
+          }
+        ],
+        "sample_sd_ratio": 0.4374222868706662,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.010921478271484375,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.048343658447265625,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.11125373840332031,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.05859375,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.049729347229003906,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.0742959976196289,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D2",
+      "inspection": {
+        "discovery": true,
+        "replication": false,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D2-L15",
+      "layer": 15,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.11896085739135742,
+            "pre_dot": 1.0367562770843506,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.09110736846923828,
+            "pre_dot": -5.180248260498047,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.0950002670288086,
+            "pre_dot": -1.6270347833633423,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.1177053451538086,
+            "pre_dot": -1.9442055225372314,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.11816692352294922,
+            "pre_dot": 4.2068915367126465,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.09888839721679688,
+            "pre_dot": -1.3877334594726562,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.11896085739135742,
+        "mean": 0.10663819313049316,
+        "min": 0.09110736846923828,
+        "range": 0.02785348892211914,
+        "same_sign": true,
+        "sample_sd": 0.012991910622891104,
+        "sample_variance": 0.0001687897416331907,
+        "sign_disagreement": false,
+        "signs": [
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.004473347247195,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.008185057660164
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.003579914793841
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.0014656427244892
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.9974478014632604
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.010322257822399
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 2.0058394090190177
+          }
+        ],
+        "sample_sd_ratio": 0.0046702350150218674,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.11896085739135742,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.09110736846923828,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.0950002670288086,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.1177053451538086,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.11816692352294922,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.09888839721679688,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D2",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D2-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.04251861572265625,
+            "pre_dot": 0.6763198375701904,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.03329658508300781,
+            "pre_dot": 3.031425714492798,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.033400535583496094,
+            "pre_dot": -0.8554530143737793,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.04098320007324219,
+            "pre_dot": 0.20630806684494019,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.038313865661621094,
+            "pre_dot": -1.0525004863739014,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.03486442565917969,
+            "pre_dot": -0.6321415305137634,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.04251861572265625,
+        "mean": 0.03722953796386719,
+        "min": 0.03329658508300781,
+        "range": 0.009222030639648438,
+        "same_sign": true,
+        "sample_sd": 0.003973996052633238,
+        "sample_variance": 1.5792644626344553e-05,
+        "sign_disagreement": false,
+        "signs": [
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.0134667465016,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.02453795083438
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.006157988199576
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.0041686891471318
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.9913901428770884
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.038406969508401
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 2.016138738443022
+          }
+        ],
+        "sample_sd_ratio": 0.0166070712410126,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.04251861572265625,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.03329658508300781,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.033400535583496094,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.04098320007324219,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.038313865661621094,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.03486442565917969,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D3",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D3-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": -0.031156539916992188,
+            "pre_dot": -0.9900994300842285,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": -0.023583412170410156,
+            "pre_dot": 1.4277622699737549,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": -0.02420806884765625,
+            "pre_dot": 3.7941904067993164,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": -0.031579017639160156,
+            "pre_dot": 2.6350021362304688,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": -0.02914142608642578,
+            "pre_dot": -0.5587093234062195,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": -0.02682018280029297,
+            "pre_dot": -2.0204622745513916,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": -0.023583412170410156,
+        "mean": -0.02774810791015625,
+        "min": -0.031579017639160156,
+        "range": 0.00799560546875,
+        "same_sign": true,
+        "sample_sd": 0.0034343041745169695,
+        "sample_variance": 1.1794445163104683e-05,
+        "sign_disagreement": false,
+        "signs": [
+          -1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 1.9804627887112705,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 1.965396388123661
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 1.9888794532734846
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 1.9933028679483138
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 2.0080330987829553
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 1.9487842392905064
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 1.9783806848487004
+          }
+        ],
+        "sample_sd_ratio": 0.02112198831161439,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": -0.031156539916992188,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": -0.023583412170410156,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": -0.02420806884765625,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": -0.031579017639160156,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": -0.02914142608642578,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": -0.02682018280029297,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D4",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D4-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.012753963470458984,
+            "pre_dot": 1.5265858173370361,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.0076541900634765625,
+            "pre_dot": -3.085803508758545,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.008043289184570312,
+            "pre_dot": -4.146543979644775,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.011530876159667969,
+            "pre_dot": -3.6019647121429443,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.006171226501464844,
+            "pre_dot": -3.098973035812378,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.007958412170410156,
+            "pre_dot": -2.2341766357421875,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.012753963470458984,
+        "mean": 0.009018659591674805,
+        "min": 0.006171226501464844,
+        "range": 0.006582736968994141,
+        "same_sign": true,
+        "sample_sd": 0.0025420012381317672,
+        "sample_variance": 6.461770294663438e-06,
+        "sign_disagreement": false,
+        "signs": [
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.0704194259083137,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.0841963584701086
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.0323947171692
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.019207967749585
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.9739475643040278
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.2412301035388658
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 2.0715398442180946
+          }
+        ],
+        "sample_sd_ratio": 0.0924582703747411,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.012753963470458984,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.0076541900634765625,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.008043289184570312,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.011530876159667969,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.006171226501464844,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.007958412170410156,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D5",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D5-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.03830909729003906,
+            "pre_dot": -2.759627342224121,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.03214073181152344,
+            "pre_dot": -0.06478631496429443,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.032901763916015625,
+            "pre_dot": -1.5748012065887451,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.04105091094970703,
+            "pre_dot": -1.5520154237747192,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.036774635314941406,
+            "pre_dot": -1.7811840772628784,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.032477378845214844,
+            "pre_dot": -4.132589817047119,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.04105091094970703,
+        "mean": 0.03560908635457357,
+        "min": 0.03214073181152344,
+        "range": 0.008910179138183594,
+        "same_sign": true,
+        "sample_sd": 0.0036722932426928247,
+        "sample_variance": 1.3485737660327382e-05,
+        "sign_disagreement": false,
+        "signs": [
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.0153149347286994,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.029126213592233
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.0077740193460327
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.004463768115942
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.9925891508886049
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.0402738518191956
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 2.0176626046101895
+          }
+        ],
+        "sample_sd_ratio": 0.01737978706924843,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.03830909729003906,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.03214073181152344,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.032901763916015625,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.04105091094970703,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.036774635314941406,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.032477378845214844,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D6",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D6-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": 0.020237445831298828,
+            "pre_dot": 2.18393611907959,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": 0.0136566162109375,
+            "pre_dot": -0.3554692268371582,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": 0.0145416259765625,
+            "pre_dot": 2.9783053398132324,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": 0.017080307006835938,
+            "pre_dot": 0.1945708990097046,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": 0.01751995086669922,
+            "pre_dot": 0.22915780544281006,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": 0.01574993133544922,
+            "pre_dot": 1.3949862718582153,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": 0.020237445831298828,
+        "mean": 0.0164643128712972,
+        "min": 0.0136566162109375,
+        "range": 0.006580829620361328,
+        "same_sign": true,
+        "sample_sd": 0.0023588378111580816,
+        "sample_variance": 5.56411581934905e-06,
+        "sign_disagreement": false,
+        "signs": [
+          1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 2.029823980157795,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 2.0517895431304636
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 2.0181564245810057
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 2.008919202518363
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 1.9817420435510888
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 2.0830657013771705
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 2.035270965788677
+          }
+        ],
+        "sample_sd_ratio": 0.03530396775636946,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": 0.020237445831298828,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": 0.0136566162109375,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": 0.0145416259765625,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": 0.017080307006835938,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": 0.01751995086669922,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": 0.01574993133544922,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D7",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D7-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    },
+    {
+      "alpha_plus_1": {
+        "effects": [
+          {
+            "observed_effect": -0.015358448028564453,
+            "pre_dot": 0.42262741923332214,
+            "prompt_id": "completion-01"
+          },
+          {
+            "observed_effect": -0.012765884399414062,
+            "pre_dot": -0.11260741949081421,
+            "prompt_id": "completion-04"
+          },
+          {
+            "observed_effect": -0.012639045715332031,
+            "pre_dot": 3.880887031555176,
+            "prompt_id": "instruction-01"
+          },
+          {
+            "observed_effect": -0.016312599182128906,
+            "pre_dot": -0.6272201538085938,
+            "prompt_id": "instruction-04"
+          },
+          {
+            "observed_effect": -0.015345573425292969,
+            "pre_dot": -0.3828146457672119,
+            "prompt_id": "syntax-01"
+          },
+          {
+            "observed_effect": -0.01421213150024414,
+            "pre_dot": -1.1093205213546753,
+            "prompt_id": "syntax-04"
+          }
+        ],
+        "max": -0.012639045715332031,
+        "mean": -0.014438947041829428,
+        "min": -0.016312599182128906,
+        "range": 0.003673553466796875,
+        "same_sign": true,
+        "sample_sd": 0.001501216472539872,
+        "sample_variance": 2.253650897425056e-06,
+        "sign_disagreement": false,
+        "signs": [
+          -1
+        ]
+      },
+      "alpha_scaling": {
+        "mean_ratio": 1.9630985088937096,
+        "ratios": [
+          {
+            "prompt_id": "completion-01",
+            "ratio": 1.9288087180601696
+          },
+          {
+            "prompt_id": "completion-04",
+            "ratio": 1.9800537875392201
+          },
+          {
+            "prompt_id": "instruction-01",
+            "ratio": 1.9877008979099071
+          },
+          {
+            "prompt_id": "instruction-04",
+            "ratio": 2.019234142063724
+          },
+          {
+            "prompt_id": "syntax-01",
+            "ratio": 1.9034242744391274
+          },
+          {
+            "prompt_id": "syntax-04",
+            "ratio": 1.9593692333501092
+          }
+        ],
+        "sample_sd_ratio": 0.04193967057543034,
+        "undefined_ratios": 0
+      },
+      "clean_future_experiment": false,
+      "contrasts_with_d1_l23": [
+        {
+          "d1_l23_effect": 0.030832290649414062,
+          "effect": -0.015358448028564453,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-01"
+        },
+        {
+          "d1_l23_effect": 0.025826454162597656,
+          "effect": -0.012765884399414062,
+          "equal_to_d1_l23": false,
+          "prompt_id": "completion-04"
+        },
+        {
+          "d1_l23_effect": 0.026548385620117188,
+          "effect": -0.012639045715332031,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-01"
+        },
+        {
+          "d1_l23_effect": 0.03369140625,
+          "effect": -0.016312599182128906,
+          "equal_to_d1_l23": false,
+          "prompt_id": "instruction-04"
+        },
+        {
+          "d1_l23_effect": 0.03156852722167969,
+          "effect": -0.015345573425292969,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-01"
+        },
+        {
+          "d1_l23_effect": 0.024932861328125,
+          "effect": -0.01421213150024414,
+          "equal_to_d1_l23": false,
+          "prompt_id": "syntax-04"
+        }
+      ],
+      "differs_from_d1_l23": true,
+      "direction_id": "D8",
+      "inspection": {
+        "discovery": true,
+        "replication": true,
+        "validation": true
+      },
+      "intervention_id": "M22.1-D8-L23",
+      "layer": 23,
+      "n": 6,
+      "repeat_max_abs_difference": 0.0,
+      "repeatable_identical": true,
+      "structural_contrast": true
+    }
+  ],
+  "clean_candidates": [],
+  "current_intervention_status": "CURRENT_INTERVENTION_INSUFFICIENT",
+  "historical_m23_verdict": "INCONCLUSIVE",
+  "predictor_fit": false,
+  "ranking_used": false,
+  "structural_contrasts_not_clean": [
+    "M22.1-D1-L0",
+    "M22.1-D1-L8",
+    "M22.1-D1-L15",
+    "M22.1-D2-L0",
+    "M22.1-D2-L8",
+    "M22.1-D2-L15",
+    "M22.1-D2-L23",
+    "M22.1-D3-L23",
+    "M22.1-D4-L23",
+    "M22.1-D5-L23",
+    "M22.1-D6-L23",
+    "M22.1-D7-L23",
+    "M22.1-D8-L23"
+  ],
+  "validation_or_replication_measured": false
+}
