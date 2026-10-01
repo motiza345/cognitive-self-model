@@ -1,0 +1,15 @@
+item,role,category,statement
+primary_hypothesis,hypothesis,C,first-order directional derivative along D1 identifies held-out response variation beyond the scalar mean
+representation,representation,C,"g is the margin gradient at the last-token residual dotted with D1, and the prediction is g"
+observable,observable,C,"one predeclared observable, g, with no epsilon search and no fitted slope"
+family,intervention_family,design,"M22.1-D1-L0, M22.1-D1-L8, M22.1-D1-L15"
+scalar_baseline,control,A,per-cell train mean of alpha-+1 effects
+specificity_control,control,C,"g_orth from the same gradient dotted with D2, scored against the same mean"
+leakage,leakage,design,predictions for evaluation and replication are written before their outcomes
+metric,metric,B,prompt-averaged paired_mean_ci of error(baseline) minus error(g)
+pass,decision,decision,"FEASIBILITY_CONTINUE only if both splits are CI_POSITIVE, both controls are not, and both sign co-criteria pass"
+kill,decision,decision,FEASIBILITY_KILL if evaluation is CI_NEGATIVE and replication is not CI_POSITIVE
+inconclusive,decision,decision,"INCONCLUSIVE for every other combination, including a single-split win"
+replication,replication,design,"fourth partition, absent from the fit, required for FEASIBILITY_CONTINUE"
+not_a_self_model,boundary,D,a pass does not establish a consumed self-model
+excluded_searches,exclusion,design,"no feature fishing, no second observable, no layer-23 cell, pre_dot is not the candidate"
