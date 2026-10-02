@@ -1,0 +1,231 @@
+{
+  "baseline_means": {
+    "M22.1-D1-L0": 0.02711375554402669,
+    "M22.1-D1-L15": -0.0065801143646240234,
+    "M22.1-D1-L8": 0.02379457155863444
+  },
+  "catalog_sha256": "ca3fcf652a7f5cd395fc1f0dea718742f7522b7f298671bb8005dccce8370d78",
+  "executed_partitions": [
+    "validation",
+    "evaluation"
+  ],
+  "prompts": [
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "c-completion-01",
+      "text": "The capital of Norway is"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "c-completion-02",
+      "text": "Sand becomes glass when it is"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "c-completion-03",
+      "text": "The author of Don Quixote is"
+    },
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "c-completion-04",
+      "text": "A violin has four"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "c-completion-05",
+      "text": "The Amazon is a"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "c-completion-06",
+      "text": "A cube has six"
+    },
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "c-completion-07",
+      "text": "The currency of Sweden is the"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "c-completion-08",
+      "text": "Cheese is often aged in a"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "c-completion-09",
+      "text": "The smallest bird is the"
+    },
+    {
+      "family": "completion",
+      "partition": "train",
+      "prompt_id": "c-completion-10",
+      "text": "A minute has sixty"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "c-completion-11",
+      "text": "The chemical symbol for copper is"
+    },
+    {
+      "family": "completion",
+      "partition": "evaluation",
+      "prompt_id": "c-completion-12",
+      "text": "Linen is woven from"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "c-syntax-01",
+      "text": "In case the ferry is delayed,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "c-syntax-02",
+      "text": "Supposing the lock freezes,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "c-syntax-03",
+      "text": "Now that the harvest is in,"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "c-syntax-04",
+      "text": "By the time the oven cooled,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "c-syntax-05",
+      "text": "So that the wound would close,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "c-syntax-06",
+      "text": "Wherever the path divides,"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "c-syntax-07",
+      "text": "No matter how dark the cellar is,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "c-syntax-08",
+      "text": "The moment the anchor dropped,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "c-syntax-09",
+      "text": "Given that the sample was sterile,"
+    },
+    {
+      "family": "syntax",
+      "partition": "train",
+      "prompt_id": "c-syntax-10",
+      "text": "Long after the echo faded,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "c-syntax-11",
+      "text": "On condition that the seal holds,"
+    },
+    {
+      "family": "syntax",
+      "partition": "evaluation",
+      "prompt_id": "c-syntax-12",
+      "text": "Rather than leave the kiln hot,"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "c-instruction-01",
+      "text": "Reply with one word. A liquid used in thermometers:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "c-instruction-02",
+      "text": "Reply with one word. A drink made from grapes:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "c-instruction-03",
+      "text": "Name a tool used for sewing:"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "c-instruction-04",
+      "text": "Name a constellation:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "c-instruction-05",
+      "text": "Reply with one word. Opposite of shallow:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "c-instruction-06",
+      "text": "Name a kind of nut:"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "c-instruction-07",
+      "text": "Reply with one word. A soup served cold:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "c-instruction-08",
+      "text": "Name a keyboard instrument:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "c-instruction-09",
+      "text": "Reply with one word. The number of legs on an insect:"
+    },
+    {
+      "family": "instruction",
+      "partition": "train",
+      "prompt_id": "c-instruction-10",
+      "text": "Name a desert:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "c-instruction-11",
+      "text": "Reply with one word. A reptile with a shell:"
+    },
+    {
+      "family": "instruction",
+      "partition": "evaluation",
+      "prompt_id": "c-instruction-12",
+      "text": "Name a type of bridge:"
+    }
+  ],
+  "source": "reports/M24_CONSUMPTION_PROTOCOL.md"
+}

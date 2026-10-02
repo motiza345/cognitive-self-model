@@ -1,0 +1,360 @@
+{
+  "alpha": 1.0,
+  "baseline": "training_baseline_mean",
+  "baseline_means": {
+    "M22.1-D1-L0": 0.02711375554402669,
+    "M22.1-D1-L15": -0.0065801143646240234,
+    "M22.1-D1-L8": 0.02379457155863444
+  },
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 23001,
+  "catalog_sha256": "ca3fcf652a7f5cd395fc1f0dea718742f7522b7f298671bb8005dccce8370d78",
+  "control_direction_sha256": "8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e",
+  "decision_threshold": 0.0,
+  "device": "cpu",
+  "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+  "evaluation": {
+    "baseline_mae": 0.06271952169912832,
+    "cells": [
+      {
+        "baseline_mae": 0.0730466710196601,
+        "class": "CI_POSITIVE",
+        "decision_baseline": {
+          "accuracy": 0.4166666666666667,
+          "correct": 5,
+          "fn": 0,
+          "fp": 7,
+          "high": 0.7233303143178943,
+          "low": 0.15165222980843013,
+          "n": 12,
+          "tn": 0,
+          "tp": 5
+        },
+        "decision_model": {
+          "accuracy": 0.9166666666666666,
+          "correct": 11,
+          "fn": 1,
+          "fp": 0,
+          "high": 0.9978924067681398,
+          "low": 0.6152038348490558,
+          "n": 12,
+          "tn": 7,
+          "tp": 4
+        },
+        "high": 0.09467024908199127,
+        "intervention_id": "M22.1-D1-L0",
+        "low": 0.0287380608747346,
+        "mechanism_mae": 0.01227002390645529,
+        "n": 12,
+        "paired_mean": 0.06077664711320482,
+        "sign_agreement": {
+          "accuracy": 0.9166666666666666,
+          "high": 0.9978924067681398,
+          "low": 0.6152038348490558,
+          "n": 12,
+          "successes": 11
+        }
+      },
+      {
+        "baseline_mae": 0.05714160866207547,
+        "class": "CI_POSITIVE",
+        "decision_baseline": {
+          "accuracy": 0.5,
+          "correct": 6,
+          "fn": 0,
+          "fp": 6,
+          "high": 0.7890553617607033,
+          "low": 0.21094463823929666,
+          "n": 12,
+          "tn": 0,
+          "tp": 6
+        },
+        "decision_model": {
+          "accuracy": 0.9166666666666666,
+          "correct": 11,
+          "fn": 1,
+          "fp": 0,
+          "high": 0.9978924067681398,
+          "low": 0.6152038348490558,
+          "n": 12,
+          "tn": 6,
+          "tp": 5
+        },
+        "high": 0.07507898858684314,
+        "intervention_id": "M22.1-D1-L8",
+        "low": 0.0346536968802062,
+        "mechanism_mae": 0.0029087202475074326,
+        "n": 12,
+        "paired_mean": 0.05423288841456803,
+        "sign_agreement": {
+          "accuracy": 0.9166666666666666,
+          "high": 0.9978924067681398,
+          "low": 0.6152038348490558,
+          "n": 12,
+          "successes": 11
+        }
+      },
+      {
+        "baseline_mae": 0.057970285415649414,
+        "class": "CI_POSITIVE",
+        "decision_baseline": {
+          "accuracy": 0.6666666666666666,
+          "correct": 8,
+          "fn": 4,
+          "fp": 0,
+          "high": 0.9007539088504167,
+          "low": 0.34887550641881404,
+          "n": 12,
+          "tn": 8,
+          "tp": 0
+        },
+        "decision_model": {
+          "accuracy": 1.0,
+          "correct": 12,
+          "fn": 0,
+          "fp": 0,
+          "high": 1.0,
+          "low": 0.7353515306029487,
+          "n": 12,
+          "tn": 8,
+          "tp": 4
+        },
+        "high": 0.08216924541458506,
+        "intervention_id": "M22.1-D1-L15",
+        "low": 0.031841520145128206,
+        "mechanism_mae": 0.0024778158229595486,
+        "n": 12,
+        "paired_mean": 0.055492469592689865,
+        "sign_agreement": {
+          "accuracy": 1.0,
+          "high": 1.0,
+          "low": 0.7353515306029487,
+          "n": 12,
+          "successes": 12
+        }
+      }
+    ],
+    "class": "CI_POSITIVE",
+    "decision_baseline": {
+      "accuracy": 0.5277777777777778,
+      "correct": 19,
+      "fn": 4,
+      "fp": 13,
+      "high": 0.6959494112837352,
+      "low": 0.35486379853731,
+      "n": 36,
+      "tn": 8,
+      "tp": 11
+    },
+    "decision_model": {
+      "accuracy": 0.9444444444444444,
+      "correct": 34,
+      "fn": 2,
+      "fp": 0,
+      "high": 0.9931996993459773,
+      "low": 0.813363293542446,
+      "n": 36,
+      "tn": 21,
+      "tp": 13
+    },
+    "high": 0.07716522058950821,
+    "low": 0.03877295034976836,
+    "mechanism_mae": 0.005885519992307424,
+    "n_episodes": 36,
+    "n_prompts": 12,
+    "orth_class": "CI_NEGATIVE",
+    "orth_high": -0.0034124276067892235,
+    "orth_low": -0.042236057885680266,
+    "orth_paired_mean": -0.02233469417945101,
+    "paired_mean": 0.0568340017068209,
+    "shuffled_class": "CI_INCLUDES_ZERO",
+    "shuffled_high": 0.0032341958580820057,
+    "shuffled_low": -0.04075111065960607,
+    "shuffled_paired_mean": -0.019247650520564406,
+    "sign_agreement": {
+      "accuracy": 0.9444444444444444,
+      "high": 0.9931996993459773,
+      "low": 0.813363293542446,
+      "n": 36,
+      "successes": 34
+    },
+    "sign_does_not_lose": true
+  },
+  "family": [
+    "M22.1-D1-L0",
+    "M22.1-D1-L8",
+    "M22.1-D1-L15"
+  ],
+  "interpretation": "On the frozen evaluation prompts, the consumed derivative reduced absolute error relative to the stored cell mean, the sign decision did not lose to that mean, and the shuffled predictions did not clear the same interval. This is a consumption result for the frozen object on this catalog. It is not a self-model.",
+  "leakage_ok": true,
+  "response_rule": "prediction = g",
+  "shuffle_seed": 24001,
+  "validation": {
+    "baseline_mae": 0.042323302339624475,
+    "cells": [
+      {
+        "baseline_mae": 0.04817165268792046,
+        "class": "CI_POSITIVE",
+        "decision_baseline": {
+          "accuracy": 0.5833333333333334,
+          "correct": 7,
+          "fn": 0,
+          "fp": 5,
+          "high": 0.8483477701915699,
+          "low": 0.27666968568210576,
+          "n": 12,
+          "tn": 0,
+          "tp": 7
+        },
+        "decision_model": {
+          "accuracy": 0.8333333333333334,
+          "correct": 10,
+          "fn": 2,
+          "fp": 0,
+          "high": 0.9791374745399076,
+          "low": 0.5158622513140327,
+          "n": 12,
+          "tn": 5,
+          "tp": 5
+        },
+        "high": 0.05213439494717431,
+        "intervention_id": "M22.1-D1-L0",
+        "low": 0.01195449526374795,
+        "mechanism_mae": 0.016250172645613726,
+        "n": 12,
+        "paired_mean": 0.03192148004230674,
+        "sign_agreement": {
+          "accuracy": 0.8333333333333334,
+          "high": 0.9791374745399076,
+          "low": 0.5158622513140327,
+          "n": 12,
+          "successes": 10
+        }
+      },
+      {
+        "baseline_mae": 0.048451622327168785,
+        "class": "CI_POSITIVE",
+        "decision_baseline": {
+          "accuracy": 0.5833333333333334,
+          "correct": 7,
+          "fn": 0,
+          "fp": 5,
+          "high": 0.8483477701915699,
+          "low": 0.27666968568210576,
+          "n": 12,
+          "tn": 0,
+          "tp": 7
+        },
+        "decision_model": {
+          "accuracy": 1.0,
+          "correct": 12,
+          "fn": 0,
+          "fp": 0,
+          "high": 1.0,
+          "low": 0.7353515306029487,
+          "n": 12,
+          "tn": 5,
+          "tp": 7
+        },
+        "high": 0.05851367097796812,
+        "intervention_id": "M22.1-D1-L8",
+        "low": 0.027555668331948915,
+        "mechanism_mae": 0.0062785813494281245,
+        "n": 12,
+        "paired_mean": 0.04217304097774066,
+        "sign_agreement": {
+          "accuracy": 1.0,
+          "high": 1.0,
+          "low": 0.7353515306029487,
+          "n": 12,
+          "successes": 12
+        }
+      },
+      {
+        "baseline_mae": 0.03034663200378418,
+        "class": "CI_POSITIVE",
+        "decision_baseline": {
+          "accuracy": 0.6666666666666666,
+          "correct": 8,
+          "fn": 4,
+          "fp": 0,
+          "high": 0.9007539088504167,
+          "low": 0.34887550641881404,
+          "n": 12,
+          "tn": 8,
+          "tp": 0
+        },
+        "decision_model": {
+          "accuracy": 1.0,
+          "correct": 12,
+          "fn": 0,
+          "fp": 0,
+          "high": 1.0,
+          "low": 0.7353515306029487,
+          "n": 12,
+          "tn": 8,
+          "tp": 4
+        },
+        "high": 0.042669880932378196,
+        "intervention_id": "M22.1-D1-L15",
+        "low": 0.014755305000756514,
+        "mechanism_mae": 0.002903690622338855,
+        "n": 12,
+        "paired_mean": 0.02744294138144532,
+        "sign_agreement": {
+          "accuracy": 1.0,
+          "high": 1.0,
+          "low": 0.7353515306029487,
+          "n": 12,
+          "successes": 12
+        }
+      }
+    ],
+    "class": "CI_POSITIVE",
+    "decision_baseline": {
+      "accuracy": 0.6111111111111112,
+      "correct": 22,
+      "fn": 4,
+      "fp": 10,
+      "high": 0.7685755983378573,
+      "low": 0.43463804744842544,
+      "n": 36,
+      "tn": 8,
+      "tp": 14
+    },
+    "decision_model": {
+      "accuracy": 0.9444444444444444,
+      "correct": 34,
+      "fn": 2,
+      "fp": 0,
+      "high": 0.9931996993459773,
+      "low": 0.813363293542446,
+      "n": 36,
+      "tn": 18,
+      "tp": 16
+    },
+    "high": 0.042297326068132045,
+    "low": 0.0255714591770716,
+    "mechanism_mae": 0.008477481539126901,
+    "n_episodes": 36,
+    "n_prompts": 12,
+    "orth_class": "CI_NEGATIVE",
+    "orth_high": -0.004960942843043223,
+    "orth_low": -0.03502727743029077,
+    "orth_paired_mean": -0.019688480293390126,
+    "paired_mean": 0.03384582080049758,
+    "shuffled_class": "CI_NEGATIVE",
+    "shuffled_high": -0.01926794881042192,
+    "shuffled_low": -0.04289280355944438,
+    "shuffled_paired_mean": -0.029682855582920234,
+    "sign_agreement": {
+      "accuracy": 0.9444444444444444,
+      "high": 0.9931996993459773,
+      "low": 0.813363293542446,
+      "n": 36,
+      "successes": 34
+    },
+    "sign_does_not_lose": true
+  },
+  "verdict": "CONSUMPTION_SUPPORTED"
+}
