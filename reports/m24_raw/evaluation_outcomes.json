@@ -1,0 +1,362 @@
+[
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7336511611938477,
+    "family": "completion",
+    "intervened_output": -2.697890281677246,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.03576087951660156,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7336511611938477,
+    "family": "completion",
+    "intervened_output": -2.839411735534668,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.10576057434082031,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7336511611938477,
+    "family": "completion",
+    "intervened_output": -2.829195976257324,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.09554481506347656,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -5.319012641906738,
+    "family": "completion",
+    "intervened_output": -5.276594161987305,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.042418479919433594,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -5.319012641906738,
+    "family": "completion",
+    "intervened_output": -5.334237098693848,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.015224456787109375,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -5.319012641906738,
+    "family": "completion",
+    "intervened_output": -5.223282814025879,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.09572982788085938,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.5410027503967285,
+    "family": "completion",
+    "intervened_output": -2.631516933441162,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.0905141830444336,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.5410027503967285,
+    "family": "completion",
+    "intervened_output": -2.5892748832702637,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.048272132873535156,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.5410027503967285,
+    "family": "completion",
+    "intervened_output": -2.6009416580200195,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.059938907623291016,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7165560722351074,
+    "family": "completion",
+    "intervened_output": -2.6809310913085938,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.03562498092651367,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7165560722351074,
+    "family": "completion",
+    "intervened_output": -2.752103328704834,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.03554725646972656,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7165560722351074,
+    "family": "completion",
+    "intervened_output": -2.7418079376220703,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.02525186538696289,
+    "partition": "evaluation",
+    "prompt_id": "c-completion-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 0.6125383377075195,
+    "family": "instruction",
+    "intervened_output": 0.4929542541503906,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.1195840835571289,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 0.6125383377075195,
+    "family": "instruction",
+    "intervened_output": 0.6725378036499023,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.05999946594238281,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 0.6125383377075195,
+    "family": "instruction",
+    "intervened_output": 0.4964313507080078,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.11610698699951172,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 1.115178108215332,
+    "family": "instruction",
+    "intervened_output": 0.9557161331176758,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.15946197509765625,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 1.115178108215332,
+    "family": "instruction",
+    "intervened_output": 1.0561256408691406,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.059052467346191406,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 1.115178108215332,
+    "family": "instruction",
+    "intervened_output": 0.9527149200439453,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.16246318817138672,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 0.16349029541015625,
+    "family": "instruction",
+    "intervened_output": 0.21446990966796875,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.0509796142578125,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 0.16349029541015625,
+    "family": "instruction",
+    "intervened_output": 0.20504474639892578,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.04155445098876953,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 0.16349029541015625,
+    "family": "instruction",
+    "intervened_output": 0.1833953857421875,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.01990509033203125,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.2799978256225586,
+    "family": "instruction",
+    "intervened_output": -0.41289710998535156,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.13289928436279297,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.2799978256225586,
+    "family": "instruction",
+    "intervened_output": -0.17615413665771484,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.10384368896484375,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.2799978256225586,
+    "family": "instruction",
+    "intervened_output": -0.3420829772949219,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.06208515167236328,
+    "partition": "evaluation",
+    "prompt_id": "c-instruction-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.3539772033691406,
+    "family": "syntax",
+    "intervened_output": -2.391690254211426,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.037713050842285156,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.3539772033691406,
+    "family": "syntax",
+    "intervened_output": -2.43050479888916,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.07652759552001953,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.3539772033691406,
+    "family": "syntax",
+    "intervened_output": -2.3684253692626953,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.014448165893554688,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -3.237839698791504,
+    "family": "syntax",
+    "intervened_output": -3.23342227935791,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.00441741943359375,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -3.237839698791504,
+    "family": "syntax",
+    "intervened_output": -3.2370786666870117,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.0007610321044921875,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -3.237839698791504,
+    "family": "syntax",
+    "intervened_output": -3.2408628463745117,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.0030231475830078125,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-06"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -4.790987014770508,
+    "family": "syntax",
+    "intervened_output": -4.840606689453125,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.04961967468261719,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -4.790987014770508,
+    "family": "syntax",
+    "intervened_output": -4.766940116882324,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.024046897888183594,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -4.790987014770508,
+    "family": "syntax",
+    "intervened_output": -4.744400978088379,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.046586036682128906,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-09"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.493368625640869,
+    "family": "syntax",
+    "intervened_output": -2.511314868927002,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.017946243286132812,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.493368625640869,
+    "family": "syntax",
+    "intervened_output": -2.4243264198303223,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.06904220581054688,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-12"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.493368625640869,
+    "family": "syntax",
+    "intervened_output": -2.4796018600463867,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.013766765594482422,
+    "partition": "evaluation",
+    "prompt_id": "c-syntax-12"
+  }
+]

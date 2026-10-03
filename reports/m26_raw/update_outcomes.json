@@ -1,0 +1,362 @@
+[
+  {
+    "alpha": 1.0,
+    "baseline_output": -6.680876731872559,
+    "family": "completion",
+    "intervened_output": -6.696878433227539,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.01600170135498047,
+    "partition": "update",
+    "prompt_id": "u-completion-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -6.680876731872559,
+    "family": "completion",
+    "intervened_output": -6.725010871887207,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.04413414001464844,
+    "partition": "update",
+    "prompt_id": "u-completion-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -6.680876731872559,
+    "family": "completion",
+    "intervened_output": -6.701386451721191,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.020509719848632812,
+    "partition": "update",
+    "prompt_id": "u-completion-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -4.35699462890625,
+    "family": "completion",
+    "intervened_output": -4.284052848815918,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.07294178009033203,
+    "partition": "update",
+    "prompt_id": "u-completion-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -4.35699462890625,
+    "family": "completion",
+    "intervened_output": -4.397149085998535,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.040154457092285156,
+    "partition": "update",
+    "prompt_id": "u-completion-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -4.35699462890625,
+    "family": "completion",
+    "intervened_output": -4.427053451538086,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.07005882263183594,
+    "partition": "update",
+    "prompt_id": "u-completion-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7466554641723633,
+    "family": "completion",
+    "intervened_output": -2.673874855041504,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.07278060913085938,
+    "partition": "update",
+    "prompt_id": "u-completion-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7466554641723633,
+    "family": "completion",
+    "intervened_output": -2.727611541748047,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.019043922424316406,
+    "partition": "update",
+    "prompt_id": "u-completion-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.7466554641723633,
+    "family": "completion",
+    "intervened_output": -2.8204469680786133,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.07379150390625,
+    "partition": "update",
+    "prompt_id": "u-completion-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.9007911682128906,
+    "family": "completion",
+    "intervened_output": -2.963338851928711,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.06254768371582031,
+    "partition": "update",
+    "prompt_id": "u-completion-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.9007911682128906,
+    "family": "completion",
+    "intervened_output": -2.9168007373809814,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.01600956916809082,
+    "partition": "update",
+    "prompt_id": "u-completion-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.9007911682128906,
+    "family": "completion",
+    "intervened_output": -2.9242842197418213,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.023493051528930664,
+    "partition": "update",
+    "prompt_id": "u-completion-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.09387683868408203,
+    "family": "instruction",
+    "intervened_output": 0.04887962341308594,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.14275646209716797,
+    "partition": "update",
+    "prompt_id": "u-instruction-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.09387683868408203,
+    "family": "instruction",
+    "intervened_output": -0.04888916015625,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.04498767852783203,
+    "partition": "update",
+    "prompt_id": "u-instruction-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.09387683868408203,
+    "family": "instruction",
+    "intervened_output": -0.15332317352294922,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.05944633483886719,
+    "partition": "update",
+    "prompt_id": "u-instruction-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 1.2294340133666992,
+    "family": "instruction",
+    "intervened_output": 1.1114616394042969,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.11797237396240234,
+    "partition": "update",
+    "prompt_id": "u-instruction-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 1.2294340133666992,
+    "family": "instruction",
+    "intervened_output": 1.209275245666504,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": -0.020158767700195312,
+    "partition": "update",
+    "prompt_id": "u-instruction-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": 1.2294340133666992,
+    "family": "instruction",
+    "intervened_output": 1.0649642944335938,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.16446971893310547,
+    "partition": "update",
+    "prompt_id": "u-instruction-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.9692239761352539,
+    "family": "instruction",
+    "intervened_output": -0.8501081466674805,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.11911582946777344,
+    "partition": "update",
+    "prompt_id": "u-instruction-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.9692239761352539,
+    "family": "instruction",
+    "intervened_output": -0.9104976654052734,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.05872631072998047,
+    "partition": "update",
+    "prompt_id": "u-instruction-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -0.9692239761352539,
+    "family": "instruction",
+    "intervened_output": -0.9222898483276367,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.04693412780761719,
+    "partition": "update",
+    "prompt_id": "u-instruction-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.1120033264160156,
+    "family": "instruction",
+    "intervened_output": -2.0051803588867188,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.10682296752929688,
+    "partition": "update",
+    "prompt_id": "u-instruction-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.1120033264160156,
+    "family": "instruction",
+    "intervened_output": -1.9364385604858398,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.17556476593017578,
+    "partition": "update",
+    "prompt_id": "u-instruction-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.1120033264160156,
+    "family": "instruction",
+    "intervened_output": -2.0992650985717773,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.012738227844238281,
+    "partition": "update",
+    "prompt_id": "u-instruction-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.5320377349853516,
+    "family": "syntax",
+    "intervened_output": -2.4891624450683594,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.04287528991699219,
+    "partition": "update",
+    "prompt_id": "u-syntax-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.5320377349853516,
+    "family": "syntax",
+    "intervened_output": -2.4762496948242188,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.05578804016113281,
+    "partition": "update",
+    "prompt_id": "u-syntax-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.5320377349853516,
+    "family": "syntax",
+    "intervened_output": -2.5535125732421875,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.021474838256835938,
+    "partition": "update",
+    "prompt_id": "u-syntax-01"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.246976852416992,
+    "family": "syntax",
+    "intervened_output": -2.2047691345214844,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.04220771789550781,
+    "partition": "update",
+    "prompt_id": "u-syntax-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.246976852416992,
+    "family": "syntax",
+    "intervened_output": -2.1975669860839844,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.04940986633300781,
+    "partition": "update",
+    "prompt_id": "u-syntax-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -2.246976852416992,
+    "family": "syntax",
+    "intervened_output": -2.2240819931030273,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.022894859313964844,
+    "partition": "update",
+    "prompt_id": "u-syntax-03"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -5.988070487976074,
+    "family": "syntax",
+    "intervened_output": -6.051429748535156,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": -0.06335926055908203,
+    "partition": "update",
+    "prompt_id": "u-syntax-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -5.988070487976074,
+    "family": "syntax",
+    "intervened_output": -5.8973846435546875,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.09068584442138672,
+    "partition": "update",
+    "prompt_id": "u-syntax-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -5.988070487976074,
+    "family": "syntax",
+    "intervened_output": -5.99422550201416,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": -0.0061550140380859375,
+    "partition": "update",
+    "prompt_id": "u-syntax-05"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -3.8065147399902344,
+    "family": "syntax",
+    "intervened_output": -3.7588367462158203,
+    "intervention_id": "M22.1-D1-L0",
+    "observed_effect": 0.04767799377441406,
+    "partition": "update",
+    "prompt_id": "u-syntax-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -3.8065147399902344,
+    "family": "syntax",
+    "intervened_output": -3.749338150024414,
+    "intervention_id": "M22.1-D1-L8",
+    "observed_effect": 0.05717658996582031,
+    "partition": "update",
+    "prompt_id": "u-syntax-07"
+  },
+  {
+    "alpha": 1.0,
+    "baseline_output": -3.8065147399902344,
+    "family": "syntax",
+    "intervened_output": -3.7722606658935547,
+    "intervention_id": "M22.1-D1-L15",
+    "observed_effect": 0.03425407409667969,
+    "partition": "update",
+    "prompt_id": "u-syntax-07"
+  }
+]

@@ -1,0 +1,165 @@
+{
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 23001,
+  "catalog_sha256": "015c3d41855da5fa630c382fe0e4a9ea63c868e12e4a1243e104e1c4e371ea6f",
+  "family": [
+    "M22.1-D1-L0",
+    "M22.1-D1-L8",
+    "M22.1-D1-L15"
+  ],
+  "prior_count": 1.0,
+  "prior_mean": 0.0,
+  "prompts": [
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "u-completion-01",
+      "text": "The capital of Portugal is"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "u-completion-02",
+      "text": "Brick is fired from"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "u-completion-03",
+      "text": "The author of The Odyssey is"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "u-completion-04",
+      "text": "A harp has many"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "u-completion-05",
+      "text": "The Danube is a"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "u-completion-06",
+      "text": "A stop sign has eight"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "u-completion-07",
+      "text": "The currency of Mexico is the"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "u-completion-08",
+      "text": "Ink is often stored in a"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "u-syntax-01",
+      "text": "Assuming the valve sticks,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "u-syntax-02",
+      "text": "By the time the glacier retreated,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "u-syntax-03",
+      "text": "So that the seedling would root,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "u-syntax-04",
+      "text": "Wherever the creek bends,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "u-syntax-05",
+      "text": "No matter how loud the mill is,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "u-syntax-06",
+      "text": "The moment the comet appeared,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "u-syntax-07",
+      "text": "Provided the cistern stays sealed,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "u-syntax-08",
+      "text": "Whereas the third assay failed,"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "u-instruction-01",
+      "text": "Reply with one word. A liquid used in lamps:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "u-instruction-02",
+      "text": "Reply with one word. A drink made from barley:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "u-instruction-03",
+      "text": "Name a tool used for weaving:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "u-instruction-04",
+      "text": "Name a moon of Jupiter:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "u-instruction-05",
+      "text": "Reply with one word. Opposite of hollow:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "u-instruction-06",
+      "text": "Name a kind of spice:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "u-instruction-07",
+      "text": "Reply with one word. A bread served with soup:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "u-instruction-08",
+      "text": "Name a wind instrument:"
+    }
+  ],
+  "shuffle_seed": 26001,
+  "sigma": {
+    "M22.1-D1-L0": 0.02029281160603693,
+    "M22.1-D1-L15": 0.004044481362351381,
+    "M22.1-D1-L8": 0.009377970182012517
+  },
+  "source": "reports/M26_INDEPENDENT_EVIDENCE_UPDATE_PROTOCOL.md"
+}
