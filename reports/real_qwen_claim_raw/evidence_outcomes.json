@@ -1,0 +1,86 @@
+[
+  {
+    "baseline_margin": 0.4706249237060547,
+    "intervened_margin": 0.5302200317382812,
+    "observed_effect": 0.05959510803222656,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0001"
+  },
+  {
+    "baseline_margin": 0.5444965362548828,
+    "intervened_margin": 0.6160717010498047,
+    "observed_effect": 0.07157516479492188,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0002"
+  },
+  {
+    "baseline_margin": 0.3973836898803711,
+    "intervened_margin": 0.4677772521972656,
+    "observed_effect": 0.07039356231689453,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0003"
+  },
+  {
+    "baseline_margin": 0.40691184997558594,
+    "intervened_margin": 0.47879886627197266,
+    "observed_effect": 0.07188701629638672,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0004"
+  },
+  {
+    "baseline_margin": 0.4254035949707031,
+    "intervened_margin": 0.4901580810546875,
+    "observed_effect": 0.06475448608398438,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0005"
+  },
+  {
+    "baseline_margin": 0.4249305725097656,
+    "intervened_margin": 0.4952821731567383,
+    "observed_effect": 0.07035160064697266,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0006"
+  },
+  {
+    "baseline_margin": 0.3124818801879883,
+    "intervened_margin": 0.38451576232910156,
+    "observed_effect": 0.07203388214111328,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0007"
+  },
+  {
+    "baseline_margin": 0.4754505157470703,
+    "intervened_margin": 0.5367422103881836,
+    "observed_effect": 0.06129169464111328,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0008"
+  },
+  {
+    "baseline_margin": 0.46794986724853516,
+    "intervened_margin": 0.5308465957641602,
+    "observed_effect": 0.062896728515625,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0009"
+  },
+  {
+    "baseline_margin": 0.5444860458374023,
+    "intervened_margin": 0.6026973724365234,
+    "observed_effect": 0.058211326599121094,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0010"
+  },
+  {
+    "baseline_margin": 0.5870094299316406,
+    "intervened_margin": 0.6232528686523438,
+    "observed_effect": 0.036243438720703125,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0011"
+  },
+  {
+    "baseline_margin": 0.6203765869140625,
+    "intervened_margin": 0.667140007019043,
+    "observed_effect": 0.04676342010498047,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0012"
+  }
+]

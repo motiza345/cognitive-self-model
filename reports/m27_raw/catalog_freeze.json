@@ -1,0 +1,235 @@
+{
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 23001,
+  "catalog_sha256": "9fabc16efc0a99a6ce7b9c4b3d1216145c16de940de774d6265e7c9e6b3ddc4d",
+  "critical_z": 1.96,
+  "execution_started_utc": "2026-10-03T06:39:44Z",
+  "git_commit": "1e183467d711ec5bc40291349a9ddbe4a5c1175d",
+  "prior_gain": 1.0,
+  "prompts": [
+    {
+      "family": "completion",
+      "partition": "prior",
+      "prompt_id": "r-completion-01",
+      "text": "The capital of Chile is"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "r-completion-02",
+      "text": "Cork is harvested from"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "r-completion-03",
+      "text": "The composer of The Four Seasons is"
+    },
+    {
+      "family": "completion",
+      "partition": "prior",
+      "prompt_id": "r-completion-04",
+      "text": "A tricycle has three"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "r-completion-05",
+      "text": "The Volga is a"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "r-completion-06",
+      "text": "A hexagon has six"
+    },
+    {
+      "family": "completion",
+      "partition": "prior",
+      "prompt_id": "r-completion-07",
+      "text": "The currency of Thailand is the"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "r-completion-08",
+      "text": "Glass is often blown from"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "r-completion-09",
+      "text": "The tallest mountain in Africa is"
+    },
+    {
+      "family": "completion",
+      "partition": "prior",
+      "prompt_id": "r-completion-10",
+      "text": "A week has seven"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "r-completion-11",
+      "text": "The chemical symbol for tin is"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "r-completion-12",
+      "text": "Cotton is gathered from"
+    },
+    {
+      "family": "syntax",
+      "partition": "prior",
+      "prompt_id": "r-syntax-01",
+      "text": "Provided the lantern stays lit,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "r-syntax-02",
+      "text": "Once the orchard was pruned,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "r-syntax-03",
+      "text": "Unless the harbor freezes,"
+    },
+    {
+      "family": "syntax",
+      "partition": "prior",
+      "prompt_id": "r-syntax-04",
+      "text": "As soon as the kiln cooled,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "r-syntax-05",
+      "text": "Whenever the sluice opens,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "r-syntax-06",
+      "text": "Although the second sample cracked,"
+    },
+    {
+      "family": "syntax",
+      "partition": "prior",
+      "prompt_id": "r-syntax-07",
+      "text": "Before the ferry departed,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "r-syntax-08",
+      "text": "Since the aquifer dropped,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "r-syntax-09",
+      "text": "While the north gate was shut,"
+    },
+    {
+      "family": "syntax",
+      "partition": "prior",
+      "prompt_id": "r-syntax-10",
+      "text": "After the census was taken,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "r-syntax-11",
+      "text": "If the spare oar splits,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "r-syntax-12",
+      "text": "Until the mortar sets,"
+    },
+    {
+      "family": "instruction",
+      "partition": "prior",
+      "prompt_id": "r-instruction-01",
+      "text": "Reply with one word. A metal used in bells:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "r-instruction-02",
+      "text": "Name a tool used for pruning:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "r-instruction-03",
+      "text": "Reply with one word. Opposite of scarce:"
+    },
+    {
+      "family": "instruction",
+      "partition": "prior",
+      "prompt_id": "r-instruction-04",
+      "text": "Name a river in Africa:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "r-instruction-05",
+      "text": "Reply with one word. A grain fed to horses:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "r-instruction-06",
+      "text": "Name a bone in the leg:"
+    },
+    {
+      "family": "instruction",
+      "partition": "prior",
+      "prompt_id": "r-instruction-07",
+      "text": "Reply with one word. A fabric woven from flax:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "r-instruction-08",
+      "text": "Name a moon of Saturn:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "r-instruction-09",
+      "text": "Reply with one word. A gas used in welding:"
+    },
+    {
+      "family": "instruction",
+      "partition": "prior",
+      "prompt_id": "r-instruction-10",
+      "text": "Name a tool used for measuring angles:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "r-instruction-11",
+      "text": "Reply with one word. Opposite of ancient:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "r-instruction-12",
+      "text": "Name a string instrument played with a bow:"
+    }
+  ],
+  "protocol_sha256": "5254a9253410cc53ba028c95c798e7eb4f50c03b76d77aa7cc9ea2073699a57f",
+  "protocol_version": "M27.MECHANISM_REVISION.1",
+  "shuffle_seed": 27001,
+  "sigma": {
+    "M22.1-D1-L0": 0.02029281160603693,
+    "M22.1-D1-L15": 0.004044481362351381,
+    "M22.1-D1-L8": 0.009377970182012517
+  }
+}

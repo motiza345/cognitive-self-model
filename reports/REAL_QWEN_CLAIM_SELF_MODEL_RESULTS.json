@@ -1,0 +1,43 @@
+{
+  "baseline_decision": "INTERVENE",
+  "baseline_utility": 0.5,
+  "catalog_sha256": "298136e56f6dddcc7fbb4015f9940eb40f71e096555494588d8e14dd435f4e21",
+  "claim": "QWEN_SELF_MARGIN_GAIN_D1_L0_A1",
+  "claim_revision": "NOT_OBSERVED",
+  "compute": {
+    "backwards": 12,
+    "clean_forwards": 12,
+    "intervention_forwards": 36,
+    "plain_forwards": 24
+  },
+  "decision_causality": "PASS",
+  "evidence_before_holdout": true,
+  "evidence_status": "SUPPORTED",
+  "evidence_summary": {
+    "alpha": 0.05,
+    "interval": "clopper_pearson",
+    "lower": 0.7353515306029488,
+    "n": 12,
+    "negative": 0,
+    "positive": 12,
+    "positive_fraction": 1.0,
+    "status": "SUPPORTED",
+    "uncertainty": 0.2646484693970512,
+    "upper": 1.0,
+    "zeros": 0
+  },
+  "final_status": "SUPPORTED",
+  "git": "DIRTY",
+  "historical_immutability": "PASS",
+  "initial_status": "SUPPORTED",
+  "leakage": "PASS",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "protocol_sha256": "55a14f9e84465ee20bdcb4347201624c54e9def9c2d05465e5e52d0fb3492249",
+  "scope": "PASS",
+  "self_model_decision": "INTERVENE",
+  "self_model_utility": 0.5,
+  "utility_difference": 0.0,
+  "validation_executed": false,
+  "verdict": "REAL_CLAIM_SELF_MODEL_NOT_SUPPORTED"
+}

@@ -1,0 +1,35 @@
+{
+  "claim_id": "QWEN_SELF_MARGIN_GAIN_D1_L0_A1",
+  "claim_type": "CAPABILITY",
+  "evidence_history": [
+    {
+      "evidence_id": "M24-HISTORICAL-PRIOR",
+      "m24_protocol_sha256": "378b5c89f0c62eed175c01624e50aeafa08a7f7da3968e026594df9950638f28",
+      "m24_results_sha256": "4c2d2284e793481de0c25d22820ba16820dffc0eed84bab7408aa7c7aff3b9fe",
+      "m24_verdict": "CONSUMPTION_SUPPORTED",
+      "note": "Historical candidate only. Its outcomes are not in the current positive fraction.",
+      "source": "historical_prior",
+      "source_is_current_test_evidence": false,
+      "source_protocol": "M24"
+    }
+  ],
+  "proposition": "Qwen can reliably increase its own yes/no margin under D1-L0-alpha1 within the declared scope.",
+  "revision_history": [],
+  "scope": {
+    "alpha": 1,
+    "direction_id": "D1",
+    "direction_seed": 22101,
+    "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+    "hook": "blocks.0.hook_resid_post",
+    "layer": 0,
+    "model_id": "Qwen/Qwen2.5-0.5B",
+    "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "target": "yes/no margin"
+  },
+  "source": "historical_prior",
+  "source_is_current_test_evidence": false,
+  "source_protocol": "M24",
+  "status": "SUPPORTED",
+  "uncertainty": null,
+  "version": 1
+}
