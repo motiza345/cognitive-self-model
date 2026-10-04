@@ -1,0 +1,226 @@
+{
+  "catalog_sha256": "59a3d6d1708972cf97ead8294bc614d6ac154b19736db6d1b63c51736d3ad0cd",
+  "execution_started_utc": "2026-10-03T07:16:34Z",
+  "git_commit": "18ceef697de2d5d885e9451009ced235b08260f2",
+  "primary_candidate": "kappa_d1",
+  "prompts": [
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "k-completion-01",
+      "text": "The seat of the Portuguese government is"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "k-completion-02",
+      "text": "Amber comes from fossilized"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "k-completion-03",
+      "text": "The novelist who wrote Don Quixote is"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "k-completion-04",
+      "text": "An arachnid of that common kind has eight"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "k-completion-05",
+      "text": "The Danube flows into the"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "k-completion-06",
+      "text": "A five-sided polygon has"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "k-completion-07",
+      "text": "The currency of Norway is the"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "k-completion-08",
+      "text": "Porcelain begins as"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "k-completion-09",
+      "text": "The largest desert in Africa is the"
+    },
+    {
+      "family": "completion",
+      "partition": "update",
+      "prompt_id": "k-completion-10",
+      "text": "A leap year has an extra"
+    },
+    {
+      "family": "completion",
+      "partition": "validation",
+      "prompt_id": "k-completion-11",
+      "text": "The letters Ag stand for"
+    },
+    {
+      "family": "completion",
+      "partition": "holdout",
+      "prompt_id": "k-completion-12",
+      "text": "Cloth called linen is woven from"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "k-syntax-01",
+      "text": "Provided the sextant stayed level,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "k-syntax-02",
+      "text": "Once the vellum was ruled,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "k-syntax-03",
+      "text": "Unless the levee holds,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "k-syntax-04",
+      "text": "As soon as the solder cooled,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "k-syntax-05",
+      "text": "Whenever the portcullis drops,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "k-syntax-06",
+      "text": "Although the fourth cask leaked,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "k-syntax-07",
+      "text": "Before the sloop cast off,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "k-syntax-08",
+      "text": "Since the millrace slowed,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "k-syntax-09",
+      "text": "While the east shutter was barred,"
+    },
+    {
+      "family": "syntax",
+      "partition": "update",
+      "prompt_id": "k-syntax-10",
+      "text": "After the census roll was sealed,"
+    },
+    {
+      "family": "syntax",
+      "partition": "validation",
+      "prompt_id": "k-syntax-11",
+      "text": "If the spare axle bends,"
+    },
+    {
+      "family": "syntax",
+      "partition": "holdout",
+      "prompt_id": "k-syntax-12",
+      "text": "Until the limewash dries,"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "k-instruction-01",
+      "text": "Reply with one word. A gem found in rivers:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "k-instruction-02",
+      "text": "Name a tool used for carding wool:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "k-instruction-03",
+      "text": "Reply with one word. Opposite of brittle:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "k-instruction-04",
+      "text": "Name a plateau in South America:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "k-instruction-05",
+      "text": "Reply with one word. A resin used in varnish:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "k-instruction-06",
+      "text": "Name a joint in the arm:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "k-instruction-07",
+      "text": "Reply with one word. A fiber combed from goats:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "k-instruction-08",
+      "text": "Name a moon of Neptune:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "k-instruction-09",
+      "text": "Reply with one word. A gas that fills party balloons:"
+    },
+    {
+      "family": "instruction",
+      "partition": "update",
+      "prompt_id": "k-instruction-10",
+      "text": "Name a tool used for planing wood:"
+    },
+    {
+      "family": "instruction",
+      "partition": "validation",
+      "prompt_id": "k-instruction-11",
+      "text": "Reply with one word. Opposite of public:"
+    },
+    {
+      "family": "instruction",
+      "partition": "holdout",
+      "prompt_id": "k-instruction-12",
+      "text": "Name a drum played with the hands:"
+    }
+  ],
+  "protocol_sha256": "4566208cadba61b8ccf4b0199e3057a27b1d140feef7f201af69ae909cfa4394",
+  "protocol_version": "M29.PRE_EVIDENCE_MEASUREMENT.1"
+}

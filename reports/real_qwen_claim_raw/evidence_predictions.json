@@ -1,0 +1,74 @@
+[
+  {
+    "baseline_margin": 0.4706249237060547,
+    "g": 0.026628230235646068,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0001"
+  },
+  {
+    "baseline_margin": 0.5444965362548828,
+    "g": 0.04257136603091159,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0002"
+  },
+  {
+    "baseline_margin": 0.3973836898803711,
+    "g": 0.035061077959161815,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0003"
+  },
+  {
+    "baseline_margin": 0.40691184997558594,
+    "g": 0.03906649786728367,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0004"
+  },
+  {
+    "baseline_margin": 0.4254035949707031,
+    "g": 0.029674894752587763,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0005"
+  },
+  {
+    "baseline_margin": 0.4249305725097656,
+    "g": 0.034423122985783455,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0006"
+  },
+  {
+    "baseline_margin": 0.3124818801879883,
+    "g": 0.03853196511172643,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0007"
+  },
+  {
+    "baseline_margin": 0.4754505157470703,
+    "g": 0.029341688792627066,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0008"
+  },
+  {
+    "baseline_margin": 0.46794986724853516,
+    "g": 0.024853854706748682,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0009"
+  },
+  {
+    "baseline_margin": 0.5444860458374023,
+    "g": 0.029218375450699205,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0010"
+  },
+  {
+    "baseline_margin": 0.5870094299316406,
+    "g": 0.007193773372274559,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0011"
+  },
+  {
+    "baseline_margin": 0.6203765869140625,
+    "g": 0.018702064800321806,
+    "partition": "EVIDENCE",
+    "prompt_id": "RC1-0012"
+  }
+]
