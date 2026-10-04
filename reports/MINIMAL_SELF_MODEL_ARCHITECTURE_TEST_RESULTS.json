@@ -1,0 +1,405 @@
+{
+  "answers": {
+    "1": "B1 ends as the single flag WITHHOLD. B2 ends with current claims at scopes ['STATE_A', 'STATE_B'], each carrying status, uncertainty, evidence ids, and revision history. The registry does hold STATE_A contradicted, STATE_B separate, and STATE_C absent at the same time.",
+    "2": "On P2 the measured state is STATE_C. B2 decided ABSTAIN with cited scope None. B2_NO_SCOPE decided ACTION_X. B1 decided ACTION_X. Scope checks passed.",
+    "3": "The STATE_A claim history is ['SUPPORTED', 'UNCERTAIN'], and the current status is CONTRADICTED. Prior statuses remain in the revision history. B1 stores only WITHHOLD.",
+    "4": "P1 read status SUPPORTED and decided ACTION_X. P3 read status UNCERTAIN and decided ABSTAIN. The decision changed when the applicable status changed.",
+    "5": "Primary correct decisions: B0 1/3, B1 1/3, B2_NO_SCOPE 1/3, B2 2/3. Primary realized effects: B0 -1.0, B1 -1.0, B2_NO_SCOPE -1.0, B2 0.0. B2 was incorrect on primary episodes: ['P6']. The primary correct-decision rate for B2 was strictly higher than both B1 and B2_NO_SCOPE.",
+    "6": "Verdict ARCHITECTURE_SUPPORTED. Scope handling matched the sealed checks. Revision matched the sealed status sequence. Decision causality held. Falsification flags: none. B2 primary misses: ['P6']."
+  },
+  "b1_claim_after_updates": {
+    "U1": "USE_LINEAR",
+    "U2": "WITHHOLD",
+    "U3": "WITHHOLD",
+    "U4": "WITHHOLD"
+  },
+  "b2_equals_b1": false,
+  "b2_equals_b2_no_scope_on_primary": false,
+  "bypass_failures": [],
+  "bypass_pass": true,
+  "causality_failures": [],
+  "causality_pass": true,
+  "episodes": [
+    {
+      "b2_scope": null,
+      "b2_status": null,
+      "correct_action": null,
+      "decision_B0": null,
+      "decision_B1": null,
+      "decision_B2": null,
+      "decision_B2_NO_SCOPE": null,
+      "episode_id": "U1",
+      "evidence_class": "CONFIRMING",
+      "evidence_outcome": 1.0,
+      "evidence_strength": "strong",
+      "ground_truth_effect": 1.0,
+      "measured_state": "STATE_A",
+      "primary": false,
+      "role": "update"
+    },
+    {
+      "b2_scope": "STATE_A",
+      "b2_status": "SUPPORTED",
+      "correct_action": "ACTION_X",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ACTION_X",
+      "decision_B2": "ACTION_X",
+      "decision_B2_NO_SCOPE": "ACTION_X",
+      "episode_id": "P1",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": 1.0,
+      "measured_state": "STATE_A",
+      "primary": false,
+      "role": "probe"
+    },
+    {
+      "b2_scope": null,
+      "b2_status": null,
+      "correct_action": "ABSTAIN",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ACTION_X",
+      "decision_B2": "ABSTAIN",
+      "decision_B2_NO_SCOPE": "ACTION_X",
+      "episode_id": "P2",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": -1.0,
+      "measured_state": "STATE_C",
+      "primary": true,
+      "role": "probe"
+    },
+    {
+      "b2_scope": null,
+      "b2_status": null,
+      "correct_action": null,
+      "decision_B0": null,
+      "decision_B1": null,
+      "decision_B2": null,
+      "decision_B2_NO_SCOPE": null,
+      "episode_id": "U2",
+      "evidence_class": "AMBIGUOUS",
+      "evidence_outcome": 0.0,
+      "evidence_strength": "none",
+      "ground_truth_effect": 1.0,
+      "measured_state": "STATE_A",
+      "primary": false,
+      "role": "update"
+    },
+    {
+      "b2_scope": "STATE_A",
+      "b2_status": "UNCERTAIN",
+      "correct_action": "ACTION_X",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ABSTAIN",
+      "decision_B2": "ABSTAIN",
+      "decision_B2_NO_SCOPE": "ABSTAIN",
+      "episode_id": "P3",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": 1.0,
+      "measured_state": "STATE_A",
+      "primary": false,
+      "role": "probe"
+    },
+    {
+      "b2_scope": null,
+      "b2_status": null,
+      "correct_action": null,
+      "decision_B0": null,
+      "decision_B1": null,
+      "decision_B2": null,
+      "decision_B2_NO_SCOPE": null,
+      "episode_id": "U3",
+      "evidence_class": "CONTRADICTORY",
+      "evidence_outcome": -1.0,
+      "evidence_strength": "strong",
+      "ground_truth_effect": 1.0,
+      "measured_state": "STATE_A",
+      "primary": false,
+      "role": "update"
+    },
+    {
+      "b2_scope": "STATE_A",
+      "b2_status": "CONTRADICTED",
+      "correct_action": "ACTION_X",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ABSTAIN",
+      "decision_B2": "ABSTAIN",
+      "decision_B2_NO_SCOPE": "ABSTAIN",
+      "episode_id": "P4",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": 1.0,
+      "measured_state": "STATE_A",
+      "primary": false,
+      "role": "probe"
+    },
+    {
+      "b2_scope": null,
+      "b2_status": null,
+      "correct_action": null,
+      "decision_B0": null,
+      "decision_B1": null,
+      "decision_B2": null,
+      "decision_B2_NO_SCOPE": null,
+      "episode_id": "U4",
+      "evidence_class": "CONFIRMING",
+      "evidence_outcome": 0.25,
+      "evidence_strength": "weak",
+      "ground_truth_effect": 0.25,
+      "measured_state": "STATE_B",
+      "primary": false,
+      "role": "update"
+    },
+    {
+      "b2_scope": "STATE_B",
+      "b2_status": "SUPPORTED",
+      "correct_action": "ACTION_X",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ABSTAIN",
+      "decision_B2": "ACTION_X",
+      "decision_B2_NO_SCOPE": "ABSTAIN",
+      "episode_id": "P5",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": 0.25,
+      "measured_state": "STATE_B",
+      "primary": false,
+      "role": "probe"
+    },
+    {
+      "b2_scope": "STATE_B",
+      "b2_status": "SUPPORTED",
+      "correct_action": "ACTION_X",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ABSTAIN",
+      "decision_B2": "ACTION_X",
+      "decision_B2_NO_SCOPE": "ABSTAIN",
+      "episode_id": "P5b",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": 0.25,
+      "measured_state": "STATE_B",
+      "primary": false,
+      "role": "probe"
+    },
+    {
+      "b2_scope": "STATE_A",
+      "b2_status": "CONTRADICTED",
+      "correct_action": "ACTION_X",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ABSTAIN",
+      "decision_B2": "ABSTAIN",
+      "decision_B2_NO_SCOPE": "ABSTAIN",
+      "episode_id": "P6",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": 1.0,
+      "measured_state": "STATE_A",
+      "primary": true,
+      "role": "probe"
+    },
+    {
+      "b2_scope": null,
+      "b2_status": null,
+      "correct_action": "ABSTAIN",
+      "decision_B0": "ACTION_X",
+      "decision_B1": "ABSTAIN",
+      "decision_B2": "ABSTAIN",
+      "decision_B2_NO_SCOPE": "ABSTAIN",
+      "episode_id": "P7",
+      "evidence_class": null,
+      "evidence_outcome": null,
+      "evidence_strength": null,
+      "ground_truth_effect": -1.0,
+      "measured_state": "STATE_C",
+      "primary": true,
+      "role": "probe"
+    }
+  ],
+  "epistemic_distinction": true,
+  "falsification": [],
+  "ground_truth_effect": {
+    "STATE_A": 1.0,
+    "STATE_B": 0.25,
+    "STATE_C": -1.0
+  },
+  "history_immutable": true,
+  "information_parity": true,
+  "leakage_failures": [],
+  "leakage_pass": true,
+  "measured_state_is_observable": true,
+  "model": null,
+  "primary_correct_count": {
+    "B0": 1,
+    "B1": 1,
+    "B2": 2,
+    "B2_NO_SCOPE": 1
+  },
+  "primary_correct_rate": {
+    "B0": 0.3333333333333333,
+    "B1": 0.3333333333333333,
+    "B2": 0.6666666666666666,
+    "B2_NO_SCOPE": 0.3333333333333333
+  },
+  "primary_ids": [
+    "P2",
+    "P6",
+    "P7"
+  ],
+  "primary_n": 3,
+  "primary_realized_effect": {
+    "B0": -1.0,
+    "B1": -1.0,
+    "B2": 0.0,
+    "B2_NO_SCOPE": -1.0
+  },
+  "protocol_sha256": "f9880f59e7e4103dc9ad9dd2a525745482dac2d74a50436186f289956b97e014",
+  "protocol_version": "MINIMAL_SELF_MODEL_ARCHITECTURE_TEST.1",
+  "representation_pass": true,
+  "reserved_seed": 32001,
+  "reserved_seed_draws": 0,
+  "revision_failures": [],
+  "revision_pass": true,
+  "scope_failures": [],
+  "scope_pass": true,
+  "snapshots": {
+    "U1": [
+      {
+        "claim_type": "MECHANISM",
+        "evidence_ids": [
+          "U1"
+        ],
+        "proposition": "ACTION_X produces a positive self-effect",
+        "revision_history": [],
+        "scope": "STATE_A",
+        "status": "SUPPORTED",
+        "uncertainty": 0.15,
+        "version": 1
+      }
+    ],
+    "U2": [
+      {
+        "claim_type": "MECHANISM",
+        "evidence_ids": [
+          "U1",
+          "U2"
+        ],
+        "proposition": "ACTION_X produces a positive self-effect",
+        "revision_history": [
+          {
+            "evidence_ids": [
+              "U1"
+            ],
+            "proposition": "ACTION_X produces a positive self-effect",
+            "scope": "STATE_A",
+            "status": "SUPPORTED",
+            "uncertainty": 0.15,
+            "version": 1
+          }
+        ],
+        "scope": "STATE_A",
+        "status": "UNCERTAIN",
+        "uncertainty": 0.7,
+        "version": 2
+      }
+    ],
+    "U3": [
+      {
+        "claim_type": "MECHANISM",
+        "evidence_ids": [
+          "U1",
+          "U2",
+          "U3"
+        ],
+        "proposition": "ACTION_X produces a positive self-effect",
+        "revision_history": [
+          {
+            "evidence_ids": [
+              "U1"
+            ],
+            "proposition": "ACTION_X produces a positive self-effect",
+            "scope": "STATE_A",
+            "status": "SUPPORTED",
+            "uncertainty": 0.15,
+            "version": 1
+          },
+          {
+            "evidence_ids": [
+              "U1",
+              "U2"
+            ],
+            "proposition": "ACTION_X produces a positive self-effect",
+            "scope": "STATE_A",
+            "status": "UNCERTAIN",
+            "uncertainty": 0.7,
+            "version": 2
+          }
+        ],
+        "scope": "STATE_A",
+        "status": "CONTRADICTED",
+        "uncertainty": 0.9,
+        "version": 3
+      }
+    ],
+    "U4": [
+      {
+        "claim_type": "MECHANISM",
+        "evidence_ids": [
+          "U1",
+          "U2",
+          "U3"
+        ],
+        "proposition": "ACTION_X produces a positive self-effect",
+        "revision_history": [
+          {
+            "evidence_ids": [
+              "U1"
+            ],
+            "proposition": "ACTION_X produces a positive self-effect",
+            "scope": "STATE_A",
+            "status": "SUPPORTED",
+            "uncertainty": 0.15,
+            "version": 1
+          },
+          {
+            "evidence_ids": [
+              "U1",
+              "U2"
+            ],
+            "proposition": "ACTION_X produces a positive self-effect",
+            "scope": "STATE_A",
+            "status": "UNCERTAIN",
+            "uncertainty": 0.7,
+            "version": 2
+          }
+        ],
+        "scope": "STATE_A",
+        "status": "CONTRADICTED",
+        "uncertainty": 0.9,
+        "version": 3
+      },
+      {
+        "claim_type": "MECHANISM",
+        "evidence_ids": [
+          "U4"
+        ],
+        "proposition": "ACTION_X produces a positive self-effect",
+        "revision_history": [],
+        "scope": "STATE_B",
+        "status": "SUPPORTED",
+        "uncertainty": 0.35,
+        "version": 1
+      }
+    ]
+  },
+  "verdict": "ARCHITECTURE_SUPPORTED"
+}
