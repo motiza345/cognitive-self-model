@@ -26,7 +26,9 @@ Agents never receive the ground-truth file, the hidden state, the probability ta
 
 ## Implementation choices
 
-These are software choices. They were written into `configs/m21_5_v1.yaml` before the primary run and are not a change to the frozen table, schedule, seeds, or reward.
+These are software choices. They were written into `configs/m21_5_v1.yaml` before any recorded outcome and are not a change to the frozen table, schedule, seeds, or reward.
+
+`m21.5-impl-1` wrote the freeze manifest and then stopped while creating the first seed directory, before any episode outcome. That manifest is preserved under `results/aborted_start/`. `m21.5-impl-2` changes only that directory creation. The environment version remains `M21.5-env-v1.0`.
 
 - Common random numbers: one uniform draw per `(seed, episode, action)`, compared with the true success probability of the sampled regime and hidden state.
 - Utility is the mean of the 0/1 rewards over the 100 episodes.

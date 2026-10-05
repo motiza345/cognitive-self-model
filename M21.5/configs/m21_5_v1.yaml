@@ -1,7 +1,7 @@
 # Frozen scientific fields are duplicated here only so the runner can
 # refuse to start if this file drifts away from ground_truth.json.
 benchmark_version: M21.5-env-v1.0
-implementation_version: m21.5-impl-1
+implementation_version: m21.5-impl-2
 episodes: 100
 seeds: [11, 23, 47, 71, 89, 101, 137, 163, 191, 223]
 

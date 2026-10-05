@@ -143,6 +143,7 @@ def run_condition(
             regime_distribution=regime_distribution,
         )
         seed_dir = destination / f"seed_{seed}"
+        seed_dir.mkdir(parents=True, exist_ok=True)
         fingerprint = environment_fingerprint(env)
         (seed_dir / "environment_fingerprint.json").write_text(
             json.dumps(fingerprint, indent=2, sort_keys=True) + "\n",
