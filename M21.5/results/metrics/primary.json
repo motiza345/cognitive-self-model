@@ -1,0 +1,1886 @@
+{
+  "agent_names": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "best_simple_mean_utility": 0.727,
+  "best_simple_utilities": [
+    0.76,
+    0.73,
+    0.73,
+    0.63,
+    0.7,
+    0.75,
+    0.76,
+    0.81,
+    0.7,
+    0.7
+  ],
+  "comparisons": {
+    "B3-B0": {
+      "high": 0.07199999999999998,
+      "low": 0.009999999999999998,
+      "mean": 0.040000000000000015,
+      "n": 10
+    },
+    "B3-B1": {
+      "high": 0.0,
+      "low": -0.0030000000000000027,
+      "mean": -0.0010000000000000009,
+      "n": 10
+    },
+    "B3-B2": {
+      "high": 0.02699999999999999,
+      "low": -0.0019999999999999905,
+      "mean": 0.01100000000000001,
+      "n": 10
+    },
+    "B3-BestSimple": {
+      "high": -0.0030000000000000027,
+      "low": -0.01599999999999997,
+      "mean": -0.008999999999999985,
+      "n": 10
+    }
+  },
+  "per_agent": {
+    "B0": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      },
+      "mean_detection_update_gain": {
+        "HIGH->LOW": null,
+        "LOW->MEDIUM": null
+      },
+      "mean_regret": 0.11187999999999998,
+      "mean_transition_update_gain": {
+        "HIGH->LOW": -0.27,
+        "LOW->MEDIUM": 0.06000000000000002
+      },
+      "mean_utility": 0.678,
+      "mismatch": {
+        "false_negative": 20,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": 0.0,
+        "true_positive": 0
+      },
+      "prediction": {
+        "brier": 0.2230701450136637,
+        "calibration_error": 0.07847645415661766,
+        "log_loss": 0.6434698391618858,
+        "mae": 0.41991872146528547
+      },
+      "utilities": [
+        0.71,
+        0.6,
+        0.63,
+        0.63,
+        0.7,
+        0.71,
+        0.68,
+        0.77,
+        0.65,
+        0.7
+      ]
+    },
+    "B1": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      },
+      "mean_detection_update_gain": {
+        "HIGH->LOW": null,
+        "LOW->MEDIUM": null
+      },
+      "mean_regret": 0.08285999999999998,
+      "mean_transition_update_gain": {
+        "HIGH->LOW": -0.23000000000000004,
+        "LOW->MEDIUM": 0.06
+      },
+      "mean_utility": 0.7190000000000001,
+      "mismatch": {
+        "false_negative": 20,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": 0.0,
+        "true_positive": 0
+      },
+      "prediction": {
+        "brier": 0.21082204980701844,
+        "calibration_error": 0.09939158634125808,
+        "log_loss": 0.6179607172068428,
+        "mae": 0.3922592759424485
+      },
+      "utilities": [
+        0.76,
+        0.73,
+        0.73,
+        0.61,
+        0.67,
+        0.75,
+        0.76,
+        0.81,
+        0.69,
+        0.68
+      ]
+    },
+    "B2": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      },
+      "mean_detection_update_gain": {
+        "HIGH->LOW": null,
+        "LOW->MEDIUM": null
+      },
+      "mean_regret": 0.08604999999999997,
+      "mean_transition_update_gain": {
+        "HIGH->LOW": -0.22000000000000003,
+        "LOW->MEDIUM": 0.05
+      },
+      "mean_utility": 0.7070000000000001,
+      "mismatch": {
+        "false_negative": 20,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": 0.0,
+        "true_positive": 0
+      },
+      "prediction": {
+        "brier": 0.21017712428229837,
+        "calibration_error": 0.08105568744611509,
+        "log_loss": 0.6114783115980891,
+        "mae": 0.41729069052522216
+      },
+      "utilities": [
+        0.75,
+        0.73,
+        0.67,
+        0.6,
+        0.66,
+        0.75,
+        0.75,
+        0.76,
+        0.7,
+        0.7
+      ]
+    },
+    "B3": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      },
+      "mean_detection_update_gain": {
+        "HIGH->LOW": null,
+        "LOW->MEDIUM": null
+      },
+      "mean_regret": 0.08021999999999999,
+      "mean_transition_update_gain": {
+        "HIGH->LOW": -0.24000000000000005,
+        "LOW->MEDIUM": 0.06999999999999999
+      },
+      "mean_utility": 0.718,
+      "mismatch": {
+        "false_negative": 19,
+        "false_positive": 0,
+        "mean_delay": 4.0,
+        "precision": 1.0,
+        "recall": 0.05,
+        "true_positive": 1
+      },
+      "prediction": {
+        "brier": 0.211234987490865,
+        "calibration_error": 0.09739114271909212,
+        "log_loss": 0.6184167610596717,
+        "mae": 0.3943559955348222
+      },
+      "utilities": [
+        0.76,
+        0.73,
+        0.73,
+        0.61,
+        0.67,
+        0.75,
+        0.75,
+        0.81,
+        0.69,
+        0.68
+      ]
+    }
+  },
+  "per_seed": [
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6166666666666667,
+          "prediction": {
+            "brier": 0.22310189223165547,
+            "calibration_error": 0.12346143132088609,
+            "log_loss": 0.6464120362868929,
+            "mae": 0.412809275697102
+          },
+          "regret": 0.10239999999999996,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.4,
+            "LOW->MEDIUM": 0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.71
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7,
+          "prediction": {
+            "brier": 0.19509423669564405,
+            "calibration_error": 0.11689160774414303,
+            "log_loss": 0.5835197117119545,
+            "mae": 0.3549052649783249
+          },
+          "regret": 0.07619999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.76
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6833333333333333,
+          "prediction": {
+            "brier": 0.19093846714356486,
+            "calibration_error": 0.09012140864305263,
+            "log_loss": 0.5655772073876384,
+            "mae": 0.3868627057889935
+          },
+          "regret": 0.05430000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.4
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.75
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7,
+          "prediction": {
+            "brier": 0.19509423669564405,
+            "calibration_error": 0.11689160774414303,
+            "log_loss": 0.5835197117119545,
+            "mae": 0.3549052649783249
+          },
+          "regret": 0.07619999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.76
+        }
+      },
+      "seed": 11
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.5333333333333333,
+          "prediction": {
+            "brier": 0.24575739715990547,
+            "calibration_error": 0.08339403139892292,
+            "log_loss": 0.6895103557421202,
+            "mae": 0.4620740676786794
+          },
+          "regret": 0.1234000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": -0.2
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.6
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7,
+          "prediction": {
+            "brier": 0.21009847316362248,
+            "calibration_error": 0.11478930459556892,
+            "log_loss": 0.6148374414492858,
+            "mae": 0.3935290062645376
+          },
+          "regret": 0.04279999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.10000000000000009,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.73
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7,
+          "prediction": {
+            "brier": 0.21037159391926802,
+            "calibration_error": 0.08317120994107828,
+            "log_loss": 0.6138407444704027,
+            "mae": 0.4153634642898002
+          },
+          "regret": 0.044099999999999986,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": -0.5
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.73
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7,
+          "prediction": {
+            "brier": 0.21009847316362248,
+            "calibration_error": 0.11478930459556892,
+            "log_loss": 0.6148374414492858,
+            "mae": 0.3935290062645376
+          },
+          "regret": 0.04279999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.10000000000000009,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.73
+        }
+      },
+      "seed": 23
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6,
+          "prediction": {
+            "brier": 0.2339366329298965,
+            "calibration_error": 0.07244972260575108,
+            "log_loss": 0.6668942471328446,
+            "mae": 0.4391154786757668
+          },
+          "regret": 0.14679999999999982,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.3
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.63
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7166666666666667,
+          "prediction": {
+            "brier": 0.2034144360632441,
+            "calibration_error": 0.09935655276634678,
+            "log_loss": 0.6026290069331673,
+            "mae": 0.38962623308753735
+          },
+          "regret": 0.0672,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.73
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6666666666666666,
+          "prediction": {
+            "brier": 0.22506169147405217,
+            "calibration_error": 0.07252617882211379,
+            "log_loss": 0.6447414677026144,
+            "mae": 0.44259427440800697
+          },
+          "regret": 0.1129999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.67
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7166666666666667,
+          "prediction": {
+            "brier": 0.2034144360632441,
+            "calibration_error": 0.09935655276634678,
+            "log_loss": 0.6026290069331673,
+            "mae": 0.38962623308753735
+          },
+          "regret": 0.0672,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.73
+        }
+      },
+      "seed": 47
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6,
+          "prediction": {
+            "brier": 0.24289341553700514,
+            "calibration_error": 0.06327724074008127,
+            "log_loss": 0.683659400837249,
+            "mae": 0.46012111217543716
+          },
+          "regret": 0.06920000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.09999999999999998,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.63
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.55,
+          "prediction": {
+            "brier": 0.25092274774157497,
+            "calibration_error": 0.08683807398427068,
+            "log_loss": 0.7051329047445972,
+            "mae": 0.45606210187678015
+          },
+          "regret": 0.05300000000000003,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.29999999999999993,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.61
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.55,
+          "prediction": {
+            "brier": 0.25018004760329204,
+            "calibration_error": 0.07050881456292334,
+            "log_loss": 0.6976170466556553,
+            "mae": 0.4789131234357268
+          },
+          "regret": 0.06790000000000002,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.09999999999999998,
+            "LOW->MEDIUM": 0.0
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.6
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.55,
+          "prediction": {
+            "brier": 0.25092274774157497,
+            "calibration_error": 0.08683807398427068,
+            "log_loss": 0.7051329047445972,
+            "mae": 0.45606210187678015
+          },
+          "regret": 0.05300000000000003,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.29999999999999993,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.61
+        }
+      },
+      "seed": 71
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.7166666666666667,
+          "prediction": {
+            "brier": 0.22126293579726547,
+            "calibration_error": 0.06633587905553016,
+            "log_loss": 0.640498731904296,
+            "mae": 0.42459181668588236
+          },
+          "regret": 0.026800000000000004,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.20000000000000007,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.7
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.65,
+          "prediction": {
+            "brier": 0.24494009715616663,
+            "calibration_error": 0.11811333282450197,
+            "log_loss": 0.6951921026054673,
+            "mae": 0.44136679888028996
+          },
+          "regret": 0.08619999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.19999999999999996,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.67
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.65,
+          "prediction": {
+            "brier": 0.2362332473307224,
+            "calibration_error": 0.12343363122429969,
+            "log_loss": 0.6707013466659244,
+            "mae": 0.4481879003113439
+          },
+          "regret": 0.09579999999999998,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.66
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.65,
+          "prediction": {
+            "brier": 0.24494009715616663,
+            "calibration_error": 0.11811333282450197,
+            "log_loss": 0.6951921026054673,
+            "mae": 0.44136679888028996
+          },
+          "regret": 0.08619999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.19999999999999996,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.67
+        }
+      },
+      "seed": 89
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.65,
+          "prediction": {
+            "brier": 0.20180422568460973,
+            "calibration_error": 0.03339136023871788,
+            "log_loss": 0.5962921153590238,
+            "mae": 0.3849443070816438
+          },
+          "regret": 0.11560000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.71
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6833333333333333,
+          "prediction": {
+            "brier": 0.18314509486861916,
+            "calibration_error": 0.05208352755330061,
+            "log_loss": 0.5540356226478064,
+            "mae": 0.34636080615949716
+          },
+          "regret": 0.07169999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.75
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6833333333333333,
+          "prediction": {
+            "brier": 0.18350263362138822,
+            "calibration_error": 0.055619175526718675,
+            "log_loss": 0.5545189330532713,
+            "mae": 0.3766734263917655
+          },
+          "regret": 0.07099999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.75
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6833333333333333,
+          "prediction": {
+            "brier": 0.18314509486861916,
+            "calibration_error": 0.05208352755330061,
+            "log_loss": 0.5540356226478064,
+            "mae": 0.34636080615949716
+          },
+          "regret": 0.07169999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.75
+        }
+      },
+      "seed": 101
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.55,
+          "prediction": {
+            "brier": 0.222513326061081,
+            "calibration_error": 0.08176723024813845,
+            "log_loss": 0.646321777005998,
+            "mae": 0.4000856353015215
+          },
+          "regret": 0.15909999999999996,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6000000000000001,
+            "LOW->MEDIUM": 0.0
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.68
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6833333333333333,
+          "prediction": {
+            "brier": 0.1908188816640145,
+            "calibration_error": 0.07745005458678264,
+            "log_loss": 0.5772811808550449,
+            "mae": 0.35380172658822034
+          },
+          "regret": 0.1065,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.4,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.76
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6666666666666666,
+          "prediction": {
+            "brier": 0.18660033973086132,
+            "calibration_error": 0.08306920663719963,
+            "log_loss": 0.5602926942105093,
+            "mae": 0.3815697262827165
+          },
+          "regret": 0.106,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.4,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.75
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": 0.19999999999999996,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              4,
+              null
+            ],
+            "false_negative": 1,
+            "false_positive": 0,
+            "mean_delay": 4.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "true_positive": 1
+          },
+          "post_utility": 0.6666666666666666,
+          "prediction": {
+            "brier": 0.19494825850248007,
+            "calibration_error": 0.05744561836512306,
+            "log_loss": 0.581841619383334,
+            "mae": 0.3747689225119566
+          },
+          "regret": 0.0801,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": -0.10000000000000009
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.75
+        }
+      },
+      "seed": 137
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6833333333333333,
+          "prediction": {
+            "brier": 0.1741583814251776,
+            "calibration_error": 0.05940468685054795,
+            "log_loss": 0.537938350279619,
+            "mae": 0.33035158994974034
+          },
+          "regret": 0.10259999999999994,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.77
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.75,
+          "prediction": {
+            "brier": 0.15998789258615445,
+            "calibration_error": 0.07789288052096616,
+            "log_loss": 0.5056311961603344,
+            "mae": 0.3084576869563607
+          },
+          "regret": 0.07120000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.81
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6666666666666666,
+          "prediction": {
+            "brier": 0.17481481080745923,
+            "calibration_error": 0.05235831415542545,
+            "log_loss": 0.5321315280899921,
+            "mae": 0.3641446707885641
+          },
+          "regret": 0.07690000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.76
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.75,
+          "prediction": {
+            "brier": 0.15998789258615445,
+            "calibration_error": 0.07789288052096616,
+            "log_loss": 0.5056311961603344,
+            "mae": 0.3084576869563607
+          },
+          "regret": 0.07120000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.81
+        }
+      },
+      "seed": 163
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6166666666666667,
+          "prediction": {
+            "brier": 0.23875268374432346,
+            "calibration_error": 0.11322554780667732,
+            "log_loss": 0.6742661238764525,
+            "mae": 0.45559454022132995
+          },
+          "regret": 0.14709999999999993,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.10000000000000009
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.65
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6666666666666666,
+          "prediction": {
+            "brier": 0.23771008983516617,
+            "calibration_error": 0.17838487559535168,
+            "log_loss": 0.6769827261820709,
+            "mae": 0.4410979311202253
+          },
+          "regret": 0.11939999999999992,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.69
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6833333333333333,
+          "prediction": {
+            "brier": 0.22109940473935163,
+            "calibration_error": 0.08089996157872975,
+            "log_loss": 0.6344259759465489,
+            "mae": 0.43819738430311717
+          },
+          "regret": 0.1159999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.7
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6666666666666666,
+          "prediction": {
+            "brier": 0.23771008983516617,
+            "calibration_error": 0.17838487559535168,
+            "log_loss": 0.6769827261820709,
+            "mae": 0.4410979311202253
+          },
+          "regret": 0.11939999999999992,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.69
+        }
+      },
+      "seed": 191
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6333333333333333,
+          "prediction": {
+            "brier": 0.22652055956571715,
+            "calibration_error": 0.08805741130092355,
+            "log_loss": 0.652905253194362,
+            "mae": 0.4294993911857518
+          },
+          "regret": 0.12579999999999994,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": 0.0
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.7
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.65,
+          "prediction": {
+            "brier": 0.23208854829597791,
+            "calibration_error": 0.07211565324134832,
+            "log_loss": 0.6643652787786992,
+            "mae": 0.43738520351271204
+          },
+          "regret": 0.1343999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": 0.0
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.68
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.6333333333333333,
+          "prediction": {
+            "brier": 0.22296900645302403,
+            "calibration_error": 0.0988489733696096,
+            "log_loss": 0.6409361717983338,
+            "mae": 0.4404002292521874
+          },
+          "regret": 0.11549999999999994,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": 0.0
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.7
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": 0.0,
+            "opportunities": 2
+          },
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "false_negative": 2,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": 0.0,
+            "true_positive": 0
+          },
+          "post_utility": 0.65,
+          "prediction": {
+            "brier": 0.23208854829597791,
+            "calibration_error": 0.07211565324134832,
+            "log_loss": 0.6643652787786992,
+            "mae": 0.43738520351271204
+          },
+          "regret": 0.1343999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": 0.0
+          },
+          "transitions": [
+            "HIGH->LOW",
+            "LOW->MEDIUM"
+          ],
+          "utility": 0.68
+        }
+      },
+      "seed": 223
+    }
+  ],
+  "post_transition_delta": -0.015000000000000003,
+  "seeds": [
+    11,
+    23,
+    47,
+    71,
+    89,
+    101,
+    137,
+    163,
+    191,
+    223
+  ]
+}

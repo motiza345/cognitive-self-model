@@ -1,0 +1,7 @@
+{
+  "draws_sha256": "690c7cde9fc3aceb70c977e22eeb2743e9d14d47405246b3f2289a04e42e4f3d",
+  "regime_distribution": "ood",
+  "regimes_sha256": "a78e879de70c8d20fbaf8a0c3c1d186f7a8acc0d30bc8836d870dfd5b7044b9c",
+  "schedule_name": "primary",
+  "seed": 89
+}

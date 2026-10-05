@@ -1,0 +1,2896 @@
+{
+  "claim": {
+    "accepted": false,
+    "b3_dsr": 0.0,
+    "best_baseline_dsr": 0.0,
+    "criteria": {
+      "advantage_after_transition": false,
+      "b3_beats_best_simple": false,
+      "causal_ablation_reduces_advantage": false,
+      "decision_separation_improves": false,
+      "delta_ci_above_zero": false,
+      "no_leakage": true,
+      "no_major_compute_confound": true,
+      "ood_advantage": false,
+      "replicates_across_seeds": false,
+      "update_gain_positive": false
+    },
+    "integrity_ok": true,
+    "interpretation": [
+      "The observed advantage may be explained by memory/reflection rather than causal Self-Modeling."
+    ],
+    "static_confound_suspected": false,
+    "verdict": "M21.5_V1_CLAIM_NOT_ACCEPTED"
+  },
+  "controls": {
+    "ablations": {
+      "B3-no-causal-structure": {
+        "full_minus_ablation": {
+          "high": 0.0,
+          "low": -0.0030000000000000027,
+          "mean": -0.0010000000000000009,
+          "n": 10
+        },
+        "mean_utility": 0.7190000000000001,
+        "minus_best_simple": {
+          "high": -0.0020000000000000013,
+          "low": -0.014999999999999968,
+          "mean": -0.007999999999999985,
+          "n": 10
+        },
+        "utilities": [
+          0.76,
+          0.73,
+          0.73,
+          0.61,
+          0.67,
+          0.75,
+          0.76,
+          0.81,
+          0.69,
+          0.68
+        ]
+      },
+      "B3-no-intervention-prediction": {
+        "full_minus_ablation": {
+          "high": 0.11599999999999996,
+          "low": 0.03699999999999999,
+          "mean": 0.07599999999999998,
+          "n": 10
+        },
+        "mean_utility": 0.642,
+        "minus_best_simple": {
+          "high": -0.050999999999999976,
+          "low": -0.11999999999999997,
+          "mean": -0.08499999999999998,
+          "n": 10
+        },
+        "utilities": [
+          0.64,
+          0.56,
+          0.65,
+          0.61,
+          0.67,
+          0.68,
+          0.67,
+          0.64,
+          0.6,
+          0.7
+        ]
+      },
+      "B3-no-uncertainty": {
+        "full_minus_ablation": {
+          "high": 0.063,
+          "low": 0.0010000000000000343,
+          "mean": 0.030000000000000016,
+          "n": 10
+        },
+        "mean_utility": 0.688,
+        "minus_best_simple": {
+          "high": -0.015000000000000003,
+          "low": -0.067,
+          "mean": -0.039,
+          "n": 10
+        },
+        "utilities": [
+          0.73,
+          0.6,
+          0.63,
+          0.63,
+          0.7,
+          0.71,
+          0.76,
+          0.77,
+          0.65,
+          0.7
+        ]
+      },
+      "B3-no-update": {
+        "full_minus_ablation": {
+          "high": 0.11599999999999996,
+          "low": 0.03699999999999999,
+          "mean": 0.07599999999999998,
+          "n": 10
+        },
+        "mean_utility": 0.642,
+        "minus_best_simple": {
+          "high": -0.050999999999999976,
+          "low": -0.11999999999999997,
+          "mean": -0.08499999999999998,
+          "n": 10
+        },
+        "utilities": [
+          0.64,
+          0.56,
+          0.65,
+          0.61,
+          0.67,
+          0.68,
+          0.67,
+          0.64,
+          0.6,
+          0.7
+        ]
+      }
+    },
+    "ood": {
+      "comparisons": {
+        "B3-B0": {
+          "high": 0.05799999999999996,
+          "low": -0.005000000000000049,
+          "mean": 0.030999999999999972,
+          "n": 10
+        },
+        "B3-B1": {
+          "high": 0.0,
+          "low": -0.03300000000000003,
+          "mean": -0.01100000000000001,
+          "n": 10
+        },
+        "B3-B2": {
+          "high": 0.044999999999999984,
+          "low": -0.02400000000000003,
+          "mean": 0.010999999999999987,
+          "n": 10
+        },
+        "B3-BestSimple": {
+          "high": 0.0,
+          "low": -0.03699999999999998,
+          "mean": -0.014000000000000002,
+          "n": 10
+        }
+      },
+      "performance": {
+        "best_simple_mean_utility": 0.709,
+        "delta_u": -0.014000000000000002,
+        "means": {
+          "B0": 0.664,
+          "B1": 0.706,
+          "B2": 0.6839999999999999,
+          "B3": 0.6950000000000001
+        }
+      }
+    },
+    "static": {
+      "comparisons": {
+        "B3-B0": {
+          "high": 0.06400000000000002,
+          "low": 0.004000000000000015,
+          "mean": 0.033000000000000015,
+          "n": 10
+        },
+        "B3-B1": {
+          "high": 0.0,
+          "low": 0.0,
+          "mean": 0.0,
+          "n": 10
+        },
+        "B3-B2": {
+          "high": 0.029000000000000015,
+          "low": -0.0029999999999999805,
+          "mean": 0.013000000000000012,
+          "n": 10
+        },
+        "B3-BestSimple": {
+          "high": 0.0,
+          "low": -0.01399999999999998,
+          "mean": -0.005999999999999994,
+          "n": 10
+        }
+      },
+      "confound_suspected": false,
+      "performance": {
+        "best_simple_mean_utility": 0.8210000000000001,
+        "delta_u": -0.005999999999999994,
+        "means": {
+          "B0": 0.782,
+          "B1": 0.8150000000000001,
+          "B2": 0.8019999999999999,
+          "B3": 0.8150000000000001
+        }
+      }
+    }
+  },
+  "decision_metrics": {
+    "dsr": {
+      "B0": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      },
+      "B1": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      },
+      "B2": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      },
+      "B3": {
+        "correct_changes": 0,
+        "dsr": 0.0,
+        "opportunities": 20
+      }
+    },
+    "mismatch": {
+      "B0": {
+        "false_negative": 20,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": 0.0,
+        "true_positive": 0
+      },
+      "B1": {
+        "false_negative": 20,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": 0.0,
+        "true_positive": 0
+      },
+      "B2": {
+        "false_negative": 20,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": 0.0,
+        "true_positive": 0
+      },
+      "B3": {
+        "false_negative": 19,
+        "false_positive": 0,
+        "mean_delay": 4.0,
+        "precision": 1.0,
+        "recall": 0.05,
+        "true_positive": 1
+      }
+    },
+    "post_transition_delta": -0.015000000000000003,
+    "prediction": {
+      "B0": {
+        "brier": 0.2230701450136637,
+        "calibration_error": 0.07847645415661766,
+        "log_loss": 0.6434698391618858,
+        "mae": 0.41991872146528547
+      },
+      "B1": {
+        "brier": 0.21082204980701844,
+        "calibration_error": 0.09939158634125808,
+        "log_loss": 0.6179607172068428,
+        "mae": 0.3922592759424485
+      },
+      "B2": {
+        "brier": 0.21017712428229837,
+        "calibration_error": 0.08105568744611509,
+        "log_loss": 0.6114783115980891,
+        "mae": 0.41729069052522216
+      },
+      "B3": {
+        "brier": 0.211234987490865,
+        "calibration_error": 0.09739114271909212,
+        "log_loss": 0.6184167610596717,
+        "mae": 0.3943559955348222
+      }
+    },
+    "regret": {
+      "B0": 0.11187999999999998,
+      "B1": 0.08285999999999998,
+      "B2": 0.08604999999999997,
+      "B3": 0.08021999999999999
+    },
+    "update_gain": {
+      "B0": {
+        "detection": {
+          "HIGH->LOW": null,
+          "LOW->MEDIUM": null
+        },
+        "transition": {
+          "HIGH->LOW": -0.27,
+          "LOW->MEDIUM": 0.06000000000000002
+        }
+      },
+      "B1": {
+        "detection": {
+          "HIGH->LOW": null,
+          "LOW->MEDIUM": null
+        },
+        "transition": {
+          "HIGH->LOW": -0.23000000000000004,
+          "LOW->MEDIUM": 0.06
+        }
+      },
+      "B2": {
+        "detection": {
+          "HIGH->LOW": null,
+          "LOW->MEDIUM": null
+        },
+        "transition": {
+          "HIGH->LOW": -0.22000000000000003,
+          "LOW->MEDIUM": 0.05
+        }
+      },
+      "B3": {
+        "detection": {
+          "HIGH->LOW": null,
+          "LOW->MEDIUM": null
+        },
+        "transition": {
+          "HIGH->LOW": -0.24000000000000005,
+          "LOW->MEDIUM": 0.06999999999999999
+        }
+      }
+    }
+  },
+  "environment": {
+    "benchmark_version": "M21.5-env-v1.0",
+    "code_commit": "900a01a76892ce33b26509e005c7d36b89bf910f",
+    "config_hash": "8a8f0a66f02dbf818600e30d2199eb3add5747b85022d3184aba5413c1e196ac",
+    "environment_hash": "8a69cf5c5d4dff7875be923fce93489b548bff80bb88325af3e25395d48a85d4",
+    "implementation_version": "m21.5-impl-2",
+    "model_revision": "none",
+    "prompt_hash": "5bd16cffe783f43cc126d04b364f23a691ea3e160e1fe3c6fe631d332ea5a082",
+    "seed_list": [
+      11,
+      23,
+      47,
+      71,
+      89,
+      101,
+      137,
+      163,
+      191,
+      223
+    ]
+  },
+  "implementation_choices": {
+    "agent_reset_seed": 0,
+    "b1_ucb_c": 1.0,
+    "b2_decay": 0.95,
+    "b2_reflection_cap": 20,
+    "b3_abs_error_threshold": 0.71,
+    "b3_min_confidence": 0.75,
+    "b3_min_episodes": 10,
+    "b3_min_gap": 10,
+    "b3_ucb_c": 1.0,
+    "b3_window": 5,
+    "beta_prior": 1.0,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 2150,
+    "causal_ablation_rule": "full_b3_minus_no_causal_structure_mean_positive_and_lower_bound_positive",
+    "ci": "paired_percentile_95",
+    "ci_positive_rule": "lower_bound_strictly_greater_than_zero",
+    "crn": "seedsequence_indexed_by_seed_episode_action",
+    "decision_separation": "phase_regime_unique_modal_action",
+    "decision_separation_improves": "b3_pooled_dsr_strictly_greater_than_max_baseline_pooled_dsr",
+    "ece_bins": 10,
+    "latent_states": [
+      "S0",
+      "S1",
+      "S2"
+    ],
+    "log_loss_clip": 1e-06,
+    "no_language_model": true,
+    "ood_rule": "ood_delta_mean_positive_and_lower_bound_positive",
+    "post_transition_episodes": [
+      41,
+      100
+    ],
+    "post_transition_rule": "point_estimate_of_paired_delta_strictly_positive",
+    "prediction_rows": "selected_action_only",
+    "regime_rng": "seedsequence_channel_17",
+    "replication_rule": "primary_ci_uses_all_10_seeds_and_lower_bound_is_positive",
+    "static_guard": "if_static_delta_lower_bound_positive_withhold_the_claim",
+    "tie_break": [
+      "DIRECT",
+      "EXTENDED_REASONING",
+      "TOOL_ASSISTED"
+    ],
+    "update_gain_for_acceptance": "detection_aligned_for_b3",
+    "update_gain_window": 10,
+    "utility_aggregation": "mean_success_over_episodes"
+  },
+  "integrity": {
+    "compute_fairness": "PASS",
+    "compute_note": "No language model is called. B3 scores three latent-state tables and B0-B2 score one regime-action table. Every agent performs one bounded arithmetic update per episode. B3 and B1 use the same UCB coefficient.",
+    "historical_immutability": "PASS",
+    "leakage": "PASS",
+    "reproducibility": "PASS"
+  },
+  "ood_details": [
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5166666666666667,
+          "regret": 0.16370000000000004,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.63
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6,
+          "regret": 0.11880000000000006,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.66
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6333333333333333,
+          "regret": 0.11300000000000007,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.69
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6,
+          "regret": 0.11880000000000006,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.66
+        }
+      },
+      "seed": 11
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.45,
+          "regret": 0.1577,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": -0.2
+          },
+          "utility": 0.58
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.5,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5833333333333334,
+          "regret": 0.12200000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.19999999999999996,
+            "LOW->MEDIUM": -0.30000000000000004
+          },
+          "utility": 0.65
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5833333333333334,
+          "regret": 0.12149999999999993,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.29999999999999993,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.65
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.5,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5833333333333334,
+          "regret": 0.12200000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.19999999999999996,
+            "LOW->MEDIUM": -0.30000000000000004
+          },
+          "utility": 0.65
+        }
+      },
+      "seed": 23
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7333333333333333,
+          "regret": 0.08710000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.8
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7333333333333333,
+          "regret": 0.08710000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.8
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7333333333333333,
+          "regret": 0.08710000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.8
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              13,
+              null
+            ],
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "post_utility": 0.55,
+          "regret": 0.13290000000000013,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.69
+        }
+      },
+      "seed": 47
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5166666666666667,
+          "regret": 0.16640000000000008,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.09999999999999998,
+            "LOW->MEDIUM": 0.39999999999999997
+          },
+          "utility": 0.57
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5333333333333333,
+          "regret": 0.07360000000000004,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6000000000000001,
+            "LOW->MEDIUM": -0.19999999999999996
+          },
+          "utility": 0.63
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5,
+          "regret": 0.09120000000000003,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.59
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5333333333333333,
+          "regret": 0.07360000000000004,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6000000000000001,
+            "LOW->MEDIUM": -0.19999999999999996
+          },
+          "utility": 0.63
+        }
+      },
+      "seed": 71
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6166666666666667,
+          "regret": 0.0974,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.19999999999999996,
+            "LOW->MEDIUM": 0.39999999999999997
+          },
+          "utility": 0.65
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 1.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.05669999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.7
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 1.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6,
+          "regret": 0.05599999999999998,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.68
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 1.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.05669999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.7
+        }
+      },
+      "seed": 89
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5166666666666667,
+          "regret": 0.08660000000000002,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.09999999999999998
+          },
+          "utility": 0.65
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.1270000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.4
+          },
+          "utility": 0.68
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5,
+          "regret": 0.12490000000000007,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.65
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.1270000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.4
+          },
+          "utility": 0.68
+        }
+      },
+      "seed": 101
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5666666666666667,
+          "regret": 0.14650000000000002,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.68
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.5,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6166666666666667,
+          "regret": 0.08180000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": -0.30000000000000004
+          },
+          "utility": 0.71
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.13830000000000006,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.67
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.5,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6166666666666667,
+          "regret": 0.08180000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": -0.30000000000000004
+          },
+          "utility": 0.71
+        }
+      },
+      "seed": 137
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7333333333333333,
+          "regret": 0.07919999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "utility": 0.81
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.75,
+          "regret": 0.05010000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.4
+          },
+          "utility": 0.82
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.75,
+          "regret": 0.05010000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.4
+          },
+          "utility": 0.82
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.75,
+          "regret": 0.05010000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.4
+          },
+          "utility": 0.82
+        }
+      },
+      "seed": 163
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.16309999999999994,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.19999999999999996,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.6
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.12059999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.09999999999999998
+          },
+          "utility": 0.69
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5,
+          "regret": 0.154,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.29999999999999993,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.57
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.12059999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.09999999999999998
+          },
+          "utility": 0.69
+        }
+      },
+      "seed": 191
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6,
+          "regret": 0.14470000000000005,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.4,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.67
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.08850000000000005,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "utility": 0.72
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.11380000000000004,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": -0.30000000000000004
+          },
+          "utility": 0.72
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.08850000000000005,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "utility": 0.72
+        }
+      },
+      "seed": 223
+    }
+  ],
+  "performance": {
+    "best_simple_mean_utility": 0.727,
+    "delta_u": -0.008999999999999985,
+    "means": {
+      "B0": 0.678,
+      "B1": 0.7190000000000001,
+      "B2": 0.7070000000000001,
+      "B3": 0.718
+    }
+  },
+  "primary_details": [
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6166666666666667,
+          "regret": 0.10239999999999996,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.4,
+            "LOW->MEDIUM": 0.09999999999999998
+          },
+          "utility": 0.71
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7,
+          "regret": 0.07619999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "utility": 0.76
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.05430000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.4
+          },
+          "utility": 0.75
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7,
+          "regret": 0.07619999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "utility": 0.76
+        }
+      },
+      "seed": 11
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.5333333333333333,
+          "regret": 0.1234000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": -0.2
+          },
+          "utility": 0.6
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7,
+          "regret": 0.04279999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.10000000000000009,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "utility": 0.73
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7,
+          "regret": 0.044099999999999986,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": -0.5
+          },
+          "utility": 0.73
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7,
+          "regret": 0.04279999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.10000000000000009,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "utility": 0.73
+        }
+      },
+      "seed": 23
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6,
+          "regret": 0.14679999999999982,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.3
+          },
+          "utility": 0.63
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7166666666666667,
+          "regret": 0.0672,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.73
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.1129999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.67
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7166666666666667,
+          "regret": 0.0672,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.73
+        }
+      },
+      "seed": 47
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6,
+          "regret": 0.06920000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.09999999999999998,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.63
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.05300000000000003,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.29999999999999993,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.61
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.06790000000000002,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.09999999999999998,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.6
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.05300000000000003,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.29999999999999993,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.61
+        }
+      },
+      "seed": 71
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.7166666666666667,
+          "regret": 0.026800000000000004,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.20000000000000007,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.7
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.08619999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.19999999999999996,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.67
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.09579999999999998,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.09999999999999998,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.66
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.08619999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.19999999999999996,
+            "LOW->MEDIUM": 0.19999999999999996
+          },
+          "utility": 0.67
+        }
+      },
+      "seed": 89
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.11560000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "utility": 0.71
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.07169999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.75
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.07099999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.75
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.07169999999999997,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6,
+            "LOW->MEDIUM": -0.09999999999999998
+          },
+          "utility": 0.75
+        }
+      },
+      "seed": 101
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.55,
+          "regret": 0.15909999999999996,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.6000000000000001,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.68
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.1065,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.4,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "utility": 0.76
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.106,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.4,
+            "LOW->MEDIUM": -0.20000000000000007
+          },
+          "utility": 0.75
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": 0.19999999999999996,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              4,
+              null
+            ],
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.0801,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": -0.10000000000000009
+          },
+          "utility": 0.75
+        }
+      },
+      "seed": 137
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.10259999999999994,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "utility": 0.77
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.75,
+          "regret": 0.07120000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "utility": 0.81
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.07690000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.30000000000000004,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "utility": 0.76
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.75,
+          "regret": 0.07120000000000001,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "utility": 0.81
+        }
+      },
+      "seed": 163
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6166666666666667,
+          "regret": 0.14709999999999993,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.20000000000000007,
+            "LOW->MEDIUM": 0.10000000000000009
+          },
+          "utility": 0.65
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.11939999999999992,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "utility": 0.69
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6833333333333333,
+          "regret": 0.1159999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.09999999999999998,
+            "LOW->MEDIUM": 0.20000000000000007
+          },
+          "utility": 0.7
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6666666666666666,
+          "regret": 0.11939999999999992,
+          "transition_update_gain": {
+            "HIGH->LOW": 0.0,
+            "LOW->MEDIUM": 0.30000000000000004
+          },
+          "utility": 0.69
+        }
+      },
+      "seed": 191
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6333333333333333,
+          "regret": 0.12579999999999994,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.7
+        },
+        "B1": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.1343999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.68
+        },
+        "B2": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.6333333333333333,
+          "regret": 0.11549999999999994,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.5,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.7
+        },
+        "B3": {
+          "detection_update_gain": {
+            "HIGH->LOW": null,
+            "LOW->MEDIUM": null
+          },
+          "dsr": 0.0,
+          "mismatch": {
+            "delays": [
+              null,
+              null
+            ],
+            "precision": null,
+            "recall": 0.0
+          },
+          "post_utility": 0.65,
+          "regret": 0.1343999999999999,
+          "transition_update_gain": {
+            "HIGH->LOW": -0.39999999999999997,
+            "LOW->MEDIUM": 0.0
+          },
+          "utility": 0.68
+        }
+      },
+      "seed": 223
+    }
+  ],
+  "static_details": [
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8666666666666667,
+          "regret": 0.059399999999999994,
+          "transition_update_gain": {},
+          "utility": 0.86
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.030400000000000014,
+          "transition_update_gain": {},
+          "utility": 0.85
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.030400000000000014,
+          "transition_update_gain": {},
+          "utility": 0.85
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.030400000000000014,
+          "transition_update_gain": {},
+          "utility": 0.85
+        }
+      },
+      "seed": 11
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7166666666666667,
+          "regret": 0.10079999999999993,
+          "transition_update_gain": {},
+          "utility": 0.71
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8666666666666667,
+          "regret": 0.017000000000000005,
+          "transition_update_gain": {},
+          "utility": 0.83
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8333333333333334,
+          "regret": 0.02060000000000001,
+          "transition_update_gain": {},
+          "utility": 0.81
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8666666666666667,
+          "regret": 0.017000000000000005,
+          "transition_update_gain": {},
+          "utility": 0.83
+        }
+      },
+      "seed": 23
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7333333333333333,
+          "regret": 0.1258,
+          "transition_update_gain": {},
+          "utility": 0.71
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8333333333333334,
+          "regret": 0.04659999999999997,
+          "transition_update_gain": {},
+          "utility": 0.8
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7833333333333333,
+          "regret": 0.10999999999999996,
+          "transition_update_gain": {},
+          "utility": 0.74
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8333333333333334,
+          "regret": 0.04659999999999997,
+          "transition_update_gain": {},
+          "utility": 0.8
+        }
+      },
+      "seed": 47
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7666666666666667,
+          "regret": 0.05000000000000004,
+          "transition_update_gain": {},
+          "utility": 0.73
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.02740000000000001,
+          "transition_update_gain": {},
+          "utility": 0.77
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7666666666666667,
+          "regret": 0.05000000000000004,
+          "transition_update_gain": {},
+          "utility": 0.73
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.02740000000000001,
+          "transition_update_gain": {},
+          "utility": 0.77
+        }
+      },
+      "seed": 71
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.012800000000000002,
+          "transition_update_gain": {},
+          "utility": 0.78
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.03599999999999999,
+          "transition_update_gain": {},
+          "utility": 0.77
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8,
+          "regret": 0.03799999999999999,
+          "transition_update_gain": {},
+          "utility": 0.75
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.03599999999999999,
+          "transition_update_gain": {},
+          "utility": 0.77
+        }
+      },
+      "seed": 89
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.12439999999999987,
+          "transition_update_gain": {},
+          "utility": 0.81
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8833333333333333,
+          "regret": 0.05420000000000003,
+          "transition_update_gain": {},
+          "utility": 0.87
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8833333333333333,
+          "regret": 0.05420000000000003,
+          "transition_update_gain": {},
+          "utility": 0.87
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8833333333333333,
+          "regret": 0.05420000000000003,
+          "transition_update_gain": {},
+          "utility": 0.87
+        }
+      },
+      "seed": 101
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7833333333333333,
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "utility": 0.82
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7833333333333333,
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "utility": 0.82
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7833333333333333,
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "utility": 0.82
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.7833333333333333,
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "utility": 0.82
+        }
+      },
+      "seed": 137
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8,
+          "regret": 0.0642,
+          "transition_update_gain": {},
+          "utility": 0.84
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.0604,
+          "transition_update_gain": {},
+          "utility": 0.85
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8,
+          "regret": 0.0642,
+          "transition_update_gain": {},
+          "utility": 0.84
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.0604,
+          "transition_update_gain": {},
+          "utility": 0.85
+        }
+      },
+      "seed": 163
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.75,
+          "regret": 0.11159999999999991,
+          "transition_update_gain": {},
+          "utility": 0.73
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.10799999999999997,
+          "transition_update_gain": {},
+          "utility": 0.8
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8166666666666667,
+          "regret": 0.08799999999999994,
+          "transition_update_gain": {},
+          "utility": 0.78
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.10799999999999997,
+          "transition_update_gain": {},
+          "utility": 0.8
+        }
+      },
+      "seed": 191
+    },
+    {
+      "agents": {
+        "B0": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.09059999999999996,
+          "transition_update_gain": {},
+          "utility": 0.83
+        },
+        "B1": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8333333333333334,
+          "regret": 0.10659999999999988,
+          "transition_update_gain": {},
+          "utility": 0.79
+        },
+        "B2": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.85,
+          "regret": 0.09059999999999996,
+          "transition_update_gain": {},
+          "utility": 0.83
+        },
+        "B3": {
+          "detection_update_gain": {},
+          "dsr": null,
+          "mismatch": {
+            "delays": [],
+            "precision": null,
+            "recall": null
+          },
+          "post_utility": 0.8333333333333334,
+          "regret": 0.10659999999999988,
+          "transition_update_gain": {},
+          "utility": 0.79
+        }
+      },
+      "seed": 223
+    }
+  ],
+  "statistics": {
+    "primary": {
+      "B3-B0": {
+        "high": 0.07199999999999998,
+        "low": 0.009999999999999998,
+        "mean": 0.040000000000000015,
+        "n": 10
+      },
+      "B3-B1": {
+        "high": 0.0,
+        "low": -0.0030000000000000027,
+        "mean": -0.0010000000000000009,
+        "n": 10
+      },
+      "B3-B2": {
+        "high": 0.02699999999999999,
+        "low": -0.0019999999999999905,
+        "mean": 0.01100000000000001,
+        "n": 10
+      },
+      "B3-BestSimple": {
+        "high": -0.0030000000000000027,
+        "low": -0.01599999999999997,
+        "mean": -0.008999999999999985,
+        "n": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+# Frozen scientific fields are duplicated here only so the runner can
+# refuse to start if this file drifts away from ground_truth.json.
+benchmark_version: M21.5-env-v1.0
+implementation_version: m21.5-impl-2
+episodes: 100
+seeds: [11, 23, 47, 71, 89, 101, 137, 163, 191, 223]
+
+implementation_choices:
+  utility_aggregation: mean_success_over_episodes
+  bootstrap_replicates: 10000
+  bootstrap_seed: 2150
+  ci: paired_percentile_95
+  ci_positive_rule: lower_bound_strictly_greater_than_zero
+  log_loss_clip: 1.0e-6
+  ece_bins: 10
+  prediction_rows: selected_action_only
+  update_gain_window: 10
+  update_gain_for_acceptance: detection_aligned_for_b3
+  decision_separation: phase_regime_unique_modal_action
+  decision_separation_improves: b3_pooled_dsr_strictly_greater_than_max_baseline_pooled_dsr
+  post_transition_episodes: [41, 100]
+  post_transition_rule: point_estimate_of_paired_delta_strictly_positive
+  replication_rule: primary_ci_uses_all_10_seeds_and_lower_bound_is_positive
+  ood_rule: ood_delta_mean_positive_and_lower_bound_positive
+  causal_ablation_rule: full_b3_minus_no_causal_structure_mean_positive_and_lower_bound_positive
+  static_guard: if_static_delta_lower_bound_positive_withhold_the_claim
+  tie_break: [DIRECT, EXTENDED_REASONING, TOOL_ASSISTED]
+  beta_prior: 1.0
+  b1_ucb_c: 1.0
+  b3_ucb_c: 1.0
+  b2_decay: 0.95
+  b2_reflection_cap: 20
+  latent_states: [S0, S1, S2]
+  b3_window: 5
+  b3_abs_error_threshold: 0.71
+  b3_min_confidence: 0.75
+  b3_min_episodes: 10
+  b3_min_gap: 10
+  agent_reset_seed: 0
+  crn: seedsequence_indexed_by_seed_episode_action
+  regime_rng: seedsequence_channel_17
+  no_language_model: true
+
+compute:
+  base_model: none
+  model_revision: none
+  prompt_revision: none
+  prompt_hash_material: NO_PROMPTS
+  max_model_calls_per_episode: 0
+  max_output_tokens: 0
+  max_memory_tokens: 0
+  temperature: null
+  sampling_parameters: null
+  major_compute_confound: false
+  asymmetry_note: >
+    No language model is called. B3 scores three latent-state tables and
+    B0-B2 score one regime-action table. Every agent performs one bounded
+    arithmetic update per episode. B3 and B1 use the same UCB coefficient.
+
+ablations:
+  B3-no-causal-structure: one latent table, no state switch, same UCB coefficient as B3
+  B3-no-update: outcome updates do not change parameters
+  B3-no-uncertainty: reported uncertainty is zero and UCB coefficient is zero
+  B3-no-intervention-prediction: actions share one regime-level probability
