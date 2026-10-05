@@ -1,0 +1,1382 @@
+{
+  "agent_names": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "best_simple_mean_utility": 0.8210000000000001,
+  "best_simple_utilities": [
+    0.86,
+    0.83,
+    0.8,
+    0.77,
+    0.78,
+    0.87,
+    0.82,
+    0.85,
+    0.8,
+    0.83
+  ],
+  "comparisons": {
+    "B3-B0": {
+      "high": 0.06400000000000002,
+      "low": 0.004000000000000015,
+      "mean": 0.033000000000000015,
+      "n": 10
+    },
+    "B3-B1": {
+      "high": 0.0,
+      "low": 0.0,
+      "mean": 0.0,
+      "n": 10
+    },
+    "B3-B2": {
+      "high": 0.029000000000000015,
+      "low": -0.0029999999999999805,
+      "mean": 0.013000000000000012,
+      "n": 10
+    },
+    "B3-BestSimple": {
+      "high": 0.0,
+      "low": -0.01399999999999998,
+      "mean": -0.005999999999999994,
+      "n": 10
+    }
+  },
+  "per_agent": {
+    "B0": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": null,
+        "opportunities": 0
+      },
+      "mean_detection_update_gain": {},
+      "mean_regret": 0.08653999999999995,
+      "mean_transition_update_gain": {},
+      "mean_utility": 0.782,
+      "mismatch": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": null,
+        "true_positive": 0
+      },
+      "prediction": {
+        "brier": 0.17615980289140384,
+        "calibration_error": 0.10215649244559658,
+        "log_loss": 0.5367659920482863,
+        "mae": 0.35316294451747005
+      },
+      "utilities": [
+        0.86,
+        0.71,
+        0.71,
+        0.73,
+        0.78,
+        0.81,
+        0.82,
+        0.84,
+        0.73,
+        0.83
+      ]
+    },
+    "B1": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": null,
+        "opportunities": 0
+      },
+      "mean_detection_update_gain": {},
+      "mean_regret": 0.061239999999999975,
+      "mean_transition_update_gain": {},
+      "mean_utility": 0.8150000000000001,
+      "mismatch": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": null,
+        "true_positive": 0
+      },
+      "prediction": {
+        "brier": 0.15815852880652187,
+        "calibration_error": 0.08790527492126603,
+        "log_loss": 0.4955742840119397,
+        "mae": 0.31626272350125245
+      },
+      "utilities": [
+        0.85,
+        0.83,
+        0.8,
+        0.77,
+        0.77,
+        0.87,
+        0.82,
+        0.85,
+        0.8,
+        0.79
+      ]
+    },
+    "B2": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": null,
+        "opportunities": 0
+      },
+      "mean_detection_update_gain": {},
+      "mean_regret": 0.06717999999999998,
+      "mean_transition_update_gain": {},
+      "mean_utility": 0.8019999999999999,
+      "mismatch": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": null,
+        "true_positive": 0
+      },
+      "prediction": {
+        "brier": 0.17187610649195442,
+        "calibration_error": 0.10222069549298256,
+        "log_loss": 0.5267172514619165,
+        "mae": 0.36309701230896657
+      },
+      "utilities": [
+        0.85,
+        0.81,
+        0.74,
+        0.73,
+        0.75,
+        0.87,
+        0.82,
+        0.84,
+        0.78,
+        0.83
+      ]
+    },
+    "B3": {
+      "dsr": {
+        "correct_changes": 0,
+        "dsr": null,
+        "opportunities": 0
+      },
+      "mean_detection_update_gain": {},
+      "mean_regret": 0.061239999999999975,
+      "mean_transition_update_gain": {},
+      "mean_utility": 0.8150000000000001,
+      "mismatch": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "mean_delay": null,
+        "precision": null,
+        "recall": null,
+        "true_positive": 0
+      },
+      "prediction": {
+        "brier": 0.15815852880652187,
+        "calibration_error": 0.08790527492126603,
+        "log_loss": 0.4955742840119397,
+        "mae": 0.31626272350125245
+      },
+      "utilities": [
+        0.85,
+        0.83,
+        0.8,
+        0.77,
+        0.77,
+        0.87,
+        0.82,
+        0.85,
+        0.8,
+        0.79
+      ]
+    }
+  },
+  "per_seed": [
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8666666666666667,
+          "prediction": {
+            "brier": 0.13285530335961523,
+            "calibration_error": 0.10446126188340435,
+            "log_loss": 0.436775383912356,
+            "mae": 0.28178184305547754
+          },
+          "regret": 0.059399999999999994,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.86
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.13791873685455835,
+            "calibration_error": 0.09547306922343837,
+            "log_loss": 0.4468118585241127,
+            "mae": 0.276730662893505
+          },
+          "regret": 0.030400000000000014,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.85
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.14762309665051704,
+            "calibration_error": 0.09928711238258675,
+            "log_loss": 0.4700999445114553,
+            "mae": 0.3241131811507011
+          },
+          "regret": 0.030400000000000014,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.85
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.13791873685455835,
+            "calibration_error": 0.09547306922343837,
+            "log_loss": 0.4468118585241127,
+            "mae": 0.276730662893505
+          },
+          "regret": 0.030400000000000014,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.85
+        }
+      },
+      "seed": 11
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7166666666666667,
+          "prediction": {
+            "brier": 0.21953132925629373,
+            "calibration_error": 0.10573983993428296,
+            "log_loss": 0.6323168449182455,
+            "mae": 0.4283068383657689
+          },
+          "regret": 0.10079999999999993,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.71
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8666666666666667,
+          "prediction": {
+            "brier": 0.15562122987821142,
+            "calibration_error": 0.06315825664575168,
+            "log_loss": 0.4952600696362924,
+            "mae": 0.31682125885079165
+          },
+          "regret": 0.017000000000000005,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.83
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8333333333333334,
+          "prediction": {
+            "brier": 0.17166368801133033,
+            "calibration_error": 0.09478939573688802,
+            "log_loss": 0.5311609646078914,
+            "mae": 0.36110907192251396
+          },
+          "regret": 0.02060000000000001,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.81
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8666666666666667,
+          "prediction": {
+            "brier": 0.15562122987821142,
+            "calibration_error": 0.06315825664575168,
+            "log_loss": 0.4952600696362924,
+            "mae": 0.31682125885079165
+          },
+          "regret": 0.017000000000000005,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.83
+        }
+      },
+      "seed": 23
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7333333333333333,
+          "prediction": {
+            "brier": 0.19372657328750972,
+            "calibration_error": 0.1035961772294901,
+            "log_loss": 0.5730172594057328,
+            "mae": 0.3767967348775603
+          },
+          "regret": 0.1258,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.71
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8333333333333334,
+          "prediction": {
+            "brier": 0.1629665131372057,
+            "calibration_error": 0.1235220347479401,
+            "log_loss": 0.5069984903312772,
+            "mae": 0.3276776137882505
+          },
+          "regret": 0.04659999999999997,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.8
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7833333333333333,
+          "prediction": {
+            "brier": 0.19699343154605853,
+            "calibration_error": 0.06063060266134251,
+            "log_loss": 0.5820993886692798,
+            "mae": 0.3990615715914284
+          },
+          "regret": 0.10999999999999996,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.74
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8333333333333334,
+          "prediction": {
+            "brier": 0.1629665131372057,
+            "calibration_error": 0.1235220347479401,
+            "log_loss": 0.5069984903312772,
+            "mae": 0.3276776137882505
+          },
+          "regret": 0.04659999999999997,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.8
+        }
+      },
+      "seed": 47
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7666666666666667,
+          "prediction": {
+            "brier": 0.21139552970420306,
+            "calibration_error": 0.15558284622368684,
+            "log_loss": 0.6183662859343115,
+            "mae": 0.4190691778318268
+          },
+          "regret": 0.05000000000000004,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.73
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.1734916870343256,
+            "calibration_error": 0.09694822565802402,
+            "log_loss": 0.5210093995702566,
+            "mae": 0.33954173104436824
+          },
+          "regret": 0.02740000000000001,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.77
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7666666666666667,
+          "prediction": {
+            "brier": 0.2213479667449544,
+            "calibration_error": 0.13659042699386995,
+            "log_loss": 0.639289829274623,
+            "mae": 0.4401105155098272
+          },
+          "regret": 0.05000000000000004,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.73
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.1734916870343256,
+            "calibration_error": 0.09694822565802402,
+            "log_loss": 0.5210093995702566,
+            "mae": 0.33954173104436824
+          },
+          "regret": 0.02740000000000001,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.77
+        }
+      },
+      "seed": 71
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.1774783816191303,
+            "calibration_error": 0.056310736177755616,
+            "log_loss": 0.5422848360958494,
+            "mae": 0.3633207073530946
+          },
+          "regret": 0.012800000000000002,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.78
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.18806861156131716,
+            "calibration_error": 0.06247315376852276,
+            "log_loss": 0.5674014975208843,
+            "mae": 0.37266606468352775
+          },
+          "regret": 0.03599999999999999,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.77
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8,
+          "prediction": {
+            "brier": 0.19727908112968645,
+            "calibration_error": 0.10796504975045106,
+            "log_loss": 0.5850071846490189,
+            "mae": 0.4024225983034627
+          },
+          "regret": 0.03799999999999999,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.75
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.18806861156131716,
+            "calibration_error": 0.06247315376852276,
+            "log_loss": 0.5674014975208843,
+            "mae": 0.37266606468352775
+          },
+          "regret": 0.03599999999999999,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.77
+        }
+      },
+      "seed": 89
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.16083256845092891,
+            "calibration_error": 0.10074909019808803,
+            "log_loss": 0.50171353339793,
+            "mae": 0.3349131635834891
+          },
+          "regret": 0.12439999999999987,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.81
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8833333333333333,
+          "prediction": {
+            "brier": 0.12328907054634776,
+            "calibration_error": 0.10245661100812047,
+            "log_loss": 0.41692133470533593,
+            "mae": 0.26890779605495774
+          },
+          "regret": 0.05420000000000003,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.87
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8833333333333333,
+          "prediction": {
+            "brier": 0.13308669321666156,
+            "calibration_error": 0.11116991762147392,
+            "log_loss": 0.44160847192194164,
+            "mae": 0.3077085311949465
+          },
+          "regret": 0.05420000000000003,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.87
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8833333333333333,
+          "prediction": {
+            "brier": 0.12328907054634776,
+            "calibration_error": 0.10245661100812047,
+            "log_loss": 0.41692133470533593,
+            "mae": 0.26890779605495774
+          },
+          "regret": 0.05420000000000003,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.87
+        }
+      },
+      "seed": 101
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7833333333333333,
+          "prediction": {
+            "brier": 0.15508940795405082,
+            "calibration_error": 0.05050466526437233,
+            "log_loss": 0.49207214321221665,
+            "mae": 0.2989259809030538
+          },
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.82
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7833333333333333,
+          "prediction": {
+            "brier": 0.15508940795405082,
+            "calibration_error": 0.05050466526437233,
+            "log_loss": 0.49207214321221665,
+            "mae": 0.2989259809030538
+          },
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.82
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7833333333333333,
+          "prediction": {
+            "brier": 0.15886042670700287,
+            "calibration_error": 0.10239287752267291,
+            "log_loss": 0.4978120876730299,
+            "mae": 0.34076364444008866
+          },
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.82
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.7833333333333333,
+          "prediction": {
+            "brier": 0.15508940795405082,
+            "calibration_error": 0.05050466526437233,
+            "log_loss": 0.49207214321221665,
+            "mae": 0.2989259809030538
+          },
+          "regret": 0.12579999999999983,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.82
+        }
+      },
+      "seed": 137
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8,
+          "prediction": {
+            "brier": 0.13616713008453202,
+            "calibration_error": 0.07005288766539997,
+            "log_loss": 0.44039000474718043,
+            "mae": 0.27132024904509594
+          },
+          "regret": 0.0642,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.84
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.13357664674707018,
+            "calibration_error": 0.06463045847891055,
+            "log_loss": 0.43411503544148355,
+            "mae": 0.26404981601060273
+          },
+          "regret": 0.0604,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.85
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8,
+          "prediction": {
+            "brier": 0.14527447595982276,
+            "calibration_error": 0.1130495950421721,
+            "log_loss": 0.46384179435954287,
+            "mae": 0.3197757343245648
+          },
+          "regret": 0.0642,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.84
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.13357664674707018,
+            "calibration_error": 0.06463045847891055,
+            "log_loss": 0.43411503544148355,
+            "mae": 0.26404981601060273
+          },
+          "regret": 0.0604,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.85
+        }
+      },
+      "seed": 163
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.75,
+          "prediction": {
+            "brier": 0.21380072024139568,
+            "calibration_error": 0.16009151407848232,
+            "log_loss": 0.6226664570015772,
+            "mae": 0.41813519617303596
+          },
+          "regret": 0.11159999999999991,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.73
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.1734837295413939,
+            "calibration_error": 0.11947163098456971,
+            "log_loss": 0.5297763300989762,
+            "mae": 0.33500834699737825
+          },
+          "regret": 0.10799999999999997,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.8
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8166666666666667,
+          "prediction": {
+            "brier": 0.18051371952379672,
+            "calibration_error": 0.06915556531346898,
+            "log_loss": 0.5411816354682576,
+            "mae": 0.3750089990189748
+          },
+          "regret": 0.08799999999999994,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.78
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.1734837295413939,
+            "calibration_error": 0.11947163098456971,
+            "log_loss": 0.5297763300989762,
+            "mae": 0.33500834699737825
+          },
+          "regret": 0.10799999999999997,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.8
+        }
+      },
+      "seed": 191
+    },
+    {
+      "agents": {
+        "B0": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.160721084956379,
+            "calibration_error": 0.11447590580100325,
+            "log_loss": 0.5080571718574644,
+            "mae": 0.3390595539862972
+          },
+          "regret": 0.09059999999999996,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.83
+        },
+        "B1": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8333333333333334,
+          "prediction": {
+            "brier": 0.17807965481073765,
+            "calibration_error": 0.10041464343301028,
+            "log_loss": 0.5453766810785617,
+            "mae": 0.3622979637860891
+          },
+          "regret": 0.10659999999999988,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.79
+        },
+        "B2": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.85,
+          "prediction": {
+            "brier": 0.16611848542971341,
+            "calibration_error": 0.1271764119048995,
+            "log_loss": 0.5150712134841253,
+            "mae": 0.36089627563315735
+          },
+          "regret": 0.09059999999999996,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.83
+        },
+        "B3": {
+          "decision_separation": {
+            "correct_changes": 0,
+            "dsr": null,
+            "opportunities": 0
+          },
+          "detection_update_gain": {},
+          "mismatch": {
+            "delays": [],
+            "false_negative": 0,
+            "false_positive": 0,
+            "mean_delay": null,
+            "precision": null,
+            "recall": null,
+            "true_positive": 0
+          },
+          "post_utility": 0.8333333333333334,
+          "prediction": {
+            "brier": 0.17807965481073765,
+            "calibration_error": 0.10041464343301028,
+            "log_loss": 0.5453766810785617,
+            "mae": 0.3622979637860891
+          },
+          "regret": 0.10659999999999988,
+          "transition_update_gain": {},
+          "transitions": [],
+          "utility": 0.79
+        }
+      },
+      "seed": 223
+    }
+  ],
+  "post_transition_delta": -0.006666666666666665,
+  "seeds": [
+    11,
+    23,
+    47,
+    71,
+    89,
+    101,
+    137,
+    163,
+    191,
+    223
+  ]
+}

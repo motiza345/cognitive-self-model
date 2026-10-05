@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "environment_seed": true,
+    "evaluator_metadata": true,
+    "future_outcomes": true,
+    "ground_truth_file_opened_by_agent": true,
+    "hidden_self_state_in_agent_events": true,
+    "prompt_or_memory_reveals_hidden_state": true,
+    "transition_schedule": true
+  },
+  "hits": [],
+  "passed": true
+}

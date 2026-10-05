@@ -1,0 +1,11 @@
+{
+  "asymmetry_note": "No language model is called. B3 scores three latent-state tables and B0-B2 score one regime-action table. Every agent performs one bounded arithmetic update per episode. B3 and B1 use the same UCB coefficient.",
+  "major_compute_confound": false,
+  "max_memory_tokens": 0,
+  "max_model_calls_per_episode": 0,
+  "max_output_tokens": 0,
+  "model_revision": "none",
+  "prompt_revision": "none",
+  "sampling_parameters": null,
+  "temperature": null
+}
