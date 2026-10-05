@@ -1,0 +1,51 @@
+{
+  "benchmark_version": "M21.5-env-v1.0",
+  "visibility": "evaluator_only",
+  "episodes": 100,
+  "states": ["HIGH", "MEDIUM", "LOW"],
+  "task_regimes": ["REASONING", "TOOL", "BALANCED"],
+  "actions": ["DIRECT", "EXTENDED_REASONING", "TOOL_ASSISTED"],
+  "regime_probabilities": {
+    "REASONING": "1/3",
+    "TOOL": "1/3",
+    "BALANCED": "1/3"
+  },
+  "ood_regime_probabilities": {
+    "REASONING": "0.70",
+    "TOOL": "0.20",
+    "BALANCED": "0.10"
+  },
+  "reward": {"SUCCESS": 1, "FAILURE": 0},
+  "intervention_cost": 0,
+  "seeds": [11, 23, 47, 71, 89, 101, 137, 163, 191, 223],
+  "schedule": [
+    {"start": 1, "end": 40, "state": "HIGH"},
+    {"start": 41, "end": 60, "state": "LOW"},
+    {"start": 61, "end": 100, "state": "MEDIUM"}
+  ],
+  "negative_control_schedule": [
+    {"start": 1, "end": 100, "state": "HIGH"}
+  ],
+  "probability_matrix": {
+    "HIGH": {
+      "REASONING": {"DIRECT": 0.78, "EXTENDED_REASONING": 0.90, "TOOL_ASSISTED": 0.45},
+      "TOOL": {"DIRECT": 0.70, "EXTENDED_REASONING": 0.62, "TOOL_ASSISTED": 0.88},
+      "BALANCED": {"DIRECT": 0.82, "EXTENDED_REASONING": 0.76, "TOOL_ASSISTED": 0.68}
+    },
+    "MEDIUM": {
+      "REASONING": {"DIRECT": 0.55, "EXTENDED_REASONING": 0.72, "TOOL_ASSISTED": 0.50},
+      "TOOL": {"DIRECT": 0.58, "EXTENDED_REASONING": 0.60, "TOOL_ASSISTED": 0.78},
+      "BALANCED": {"DIRECT": 0.68, "EXTENDED_REASONING": 0.64, "TOOL_ASSISTED": 0.60}
+    },
+    "LOW": {
+      "REASONING": {"DIRECT": 0.45, "EXTENDED_REASONING": 0.40, "TOOL_ASSISTED": 0.68},
+      "TOOL": {"DIRECT": 0.38, "EXTENDED_REASONING": 0.35, "TOOL_ASSISTED": 0.86},
+      "BALANCED": {"DIRECT": 0.62, "EXTENDED_REASONING": 0.48, "TOOL_ASSISTED": 0.44}
+    }
+  },
+  "optimal_action": {
+    "HIGH": {"REASONING": "EXTENDED_REASONING", "TOOL": "TOOL_ASSISTED", "BALANCED": "DIRECT"},
+    "MEDIUM": {"REASONING": "EXTENDED_REASONING", "TOOL": "TOOL_ASSISTED", "BALANCED": "DIRECT"},
+    "LOW": {"REASONING": "TOOL_ASSISTED", "TOOL": "TOOL_ASSISTED", "BALANCED": "DIRECT"}
+  }
+}
