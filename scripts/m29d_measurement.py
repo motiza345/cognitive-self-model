@@ -89,7 +89,7 @@ def measure_kappa(model, tokens, layer: int, direction: np.ndarray) -> dict[str,
         captured["resid"] = resid
         return resid
 
-    d = torch.tensor(direction, dtype=torch.float32, device=model.cfg.device)
+    device = next(model.parameters()).device\n    d = torch.tensor(direction, dtype=torch.float32, device=device)
     model.zero_grad(set_to_none=True)
 
     with torch.enable_grad():
