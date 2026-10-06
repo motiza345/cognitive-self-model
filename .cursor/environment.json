@@ -1,0 +1,4 @@
+{
+  "name": "Cognitive Self-Model",
+  "install": "bash scripts/install.sh"
+}

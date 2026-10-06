@@ -1,0 +1,31 @@
+# Cognitive Self-Model — Python dependencies
+#
+# NOTE: PyTorch (CPU build) is installed separately in scripts/install.sh from
+# the official CPU wheel index. It is intentionally omitted here so that a plain
+# `pip install -r requirements.txt` on a GPU host can still choose an appropriate
+# torch build. See scripts/install.sh for the pinned CPU install used by the
+# Cloud Agent environment.
+
+# Core scientific stack
+numpy==2.2.6
+scipy==1.18.1
+scikit-learn==1.9.1
+pandas==3.0.6
+
+# Mechanistic-interpretability / model stack
+# transformer_lens < 4 is required: the 4.0 release removed the
+# `HookedTransformer` API that the notebooks rely on.
+transformer_lens==3.9.0
+transformers==5.17.0
+
+# Notebook execution (notebooks/ are first-class in this repo)
+nbconvert==7.17.1
+ipykernel==7.3.0
+jupyter-client==8.10.0
+nbformat==5.11.1
+
+# Plotting and testing — required by the src/ modules and pytest suite on the
+# repository-scientific-structure line of work.
+matplotlib>=3.8,<4.0
+seaborn>=0.13,<1.0
+pytest>=8.0,<9.0
