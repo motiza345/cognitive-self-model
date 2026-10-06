@@ -6,6 +6,13 @@ Evidence-based temporal self-model and epistemic governance infrastructure.
 
 This repository is under active development.
 
+The current runnable check is IG-0, an initial mechanism-identity gate. It asks whether intervention can identify a mechanism that correlation and a position-bound predictor cannot. A pass is a result on a controlled 4-component world. It is not a complete self-model.
+
+```bash
+PYTHONPATH=src python scripts/run_initial_gate.py
+PYTHONPATH=src python tests/test_initial_gate.py
+```
+
 ## Main objectives
 
 - Mechanism-based self-diagnostic modeling
