@@ -155,6 +155,23 @@ Rules:
 
 If a genuinely disjoint catalog cannot be constructed, M29-D is not executable and must stop at design.
 
+## 7A. Frozen M29-D catalog
+
+The new pre-outcome catalog is frozen at:
+
+- catalog module: `scripts/m29d_catalog.py`
+- catalog SHA-256: `d6ecab612a2214d947be11c82671612f883c0d13e479b07e8cbaa09b635d4d77`
+- total prompts: 36
+- UPDATE: 12
+- VALIDATION: 12
+- HOLDOUT: 12
+- families: completion, syntax, instruction
+- disjointness audit: `reports/M29_D_CATALOG_AUDIT.md`
+
+The audit checked exact and normalized text/identifier overlap against M22.1, M23-G, POST-M23 single-measurement, feasibility-gate, M24, and M26 catalogs. All overlap counts were zero.
+
+No Qwen outcome, residual, or holdout statistic was loaded during this audit.
+
 ## 8. No feature search
 
 The following are explicitly forbidden:
