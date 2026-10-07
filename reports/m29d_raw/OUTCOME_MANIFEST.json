@@ -1,0 +1,28 @@
+{
+  "alpha": 1.0,
+  "baselines_fit": false,
+  "catalog_sha256": "d6ecab612a2214d947be11c82671612f883c0d13e479b07e8cbaa09b635d4d77",
+  "device": "cpu",
+  "direction_seed": 22101,
+  "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+  "dtype": "float32",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "negative_token_id": 902,
+  "outcome_rows": 108,
+  "outcome_sha256": "686689d5c9b6039af3027c087c21988ccfabbebb4965d3814d22a08aa8e811e9",
+  "partition_counts": {
+    "holdout": 36,
+    "update": 36,
+    "validation": 36
+  },
+  "positive_token_id": 9834,
+  "prediction_modified": false,
+  "prediction_sha256": "9ff6a11e6ad28128d9446db66e66f67057a4ae7ba6a4cfbf886297af6aeda33a",
+  "prediction_sha256_after_write": "9ff6a11e6ad28128d9446db66e66f67057a4ae7ba6a4cfbf886297af6aeda33a",
+  "python": "3.12.3",
+  "status": "OUTCOME_COMPLETE",
+  "torch": "2.14.0+cpu",
+  "transformer_lens": "3.9.0",
+  "verdict_executed": false
+}
