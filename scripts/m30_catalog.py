@@ -1,7 +1,10 @@
 """Frozen M30 catalog.
 
-Thirty-six prompts, fixed before any M30 prediction or outcome.
-Twelve UPDATE, twelve VALIDATION, twelve HOLDOUT.
+Forty-eight prompts, fixed before any M30 prediction or outcome.
+Twelve UPDATE, twelve VALIDATION, twenty-four HOLDOUT.
+The UPDATE and VALIDATION texts are the previous revision, byte-identical.
+The previous twelve HOLDOUT texts remain. Twelve further HOLDOUT prompts are
+the image of rule M30-HX1 in docs/M30_PROTOCOL.md. They are not a hand-picked list.
 Texts and ids are disjoint from the M22.1 through M29-D catalogs.
 """
 
@@ -12,6 +15,19 @@ import json
 
 PARTITIONS = ("update", "validation", "holdout")
 FAMILIES = ("completion", "syntax", "instruction")
+HOLDOUT_EXTENSION_RULE = "M30-HX1"
+
+# Slot tables for M30-HX1. k = 0,1,2,3 is the only index. Do not edit an
+# emitted string in place; change this rule in the protocol first.
+_EXTENSION_MATERIALS = ("birch", "copper", "ivory", "wool")
+_EXTENSION_ARTICLES = ("A", "A", "An", "A")
+_EXTENSION_IMPLEMENTS = ("burnisher", "bodkin", "mallet", "caliper")
+_EXTENSION_TARGETS = ("fore-edge", "headband", "sewing-frame", "lying-press")
+_EXTENSION_TEMPLATES = {
+    "completion": "The {material} {implement} is kept beside the {target}",
+    "syntax": "Were the {material} {implement} left upon the {target},",
+    "instruction": "Answer with a single noun. {article} {material} {implement} belongs with the:",
+}
 
 _COMPLETION = (
     "The spine of a bound volume faces",
@@ -57,6 +73,20 @@ _INSTRUCTION = (
 )
 
 
+def holdout_extension_text(family: str, k: int) -> str:
+    """Emit one M30-HX1 holdout prompt. k is 0, 1, 2, or 3."""
+    if family not in _EXTENSION_TEMPLATES:
+        raise RuntimeError(f"unknown family {family}")
+    if k not in range(4):
+        raise RuntimeError("M30-HX1 index k must be 0, 1, 2, or 3")
+    return _EXTENSION_TEMPLATES[family].format(
+        article=_EXTENSION_ARTICLES[k],
+        material=_EXTENSION_MATERIALS[k],
+        implement=_EXTENSION_IMPLEMENTS[k],
+        target=_EXTENSION_TARGETS[k],
+    )
+
+
 def catalog() -> list[dict[str, str]]:
     rows = []
     for family, texts in (
@@ -65,7 +95,7 @@ def catalog() -> list[dict[str, str]]:
         ("instruction", _INSTRUCTION),
     ):
         if len(texts) != 12:
-            raise RuntimeError(f"{family} does not have 12 prompts")
+            raise RuntimeError(f"{family} does not have 12 base prompts")
         for index, text in enumerate(texts, start=1):
             partition = PARTITIONS[(index - 1) % 3]
             rows.append(
@@ -76,7 +106,33 @@ def catalog() -> list[dict[str, str]]:
                     "partition": partition,
                 }
             )
+        for k in range(4):
+            index = 13 + k
+            rows.append(
+                {
+                    "prompt_id": f"m30-{family}-{index:02d}",
+                    "family": family,
+                    "text": holdout_extension_text(family, k),
+                    "partition": "holdout",
+                }
+            )
     return rows
+
+
+def partition_manifest_sha256(partition: str) -> str:
+    """SHA-256 of one partition's rows, sorted by prompt_id.
+
+    The payload is JSON with sorted keys and no whitespace. This is the
+    hash the design-lock test compares to the previous revision.
+    """
+    if partition not in PARTITIONS:
+        raise RuntimeError(f"unknown partition {partition}")
+    subset = sorted(
+        (row for row in catalog() if row["partition"] == partition),
+        key=lambda row: row["prompt_id"],
+    )
+    encoded = json.dumps(subset, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def catalog_sha256() -> str:

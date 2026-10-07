@@ -26,18 +26,28 @@ from src.cognitive_self_model.m23.m22_reuse import frozen_prompts
 REPORT_PATH = ROOT / "reports" / "M30_CATALOG_AUDIT.md"
 
 
-def _flatten(rows) -> dict[str, str]:
-    return {str(row["prompt_id"]): str(row["text"]) for row in rows}
-
-
 def _norm(text: str) -> str:
     return " ".join(text.split()).casefold()
 
 
+def _index(row: dict[str, str]) -> int:
+    return int(str(row["prompt_id"]).rsplit("-", 1)[1])
+
+
+def _overlap(left_ids: list[str], left_texts: list[str], right: list[dict[str, str]]) -> dict[str, list[str]]:
+    right_ids = [str(row["prompt_id"]) for row in right]
+    right_texts = [str(row["text"]) for row in right]
+    return {
+        "id_overlap": sorted(set(left_ids) & set(right_ids)),
+        "text_overlap": sorted(set(left_texts) & set(right_texts)),
+        "normalized_text_overlap": sorted({_norm(text) for text in left_texts} & {_norm(text) for text in right_texts}),
+    }
+
+
 def audit() -> dict[str, object]:
     new = catalog()
-    if len(new) != 36:
-        raise AssertionError("M30 catalog must contain 36 rows")
+    if len(new) != 48:
+        raise AssertionError("M30 catalog must contain 48 rows")
     ids = [row["prompt_id"] for row in new]
     texts = [row["text"] for row in new]
     if len(ids) != len(set(ids)):
@@ -48,12 +58,25 @@ def audit() -> dict[str, object]:
         raise AssertionError("family coverage is incomplete")
     if {row["partition"] for row in new} != set(PARTITIONS):
         raise AssertionError("partition coverage is incomplete")
+    expected_n = {"update": 12, "validation": 12, "holdout": 24}
+    expected_per_family = {"update": 4, "validation": 4, "holdout": 8}
     for partition in PARTITIONS:
         rows = [row for row in new if row["partition"] == partition]
-        if len(rows) != 12:
-            raise AssertionError(f"{partition} must contain 12 prompts")
-        if {row["family"] for row in rows} != set(FAMILIES):
-            raise AssertionError(f"{partition} is missing a family")
+        if len(rows) != expected_n[partition]:
+            raise AssertionError(f"{partition} must contain {expected_n[partition]} prompts")
+        for family in FAMILIES:
+            count = sum(row["family"] == family for row in rows)
+            if count != expected_per_family[partition]:
+                raise AssertionError(f"{partition} must contain {expected_per_family[partition]} {family} prompts")
+    extension = [row for row in new if _index(row) >= 13]
+    if len(extension) != 12:
+        raise AssertionError("M30-HX1 must add 12 holdout prompts")
+    for family in FAMILIES:
+        indexes = sorted(_index(row) for row in extension if row["family"] == family)
+        if indexes != [13, 14, 15, 16]:
+            raise AssertionError(f"M30-HX1 indices for {family} must be 13..16")
+    if any(row["partition"] != "holdout" for row in extension):
+        raise AssertionError("M30-HX1 rows must be holdout prompts")
 
     old_catalogs = {
         "M22.1": [{"prompt_id": prompt.prompt_id, "text": prompt.text} for prompt in frozen_prompts()],
@@ -65,20 +88,21 @@ def audit() -> dict[str, object]:
         "M29-D": m29_catalog(),
     }
     overlaps = {}
-    old_texts: set[str] = set()
     for name, rows in old_catalogs.items():
-        pairs = _flatten(rows)
-        id_overlap = sorted(set(ids) & set(pairs))
-        text_overlap = sorted(set(texts) & set(pairs.values()))
-        normalized_overlap = sorted({_norm(text) for text in texts} & {_norm(text) for text in pairs.values()})
-        overlaps[name] = {
-            "id_overlap": id_overlap,
-            "text_overlap": text_overlap,
-            "normalized_text_overlap": normalized_overlap,
-        }
-        if id_overlap or text_overlap or normalized_overlap:
-            raise AssertionError(f"overlap with {name}: {overlaps[name]}")
-        old_texts |= set(pairs.values())
+        overlaps[name] = _overlap(ids, texts, rows)
+        item = overlaps[name]
+        if item["id_overlap"] or item["text_overlap"] or item["normalized_text_overlap"]:
+            raise AssertionError(f"overlap with {name}: {item}")
+
+    internal_overlaps = {}
+    extension_ids = [row["prompt_id"] for row in extension]
+    extension_texts = [row["text"] for row in extension]
+    for partition in ("update", "validation"):
+        other = [row for row in new if row["partition"] == partition]
+        internal_overlaps[partition] = _overlap(extension_ids, extension_texts, other)
+        item = internal_overlaps[partition]
+        if item["id_overlap"] or item["text_overlap"] or item["normalized_text_overlap"]:
+            raise AssertionError(f"new holdout overlaps {partition}: {item}")
 
     partition_sets = {partition: {row["prompt_id"] for row in new if row["partition"] == partition} for partition in PARTITIONS}
     for left, right in (("update", "validation"), ("update", "holdout"), ("validation", "holdout")):
@@ -93,6 +117,7 @@ def audit() -> dict[str, object]:
         "families": {family: sum(row["family"] == family for row in new) for family in FAMILIES},
         "historical_catalogs_checked": list(old_catalogs),
         "overlaps": overlaps,
+        "internal_overlaps": internal_overlaps,
         "outcome_data_loaded": False,
         "qwen_loaded": False,
         "m29_holdout_statistics_loaded": False,
@@ -110,12 +135,13 @@ def render(result: dict[str, object]) -> str:
         "",
         "## Structure",
         "",
-        "- Total prompts: **36**",
+        "- Total prompts: **48**",
         "- UPDATE: **12**",
         "- VALIDATION: **12**",
-        "- HOLDOUT: **12**",
+        "- HOLDOUT: **24**",
         "- Families: completion / syntax / instruction",
-        "- Each partition contains 4 prompts from each family.",
+        "- UPDATE and VALIDATION contain 4 prompts from each family.",
+        "- HOLDOUT contains 8 prompts from each family.",
         "- Partition intersections: **0**",
         "",
         "## Historical catalogs",
@@ -139,8 +165,18 @@ def render(result: dict[str, object]) -> str:
         lines.append(
             f"| {labels[name]} | {len(item['text_overlap'])} | {len(item['normalized_text_overlap'])} | {len(item['id_overlap'])} |"
         )
+    internal = result["internal_overlaps"]
     lines.extend(
         [
+            "",
+            "## Inside M30",
+            "",
+            "The twelve M30-HX1 holdout prompts were compared with UPDATE and with VALIDATION on exact id, exact text, and whitespace-collapsed case-folded text.",
+            "",
+            "| Comparison | Exact text overlap | Normalized text overlap | ID overlap |",
+            "| --- | ---: | ---: | ---: |",
+            f"| New holdout vs UPDATE | {len(internal['update']['text_overlap'])} | {len(internal['update']['normalized_text_overlap'])} | {len(internal['update']['id_overlap'])} |",
+            f"| New holdout vs VALIDATION | {len(internal['validation']['text_overlap'])} | {len(internal['validation']['normalized_text_overlap'])} | {len(internal['validation']['id_overlap'])} |",
             "",
             "## Outcome leakage",
             "",
@@ -153,7 +189,7 @@ def render(result: dict[str, object]) -> str:
             "",
             "## Frozen partition rule",
             "",
-            "For each family, index 1..12 is assigned `(index - 1) mod 3` to UPDATE, VALIDATION, HOLDOUT.",
+            "For each family, index 1..12 is assigned `(index - 1) mod 3` to UPDATE, VALIDATION, HOLDOUT. Indices 13..16 are HOLDOUT by rule M30-HX1.",
             "",
             "## Scientific status",
             "",
