@@ -71,7 +71,14 @@ def test_prediction_lock_matches_frozen_hash() -> None:
     assert len(predictions) == 288
 
 
-def test_prediction_hash_mismatch_aborts_before_model(monkeypatch) -> None:
+def _empty_outcome_paths(monkeypatch, tmp_path: Path) -> None:
+    monkeypatch.setattr("scripts.run_m30_outcomes.OUTCOMES_PATH", tmp_path / "OUTCOMES.json")
+    monkeypatch.setattr("scripts.run_m30_outcomes.VERDICT_PATH", tmp_path / "VERDICT.json")
+    monkeypatch.setattr("scripts.run_m30_outcomes.REPORT_PATH", tmp_path / "REPORT.md")
+
+
+def test_prediction_hash_mismatch_aborts_before_model(monkeypatch, tmp_path: Path) -> None:
+    _empty_outcome_paths(monkeypatch, tmp_path)
     monkeypatch.setattr(
         "scripts.run_m30_outcomes.EXPECTED_PREDICTION_SHA256",
         "0" * 64,
@@ -89,7 +96,8 @@ def test_prediction_hash_mismatch_aborts_before_model(monkeypatch) -> None:
         raise AssertionError("hash mismatch did not abort")
 
 
-def test_catalog_hash_mismatch_aborts_before_model(monkeypatch) -> None:
+def test_catalog_hash_mismatch_aborts_before_model(monkeypatch, tmp_path: Path) -> None:
+    _empty_outcome_paths(monkeypatch, tmp_path)
     monkeypatch.setattr("scripts.run_m30_pre_outcome.LOCKED_CATALOG_SHA256", "0" * 64)
 
     def fail_if_called():
@@ -104,7 +112,8 @@ def test_catalog_hash_mismatch_aborts_before_model(monkeypatch) -> None:
         raise AssertionError("catalog mismatch did not abort")
 
 
-def test_magnitude_mismatch_aborts_before_model(monkeypatch) -> None:
+def test_magnitude_mismatch_aborts_before_model(monkeypatch, tmp_path: Path) -> None:
+    _empty_outcome_paths(monkeypatch, tmp_path)
     def fail(*args, **kwargs):
         del args, kwargs
         return {"arm": "x", "cells": [], "finite": False, "passed": False}
