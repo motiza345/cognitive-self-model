@@ -46,3 +46,13 @@ Prompt-level means of three cells, 24 prompts, 5000 draws, seed 23001. Delta is 
 Seconds for M1 and M2 are median wall-clock per holdout row. Black-box seconds are `k` times the median forward. Verification forwards and `f0` are not charged.
 
 Timed rows: 144. Runtime seconds: 1136.8370753150002.
+
+## Erratum
+
+The decision rule was exhaustive-incomplete. A literal reading of the three clauses gives neither `GO`, `PIVOT`, nor `STOP` on these unchanged numbers. The label is `UNDEFINED_BY_RULE`. The earlier `STOP` label is withdrawn.
+
+- `GO` requires, at `s=4` and `s=8` in both arms, a relative reduction of at least 0.25, a paired interval lower bound above 0, and `median(miss_M2) <= median(miss of BB_3)`. The new-identity `s=4` lower bound is `-0.10442611582747512`.
+- `PIVOT` requires that M2 beat M1 and that `BB_3` have the strictly lower median miss at `s=4` and `s=8`. On all four conditions the M2 median is the smaller one.
+- `STOP` requires that M2 not beat M1 at `s=4` and `s=8`. M2 beats M1 on three of the four conditions, including both arms at `s=8`.
+
+No number in this file has been changed.
