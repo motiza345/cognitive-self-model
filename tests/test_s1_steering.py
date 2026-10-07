@@ -54,7 +54,7 @@ class _Mock(nn.Module):
         return columns.view(1, 1, 4).expand(1, resid.shape[1], 4).contiguous()
 
 
-def test_s1_smoke_mock_model(monkeypatch) -> None:
+def test_s1_smoke_mock_model(monkeypatch, tmp_path) -> None:
     assert solve_m2(1.0, 0.0, 4) == 4.0
     assert solve_m2(1.0, -1.0, 1) == 0.5
     assert abs(solve_m2(1.0, -0.16, 1) - 1.25) < 1e-9
@@ -170,6 +170,8 @@ def test_s1_smoke_mock_model(monkeypatch) -> None:
     assert digest == "f363d93869f27d65cf6ad907a6442600a02f999fa374c7a7bcb1bda6d6e6abb5"
     assert len(predictions) == 288
 
+    monkeypatch.setattr("scripts.run_s1_steering.REPORT_PATH", tmp_path / "S1_REPORT.md")
+    monkeypatch.setattr("scripts.run_s1_steering.RAW_PATH", tmp_path / "ROWS.json")
     monkeypatch.setattr("scripts.run_s1_steering.EXPECTED_PREDICTION_SHA256", "0" * 64)
 
     def fail_if_called():
