@@ -106,8 +106,10 @@ def test_mock_model_predictions_do_not_compute_outcomes() -> None:
     assert new_hooks == ["blocks.4.hook_resid_post"] * 48
 
 
-def test_catalog_hash_mismatch_aborts(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_catalog_hash_mismatch_aborts(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
     monkeypatch.setattr("scripts.run_m30_pre_outcome.CATALOG_SHA256", "0" * 64)
+    monkeypatch.setattr("scripts.run_m30_pre_outcome.PREDICTIONS_PATH", tmp_path / "PRE_OUTCOME_PREDICTIONS.json")
+    monkeypatch.setattr("scripts.run_m30_pre_outcome.MANIFEST_PATH", tmp_path / "PRE_OUTCOME_MANIFEST.json")
 
     def fail_if_called():
         raise AssertionError("model loaded after a catalog mismatch")
