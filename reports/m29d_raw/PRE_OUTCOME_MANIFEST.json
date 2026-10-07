@@ -1,0 +1,45 @@
+{
+  "catalog_sha256": "d6ecab612a2214d947be11c82671612f883c0d13e479b07e8cbaa09b635d4d77",
+  "device": "cpu",
+  "measurement_manifest": {
+    "alpha": 1.0,
+    "autodiff": "torch.autograd.grad_create_graph_hessian_vector_product",
+    "device_policy": "cuda_if_available_else_cpu",
+    "direction_dimension": 896,
+    "direction_seed": 22101,
+    "direction_sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411",
+    "dtype": "float32",
+    "finite_difference": false,
+    "hooks": {
+      "M22.1-D1-L0": "blocks.0.hook_resid_post",
+      "M22.1-D1-L15": "blocks.15.hook_resid_post",
+      "M22.1-D1-L8": "blocks.8.hook_resid_post"
+    },
+    "layers": [
+      0,
+      8,
+      15
+    ],
+    "manifest_sha256": "00d3c682d11272386c47b31affbdfecf40bceadd16702b850a38f71e3052da56",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "negative_token_id": 902,
+    "numerical_tolerance": 1e-06,
+    "outcome_inputs": false,
+    "positive_token_id": 9834,
+    "residual_inputs": false
+  },
+  "model": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "outcome_fields_present": false,
+  "partition_counts": {
+    "holdout": 36,
+    "update": 36,
+    "validation": 36
+  },
+  "prediction_rows": 108,
+  "prediction_sha256": "9ff6a11e6ad28128d9446db66e66f67057a4ae7ba6a4cfbf886297af6aeda33a",
+  "python": "3.12.3",
+  "scored_intervention_executed": false,
+  "status": "PRE_OUTCOME_COMPLETE"
+}
