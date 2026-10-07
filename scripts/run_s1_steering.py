@@ -331,8 +331,8 @@ def time_gradient(model: Any, tokens: Any, hook: str, direction: Any, positive_i
     started = time.perf_counter()
     captured: dict[str, Any] = {}
 
-    def capture(resid: Any, hook_obj: Any) -> Any:
-        del hook_obj
+    def capture(resid: Any, hook: Any) -> Any:
+        del hook
         if not resid.requires_grad:
             raise RuntimeError("hook residual does not require grad")
         captured["resid"] = resid

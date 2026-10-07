@@ -44,7 +44,7 @@ class _Mock(nn.Module):
         del tokens
         resid = torch.zeros(1, 3, 896, dtype=torch.float32) + self.anchor
         for _name, fn in fwd_hooks:
-            resid = fn(resid, None)
+            resid = fn(resid, hook=None)
         return self._logits(resid)
 
     def _logits(self, resid: torch.Tensor) -> torch.Tensor:
