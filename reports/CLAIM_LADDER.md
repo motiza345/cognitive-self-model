@@ -133,9 +133,28 @@ A prior cloud session mentioned `/workspace/cognitive-self-model-pre-m217.bundle
 
 ---
 
+## S-SIM (simulation study; `simulations/ssim/`)
+
+**Verdict:** pre-registered predictions in `SIM_PREREG.md`: 9 met, 4 not met (P3, P7 second part, P11, P14). Not a hash-locked Qwen result.
+
+**Claimed.** Simulated learning agents with an injected property of the agent itself (execution bias, habit, error profile). A self-model that learns the property from the agent's own history closes about 87% to 99% of the gap to an agent that knows it (budgeting, hide-and-seek against an adaptive predictor, verify-or-abstain). No gain against a static opponent; no change in unaided accuracy; gains when allocation options exist. In a head-to-head match the self-model agent wins by 0.198 hits per round, identical agents tie. Sophistication can hurt (quasi-hyperbolic benchmark reproduced). Opponent model and self-model are substitutes when the opponent's predictions are visible.
+
+**NOT claimed.** Anything about LLM agents; that the placebo checks (P3, P7, P11) are interpretable (the placebo carried partial information); that the self-model beats global calibration in E3 V3 (the self-model never learned there: P14, an exploration trap).
+
+**Scope limits.** Injected properties, observed own execution, tabular agents, 30 seeds, one run.
+
+**Links.** `simulations/ssim/SIM_PREREG.md`, `SIM_RESULTS.md`, `sim_all.py`, `sim_results.json`.
+
+## Exploratory (post hoc): reliability signal
+
+On M30 outcome rows, abs(kappa) predicts the remaining error after correction (Spearman 0.764 [0.66, 0.83] new identity; 0.605 [0.44, 0.72] anchor, holdout), far above abs(g). Keeping the 25% lowest abs(kappa) rows cuts the mean remaining error about 10x. Not pre-registered; a finite-difference probe computes the same quantity, so it gives no privileged access.
+
+---
+
 ## Claim ladder
 
-1. **Pre-outcome prediction of own response:** **supported in scope** (M24 consumption of `g`; M29-D `SUPPORTED`; M30 new identity `SUPPORTED` + `ANCHOR_SUPPORTED`). Scope = one small Qwen, listed directions/layers, last-token margin, alpha steering as above.
-2. **Privileged access over cheap probing:** **NOT supported** (S2: 0/4 white-box advantage; FDQ with 3 forwards matches M2 on median miss and time).
-3. **Decision utility in agent tasks:** **untested** (S1 is margin-steering only and ended `UNDEFINED_BY_RULE`; M21.5/M21.6 are a different synthetic line and M21.6 is not remote-authenticated here).
-4. **Competition:** **untested**.
+1. **Pre-outcome prediction of own response:** **supported in scope** (M24 consumption of `g`; M29-D `SUPPORTED`; M30 new identity `SUPPORTED` + `ANCHOR_SUPPORTED`). Scope = one small Qwen, listed directions/layers, last-token margin, alpha steering as above. Exploratory: abs(kappa) is a reliability signal.
+2. **Privileged access over cheap probing:** **NOT supported** (S2: 0/4 white-box advantage; FDQ with 3 forwards matches M2 on median miss and time). Learned external observer: untested (planned M33).
+3. **Decision utility in agent tasks:** **supported in simulation only** (S-SIM, injected properties); **untested with LLM agents** (planned M34). S1 is margin-steering only and ended `UNDEFINED_BY_RULE`; M21.5/M21.6 are a different synthetic line and M21.6 is not remote-authenticated here.
+4. **Competition:** **simulation only** (S-SIM match); with a visible opponent model the self-model is a substitute, not a complement. LLM competition untested.
+5. **Cross-weights specificity and stability after modification:** untested (planned M31, M32).
