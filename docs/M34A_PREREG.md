@@ -1,10 +1,10 @@
 # M34a — Track-record self-knowledge (answer / abstain / verify)
 
-**Status:** DESIGN_LOCKED (answerer/compute amended to local Qwen; no pilot or pool data yet)  
+**Status:** DESIGN_LOCKED — **Amendment 1** (pilot 1 superseded before any pool collection; pilot 2 not yet run)  
 **Branch:** `cursor/m34a`  
 **Question:** Does self-knowledge from a track record improve a real LLM's answer/abstain/verify decisions beyond global calibration, and does the LLM's own stated confidence add instance-level value beyond a difficulty-level track record?
 
-This file is the pre-registration. Outcomes must not be collected until this file is committed and pushed, the collection/analysis scripts are committed and pushed, and (after the Colab pilot) `reports/m34a_pilot/levels.json` plus the pool plan JSON are committed and pushed.
+This file is the pre-registration. Outcomes must not be collected until this file (including Amendment 1) is committed and pushed, the collection/analysis scripts are committed and pushed, and (after Colab pilot 2) `reports/m34a_pilot2/levels.json` plus the pool plan JSON are committed and pushed.
 
 ---
 
@@ -128,8 +128,106 @@ Utilities of all arms and all `n_h`; V2 results; selective accuracy; risk-covera
 | --- | --- |
 | `docs/M34A_PREREG.md` | this file |
 | `docs/M34A_RUN.md` | Colab runbook |
-| `reports/m34a_pilot/levels.json` | pilot choice (after Colab) |
-| `reports/m34a_pilot/pool_plan.json` | committed operands before collection |
+| `reports/m34a_pilot1/` | frozen pilot 1 record (superseded) |
+| `reports/m34a_pilot/` | historical pilot 1 + unused mul n×n pool plan (do not delete) |
+| `reports/m34a_pilot2/levels.json` | pilot 2 choice (after Colab) |
+| `reports/m34a_pilot2/pool_plan.json` | committed operands before collection |
 | `reports/m34a_raw/` | JSONL cache + manifest |
 | `reports/M34A_REPORT.md` | one-run report |
 | `reports/CLAIM_LADDER.md` | append-only update after report |
+
+---
+
+## Amendment 1 — Task families and informativeness gates (BEFORE pilot 2)
+
+**Written and pushed before any pilot 2 generation.** Arms, utilities, history draws, bootstrap (5000 / seed 23001), and the A/B decision inequalities are unchanged except for the gate additions and the C label below. No CAL/HIST/TEST data exist yet.
+
+### A1.1 Why
+
+Pilot 1 (`reports/m34a_pilot1/`): mul `n×n` for `n=2..8` gave accuracies **0.85, 0.10, 0, 0, 0, 0, 0**. The old rule selected levels 2..7, but the ladder is a step with no within-level variance for `n≥4`. That design is superseded before collection.
+
+### A1.2 Answerer (unchanged pin)
+
+- Model: `Qwen/Qwen2.5-3B-Instruct`
+- Revision: `aa8e72537993ba99e69dfaafa59ed015b17504d1` (pilot 1 pin; re-verify with `model_info().sha` before collection and record in the manifest)
+- Greedy decode, float16 with float32 rerun guard, Colab T4 — as in §1
+
+### A1.3 Candidate families
+
+| Family id | Operation | Level `n` | Operands |
+| --- | --- | --- | --- |
+| `add_nn` | addition | `3..15` | n-digit + n-digit |
+| `mul_n2` | multiplication | `2..8` | n-digit × 2-digit |
+| `mul_n1` | multiplication | `2..10` | n-digit × 1-digit |
+
+Prompt (identical structure for every call; op is `+` or `x`):
+
+`Compute A + B` or `Compute A x B`. **`Reply with only the integer.`**
+
+Parse: first integer in the reply (commas stripped); unparsable = wrong. No confidence is elicited under this prompt; stated-confidence arms therefore receive the default **confidence = 50** (unchanged parse default). Verbal arms remain in the arm table for protocol continuity; under Amendment 1 they carry no instance-specific verbal signal unless a later amendment restores a confidence prompt.
+
+### A1.4 Pilot 2
+
+- Seed **34002**; 20 problems per level in each family; problems **disjoint from pilot 1**.
+- About **580** generations: `13×20 + 7×20 + 9×20 = 580`.
+- Artifact: `reports/m34a_pilot2/levels.json` (and optional raw).
+
+**Selection rule** (pure function; unit-tested): for each family and each window of **6 contiguous** levels,  
+`score = #{levels in window with pilot accuracy ∈ [0.15, 0.85]}`.  
+Choose the maximum score; ties → larger `(max − min)` accuracy in the window; then family order **`add_nn`, `mul_n2`, `mul_n1`**; then **lower** levels.  
+If the best score is **&lt; 4**, **STOP** and report (no experiment). Fallback (switch model or allow reasoning) only if the owner authorizes it later.
+
+### A1.5 Pools
+
+After a non-STOP pilot 2: per chosen level, CAL 100 / HIST 60 / TEST 40 (1200 calls), disjoint from each other and from pilots 1 and 2. Plan file `reports/m34a_pilot2/pool_plan.json` generated from seed **34001** and **committed before collection**. The superseded `reports/m34a_pilot/pool_plan.json` is not used.
+
+### A1.6 Gate additions and exhaustive labels (V3, `n_h = 10`)
+
+Keep the original utility gate:
+
+- `GATE_OK` iff `U(oracle_level) − U(global) ≥ 0.05` (point estimate).
+
+Additional CAL checks (point estimates on the CAL pool):
+
+- `SPREAD_OK` iff at least **3** chosen levels have CAL accuracy in `[0.15, 0.85]`.
+- `VAR_OK` iff at least **3** chosen levels have at least **15** correct **and** at least **15** wrong CAL answers.
+
+**A (track-record self-knowledge):**
+
+- If `not GATE_OK` **or** `not SPREAD_OK`: `A = NOT_INFORMATIVE`
+- Else same as §7: `SUPPORTED` / `SUPPORTED_WEAK` / `NOT_SUPPORTED`
+
+**C (instance-level introspection; replaces the recorded B slot under Amendment 1):**
+
+- If `not VAR_OK`: `C = NOT_INFORMATIVE`
+- Else: `INTROSPECTION_VALUE` if CI lower bound of `(verbal_cal − self) > 0` and point estimate `≥ 0.03`; otherwise `INTROSPECTION_NONE`
+
+(The name **B** in §7–§9 is aliased to **C** for reporting under Amendment 1.)
+
+**Exhaustive recorded triple `(GATE_OK, A, C)` — every cell is allowed; no gaps:**
+
+| GATE_OK | A | C |
+| --- | --- | --- |
+| false | NOT_INFORMATIVE | NOT_INFORMATIVE |
+| false | NOT_INFORMATIVE | INTROSPECTION_NONE |
+| false | NOT_INFORMATIVE | INTROSPECTION_VALUE |
+| true | NOT_INFORMATIVE | NOT_INFORMATIVE |
+| true | NOT_INFORMATIVE | INTROSPECTION_NONE |
+| true | NOT_INFORMATIVE | INTROSPECTION_VALUE |
+| true | NOT_SUPPORTED | NOT_INFORMATIVE |
+| true | NOT_SUPPORTED | INTROSPECTION_NONE |
+| true | NOT_SUPPORTED | INTROSPECTION_VALUE |
+| true | SUPPORTED_WEAK | NOT_INFORMATIVE |
+| true | SUPPORTED_WEAK | INTROSPECTION_NONE |
+| true | SUPPORTED_WEAK | INTROSPECTION_VALUE |
+| true | SUPPORTED | NOT_INFORMATIVE |
+| true | SUPPORTED | INTROSPECTION_NONE |
+| true | SUPPORTED | INTROSPECTION_VALUE |
+
+When `GATE_OK` is false, A is always `NOT_INFORMATIVE` by rule (C may still be scored for description). When `not SPREAD_OK` with `GATE_OK`, A is `NOT_INFORMATIVE` and C follows VAR_OK. Impossible combinations (e.g. `GATE_OK=false` with `A=SUPPORTED`) are not emitted by the scorer.
+
+### A1.7 Interpretation (Amendment 1)
+
+- A `SUPPORTED` and C `INTROSPECTION_VALUE` → state-dependent self-knowledge plus instance-level calibrated verbal signal (not expected under the default-confidence prompt unless a later amendment restores confidence).
+- A `SUPPORTED` and C `INTROSPECTION_NONE` → value is plain calibration from a track record; no project-specific introspection claim.
+- Otherwise → no support at this scale (including any `NOT_INFORMATIVE` on A or C).
