@@ -171,6 +171,7 @@ Parse: first integer in the reply (commas stripped); unparsable = wrong. No conf
 - Seed **34002**; 20 problems per level in each family; problems **disjoint from pilot 1**.
 - About **580** generations: `13×20 + 7×20 + 9×20 = 580`.
 - Artifact: `reports/m34a_pilot2/levels.json` (and optional raw).
+- **Chosen (pilot 2, recovered from Colab printout after session loss):** family `mul_n1`, levels `[5, 6, 7, 8, 9, 10]`, best_score `6`, accuracy range `0.55`. See `reports/m34a_pilot2/NOTE.md`.
 
 **Selection rule** (pure function; unit-tested): for each family and each window of **6 contiguous** levels,  
 `score = #{levels in window with pilot accuracy ∈ [0.15, 0.85]}`.  

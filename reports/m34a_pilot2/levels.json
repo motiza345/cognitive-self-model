@@ -1,0 +1,85 @@
+{
+  "amendment": 1,
+  "choice": {
+    "accuracy_range": 0.55,
+    "best_score": 6,
+    "chosen_family": "mul_n1",
+    "chosen_levels": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "family_accuracies": {
+      "add_nn": {
+        "3": 1.0,
+        "4": 0.85,
+        "5": 0.9,
+        "6": 0.9,
+        "7": 0.9,
+        "8": 0.45,
+        "9": 0.6,
+        "10": 0.55,
+        "11": 0.6,
+        "12": 0.4,
+        "13": 0.6,
+        "14": 0.1,
+        "15": 0.1
+      },
+      "mul_n1": {
+        "2": 0.95,
+        "3": 0.95,
+        "4": 0.9,
+        "5": 0.8,
+        "6": 0.65,
+        "7": 0.5,
+        "8": 0.25,
+        "9": 0.45,
+        "10": 0.55
+      },
+      "mul_n2": {
+        "2": 0.7,
+        "3": 0.5,
+        "4": 0.25,
+        "5": 0.3,
+        "6": 0.2,
+        "7": 0.05,
+        "8": 0.05
+      }
+    },
+    "rule": "score=#acc in [0.15,0.85] over 6 contiguous; max score; ties->larger (max-min), then add_nn/mul_n2/mul_n1, then lower levels; STOP if score<4",
+    "stop": false,
+    "window_accuracies": {
+      "5": 0.8,
+      "6": 0.65,
+      "7": 0.5,
+      "8": 0.25,
+      "9": 0.45,
+      "10": 0.55
+    }
+  },
+  "chosen_family": "mul_n1",
+  "chosen_levels": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "device_name": "cuda",
+  "dtype": "float16",
+  "float32_rerun_ids": [],
+  "input_tokens": null,
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "n_calls": 580,
+  "output_tokens": null,
+  "pilot": 2,
+  "recovery_note": "Colab reports/m34a_pilot2/levels.json was lost after session reset. Reconstructed from the printed LEVELS_CHOSEN JSON (n_calls=580, Qwen2.5-3B-Instruct). Token counts, runtime, revision SHA, and float32_rerun_ids were not in that printout.",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "runtime_seconds": null,
+  "seed": 34002,
+  "status": "LEVELS_CHOSEN"
+}
