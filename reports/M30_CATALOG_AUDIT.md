@@ -2,16 +2,17 @@
 
 **Status:** PASS
 **Catalog:** `scripts/m30_catalog.py`
-**Catalog SHA-256:** `8d88819766cf7b454edafecb1582b6284dacea8a8d16f14f2f872090a17316a9`
+**Catalog SHA-256:** `4ceb314e304424fbdee6aeec0d9957e6aa044128908c52ab3fee9a3ec0711770`
 
 ## Structure
 
-- Total prompts: **36**
+- Total prompts: **48**
 - UPDATE: **12**
 - VALIDATION: **12**
-- HOLDOUT: **12**
+- HOLDOUT: **24**
 - Families: completion / syntax / instruction
-- Each partition contains 4 prompts from each family.
+- UPDATE and VALIDATION contain 4 prompts from each family.
+- HOLDOUT contains 8 prompts from each family.
 - Partition intersections: **0**
 
 ## Historical catalogs
@@ -28,6 +29,15 @@ Exact identifier overlap, exact text overlap, and whitespace-collapsed case-fold
 | M26 | 0 | 0 | 0 |
 | M29-D | 0 | 0 | 0 |
 
+## Inside M30
+
+The twelve M30-HX1 holdout prompts were compared with UPDATE and with VALIDATION on exact id, exact text, and whitespace-collapsed case-folded text.
+
+| Comparison | Exact text overlap | Normalized text overlap | ID overlap |
+| --- | ---: | ---: | ---: |
+| New holdout vs UPDATE | 0 | 0 | 0 |
+| New holdout vs VALIDATION | 0 | 0 | 0 |
+
 ## Outcome leakage
 
 - Qwen loaded: **false**
@@ -39,7 +49,7 @@ This is a pre-outcome catalog audit.
 
 ## Frozen partition rule
 
-For each family, index 1..12 is assigned `(index - 1) mod 3` to UPDATE, VALIDATION, HOLDOUT.
+For each family, index 1..12 is assigned `(index - 1) mod 3` to UPDATE, VALIDATION, HOLDOUT. Indices 13..16 are HOLDOUT by rule M30-HX1.
 
 ## Scientific status
 
