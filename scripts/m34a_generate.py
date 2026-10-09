@@ -27,19 +27,21 @@ class MockQwenClient:
     def generate(self, prompt: str) -> dict[str, Any]:
         import re
 
-        m = re.search(r"Compute (\d+) x (\d+)\.", prompt)
+        m = re.search(r"Compute (\d+) ([+x]) (\d+)\.", prompt)
         if not m:
             raise ValueError(f"bad mock prompt: {prompt!r}")
-        a, b = int(m.group(1)), int(m.group(2))
-        n = max(len(str(a)), len(str(b)))
-        product = a * b
+        a, op, b = int(m.group(1)), m.group(2), int(m.group(3))
+        n = len(str(a))
+        target = a + b if op == "+" else a * b
+        # Rough difficulty: long addends/factors fail more often.
         if n >= self.fail_from_digits:
-            ans = product + 1
+            ans = target + 1
             conf = 35
         else:
-            ans = product
-            conf = min(95, 55 + 5 * (8 - n))
-        text = f"Answer: {ans}; Confidence: {conf}"
+            ans = target
+            conf = min(95, 55 + 5 * max(0, 8 - n))
+        # Amendment 1 pilots ask for only the integer; keep Answer: for parse compat.
+        text = f"{ans}"
         return {
             "text": text,
             "input_tokens": 40 + n,
@@ -195,14 +197,18 @@ class TransformersQwenClient:
 def run_problem(client: Any, problem: dict[str, Any]) -> dict[str, Any]:
     out = client.generate(problem["prompt"])
     parsed_ans, conf = parse_response(out["text"])
-    correct = parsed_ans is not None and parsed_ans == int(problem["product"])
+    target = int(problem.get("target", problem["product"]))
+    correct = parsed_ans is not None and parsed_ans == target
     return {
         "problem_id": problem["problem_id"],
         "pool": problem["pool"],
+        "family": problem.get("family"),
         "level": int(problem["level"]),
         "a": int(problem["a"]),
         "b": int(problem["b"]),
-        "product": int(problem["product"]),
+        "op": problem.get("op"),
+        "target": target,
+        "product": target,
         "prompt": problem["prompt"],
         "raw_response": out["text"],
         "parsed_answer": parsed_ans,

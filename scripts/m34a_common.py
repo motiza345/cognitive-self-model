@@ -11,21 +11,34 @@ from typing import Any
 
 PRIMARY_MODEL = "Qwen/Qwen2.5-3B-Instruct"
 FALLBACK_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
-PROMPT_TEMPLATE = (
+# Historical pilot-1 prompt (mul n x n with confidence). Kept for regenerating pilot-1 exclusions.
+PROMPT_TEMPLATE_P1 = (
     "Compute {a} x {b}. Reply exactly in this format: "
     "Answer: <integer>; Confidence: <0-100 probability your answer is exactly correct>"
 )
+# Amendment 1 prompt
+PROMPT_TEMPLATE_A1 = "Compute {a} {op} {b}. Reply with only the integer."
+
 MAX_NEW_TOKENS = 60
-SEED_PILOT = 34001
+SEED_PILOT = 34001  # pilot 1 + pool plan seed
+SEED_PILOT2 = 34002
 BOOTSTRAP_SEED = 23001
 BOOTSTRAP_DRAWS = 5000
-CANDIDATE_LEVELS = list(range(2, 9))
+CANDIDATE_LEVELS = list(range(2, 9))  # pilot 1
 PILOT_PER_LEVEL = 20
 POOL_SIZES = {"cal": 100, "hist": 60, "test": 40}
 N_H_VALUES = (2, 5, 10, 25)
 PRIMARY_N_H = 10
 N_HISTORY_DRAWS = 30
 CONF_BINS = ((0, 59), (60, 79), (80, 89), (90, 94), (95, 100))
+
+# Amendment 1 families: id -> (op_symbol, levels, b_digits or "same")
+FAMILY_SPECS: dict[str, dict[str, Any]] = {
+    "add_nn": {"op": "+", "levels": list(range(3, 16)), "b_digits": "same"},
+    "mul_n2": {"op": "x", "levels": list(range(2, 9)), "b_digits": 2},
+    "mul_n1": {"op": "x", "levels": list(range(2, 11)), "b_digits": 1},
+}
+FAMILY_ORDER = ("add_nn", "mul_n2", "mul_n1")
 
 ANSWER_RE = re.compile(r"Answer:\s*([^\n;]+)", re.IGNORECASE)
 CONF_RE = re.compile(r"Confidence:\s*([^\n;]+)", re.IGNORECASE)
@@ -39,20 +52,55 @@ def n_digit_int(rng: random.Random, n: int) -> int:
 
 
 def make_problem(rng: random.Random, level: int, problem_id: str, pool: str) -> dict[str, Any]:
+    """Pilot-1 style: n-digit x n-digit with confidence prompt."""
     a = n_digit_int(rng, level)
     b = n_digit_int(rng, level)
+    target = a * b
     return {
         "problem_id": problem_id,
         "pool": pool,
+        "family": "mul_nn_p1",
         "level": level,
         "a": a,
         "b": b,
-        "product": a * b,
-        "prompt": PROMPT_TEMPLATE.format(a=a, b=b),
+        "op": "x",
+        "target": target,
+        "product": target,
+        "prompt": PROMPT_TEMPLATE_P1.format(a=a, b=b),
+    }
+
+
+def make_family_problem(
+    rng: random.Random,
+    family: str,
+    level: int,
+    problem_id: str,
+    pool: str,
+) -> dict[str, Any]:
+    spec = FAMILY_SPECS[family]
+    op = spec["op"]
+    a = n_digit_int(rng, level)
+    if spec["b_digits"] == "same":
+        b = n_digit_int(rng, level)
+    else:
+        b = n_digit_int(rng, int(spec["b_digits"]))
+    target = a + b if op == "+" else a * b
+    return {
+        "problem_id": problem_id,
+        "pool": pool,
+        "family": family,
+        "level": level,
+        "a": a,
+        "b": b,
+        "op": op,
+        "target": target,
+        "product": target,
+        "prompt": PROMPT_TEMPLATE_A1.format(a=a, op=op, b=b),
     }
 
 
 def parse_response(text: str) -> tuple[int | None, float]:
+    """Answer from Answer: field if present, else first integer; confidence default 50."""
     ans: int | None = None
     am = ANSWER_RE.search(text or "")
     if am:
@@ -61,6 +109,13 @@ def parse_response(text: str) -> tuple[int | None, float]:
         if im:
             try:
                 ans = int(im.group(0))
+            except ValueError:
+                ans = None
+    if ans is None:
+        im2 = INT_RE.search((text or "").replace(",", ""))
+        if im2:
+            try:
+                ans = int(im2.group(0))
             except ValueError:
                 ans = None
     conf = 50.0
@@ -77,6 +132,7 @@ def parse_response(text: str) -> tuple[int | None, float]:
 
 
 def choose_levels(accuracies: dict[int, float]) -> dict[str, Any]:
+    """Pilot-1 rule (historical)."""
     levels = sorted(accuracies)
     if len(levels) < 6:
         raise ValueError("need at least 6 candidate levels")
@@ -97,6 +153,65 @@ def choose_levels(accuracies: dict[int, float]) -> dict[str, Any]:
     }
 
 
+def select_pilot2_window(
+    family_accuracies: dict[str, dict[int, float]],
+) -> dict[str, Any]:
+    """Amendment 1 selection: pure function.
+
+    score = #levels in a 6-contiguous window with acc in [0.15, 0.85].
+    Max score; ties -> larger (max-min); then family order add_nn, mul_n2, mul_n1;
+    then lower levels. STOP if best score < 4.
+    """
+    # Each row: (score, span, fam_rank, start_level, family, window, vals)
+    candidates: list[tuple[int, float, int, int, str, list[int], list[float]]] = []
+    for fam in FAMILY_ORDER:
+        if fam not in family_accuracies:
+            continue
+        acc = family_accuracies[fam]
+        levels = sorted(acc)
+        if len(levels) < 6:
+            continue
+        fam_rank = FAMILY_ORDER.index(fam)
+        for start_idx in range(len(levels) - 5):
+            window = levels[start_idx : start_idx + 6]
+            vals = [float(acc[L]) for L in window]
+            score = sum(1 for v in vals if 0.15 <= v <= 0.85)
+            span = max(vals) - min(vals)
+            candidates.append((score, span, fam_rank, window[0], fam, list(window), vals))
+
+    if not candidates:
+        return {
+            "stop": True,
+            "best_score": 0,
+            "chosen_family": None,
+            "chosen_levels": None,
+            "rule": "Amendment 1 select_pilot2_window",
+            "reason": "no_windows",
+        }
+
+    # Maximize score, then span, then earlier family, then lower start level
+    candidates.sort(key=lambda t: (-t[0], -t[1], t[2], t[3]))
+    score, span, _fr, _start, fam, window, vals = candidates[0]
+    stop = score < 4
+    return {
+        "stop": stop,
+        "best_score": score,
+        "accuracy_range": span,
+        "chosen_family": fam,
+        "chosen_levels": None if stop else window,
+        "window_accuracies": {str(L): float(a) for L, a in zip(window, vals)},
+        "family_accuracies": {
+            f: {str(k): float(v) for k, v in sorted(family_accuracies[f].items())}
+            for f in FAMILY_ORDER
+            if f in family_accuracies
+        },
+        "rule": (
+            "score=#acc in [0.15,0.85] over 6 contiguous; max score; "
+            "ties->larger (max-min), then add_nn/mul_n2/mul_n1, then lower levels; STOP if score<4"
+        ),
+    }
+
+
 def build_pilot_problems(seed: int = SEED_PILOT) -> list[dict[str, Any]]:
     rng = random.Random(seed)
     problems: list[dict[str, Any]] = []
@@ -106,44 +221,57 @@ def build_pilot_problems(seed: int = SEED_PILOT) -> list[dict[str, Any]]:
     return problems
 
 
-def build_pool_plan(seed: int, chosen_levels: list[int]) -> dict[str, Any]:
-    """Deterministic pools disjoint from pilot operands; continues the pilot RNG stream."""
+def build_pilot2_problems(seed: int = SEED_PILOT2) -> list[dict[str, Any]]:
+    """All Amendment 1 family/level cells; disjointness from pilot 1 enforced via used set."""
+    used = {(p["op"], p["a"], p["b"]) for p in build_pilot_problems(SEED_PILOT)}
     rng = random.Random(seed)
-    pilot = build_pilot_problems(seed)
-    # Rebuild with same seed so the stream matches pilot generation, then continue.
+    problems: list[dict[str, Any]] = []
+    for family in FAMILY_ORDER:
+        for level in FAMILY_SPECS[family]["levels"]:
+            for i in range(PILOT_PER_LEVEL):
+                while True:
+                    cand = make_family_problem(
+                        rng, family, level, f"pilot2-{family}-L{level}-{i:02d}", "pilot2"
+                    )
+                    key = (cand["op"], cand["a"], cand["b"])
+                    if key not in used:
+                        used.add(key)
+                        problems.append(cand)
+                        break
+    return problems
+
+
+def build_pool_plan(
+    seed: int,
+    chosen_levels: list[int],
+    family: str,
+) -> dict[str, Any]:
+    """Pools for Amendment 1 family; disjoint from pilots 1 and 2."""
+    if family not in FAMILY_SPECS:
+        raise ValueError(f"unknown family {family}")
+    used = {(p["op"], p["a"], p["b"]) for p in build_pilot_problems(SEED_PILOT)}
+    used |= {(p["op"], p["a"], p["b"]) for p in build_pilot2_problems(SEED_PILOT2)}
     rng = random.Random(seed)
-    for _ in pilot:
-        n_digit_int(rng, _["level"])
-        n_digit_int(rng, _["level"])
-    used = {(p["a"], p["b"]) for p in pilot}
     problems: list[dict[str, Any]] = []
     for level in chosen_levels:
         for pool, n in POOL_SIZES.items():
             for i in range(n):
                 while True:
-                    a = n_digit_int(rng, level)
-                    b = n_digit_int(rng, level)
-                    if (a, b) not in used:
-                        used.add((a, b))
+                    cand = make_family_problem(
+                        rng, family, int(level), f"{pool}-L{level}-{i:03d}", pool
+                    )
+                    key = (cand["op"], cand["a"], cand["b"])
+                    if key not in used:
+                        used.add(key)
+                        problems.append(cand)
                         break
-                pid = f"{pool}-L{level}-{i:03d}"
-                problems.append(
-                    {
-                        "problem_id": pid,
-                        "pool": pool,
-                        "level": level,
-                        "a": a,
-                        "b": b,
-                        "product": a * b,
-                        "prompt": PROMPT_TEMPLATE.format(a=a, b=b),
-                    }
-                )
     return {
         "seed": seed,
+        "family": family,
         "chosen_levels": list(chosen_levels),
         "n_problems": len(problems),
         "pool_sizes": dict(POOL_SIZES),
-        "pilot_ids": [p["problem_id"] for p in pilot],
+        "amendment": 1,
         "problems": problems,
     }
 
@@ -178,7 +306,6 @@ def conf_bin(conf: float) -> tuple[int, int]:
 
 
 def random_derangement(rng: random.Random, items: list[Any]) -> dict[Any, Any]:
-    """Return a derangement mapping item -> image; retries until none fixed."""
     n = len(items)
     if n < 2:
         raise ValueError("derangement needs >= 2 items")
@@ -194,7 +321,6 @@ def eu_actions(p: float) -> dict[str, float]:
 
 
 def choose_action(p: float, variant: str) -> str:
-    """variant V3: answer/abstain/verify; V2: answer/abstain. Ties: answer then verify."""
     eus = eu_actions(p)
     if variant == "V2":
         candidates = ["answer", "abstain"]
@@ -203,7 +329,6 @@ def choose_action(p: float, variant: str) -> str:
     else:
         raise ValueError(variant)
     best = max(eus[c] for c in candidates)
-    # tie order: answer, then verify, then abstain
     for name in ("answer", "verify", "abstain"):
         if name in candidates and eus[name] == best:
             return name

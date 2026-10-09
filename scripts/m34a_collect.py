@@ -56,7 +56,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--pool-plan",
         type=Path,
-        default=ROOT / "reports" / "m34a_pilot" / "pool_plan.json",
+        default=ROOT / "reports" / "m34a_pilot2" / "pool_plan.json",
     )
     parser.add_argument("--out-dir", type=Path, default=RAW_DIR)
     parser.add_argument("--mock", action="store_true")
