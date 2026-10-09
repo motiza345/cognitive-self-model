@@ -151,10 +151,24 @@ On M30 outcome rows, abs(kappa) predicts the remaining error after correction (S
 
 ---
 
+## M34a (track-record self-knowledge; Amendment 1)
+
+**Verdict:** A=`NOT_INFORMATIVE` · C=`INTROSPECTION_NONE` · GATE_OK=`false` · SPREAD_OK=`true` · VAR_OK=`true`
+
+**Claimed.** One frozen collection of 1200 greedy Qwen2.5-3B-Instruct answers on `mul_n1` (n-digit × 1-digit, levels 5–10). Cache sha256 `290307e5b95a062ee00141f43467c660ef48ddae95d6ba282f1269baaa200f99`. V3 utilities of `oracle_level` and `global` both 0.700 (always verify); GATE gap 0.000 (need ≥ 0.05). Self did not beat global (mean −0.0014, CI includes 0). Interpretation: **no support at this scale**.
+
+**NOT claimed.** Privileged access; mechanistic κ; planning/games (M34b/c); that verify-or-abstain has no value in other tasks; that a confidence prompt was tested (Amendment 1 asks for the integer only; stated confidence defaults to 50).
+
+**Scope limits.** One Instruct Qwen 3B, revision `aa8e72537993ba99e69dfaafa59ed015b17504d1`, Colab T4 float16, greedy, family `mul_n1` only, levels 5–10, static warm-start history, n_h=10 primary, 240 TEST problems.
+
+**Links.** `docs/M34A_PREREG.md` (Amendment 1); `reports/m34a_pilot2/`; `reports/M34A_REPORT.md`; `reports/m34a_raw/`; collection commit `ece1d19`.
+
+---
+
 ## Claim ladder
 
 1. **Pre-outcome prediction of own response:** **supported in scope** (M24 consumption of `g`; M29-D `SUPPORTED`; M30 new identity `SUPPORTED` + `ANCHOR_SUPPORTED`). Scope = one small Qwen, listed directions/layers, last-token margin, alpha steering as above. Exploratory: abs(kappa) is a reliability signal.
 2. **Privileged access over cheap probing:** **NOT supported** (S2: 0/4 white-box advantage; FDQ with 3 forwards matches M2 on median miss and time). Learned external observer: untested (planned M33).
-3. **Decision utility in agent tasks:** **supported in simulation only** (S-SIM, injected properties); **untested with LLM agents** (planned M34). S1 is margin-steering only and ended `UNDEFINED_BY_RULE`; M21.5/M21.6 are a different synthetic line and M21.6 is not remote-authenticated here.
+3. **Decision utility in agent tasks:** **supported in simulation only** (S-SIM, injected properties). **M34a (real LLM, Amendment 1):** GATE failed (`NOT_INFORMATIVE`); no support at this scale. S1 is margin-steering only and ended `UNDEFINED_BY_RULE`.
 4. **Competition:** **simulation only** (S-SIM match); with a visible opponent model the self-model is a substitute, not a complement. LLM competition untested.
 5. **Cross-weights specificity and stability after modification:** untested (planned M31, M32).

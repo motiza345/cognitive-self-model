@@ -1,0 +1,21 @@
+{
+  "cache_file": "responses.jsonl",
+  "cache_sha256": "290307e5b95a062ee00141f43467c660ef48ddae95d6ba282f1269baaa200f99",
+  "cost_usd_estimate": null,
+  "date_utc": "2026-10-09T14:56:15Z",
+  "device_name": "cuda",
+  "dtype_default": "float16",
+  "float32_rerun_ids": [],
+  "git_commit": "ece1d19c19aaded8b8afdae2764389d3a2774e72",
+  "input_tokens": 58200,
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "n_cached": 1200,
+  "n_new_this_run": 1200,
+  "output_tokens": 11764,
+  "pool_plan_n": 1200,
+  "pool_plan_path": "reports/m34a_pilot2/pool_plan.json",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "runtime_seconds_this_run": 931.306855588,
+  "torch_version": "2.11.0+cu130",
+  "transformers_version": "5.18.0"
+}

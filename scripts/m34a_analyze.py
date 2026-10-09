@@ -212,41 +212,74 @@ def ece_stated(rows: list[dict[str, Any]], n_bins: int = 10) -> float:
     return ece
 
 
-def labels_from_utils(utils: dict[str, list[float]]) -> dict[str, Any]:
+def cal_gates(cal_rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Amendment 1 CAL informativeness: SPREAD_OK and VAR_OK."""
+    by: dict[int, list[bool]] = defaultdict(list)
+    for r in cal_rows:
+        by[int(r["level"])].append(bool(r["correct"]))
+    in_band = 0
+    var_ok_levels = 0
+    per_level = {}
+    for L, vals in sorted(by.items()):
+        n = len(vals)
+        n_ok = sum(vals)
+        n_bad = n - n_ok
+        acc = n_ok / n if n else 0.0
+        per_level[str(L)] = {"n": n, "correct": n_ok, "wrong": n_bad, "accuracy": acc}
+        if 0.15 <= acc <= 0.85:
+            in_band += 1
+        if n_ok >= 15 and n_bad >= 15:
+            var_ok_levels += 1
+    return {
+        "spread_ok": in_band >= 3,
+        "var_ok": var_ok_levels >= 3,
+        "n_levels_in_band": in_band,
+        "n_levels_var": var_ok_levels,
+        "per_level": per_level,
+    }
+
+
+def labels_from_utils(
+    utils: dict[str, list[float]], cal_rows: list[dict[str, Any]]
+) -> dict[str, Any]:
     def delta(a: str, b: str) -> list[float]:
         return [x - y for x, y in zip(utils[a], utils[b])]
 
     u_oracle = sum(utils["oracle_level"]) / len(utils["oracle_level"])
     u_global = sum(utils["global"]) / len(utils["global"])
     gate_ok = (u_oracle - u_global) >= 0.05
+    cg = cal_gates(cal_rows)
 
-    if not gate_ok:
+    self_global = paired_mean_ci(delta("self", "global"))
+    self_shuf = paired_mean_ci(delta("self", "shuffled"))
+    if (not gate_ok) or (not cg["spread_ok"]):
         a_label = "NOT_INFORMATIVE"
-        self_global = paired_mean_ci(delta("self", "global"))
-        self_shuf = paired_mean_ci(delta("self", "shuffled"))
+    elif self_global["low"] > 0 and self_global["mean"] >= 0.05 and self_shuf["low"] > 0:
+        a_label = "SUPPORTED"
+    elif self_global["low"] > 0:
+        a_label = "SUPPORTED_WEAK"
     else:
-        self_global = paired_mean_ci(delta("self", "global"))
-        self_shuf = paired_mean_ci(delta("self", "shuffled"))
-        if self_global["low"] > 0 and self_global["mean"] >= 0.05 and self_shuf["low"] > 0:
-            a_label = "SUPPORTED"
-        elif self_global["low"] > 0:
-            a_label = "SUPPORTED_WEAK"
-        else:
-            a_label = "NOT_SUPPORTED"
+        a_label = "NOT_SUPPORTED"
 
     verbal_self = paired_mean_ci(delta("verbal_cal", "self"))
-    if verbal_self["low"] > 0 and verbal_self["mean"] >= 0.03:
-        b_label = "INTROSPECTION_VALUE"
+    if not cg["var_ok"]:
+        c_label = "NOT_INFORMATIVE"
+    elif verbal_self["low"] > 0 and verbal_self["mean"] >= 0.03:
+        c_label = "INTROSPECTION_VALUE"
     else:
-        b_label = "INTROSPECTION_NONE"
+        c_label = "INTROSPECTION_NONE"
 
     return {
         "gate_ok": gate_ok,
+        "spread_ok": cg["spread_ok"],
+        "var_ok": cg["var_ok"],
+        "cal_gates": cg,
         "U_oracle_level": u_oracle,
         "U_global": u_global,
         "gate_gap": u_oracle - u_global,
         "A": a_label,
-        "B": b_label,
+        "B": c_label,
+        "C": c_label,
         "self_minus_global": self_global,
         "self_minus_shuffled": self_shuf,
         "verbal_cal_minus_self": verbal_self,
@@ -267,7 +300,7 @@ def render_report(
     lines = [
         "# M34A report",
         "",
-        f"**Primary verdict (V3, n_h={PRIMARY_N_H}):** A=`{primary['A']}` · B=`{primary['B']}` · GATE_OK=`{primary['gate_ok']}`",
+        f"**Primary verdict (V3, n_h={PRIMARY_N_H}, Amendment 1):** A=`{primary['A']}` · C=`{primary['C']}` · GATE_OK=`{primary['gate_ok']}` · SPREAD_OK=`{primary.get('spread_ok')}` · VAR_OK=`{primary.get('var_ok')}`",
         "",
         f"- cache sha256: `{cache_sha}`",
         f"- manifest model: `{manifest.get('model_id')}` revision `{manifest.get('revision')}`",
@@ -276,6 +309,8 @@ def render_report(
         f"- collection git commit: `{manifest.get('git_commit')}`",
         f"- analysis git commit: `{git_commit}`",
         f"- GATE gap U(oracle_level)-U(global) = {primary['gate_gap']:.6f} (need >= 0.05)",
+        f"- SPREAD_OK (CAL acc in [0.15,0.85] on >=3 levels): `{primary.get('spread_ok')}`",
+        f"- VAR_OK (CAL >=15 correct and >=15 wrong on >=3 levels): `{primary.get('var_ok')}`",
         f"- self-global: mean={primary['self_minus_global']['mean']:.6f} CI=[{primary['self_minus_global']['low']:.6f}, {primary['self_minus_global']['high']:.6f}]",
         f"- self-shuffled: mean={primary['self_minus_shuffled']['mean']:.6f} CI=[{primary['self_minus_shuffled']['low']:.6f}, {primary['self_minus_shuffled']['high']:.6f}]",
         f"- verbal_cal-self: mean={primary['verbal_cal_minus_self']['mean']:.6f} CI=[{primary['verbal_cal_minus_self']['low']:.6f}, {primary['verbal_cal_minus_self']['high']:.6f}]",
@@ -322,7 +357,7 @@ def render_report(
         "",
         "## Claimed",
         "",
-        f"- Labels A=`{primary['A']}` and B=`{primary['B']}` under the frozen M34a prereg on this cache.",
+        f"- Labels A=`{primary['A']}` and C=`{primary['C']}` under Amendment 1 of the frozen M34a prereg on this cache.",
         "",
         "## NOT claimed",
         "",
@@ -330,15 +365,15 @@ def render_report(
         "",
         "## Scope",
         "",
-        "- One Instruct Qwen (3B primary / 1.5B fallback), multiplication digit levels from the pilot, "
-        "greedy decode, V3 primary, static warm-start history, n_h=10 primary.",
+        "- Qwen2.5-3B-Instruct, Amendment 1 family `mul_n1`, levels 5–10, greedy float16, "
+        "V3 primary, static warm-start history, n_h=10 primary. Prompt: integer only (stated confidence defaults to 50).",
         "",
     ]
-    if primary["A"] == "SUPPORTED" and primary["B"] == "INTROSPECTION_VALUE":
+    if primary["A"] == "SUPPORTED" and primary["C"] == "INTROSPECTION_VALUE":
         lines.append(
             "**Interpretation:** real LLM shows state-dependent self-knowledge value plus instance-level calibrated verbal signal."
         )
-    elif primary["A"] == "SUPPORTED" and primary["B"] == "INTROSPECTION_NONE":
+    elif primary["A"] == "SUPPORTED" and primary["C"] == "INTROSPECTION_NONE":
         lines.append(
             "**Interpretation:** the value is plain calibration from a track record; no project-specific introspection claim."
         )
@@ -380,7 +415,7 @@ def main(argv: list[str] | None = None) -> int:
     utils = mean_utilities_over_draws(
         test_rows, hist_by_level, oracle_level, PRIMARY_N_H, "V3", seed=34011
     )
-    primary = labels_from_utils(utils)
+    primary = labels_from_utils(utils, cal_rows)
     arm_means = {arm: sum(vals) / len(vals) for arm, vals in utils.items()}
 
     utils_v2 = mean_utilities_over_draws(
