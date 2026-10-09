@@ -27,7 +27,7 @@ This file is the pre-registration. Outcomes must not be collected until this fil
 - Multiplication of two **n-digit** integers (no leading zeros), `n ∈ {2,3,4,5,6,7,8}` (7 candidate levels).
 - Random seed for problem generation: **34001**.
 - STEP 0 pilot (discarded afterwards for analysis): 20 problems per candidate level (140 calls). Choose **6 contiguous** levels maximizing `(max accuracy − min accuracy)`; ties → **lower** levels. If no window has range `≥ 0.5`, **STOP** and report (no main experiment). Commit `reports/m34a_pilot/levels.json` before any pool generation/collection.
-- **Chosen levels:** *TBD — filled from the Colab pilot `levels.json` before pool plan commit.* Placeholder field: `chosen_levels: null` until that commit.
+- **Chosen levels (from Colab pilot):** `[2, 3, 4, 5, 6, 7]` — accuracy range `0.85` (per-level: 0.85, 0.10, 0.00, 0.00, 0.00, 0.00; level 8 unused at 0.00). Model `Qwen/Qwen2.5-3B-Instruct` revision `aa8e72537993ba99e69dfaafa59ed015b17504d1`. See `reports/m34a_pilot/levels.json`.
 
 ## 3. Pools (after levels chosen)
 

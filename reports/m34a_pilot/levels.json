@@ -1,0 +1,52 @@
+{
+  "choice": {
+    "accuracies": {
+      "2": 0.85,
+      "3": 0.1,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+    },
+    "accuracy_range": 0.85,
+    "chosen_levels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "rule": "6 contiguous maximizing (max-min); ties -> lower levels; STOP if range < 0.5",
+    "stop": false
+  },
+  "chosen_levels": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "device_name": "cuda",
+  "dtype": "float16",
+  "float32_rerun_ids": [],
+  "input_tokens": 9800,
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "n_calls": 140,
+  "output_tokens": 2921,
+  "per_level_accuracy": {
+    "2": 0.85,
+    "3": 0.1,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+  },
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "runtime_seconds": 267.478618259,
+  "seed": 34001,
+  "status": "LEVELS_CHOSEN"
+}
