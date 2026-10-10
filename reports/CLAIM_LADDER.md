@@ -172,3 +172,21 @@ On M30 outcome rows, abs(kappa) predicts the remaining error after correction (S
 3. **Decision utility in agent tasks:** **supported in simulation only** (S-SIM, injected properties). **M34a (real LLM, Amendment 1):** GATE failed (`NOT_INFORMATIVE`); no support at this scale. S1 is margin-steering only and ended `UNDEFINED_BY_RULE`.
 4. **Competition:** **simulation only** (S-SIM match); with a visible opponent model the self-model is a substitute, not a complement. LLM competition untested.
 5. **Cross-weights specificity and stability after modification:** untested (planned M31, M32).
+
+---
+
+## M34a-v2 (fresh data; M34a closed)
+
+**Verdict:** A=`SUPPORTED_WEAK` · C=`INTERNAL_VALUE` · GATE_A=`true` · GATE_C=`true`
+
+**v1 (unchanged; see section above):** `NOT_INFORMATIVE` (GATE gap 0; no confidence elicited; logprobs absent; verbal C uninformative).
+
+**Claimed.** One frozen collection of 1200 greedy Qwen2.5-3B-Instruct answers on `mul_n1` levels 2–7 (seed 34003; cache sha256 `e0eb10cd12bbf25b4e6a258ab1391e24e7110a81611c0e9dc87e0914008c5425`). GATE_A gap `U(oracle_level)−U(global)` = 0.058333. Self beat global (mean +0.025278, CI `[0.011472, 0.037625]`) but the point is below the 0.05 floor, so A is `SUPPORTED_WEAK` (self also beat shuffled, mean +0.046389). CAL-calibrated `answer_logprob` terciles beat the level-only CAL rate (mean +0.088750, CI `[0.046656, 0.131250]`), so C is `INTERNAL_VALUE`. Mean within-level AUROC of `answer_logprob` for correctness: 0.934. Interpretation: weak track-record value plus instance-level logprob value on this task.
+
+**NOT claimed.** Privileged access: token logprobs are available to anyone who can read API/model logprobs. Mechanistic κ; planning/games (M34b/c); other models; other operations; that the 0.05 utility floor for A was met.
+
+**Scope.** One model `Qwen/Qwen2.5-3B-Instruct` revision `aa8e72537993ba99e69dfaafa59ed015b17504d1`; one operation; multiplication by one digit (`mul_n1`) only; levels 2–7; Colab T4 float16; greedy; static warm-start history; n_h=10 primary; 240 TEST problems. M34a is closed after v2.
+
+**Links.** `docs/M34A_V2_PREREG.md`; `reports/M34A_V2_REPORT.md` (analysis commit `2a63d27`; interpretation erratum after); `reports/m34a_v2_raw/`; post hoc (not in prereg) `reports/M34A_V2_POSTHOC.md`.
+
+**Ladder note (append only).** Rung 3 now has a real-LLM result at this scale: weak track-record utility and an instance-level logprob signal, not privileged access. No further M34a variants without discussion.

@@ -39,6 +39,8 @@ The local response of this model along these directions is well approximated by 
 
 Continue, bounded: run the remaining tests in `docs/NEXT_STEPS.md` in the stated order (M35, M31, M32, M33, M34, M36 optional). Checkpoints: after M31 to M33, decide whether the mechanistic claim gains privileged access or stays narrow. After M34 (real LLM agents), decide whether the project continues; the project-specific claim needs a result beyond plain calibration from a track record. Expected total: about one to two weeks.
 
+M34a is closed after v2: v1 `NOT_INFORMATIVE` (gate failed; no confidence; no logprobs); v2 A=`SUPPORTED_WEAK`, C=`INTERNAL_VALUE` on Qwen2.5-3B-Instruct `mul_n1` levels 2–7. That is a weak track-record utility gain plus an instance-level logprob signal, not privileged access. Remaining M34 work (planning/games) is not started.
+
 ## 6. Reproducibility
 
 Repository `github.com/motiza345/cognitive-self-model`; tag `v0.1-mechanistic-line` at `6193bfa`. Frozen hashes: M30 catalog `4ceb314e3...1770`, M30 predictions `f363d9386...bb5`, M29-D predictions `9ff6a11e6...33a`. Simulation: `python simulations/ssim/sim_all.py` reproduces `sim_results.json` exactly. M21.6 and M21.7 artifacts are not on the remote.
