@@ -89,6 +89,14 @@ def analyze_setting(raw_dir: Path) -> dict[str, Any]:
     not_run = raw_dir / "NOT_RUN.json"
     if not_run.exists() and not (raw_dir / "responses.jsonl").exists():
         doc = load_json(not_run)
+        reason = str(doc.get("reason", ""))
+        if reason == "STOP_GAP_LT_0.05":
+            return {
+                "status": "STOP",
+                "A": "NOT_INFORMATIVE",
+                "C": "NOT_INFORMATIVE",
+                "not_run": doc,
+            }
         return {
             "status": "NOT_RUN",
             "A": "NOT_RUN",
