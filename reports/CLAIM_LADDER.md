@@ -190,3 +190,21 @@ On M30 outcome rows, abs(kappa) predicts the remaining error after correction (S
 **Links.** `docs/M34A_V2_PREREG.md`; `reports/M34A_V2_REPORT.md` (analysis commit `2a63d27`; interpretation erratum after); `reports/m34a_v2_raw/`; post hoc (not in prereg) `reports/M34A_V2_POSTHOC.md`.
 
 **Ladder note (append only).** Rung 3 now has a real-LLM result at this scale: weak track-record utility and an instance-level logprob signal, not privileged access. No further M34a variants without discussion.
+
+---
+
+## M34a-v3 (generalization; M34a closed)
+
+**Verdict:** Aggregate C=`C_NOT_INFORMATIVE` · S1 A=`NOT_SUPPORTED` C=`NOT_INFORMATIVE` · S2 A=`NOT_INFORMATIVE` C=`NOT_INFORMATIVE` (pilot `STOP_GAP_LT_0.05`)
+
+**S1 (Qwen add_nn levels 3–8).** Cache sha256 `60876bff0ec1a0613a21bf56a4bd06297a5c118935790530f01e63e5cab8251e`. GATE_A gap 0.094444 (pass). Self−global mean +0.023056, CI `[-0.010167, 0.060695]` includes 0 → A=`NOT_SUPPORTED`. GATE_C failed (fewer than 3 CAL levels with ≥15 correct and ≥15 wrong) → C=`NOT_INFORMATIVE`. Descriptive: mean within-level AUROC of `answer_logprob` 0.936; of `−n_carries` 0.575.
+
+**S2 (Phi-3.5-mini-instruct mul_n1).** Revision pinned `2fe192450127e6a83f7441aef6e3ca586c338b77` before pilot. Pilot seed 34005, 180 gens; best `gap_hat` 0.0333 < 0.05 → **STOP**, no pool collection; S2=`NOT_INFORMATIVE`.
+
+**Claimed.** Labels under `docs/M34A_V3_PREREG.md`. Aggregate C from the exhaustive S1×S2 table: both NOT_INFORMATIVE → `C_NOT_INFORMATIVE`. M34a ends after v3.
+
+**NOT claimed.** Privileged access; that the v2 C result generalizes to addition or to Phi; mechanistic κ; planning/games; other models/operations.
+
+**Scope.** S1: one Qwen2.5-3B-Instruct, `add_nn` only, levels 3–8. S2: one Phi-3.5-mini-instruct pilot only (no pools). Static warm-start / n_h=10 primary where analyzed.
+
+**Links.** `docs/M34A_V3_PREREG.md`; `reports/M34A_V3_REPORT.md` (analysis `3fed6fc`); `reports/m34a_v3_s1_raw/`; `reports/m34a_v3_s2_pilot/`.

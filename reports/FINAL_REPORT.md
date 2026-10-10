@@ -39,7 +39,7 @@ The local response of this model along these directions is well approximated by 
 
 Continue, bounded: run the remaining tests in `docs/NEXT_STEPS.md` in the stated order (M35, M31, M32, M33, M34, M36 optional). Checkpoints: after M31 to M33, decide whether the mechanistic claim gains privileged access or stays narrow. After M34 (real LLM agents), decide whether the project continues; the project-specific claim needs a result beyond plain calibration from a track record. Expected total: about one to two weeks.
 
-M34a is closed after v2: v1 `NOT_INFORMATIVE` (gate failed; no confidence; no logprobs); v2 A=`SUPPORTED_WEAK`, C=`INTERNAL_VALUE` on Qwen2.5-3B-Instruct `mul_n1` levels 2–7. That is a weak track-record utility gain plus an instance-level logprob signal, not privileged access. Remaining M34 work (planning/games) is not started.
+M34a is closed after v3: v1 `NOT_INFORMATIVE`; v2 A=`SUPPORTED_WEAK`, C=`INTERNAL_VALUE` on Qwen `mul_n1` 2–7; v3 aggregate C=`C_NOT_INFORMATIVE` (S1 add_nn A=`NOT_SUPPORTED` / C=`NOT_INFORMATIVE`; S2 Phi pilot STOP, no pools). The v2 instance-level logprob claim did not generalize under the preregistered settings. Remaining M34 work (planning/games) is not started.
 
 ## 6. Reproducibility
 
