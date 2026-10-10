@@ -80,3 +80,9 @@ ECE of stated confidence (TEST+HIST+CAL pooled): 0.048333
 - Qwen2.5-3B-Instruct, Amendment 1 family `mul_n1`, levels 5–10, greedy float16, V3 primary, static warm-start history, n_h=10 primary. Prompt: integer only (stated confidence defaults to 50).
 
 **Interpretation:** no support at this scale.
+
+## Erratum
+
+The "analysis git commit" field cites `ece1d19`, but the script actually used was committed later in `63bbe98` (it adds the Amendment 1 CAL gates; utilities are identical: rerunning both script versions on the cached responses gives 0 differing values among the 64 shared summary keys; cache sha256 `290307e5b95a062ee00141f43467c660ef48ddae95d6ba282f1269baaa200f99` matches the manifest).
+
+No number in this file has been changed.
