@@ -364,18 +364,35 @@ def render_report(
         "levels 2–7, greedy float16, V3 primary, static warm-start history, n_h=10.",
         "",
     ]
-    if primary["A"] == "SUPPORTED" and primary["C"] == "INTERNAL_VALUE":
-        lines.append(
-            "**Interpretation:** track-record value plus instance-level logprob value on this task."
-        )
-    elif primary["A"] == "SUPPORTED" and primary["C"] == "INTERNAL_NONE":
-        lines.append(
-            "**Interpretation:** track-record calibration only; no instance-level claim."
-        )
-    else:
-        lines.append("**Interpretation:** no support at this scale.")
+    lines.append(f"**Interpretation:** {interpretation_text(primary['A'], primary['C'])}")
     lines.append("")
     return "\n".join(lines)
+
+
+def interpretation_text(a_label: str, c_label: str) -> str:
+    """Exhaustive prose for (A, C). Does not change labels or numbers."""
+    a_pos = a_label in ("SUPPORTED", "SUPPORTED_WEAK")
+    weak = a_label == "SUPPORTED_WEAK"
+    track = "weak track-record value" if weak else "track-record value"
+    if a_label == "NOT_INFORMATIVE" and c_label == "NOT_INFORMATIVE":
+        return "GATE_A and GATE_C failed; both labels not informative."
+    if a_label == "NOT_INFORMATIVE" and c_label == "INTERNAL_VALUE":
+        return "GATE_A failed (A not informative); instance-level logprob value on this task."
+    if a_label == "NOT_INFORMATIVE" and c_label == "INTERNAL_NONE":
+        return "GATE_A failed (A not informative); no instance-level claim."
+    if c_label == "NOT_INFORMATIVE" and a_pos:
+        return f"{track} on this task; GATE_C failed (C not informative)."
+    if c_label == "NOT_INFORMATIVE" and a_label == "NOT_SUPPORTED":
+        return "no track-record support; GATE_C failed (C not informative)."
+    if a_pos and c_label == "INTERNAL_VALUE":
+        return f"{track} plus instance-level logprob value on this task."
+    if a_pos and c_label == "INTERNAL_NONE":
+        return f"{track} (calibration only); no instance-level claim."
+    if a_label == "NOT_SUPPORTED" and c_label == "INTERNAL_VALUE":
+        return "no track-record support; instance-level logprob value on this task."
+    if a_label == "NOT_SUPPORTED" and c_label == "INTERNAL_NONE":
+        return "no support at this scale."
+    return "unrecognized label pair."
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -104,4 +104,8 @@ Per-level at 50% coverage:
 
 - One small local model (`Qwen/Qwen2.5-3B-Instruct`), multiplication by one digit (`mul_n1`) only, levels 2–7, greedy float16, V3 primary, static warm-start history, n_h=10.
 
-**Interpretation:** no support at this scale.
+**Interpretation:** weak track-record value plus instance-level logprob value on this task.
+
+## Erratum
+
+The first written report ended with "**Interpretation:** no support at this scale." That sentence was a leftover fallthrough in `scripts/m34a_v2_analyze.py`: only `A=SUPPORTED` (not `SUPPORTED_WEAK`) was mapped, so `A=SUPPORTED_WEAK` and `C=INTERNAL_VALUE` hit the v1 default. Labels and every number above are unchanged. The script now maps every `(A, C)` pair; this file's interpretation line was regenerated from those labels only. Analysis git commit of the one run remains `2a63d27290f74f639510ac18ee106ca70b1161e2`.
