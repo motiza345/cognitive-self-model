@@ -2,7 +2,7 @@
 
 Prereg: `docs/M34A_V3_PREREG.md`. S1 pool plan is already committed. Do **not** edit v1/v2 files. Do **not** run analysis on Colab.
 
-Replace `COMMIT_HASH` with the scripts commit from the agent (analysis frozen before collection).
+Checkout commit `66d167b6708d34fb556df00bfe2a0e317cd3d5a7` (scripts + tests; analysis frozen before collection).
 
 ## Shared Cell 0 — T4 GPU
 
@@ -15,7 +15,7 @@ Runtime → Change runtime type → **T4 GPU**.
 !rm -rf cognitive-self-model
 !git clone https://github.com/motiza345/cognitive-self-model.git
 %cd /content/cognitive-self-model
-!git checkout COMMIT_HASH
+!git checkout 66d167b6708d34fb556df00bfe2a0e317cd3d5a7
 !pip install -q "torch" "transformers>=4.44" "accelerate" "huggingface_hub" "numpy"
 !python -m scripts.m34a_v3_collect --setting s1
 ```
@@ -52,7 +52,7 @@ Same checkout. Pin revision **before** any S2 generation:
 ```
 
 ```python
-import os, json
+import os
 os.chdir("/content/cognitive-self-model")
 print(open("reports/m34a_v3_s2/revision.json").read())
 print(open("reports/m34a_v3_s2_pilot/levels.json").read()[:2000])
@@ -66,12 +66,12 @@ Send the zip / `levels.json`. If status is `STOP_GAP_LT_0.05` or `NOT_RUN`, stop
 
 ## Phase C — S2 collection (only if levels chosen)
 
-After the agent commits the S2 pool plan from your pilot levels:
+After the agent commits the S2 pool plan from your pilot levels, use the new commit hash the agent gives you:
 
 ```bash
 %cd /content/cognitive-self-model
-!git pull
-!git checkout COMMIT_HASH_S2_PLAN
+!git fetch origin
+!git checkout <S2_POOL_PLAN_COMMIT>
 !python -m scripts.m34a_v3_collect --setting s2
 ```
 
