@@ -2,7 +2,7 @@
 
 Prereg: `docs/M34A_V2_PREREG.md`. Pool plan is already committed. Do **not** edit v1 files.
 
-Replace `COMMIT_HASH` with the scripts commit from the agent.
+Checkout commit `8fd068224bc7184441beae5df7e63de0ad1956c3` (scripts + tests; analysis already frozen).
 
 ## Cell 1 — T4 GPU
 
@@ -15,7 +15,7 @@ Runtime → Change runtime type → **T4 GPU**.
 !rm -rf cognitive-self-model
 !git clone https://github.com/motiza345/cognitive-self-model.git
 %cd cognitive-self-model
-!git checkout COMMIT_HASH
+!git checkout 8fd068224bc7184441beae5df7e63de0ad1956c3
 !pip install -q "torch" "transformers>=4.44" "accelerate" "huggingface_hub" "numpy"
 !python -m scripts.m34a_v2_collect --pool-plan reports/m34a_v2/pool_plan.json
 ```
