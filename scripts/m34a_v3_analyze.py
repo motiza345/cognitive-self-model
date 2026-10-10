@@ -171,9 +171,9 @@ def render_report(
         cfg = SETTINGS[key]
         r = results[key]
         lines += [f"## {cfg['name']}: {cfg['desc']}", ""]
-        if r["status"] == "NOT_RUN":
+        if r["status"] in ("NOT_RUN", "STOP"):
             lines += [
-                f"- status: `NOT_RUN`",
+                f"- status: `{r['status']}` · A=`{r['A']}` · C=`{r['C']}`",
                 f"- detail: `{json.dumps(r.get('not_run', {}), sort_keys=True)}`",
                 "",
             ]
