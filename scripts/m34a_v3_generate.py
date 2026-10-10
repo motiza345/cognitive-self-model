@@ -90,9 +90,20 @@ class TransformersChatClient:
         if device is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
         dtype = _pick_torch_dtype(prefer_dtype if str(device).startswith("cuda") else "float32")
-        model = AutoModelForCausalLM.from_pretrained(
-            model_id, revision=rev, torch_dtype=dtype, trust_remote_code=True
-        )
+        # Phi-3.5 + recent transformers: DynamicCache.seen_tokens crash unless eager + no KV cache.
+        load_kwargs: dict[str, Any] = {
+            "revision": rev,
+            "torch_dtype": dtype,
+            "trust_remote_code": True,
+        }
+        try:
+            model = AutoModelForCausalLM.from_pretrained(
+                model_id, attn_implementation="eager", **load_kwargs
+            )
+            attn_impl = "eager"
+        except (TypeError, ValueError):
+            model = AutoModelForCausalLM.from_pretrained(model_id, **load_kwargs)
+            attn_impl = "default"
         model.to(device)
         model.eval()
         self.model = model
@@ -103,6 +114,9 @@ class TransformersChatClient:
         self.dtype_name = "float16" if dtype == torch.float16 else "float32"
         self.prefer_dtype = self.dtype_name
         self.eos_id = tok.eos_token_id
+        self.attn_implementation = attn_impl
+        # use_cache=False avoids DynamicCache.seen_tokens on Phi; scores still returned.
+        self.generate_use_cache = False
 
     def _forward_once(self, prompt: str, dtype_name: str) -> dict[str, Any]:
         torch = self.torch
@@ -127,6 +141,7 @@ class TransformersChatClient:
                 max_new_tokens=MAX_NEW_TOKENS,
                 return_dict_in_generate=True,
                 output_scores=True,
+                use_cache=self.generate_use_cache,
             )
         latency = time.perf_counter() - t0
         gen_ids = out.sequences[0, input_len:]
@@ -172,6 +187,8 @@ class TransformersChatClient:
                 "max_new_tokens": MAX_NEW_TOKENS,
                 "dtype": dtype_name,
                 "device": self.device_name,
+                "attn_implementation": self.attn_implementation,
+                "use_cache": self.generate_use_cache,
             },
         }
 

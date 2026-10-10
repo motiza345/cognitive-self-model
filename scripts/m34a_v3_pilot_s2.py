@@ -122,6 +122,9 @@ def main(argv: list[str] | None = None) -> int:
         "status": "STOP_GAP_LT_0.05" if choice["stop"] else "LEVELS_CHOSEN",
     }
     write_json(args.out_dir / "levels.json", doc)
+    stale = args.out_dir / "NOT_RUN.json"
+    if stale.exists():
+        stale.unlink()
     print(json.dumps({"status": doc["status"], "chosen_levels": doc["chosen_levels"], "best_gap": choice["best"]["gap_hat"]}, indent=2))
     return 2 if choice["stop"] else 0
 
