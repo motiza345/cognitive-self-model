@@ -73,6 +73,7 @@ def main(argv: list[str] | None = None) -> int:
 
     t0 = time.perf_counter()
     rows: list[dict[str, Any]] = []
+    print(f"pilot plan {len(problems)}; cached {len(done)}", flush=True)
     try:
         with cache.open("a", encoding="utf-8") as f:
             for problem in problems:
@@ -82,7 +83,15 @@ def main(argv: list[str] | None = None) -> int:
                 row["model_id"] = getattr(client, "model_id", args.model)
                 row["revision"] = getattr(client, "revision", revision)
                 f.write(json.dumps(row, sort_keys=True) + "\n")
+                f.flush()
                 rows.append(row)
+                n_done = len(done) + len(rows)
+                if len(rows) == 1 or len(rows) % 10 == 0:
+                    print(
+                        f"pilot +{len(rows)} (done {n_done}/{len(problems)}) "
+                        f"last_correct={row['correct']}",
+                        flush=True,
+                    )
     except Exception as exc:  # noqa: BLE001
         write_json(
             args.out_dir / "NOT_RUN.json",

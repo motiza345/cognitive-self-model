@@ -71,6 +71,31 @@ def _pick_torch_dtype(name: str):
     return torch.float16 if name == "float16" else torch.float32
 
 
+def _patch_dynamic_cache_seen_tokens() -> None:
+    """Phi-3 remote code expects DynamicCache.seen_tokens (removed in newer transformers)."""
+    try:
+        from transformers import DynamicCache
+    except Exception:  # noqa: BLE001
+        return
+    if hasattr(DynamicCache, "seen_tokens"):
+        return
+
+    def _seen_tokens(self):  # type: ignore[no-untyped-def]
+        if hasattr(self, "get_seq_length"):
+            try:
+                return int(self.get_seq_length())
+            except Exception:  # noqa: BLE001
+                pass
+        if getattr(self, "key_cache", None):
+            try:
+                return int(self.key_cache[0].shape[-2])
+            except Exception:  # noqa: BLE001
+                return 0
+        return 0
+
+    DynamicCache.seen_tokens = property(_seen_tokens)  # type: ignore[attr-defined]
+
+
 class TransformersChatClient:
     """Greedy HF chat model with EOS-excluded token logprobs (same rule as v2)."""
 
@@ -85,12 +110,13 @@ class TransformersChatClient:
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
         self.torch = torch
+        _patch_dynamic_cache_seen_tokens()
         rev = revision or resolve_revision(model_id)
         tok = AutoTokenizer.from_pretrained(model_id, revision=rev, trust_remote_code=True)
         if device is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
         dtype = _pick_torch_dtype(prefer_dtype if str(device).startswith("cuda") else "float32")
-        # Phi-3.5 + recent transformers: DynamicCache.seen_tokens crash unless eager + no KV cache.
+        # Phi-3.5: prefer eager attn; KV cache OK after seen_tokens shim.
         load_kwargs: dict[str, Any] = {
             "revision": rev,
             "torch_dtype": dtype,
@@ -115,8 +141,7 @@ class TransformersChatClient:
         self.prefer_dtype = self.dtype_name
         self.eos_id = tok.eos_token_id
         self.attn_implementation = attn_impl
-        # use_cache=False avoids DynamicCache.seen_tokens on Phi; scores still returned.
-        self.generate_use_cache = False
+        self.generate_use_cache = True
 
     def _forward_once(self, prompt: str, dtype_name: str) -> dict[str, Any]:
         torch = self.torch
@@ -193,7 +218,14 @@ class TransformersChatClient:
         }
 
     def generate(self, prompt: str) -> dict[str, Any]:
-        first = self._forward_once(prompt, self.prefer_dtype)
+        try:
+            first = self._forward_once(prompt, self.prefer_dtype)
+        except AttributeError as exc:
+            if "seen_tokens" in str(exc) and self.generate_use_cache:
+                self.generate_use_cache = False
+                first = self._forward_once(prompt, self.prefer_dtype)
+            else:
+                raise
         if not first["nonfinite_detected"]:
             first["float32_rerun"] = False
             return first
