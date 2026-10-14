@@ -1,0 +1,337 @@
+{
+  "alpha": 1.0,
+  "anchor_verdict": "ANCHOR_SUPPORTED",
+  "arms": {
+    "anchor": {
+      "arm": "anchor",
+      "b1": {
+        "bootstrap": {
+          "class": "CI_POSITIVE",
+          "draws": 5000,
+          "high": 0.014168236704184286,
+          "low": 0.005078287791682804,
+          "mean": 0.00940666459508874,
+          "n_prompts": 24,
+          "seed": 23001
+        },
+        "cell_means": {
+          "M22.1-D1-L0": -0.01972559094429016,
+          "M22.1-D1-L15": 0.00022827115996430317,
+          "M22.1-D1-L8": 0.007326714384059112
+        },
+        "delta_mae_b1_minus_mae_g_plus_kappa": 0.00940666459508874,
+        "fit_partition": "update",
+        "gate": false,
+        "mae_b1": 0.01335540308435965,
+        "n_update_per_cell": 12
+      },
+      "bootstrap": {
+        "class": "CI_POSITIVE",
+        "draws": 5000,
+        "high": 0.012326632464262528,
+        "low": 0.004227186764587209,
+        "mean": 0.007659008026773033,
+        "n_prompts": 24,
+        "seed": 23001
+      },
+      "delta": 0.007659008026773032,
+      "holdout_cohorts": {
+        "new": {
+          "delta": 0.006446298906262705,
+          "mae_g": 0.008559219189919531,
+          "mae_g_plus_kappa": 0.0021129202836568262,
+          "n_prompts": 12,
+          "n_rows": 36,
+          "prompt_ids": [
+            "m30-completion-13",
+            "m30-completion-14",
+            "m30-completion-15",
+            "m30-completion-16",
+            "m30-instruction-13",
+            "m30-instruction-14",
+            "m30-instruction-15",
+            "m30-instruction-16",
+            "m30-syntax-13",
+            "m30-syntax-14",
+            "m30-syntax-15",
+            "m30-syntax-16"
+          ]
+        },
+        "old": {
+          "delta": 0.00887171714728336,
+          "mae_g": 0.014656273842168352,
+          "mae_g_plus_kappa": 0.005784556694884991,
+          "n_prompts": 12,
+          "n_rows": 36,
+          "prompt_ids": [
+            "m30-completion-03",
+            "m30-completion-06",
+            "m30-completion-09",
+            "m30-completion-12",
+            "m30-instruction-03",
+            "m30-instruction-06",
+            "m30-instruction-09",
+            "m30-instruction-12",
+            "m30-syntax-03",
+            "m30-syntax-06",
+            "m30-syntax-09",
+            "m30-syntax-12"
+          ]
+        }
+      },
+      "mae_g": 0.01160774651604394,
+      "mae_g_plus_kappa": 0.003948738489270909,
+      "per_cell": [
+        {
+          "intervention_id": "M22.1-D1-L0",
+          "mae_g": 0.025842321726183098,
+          "mae_g_plus_kappa": 0.011080695413208256,
+          "median_abs_g": 0.06137063726782799,
+          "median_abs_kappa": 0.011207777541130781,
+          "n": 24
+        },
+        {
+          "intervention_id": "M22.1-D1-L8",
+          "mae_g": 0.006886994602003445,
+          "mae_g_plus_kappa": 0.0005672018742188811,
+          "median_abs_g": 0.02800502348691225,
+          "median_abs_kappa": 0.004469689447432756,
+          "n": 24
+        },
+        {
+          "intervention_id": "M22.1-D1-L15",
+          "mae_g": 0.0020939232199452817,
+          "mae_g_plus_kappa": 0.000198318180385589,
+          "median_abs_g": 0.055400462821125984,
+          "median_abs_kappa": 0.0015930073568597436,
+          "n": 24
+        }
+      ],
+      "relative_reduction": 0.6598186836856698,
+      "verdict": "ANCHOR_SUPPORTED"
+    },
+    "new_identity": {
+      "arm": "new_identity",
+      "b1": {
+        "bootstrap": {
+          "class": "CI_POSITIVE",
+          "draws": 5000,
+          "high": 0.0024953142714433914,
+          "low": 0.0014806173632543372,
+          "mean": 0.0019673213330154084,
+          "n_prompts": 24,
+          "seed": 23001
+        },
+        "cell_means": {
+          "M30-D2-L12": 0.00011803458134333293,
+          "M30-D2-L20": -0.0001547498298653712,
+          "M30-D2-L4": -0.002152829042946299
+        },
+        "delta_mae_b1_minus_mae_g_plus_kappa": 0.001967321333015409,
+        "fit_partition": "update",
+        "gate": false,
+        "mae_b1": 0.002279088942385796,
+        "n_update_per_cell": 12
+      },
+      "bootstrap": {
+        "class": "CI_POSITIVE",
+        "draws": 5000,
+        "high": 0.0024205371190772792,
+        "low": 0.001404496922987164,
+        "mean": 0.0018781779430759747,
+        "n_prompts": 24,
+        "seed": 23001
+      },
+      "delta": 0.0018781779430759747,
+      "holdout_cohorts": {
+        "new": {
+          "delta": 0.0017970030415502454,
+          "mae_g": 0.002117286888985998,
+          "mae_g_plus_kappa": 0.00032028384743575263,
+          "n_prompts": 12,
+          "n_rows": 36,
+          "prompt_ids": [
+            "m30-completion-13",
+            "m30-completion-14",
+            "m30-completion-15",
+            "m30-completion-16",
+            "m30-instruction-13",
+            "m30-instruction-14",
+            "m30-instruction-15",
+            "m30-instruction-16",
+            "m30-syntax-13",
+            "m30-syntax-14",
+            "m30-syntax-15",
+            "m30-syntax-16"
+          ]
+        },
+        "old": {
+          "delta": 0.0019593528446017043,
+          "mae_g": 0.002262604215906726,
+          "mae_g_plus_kappa": 0.000303251371305022,
+          "n_prompts": 12,
+          "n_rows": 36,
+          "prompt_ids": [
+            "m30-completion-03",
+            "m30-completion-06",
+            "m30-completion-09",
+            "m30-completion-12",
+            "m30-instruction-03",
+            "m30-instruction-06",
+            "m30-instruction-09",
+            "m30-instruction-12",
+            "m30-syntax-03",
+            "m30-syntax-06",
+            "m30-syntax-09",
+            "m30-syntax-12"
+          ]
+        }
+      },
+      "mae_g": 0.002189945552446362,
+      "mae_g_plus_kappa": 0.00031176760937038733,
+      "per_cell": [
+        {
+          "intervention_id": "M30-D2-L4",
+          "mae_g": 0.004480923021522661,
+          "mae_g_plus_kappa": 0.0007344694264853994,
+          "median_abs_g": 0.025595253333449364,
+          "median_abs_kappa": 0.004028581432066858,
+          "n": 24
+        },
+        {
+          "intervention_id": "M30-D2-L12",
+          "mae_g": 0.0018231048015877604,
+          "mae_g_plus_kappa": 0.00019399385837459704,
+          "median_abs_g": 0.029646319337189198,
+          "median_abs_kappa": 0.0014914526254869998,
+          "n": 24
+        },
+        {
+          "intervention_id": "M30-D2-L20",
+          "mae_g": 0.00026580883422866464,
+          "mae_g_plus_kappa": 6.839543251165499e-06,
+          "median_abs_g": 0.023147032596170902,
+          "median_abs_kappa": 0.00021513471438083798,
+          "n": 24
+        }
+      ],
+      "relative_reduction": 0.8576368215994614,
+      "verdict": "SUPPORTED"
+    }
+  },
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 23001,
+  "catalog_sha256": "4ceb314e304424fbdee6aeec0d9957e6aa044128908c52ab3fee9a3ec0711770",
+  "device": "cpu",
+  "directions": {
+    "D1": {
+      "seed": 22101,
+      "sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411"
+    },
+    "D2": {
+      "seed": 22103,
+      "sha256": "8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e"
+    }
+  },
+  "dtype": "float32",
+  "git_commit": "70b052137e54ffcfb4cd714299d9b8f50b78c188",
+  "leakage": {
+    "checks": {
+      "alpha_is_one": true,
+      "arms_not_mixed": true,
+      "b1_fit_on_update_only": true,
+      "catalog_sha256_matches": true,
+      "copied_prediction_fields_unchanged": true,
+      "device_cpu": true,
+      "direction_hashes_match": true,
+      "holdout_not_used_in_b1_or_magnitude": true,
+      "m29_holdout_statistics_not_loaded": true,
+      "magnitude_passed_before_outcomes": true,
+      "prediction_sha256_matches": true,
+      "predictions_lack_outcome_fields": true,
+      "protocol_sha256_matches": true,
+      "token_ids_match_stage1": true,
+      "update_holdout_validation_prompts_disjoint": true,
+      "validation_excluded_from_verdict": true
+    },
+    "passed": true
+  },
+  "magnitude_check": [
+    {
+      "arm": "new_identity",
+      "cells": [
+        {
+          "intervention_id": "M30-D2-L4",
+          "median_abs_g": 0.03478085435926914,
+          "median_abs_kappa": 0.004735484486445785,
+          "ratio": 0.13615204610934958
+        },
+        {
+          "intervention_id": "M30-D2-L12",
+          "median_abs_g": 0.062039583921432495,
+          "median_abs_kappa": 0.003002455225214362,
+          "ratio": 0.04839579886636086
+        },
+        {
+          "intervention_id": "M30-D2-L20",
+          "median_abs_g": 0.027793691493570805,
+          "median_abs_kappa": 0.00013531996592064388,
+          "ratio": 0.0048687295083470975
+        }
+      ],
+      "finite": true,
+      "passed": true
+    },
+    {
+      "arm": "anchor",
+      "cells": [
+        {
+          "intervention_id": "M22.1-D1-L0",
+          "median_abs_g": 0.14766620099544525,
+          "median_abs_kappa": 0.01660135295242071,
+          "ratio": 0.11242486662830026
+        },
+        {
+          "intervention_id": "M22.1-D1-L8",
+          "median_abs_g": 0.06182701326906681,
+          "median_abs_kappa": 0.003811683738604188,
+          "ratio": 0.06165078235327345
+        },
+        {
+          "intervention_id": "M22.1-D1-L15",
+          "median_abs_g": 0.06733603030443192,
+          "median_abs_kappa": 0.0029100968968123198,
+          "ratio": 0.04321752980767539
+        }
+      ],
+      "finite": true,
+      "passed": true
+    }
+  ],
+  "model": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "new_identity_verdict": "SUPPORTED",
+  "prediction_sha256": "f363d93869f27d65cf6ad907a6442600a02f999fa374c7a7bcb1bda6d6e6abb5",
+  "protocol_revision": "M30.PROTOCOL.2",
+  "protocol_sha256": "1161099eddf95b5221ed4b2ff6541d996eb441814778078f4bc3a1a0cd5545f3",
+  "python": "3.12.3",
+  "runtime_seconds": 72.75166241199986,
+  "status": "OUTCOME_COMPLETE",
+  "token_ids": {
+    "anchor": {
+      "negative_id": 902,
+      "positive_id": 9834
+    },
+    "new_identity": {
+      "negative_id": 895,
+      "positive_id": 830
+    }
+  },
+  "torch": "2.14.1+cpu",
+  "transformer_lens": "2.16.1",
+  "two_by_two": {
+    "anchor_supported": true,
+    "interpretation": "Both identities beat `g` on this catalog under the frozen rule.",
+    "new_identity_supported": true
+  }
+}

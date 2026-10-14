@@ -1,0 +1,10 @@
+[project]
+name = "cognitive-layer"
+version = "0.2.1"
+description = "Auditable, evidence-governed self-model layer for LLM agents"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+whitebox = ["torch", "transformer-lens"]

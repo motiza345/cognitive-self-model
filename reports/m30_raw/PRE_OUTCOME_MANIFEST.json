@@ -1,0 +1,92 @@
+{
+  "alpha": 1.0,
+  "catalog_sha256": "4ceb314e304424fbdee6aeec0d9957e6aa044128908c52ab3fee9a3ec0711770",
+  "device": "cpu",
+  "directions": {
+    "D1": {
+      "seed": 22101,
+      "sha256": "5aad7f993311efc1bfcd3fa14141b4b5403d88562c66ec6717770bf70c91e411"
+    },
+    "D2": {
+      "seed": 22103,
+      "sha256": "8078ed36ed147c57c2bd723a9523f1b6dc30a6bc6895b34fc142ed8d1c0b400e"
+    }
+  },
+  "dtype": "float32",
+  "git_commit": "48a16bd4eec68307d5f6d1778e618f456a1a976b",
+  "magnitude_check": [
+    {
+      "arm": "new_identity",
+      "cells": [
+        {
+          "intervention_id": "M30-D2-L4",
+          "median_abs_g": 0.03478085435926914,
+          "median_abs_kappa": 0.004735484486445785,
+          "ratio": 0.13615204610934958
+        },
+        {
+          "intervention_id": "M30-D2-L12",
+          "median_abs_g": 0.062039583921432495,
+          "median_abs_kappa": 0.003002455225214362,
+          "ratio": 0.04839579886636086
+        },
+        {
+          "intervention_id": "M30-D2-L20",
+          "median_abs_g": 0.027793691493570805,
+          "median_abs_kappa": 0.00013531996592064388,
+          "ratio": 0.0048687295083470975
+        }
+      ],
+      "finite": true,
+      "passed": true
+    },
+    {
+      "arm": "anchor",
+      "cells": [
+        {
+          "intervention_id": "M22.1-D1-L0",
+          "median_abs_g": 0.14766620099544525,
+          "median_abs_kappa": 0.01660135295242071,
+          "ratio": 0.11242486662830026
+        },
+        {
+          "intervention_id": "M22.1-D1-L8",
+          "median_abs_g": 0.06182701326906681,
+          "median_abs_kappa": 0.003811683738604188,
+          "ratio": 0.06165078235327345
+        },
+        {
+          "intervention_id": "M22.1-D1-L15",
+          "median_abs_g": 0.06733603030443192,
+          "median_abs_kappa": 0.0029100968968123198,
+          "ratio": 0.04321752980767539
+        }
+      ],
+      "finite": true,
+      "passed": true
+    }
+  ],
+  "model": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "outcome_fields_present": false,
+  "prediction_rows": 288,
+  "prediction_sha256": "f363d93869f27d65cf6ad907a6442600a02f999fa374c7a7bcb1bda6d6e6abb5",
+  "protocol_sha256": "1161099eddf95b5221ed4b2ff6541d996eb441814778078f4bc3a1a0cd5545f3",
+  "runtime_seconds": 124.99001285999998,
+  "scored_intervention_executed": false,
+  "status": "PRE_OUTCOME_COMPLETE",
+  "token_ids": {
+    "anchor": {
+      "negative_id": 902,
+      "negative_text": " no",
+      "positive_id": 9834,
+      "positive_text": " yes"
+    },
+    "new_identity": {
+      "negative_id": 895,
+      "negative_text": " false",
+      "positive_id": 830,
+      "positive_text": " true"
+    }
+  }
+}

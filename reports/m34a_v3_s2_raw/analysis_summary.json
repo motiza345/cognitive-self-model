@@ -1,0 +1,17 @@
+{
+  "A": "NOT_INFORMATIVE",
+  "C": "NOT_INFORMATIVE",
+  "analysis_git_commit": "3fed6fc0d7b43025b5518f700345163539918eb0",
+  "not_run": {
+    "best_gap_hat": 0.033333333333333326,
+    "chosen_levels": null,
+    "model_id": "microsoft/Phi-3.5-mini-instruct",
+    "note": "Prereg: if best gap_hat < 0.05, STOP and mark S2 NOT_INFORMATIVE; no pool collection.",
+    "pilot_levels_path": "reports/m34a_v3_s2_pilot/levels.json",
+    "reason": "STOP_GAP_LT_0.05",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77",
+    "setting": "s2",
+    "status": "STOP_GAP_LT_0.05"
+  },
+  "status": "STOP"
+}

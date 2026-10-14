@@ -1,0 +1,232 @@
+{
+  "A": "NOT_SUPPORTED",
+  "C": "NOT_INFORMATIVE",
+  "analysis_git_commit": "3fed6fc0d7b43025b5518f700345163539918eb0",
+  "arm_means_v3_nh10": {
+    "global": 0.722222222222222,
+    "level_cal": 0.8166666666666665,
+    "level_lp_cal": 0.8891666666666665,
+    "naive": 0.7416666666666667,
+    "oracle_instance": 0.9612499999999999,
+    "oracle_level": 0.8166666666666665,
+    "self": 0.7452777777777775,
+    "shuffled": 0.7049999999999997
+  },
+  "auroc_logprob": {
+    "mean": 0.9362053970325702,
+    "per_level": {
+      "3": 0.9773123909249564,
+      "4": 0.935099846390169,
+      "5": 0.9433359936153233,
+      "6": 0.9627488760436738,
+      "7": 0.9012237762237763,
+      "8": 0.8975114989975232
+    }
+  },
+  "auroc_neg_carries": {
+    "mean": 0.5750584660051864,
+    "per_level": {
+      "3": 0.5875509016870274,
+      "4": 0.6536098310291859,
+      "5": 0.6461824953445066,
+      "6": 0.5666880753585956,
+      "7": 0.5193764568764568,
+      "8": 0.47694303573534613
+    }
+  },
+  "cache_sha256": "60876bff0ec1a0613a21bf56a4bd06297a5c118935790530f01e63e5cab8251e",
+  "manifest": {
+    "cache_file": "responses.jsonl",
+    "cache_sha256": "60876bff0ec1a0613a21bf56a4bd06297a5c118935790530f01e63e5cab8251e",
+    "date_utc": "2026-10-10T09:48:46Z",
+    "device_name": "cuda",
+    "dtype_default": "float16",
+    "float32_rerun_ids": [],
+    "git_commit": "3fb287edbc8ec5bb99b9926d2318a836b234bea8",
+    "input_tokens": 61200,
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "n_cached": 1200,
+    "n_new_this_run": 1200,
+    "output_tokens": 8556,
+    "pool_plan_n": 1200,
+    "pool_plan_path": "/content/cognitive-self-model/reports/m34a_v3_s1/pool_plan.json",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "runtime_seconds_this_run": 582.8353718259999,
+    "setting": "s1",
+    "torch_version": "2.11.0+cu130",
+    "transformers_version": "5.18.0",
+    "version": "m34a-v3-s1"
+  },
+  "nh_table": {
+    "10": {
+      "global": 0.7180555555555554,
+      "self": 0.7391666666666663,
+      "shuffled": 0.7063888888888886
+    },
+    "2": {
+      "global": 0.7166666666666665,
+      "self": 0.6999999999999996,
+      "shuffled": 0.6999999999999996
+    },
+    "25": {
+      "global": 0.7069444444444442,
+      "self": 0.7919444444444443,
+      "shuffled": 0.7188888888888888
+    },
+    "5": {
+      "global": 0.7194444444444442,
+      "self": 0.762222222222222,
+      "shuffled": 0.7008333333333332
+    }
+  },
+  "per_level_accuracy": {
+    "3": 0.955,
+    "4": 0.93,
+    "5": 0.895,
+    "6": 0.865,
+    "7": 0.78,
+    "8": 0.695
+  },
+  "primary": {
+    "A": "NOT_SUPPORTED",
+    "C": "NOT_INFORMATIVE",
+    "U_global": 0.722222222222222,
+    "U_oracle_level": 0.8166666666666665,
+    "cal_var": {
+      "n_levels_var": 2,
+      "per_level": {
+        "3": {
+          "accuracy": 0.96,
+          "correct": 96,
+          "n": 100,
+          "wrong": 4
+        },
+        "4": {
+          "accuracy": 0.94,
+          "correct": 94,
+          "n": 100,
+          "wrong": 6
+        },
+        "5": {
+          "accuracy": 0.86,
+          "correct": 86,
+          "n": 100,
+          "wrong": 14
+        },
+        "6": {
+          "accuracy": 0.86,
+          "correct": 86,
+          "n": 100,
+          "wrong": 14
+        },
+        "7": {
+          "accuracy": 0.79,
+          "correct": 79,
+          "n": 100,
+          "wrong": 21
+        },
+        "8": {
+          "accuracy": 0.74,
+          "correct": 74,
+          "n": 100,
+          "wrong": 26
+        }
+      },
+      "var_ok": false
+    },
+    "gate_a": true,
+    "gate_c": false,
+    "gate_gap": 0.09444444444444455,
+    "level_lp_cal_minus_level_cal": {
+      "draws": 5000,
+      "high": 0.12500000000000003,
+      "low": 0.02333333333333335,
+      "mean": 0.07250000000000002,
+      "n": 240,
+      "seed": 23001
+    },
+    "self_minus_global": {
+      "draws": 5000,
+      "high": 0.06069513888888877,
+      "low": -0.010166666666666746,
+      "mean": 0.02305555555555547,
+      "n": 240,
+      "seed": 23001
+    },
+    "self_minus_shuffled": {
+      "draws": 5000,
+      "high": 0.062167361111111104,
+      "low": 0.020137152777777778,
+      "mean": 0.04027777777777778,
+      "n": 240,
+      "seed": 23001
+    }
+  },
+  "risk_coverage": {
+    "overall": {
+      "0.25": {
+        "accuracy": 1.0,
+        "coverage": 0.25,
+        "n_kept": 60,
+        "risk": 0.0
+      },
+      "0.5": {
+        "accuracy": 1.0,
+        "coverage": 0.5,
+        "n_kept": 120,
+        "risk": 0.0
+      },
+      "0.75": {
+        "accuracy": 0.9888888888888889,
+        "coverage": 0.75,
+        "n_kept": 180,
+        "risk": 0.011111111111111072
+      },
+      "1.0": {
+        "accuracy": 0.8708333333333333,
+        "coverage": 1.0,
+        "n_kept": 240,
+        "risk": 0.12916666666666665
+      }
+    },
+    "per_level": {
+      "3": {
+        "accuracy": 1.0,
+        "coverage_0.5_n": 20,
+        "n": 40,
+        "risk": 0.0
+      },
+      "4": {
+        "accuracy": 1.0,
+        "coverage_0.5_n": 20,
+        "n": 40,
+        "risk": 0.0
+      },
+      "5": {
+        "accuracy": 1.0,
+        "coverage_0.5_n": 20,
+        "n": 40,
+        "risk": 0.0
+      },
+      "6": {
+        "accuracy": 1.0,
+        "coverage_0.5_n": 20,
+        "n": 40,
+        "risk": 0.0
+      },
+      "7": {
+        "accuracy": 1.0,
+        "coverage_0.5_n": 20,
+        "n": 40,
+        "risk": 0.0
+      },
+      "8": {
+        "accuracy": 0.95,
+        "coverage_0.5_n": 20,
+        "n": 40,
+        "risk": 0.050000000000000044
+      }
+    }
+  },
+  "status": "OK"
+}

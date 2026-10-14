@@ -1,0 +1,6 @@
+{
+  "model_id": "microsoft/Phi-3.5-mini-instruct",
+  "note": "Pinned before any S2 collection. Do not change after outcomes exist.",
+  "pinned_utc": "2026-10-10T10:00:12Z",
+  "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+}
