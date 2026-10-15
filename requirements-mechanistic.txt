@@ -1,0 +1,10 @@
+# Mechanistic line (M29-D, M30, S1, S2). CPU, float32. Python 3.12.
+# Versions recorded in reports/m30_raw/VERDICT.json (M30). M29-D recorded
+# torch 2.14.0+cpu and transformer_lens 3.9.0; see the report, section 7.
+# Install torch from the CPU index if the exact "+cpu" build is needed:
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1
+transformer_lens==2.16.1
+numpy
+pytest
+huggingface_hub

@@ -1,0 +1,8 @@
+# M34a decision tests (collection on a GPU runtime, Colab was used). float16, greedy.
+# Versions recorded in reports/m34a_v2_raw/manifest.json: torch 2.11.0+cu130, transformers 5.18.0.
+# Analysis from the cache needs only numpy.
+torch==2.11.0
+transformers==5.18.0
+huggingface_hub
+numpy
+pytest
