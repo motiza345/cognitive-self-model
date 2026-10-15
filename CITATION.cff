@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Pre-registered tests of self-models in small language models: one narrow positive result, no privileged access, and lessons for test design"
+version: "1.0"
+date-released: "2026-10-10"
+type: software
+authors:
+  - given-names: "Morteza"
+    family-names: "[surname to be added]"
+repository-code: "https://github.com/motiza345/cognitive-self-model"
+abstract: "Pre-registered tests of whether a self-model gives measurable value to a small language model or a decision-making agent. Includes frozen predictions, raw outcomes, analysis scripts and a technical report."
+keywords:
+  - self-model
+  - pre-registration
+  - language models
+  - calibration
+  - mechanistic interpretability
+# license: add before publication
