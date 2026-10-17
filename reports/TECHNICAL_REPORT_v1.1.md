@@ -1,6 +1,6 @@
 # Pre-registered tests of self-models in small language models: one narrow positive result, no privileged access, and lessons for test design
 
-**Version 1.1 (revised 2026-10-10 after a prior-art review; supersedes v1.0).** Author: Morteza [surname to be added], independent researcher. Repository: `github.com/motiza345/cognitive-self-model`. All numbers below are copied from frozen reports and manifests in the repository; section 8 says how to recompute them.
+**Version 1.1 (revised 2026-10-10 after a prior-art review; supersedes v1.0).** Author: Morteza Derakhshan, independent researcher. Repository: `github.com/motiza345/cognitive-self-model`. All numbers below are copied from frozen reports and manifests in the repository; section 8 says how to recompute them.
 
 ## Abstract
 
