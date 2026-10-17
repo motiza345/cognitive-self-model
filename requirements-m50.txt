@@ -1,0 +1,8 @@
+# M50 (cognitive layer evaluation). Generation runs on a Colab GPU with the PREINSTALLED torch and transformers
+# (do not reinstall torch there). The manifest records the versions actually used. Earlier M34a runs used
+# torch 2.11.0+cu130 and transformers 5.18.0.
+# Analysis and tests need only:
+numpy
+scipy
+pytest
+huggingface_hub

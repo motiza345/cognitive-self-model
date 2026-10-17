@@ -34,4 +34,4 @@ One small model family, narrow tasks, simulated agents with injected properties,
 
 ## License and citation
 
-License: to be added by the author before publication (MIT or Apache-2.0 are typical choices). Check the licences of the models whose outputs are included (Qwen2.5 sizes differ; Phi-3.5-mini). Citation: see `CITATION.cff`.
+License: MIT (see `LICENSE`) for the code and documents in this repository. The licences of the models whose outputs are included are separate (Qwen2.5 sizes differ; Phi-3.5-mini); check them before redistributing model outputs. Citation: see `CITATION.cff`.
