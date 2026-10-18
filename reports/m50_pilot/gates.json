@@ -1,0 +1,26 @@
+{
+  "n_tasks_kept": 3,
+  "tasks_ok": true,
+  "pilot_accuracy_overall": 0.74375,
+  "oracle_minus_always_verify": 0.22312500000000013,
+  "G_ceiling": true,
+  "n_scope_levels_mid_accuracy": 6,
+  "G_variance": true,
+  "se_estimate_scoped_minus_best_simple": 0.0177141009148838,
+  "test_per_scope_level": 80,
+  "per_scope_pilot_accuracy": {
+    "add_nn:6": 0.9,
+    "add_nn:7": 0.8,
+    "add_nn:8": 0.675,
+    "add_nn:9": 0.55,
+    "mul_n1:3": 0.75,
+    "mul_n1:4": 0.8,
+    "mul_n1:5": 0.8,
+    "mul_n1:6": 0.6,
+    "sort_n:10": 0.8,
+    "sort_n:11": 0.675,
+    "sort_n:12": 0.725,
+    "sort_n:9": 0.85
+  },
+  "all_pass": true
+}
