@@ -1,0 +1,455 @@
+{
+  "analysis_commit": "0ab37351fbb0f56666cfa405c5e4baa29633b5ff",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "manifest": {
+    "stage": "main",
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "batch_size": 16,
+    "plan_sha256": "8283a7a79a4d5ccc998f9b532595092f6e054dc42dae9f4d311bb8f6eaaf6b69",
+    "n_planned": 2160,
+    "n_rows": 2160,
+    "cache_sha256": "71e37ba0b8805077a7c03c89a78cae8078248f335ce60b10be5c73f8c86728be",
+    "hidden_chunks_sha256": {
+      "chunk_00000.npz": "9bac2271c124433f69bfcac79daee49b8791b40da3b14a3d598e0c2023ab8299",
+      "chunk_00001.npz": "17da6100d31a1b01e6989b4e3c1a19d3d67bcf2a17c8e268bf6f198094d22ee3",
+      "chunk_00002.npz": "cc017a5816d5af5e56cc8f08e4a2c05405cd0887727c988662d76cc45d034c89",
+      "chunk_00003.npz": "2506f25823476cd15bcf1c9e3b517e9404dacd0989eb4e3410c3db8494079d1e",
+      "chunk_00004.npz": "336ae9725096b83fa1ba1e3a19544bdacd444b9e747fc265e5c4a429c6d5f9d8",
+      "chunk_00005.npz": "770bfb154d7d1c59f7f41d1bfc167803d30c52617099bfb037a0272d4b103969",
+      "chunk_00006.npz": "2cf6e89c145369f8ee3bbf9e80692f806ef9b7f4bf6ce09bddb3b9f10a4c52f6",
+      "chunk_00007.npz": "eab887d6c2f7520d592403493dc2907fc6b115809f6a6b9eac4b5aa2fe68ad1f",
+      "chunk_00008.npz": "1eea01955477d8c62fbfd14d5cd9679b30cf283cce37e640dfa017c507a92627",
+      "chunk_00009.npz": "bec1a085e3aaa532d8cfcb7d19dbd09835ce659203a316d2d05f876b2d6b320b",
+      "chunk_00010.npz": "a3828fa20ef1bd8cdce035ca1a874c060f524cbc3c609fc72d9e63e66763da47",
+      "chunk_00011.npz": "08d586e0268a9a3cd4363d89dd31f5d5c02ea05cfc9b58aacd648c545954bb59",
+      "chunk_00012.npz": "1c0a5e141c2c07228a8d608216b0f51f0706ed3b6a28a0eb6498aeb301d81dd7",
+      "chunk_00013.npz": "728fbbd5cc2169bf6a852e7198e2910b2c6e33410c67d6918dacc6c9850af9f6",
+      "chunk_00014.npz": "2994c892cfff8dcc3e677504fb439bfae02fc56bffcb93d832ed6aeb3c568fc6",
+      "chunk_00015.npz": "4e269fdd43dad70508702d9ebdbb0f6766cf0d8596e94aecc0283a98adf42936",
+      "chunk_00016.npz": "eac56e99bf45abb0a7f153059385a0fd3d5ecafda67ffcd7e5dd3eacb7189f6e",
+      "chunk_00017.npz": "309e696bf705ee767a3491ab2efd21588a5a74d600af160a07003def9f93c50d",
+      "chunk_00018.npz": "96f9300474e747a9df6afdf0a1979d9c02b4ed1bfc92898e799b173acad3b562",
+      "chunk_00019.npz": "d9287674f29b71bd9090d0758919d4ba04ad84673213bf8bcb5a24d5e115eb3f",
+      "chunk_00020.npz": "0c9270c831ba246ab39a3cae070680ec8b5e30aab36c44d0564ca537b88b1225",
+      "chunk_00021.npz": "60cbdba0233e5e6c51346eef6256287db3b9d7e02b8050501a60611ab71306fc",
+      "chunk_00022.npz": "ee9319d994a156947314cf7a4f3e995dc5e7f513ec6e7e01f13c7102d514245b",
+      "chunk_00023.npz": "500d098d248c3b27c5d16b95b4bbc11c8a698fc68cdf7df7e7be192de30ed341",
+      "chunk_00024.npz": "662564b93f3ad94569899b92df334e0b2fed666f8a3e89525381fcd83894dbff",
+      "chunk_00025.npz": "a623ff3254fe8d553521de655e7c257b8ef381417932d6c32a54428d4207f4c3",
+      "chunk_00026.npz": "f7b9dd57c0dec0dbb526943a62c6e3e9e4ea10dde46300af0b9b5ff76a655364",
+      "chunk_00027.npz": "8669b6422ea0d4e7a9edaa3060205cbebd5ed23f28edc5477d839ce2295f6213",
+      "chunk_00028.npz": "edd3b28f0fd5364154c1d1d59fb57196fb837bdcf6c9649c398cb1be7d1aa8aa",
+      "chunk_00029.npz": "97e9e02407d408eb17afdc00253de58b6f992aafa3dc7eb734715c7f1dedd74f",
+      "chunk_00030.npz": "07c631d70a5ff672d61527b51173d8b538267ad8799c90584a132e76971b1f79",
+      "chunk_00031.npz": "75a6dc779fd8566b277e76da39b218fd1f20eccbedc8d48f6a0e1c58068f0f28",
+      "chunk_00032.npz": "513d4d9ffdd9157a269e7a3afd273b4535dccbe25574fb1a490727a264a739ba",
+      "chunk_00033.npz": "ad7be8f12bcef055ed362dfbf8cabe5b4134b5108f2b146e0fc365e317d6106c",
+      "chunk_00034.npz": "68991bac1d90b2e6b15cf3cad849d247e3e1a88e4b010351b061a5ce743ce198",
+      "chunk_00035.npz": "9a197fff9a4d23c5d82a078d295cf4ced0ab2c0fc3369fd68da9a29ed4a2e4ad",
+      "chunk_00036.npz": "5030d24c846472e59183789cc06691d9f86050fc27f71cd081bec8c2b61e600f",
+      "chunk_00037.npz": "c8fd300739985eca8d01253a36616f407f5eac05ebb83b9da1f694ba8ba4d00f",
+      "chunk_00038.npz": "d03c8d2a596cc9d0f5f999a19ab6c30b4931ebde848600395d0e5d2d5f4b7df0",
+      "chunk_00039.npz": "89a1e60d99726e414eaabe97187d70e70d85ccc169abc996a986159b9a812991",
+      "chunk_00040.npz": "113ebadde17b802e17abf56d191c94475e4cd4aaecc42f12cac5871fe4ccda94",
+      "chunk_00041.npz": "ada06de0247ef85e19d18e47f0b1d0cd92872f694c4f81db01251172121863fd",
+      "chunk_00042.npz": "9299c311d2e90b7c190ff11a80366cf850eef574b36762f2220abb540923f635",
+      "chunk_00043.npz": "d03b273b33a2a1eb7fa86f208d105e25265baf9bd058a3dd3ac717b21db1e6a1",
+      "chunk_00044.npz": "f64f7db90a5796e086cfed8f8ccbd7795cf92e03d0203acd46ca1e82e21de5da",
+      "chunk_00045.npz": "0c65843321cfafea03a6f74b03dd6950b96ea93eebf626c6a2bacc6c811989ef",
+      "chunk_00046.npz": "34e27854c30a395d6eb6793bdd7979eb9e93764cb39842e827e5c8787bab48b0",
+      "chunk_00047.npz": "61e1fef527de26b531fb50298be7fae7403d6e2f1cd3dbf844037e358c857ec9",
+      "chunk_00048.npz": "02d61fd3aba94d9bec7a481b45dce865dd936f44ed9c1ad36ff3bcf1948297eb",
+      "chunk_00049.npz": "a388cc0bf960108bd6858f74442f3e6f31a5010740c5a62dda2b279cbe7db155",
+      "chunk_00050.npz": "3ab795f7f2ffa56cb432f7e46697d3507410dca35859e0ad791519c1699c6e48",
+      "chunk_00051.npz": "81fe06f8f3235477abc163e9eac9fa89626d15ba52be726b26f8c77babe4c358",
+      "chunk_00052.npz": "5d1fe6b886779d35a07da13fc85905b676b0d66c500eb0fec1e755cadb8391e8",
+      "chunk_00053.npz": "7966bedb2eaaea70aff6faf0f4967fe8c6edee291465c6ce93c0657dae469d86",
+      "chunk_00054.npz": "2798204b233b168077f17ccf70d5c519f5549ea88295d5de914abc86cf6336e3",
+      "chunk_00055.npz": "745c2ee90e28b90a80ab8060bdefc45485f8bf9033ce464ac3a772d875f21182",
+      "chunk_00056.npz": "835706b5209b5d9e19f56be81d6d056d492ed68bd0ecf4815c823b806b70c374",
+      "chunk_00057.npz": "25a4e7fdc25928012c80da8e0e3929433217e81e4df224cb952e2d2da5c3e67f",
+      "chunk_00058.npz": "c521100ec1c739177b82df83110e7dde9db088b67bba76df60ed596c26a8b20e",
+      "chunk_00059.npz": "b79ab20d9ceb61102d2a9e38914e73875cd534f44bddd38955af0d35654574dd",
+      "chunk_00060.npz": "10a89c3c65bb5f9172e174c319508cf1a121119e7ae1d82f40ab42970e40bab9",
+      "chunk_00061.npz": "ee3f4a944960784fdc2d71f2cf95191de7927880ebd6cc1e02a3ac2867d74f09",
+      "chunk_00062.npz": "398b12e18a11b6b4c33d34da8b68c339f912cddc0e90a0b9a688ed2da4c0b406",
+      "chunk_00063.npz": "8419d60dbb2aa1b804eb1563521874804acfac88476b9c898897c54b2350a5cf",
+      "chunk_00064.npz": "b4c7a291b225036c36a9a9ddb170108e641fe6f5eecb07f5da912dc207cfaf10",
+      "chunk_00065.npz": "e9c1e3f6da629244787bb2b30e40acb91013a34d18df841cadac2744e34204a9",
+      "chunk_00066.npz": "7b519a208dcb6bc4269804b435dd5ad4aacc14e479ec7deed0ad82d7bf92c283",
+      "chunk_00067.npz": "12a0389da26b18fc91168b9220a29064dbe2476a3134c7f477538872e858a5be",
+      "chunk_00068.npz": "200e8fac982e58e83b7e0876635417922f536b1deb8c75cddd936c27e3fc8b04",
+      "chunk_00069.npz": "9ae7260d4362e597197a0e841b00d15e186d1eb758e234295757bc19c6bd31a5",
+      "chunk_00070.npz": "1b54f0301e0d509764976d1640d6cf9a515c726799cadf3000cbe33b0163f18e",
+      "chunk_00071.npz": "9e5aa5c510475187d09233df3ae0cacb511b2d5711f88713ac43724af57ad359",
+      "chunk_00072.npz": "30a6eba5dded0b666cac2048c1e4a9b3738701f79e24bd58d6ebd0a41695d649",
+      "chunk_00073.npz": "5ced7cc2185bdefd7307706fcac368664153c63a97039619f9c37f5bc435b2d1",
+      "chunk_00074.npz": "273bc23964e8e6adce5f7875a9b7c5493c7e053d17757130326c177675827039",
+      "chunk_00075.npz": "800b6443c0a560d591105820f40328613d673316a21068ae7cd1892ff0f6534c",
+      "chunk_00076.npz": "5de834f0f7c59583839fea1f7a80de52d9cd15fa600ac08c96f15345fb9306ae",
+      "chunk_00077.npz": "eed8e10216470149b67dc83524897c4baad7ce6288061eaa86c9ac8c9e1567f3",
+      "chunk_00078.npz": "99e65457c62fc7910b125aaef90a77cece7cefc84c57646549ab80ee7ba3a093",
+      "chunk_00079.npz": "a6d4f2e9856e6412cc14797db6e8d86df19bc87053e28071e0fc9336adb12a63",
+      "chunk_00080.npz": "690b3c0b7e8036d81565d047ca5e930a8288ef5c0718a809fbb723fca1790507",
+      "chunk_00081.npz": "7a7ab3947b397c777ef8c4a9bb01bdc9becbf43b1cc3ee4e965315cba292c80c",
+      "chunk_00082.npz": "24c6527cb245bd67599672722079f4d43dbf5e0165c03981db3e7b151291dfef",
+      "chunk_00083.npz": "b250ee2600a1f0bf3a5e080cd619af865f4d53a2d611bc3e6da4bbbfb5fed869",
+      "chunk_00084.npz": "61f326ac9ecf621db0cef58084f5ae6bbed0ccb982b4aca36eda844d701d4d9d",
+      "chunk_00085.npz": "eafdb339a4e7b49d93aae2deb64021964e1571891396a63eee76a8e06c53a18f",
+      "chunk_00086.npz": "1021e0ece44358610eb9dfa86604921602a771f2173e9b14dd66d66283e3fced",
+      "chunk_00087.npz": "2c41d30d5ed0134e7a7f39d446da45bd1c06313345904e1bf1d6c12fd7c2a95b",
+      "chunk_00088.npz": "a8d0a437ecdd4725abe762f66b42d9e1f25560f1f8bfe4d320b8089b2acf4e14",
+      "chunk_00089.npz": "85135f9b4f4f9632218cc90f51a7ed4a94799ef661eb9ba3176e2440c8b4f74a",
+      "chunk_00090.npz": "c06dd452235a47292671ed16eaeb74b96683a0d432a25b7ada9eb8949caffc97",
+      "chunk_00091.npz": "c4b79f5ddd1134d07110e738f42ac4ae941e44bc1d84faefbdd2d84f673a2ed1",
+      "chunk_00092.npz": "7c078381f4a321d49b1c0f6395b1c244582675b021b651073a0f3684c27cf0dd",
+      "chunk_00093.npz": "4d98fa6474c2b794e96b053bbcdec30ad262afd3d2cbf0595efc32a3b9070be0",
+      "chunk_00094.npz": "1bb3a9a61a9f0fec151e0573046b819ee615ccdf3166154cc2af4820f1283c5f",
+      "chunk_00095.npz": "1e6dca78d20f80925a069fa9869e4cce5faabf0b8362a1517a3711de195c3e1c",
+      "chunk_00096.npz": "0230249f6ce24a9d9050294fb6f380a32d1bd7d2e415a26b25f321e60ae643d2",
+      "chunk_00097.npz": "c8508229fa09c01e30abddf9950fafe4a166264ce3d0e2fbab10b90e17a11084",
+      "chunk_00098.npz": "d70f278453a65f802272e0139480ff0f608cc6e2a621a292f5f3bac633feb6bb",
+      "chunk_00099.npz": "bce14599882cae163abd9a5580cbf023f954889cd452c0cae616c09f0961a11f",
+      "chunk_00100.npz": "0e7eb86ee1df299e530ba1ad906b5daa110b73ae8912b14dde074c3f08bcbb0a",
+      "chunk_00101.npz": "d78d80e6daa756a8666f6d4d9910eb9ca0b9472007700d613f89c873cbd7bc4e",
+      "chunk_00102.npz": "93588c9b9fe7477f5c43b31f419530508673a6f0005c0eff90584e3b503ab79e",
+      "chunk_00103.npz": "69269f785eab740093f0d75edb25cf5f0736c5ef3dd13b3bfe74ea7f280077da",
+      "chunk_00104.npz": "c4fba050fedb4d5301d0d3c368f2585d22dff627289871df98e6d89c33fd2e70",
+      "chunk_00105.npz": "ae8add232dadc21d6bf2c39e95f33c82c594dd4c5c3671fbd3c73b0660d4b9d7",
+      "chunk_00106.npz": "a966a56d394a8f04dbc92c31b836d9c05db1244e4857a2b057d37bd298863c72",
+      "chunk_00107.npz": "6370601b9d7905b30713b4ff2811c4d74d2adcb847806c6cf828a2be371fc83a",
+      "chunk_00108.npz": "de580d0f8ae490db67c9717cc7257f130de91fd30c3ecd69b23567b1f9c68972",
+      "chunk_00109.npz": "b4afede3f5d09a94033e71097ec545188a34d7150eb84d65dd3f4c6b66a54ea4",
+      "chunk_00110.npz": "f8c1adefd3213d993c3a136118eca346abd7066b2e49311c303f98981a6db490",
+      "chunk_00111.npz": "d2c35320a7d2ee2cdc47e4cce99e79dc740b991a865e9a87eac7f985118396d4",
+      "chunk_00112.npz": "d775f8e5b89c02d3bdfd7591efc7f4297dee6b75c8bf416121759ae5bb77fbeb",
+      "chunk_00113.npz": "e8080dceb51492b1a86449ac5e2a1561c2bf4b8619d1f847a9075b8b6c02bfcf",
+      "chunk_00114.npz": "6cee979877bdee741624daec00acbfe7d7eb78b4e57b6485e12ec7c6a6aa841d",
+      "chunk_00115.npz": "795495b1c14b1add9c641f07cc22f6dfce0fdf86851726ad996de436631730d1",
+      "chunk_00116.npz": "ab95f6515aefdccf0b180e85bb5b63849f85c8ab1251c6cfb726cb5926337e3a",
+      "chunk_00117.npz": "b29322112467cb7c0569480f89a9d26b09e320a972b00bb7efaf2ef86c932440",
+      "chunk_00118.npz": "10097c556c8e77e5b03f3f592778febf5535b4a22f7fa937d91455e28f22207d",
+      "chunk_00119.npz": "0622bc25efd09f78329af5917fd5c4f2dcfd66cf6a13225fc45c7b63366f572e",
+      "chunk_00120.npz": "10f47e3124a385408282199110758d0a1758cafefce754c9068f20bc72c14049",
+      "chunk_00121.npz": "186f7b68b7d57fd2312e47674c92063bf6f026d7ef907896fa7614f08bc224b5",
+      "chunk_00122.npz": "6e1e8014222f8b3903cbb1a146b82738f55609822d7bc7a0dde63a989f0ab11d",
+      "chunk_00123.npz": "74479446de833ee7715b2640f3cc5e343b8d99efecb975089f7fd28e1f7d555f",
+      "chunk_00124.npz": "f1da3afd6ef1752d0c494a9dfcd45c47a6d5006dec80343cbcc42320c052939d",
+      "chunk_00125.npz": "b20983bff2b5db8da1eb87da7840644bfe04050edddd0913202f11c9fb15ded0",
+      "chunk_00126.npz": "7a05b1ae50372e8f7f974dc1235a916d075c5af28168fcb58772750a729c24dd",
+      "chunk_00127.npz": "5c6db57834a1f1c486c0aaa7b9610e87fc8897b77b458a5b95684f5ceaf93d29",
+      "chunk_00128.npz": "24446f88d0be7db5a1f8e574475cbeffd74deca79f9c23cae579b31c97e7385f",
+      "chunk_00129.npz": "29f545c3c8c604a1e89d89f2440baa44afd8e6031bc26c8fe2ded5c9db514a3a",
+      "chunk_00130.npz": "fad72467e7a0041bb62b7703fd2409251ecfefbc58abaf0e33bf9775df0bce41",
+      "chunk_00131.npz": "c224cd6f898ad7e3f298a22c3b0d657d687c3b7619c020beb28844c7cc56b7b9",
+      "chunk_00132.npz": "403a91cc40e8971eeb4335700b4b0b9d18a115fbd2d5c9036abd503ca8273524",
+      "chunk_00133.npz": "47b10b86b192e59f23f855fe88c106dcf14f7c87481b52b0d188b3967c3c5a29",
+      "chunk_00134.npz": "85c10071ee6d284fe3cc4fc0255de61dca28b8e60161cf2086e16286c7e12008"
+    },
+    "hidden_chunks_combined_sha256": "ac4d38f9b24f5d204a1abf002ed3c5364258fc1eeb3d1fb8be0893b8bf62314c",
+    "nonfinite_rows": 0,
+    "runtime_s_sum_latency": 193.17347526550293,
+    "git_commit": "8c0c3bb46d6147b2105b94d3671254f96ef5f92f",
+    "git_dirty": false,
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "seeds": {
+      "pilot": 50002,
+      "pools": 50001
+    },
+    "hidden_layer": 18,
+    "max_new_tokens": 64,
+    "generator": "HFGenerator",
+    "device": "cuda",
+    "dtype": "float16",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.18.0",
+    "gpu": "Tesla T4"
+  },
+  "gates": {
+    "n_tasks_kept": 3,
+    "tasks_ok": true,
+    "pilot_accuracy_overall": 0.74375,
+    "oracle_minus_always_verify": 0.22312500000000013,
+    "G_ceiling": true,
+    "n_scope_levels_mid_accuracy": 6,
+    "G_variance": true,
+    "se_estimate_scoped_minus_best_simple": 0.0177141009148838,
+    "test_per_scope_level": 80,
+    "per_scope_pilot_accuracy": {
+      "add_nn:6": 0.9,
+      "add_nn:7": 0.8,
+      "add_nn:8": 0.675,
+      "add_nn:9": 0.55,
+      "mul_n1:3": 0.75,
+      "mul_n1:4": 0.8,
+      "mul_n1:5": 0.8,
+      "mul_n1:6": 0.6,
+      "sort_n:10": 0.8,
+      "sort_n:11": 0.675,
+      "sort_n:12": 0.725,
+      "sort_n:9": 0.85
+    },
+    "all_pass": true
+  },
+  "conditions": {
+    "natural": {
+      "condition": "natural",
+      "n_cal": 1200,
+      "n_test": 960,
+      "n_scope_levels": 12,
+      "utility": {
+        "A1 always answer": 0.5270833333333333,
+        "A2 always verify": 0.6999999999999998,
+        "A6 scoped layer": 0.8205208333333334,
+        "A5 global calibrated": 0.8071874999999998,
+        "A7 track record": 0.6999999999999998,
+        "A3 random verify": 0.5839583333333332,
+        "A4 raw confidence": 0.7935416666666666,
+        "A8 probe prompt": 0.7004166666666666,
+        "A9 probe answer": 0.8236458333333333,
+        "R1 instance oracle": 0.9290624999999999
+      },
+      "meta": {
+        "A1 always answer": {
+          "verify_rate": 0.0
+        },
+        "A2 always verify": {
+          "verify_rate": 1.0
+        },
+        "A6 scoped layer": {
+          "verify_rate": 0.41770833333333335,
+          "learning_utility": 0.8033020833333334,
+          "answered_accuracy": 0.9534883720930233
+        },
+        "A5 global calibrated": {
+          "verify_rate": 0.496875,
+          "learning_utility": 0.7940416666666668,
+          "answered_accuracy": 0.9565217391304348
+        },
+        "A7 track record": {
+          "verify_rate": 1.0,
+          "learning_utility": 0.6998125,
+          "answered_accuracy": null
+        },
+        "A3 random verify": {
+          "verify_rate": 0.41770833333333335
+        },
+        "A4 raw confidence": {
+          "verify_rate": 0.34791666666666665
+        },
+        "A8 probe prompt": {
+          "verify_rate": 0.7208333333333333
+        },
+        "A9 probe answer": {
+          "verify_rate": 0.365625
+        },
+        "R1 instance oracle": {
+          "verify_rate": null
+        }
+      },
+      "comparisons": {
+        "A": {
+          "desc": "A6 minus best simple policy (A2 always verify)",
+          "mean": 0.12052083333333338,
+          "lower": 0.09822656250000004,
+          "upper": 0.14062500000000003,
+          "p": 0.0002
+        },
+        "B": {
+          "desc": "A6 minus A4 raw confidence",
+          "mean": 0.02697916666666671,
+          "lower": 0.009166666666666712,
+          "upper": 0.04666927083333334,
+          "p": 0.0024
+        },
+        "C": {
+          "desc": "A6 minus A5 global calibrated",
+          "mean": 0.013333333333333324,
+          "lower": -0.0028125000000000086,
+          "upper": 0.02906249999999999,
+          "p": 0.1056
+        },
+        "D": {
+          "desc": "A9 probe answer minus A6",
+          "mean": 0.0031249999999999572,
+          "lower": -0.02062760416666671,
+          "upper": 0.026666666666666627,
+          "p": 0.7896
+        }
+      },
+      "extra": {
+        "A6 minus A7 track record": {
+          "mean": 0.12052083333333326,
+          "lower": 0.09822656249999992,
+          "upper": 0.14062499999999992,
+          "p": 0.0002
+        },
+        "A6 minus A1 always answer": {
+          "mean": 0.2934375000000001,
+          "lower": 0.24843750000000006,
+          "upper": 0.3410442708333334,
+          "p": 0.0002
+        },
+        "A6 minus A2 always verify": {
+          "mean": 0.12052083333333338,
+          "lower": 0.09822656250000004,
+          "upper": 0.14062500000000003,
+          "p": 0.0002
+        },
+        "R1 minus A6": {
+          "mean": 0.10854166666666662,
+          "lower": 0.0912473958333333,
+          "upper": 0.12791666666666662,
+          "p": 0.0002
+        }
+      },
+      "labels": {
+        "A": "A_SUPPORTED",
+        "B": "B_SUPPORTED",
+        "C": "C_NOT_SUPPORTED",
+        "D": "UNRESOLVED",
+        "status": "OK"
+      }
+    },
+    "implanted": {
+      "condition": "implanted",
+      "n_cal": 1200,
+      "n_test": 960,
+      "n_scope_levels": 12,
+      "utility": {
+        "A1 always answer": 0.38125,
+        "A2 always verify": 0.6999999999999998,
+        "A6 scoped layer": 0.7953125,
+        "A5 global calibrated": 0.7925,
+        "A7 track record": 0.6999999999999998,
+        "A3 random verify": 0.5455208333333333,
+        "A4 raw confidence": 0.7102083333333333,
+        "A8 probe prompt": 0.7040624999999998,
+        "A9 probe answer": 0.7558333333333332,
+        "R1 instance oracle": 0.9071874999999998
+      },
+      "meta": {
+        "A1 always answer": {
+          "verify_rate": 0.0
+        },
+        "A2 always verify": {
+          "verify_rate": 1.0
+        },
+        "A6 scoped layer": {
+          "verify_rate": 0.5572916666666666,
+          "learning_utility": 0.77859375,
+          "answered_accuracy": 0.9576470588235294
+        },
+        "A5 global calibrated": {
+          "verify_rate": 0.5875,
+          "learning_utility": 0.776375,
+          "answered_accuracy": 0.9621212121212122
+        },
+        "A7 track record": {
+          "verify_rate": 1.0,
+          "learning_utility": 0.7000729166666666,
+          "answered_accuracy": null
+        },
+        "A3 random verify": {
+          "verify_rate": 0.5572916666666666
+        },
+        "A4 raw confidence": {
+          "verify_rate": 0.34791666666666665
+        },
+        "A8 probe prompt": {
+          "verify_rate": 0.8197916666666667
+        },
+        "A9 probe answer": {
+          "verify_rate": 0.55
+        },
+        "R1 instance oracle": {
+          "verify_rate": null
+        }
+      },
+      "comparisons": {
+        "A": {
+          "desc": "A6 minus best simple policy (A2 always verify)",
+          "mean": 0.09531250000000005,
+          "lower": 0.07645833333333339,
+          "upper": 0.11291666666666673,
+          "p": 0.0002
+        },
+        "B": {
+          "desc": "A6 minus A4 raw confidence",
+          "mean": 0.08510416666666672,
+          "lower": 0.0559348958333334,
+          "upper": 0.11614583333333339,
+          "p": 0.0002
+        },
+        "C": {
+          "desc": "A6 minus A5 global calibrated",
+          "mean": 0.0028124999999999973,
+          "lower": -0.00791666666666667,
+          "upper": 0.01239583333333333,
+          "p": 0.5852
+        },
+        "D": {
+          "desc": "A9 probe answer minus A6",
+          "mean": -0.03947916666666672,
+          "lower": -0.06271093750000006,
+          "upper": -0.016979166666666722,
+          "p": 0.0012
+        }
+      },
+      "extra": {
+        "A6 minus A7 track record": {
+          "mean": 0.09531249999999994,
+          "lower": 0.07645833333333328,
+          "upper": 0.11291666666666661,
+          "p": 0.0002
+        },
+        "A6 minus A1 always answer": {
+          "mean": 0.41406250000000006,
+          "lower": 0.36082552083333347,
+          "upper": 0.4687526041666667,
+          "p": 0.0002
+        },
+        "A6 minus A2 always verify": {
+          "mean": 0.09531250000000005,
+          "lower": 0.07645833333333339,
+          "upper": 0.11291666666666673,
+          "p": 0.0002
+        },
+        "R1 minus A6": {
+          "mean": 0.11187499999999995,
+          "lower": 0.09614322916666662,
+          "upper": 0.1288541666666666,
+          "p": 0.0002
+        }
+      },
+      "labels": {
+        "A": "A_SUPPORTED",
+        "B": "B_SUPPORTED",
+        "C": "C_NOT_SUPPORTED",
+        "D": "LOGPROB_BETTER",
+        "status": "POSITIVE_CONTROL_FAILED"
+      }
+    }
+  },
+  "started": "2026-10-19T10:21:02",
+  "holm": {
+    "implanted:A": true,
+    "implanted:B": true,
+    "implanted:D": true,
+    "natural:B": true,
+    "natural:C": false,
+    "implanted:C": false,
+    "natural:D": false
+  }
+}
