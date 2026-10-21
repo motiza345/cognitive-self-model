@@ -24,6 +24,8 @@ For each test: the protocol or pre-registration file, the commit that first adde
 | M34a v2 | `docs/M34A_V2_PREREG.md` | `989a8d1` 20:32:11-07:00 | `reports/m34a_v2_raw/responses.jsonl` | `2a63d27` 21:26:53-07:00 | protocol first |
 | M34a v3 | `docs/M34A_V3_PREREG.md` | `f745181` 21:47:57-07:00 | `reports/m34a_v3_s1_raw/responses.jsonl` | `c586b0b` 2026-10-10T02:58:44-07:00 | protocol first |
 
+| M50 cognitive layer gate | `docs/M50_PREREG.md` | `f340ca5` 2026-10-17T16:25:34Z | pilot `reports/m50_pilot/responses.jsonl`; main `reports/m50_raw/responses.jsonl` | `a1b5e95` 2026-10-18T10:34:57Z; `2894785` | protocol first; pilot and plan committed before the main collection; main cache committed before the single analysis (commit `0ab3735`) |
+
 ## What the order does not show
 
 - "Protocol first" means the protocol file was committed earlier than the outcome artifact; it does not prove the analysis was not shaped by earlier exploration. The mechanistic line and the M34a pilots were exploratory before each confirmatory step, and design amendments (M30 revision 2; M34a Amendment 1; M34a v2 and v3 redesigns) were made after earlier pilots or failures but before the data of the amended test were collected.

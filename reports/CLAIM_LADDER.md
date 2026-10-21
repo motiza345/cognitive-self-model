@@ -208,3 +208,16 @@ On M30 outcome rows, abs(kappa) predicts the remaining error after correction (S
 **Scope.** S1: one Qwen2.5-3B-Instruct, `add_nn` only, levels 3–8. S2: one Phi-3.5-mini-instruct pilot only (no pools). Static warm-start / n_h=10 primary where analyzed.
 
 **Links.** `docs/M34A_V3_PREREG.md`; `reports/M34A_V3_REPORT.md` (analysis `3fed6fc`); `reports/m34a_v3_s1_raw/`; `reports/m34a_v3_s2_pilot/`.
+
+
+## M50: cost-aware gate of the cognitive layer (pre-registered; single official analysis)
+
+**Verdict.** Natural: A_SUPPORTED, B_SUPPORTED, C_NOT_SUPPORTED, D UNRESOLVED. Implanted: A_SUPPORTED, B_SUPPORTED, C_NOT_SUPPORTED, D LOGPROB_BETTER, status POSITIVE_CONTROL_FAILED. Details: `reports/M50_REVIEW.md`, numbers: `reports/M50_REPORT.md`.
+
+**Claimed.** For Qwen2.5-3B-Instruct on three verifiable tasks, a module outside the model that turns the model's own answer probability into answer-or-verify decisions with online per-scope calibration beats always answering, always verifying and random verification at matched budget (+0.1205 [+0.0982, +0.1406] over always-verify, utility with answer +1/-1 and verify +0.7), and calibration adds value over the raw probability (+0.0270 [+0.0092, +0.0467]). A linear probe on answer-token hidden states is equivalent to the log probability (+0.0031 [-0.0206, +0.0267]).
+
+**NOT claimed.** That per-scope calibration beats a single global calibration (+0.0133 [-0.0028, +0.0291], not established); anything about the implanted-failure condition (the positive control could not reach its pre-registered floor: the achievable scoped-minus-global effect saturates near +0.013, post hoc sensitivity); generalization beyond this model, these tasks and this payoff structure; self-awareness or introspection.
+
+**Scope.** One model, three tasks, 12 scope-levels, 80 test items each, exact verifier with fixed cost.
+
+Ladder update: rung 3 (decision utility with a real LLM) now has a pre-registered, supported result for calibrated gating in one setting; the scoped-claims component is not demonstrated.
